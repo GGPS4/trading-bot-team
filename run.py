@@ -24,6 +24,7 @@ from bots.manager import plan as manager_plan, recent_lessons, review as manager
 from bots.president import decide, load_strategy, normalize_allocations
 from bots.reporter import daily_report, snapshot, with_baseline, write_dashboard
 from bots import market_watch
+from bots import watchlist
 from bots import llm as llm_mod
 from bots.research import after_hours_news, fresh_news, load_seen, run_research, save_seen
 from bots.risk import RiskDesk, effective_limits
@@ -138,12 +139,18 @@ def evening(ctx: Ctx, force: bool):
     entries = journal.sync(b)
     positions = b.positions()
     blocked = journal.blocked_on(today())
+    disc = watchlist.discovery(b, ctx.org)
     reviews = {}
     for tid, team in ctx.org.items():
         mine = [e for e in journal.trades_on(today(), entries) if e["team"] == tid]
         try:
+            overnight = read_json(STATE / "research" / f"{tid}.json", {}).get("overnight")
             reviews[tid] = manager_review(ctx.llm, team, mine, team_holdings(positions, ctx.owner_of, tid),
-                                          [x for x in blocked if x["team"] == tid])
+                                          [x for x in blocked if x["team"] == tid], overnight,
+                                          watchlist.for_team(disc, tid))
+            reviews[tid]["watchlist"] = watchlist.apply_changes(
+                b, ctx.org, ctx.owner_of, tid, reviews[tid].get("watchlist_changes"),
+                {p["symbol"] for p in positions}, source="evening review")
         except Exception as e:
             log(f"{tid}: review failed: {e}")
 
@@ -246,6 +253,11 @@ def session(ctx: Ctx, until: str, force: bool):
         time.sleep(min(300, max(5, wait)))
 
     journal.reconcile(b, ctx.owner_of)  # pick up anything a stopped run didn't save
+    try:  # drop watchlist stocks that stopped trading (delisted, bought out, renamed)
+        watchlist.check_all(b, ctx.org, ctx.owner_of, {p["symbol"] for p in b.positions()})
+    except Exception as e:
+        log(f"Watchlist check failed: {e}")
+    disc, last_disc = {}, 0.0
 
     # 2. full research at the start of the session
     research, seen = {}, load_seen()
@@ -297,6 +309,8 @@ def session(ctx: Ctx, until: str, force: bool):
                             no_buys_after=cfg.get("no_new_buys_after"))
 
             refresh_social = time.time() - last_social > 2 * 3600
+            if time.time() - last_disc >= 600:  # what's moving across the whole market
+                disc, last_disc = watchlist.discovery(b, ctx.org), time.time()
             try:
                 watch_new = market_watch.check(ctx.llm, ctx.org)
             except Exception as e:
@@ -336,12 +350,23 @@ def session(ctx: Ctx, until: str, force: bool):
                         f"budget ${ctx.budgets[tid]:,.0f}, invested ${inv:,.0f} "
                         f"({inv / ctx.budgets[tid]:.0%}), minimum {ctx.limits.get('min_invested_pct', 0):.0%}"
                         + (f" -> you must put about ${gap:,.0f} more to work now" if gap >= 1 and not desk.past_buy_cutoff() else ""))
+                    r["discovery"] = watchlist.for_team(disc, tid)
                     p = manager_plan(ctx.llm, team, orders, r, holdings, "intraday")
                     last_plan[tid] = time.time()
                     last_plan_prices[tid] = {s: snaps[s]["price"] for s in team["tickers"] if s in snaps}
                     write_json(STATE / "plans" / f"{tid}.json",
                                {"date": today(), "time": now_et().strftime("%H:%M"), "trigger": why, **p})
                     results = execute(b, desk, team, p, prices)
+                    wl = watchlist.apply_changes(b, ctx.org, ctx.owner_of, tid, p.get("watchlist_changes"),
+                                                 {x["symbol"] for x in b.positions()})
+                    for c in wl:
+                        results.append(f"WATCHLIST {c['action'].replace('_', ' ')} {c['symbol']}")
+                    if any(c["action"] == "added" for c in wl):
+                        try:
+                            from bots.research import technicals
+                            r["technicals"] = technicals(b.daily_bars(team["tickers"]))
+                        except Exception as e:
+                            log(f"{tid}: price history for new names failed: {e}")
                     traded = traded or any(not ("blocked" in r or "failed" in r) for r in results)
                     log_plan(tid, why, p, results)
                     log(f"{tid}: {results or 'no trades'}")

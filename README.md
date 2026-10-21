@@ -48,6 +48,7 @@ The bots stop making new AI decisions after `max_ai_calls_per_day`, to stay in G
 - **Minimum invested:** while the market is open, every team must keep at least 75% of its budget in stocks (`risk.min_invested_pct`). If a manager leaves too much cash, the investor buys the manager's next-best ranked ideas. A team that's under the line gets a fresh manager look within about 10 minutes.
 - **Day trading:** tight stops (about 1.5%), quick profit targets (about 3%), and up to 25 buys per team per day. There are no new positions after 3:30 PM, and everything is sold about 10 minutes before the close. Each day starts fresh in cash.
 - **Safety still comes first:** the 3% daily loss limit and the 10% cash reserve override the 75% rule.
+- **Watch 15-20, hold 5:** each team watches 15-20 stocks (`watchlist` in settings) and holds at most 5 at a time. The starter lists are in `config/teams.yaml`. During the day, managers add names that are in the news, moving unusually or trading heavy volume (using Alpaca's market-wide top movers, most-active list and headlines), and drop names that have gone quiet. The evening review sets up the next day's list from after-hours news. Code enforces the limits: at most 3 changes per look, real and tradable stocks over $5 only, one team per stock, and held stocks can't be dropped. The live lists and every change are on each team's **Watchlist** tab.
 
 ## Research never stops
 
