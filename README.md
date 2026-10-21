@@ -17,13 +17,18 @@ It's built from the plan in the "AI Trading Bot Team" outline.
 
 The risk rules in `config/settings.yaml` are enforced by code. The AI can only make them stricter.
 
-## Daily schedule (GitHub Actions, weekdays)
+## Trading all day (GitHub Actions, weekdays)
 
-- **Morning (~10:45 AM ET):** research, then managers plan, then investors trade.
-- **Midday (~1:30 PM ET):** a news check. Managers act only on important news.
-- **Evening (~5:40 PM ET):** manager reviews and lessons, then executives, the Reporter, the President, and the dashboard.
+From the 9:30 AM open to the 4:00 PM close, the bots run in a loop:
 
-GitHub sometimes starts scheduled runs 5–30 minutes late. That's normal.
+- **Every 5 minutes:** check live prices, check stop-loss and take-profit levels, and read any new news articles. A news researcher rates new articles right away.
+- **Every 30 minutes**, or sooner if there's big news or one of the team's stocks moves 2%: the manager takes a fresh look and can buy or sell.
+- **Every 30 minutes:** the dashboard updates.
+- **After the close:** manager reviews and lessons, then executives, the Reporter, and the President.
+
+GitHub jobs can last at most 6 hours, so the day runs as two back-to-back sessions: open to 1 PM, and 1 PM to close.
+You can change the timing in the `intraday:` part of `config/settings.yaml`. Set `close_positions_before_close: true` for pure day trading, so everything is sold before 4 PM.
+The bots stop making new AI decisions after `max_ai_calls_per_day`, to stay in Gemini's free limit. Stop-losses keep working after that.
 
 ## Setup
 
@@ -33,6 +38,7 @@ GitHub sometimes starts scheduled runs 5–30 minutes late. That's normal.
    - `ALPACA_PAPER_SECRET`
 2. **Dashboard:** go to Settings, then Pages. Under Source, pick "Deploy from a branch", choose branch `main` and folder `/docs`, then Save.
 3. **Test:** go to Actions, then Bot Team, then Run workflow, and pick `check`. It should finish green.
+   Choosing `session` starts trading right away, if the market is open.
 4. **Go-live protection (do this now):** go to Settings, then Environments, then New environment, and name it `live-trading`. Tick "Required reviewers" and add yourself.
 
 ## Everyday controls

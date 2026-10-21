@@ -1,25 +1,28 @@
 """Runs the bot team.
 
-    python run.py check     # test that your keys work (no trades)
-    python run.py morning   # research -> managers plan -> investors trade
-    python run.py midday    # quick news check, act only on important news
-    python run.py evening   # reviews -> executives -> Reporter -> President -> dashboard
+    python run.py check                  # test that your keys work (no trades)
+    python run.py session --until 16:00  # trade all day: watch, re-plan, trade until that time (ET)
+    python run.py morning / midday       # single trading passes (older, still work)
+    python run.py evening                # reviews -> executives -> Reporter -> President -> dashboard
 
 Add --force to run even when the market is closed (orders are still blocked
 while the market is closed; useful for testing reports).
 """
 import argparse
+import datetime as dt
 import os
+import subprocess
 import sys
+import time
 
 from bots import journal
-from bots.common import STATE, log, read_json, settings, today, write_json
+from bots.common import ET, STATE, log, now_et, read_json, settings, today, write_json
 from bots.executive import build_org, evening_summary, orders_for_team
-from bots.investor import check_software_stops, execute
+from bots.investor import _sell, check_software_stops, execute
 from bots.manager import plan as manager_plan, recent_lessons, review as manager_review
 from bots.president import decide, load_strategy, normalize_allocations
 from bots.reporter import daily_report, snapshot, write_dashboard
-from bots.research import run_research
+from bots.research import fresh_news, run_research
 from bots.risk import RiskDesk, effective_limits
 
 
@@ -112,6 +115,9 @@ def evening(ctx: Ctx, force: bool):
     if not b.is_trading_day(today()) and not force:
         log("Not a trading day. Nothing to report.")
         return
+    if (STATE / "reports" / f"{today()}.json").exists() and not force:
+        log("Today's evening report is already done.")
+        return
     entries = journal.sync(b)
     positions = b.positions()
     blocked = journal.blocked_on(today())
@@ -161,6 +167,154 @@ def evening(ctx: Ctx, force: bool):
     log(f"Evening done. AI calls this run: {getattr(ctx.llm, 'calls', '?')}")
 
 
+# ------------------------------------------------------------------ all-day trading
+def save_progress(msg):
+    """On GitHub, commit the bots' memory + dashboard so the website updates during the day."""
+    if os.environ.get("BOT_GIT_PUSH") != "1":
+        return
+    try:
+        subprocess.run(["git", "add", "state", "docs/data"], check=True)
+        if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode == 0:
+            return
+        subprocess.run(["git", "commit", "-qm", msg], check=True)
+        subprocess.run(["git", "pull", "--rebase", "-q"], check=True)
+        subprocess.run(["git", "push", "-q"], check=True)
+        log("Saved progress to GitHub (dashboard updated).")
+    except subprocess.CalledProcessError as e:
+        log(f"Could not save progress: {e}")
+
+
+def _parse_time(s):
+    return dt.datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(ET)
+
+
+def intraday_view(snaps, last_prices):
+    view = {}
+    for sym, v in snaps.items():
+        p = v["price"]
+        view[sym] = {
+            "price": round(p, 2),
+            "change_today": round(p / v["prev_close"] - 1, 4) if v.get("prev_close") else None,
+            "from_open": round(p / v["open"] - 1, 4) if v.get("open") else None,
+            "day_high": v.get("high"), "day_low": v.get("low"),
+            "since_last_look": round(p / last_prices[sym] - 1, 4) if last_prices.get(sym) else None,
+        }
+    return view
+
+
+def session(ctx: Ctx, until: str, force: bool):
+    """Watch the market from open until `until` (ET), trading whenever there's a reason."""
+    b, cfg = ctx.broker, ctx.cfg.get("intraday", {})
+    every = max(1, cfg.get("check_every_minutes", 5)) * 60
+    replan = max(5, cfg.get("replan_every_minutes", 30)) * 60
+    trigger = cfg.get("price_move_trigger_pct", 0.02)
+    hh, mm = (int(x) for x in until.split(":"))
+    end = now_et().replace(hour=hh, minute=mm, second=0, microsecond=0)
+    fake = os.environ.get("BOT_FAKE") == "1"
+
+    # 1. wait for the opening bell (if we started a bit early)
+    while not force:
+        clock = b.clock()
+        if clock.get("is_open"):
+            break
+        nxt = _parse_time(clock["next_open"]) if clock.get("next_open") else None
+        if not nxt or nxt.date() != now_et().date() or nxt >= end:
+            log("Market isn't open again before this session ends. Nothing to do.")
+            return
+        wait = (nxt - now_et()).total_seconds()
+        log(f"Waiting {wait / 60:.0f} min for the market to open...")
+        time.sleep(min(300, max(5, wait)))
+
+    # 2. full research at the start of the session
+    research, seen = {}, set(read_json(STATE / "cache" / f"news_seen_{today()}.json", []))
+    for tid, team in ctx.org.items():
+        research[tid] = run_research(ctx.llm, b, team, "morning")
+    last_plan = {tid: 0.0 for tid in ctx.org}
+    last_plan_prices = {tid: {} for tid in ctx.org}
+    last_save, last_social, closed_for_day, ticks = time.time(), time.time(), False, 0
+
+    # 3. the all-day loop
+    while now_et() < end:
+        started = time.time()
+        ticks += 1
+        if not force and not b.clock().get("is_open"):
+            log("Market closed.")
+            break
+        try:
+            journal.sync(b)
+            positions = b.positions()
+            all_symbols = sorted(set(ctx.owner_of) | {p["symbol"] for p in positions})
+            snaps = b.snapshots(all_symbols)
+            prices = {s: v["price"] for s, v in snaps.items()}
+            if check_software_stops(b, prices, ctx.paused, True):
+                positions = b.positions()
+
+            n = now_et()
+            mins_left = 16 * 60 - (n.hour * 60 + n.minute)
+            if cfg.get("close_positions_before_close") and mins_left <= 10 and not closed_for_day:
+                for p in positions:
+                    if ctx.owner_of.get(p["symbol"]) and not ctx.paused:
+                        _sell(b, ctx.owner_of[p["symbol"]], p["symbol"], "end of day", "end_of_day")
+                closed_for_day = True
+                log("Closed all positions before the bell.")
+                positions = b.positions()
+
+            trades_today = {}
+            for e in journal.load():
+                if e["date"] == today():
+                    trades_today[e["team"]] = trades_today.get(e["team"], 0) + 1
+            desk = RiskDesk(ctx.limits, b.account(), ctx.capital, positions, ctx.owner_of, ctx.budgets,
+                            trades_today, True, ctx.paused or closed_for_day)
+
+            refresh_social = time.time() - last_social > 2 * 3600
+            for tid, team in ctx.org.items():
+                try:
+                    r = research[tid]
+                    if refresh_social:
+                        from bots.research import social_researcher
+                        r["social"] = social_researcher(ctx.llm, team)
+                    new = fresh_news(ctx.llm, b, team, r, seen)
+                    r["intraday"] = intraday_view({s: snaps[s] for s in team["tickers"] if s in snaps},
+                                                  last_plan_prices[tid])
+                    moved = [s for s, v in r["intraday"].items()
+                             if v["since_last_look"] is not None and abs(v["since_last_look"]) >= trigger]
+                    urgent = (r.get("news") or {}).get("urgent") or [f["symbol"] for f in new
+                                                                      if (f.get("importance") or 0) >= 4]
+                    due = time.time() - last_plan[tid] >= replan
+                    if closed_for_day or not (due or (new and urgent) or moved):
+                        continue
+                    why = "scheduled look" if due else (f"big news on {urgent}" if new and urgent else f"price moves in {moved}")
+                    log(f"{tid}: manager takes a look ({why})")
+                    holdings = team_holdings(positions, ctx.owner_of, tid)
+                    orders = orders_for_team(team, ctx.strategy, ctx.budgets[tid], ctx.limits)
+                    p = manager_plan(ctx.llm, team, orders, r, holdings, "intraday")
+                    last_plan[tid] = time.time()
+                    last_plan_prices[tid] = {s: snaps[s]["price"] for s in team["tickers"] if s in snaps}
+                    write_json(STATE / "plans" / f"{tid}.json",
+                               {"date": today(), "time": now_et().strftime("%H:%M"), "trigger": why, **p})
+                    results = execute(b, desk, team, p, prices)
+                    log(f"{tid}: {results or 'no trades'}")
+                except Exception as e:
+                    log(f"{tid}: skipped this check: {e}")
+            if refresh_social:
+                last_social = time.time()
+            write_json(STATE / "cache" / f"news_seen_{today()}.json", sorted(x for x in seen if x is not None))
+        except Exception as e:
+            log(f"Check failed, will retry: {e}")
+
+        if time.time() - last_save >= 1800:
+            write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
+            save_progress(f"Bot team: intraday update {now_et():%Y-%m-%d %H:%M}")
+            last_save = time.time()
+        if fake and ticks >= int(os.environ.get("BOT_FAKE_TICKS", "3")):
+            break
+        time.sleep(0 if fake else max(5, every - (time.time() - started)))
+
+    write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
+    save_progress(f"Bot team: session end {now_et():%Y-%m-%d %H:%M}")
+    log(f"Session done. AI calls today: {__import__('bots.llm', fromlist=['calls_today']).calls_today()}")
+
+
 def check(ctx: Ctx):
     a = ctx.account
     log(f"Alpaca OK: {ctx.mode} account, equity ${float(a['equity']):,.2f}, cash ${float(a['cash']):,.2f}")
@@ -181,12 +335,15 @@ def check(ctx: Ctx):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("phase", choices=["check", "morning", "midday", "evening"])
+    ap.add_argument("phase", choices=["check", "session", "morning", "midday", "evening"])
+    ap.add_argument("--until", default="16:00", help="session end time, ET (HH:MM)")
     ap.add_argument("--force", action="store_true")
     args = ap.parse_args()
     ctx = Ctx()
     if args.phase == "check":
         check(ctx)
+    elif args.phase == "session":
+        session(ctx, args.until, args.force)
     elif args.phase in ("morning", "midday"):
         trading_cycle(ctx, args.phase, args.force)
     else:
