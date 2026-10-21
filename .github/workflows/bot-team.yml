@@ -83,11 +83,7 @@ jobs:
       - name: Save the bots' memory and dashboard data
         if: always()
         run: |
-          git add state docs/data
-          if git diff --cached --quiet; then echo "Nothing new to save."; exit 0; fi
-          git commit -m "Bot team: ${{ steps.phase.outputs.phase }} $(date -u +%Y-%m-%d)"
-          git pull --rebase
-          git push
+          bash save.sh "Bot team: ${{ steps.phase.outputs.phase }} $(date -u +%Y-%m-%d)"
 
       - name: Start the next run (keeps the relay going)
         if: always() && steps.phase.outputs.phase == 'auto' && !cancelled()
