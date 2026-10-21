@@ -427,7 +427,7 @@ function afterOverview(){
 function teamCard(id,t){
   const d=tdet(id),at=t.all_time||{},cum=(d.pnl_days||[]).map(x=>x.cum);
   return`<a class="card team" href="#/team/${id}" style="--c:${teamColor(id)}">
-    <div class="top"><div><h3>${esc(t.name)}</h3><div class="sub">${t.kind==="special"?"Special team":"Sector team"} · ${t.tickers.length} companies</div></div><span class="go">${svgI("arrow")}</span></div>
+    <div class="top"><div><h3>${esc(t.name)}</h3><div class="sub">${t.kind==="special"?"Special team":"Sector team"} · watching ${t.tickers.length} stocks</div></div><span class="go">${svgI("arrow")}</span></div>
     <div class="stats"><div><b class="num ${cls(t.unrealized_pnl)}">${smoney(t.unrealized_pnl)}</b><span>Open P&amp;L</span></div><div><b class="num ${cls(at.realized_pnl)}">${smoney(at.realized_pnl)}</b><span>Realized</span></div><div><b class="num">${at.win_rate==null?"–":upct(at.win_rate)}</b><span>Win rate</span></div></div>
     <div style="margin-top:12px">${spark(cum,css(COLOR[id]||"--s1"),42)}</div>
     <div class="meter" style="--c:${teamColor(id)}"><i style="width:${Math.min(100,t.budget?t.invested/t.budget*100:0)}%"></i>${D.rules?.min_invested_pct?`<b style="left:${D.rules.min_invested_pct*100}%" title="Minimum invested: ${Math.round(D.rules.min_invested_pct*100)}%"></b>`:""}</div>
@@ -449,7 +449,7 @@ function team(id){
   return`
   <div class="crumb"><a href="#/">Overview</a> / Teams</div>
   <div class="head"><div><h1 style="display:flex;align-items:center;gap:12px"><span class="dot" style="background:${teamColor(id)};width:14px;height:14px"></span>${esc(t.name)}</h1>
-    <p>${t.kind==="special"?"Special team":"Sector team"} · ${t.tickers.length} companies · ${held.size} held right now</p></div>
+    <p>${t.kind==="special"?"Special team":"Sector team"} · watching ${t.tickers.length} stocks · holding ${held.size}${D.rules?.max_positions?" of "+D.rules.max_positions:""} right now</p></div>
     <div style="max-width:600px">${t.tickers.map(s=>`<span class="tick ${held.has(s)?"held":""}" title="${held.has(s)?"Held now":"Watching"}">${esc(s)}</span>`).join("")}</div></div>
   <div class="grid k6 stagger">
     ${kpi("Budget",`<span data-count="${t.budget}">${money(t.budget,0)}</span>`)}
@@ -465,10 +465,10 @@ function team(id){
   </div>
   <div class="card mt"><div class="ch"><div><h2>Holding right now</h2><div class="sub">Bar runs from stop-loss (left) through the buy price to the target (right); the dot is today's price</div></div></div>
     ${table((D.positions||[]).filter(p=>p.team===id),[{h:"Stock",f:p=>`<span class="sym">${esc(p.symbol)}</span>`},{h:"Shares",f:p=>+(+p.qty).toFixed(4),n:1},{h:"Bought at",f:p=>money(p.entry),n:1},{h:"Now",f:p=>money(p.price),n:1},{h:"P&amp;L",f:p=>`<span class="${cls(p.pnl)}">${smoney(p.pnl)}</span> <span class="muted">${pct(p.pnl_pct)}</span>`,n:1},{h:"Stop → target",f:rangeBar},{h:"Why it was bought",f:p=>`<div class="why">${esc(p.reason)}</div>`}])}</div>
-  <div class="tabs" id="tabs" role="tablist">${[["trades","Trade history"],["strategy","Strategy log"],["lessons","Lessons & ideas"],["research","Research"]].map(([k,l])=>`<button role="tab" data-tab="${k}" class="${teamTab===k?"on":""}">${l}</button>`).join("")}<span class="ink"></span></div>
+  <div class="tabs" id="tabs" role="tablist">${[["trades","Trade history"],["strategy","Strategy log"],["watchlist","Watchlist"],["lessons","Lessons & ideas"],["research","Research"]].map(([k,l])=>`<button role="tab" data-tab="${k}" class="${teamTab===k?"on":""}">${l}</button>`).join("")}<span class="ink"></span></div>
   <div id="tabBody"></div>`;
 }
-const triggerText=t=>!t?"Look":t==="morning"?"Morning plan":t==="midday"?"Midday check":t==="scheduled look"?"Scheduled look":t.startsWith("big news")?"Big news":t.startsWith("market-moving")?"Market-moving post":t.startsWith("price moves")?"Price move":t;
+const triggerText=t=>!t?"Look":t==="morning"?"Morning plan":t==="midday"?"Midday check":t==="scheduled look"?"Scheduled look":t.startsWith("big news")?"Big news":t.startsWith("market-moving")?"Market-moving post":t.startsWith("price moves")?"Price move":t.startsWith("must invest")?"75% rule":t;
 function teamTabBody(id){
   const d=tdet(id);
   if(teamTab==="trades"){
@@ -484,7 +484,19 @@ function teamTabBody(id){
     return`<div class="card"><div class="ch"><div><h2>Every decision the manager made</h2><div class="sub">What it saw, what it was testing, and what it did</div></div></div>
       ${plans.length?`<div class="tl">${plans.map(p=>`<div class="ti" style="--c:${teamColor(id)}"><div class="t num">${fmtDate(p.date)} · ${esc(p.time)} <span class="tag" style="padding:1px 8px">${esc(triggerText(p.trigger))}</span></div>
         <p style="color:var(--ink)">${esc(p.market_view)}</p>${p.experiment?`<p><b style="color:var(--ink)">Testing:</b> ${esc(p.experiment)}</p>`:""}
-        <div class="decs">${(p.decisions||[]).map(x=>{const res=(p.results||[]).find(r=>r.split(" ")[1]===x.symbol&&r.startsWith(x.action));const bl=res&&/blocked|failed/.test(res);return`<span class="pill ${bl?"block":x.action==="SELL"?"sell":"buy"}" title="${esc((x.reason||"")+(res?" — "+res:""))}">${esc(x.action)} ${esc(x.symbol)}${x.conviction?" · "+x.conviction+"/5":""}${bl?" · blocked":""}</span>`}).join("")||'<span class="sub">Decided to hold.</span>'}</div></div>`).join("")}</div>${allPlans.length>plans.length&&showN<80?`<button class="btn more" data-more>Show more (${allPlans.length-plans.length} older)</button>`:""}`:empty("No manager decisions logged yet.")}</div>`;
+        <div class="decs">${(p.decisions||[]).map(x=>{const res=(p.results||[]).find(r=>r.split(" ")[1]===x.symbol&&r.startsWith(x.action));const bl=res&&/blocked|failed/.test(res);return`<span class="pill ${bl?"block":x.action==="SELL"?"sell":"buy"}" title="${esc((x.reason||"")+(res?" — "+res:""))}">${esc(x.action)} ${esc(x.symbol)}${x.conviction?" · "+x.conviction+"/5":""}${bl?" · blocked":""}</span>`}).join("")||'<span class="sub">Decided to hold.</span>'}</div>${(p.results||[]).filter(r=>/^WATCHLIST (added|removed)/.test(r)).length?`<div class="decs">${(p.results||[]).filter(r=>/^WATCHLIST (added|removed)/.test(r)).map(r=>`<span class="tag" style="padding:1px 8px">${r.includes("added")?"+ watching":"− dropped"} ${esc(r.split(" ").pop())}</span>`).join("")}</div>`:""}</div>`).join("")}</div>${allPlans.length>plans.length&&showN<80?`<button class="btn more" data-more>Show more (${allPlans.length-plans.length} older)</button>`:""}`:empty("No manager decisions logged yet.")}</div>`;
+  }
+  if(teamTab==="watchlist"){
+    const W=d.watchlist||{},log=[...(W.log||[])].reverse(),rej=[...(W.rejected||[])].reverse(),tick=D.teams[id].tickers;
+    const held=new Set((D.positions||[]).filter(p=>p.team===id).map(p=>p.symbol)),seed=new Set(W.seed||tick);
+    return`<div class="grid g11">
+      <div class="card"><div class="ch"><div><h2>Watching now</h2><div class="sub">${tick.length} stocks · the team holds up to ${D.rules?.max_positions||5} of them at a time</div></div></div>
+        <div>${tick.map(s=>`<span class="tick ${held.has(s)?"held":""}" title="${held.has(s)?"Held now":seed.has(s)?"On the starter list":"Added by the manager"}">${esc(s)}${seed.has(s)?"":" ✦"}</span>`).join("")}</div>
+        <div class="sub" style="margin-top:10px">Highlighted = held right now · ✦ = added by the manager${W.updated?" · last change "+esc(W.updated.replace("T"," ").slice(0,16)):""}</div></div>
+      <div class="card"><div class="ch"><div><h2>Changes</h2><div class="sub">Stocks added or dropped as news came out</div></div></div>
+        ${log.length?`<div class="tl">${log.slice(0,40).map(c=>`<div class="ti" style="--c:${c.action==="added"?"var(--up-mark)":"var(--down-mark)"}"><div class="t num">${esc((c.time||"").replace("T"," ").slice(0,16))} · ${c.by==="system"?"automatic":esc(c.by||"manager")}</div><p style="color:var(--ink)"><span class="pill ${c.action==="added"?"buy":"sell"}">${c.action==="added"?"Added":"Dropped"} ${esc(c.symbol)}</span> ${esc(c.reason||"")}</p></div>`).join("")}</div>`:empty("No changes yet. The manager updates the list as news comes out.")}
+        ${rej.length?`<div class="label">Requests the rules turned down</div>${table(rej.slice(0,10),[{h:"Stock",f:r=>`<span class="sym">${esc(r.symbol)}</span>`},{h:"Request",f:r=>r.action.startsWith("add")?"Add":"Drop"},{h:"Why not",k:"reason"}])}`:""}</div>
+    </div>`;
   }
   if(teamTab==="lessons"){
     const L=[...(d.lessons||[])].reverse(),ideas=d.ideas?.strategy_ideas||[],rv=[...(d.reviews||[])].reverse();
