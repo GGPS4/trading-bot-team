@@ -34,8 +34,8 @@ def clients(mode):
         from bots.fakes import FakeBroker, FakeLLM
         return FakeBroker(), FakeLLM()
     from bots.broker import Alpaca
-    from bots.llm import Gemini
-    return Alpaca(mode), Gemini()
+    from bots.llm import Router
+    return Alpaca(mode), Router()
 
 
 class Ctx:
@@ -400,11 +400,11 @@ def check(ctx: Ctx):
         log(f"Team {t['id']}: {len(t['tickers'])} companies, budget ${ctx.budgets[t['id']]:,.2f}")
     for o in ctx.overlaps:
         log(f"Overlap: {o['symbol']} handled by {o['kept_by']}, skipped by {o['skipped_by']}")
-    if hasattr(ctx.llm, "resolve"):
-        for tier in ("fast", "smart"):
-            log(f"Gemini {tier}: {ctx.llm.resolve(ctx.cfg['models'][tier])}")
-    ans = ctx.llm.ask_json("fast", "check", "You are a test.", 'Reply with {"ok": true}')
-    log(f"Gemini OK: {ans}")
+    if hasattr(ctx.llm, "test"):
+        for name, status in ctx.llm.test().items():
+            log(f"AI provider {name}: {status}")
+    else:
+        log(f"AI OK: {ctx.llm.ask_json('fast', 'check', 'You are a test.', 'Reply with {\"ok\": true}')}")
     snap = snapshot(ctx.broker, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode)
     write_dashboard(snap)
     log("Everything works. Dashboard data written.")

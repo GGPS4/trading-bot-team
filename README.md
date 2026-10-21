@@ -18,12 +18,25 @@ It's built from the plan in the "AI Trading Bot Team" outline.
 
 The risk rules in `config/settings.yaml` are enforced by code. The AI can only make them stricter.
 
+## AI providers (all free)
+
+The bots spread their thinking across four AI providers. If one runs out of free quota or goes down, the next one takes over automatically:
+
+| Provider | Used first by | Free limit (approx.) | Setup |
+|---|---|---|---|
+| Gemini (Google) | managers, President | your key's free tier, plus your $10/month credit | `GEMINI_API_KEY` |
+| Groq | researchers, executives, Reporter | ~1,000 requests/day | `GROQ_API_KEY` |
+| GitHub Models | backup for everyone | ~150 requests/day | nothing (uses the repo's own token) |
+| OpenRouter | last backup | 50/day (1,000/day after a one-time $10) | `OPENROUTER_API_KEY` |
+
+The order and daily caps are in `ai_routing` and `ai_daily_caps` in `config/settings.yaml`.
+
 ## Trading all day (GitHub Actions, weekdays)
 
 From the 9:30 AM open to the 4:00 PM close, the bots run in a loop:
 
 - **Every 5 minutes:** check live prices, check stop-loss and take-profit levels, and read any new news articles. A news researcher rates new articles right away.
-- **Every 30 minutes**, or sooner if there's big news or one of the team's stocks moves 2%: the manager takes a fresh look and can buy or sell.
+- **Every 20 minutes**, or sooner if there's big news or one of the team's stocks moves 2%: the manager takes a fresh look and can buy or sell.
 - **Every 30 minutes:** the dashboard updates.
 - **After the close:** manager reviews and lessons, then executives, the Reporter, and the President.
 
