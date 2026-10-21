@@ -232,8 +232,14 @@ class OpenAIStyle:
                 continue
             if r.status_code >= 400:
                 raise LLMError(f"{self.name}: {r.status_code} {r.text[:200]}")
-            text = r.json()["choices"][0]["message"].get("content") or ""
-            return parse_json(text), model
+            try:
+                text = r.json()["choices"][0]["message"].get("content") or ""
+            except (ValueError, KeyError, IndexError):
+                raise LLMError(f"{self.name}: unexpected reply {r.status_code} {r.text[:160]!r}")
+            try:
+                return parse_json(text), model
+            except ValueError:
+                raise LLMError(f"{self.name}: answer was not JSON: {text[:120]!r}")
         raise LLMError(f"{self.name}: no working model")
 
 
@@ -248,7 +254,8 @@ def build_providers():
         "github": OpenAIStyle(
             "github", "https://models.github.ai/inference/chat/completions", "GITHUB_TOKEN",
             None, ["openai/gpt-4.1-mini", "openai/gpt-4o-mini", "openai/gpt-4.1"], max_chars=26000,
-            extra_headers={"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}),
+            extra_headers={"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"},
+            json_mode=False),
         "openrouter": OpenAIStyle(
             "openrouter", "https://openrouter.ai/api/v1/chat/completions", "OPENROUTER_API_KEY",
             None, ["openrouter/free"], max_chars=60000,
