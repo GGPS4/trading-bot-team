@@ -43,14 +43,16 @@ risk:
   max_position_pct: 0.20            # most of a team's budget that can go into one stock
   max_daily_loss_pct: 0.03          # no new buys once the portfolio is down 3% today
   max_open_positions_per_team: 5
-  max_trades_per_team_per_day: 10  # buys per team per day
+  max_trades_per_team_per_day: 25  # buys per team per day (day trading turns money over often)
   min_conviction_to_buy: 3          # managers rate every idea 1-5
   cash_reserve_pct: 0.10            # always keep 10% of the money in cash
-  default_stop_loss_pct: 0.05       # sell automatically if a stock drops 5% from where we bought
-  default_take_profit_pct: 0.10     # sell automatically after a 10% gain
-  min_stop_loss_pct: 0.02
-  max_stop_loss_pct: 0.15
+  default_stop_loss_pct: 0.015      # day trading: sell automatically if a stock drops 1.5% from where we bought
+  default_take_profit_pct: 0.03     # day trading: take the profit after a 3% gain
+  min_stop_loss_pct: 0.005
+  max_stop_loss_pct: 0.05
   allow_fractional_shares: true     # lets small accounts buy part of a share
+  min_invested_pct: 0.75            # each team must keep at least 75% of its budget in stocks
+                                    # while the market is open (set by you; the President can't lower it)
 
 # All-day trading. The bots watch the market from open to close.
 intraday:
@@ -59,7 +61,9 @@ intraday:
   price_move_trigger_pct: 0.02    # ...or sooner if one of its stocks moves 2% since its last look
   max_ai_calls_per_day: 1000      # overall safety cap across all providers; after this the
                                   # bots stop making new decisions but stop-losses still work
-  close_positions_before_close: false   # true = sell everything ~10 min before 4 PM (pure day trading)
+  strategy: day_trading            # managers trade intraday moves and end each day in cash
+  close_positions_before_close: true    # sell everything ~10 min before 4 PM (pure day trading)
+  no_new_buys_after: "15:30"            # no new positions in the last 30 minutes
 
 # Research never stops: after the close, overnight and on weekends the
 # researchers keep reading news, filings and social posts. What they find is
