@@ -4,18 +4,25 @@ name: Bot Team
 # so the trading day is split into two back-to-back sessions:
 #   morning session:   starts before the open, waits for 9:30 AM ET, trades until 1:00 PM ET
 #   afternoon session: trades 1:00 PM - 4:00 PM ET, then writes the evening report
+# Outside market hours (nights and weekends) "watch" jobs keep the researchers
+# reading news, SEC filings, Truth Social and X. They never trade.
 # Times below are UTC (GitHub only uses UTC). They work in both summer and winter time.
 on:
   schedule:
-    - cron: "15 13 * * 1-5"   # morning session
-    - cron: "45 16 * * 1-5"   # afternoon session (waits for the morning one to finish)
-    - cron: "40 21 * * 1-5"   # backup evening report (skips itself if already done)
+    - cron: "15 13 * * 1-5"      # morning session
+    - cron: "45 16 * * 1-5"      # afternoon session (waits for the morning one to finish)
+    - cron: "40 21 * * 1-5"      # backup evening report (skips itself if already done)
+    - cron: "0 22 * * 1-5"       # evening watch (~6 PM - 11:30 PM ET)
+    - cron: "45 3 * * 2-6"       # overnight watch (~11:45 PM - 5:15 AM ET)
+    - cron: "30 9 * * 1-5"       # pre-market watch (~5:30 AM until the morning session)
+    - cron: "15 9,15,21 * * 0,6" # weekend watches
+    - cron: "0 3 * * 0,1"        # weekend overnight watch
   workflow_dispatch:
     inputs:
       phase:
         description: "What to run"
         type: choice
-        options: [check, session, evening]
+        options: [check, session, watch, evening]
         default: check
       until:
         description: "For a session: trade until this time (ET, HH:MM)"
@@ -42,6 +49,7 @@ jobs:
       ALPACA_PAPER_SECRET: ${{ secrets.ALPACA_PAPER_SECRET }}
       ALPACA_LIVE_KEY: ${{ secrets.ALPACA_LIVE_KEY }}
       ALPACA_LIVE_SECRET: ${{ secrets.ALPACA_LIVE_SECRET }}
+      X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
       BOT_GIT_PUSH: "1"
     steps:
       - uses: actions/checkout@v4
@@ -61,19 +69,24 @@ jobs:
       - name: Pick what to run
         id: phase
         run: |
+          phase=evening; until=16:00; minutes=330
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "phase=${{ inputs.phase }}" >> "$GITHUB_OUTPUT"
-            echo "until=${{ inputs.until }}" >> "$GITHUB_OUTPUT"
+            phase="${{ inputs.phase }}"; until="${{ inputs.until }}"; minutes=20
           else
             case "${{ github.event.schedule }}" in
-              "15 13 * * 1-5") echo "phase=session" >> "$GITHUB_OUTPUT"; echo "until=13:00" >> "$GITHUB_OUTPUT" ;;
-              "45 16 * * 1-5") echo "phase=session" >> "$GITHUB_OUTPUT"; echo "until=16:00" >> "$GITHUB_OUTPUT" ;;
-              *)               echo "phase=evening" >> "$GITHUB_OUTPUT"; echo "until=16:00" >> "$GITHUB_OUTPUT" ;;
+              "15 13 * * 1-5") phase=session; until=13:00 ;;
+              "45 16 * * 1-5") phase=session; until=16:00 ;;
+              "40 21 * * 1-5") phase=evening ;;
+              "30 9 * * 1-5")  phase=watch; minutes=215 ;;
+              *)               phase=watch; minutes=330 ;;
             esac
           fi
+          echo "phase=$phase" >> "$GITHUB_OUTPUT"
+          echo "until=$until" >> "$GITHUB_OUTPUT"
+          echo "minutes=$minutes" >> "$GITHUB_OUTPUT"
 
       - name: Run the bots
-        run: python run.py ${{ steps.phase.outputs.phase }} --until ${{ steps.phase.outputs.until }} ${{ inputs.force && '--force' || '' }}
+        run: python run.py ${{ steps.phase.outputs.phase }} --until ${{ steps.phase.outputs.until }} --minutes ${{ steps.phase.outputs.minutes }} ${{ inputs.force && '--force' || '' }}
 
       - name: Evening report (after the afternoon session)
         if: steps.phase.outputs.phase == 'session' && steps.phase.outputs.until == '16:00'
