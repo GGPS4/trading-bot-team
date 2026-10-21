@@ -22,7 +22,7 @@ from bots.executive import build_org, evening_summary, orders_for_team
 from bots.investor import _sell, check_software_stops, execute
 from bots.manager import plan as manager_plan, recent_lessons, review as manager_review
 from bots.president import decide, load_strategy, normalize_allocations
-from bots.reporter import daily_report, snapshot, write_dashboard
+from bots.reporter import daily_report, snapshot, with_baseline, write_dashboard
 from bots import market_watch
 from bots import llm as llm_mod
 from bots.research import after_hours_news, fresh_news, load_seen, run_research, save_seen
@@ -104,7 +104,7 @@ def trading_cycle(ctx: Ctx, phase: str, force: bool):
     for e in entries:
         if e["date"] == today():
             trades_today[e["team"]] = trades_today.get(e["team"], 0) + 1
-    desk = RiskDesk(ctx.limits, b.account(), ctx.capital, positions, ctx.owner_of, ctx.budgets,
+    desk = RiskDesk(ctx.limits, with_baseline(b.account()), ctx.capital, positions, ctx.owner_of, ctx.budgets,
                     trades_today, market_open, ctx.paused)
 
     for tid, team in ctx.org.items():
@@ -245,6 +245,8 @@ def session(ctx: Ctx, until: str, force: bool):
         log(f"Waiting {wait / 60:.0f} min for the market to open...")
         time.sleep(min(300, max(5, wait)))
 
+    journal.reconcile(b, ctx.owner_of)  # pick up anything a stopped run didn't save
+
     # 2. full research at the start of the session
     research, seen = {}, load_seen()
     try:
@@ -290,7 +292,7 @@ def session(ctx: Ctx, until: str, force: bool):
             for e in journal.load():
                 if e["date"] == today():
                     trades_today[e["team"]] = trades_today.get(e["team"], 0) + 1
-            desk = RiskDesk(ctx.limits, b.account(), ctx.capital, positions, ctx.owner_of, ctx.budgets,
+            desk = RiskDesk(ctx.limits, with_baseline(b.account()), ctx.capital, positions, ctx.owner_of, ctx.budgets,
                             trades_today, is_open, ctx.paused or closed_for_day)
 
             refresh_social = time.time() - last_social > 2 * 3600
