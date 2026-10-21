@@ -20,13 +20,12 @@ The risk rules in `config/settings.yaml` are enforced by code. The AI can only m
 
 ## AI providers (all free)
 
-The bots spread their thinking across four AI providers. If one runs out of free quota or goes down, the next one takes over automatically:
+The bots spread their thinking across three AI providers. If one runs out of free quota or goes down, the next one takes over automatically:
 
 | Provider | Used first by | Free limit (approx.) | Setup |
 |---|---|---|---|
 | Gemini (Google) | managers, President | your key's free tier, plus your $10/month credit | `GEMINI_API_KEY` |
 | Groq | researchers, executives, Reporter | ~1,000 requests/day | `GROQ_API_KEY` |
-| GitHub Models | backup for everyone | ~150 requests/day | nothing (uses the repo's own token) |
 | OpenRouter | last backup | 50/day (1,000/day after a one-time $10) | `OPENROUTER_API_KEY` |
 
 The order and daily caps are in `ai_routing` and `ai_daily_caps` in `config/settings.yaml`.
