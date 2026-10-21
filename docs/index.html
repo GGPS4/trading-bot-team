@@ -113,7 +113,8 @@ main{min-width:0;padding:28px 32px 64px}
 .team:hover .go{opacity:1;transform:none}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
 .stats div{min-width:0}.stats b{display:block;font-size:15px;font-weight:650;white-space:nowrap}.stats span{font-size:11.5px;color:var(--muted)}
-.meter{height:6px;border-radius:99px;background:var(--surface-2);overflow:hidden;margin-top:10px}
+.meter{height:6px;border-radius:99px;background:var(--surface-2);overflow:hidden;margin-top:10px;position:relative}
+.meter b{position:absolute;top:-1px;bottom:-1px;width:2px;background:var(--ink-2);opacity:.55;border-radius:1px}
 .meter i{display:block;height:100%;border-radius:99px;background:var(--c,var(--accent));transform-origin:left;animation:grow .9s var(--ease) both}
 @keyframes grow{from{transform:scaleX(0)}}
 
@@ -398,7 +399,8 @@ function overview(){
       <div class="legend"><span><i style="background:var(--accent)"></i>Bot team</span><span><i style="background:var(--bench)"></i>${bench}</span></div></div>
       <div class="chart" id="cPerf"></div></div>
     <div class="card"><div class="ch"><div><h2>Money per team</h2><div class="sub">Invested out of each team's budget</div></div></div>
-      ${teams.map(([id,t])=>`<a href="#/team/${id}" style="display:block;margin-bottom:14px"><div style="display:flex;justify-content:space-between;gap:8px;font-size:13px"><span style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:${teamColor(id)}"></span>${esc(shortName(id))}</span><span class="num ink2">${money(t.invested,0)} / ${money(t.budget,0)}</span></div><div class="meter" style="--c:${teamColor(id)}"><i style="width:${Math.min(100,t.budget?t.invested/t.budget*100:0)}%"></i></div></a>`).join("")||empty("No teams yet.")}
+      ${teams.map(([id,t])=>`<a href="#/team/${id}" style="display:block;margin-bottom:14px"><div style="display:flex;justify-content:space-between;gap:8px;font-size:13px"><span style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:${teamColor(id)}"></span>${esc(shortName(id))}</span><span class="num ink2">${money(t.invested,0)} / ${money(t.budget,0)}</span></div><div class="meter" style="--c:${teamColor(id)}"><i style="width:${Math.min(100,t.budget?t.invested/t.budget*100:0)}%"></i>${D.rules?.min_invested_pct?`<b style="left:${D.rules.min_invested_pct*100}%" title="Minimum invested: ${Math.round(D.rules.min_invested_pct*100)}%"></b>`:""}</div></a>`).join("")||empty("No teams yet.")}
+      ${D.rules?.min_invested_pct?`<div class="sub" style="margin-top:-4px">The mark on each bar is the ${Math.round(D.rules.min_invested_pct*100)}% minimum-invested rule${D.rules.strategy==="day_trading"?" · strategy: day trading":""}</div>`:""}
       ${s.allocations?`<div class="label">President's split of the money</div><div class="split">${Object.entries(s.allocations).map(([id,v])=>`<span title="${esc(teamName(id))} ${Math.round(v*100)}%" style="flex:${v};background:${teamColor(id)}"></span>`).join("")}</div><div class="legend" style="margin-top:8px">${Object.entries(s.allocations).map(([id,v])=>`<span><span class="dot" style="background:${teamColor(id)};width:8px;height:8px"></span>${esc(shortName(id))} ${Math.round(v*100)}%</span>`).join("")}</div>`:""}
     </div>
   </div>
@@ -428,8 +430,8 @@ function teamCard(id,t){
     <div class="top"><div><h3>${esc(t.name)}</h3><div class="sub">${t.kind==="special"?"Special team":"Sector team"} · ${t.tickers.length} companies</div></div><span class="go">${svgI("arrow")}</span></div>
     <div class="stats"><div><b class="num ${cls(t.unrealized_pnl)}">${smoney(t.unrealized_pnl)}</b><span>Open P&amp;L</span></div><div><b class="num ${cls(at.realized_pnl)}">${smoney(at.realized_pnl)}</b><span>Realized</span></div><div><b class="num">${at.win_rate==null?"–":upct(at.win_rate)}</b><span>Win rate</span></div></div>
     <div style="margin-top:12px">${spark(cum,css(COLOR[id]||"--s1"),42)}</div>
-    <div class="meter" style="--c:${teamColor(id)}"><i style="width:${Math.min(100,t.budget?t.invested/t.budget*100:0)}%"></i></div>
-    <div class="sub" style="margin-top:6px">${money(t.invested,0)} invested of ${money(t.budget,0)} · ${t.trades_today} trade${t.trades_today===1?"":"s"} today</div></a>`;
+    <div class="meter" style="--c:${teamColor(id)}"><i style="width:${Math.min(100,t.budget?t.invested/t.budget*100:0)}%"></i>${D.rules?.min_invested_pct?`<b style="left:${D.rules.min_invested_pct*100}%" title="Minimum invested: ${Math.round(D.rules.min_invested_pct*100)}%"></b>`:""}</div>
+    <div class="sub" style="margin-top:6px">${t.budget?Math.round(t.invested/t.budget*100):0}% invested · ${money(t.invested,0)} of ${money(t.budget,0)} · ${t.trades_today} trade${t.trades_today===1?"":"s"} today</div></a>`;
 }
 function goLiveCard(){
   const g=D.go_live||{items:[]},ga=D.president?.go_live_assessment,live=D.mode==="live",repo=repoUrl();
