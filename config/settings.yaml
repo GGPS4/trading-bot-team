@@ -1,0 +1,57 @@
+# ---------------------------------------------------------------
+# AI Trading Bot Team - main settings
+# ---------------------------------------------------------------
+
+# paper = practice money, live = real money.
+# Don't edit this by hand. Use the "Switch trading mode" action on GitHub
+# (the dashboard button links to it). Going live needs your approval there.
+mode: paper
+
+# Emergency stop. Set to true and the bots stop placing new trades
+# (reports keep running).
+paused: false
+
+# Which Gemini models the bots use.
+#   auto-flash = newest Gemini Flash model (free tier) -> researchers, executives, Reporter
+#   auto-pro   = newest Gemini Pro model (uses your $10/month Cloud credit) -> President, managers
+# If Pro isn't available on your API key, those bots fall back to Flash automatically.
+# You can also write an exact model name, e.g. gemini-2.5-flash
+models:
+  fast: auto-flash
+  smart: auto-pro
+
+# Hard risk rules. Enforced by plain code, not by the AI.
+# The President can make these STRICTER each day, but can never loosen them.
+risk:
+  max_position_pct: 0.20            # most of a team's budget that can go into one stock
+  max_daily_loss_pct: 0.03          # no new buys once the portfolio is down 3% today
+  max_open_positions_per_team: 5
+  max_trades_per_team_per_day: 4
+  min_conviction_to_buy: 3          # managers rate every idea 1-5
+  cash_reserve_pct: 0.10            # always keep 10% of the money in cash
+  default_stop_loss_pct: 0.05       # sell automatically if a stock drops 5% from where we bought
+  default_take_profit_pct: 0.10     # sell automatically after a 10% gain
+  min_stop_loss_pct: 0.02
+  max_stop_loss_pct: 0.15
+  allow_fractional_shares: true     # lets small accounts buy part of a share
+
+# Safety cap for real money. In live mode the bots act as if the
+# account holds at most this many dollars, even if it holds more.
+live:
+  max_capital_usd: 500
+
+# What the team is compared against on the dashboard.
+benchmark: SPY
+
+# Optional. The SEC requires a name + email to read company filings,
+# e.g. "Ben Smith ben@example.com". Leave empty to skip filings.
+sec_contact: ""
+
+# How many past lessons each manager remembers.
+lessons_to_remember: 15
+
+# Rules shown on the dashboard for when the team looks ready for real money.
+go_live_checklist:
+  min_trading_days: 60
+  must_beat_benchmark: true
+  max_drawdown_pct: 0.15
