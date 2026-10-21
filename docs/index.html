@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bot Team Dashboard</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#16181d;--muted:#5f6670;--line:#e3e6ea;--up:#0f8a4f;--down:#c8372d;--accent:#2f5bea;--bench:#9aa1ab;--warn:#b26a00}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a20;--ink:#e8eaed;--muted:#9aa1ab;--line:#2a2f37;--up:#3ccf8e;--down:#ff6b5e;--accent:#7b9cff;--bench:#6b7280;--warn:#f0a740}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 60px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;margin-bottom:16px}
+h1{font-size:22px;margin:0}h2{font-size:16px;margin:0 0 10px}h3{font-size:14px;margin:0 0 4px}
+.muted{color:var(--muted)}.up{color:var(--up)}.down{color:var(--down)}
+.badge{display:inline-block;padding:3px 10px;border-radius:99px;font-weight:600;font-size:12px;letter-spacing:.04em}
+.paper{background:#e6ecff;color:#2f5bea}.live{background:#ffe5e2;color:#c8372d}
+@media (prefers-color-scheme:dark){.paper{background:#1f2a4d;color:#9db2ff}.live{background:#4a1f1b;color:#ff8d82}}
+.banner{background:var(--warn);color:#fff;padding:8px 12px;border-radius:8px;margin-bottom:12px;font-weight:600}
+.grid{display:grid;gap:12px}.kpis{grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));margin-bottom:12px}
+.two{grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
+.kpi .v{font-size:24px;font-weight:650;font-variant-numeric:tabular-nums}.kpi .l{font-size:12px;color:var(--muted)}
+section{margin-top:12px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-weight:600;font-size:12px}
+td.n,th.n{text-align:right}.scroll{overflow-x:auto}
+.scroll{max-width:100%}html,body{overflow-x:clip}
+.reason{color:var(--muted);font-size:12.5px;max-width:420px}
+ul{margin:6px 0;padding-left:18px}
+.check{display:flex;gap:8px;align-items:baseline;padding:3px 0}
+.btn{display:inline-block;margin-top:10px;padding:9px 14px;border-radius:8px;background:var(--down);color:#fff;text-decoration:none;font-weight:600}
+.btn.secondary{background:transparent;color:var(--accent);border:1px solid var(--line)}
+svg text{fill:var(--muted);font-size:11px}
+.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden}.bar>i{display:block;height:100%;background:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>AI Trading Bot Team</h1><div class="muted" id="updated">Loading…</div></div>
+    <span id="mode" class="badge paper">PAPER</span>
+  </header>
+  <div id="paused"></div>
+  <div class="grid kpis" id="kpis"></div>
+
+  <div class="card"><h2>Performance vs <span id="benchName">SPY</span></h2><div id="chart"></div></div>
+
+  <div class="grid two">
+    <section class="card"><h2>Reporter's daily report</h2><div id="report" class="muted">No report yet. It appears after the first evening run.</div></section>
+    <section class="card"><h2>President's orders</h2><div id="president" class="muted">No strategy yet.</div></section>
+  </div>
+
+  <section class="card"><h2>Teams</h2><div class="grid two" id="teams"></div></section>
+  <section class="card"><h2>Open positions</h2><div class="scroll" id="positions"></div></section>
+  <section class="card"><h2>Today's trades</h2><div class="scroll" id="trades"></div></section>
+  <section class="card"><h2>Blocked by risk rules today</h2><div class="scroll" id="blocked"></div></section>
+  <section class="card"><h2>Recently closed trades</h2><div class="scroll" id="closed"></div></section>
+  <section class="card"><h2>Manager lessons</h2><div id="lessons" class="muted">None yet.</div></section>
+
+  <section class="card" id="golive">
+    <h2>Ready for real money?</h2>
+    <div id="checklist"></div>
+    <div id="assessment" class="muted"></div>
+    <a class="btn" id="liveBtn" target="_blank" rel="noopener">Switch to real money…</a>
+    <div class="muted" style="font-size:12.5px;margin-top:6px">Opens GitHub. You choose "live", type GO LIVE, then approve it yourself. Nothing switches from this page alone.</div>
+  </section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money=x=>x==null?"–":(x<0?"-":"")+"$"+Math.abs(x).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const pc=x=>x==null?"–":(x>0?"+":"")+(x*100).toFixed(2)+"%";
+const cls=x=>x>0?"up":x<0?"down":"";
+function table(rows,cols){if(!rows||!rows.length)return'<div class="muted">None.</div>';
+  return`<table><tr>${cols.map(c=>`<th class="${c.n?'n':''}">${c.h}</th>`).join("")}</tr>${rows.map(r=>`<tr>${cols.map(c=>`<td class="${c.n?'n':''} ${c.c?c.c(r):''}">${c.f?c.f(r):esc(r[c.k])}</td>`).join("")}</tr>`).join("")}</table>`}
+function repoUrl(){const h=location.hostname,p=location.pathname.split("/").filter(Boolean);
+  if(h.endsWith("github.io")&&p.length)return`https://github.com/${h.split(".")[0]}/${p[0]}`;return null}
+
+function chart(hist){
+  if(!hist||hist.length<2){$("chart").innerHTML='<div class="muted">The chart starts after two trading days.</div>';return}
+  const W=1000,H=260,P={l:46,r:90,t:12,b:24};
+  const s0=hist[0],b0=hist.find(h=>h.benchmark)?.benchmark;
+  const port=hist.map(h=>h.equity/s0.equity-1),bench=hist.map(h=>b0&&h.benchmark?h.benchmark/b0-1:null);
+  const all=port.concat(bench.filter(v=>v!=null),[0]);let lo=Math.min(...all),hi=Math.max(...all);const pad=(hi-lo)*.1||.01;lo-=pad;hi+=pad;
+  const x=i=>P.l+i*(W-P.l-P.r)/(hist.length-1),y=v=>P.t+(hi-v)*(H-P.t-P.b)/(hi-lo);
+  const path=a=>a.map((v,i)=>v==null?"":`${i&&a[i-1]!=null?"L":"M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+  let ticks="";for(let k=0;k<5;k++){const v=lo+(hi-lo)*k/4;ticks+=`<line x1="${P.l}" x2="${W-P.r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${P.l-6}" y="${y(v)+4}" text-anchor="end">${(v*100).toFixed(1)}%</text>`}
+  const lp=port.at(-1),lb=bench.at(-1);
+  $("chart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Bot team return vs benchmark">${ticks}
+  <line x1="${P.l}" x2="${W-P.r}" y1="${y(0)}" y2="${y(0)}" stroke="var(--muted)" stroke-dasharray="3 3"/>
+  ${lb!=null?`<path d="${path(bench)}" fill="none" stroke="var(--bench)" stroke-width="2"/><text x="${W-P.r+6}" y="${y(lb)+4}">${esc($("benchName").textContent)} ${pc(lb)}</text>`:""}
+  <path d="${path(port)}" fill="none" stroke="var(--accent)" stroke-width="2.5"/><text x="${W-P.r+6}" y="${y(lp)+4}" style="fill:var(--accent);font-weight:600">Bots ${pc(lp)}</text>
+  <text x="${P.l}" y="${H-6}">${esc(hist[0].date)}</text><text x="${W-P.r}" y="${H-6}" text-anchor="end">${esc(hist.at(-1).date)}</text></svg>`}
+
+async function load(){
+  let d,hist;
+  try{[d,hist]=await Promise.all(["data/dashboard.json","data/history.json"].map(u=>fetch(u+"?t="+Date.now()).then(r=>r.ok?r.json():null)))}catch(e){}
+  if(!d){$("updated").textContent="No data yet. It appears after the first bot run.";return}
+  $("updated").textContent="Updated "+new Date(d.updated).toLocaleString();
+  $("mode").textContent=d.mode.toUpperCase()+" TRADING";$("mode").className="badge "+(d.mode==="live"?"live":"paper");
+  if(d.paused)$("paused").innerHTML='<div class="banner">Trading is paused (settings.yaml → paused: true)</div>';
+  const a=d.account,p=d.performance||{};$("benchName").textContent=d.benchmark?.symbol||"SPY";
+  $("kpis").innerHTML=[["Account value",money(a.equity),""],["Today",`${money(a.day_change)} (${pc(a.day_change_pct)})`,cls(a.day_change)],
+    ["Since start",pc(p.return_since_start),cls(p.return_since_start)],[`${d.benchmark?.symbol||"SPY"} since start`,pc(p.benchmark_since_start),cls(p.benchmark_since_start)],
+    ["Worst drop",pc(-(p.max_drawdown||0)),""],["Cash",money(a.cash),""]]
+    .map(([l,v,c])=>`<div class="card kpi"><div class="l">${l}</div><div class="v ${c}">${v}</div></div>`).join("");
+  chart(hist);
+  const r=d.report;if(r){$("report").className="";$("report").innerHTML=`<h3>${esc(r.headline)}</h3><p>${esc(r.summary)}</p>
+    <p><b>Best:</b> ${esc(r.best_trade)}<br><b>Worst:</b> ${esc(r.worst_trade)}</p>
+    ${(r.concerns||[]).length?`<b>Concerns</b><ul>${r.concerns.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>`:""}
+    ${(r.rule_issues||[]).length?`<b>Rule issues</b><ul>${r.rule_issues.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>`:""}
+    <p class="muted">${esc(r.patterns||"")}</p>`}
+  const s=d.president;if(s){$("president").className="";const al=s.allocations||{};
+    $("president").innerHTML=`<p>${esc(s.strategy_notes)}</p>${Object.entries(s.team_focus||{}).map(([t,v])=>`<p><b>${esc(d.teams[t]?.name||t)}:</b> ${esc(v)}</p>`).join("")}
+    <b>Money per team</b>${Object.entries(al).map(([t,v])=>`<div style="margin:4px 0"><div style="display:flex;justify-content:space-between;font-size:13px"><span>${esc(d.teams[t]?.name||t)}</span><span>${(v*100).toFixed(0)}%</span></div><div class="bar"><i style="width:${v*100}%"></i></div></div>`).join("")}
+    ${Object.keys(s.risk_overrides||{}).length?`<p><b>Stricter rules today:</b> ${esc(JSON.stringify(s.risk_overrides))}</p>`:""}
+    <p class="muted">${esc(s.decision_log||"")}</p>`}
+  $("teams").innerHTML=Object.entries(d.teams).map(([id,t])=>{const at=t.all_time||{},rv=(d.reviews||{})[id];return`<div class="card"><h3>${esc(t.name)} <span class="muted" style="font-weight:400">· ${t.kind}</span></h3>
+    <div class="muted" style="font-size:13px">Budget ${money(t.budget)} · invested ${money(t.invested)} · open P&L <span class="${cls(t.unrealized_pnl)}">${money(t.unrealized_pnl)}</span></div>
+    <div style="font-size:13px">Today: ${t.trades_today} trades, ${t.blocked_today} blocked, realized <span class="${cls(t.realized_today)}">${money(t.realized_today)}</span></div>
+    <div style="font-size:13px">All time: ${at.closed_trades||0} closed, win rate ${at.win_rate==null?"–":(at.win_rate*100).toFixed(0)+"%"}, realized <span class="${cls(at.realized_pnl)}">${money(at.realized_pnl)}</span></div>
+    ${rv?`<p class="reason">${esc(rv.what_went_well)} ${esc(rv.what_went_wrong)}</p>`:""}</div>`}).join("");
+  const tn=r=>esc(d.teams[r.team]?.name||r.team);
+  $("positions").innerHTML=table(d.positions,[{h:"Stock",k:"symbol"},{h:"Team",f:tn},{h:"Qty",k:"qty",n:1},{h:"Bought",f:r=>money(r.entry),n:1},{h:"Now",f:r=>money(r.price),n:1},
+    {h:"P&L",f:r=>`${money(r.pnl)} (${pc(r.pnl_pct)})`,n:1,c:r=>cls(r.pnl)},{h:"Stop / Target",f:r=>r.stop?`${money(r.stop)} / ${money(r.target)}`:"–",n:1},{h:"Why",f:r=>`<div class="reason">${esc(r.reason)}</div>`}]);
+  $("trades").innerHTML=table(d.trades_today,[{h:"Time",k:"time"},{h:"Team",f:tn},{h:"Stock",k:"symbol"},{h:"Status",f:r=>esc(r.status+(r.exit_reason?" · "+r.exit_reason:""))},
+    {h:"Conviction",k:"conviction",n:1},{h:"P&L",f:r=>r.pnl==null?"–":`${money(r.pnl)} (${pc(r.pnl_pct)})`,n:1,c:r=>cls(r.pnl)},{h:"Why",f:r=>`<div class="reason">${esc(r.reason)}</div>`}]);
+  $("blocked").innerHTML=table(d.blocked_today,[{h:"Time",k:"time"},{h:"Team",f:tn},{h:"Order",f:r=>esc(r.action+" "+r.symbol)},{h:"Rule",k:"reason"}]);
+  $("closed").innerHTML=table(d.recent_trades,[{h:"Date",k:"date"},{h:"Team",f:tn},{h:"Stock",k:"symbol"},{h:"Bought",f:r=>money(r.entry_price),n:1},{h:"Sold",f:r=>money(r.exit_price),n:1},
+    {h:"Result",f:r=>r.pnl==null?"–":`${money(r.pnl)} (${pc(r.pnl_pct)})`,n:1,c:r=>cls(r.pnl)},{h:"Exit",k:"exit_reason"}]);
+  const L=d.lessons||{};if(Object.values(L).some(v=>v.length)){$("lessons").className="";$("lessons").innerHTML=Object.entries(L).map(([t,v])=>`<h3>${esc(d.teams[t]?.name||t)}</h3><ul>${v.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`).join("")}
+  const g=d.go_live||{items:[]};$("checklist").innerHTML=g.items.map(i=>`<div class="check"><span class="${i.ok?'up':'down'}">${i.ok?"✓":"✗"}</span><span>${esc(i.rule)} <span class="muted">(${esc(i.value)})</span></span></div>`).join("");
+  const ga=s?.go_live_assessment;if(ga)$("assessment").textContent=`President: ${ga.ready?"ready":"not ready yet"}. ${ga.reason||""}`;
+  const repo=repoUrl(),btn=$("liveBtn");
+  if(d.mode==="live"){btn.textContent="Switch back to paper…";btn.className="btn secondary"}
+  if(repo)btn.href=repo+"/actions/workflows/switch-mode.yml";else btn.style.display="none";
+}
+load();setInterval(load,5*60*1000);
+</script>
+</body>
+</html>
