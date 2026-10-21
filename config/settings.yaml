@@ -44,6 +44,28 @@ intraday:
                                   # bots stop making new decisions but stop-losses still work
   close_positions_before_close: false   # true = sell everything ~10 min before 4 PM (pure day trading)
 
+# Research never stops: after the close, overnight and on weekends the
+# researchers keep reading news, filings and social posts. What they find is
+# handed to the managers at the next open.
+after_hours:
+  check_every_minutes: 15
+  max_ai_calls_per_day: 80        # separate from the trading-day budget above
+
+# Political & social media watch.
+market_watch:
+  enabled: true
+  # Truth Social (Trump's posts) is read for free from the public trumpstruth.org archive.
+  # X (Twitter) needs an X_BEARER_TOKEN secret. X charges about $0.005 per post read,
+  # so 150 posts/day is about $0.75/day. Without the secret, X is skipped.
+  x_max_posts_per_day: 150
+  x_accounts: [realDonaldTrump, WhiteHouse, elonmusk, federalreserve, SECGov,
+               DeptofWar, NASA, CommerceGov, USTreasury]
+
+# Making practice trading feel like the real thing.
+realism:
+  slippage_pct: 0.0005   # real orders fill a little worse than the quoted price (0.05% each way).
+                         # Every trade's result is charged this, so the bots learn from realistic numbers.
+
 # Safety cap for real money. In live mode the bots act as if the
 # account holds at most this many dollars, even if it holds more.
 live:
