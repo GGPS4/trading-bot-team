@@ -25,6 +25,9 @@ from bots.president import decide, load_strategy, normalize_allocations
 from bots.reporter import daily_report, snapshot, with_baseline, write_dashboard
 from bots import market_watch
 from bots import watchlist
+from bots import intraday
+from bots import events
+from bots import scorecard
 from bots import llm as llm_mod
 from bots.research import after_hours_news, fresh_news, load_seen, run_research, save_seen
 from bots.risk import RiskDesk, effective_limits
@@ -140,6 +143,11 @@ def evening(ctx: Ctx, force: bool):
     positions = b.positions()
     blocked = journal.blocked_on(today())
     disc = watchlist.discovery(b, ctx.org)
+    try:
+        cal = events.snapshot(ctx.org)
+    except Exception as e:
+        log(f"Event calendar failed: {e}")
+        cal = {}
     reviews = {}
     for tid, team in ctx.org.items():
         mine = [e for e in journal.trades_on(today(), entries) if e["team"] == tid]
@@ -147,7 +155,7 @@ def evening(ctx: Ctx, force: bool):
             overnight = read_json(STATE / "research" / f"{tid}.json", {}).get("overnight")
             reviews[tid] = manager_review(ctx.llm, team, mine, team_holdings(positions, ctx.owner_of, tid),
                                           [x for x in blocked if x["team"] == tid], overnight,
-                                          watchlist.for_team(disc, tid))
+                                          watchlist.for_team(disc, tid), events.for_team(cal, tid))
             reviews[tid]["watchlist"] = watchlist.apply_changes(
                 b, ctx.org, ctx.owner_of, tid, reviews[tid].get("watchlist_changes"),
                 {p["symbol"] for p in positions}, source="evening review")
@@ -183,7 +191,8 @@ def evening(ctx: Ctx, force: bool):
         log(f"Reporter failed: {e}")
     if report:
         try:
-            new_strategy = decide(ctx.llm, report, snap, execs, reviews, ctx.team_ids)
+            new_strategy = decide(ctx.llm, report, snap, execs, reviews, ctx.team_ids,
+                                  scorecard.for_president(scorecard.build()))
         except Exception as e:
             log(f"President failed, keeping yesterday's strategy: {e}")
 
@@ -258,6 +267,8 @@ def session(ctx: Ctx, until: str, force: bool):
     except Exception as e:
         log(f"Watchlist check failed: {e}")
     disc, last_disc = {}, 0.0
+    cal, blackouts, last_cal = {}, [], 0.0
+    card = scorecard.build()
 
     # 2. full research at the start of the session
     research, seen = {}, load_seen()
@@ -306,16 +317,33 @@ def session(ctx: Ctx, until: str, force: bool):
                     trades_today[e["team"]] = trades_today.get(e["team"], 0) + 1
             desk = RiskDesk(ctx.limits, with_baseline(b.account()), ctx.capital, positions, ctx.owner_of, ctx.budgets,
                             trades_today, is_open, ctx.paused or closed_for_day,
-                            no_buys_after=cfg.get("no_new_buys_after"))
+                            no_buys_after=cfg.get("no_new_buys_after"), blackouts=blackouts)
 
             refresh_social = time.time() - last_social > 2 * 3600
             if time.time() - last_disc >= 600:  # what's moving across the whole market
                 disc, last_disc = watchlist.discovery(b, ctx.org), time.time()
+            if time.time() - last_cal >= 3600:  # earnings + economic calendar, refreshed scorecard
+                card = scorecard.build()
+                try:
+                    cal, blackouts = events.snapshot(ctx.org), events.buy_blackouts()
+                    desk.blackouts = blackouts
+                except Exception as e:
+                    log(f"Event calendar failed: {e}")
+                last_cal = time.time()
             try:
                 watch_new = market_watch.check(ctx.llm, ctx.org)
             except Exception as e:
                 log(f"Market watch failed: {e}")
                 watch_new = []
+            sig_cache = {}
+
+            def get_signals():  # today's 5-minute bars -> VWAP, opening range, momentum, volume (once per check)
+                if "s" not in sig_cache:
+                    avg = {sym: v.get("avg_volume_20d") for rr in research.values()
+                           for sym, v in (rr.get("technicals") or {}).items()}
+                    sig_cache["s"] = intraday.signals(intraday.fetch(b, set(ctx.owner_of)), avg, prices)
+                return sig_cache["s"]
+
             for tid, team in ctx.org.items():
                 try:
                     r = research[tid]
@@ -351,6 +379,9 @@ def session(ctx: Ctx, until: str, force: bool):
                         f"({inv / ctx.budgets[tid]:.0%}), minimum {ctx.limits.get('min_invested_pct', 0):.0%}"
                         + (f" -> you must put about ${gap:,.0f} more to work now" if gap >= 1 and not desk.past_buy_cutoff() else ""))
                     r["discovery"] = watchlist.for_team(disc, tid)
+                    r["calendar"] = events.for_team(cal, tid)
+                    r["scorecard"] = scorecard.for_manager(card, tid)
+                    intraday.add_to_view(r["intraday"], get_signals())
                     p = manager_plan(ctx.llm, team, orders, r, holdings, "intraday")
                     last_plan[tid] = time.time()
                     last_plan_prices[tid] = {s: snaps[s]["price"] for s in team["tickers"] if s in snaps}
@@ -421,6 +452,10 @@ def watch(ctx: Ctx, minutes: int):
                 log(f"{tid}: after-hours research failed: {e}")
         save_seen(seen)
         if time.time() - last_save >= 3600:
+            try:
+                events.snapshot(ctx.org)
+            except Exception as e:
+                log(f"Event calendar failed: {e}")
             write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
             save_progress(f"Bot team: after-hours research {now_et():%Y-%m-%d %H:%M}")
             last_save = time.time()

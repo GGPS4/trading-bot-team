@@ -50,6 +50,13 @@ The bots stop making new AI decisions after `max_ai_calls_per_day`, to stay in G
 - **Safety still comes first:** the 3% daily loss limit and the 10% cash reserve override the 75% rule.
 - **Watch 15-20, hold 5:** each team watches 15-20 stocks (`watchlist` in settings) and holds at most 5 at a time. The starter lists are in `config/teams.yaml`. During the day, managers add names that are in the news, moving unusually or trading heavy volume (using Alpaca's market-wide top movers, most-active list and headlines), and drop names that have gone quiet. The evening review sets up the next day's list from after-hours news. Code enforces the limits: at most 3 changes per look, real and tradable stocks over $5 only, one team per stock, and held stocks can't be dropped. The live lists and every change are on each team's **Watchlist** tab.
 
+## What the managers see
+
+- **Day-trading signals** (`bots/intraday.py`), from today's 5-minute bars: VWAP and distance from it, the opening range (first 30 min) with breakout/breakdown flags, 15- and 60-minute momentum, the short-term trend, and relative volume (today vs a normal day at this hour).
+- **Event calendar** (`bots/events.py`): earnings dates for watched stocks (Nasdaq's public calendar) and medium/high-impact US economic releases (CPI, jobs, Fed). New buys pause from 10 minutes before to 5 minutes after high-impact releases during market hours (`events` in settings).
+- **Scorecard** (`bots/scorecard.py`): every buy is tagged with its setup (opening range breakout, VWAP bounce, momentum, news catalyst, earnings gap, ...) and the experiment being tested. Closed trades over 30 days are scored by setup, team, experiment and exit type (win rate, average return, profit factor). Managers see their own scorecard; the President uses the full one to move money toward what works.
+- **Health banner:** the dashboard warns when data is stale (over 25-45 minutes during market hours) or when the loss limit or a pause is in force.
+
 ## Research never stops
 
 Outside market hours (evenings, overnight, pre-market and weekends), "watch" jobs keep the researchers reading every 15 minutes:
