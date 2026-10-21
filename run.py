@@ -233,7 +233,7 @@ def session(ctx: Ctx, until: str, force: bool):
     fake = os.environ.get("BOT_FAKE") == "1"
 
     # 1. wait for the opening bell (if we started a bit early)
-    while not force:
+    while not force and not fake:
         clock = b.clock()
         if clock.get("is_open"):
             break
@@ -392,6 +392,29 @@ def watch(ctx: Ctx, minutes: int):
     log(f"Watch done. After-hours AI calls today: {llm_mod.calls_today()}")
 
 
+def auto(ctx: Ctx):
+    """Decide what to do right now. Used by the self-restarting GitHub chain:
+    trade while the market is open, write the evening report after the close,
+    and keep researching the rest of the time."""
+    b, now = ctx.broker, now_et()
+    clock = b.clock()
+    next_open = _parse_time(clock["next_open"])
+    next_close = _parse_time(clock["next_close"])
+    max_job = dt.timedelta(minutes=320)  # GitHub jobs can run at most 6 hours
+    if clock.get("is_open") or (next_open - now) <= dt.timedelta(minutes=20):
+        end = min(next_close, now + max_job)
+        log(f"Auto: trading session until {end:%H:%M} ET")
+        session(ctx, end.strftime("%H:%M"), False)
+        if now_et().hour >= 16 and not b.clock().get("is_open") and b.is_trading_day(today()):
+            evening(ctx, False)
+        return
+    if b.is_trading_day(today()) and now.hour >= 16:
+        evening(ctx, False)
+    minutes = int(min(max_job, next_open - now_et() - dt.timedelta(minutes=8)).total_seconds() // 60)
+    log(f"Auto: after-hours research for {max(10, minutes)} minutes")
+    watch(ctx, max(10, minutes))
+
+
 def check(ctx: Ctx):
     a = ctx.account
     log(f"Alpaca OK: {ctx.mode} account, equity ${float(a['equity']):,.2f}, cash ${float(a['cash']):,.2f}")
@@ -412,7 +435,7 @@ def check(ctx: Ctx):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("phase", choices=["check", "session", "watch", "morning", "midday", "evening"])
+    ap.add_argument("phase", choices=["auto", "check", "session", "watch", "morning", "midday", "evening"])
     ap.add_argument("--minutes", type=int, default=330, help="how long an after-hours watch runs")
     ap.add_argument("--until", default="16:00", help="session end time, ET (HH:MM)")
     ap.add_argument("--force", action="store_true")
@@ -420,6 +443,8 @@ def main():
     ctx = Ctx()
     if args.phase == "check":
         check(ctx)
+    elif args.phase == "auto":
+        auto(ctx)
     elif args.phase == "watch":
         watch(ctx, args.minutes)
     elif args.phase == "session":
