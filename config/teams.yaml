@@ -2,6 +2,11 @@
 # Bot teams. Turn a team on with enabled: true.
 # Start small: each enabled team uses ~7 AI calls per trading day.
 #
+# tickers = each team's STARTER watchlist (15-20 stocks). During the day the
+# team manager adds stocks that are moving or in the news and drops quiet ones;
+# the live list is kept in state/watchlists/<team>.json and shown on the dashboard.
+# Teams still hold at most 5 stocks at a time (settings.yaml).
+#
 # Overlap rule: if a company is on a special team's list AND a sector
 # team's list, the special team trades it and the sector team skips it.
 # ---------------------------------------------------------------
@@ -10,22 +15,22 @@ sector_teams:
   - id: tech
     name: Information Technology
     enabled: true
-    tickers: [AAPL, MSFT, NVDA, AVGO, ORCL, CRM, AMD, ADBE, CSCO, IBM, INTU, QCOM, TXN, NOW, AMAT]
+    tickers: [AAPL, MSFT, NVDA, AVGO, ORCL, CRM, AMD, ADBE, CSCO, IBM, INTU, QCOM, TXN, NOW, AMAT, MU, PANW, ANET]
 
   - id: consumer
     name: Consumer Discretionary
     enabled: true
-    tickers: [AMZN, TSLA, HD, MCD, NKE, LOW, SBUX, BKNG, TJX, CMG]
+    tickers: [AMZN, TSLA, HD, MCD, NKE, LOW, SBUX, BKNG, TJX, CMG, ABNB, ORLY, MAR, RCL, GM, F, LULU, DPZ]
 
   - id: financials
     name: Financial Services
     enabled: true
-    tickers: [JPM, BAC, WFC, GS, MS, V, MA, AXP, BLK, SCHW]
+    tickers: [JPM, BAC, WFC, GS, MS, V, MA, AXP, BLK, SCHW, C, PYPL, COF, SPGI, CME, ICE, HOOD, COIN]
 
   - id: healthcare
     name: Healthcare
     enabled: true
-    tickers: [LLY, UNH, JNJ, ABBV, MRK, PFE, TMO, ABT, AMGN, ISRG]
+    tickers: [LLY, UNH, JNJ, ABBV, MRK, PFE, TMO, ABT, AMGN, ISRG, BMY, GILD, VRTX, REGN, CVS, MDT, DHR, HCA]
 
 special_teams:
   - id: defense
@@ -34,7 +39,7 @@ special_teams:
     focus: >
       Big defense companies. Watch for new government defense contracts,
       changes to the defense budget, and world events that affect military spending.
-    tickers: [LMT, RTX, NOC, GD, LHX, HII, LDOS, TXT, KTOS, AVAV]
+    tickers: [LMT, RTX, NOC, GD, LHX, HII, LDOS, TXT, KTOS, AVAV, PLTR, BAH, CACI, SAIC, HEI, CW, MRCY]
 
   - id: space
     name: "Team 2: Space & Aerospace"
@@ -42,7 +47,7 @@ special_teams:
     focus: >
       Space and aerospace companies. Track upcoming launches, mission results,
       and government contracts from agencies like NASA.
-    tickers: [SPCX, BA, RKLB, LUNR, ASTS, PL, RDW, GE, HWM, TDG]
+    tickers: [SPCX, BA, RKLB, LUNR, ASTS, PL, RDW, GE, HWM, TDG, BKSY, IRDM, VSAT, SATS, FLY]
 
   - id: entertainment
     name: "Team 3: Entertainment"
@@ -50,7 +55,7 @@ special_teams:
     focus: >
       Music, TV and movie companies. Track box office results, streaming
       subscriber numbers, and major release dates.
-    tickers: [DIS, NFLX, SPOT, WMG, LYV, ROKU, CNK, IMAX, SONY]
+    tickers: [DIS, NFLX, SPOT, WMG, LYV, ROKU, CNK, IMAX, SONY, WBD, FOXA, CMCSA, TKO, EA, TTWO]
 
   - id: politicians
     name: "Team 4: Politician Tracking"

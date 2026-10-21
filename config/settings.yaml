@@ -54,6 +54,15 @@ risk:
   min_invested_pct: 0.75            # each team must keep at least 75% of its budget in stocks
                                     # while the market is open (set by you; the President can't lower it)
 
+# Each team WATCHES 15-20 stocks and HOLDS at most 5 of them at a time
+# (risk.max_open_positions_per_team). Managers swap stocks in and out of the
+# watchlist as news comes out and as stocks start or stop moving.
+watchlist:
+  min: 15
+  max: 20
+  max_changes_per_look: 3    # most adds (and most drops) in one manager look
+  min_price: 5               # don't add penny stocks
+
 # All-day trading. The bots watch the market from open to close.
 intraday:
   check_every_minutes: 5          # prices, stop-losses and fresh news are checked this often
