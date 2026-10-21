@@ -4,6 +4,7 @@
     python run.py session --until 16:00  # trade all day: watch, re-plan, trade until that time (ET)
     python run.py morning / midday       # single trading passes (older, still work)
     python run.py evening                # reviews -> executives -> Reporter -> President -> dashboard
+    python run.py watch --minutes 330    # after hours: keep reading news, filings, Truth Social / X
 
 Add --force to run even when the market is closed (orders are still blocked
 while the market is closed; useful for testing reports).
@@ -22,7 +23,9 @@ from bots.investor import _sell, check_software_stops, execute
 from bots.manager import plan as manager_plan, recent_lessons, review as manager_review
 from bots.president import decide, load_strategy, normalize_allocations
 from bots.reporter import daily_report, snapshot, write_dashboard
-from bots.research import fresh_news, run_research
+from bots import market_watch
+from bots import llm as llm_mod
+from bots.research import after_hours_news, fresh_news, load_seen, run_research, save_seen
 from bots.risk import RiskDesk, effective_limits
 
 
@@ -149,6 +152,9 @@ def evening(ctx: Ctx, force: bool):
                                   "social": (r.get("social") or {}).get("overall"),
                                   "findings": ((r.get("news") or {}).get("findings") or [])[:8]}
 
+    mw = read_json(STATE / "research" / "_market_watch.json", {})
+    research_overview["political_and_social_media"] = {"overall": mw.get("overall"),
+                                                       "findings": (mw.get("findings") or [])[:8]}
     report, new_strategy = None, None
     try:
         report = daily_report(ctx.llm, snap, reviews, execs, research_overview)
@@ -226,9 +232,14 @@ def session(ctx: Ctx, until: str, force: bool):
         time.sleep(min(300, max(5, wait)))
 
     # 2. full research at the start of the session
-    research, seen = {}, set(read_json(STATE / "cache" / f"news_seen_{today()}.json", []))
+    research, seen = {}, load_seen()
+    try:
+        market_watch.check(ctx.llm, ctx.org)
+    except Exception as e:
+        log(f"Market watch failed: {e}")
     for tid, team in ctx.org.items():
         research[tid] = run_research(ctx.llm, b, team, "morning")
+        research[tid]["market_watch"] = market_watch.for_team(team)
     last_plan = {tid: 0.0 for tid in ctx.org}
     last_plan_prices = {tid: {} for tid in ctx.org}
     last_save, last_social, closed_for_day, ticks = time.time(), time.time(), False, 0
@@ -268,6 +279,11 @@ def session(ctx: Ctx, until: str, force: bool):
                             trades_today, is_open, ctx.paused or closed_for_day)
 
             refresh_social = time.time() - last_social > 2 * 3600
+            try:
+                watch_new = market_watch.check(ctx.llm, ctx.org)
+            except Exception as e:
+                log(f"Market watch failed: {e}")
+                watch_new = []
             for tid, team in ctx.org.items():
                 try:
                     r = research[tid]
@@ -275,6 +291,9 @@ def session(ctx: Ctx, until: str, force: bool):
                         from bots.research import social_researcher
                         r["social"] = social_researcher(ctx.llm, team)
                     new = fresh_news(ctx.llm, b, team, r, seen)
+                    r["market_watch"] = market_watch.for_team(team)
+                    hot_posts = [f for f in watch_new if (f.get("importance") or 0) >= 4 and
+                                 (f.get("market_wide") or set(f.get("affected") or []) & set(team["tickers"]))]
                     r["intraday"] = intraday_view({s: snaps[s] for s in team["tickers"] if s in snaps},
                                                   last_plan_prices[tid])
                     moved = [s for s, v in r["intraday"].items()
@@ -282,9 +301,11 @@ def session(ctx: Ctx, until: str, force: bool):
                     urgent = (r.get("news") or {}).get("urgent") or [f["symbol"] for f in new
                                                                       if (f.get("importance") or 0) >= 4]
                     due = time.time() - last_plan[tid] >= replan
-                    if closed_for_day or not (due or (new and urgent) or moved):
+                    if closed_for_day or not (due or (new and urgent) or moved or hot_posts):
                         continue
-                    why = "scheduled look" if due else (f"big news on {urgent}" if new and urgent else f"price moves in {moved}")
+                    why = ("scheduled look" if due else f"big news on {urgent}" if new and urgent
+                           else "market-moving post: " + hot_posts[0].get("post", "")[:80] if hot_posts
+                           else f"price moves in {moved}")
                     log(f"{tid}: manager takes a look ({why})")
                     holdings = team_holdings(positions, ctx.owner_of, tid)
                     orders = orders_for_team(team, ctx.strategy, ctx.budgets[tid], ctx.limits)
@@ -299,7 +320,7 @@ def session(ctx: Ctx, until: str, force: bool):
                     log(f"{tid}: skipped this check: {e}")
             if refresh_social:
                 last_social = time.time()
-            write_json(STATE / "cache" / f"news_seen_{today()}.json", sorted(x for x in seen if x is not None))
+            save_seen(seen)
         except Exception as e:
             log(f"Check failed, will retry: {e}")
 
@@ -314,6 +335,46 @@ def session(ctx: Ctx, until: str, force: bool):
     write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
     save_progress(f"Bot team: session end {now_et():%Y-%m-%d %H:%M}")
     log(f"Session done. AI calls today: {__import__('bots.llm', fromlist=['calls_today']).calls_today()}")
+
+
+def watch(ctx: Ctx, minutes: int):
+    """After hours: keep reading news, filings and political/social posts. No trading."""
+    llm_mod.BUCKET["name"] = "after_hours"
+    b = ctx.broker
+    every = max(5, ctx.cfg.get("after_hours", {}).get("check_every_minutes", 15)) * 60
+    stop_at = time.time() + minutes * 60
+    seen, checks, last_save = load_seen(), 0, time.time()
+    fake = os.environ.get("BOT_FAKE") == "1"
+    log(f"After-hours watch for {minutes} minutes")
+    while time.time() < stop_at:
+        started = time.time()
+        checks += 1
+        try:
+            if b.clock().get("is_open") and not fake:
+                log("The market is open; the trading session takes over.")
+                break
+        except Exception:
+            pass
+        try:
+            market_watch.check(ctx.llm, ctx.org)
+        except Exception as e:
+            log(f"Market watch failed: {e}")
+        for tid, team in ctx.org.items():
+            try:
+                after_hours_news(ctx.llm, b, team, seen, with_filings=(checks % 4 == 1))
+            except Exception as e:
+                log(f"{tid}: after-hours research failed: {e}")
+        save_seen(seen)
+        if time.time() - last_save >= 3600:
+            write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
+            save_progress(f"Bot team: after-hours research {now_et():%Y-%m-%d %H:%M}")
+            last_save = time.time()
+        if fake and checks >= int(os.environ.get("BOT_FAKE_TICKS", "2")):
+            break
+        time.sleep(0 if fake else max(5, min(every - (time.time() - started), stop_at - time.time())))
+    write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
+    save_progress(f"Bot team: after-hours research {now_et():%Y-%m-%d %H:%M}")
+    log(f"Watch done. After-hours AI calls today: {llm_mod.calls_today()}")
 
 
 def check(ctx: Ctx):
@@ -336,13 +397,16 @@ def check(ctx: Ctx):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("phase", choices=["check", "session", "morning", "midday", "evening"])
+    ap.add_argument("phase", choices=["check", "session", "watch", "morning", "midday", "evening"])
+    ap.add_argument("--minutes", type=int, default=330, help="how long an after-hours watch runs")
     ap.add_argument("--until", default="16:00", help="session end time, ET (HH:MM)")
     ap.add_argument("--force", action="store_true")
     args = ap.parse_args()
     ctx = Ctx()
     if args.phase == "check":
         check(ctx)
+    elif args.phase == "watch":
+        watch(ctx, args.minutes)
     elif args.phase == "session":
         session(ctx, args.until, args.force)
     elif args.phase in ("morning", "midday"):

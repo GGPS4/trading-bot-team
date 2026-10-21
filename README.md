@@ -14,6 +14,7 @@ It's built from the plan in the "AI Trading Bot Team" outline.
 | Team Investor (1 per team) | Checks every order against the risk rules, places it at Alpaca and records why. | Plain code, no AI |
 | News Researcher (1 per team) | Reads Alpaca news and SEC filings, then rates each item. | Gemini Flash |
 | Social Researcher (1 per team) | Reads Reddit and rates the crowd's mood. | Gemini Flash |
+| Political & Social Media Researcher (shared) | Watches Trump's Truth Social posts, and X accounts if an X token is added. Flags posts that could move our stocks or the whole market. | Gemini Flash |
 
 The risk rules in `config/settings.yaml` are enforced by code. The AI can only make them stricter.
 
@@ -29,6 +30,27 @@ From the 9:30 AM open to the 4:00 PM close, the bots run in a loop:
 GitHub jobs can last at most 6 hours, so the day runs as two back-to-back sessions: open to 1 PM, and 1 PM to close.
 You can change the timing in the `intraday:` part of `config/settings.yaml`. Set `close_positions_before_close: true` for pure day trading, so everything is sold before 4 PM.
 The bots stop making new AI decisions after `max_ai_calls_per_day`, to stay in Gemini's free limit. Stop-losses keep working after that.
+
+## Research never stops
+
+Outside market hours (evenings, overnight, pre-market and weekends), "watch" jobs keep the researchers reading every 15 minutes:
+
+- company news
+- SEC filings (if `sec_contact` is set)
+- Truth Social
+- X
+
+They never trade. Everything they find is handed to the managers at the next open, so earnings released at 4:05 PM or a post at midnight is already known at 9:30 AM.
+
+- **Truth Social:** read for free from the public trumpstruth.org archive.
+- **X (Twitter):** needs an `X_BEARER_TOKEN` secret, from developer.x.com (pay-per-use, about $0.005 per post). The daily post limit is in `market_watch:` in `config/settings.yaml`.
+
+## How realistic is practice trading?
+
+- The bots are never told it's practice money.
+- Every trade is charged realistic slippage (`realism.slippage_pct`), so results aren't better than real fills would be.
+- **Make the paper balance match the money you'll really use** (Alpaca → Paper account → reset). A $100,000 practice account teaches different habits than $1,000.
+- Limits of paper trading: Alpaca's practice fills don't affect the market, and the free price feed (IEX) is a slice of all trading. Real fills can be a bit slower and worse, especially at the open and close.
 
 ## Setup
 
