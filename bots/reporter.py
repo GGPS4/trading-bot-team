@@ -79,6 +79,9 @@ def snapshot(broker, org, owner_of, budgets, mode):
     entries = journal.load()
     date = today()
     equity, last_equity = _f(acct["equity"]), _f(acct.get("last_equity") or acct["equity"])
+    if last_equity <= 0:  # brand-new account: Alpaca has no "yesterday" yet
+        prior = [h for h in read_json(HISTORY, []) if h["date"] < today()]
+        last_equity = prior[-1]["equity"] if prior else equity
     bench = settings().get("benchmark", "SPY")
     try:
         bench_price = broker.latest_prices([bench]).get(bench)
