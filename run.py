@@ -256,7 +256,8 @@ def session(ctx: Ctx, until: str, force: bool):
         research[tid]["market_watch"] = market_watch.for_team(team)
     last_plan = {tid: 0.0 for tid in ctx.org}
     last_plan_prices = {tid: {} for tid in ctx.org}
-    last_save, last_social, closed_for_day, ticks = time.time(), time.time(), False, 0
+    last_save, last_social, closed_for_day, ticks = 0.0, time.time(), False, 0
+    traded = False  # any orders since the last dashboard save?
 
     # 3. the all-day loop
     while now_et() < end:
@@ -329,6 +330,7 @@ def session(ctx: Ctx, until: str, force: bool):
                     write_json(STATE / "plans" / f"{tid}.json",
                                {"date": today(), "time": now_et().strftime("%H:%M"), "trigger": why, **p})
                     results = execute(b, desk, team, p, prices)
+                    traded = traded or any(not ("blocked" in r or "failed" in r) for r in results)
                     log_plan(tid, why, p, results)
                     log(f"{tid}: {results or 'no trades'}")
                 except Exception as e:
@@ -339,10 +341,11 @@ def session(ctx: Ctx, until: str, force: bool):
         except Exception as e:
             log(f"Check failed, will retry: {e}")
 
-        if time.time() - last_save >= 1800:
+        # Dashboard: within ~5 minutes of any trade, otherwise every 15 minutes.
+        if time.time() - last_save >= (300 if traded else 900):
             write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
             save_progress(f"Bot team: intraday update {now_et():%Y-%m-%d %H:%M}")
-            last_save = time.time()
+            last_save, traded = time.time(), False
         if fake and ticks >= int(os.environ.get("BOT_FAKE_TICKS", "3")):
             break
         time.sleep(0 if fake else max(5, every - (time.time() - started)))
