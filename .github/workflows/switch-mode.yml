@@ -24,7 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: sed -i 's/^mode: .*/mode: paper/' config/settings.yaml
+      - name: Set mode to paper
+        run: |
+          sed -i 's/^mode: .*/mode: paper/' config/settings.yaml
       - run: |
           git config user.name "bot-team"
           git config user.email "bot-team@users.noreply.github.com"
@@ -45,7 +47,9 @@ jobs:
           if [ -z "$K" ] || [ -z "$S" ]; then
             echo "::error::Add ALPACA_LIVE_KEY and ALPACA_LIVE_SECRET secrets before going live."; exit 1
           fi
-      - run: sed -i 's/^mode: .*/mode: live/' config/settings.yaml
+      - name: Set mode to live
+        run: |
+          sed -i 's/^mode: .*/mode: live/' config/settings.yaml
       - run: |
           git config user.name "bot-team"
           git config user.email "bot-team@users.noreply.github.com"
