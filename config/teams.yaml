@@ -14,17 +14,17 @@ sector_teams:
 
   - id: consumer
     name: Consumer Discretionary
-    enabled: false
+    enabled: true
     tickers: [AMZN, TSLA, HD, MCD, NKE, LOW, SBUX, BKNG, TJX, CMG]
 
   - id: financials
     name: Financial Services
-    enabled: false
+    enabled: true
     tickers: [JPM, BAC, WFC, GS, MS, V, MA, AXP, BLK, SCHW]
 
   - id: healthcare
     name: Healthcare
-    enabled: false
+    enabled: true
     tickers: [LLY, UNH, JNJ, ABBV, MRK, PFE, TMO, ABT, AMGN, ISRG]
 
 special_teams:
@@ -38,16 +38,15 @@ special_teams:
 
   - id: space
     name: "Team 2: Space & Aerospace"
-    enabled: false
+    enabled: true
     focus: >
       Space and aerospace companies. Track upcoming launches, mission results,
       and government contracts from agencies like NASA.
-    # Add SpaceX's ticker here once you've confirmed it trades on Alpaca.
-    tickers: [BA, RKLB, LUNR, ASTS, PL, RDW, GE, HWM, TDG]
+    tickers: [SPCX, BA, RKLB, LUNR, ASTS, PL, RDW, GE, HWM, TDG]
 
   - id: entertainment
     name: "Team 3: Entertainment"
-    enabled: false
+    enabled: true
     focus: >
       Music, TV and movie companies. Track box office results, streaming
       subscriber numbers, and major release dates.

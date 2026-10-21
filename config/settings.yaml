@@ -38,7 +38,7 @@ risk:
 # All-day trading. The bots watch the market from open to close.
 intraday:
   check_every_minutes: 5          # prices, stop-losses and fresh news are checked this often
-  replan_every_minutes: 30        # each manager takes a full new look at least this often
+  replan_every_minutes: 45        # each manager takes a full new look at least this often
   price_move_trigger_pct: 0.02    # ...or sooner if one of its stocks moves 2% since its last look
   max_ai_calls_per_day: 250       # stays inside Gemini's free daily limit; after this the
                                   # bots stop making new decisions but stop-losses still work
