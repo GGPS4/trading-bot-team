@@ -9,7 +9,7 @@ import time
 
 import requests
 
-from .common import log, settings
+from .common import STATE, log, read_json, settings, today, write_json
 
 API = "https://generativelanguage.googleapis.com/v1beta"
 # Model name parts we never want for text reasoning.
@@ -31,6 +31,26 @@ def parse_json(text: str):
         if m:
             return json.loads(m.group(0))
         raise
+
+
+USAGE = STATE / "ai_usage.json"
+
+
+def calls_today() -> int:
+    return read_json(USAGE, {}).get(today(), 0)
+
+
+def check_budget():
+    cap = settings().get("intraday", {}).get("max_ai_calls_per_day", 250)
+    if calls_today() >= cap:
+        raise LLMError(f"Daily AI budget used up ({cap} calls). Stop-losses still work.")
+
+
+def count_call():
+    u = read_json(USAGE, {})
+    u = {k: v for k, v in u.items() if k >= today()[:8]}  # keep this month only
+    u[today()] = u.get(today(), 0) + 1
+    write_json(USAGE, u)
 
 
 class Gemini:
@@ -91,6 +111,7 @@ class Gemini:
     # ---------- asking ----------
     def ask_json(self, tier: str, role: str, system: str, prompt: str, retries: int = 3) -> dict:
         """tier = 'fast' or 'smart'. role is just a label for logs."""
+        check_budget()
         cfg = settings().get("models", {})
         chain = [cfg.get(tier, "auto-flash")]
         if tier != "fast":
@@ -140,6 +161,7 @@ class Gemini:
                     last_err = LLMError(f"{model} gave an unreadable answer: {e}")
                     continue
                 self.calls += 1
+                count_call()
                 log(f"LLM: {role} answered ({model})")
                 return result
             log(f"LLM: {role} could not use {model} ({last_err}); trying fallback")

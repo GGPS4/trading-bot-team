@@ -58,7 +58,8 @@ class FakeBroker:
     # ----- account -----
     def clock(self):
         n = now_et()
-        return {"is_open": n.weekday() < 5 and dt.time(9, 30) <= n.time() < dt.time(16, 0)}
+        return {"is_open": n.weekday() < 5 and dt.time(9, 30) <= n.time() < dt.time(16, 0),
+                "next_open": n.replace(hour=9, minute=30).isoformat()}
 
     def is_trading_day(self, date):
         return dt.date.fromisoformat(date).weekday() < 5
@@ -136,6 +137,12 @@ class FakeBroker:
     def latest_prices(self, symbols):
         return {s: self.price(s) for s in symbols}
 
+    def snapshots(self, symbols):
+        n = now_et()
+        return {s: {"price": self.price(s), "open": self.price(s, n.replace(hour=9)),
+                    "high": None, "low": None, "prev_close": self.price(s, n - dt.timedelta(days=1))}
+                for s in symbols}
+
     def daily_bars(self, symbols, days=120):
         out = {}
         for s in symbols:
@@ -150,7 +157,7 @@ class FakeBroker:
     def news(self, symbols, hours=24, limit=50):
         r = random.Random(now_et().strftime("%Y%m%d%H"))
         picks = r.sample(symbols, min(3, len(symbols)))
-        return [{"symbols": [s], "headline": f"{s} announces new product line", "summary": "Test article.",
+        return [{"id": f"{s}-{now_et():%Y%m%d%H}", "symbols": [s], "headline": f"{s} announces new product line", "summary": "Test article.",
                  "source": "fake", "created_at": now_et().isoformat()} for s in picks]
 
 

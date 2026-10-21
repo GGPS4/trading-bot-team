@@ -143,9 +143,9 @@ def _team_header(team):
             f"Team focus: {team.get('focus') or 'the ' + team['name'] + ' sector'}\n")
 
 
-def news_researcher(llm, broker, team, hours):
-    news = broker.news(team["tickers"], hours=hours)
-    filings = fetch_filings(team["tickers"], settings().get("sec_contact", ""))
+def news_researcher(llm, broker, team, hours, news=None, with_filings=True):
+    news = broker.news(team["tickers"], hours=hours) if news is None else news
+    filings = fetch_filings(team["tickers"], settings().get("sec_contact", "")) if with_filings else []
     if not news and not filings:
         return {"findings": [], "urgent": [], "overall": "No new news.", "items_read": 0}
     items = [{"symbols": n.get("symbols"), "headline": n.get("headline"), "summary": (n.get("summary") or "")[:300],
@@ -153,7 +153,7 @@ def news_researcher(llm, broker, team, hours):
     system = ("You are the News Researcher on an AI stock trading team. You read company news and SEC filings "
               "and tell your manager what matters for the team's stocks. Be skeptical: separate confirmed facts "
               "from rumors, and ignore recycled or promotional articles.")
-    prompt = (_team_header(team) + f"\nNews from the last {hours} hours:\n{items}\n\nSEC filings:\n{filings}\n\n"
+    prompt = (_team_header(team) + f"\nNews from the last {hours if hours >= 1 else 'few minutes'} hours:\n{items}\n\nSEC filings:\n{filings}\n\n"
               + RATING_FORMAT)
     result = llm.ask_json("fast", f"{team['id']} news researcher", system, prompt)
     result["items_read"] = len(items) + len(filings)
@@ -199,3 +199,26 @@ def run_research(llm, broker, team, phase):
         out["technicals"] = {}
     write_json(STATE / "research" / f"{team['id']}.json", out)
     return out
+
+
+def fresh_news(llm, broker, team, research, seen_ids):
+    """Intraday: read only articles we haven't seen yet. Returns new findings."""
+    try:
+        items = [n for n in broker.news(team["tickers"], hours=2) if n.get("id") not in seen_ids]
+    except Exception as e:
+        log(f"{team['id']}: news check failed: {e}")
+        return []
+    if not items:
+        return []
+    seen_ids.update(n.get("id") for n in items)
+    result = news_researcher(llm, broker, team, 2, news=items, with_filings=False)
+    old = (research.get("news") or {}).get("findings") or []
+    new = result.get("findings") or []
+    stamp = now_et().strftime("%H:%M")
+    for f in new:
+        f["time"] = stamp
+    research["news"] = {"findings": (new + old)[:30], "urgent": result.get("urgent") or [],
+                        "overall": result.get("overall", ""),
+                        "items_read": (research.get("news") or {}).get("items_read", 0) + len(items)}
+    write_json(STATE / "research" / f"{team['id']}.json", research)
+    return new

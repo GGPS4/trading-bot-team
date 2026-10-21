@@ -46,8 +46,19 @@ def plan(llm, team, orders, research, holdings, phase):
               "You are a careful, disciplined trader: you look for clear reasons, respect your rules, and keep "
               "trying new strategies to build a more successful portfolio. "
               + (f"Team focus: {team['focus']}" if team.get("focus") else ""))
-    timing = ("It is the morning session, shortly after the market opened." if phase == "morning" else
-              "It is the midday check. Only act if new, important information came in since the morning.")
+    if phase == "intraday":
+        n = now_et()
+        mins_left = max(0, (16 * 60) - (n.hour * 60 + n.minute))
+        eod = settings().get("intraday", {}).get("close_positions_before_close")
+        timing = (f"It is {n:%I:%M %p} ET; the market closes in {mins_left} minutes. You check in on the market "
+                  "all day. Act when there is a real reason (news, a strong move, a stock hitting your levels); "
+                  "doing nothing is often right. Don't open new positions in the last 15 minutes."
+                  + (" All positions will be sold automatically just before the close, so only buy for "
+                     "moves you expect today." if eod else ""))
+    elif phase == "morning":
+        timing = "It is the morning session, shortly after the market opened."
+    else:
+        timing = "It is the midday check. Only act if new, important information came in since the morning."
     prompt = f"""{timing}
 Team companies: {', '.join(team['tickers'])}
 
@@ -63,7 +74,11 @@ News researcher findings:
 Social media researcher findings:
 {research.get('social')}
 
-Price data (change_* are fractions, rsi_14 > 70 = overbought, < 30 = oversold):
+Live prices right now (change_today vs yesterday's close, from_open vs today's open,
+since_last_look vs your previous check; all fractions):
+{research.get('intraday') or 'not available'}
+
+Daily price history (change_* are fractions, rsi_14 > 70 = overbought, < 30 = oversold):
 {research.get('technicals')}
 
 Lessons you wrote after past trading days (follow them):

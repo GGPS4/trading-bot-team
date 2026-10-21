@@ -88,6 +88,24 @@ class Alpaca:
                          params={"symbols": ",".join(symbols), "feed": "iex"})
         return {s: t["p"] for s, t in data.get("trades", {}).items()}
 
+    def snapshots(self, symbols):
+        """Live price plus today's open/high/low and yesterday's close, for many stocks at once."""
+        if not symbols:
+            return {}
+        data = self._req("GET", f"{self.DATA}/v2/stocks/snapshots",
+                         params={"symbols": ",".join(symbols), "feed": "iex"})
+        data = data.get("snapshots", data)
+        out = {}
+        for s, v in data.items():
+            if not v:
+                continue
+            price = (v.get("latestTrade") or {}).get("p") or (v.get("minuteBar") or {}).get("c")
+            day, prev = v.get("dailyBar") or {}, v.get("prevDailyBar") or {}
+            if price:
+                out[s] = {"price": price, "open": day.get("o"), "high": day.get("h"), "low": day.get("l"),
+                          "prev_close": prev.get("c")}
+        return out
+
     def daily_bars(self, symbols, days=120):
         start = (dt.datetime.utcnow() - dt.timedelta(days=days)).strftime("%Y-%m-%dT00:00:00Z")
         bars, token = {}, None
