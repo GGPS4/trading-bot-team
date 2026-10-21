@@ -16,14 +16,13 @@ paused: false
 #   fast  = researchers, executives, Reporter (lots of small jobs)
 #   smart = managers and President (fewer, more important decisions)
 ai_routing:
-  fast:  [groq, github, gemini, openrouter]
-  smart: [gemini, github, groq, openrouter]
+  fast:  [groq, gemini, openrouter]
+  smart: [gemini, groq, openrouter]
 
 # Most calls per day for each provider, kept just under their free limits.
 ai_daily_caps:
   gemini: 240
   groq: 900
-  github: 140
   openrouter: 45      # raise to ~950 if you ever add the one-time $10 on OpenRouter
 
 # Optional: force a specific model per provider, e.g.  groq: openai/gpt-oss-120b
