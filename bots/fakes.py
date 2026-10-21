@@ -151,7 +151,23 @@ class FakeBroker:
             for i in range(days, 0, -1):
                 d = now_et() - dt.timedelta(days=i)
                 if d.weekday() < 5:
-                    rows.append({"t": d.date().isoformat(), "c": self.price(s, d.replace(hour=15))})
+                    rows.append({"t": d.date().isoformat(), "c": self.price(s, d.replace(hour=15)),
+                                 "v": 1_000_000 + zlib.crc32(s.encode()) % 500_000})
+            out[s] = rows
+        return out
+
+    def intraday_bars(self, symbols, start_iso, timeframe="5Min"):
+        n = now_et()
+        out = {}
+        for s in symbols:
+            rows, t = [], n.replace(hour=9, minute=30, second=0, microsecond=0)
+            rr = random.Random(f"{s}{n:%Y%m%d}")
+            p = self.price(s, t)
+            while t <= n:
+                p = round(p * (1 + rr.gauss(0.0003, 0.003)), 2)
+                rows.append({"t": t.isoformat(), "o": p, "h": round(p * 1.002, 2), "l": round(p * 0.998, 2), "c": p,
+                             "v": rr.randint(5_000, 40_000), "vw": p})
+                t += dt.timedelta(minutes=5)
             out[s] = rows
         return out
 
@@ -181,7 +197,7 @@ class FakeLLM:
     def ask_json(self, tier, role, system, prompt):
         self.calls += 1
         r = random.Random(f"{role}{now_et():%Y%m%d%H}")
-        companies = re.search(r"(?:Companies \(only these\)|Team companies): (.*)", prompt)
+        companies = re.search(r"(?:Companies \(only these\)|Team companies(?: \([^)]*\))?): (.*)", prompt)
         tickers = [t.strip() for t in companies.group(1).split(",")] if companies else ["AAPL"]
         if role.startswith("political"):
             return {"findings": [{"source": "Truth Social", "post": "Plans to order more fighter jets",
@@ -200,7 +216,8 @@ class FakeLLM:
             held = re.findall(r"'symbol': '([A-Z]+)'", prompt.split("Current positions held by your team:")[1].split("News researcher")[0])
             buys = r.sample(tickers, min(3, len(tickers)))
             d = [{"symbol": s, "action": "BUY", "conviction": r.choice([2, 3, 4, 5]), "stop_loss_pct": 0.04,
-                  "take_profit_pct": 0.08, "reason": f"Fake reason for {s}"} for s in buys]
+                  "take_profit_pct": 0.08, "setup": r.choice(["momentum", "VWAP bounce", "opening range breakout", "news catalyst"]),
+                  "reason": f"Fake reason for {s}"} for s in buys]
             d.append({"symbol": "ZZZZ", "action": "BUY", "conviction": 5, "reason": "not on our list (should be blocked)"})
             if held:
                 d.append({"symbol": held[0], "action": "SELL", "conviction": 4, "reason": "Fake sell"})

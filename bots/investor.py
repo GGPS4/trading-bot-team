@@ -4,6 +4,7 @@ Takes the manager's decisions, runs each one past the risk rules, places
 the orders at Alpaca, and records why every trade was made.
 """
 from . import journal
+from .scorecard import clean_setup
 from .common import log, now_et, today
 
 
@@ -74,6 +75,7 @@ def execute(broker, desk, team, plan, prices):
             "symbol": sym, "side": "buy", "kind": p["kind"], "qty": p["qty"], "dollars": p["dollars"],
             "est_price": price, "stop_price": p["stop_price"], "take_profit_price": p["take_profit_price"],
             "conviction": d.get("conviction"), "reason": reason,
+            "setup": clean_setup(d.get("setup")), "experiment": (plan.get("experiment") or "")[:200],
             "order_id": order.get("id"), "status": "submitted", "entry_price": None,
         })
         results.append(f"BUY {sym} x{p['qty']} (~${p['dollars']})" + (" [deploy]" if deploying else ""))

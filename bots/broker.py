@@ -128,6 +128,22 @@ class Alpaca:
                                  "sort": "desc", "include_content": "false"})
         return data.get("news", [])
 
+    def intraday_bars(self, symbols, start_iso, timeframe="5Min"):
+        """Today's bars (default 5-minute) for many stocks: o/h/l/c, volume v and volume-weighted price vw."""
+        bars, token = {}, None
+        while symbols:
+            params = {"symbols": ",".join(symbols), "timeframe": timeframe, "start": start_iso,
+                      "feed": "iex", "limit": 10000}
+            if token:
+                params["page_token"] = token
+            data = self._req("GET", f"{self.DATA}/v2/stocks/bars", params=params)
+            for s, b in (data.get("bars") or {}).items():
+                bars.setdefault(s, []).extend(b)
+            token = data.get("next_page_token")
+            if not token:
+                break
+        return bars
+
     # ---------- discovery ----------
     def asset(self, symbol):
         """Is this a real US stock we can trade? (tradable, active, fractionable...)"""

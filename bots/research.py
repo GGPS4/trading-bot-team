@@ -47,6 +47,13 @@ def _rsi(closes, n=14):
     return round(100 - 100 / (1 + rs), 1)
 
 
+def _avg_volume(rows):
+    """Average daily volume over the last 20 finished days (today's partial day left out)."""
+    done = [b for b in rows if str(b.get("t", ""))[:10] < now_et().date().isoformat() and b.get("v")]
+    vols = [b["v"] for b in done[-20:]]
+    return round(sum(vols) / len(vols)) if vols else None
+
+
 def technicals(bars: dict) -> dict:
     out = {}
     for sym, rows in bars.items():
@@ -65,6 +72,7 @@ def technicals(bars: dict) -> dict:
             "above_50d_avg": (last > sma(50)) if sma(50) else None,
             "rsi_14": _rsi(closes),
             "daily_volatility": round(statistics.pstdev(rets[-20:]), 4) if len(rets) >= 20 else None,
+            "avg_volume_20d": _avg_volume(rows),
         }
     return out
 

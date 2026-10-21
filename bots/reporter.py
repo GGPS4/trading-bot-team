@@ -126,8 +126,17 @@ def snapshot(broker, org, owner_of, budgets, mode):
         }
     hist = update_history(equity, bench_price)
     perf = performance(hist)
+    issues = []
+    if settings().get("paused"):
+        issues.append("Trading is paused in settings")
+    limit = settings().get("risk", {}).get("max_daily_loss_pct", 0.03)
+    if last_equity and equity / last_equity - 1 <= -limit:
+        issues.append(f"Daily loss limit hit ({equity / last_equity - 1:.1%}); no new buys today")
+    if len(blocked) >= 40:
+        issues.append(f"{len(blocked)} orders blocked by the risk rules today")
     return {
         "updated": now_et().isoformat(timespec="minutes"), "date": date, "mode": mode,
+        "health": {"issues": issues},
         "paused": bool(settings().get("paused")),
         "rules": {"min_invested_pct": settings().get("risk", {}).get("min_invested_pct", 0),
                   "max_positions": settings().get("risk", {}).get("max_open_positions_per_team"),
@@ -157,6 +166,8 @@ def write_dashboard(snap, extra=None):
     for k in ("report", "president", "executives", "reviews", "lessons", "research"):
         data[k] = (extra or {}).get(k, prev.get(k))
     data["market_watch"] = read_json(STATE / "research" / "_market_watch.json", {})
+    data["calendar"] = read_json(STATE / "research" / "_calendar.json", {})
+    data["scorecard"] = read_json(STATE / "scorecard.json", {})
     data["overnight"] = {tid: (read_json(STATE / "research" / f"{tid}.json", {}).get("overnight") or [])[:8]
                          for tid in snap["teams"]}
     data["team_details"] = team_details(snap["teams"])
@@ -189,7 +200,7 @@ def team_details(teams):
             pnl_days.append({"date": d, "realized": round(by_day[d], 2), "cum": round(cum, 2)})
         research = read_json(STATE / "research" / f"{tid}.json", {})
         out[tid] = {
-            "trades": [{k: e.get(k) for k in ("id", "date", "time", "symbol", "kind", "qty", "dollars", "est_price",
+            "trades": [{k: e.get(k) for k in ("id", "date", "time", "symbol", "kind", "qty", "dollars", "est_price", "setup",
                                                "entry_price", "exit_price", "exit_time", "exit_reason", "exit_note",
                                                "pnl", "pnl_pct", "status", "conviction", "reason", "stop_price",
                                                "take_profit_price")} for e in mine[-250:]],

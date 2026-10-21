@@ -28,8 +28,9 @@ def effective_limits(base: dict, overrides: dict | None) -> dict:
 
 class RiskDesk:
     def __init__(self, limits, account, capital, positions, owner_of, budgets, trades_today, market_open, paused,
-                 no_buys_after=None):
+                 no_buys_after=None, blackouts=None):
         self.l = limits
+        self.blackouts = blackouts or []            # [(start, end, label)] around big economic releases
         self.no_buys_after = no_buys_after          # "HH:MM" ET, or None
         self.capital = capital                      # dollars the bots are allowed to manage
         self.cash = float(account["cash"])
@@ -78,6 +79,10 @@ class RiskDesk:
             return False, "market is closed", None
         if self.past_buy_cutoff():
             return False, f"no new day trades after {self.no_buys_after}", None
+        n = now_et()
+        for start, end, label in self.blackouts:
+            if start <= n <= end:
+                return False, f"buys paused around {label} ({start:%I:%M}-{end:%I:%M %p})", None
         if self.owner_of.get(symbol) != team:
             return False, f"{symbol} is not on this team's list", None
         if self.day_change() <= -l["max_daily_loss_pct"]:

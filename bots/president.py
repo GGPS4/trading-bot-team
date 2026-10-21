@@ -49,7 +49,7 @@ def normalize_allocations(alloc, team_ids):
     return {t: round(v / total, 4) for t, v in raw.items()}
 
 
-def decide(llm, report, snap, exec_summaries, reviews, team_ids):
+def decide(llm, report, snap, exec_summaries, reviews, team_ids, scorecard=None):
     current = load_strategy(team_ids)
     base = settings()["risk"]
     past = read_json(STATE / "reports" / "index.json", [])[-20:]
@@ -73,6 +73,11 @@ Executive summaries and escalations: {exec_summaries}
 Manager reviews: {reviews}
 
 Report history (last 20 days): {past}
+
+Strategy scorecard, last 30 days of closed trades by setup, team and exit type (code-calculated;
+results with fewer than 5 trades aren't reliable yet). Move money toward teams and setups that are
+working and tell teams to stop using setups that keep losing:
+{scorecard or 'no closed trades yet'}
 
 Your current strategy: {current}
 Normal risk limits: {base}
