@@ -205,9 +205,19 @@ class OpenAIStyle:
                 ids = [m.get("id") or m.get("name") for m in items if isinstance(m, dict)]
             except Exception:
                 ids = []
+        if self.name == "openrouter" and ids:
+            # only free models, never safety/guard classifiers or vision-only models
+            ids = [i for i in ids if i and i.endswith(":free")
+                   and not any(b in i for b in ("guard", "safety", "vision", "embed", "audio"))]
         for p in self.prefer:
-            if p not in self._tried and (not ids or p in ids):
+            if p in self._tried:
+                continue
+            if not ids or p in ids:
                 self._model = p
+                break
+            match = next((i for i in ids if p in i and i not in self._tried), None)
+            if match:
+                self._model = match
                 break
         if not self._model:
             raise LLMError(f"{self.name}: none of the preferred models are available")
@@ -238,6 +248,9 @@ class OpenAIStyle:
             try:
                 return parse_json(text), model
             except ValueError:
+                if self.name == "openrouter":  # this free model can't do JSON well: use another next time
+                    self._tried.add(model)
+                    self._model = None
                 raise LLMError(f"{self.name}: answer was not JSON: {text[:120]!r}")
         raise LLMError(f"{self.name}: no working model")
 
@@ -252,7 +265,9 @@ def build_providers():
             max_chars=24000),
         "openrouter": OpenAIStyle(
             "openrouter", "https://openrouter.ai/api/v1/chat/completions", "OPENROUTER_API_KEY",
-            None, ["openrouter/free"], max_chars=60000,
+            "https://openrouter.ai/api/v1/models",
+            ["deepseek-chat", "deepseek-v3", "llama-3.3-70b", "gpt-oss-120b", "qwen3", "gemma-3-27b",
+             "mistral-small", "openrouter/free"], max_chars=60000,
             extra_headers={"HTTP-Referer": "https://github.com/trading-bot-team", "X-Title": "Trading Bot Team"},
             json_mode=False),
     }

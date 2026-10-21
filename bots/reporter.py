@@ -27,6 +27,16 @@ def _f(x, d=0.0):
         return d
 
 
+def with_baseline(acct):
+    """Alpaca's 'last_equity' (yesterday's close) is 0 on a brand-new account.
+    Fall back to our own history so today's change and the daily loss limit work."""
+    acct = dict(acct)
+    if _f(acct.get("last_equity")) <= 0:
+        prior = [h for h in read_json(HISTORY, []) if h["date"] < today()]
+        acct["last_equity"] = prior[-1]["equity"] if prior else acct["equity"]
+    return acct
+
+
 def update_history(equity, bench_price):
     hist = read_json(HISTORY, [])
     row = {"date": today(), "equity": round(equity, 2), "benchmark": bench_price}
@@ -78,10 +88,8 @@ def snapshot(broker, org, owner_of, budgets, mode):
     positions = broker.positions()
     entries = journal.load()
     date = today()
-    equity, last_equity = _f(acct["equity"]), _f(acct.get("last_equity") or acct["equity"])
-    if last_equity <= 0:  # brand-new account: Alpaca has no "yesterday" yet
-        prior = [h for h in read_json(HISTORY, []) if h["date"] < today()]
-        last_equity = prior[-1]["equity"] if prior else equity
+    acct = with_baseline(acct)
+    equity, last_equity = _f(acct["equity"]), _f(acct["last_equity"])
     bench = settings().get("benchmark", "SPY")
     try:
         bench_price = broker.latest_prices([bench]).get(bench)

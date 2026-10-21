@@ -87,7 +87,7 @@ def check_software_stops(broker, prices, paused, market_open):
         if e["status"] != "open" or e.get("kind") != "fractional" or e.get("exit_order_id"):
             continue
         price = prices.get(e["symbol"])
-        if not price:
+        if not price or not e.get("stop_price") or not e.get("take_profit_price"):
             continue
         reason = None
         if price <= e["stop_price"]:

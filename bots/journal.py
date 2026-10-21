@@ -72,9 +72,18 @@ def sync(broker):
     for e in entries:
         if e["status"] not in ("submitted", "open"):
             continue
-        try:
+        if not e.get("order_id"):  # recovered position (no original order on record)
+            if e["symbol"] not in held and not e.get("exit_order_id"):
+                _close(e, None, "sold (recovered position)", now_et().isoformat())
+                changed += 1
+                continue
+            if not e.get("exit_order_id"):
+                continue
+            o = {}
+        else:
+          try:
             o = broker.get_order(e["order_id"])
-        except Exception as err:
+          except Exception as err:
             log(f"journal: could not look up {e['symbol']} order: {err}")
             continue
         if e["status"] == "submitted":
@@ -132,3 +141,38 @@ def team_stats(team_id, entries):
         "win_rate": round(len(wins) / len(closed), 3) if closed else None,
         "realized_pnl": round(sum(e["pnl"] for e in closed), 2),
     }
+
+
+def reconcile(broker, owner_of):
+    """If a run was stopped before saving, Alpaca may hold positions the journal
+    doesn't know about. Record them so stops, reports and the dashboard stay correct."""
+    entries = load()
+    known = {e["symbol"] for e in entries if e["status"] in ("submitted", "open")}
+    added = 0
+    for p in broker.positions():
+        sym = p["symbol"]
+        if sym in known:
+            continue
+        stop = target = None
+        try:
+            for o in broker.open_orders(sym):
+                if o.get("type") in ("stop", "stop_limit") and o.get("stop_price"):
+                    stop = _f(o["stop_price"])
+                elif o.get("type") == "limit" and o.get("limit_price"):
+                    target = _f(o["limit_price"])
+        except Exception:
+            pass
+        entries.append({
+            "id": new_id(owner_of.get(sym, "unassigned"), sym), "date": today(), "time": now_et().strftime("%H:%M"),
+            "team": owner_of.get(sym, "unassigned"), "symbol": sym, "side": "buy",
+            "kind": "bracket" if stop else "fractional", "qty": _f(p["qty"]),
+            "dollars": round(abs(_f(p["market_value"]) or 0), 2), "est_price": _f(p["avg_entry_price"]),
+            "entry_price": _f(p["avg_entry_price"]), "stop_price": stop, "take_profit_price": target,
+            "conviction": None, "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+            "order_id": None, "status": "open",
+        })
+        added += 1
+    if added:
+        save(entries)
+        log(f"journal: recovered {added} position(s) from Alpaca")
+    return added
