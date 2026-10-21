@@ -193,14 +193,14 @@ def save_progress(msg):
     if os.environ.get("BOT_GIT_PUSH") != "1":
         return
     try:
-        subprocess.run(["git", "add", "state", "docs/data"], check=True)
-        if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode == 0:
-            return
-        subprocess.run(["git", "commit", "-qm", msg], check=True)
-        subprocess.run(["git", "pull", "--rebase", "-q"], check=True)
-        subprocess.run(["git", "push", "-q"], check=True)
-        log("Saved progress to GitHub (dashboard updated).")
-    except subprocess.CalledProcessError as e:
+        r = subprocess.run(["bash", "save.sh", msg], capture_output=True, text=True, timeout=180)
+        out = (r.stdout + r.stderr).strip()
+        if r.returncode == 0:
+            if out.startswith("Saved"):
+                log("Saved progress to GitHub (dashboard updated).")
+        else:
+            log(f"Could not save progress: {out[-300:]}")
+    except Exception as e:
         log(f"Could not save progress: {e}")
 
 
