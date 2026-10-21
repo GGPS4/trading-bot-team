@@ -274,34 +274,48 @@ class Router:
 
     def ask_json(self, tier, role, system, prompt):
         check_budget()
+        for attempt in range(3):
+            result, waiting, errors = self._try_all(tier, role, system, prompt)
+            if result is not None:
+                return result
+            if not waiting:
+                break
+            # Every provider is just resting after a per-minute limit: wait for the first one back.
+            pause = max(5, min(70, min(waiting) - time.time()))
+            log(f"LLM: all providers busy, {role} waits {pause:.0f}s")
+            time.sleep(pause)
+        raise LLMError(f"{role}: no AI provider could answer ({'; '.join(errors)[:400]})")
+
+    def _try_all(self, tier, role, system, prompt):
         cfg = settings()
         order = (cfg.get("ai_routing") or {}).get(tier) or ["gemini", "groq", "openrouter"]
         caps = cfg.get("ai_daily_caps") or {}
-        errors = []
+        errors, waiting = [], []
         for name in order:
             p = self.providers.get(name)
             if not p or not p.available:
                 continue
-            if self.cooldown.get(name, 0) > time.time():
-                continue
             if caps.get(name) and provider_calls_today(name) >= caps[name]:
+                continue
+            if self.cooldown.get(name, 0) > time.time():
+                waiting.append(self.cooldown[name])
                 continue
             try:
                 result, model = p.ask(tier, system, prompt)
             except RateLimited as e:
-                self.cooldown[name] = time.time() + 300  # rest this provider for 5 minutes
+                self.cooldown[name] = time.time() + 60  # per-minute limit: rest a minute
+                waiting.append(self.cooldown[name])
                 errors.append(str(e))
                 continue
             except (LLMError, requests.RequestException, KeyError, IndexError, ValueError) as e:
-                self.cooldown[name] = time.time() + 120
+                self.cooldown[name] = time.time() + 90
                 errors.append(f"{name}: {e}")
                 continue
             self.calls += 1
             count_call(name)
             log(f"LLM: {role} answered ({name} {model})")
-            return result
-        raise LLMError(f"{role}: no AI provider could answer ({'; '.join(errors)[:400]})")
-
+            return result, [], errors
+        return None, waiting, errors
 
     def test(self):
         """Ask every provider a tiny question; used by `run.py check`."""
