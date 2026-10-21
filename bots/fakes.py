@@ -170,6 +170,10 @@ class FakeLLM:
         r = random.Random(f"{role}{now_et():%Y%m%d%H}")
         companies = re.search(r"(?:Companies \(only these\)|Team companies): (.*)", prompt)
         tickers = [t.strip() for t in companies.group(1).split(",")] if companies else ["AAPL"]
+        if role.startswith("political"):
+            return {"findings": [{"source": "Truth Social", "post": "Plans to order more fighter jets",
+                                  "market_wide": False, "affected": ["LMT"], "sentiment": 0.6, "importance": 4,
+                                  "why": "More defense spending"}], "overall": "Defense-friendly (fake)."}
         if "researcher" in role:
             picks = r.sample(tickers, min(2, len(tickers)))
             return {"findings": [{"symbol": s, "sentiment": round(r.uniform(-1, 1), 2), "importance": r.randint(1, 5),

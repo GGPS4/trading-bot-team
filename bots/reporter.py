@@ -142,6 +142,9 @@ def write_dashboard(snap, extra=None):
     data = dict(snap)
     for k in ("report", "president", "executives", "reviews", "lessons", "research"):
         data[k] = (extra or {}).get(k, prev.get(k))
+    data["market_watch"] = read_json(STATE / "research" / "_market_watch.json", {})
+    data["overnight"] = {tid: (read_json(STATE / "research" / f"{tid}.json", {}).get("overnight") or [])[:8]
+                         for tid in snap["teams"]}
     write_json(DOCS_DATA / "dashboard.json", data)
     write_json(DOCS_DATA / "history.json", read_json(HISTORY, []))
 

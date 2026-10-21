@@ -5,7 +5,7 @@ from it, and the dashboard shows it.
 """
 import uuid
 
-from .common import STATE, log, now_et, read_json, today, write_json
+from .common import STATE, log, now_et, read_json, settings, today, write_json
 
 TRADES = STATE / "journal" / "trades.json"
 BLOCKED = STATE / "journal" / "blocked.json"
@@ -57,8 +57,11 @@ def _close(e, price, reason, when):
     e["exit_reason"] = reason
     e["exit_time"] = when
     if price and e.get("entry_price"):
-        e["pnl"] = round((price - e["entry_price"]) * e["qty"], 2)
-        e["pnl_pct"] = round(price / e["entry_price"] - 1, 4)
+        # Charge realistic slippage on both the buy and the sell.
+        slip = float(settings().get("realism", {}).get("slippage_pct", 0) or 0)
+        buy, sell = e["entry_price"] * (1 + slip), price * (1 - slip)
+        e["pnl"] = round((sell - buy) * e["qty"], 2)
+        e["pnl_pct"] = round(sell / buy - 1, 4)
 
 
 def sync(broker):

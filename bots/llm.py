@@ -34,22 +34,30 @@ def parse_json(text: str):
 
 
 USAGE = STATE / "ai_usage.json"
+BUCKET = {"name": "trading"}  # run.py switches this to "after_hours" for overnight research
+
+
+def _key():
+    return today() if BUCKET["name"] == "trading" else f"{today()}-after-hours"
 
 
 def calls_today() -> int:
-    return read_json(USAGE, {}).get(today(), 0)
+    return read_json(USAGE, {}).get(_key(), 0)
 
 
 def check_budget():
-    cap = settings().get("intraday", {}).get("max_ai_calls_per_day", 250)
+    if BUCKET["name"] == "trading":
+        cap = settings().get("intraday", {}).get("max_ai_calls_per_day", 250)
+    else:
+        cap = settings().get("after_hours", {}).get("max_ai_calls_per_day", 80)
     if calls_today() >= cap:
-        raise LLMError(f"Daily AI budget used up ({cap} calls). Stop-losses still work.")
+        raise LLMError(f"Daily AI budget for {BUCKET['name']} used up ({cap} calls). Stop-losses still work.")
 
 
 def count_call():
     u = read_json(USAGE, {})
     u = {k: v for k, v in u.items() if k >= today()[:8]}  # keep this month only
-    u[today()] = u.get(today(), 0) + 1
+    u[_key()] = u.get(_key(), 0) + 1
     write_json(USAGE, u)
 
 

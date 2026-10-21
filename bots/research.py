@@ -178,6 +178,8 @@ def run_research(llm, broker, team, phase):
     hours = 20 if phase == "morning" else 4
     log(f"{team['id']}: researching ({phase})")
     out = {"time": now_et().isoformat(timespec="minutes"), "phase": phase}
+    prev = read_json(STATE / "research" / f"{team['id']}.json", {})
+    out["overnight"] = recent_overnight(prev)
     try:
         out["news"] = news_researcher(llm, broker, team, hours)
     except Exception as e:  # research failing should never crash trading
@@ -190,7 +192,6 @@ def run_research(llm, broker, team, phase):
             log(f"{team['id']}: social researcher failed: {e}")
             out["social"] = {"findings": [], "urgent": [], "overall": f"Social researcher failed: {e}", "items_read": 0}
     else:
-        prev = read_json(STATE / "research" / f"{team['id']}.json", {})
         out["social"] = prev.get("social", {"findings": [], "urgent": [], "overall": "", "items_read": 0})
     try:
         out["technicals"] = technicals(broker.daily_bars(team["tickers"]))
@@ -222,3 +223,50 @@ def fresh_news(llm, broker, team, research, seen_ids):
                         "items_read": (research.get("news") or {}).get("items_read", 0) + len(items)}
     write_json(STATE / "research" / f"{team['id']}.json", research)
     return new
+
+
+# ---------------------------------------------------------------- after hours
+SEEN_NEWS = STATE / "cache" / "news_seen.json"
+
+
+def load_seen():
+    return set(read_json(SEEN_NEWS, []))
+
+
+def save_seen(seen):
+    write_json(SEEN_NEWS, sorted(x for x in seen if x is not None)[-5000:])
+
+
+def recent_overnight(research, hours=30):
+    cutoff = (now_et() - dt.timedelta(hours=hours)).isoformat(timespec="minutes")
+    return [f for f in research.get("overnight", []) if f.get("seen_at", "") >= cutoff][:30]
+
+
+def after_hours_news(llm, broker, team, seen, with_filings=False):
+    """Read news (and optionally filings) that came out while the market is closed."""
+    path = STATE / "research" / f"{team['id']}.json"
+    research = read_json(path, {})
+    try:
+        items = [n for n in broker.news(team["tickers"], hours=6) if n.get("id") not in seen]
+    except Exception as e:
+        log(f"{team['id']}: after-hours news check failed: {e}")
+        items = []
+    filings = fetch_filings(team["tickers"], settings().get("sec_contact", ""), days=1) if with_filings else []
+    filings = [f for f in filings if f"sec:{f['symbol']}:{f['form']}:{f['date']}:{f['description']}" not in seen]
+    if not items and not filings:
+        return []
+    seen.update(n.get("id") for n in items)
+    seen.update(f"sec:{f['symbol']}:{f['form']}:{f['date']}:{f['description']}" for f in filings)
+    result = news_researcher(llm, broker, team, 6, news=items, with_filings=False) if items else {"findings": []}
+    found = list(result.get("findings") or [])
+    if filings:
+        found += [{"symbol": f["symbol"], "sentiment": 0, "importance": 3, "unconfirmed_rumor": False,
+                   "summary": f"New SEC filing: {f['form']} {f['description'] or ''}".strip(),
+                   "source": "SEC EDGAR"} for f in filings]
+    stamp = now_et().isoformat(timespec="minutes")
+    for f in found:
+        f["seen_at"] = stamp
+    research["overnight"] = (found + recent_overnight(research))[:30]
+    write_json(path, research)
+    log(f"{team['id']}: after hours, {len(items)} new article(s), {len(filings)} filing(s), {len(found)} finding(s)")
+    return found

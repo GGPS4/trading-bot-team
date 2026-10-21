@@ -55,7 +55,7 @@ def decide(llm, report, snap, exec_summaries, reviews, team_ids):
               "Reporter's report and decide the strategy, what each team should look for, how much money each team "
               "gets, and whether the risk rules should be stricter. You only handle the most important decisions. "
               "You think long-term: protecting the money matters more than chasing a big day.")
-    prompt = f"""Mode: {snap['mode']} trading.
+    prompt = f"""Treat this money as real. Every decision counts.
 
 Reporter's report:
 {report}

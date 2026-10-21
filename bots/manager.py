@@ -71,8 +71,14 @@ Current positions held by your team:
 News researcher findings:
 {research.get('news')}
 
-Social media researcher findings:
+Social media researcher findings (Reddit):
 {research.get('social')}
+
+Political & social media watch (Truth Social, X), posts that may move your stocks or the whole market:
+{research.get('market_watch') or 'nothing notable'}
+
+After-hours / overnight findings (news and filings since the last close):
+{research.get('overnight') or 'none'}
 
 Live prices right now (change_today vs yesterday's close, from_open vs today's open,
 since_last_look vs your previous check; all fractions):
