@@ -40,6 +40,8 @@ def normalize_allocations(alloc, team_ids):
     if not team_ids:
         return {}
     equal = 1 / len(team_ids)
+    if any(t not in alloc for t in team_ids):
+        alloc = {}  # a team was added or removed: start everyone from an equal split
     raw = {t: float(alloc.get(t, equal) or equal) for t in team_ids}
     lo, hi = (0.05, 0.6) if len(team_ids) > 1 else (1.0, 1.0)
     raw = {t: clamp(v, lo, hi) for t, v in raw.items()}
