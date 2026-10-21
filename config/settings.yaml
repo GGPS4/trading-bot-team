@@ -26,7 +26,7 @@ risk:
   max_position_pct: 0.20            # most of a team's budget that can go into one stock
   max_daily_loss_pct: 0.03          # no new buys once the portfolio is down 3% today
   max_open_positions_per_team: 5
-  max_trades_per_team_per_day: 4
+  max_trades_per_team_per_day: 10  # buys per team per day
   min_conviction_to_buy: 3          # managers rate every idea 1-5
   cash_reserve_pct: 0.10            # always keep 10% of the money in cash
   default_stop_loss_pct: 0.05       # sell automatically if a stock drops 5% from where we bought
@@ -34,6 +34,15 @@ risk:
   min_stop_loss_pct: 0.02
   max_stop_loss_pct: 0.15
   allow_fractional_shares: true     # lets small accounts buy part of a share
+
+# All-day trading. The bots watch the market from open to close.
+intraday:
+  check_every_minutes: 5          # prices, stop-losses and fresh news are checked this often
+  replan_every_minutes: 30        # each manager takes a full new look at least this often
+  price_move_trigger_pct: 0.02    # ...or sooner if one of its stocks moves 2% since its last look
+  max_ai_calls_per_day: 250       # stays inside Gemini's free daily limit; after this the
+                                  # bots stop making new decisions but stop-losses still work
+  close_positions_before_close: false   # true = sell everything ~10 min before 4 PM (pure day trading)
 
 # Safety cap for real money. In live mode the bots act as if the
 # account holds at most this many dollars, even if it holds more.
