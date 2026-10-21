@@ -81,7 +81,7 @@ class Gemini:
         def rank(n):
             ver = tuple(int(x) for x in re.match(r"gemini-([\d.]+)", n).group(1).split(".") if x)
             stable = "preview" not in n
-            return (stable, ver, -len(n))
+            return (ver, stable, -len(n))  # newest version first, stable over preview
 
         chosen = max(cands, key=rank)
         self._resolved[name] = chosen
