@@ -57,7 +57,10 @@ def decide(llm, report, snap, exec_summaries, reviews, team_ids):
               "Reporter's report and decide the strategy, what each team should look for, how much money each team "
               "gets, and whether the risk rules should be stricter. You only handle the most important decisions. "
               "You think long-term: protecting the money matters more than chasing a big day.")
+    style = settings().get("intraday", {}).get("strategy", "")
     prompt = f"""Treat this money as real. Every decision counts.
+Team strategy set by the owner: {style.replace('_', ' ') or 'not set'}; every team must keep at least
+{settings()['risk'].get('min_invested_pct', 0):.0%} of its budget invested while the market is open. Steer within these rules.
 
 Reporter's report:
 {report}

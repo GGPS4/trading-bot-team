@@ -14,9 +14,15 @@ PLAN_FORMAT = """Answer in JSON:
      "conviction": 1-5, "stop_loss_pct": 0.05, "take_profit_pct": 0.10,
      "reason": "why, citing the research or price data"}
   ],
+  "ranked_ideas": [
+    {"symbol": "TICKER", "conviction": 1-5, "stop_loss_pct": 0.015, "take_profit_pct": 0.03,
+     "reason": "short reason"}
+  ],
   "experiment": "which strategy idea you are testing today, or empty"
 }
 Only list stocks you want to BUY (not already held) or SELL (currently held). Everything else is a hold.
+ranked_ideas: your next 5 best stocks to buy (not held, not already in decisions), best first. If the
+team is below its minimum invested level after your decisions, the investor buys from this list.
 Only use symbols from the team's list. It is fine to return no decisions if nothing is convincing.
 stop_loss_pct and take_profit_pct are fractions of the buy price (0.05 = 5%)."""
 
@@ -46,6 +52,19 @@ def plan(llm, team, orders, research, holdings, phase):
               "You are a careful, disciplined trader: you look for clear reasons, respect your rules, and keep "
               "trying new strategies to build a more successful portfolio. "
               + (f"Team focus: {team['focus']}" if team.get("focus") else ""))
+    style = settings().get("intraday", {}).get("strategy")
+    risk = settings().get("risk", {})
+    if style == "day_trading":
+        strategy_text = (
+            "TEAM STRATEGY: DAY TRADING. Make money from moves within today's session. Look for intraday "
+            "momentum, news catalysts, strong moves off the open, breakouts above today's high and bounces "
+            "with volume. Use tight stops (about 1-2%) and take profits quickly (about 2-4%). Rotate money: "
+            "sell positions that have stalled or hit their idea's target and redeploy into the best current "
+            "setup. Everything is sold before the close, so never buy for 'the long run'. "
+            f"RULE: keep at least {risk.get('min_invested_pct', 0):.0%} of the team budget invested while the "
+            "market is open. Sitting in cash is not allowed; if nothing is perfect, pick the best available setups.")
+    else:
+        strategy_text = ""
     if phase == "intraday":
         n = now_et()
         mins_left = max(0, (16 * 60) - (n.hour * 60 + n.minute))
@@ -60,7 +79,9 @@ def plan(llm, team, orders, research, holdings, phase):
     else:
         timing = "It is the midday check. Only act if new, important information came in since the morning."
     prompt = f"""{timing}
+{strategy_text}
 Team companies: {', '.join(team['tickers'])}
+Money: {orders.get('deployment', '')}
 
 Orders from your executive (from the President):
 {orders}

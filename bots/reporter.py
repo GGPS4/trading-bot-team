@@ -129,6 +129,8 @@ def snapshot(broker, org, owner_of, budgets, mode):
     return {
         "updated": now_et().isoformat(timespec="minutes"), "date": date, "mode": mode,
         "paused": bool(settings().get("paused")),
+        "rules": {"min_invested_pct": settings().get("risk", {}).get("min_invested_pct", 0),
+                  "strategy": settings().get("intraday", {}).get("strategy", "")},
         "account": {"equity": round(equity, 2), "cash": round(_f(acct["cash"]), 2),
                     "day_change": round(equity - last_equity, 2),
                     "day_change_pct": round(equity / last_equity - 1, 4) if last_equity else 0},

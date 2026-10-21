@@ -59,7 +59,8 @@ class FakeBroker:
     def clock(self):
         n = now_et()
         return {"is_open": n.weekday() < 5 and dt.time(9, 30) <= n.time() < dt.time(16, 0),
-                "next_open": n.replace(hour=9, minute=30).isoformat()}
+                "next_open": (n.replace(hour=9, minute=30, second=0) + dt.timedelta(days=0 if n.time() < dt.time(9, 30) else 1)).isoformat(),
+                "next_close": (n.replace(hour=16, minute=0, second=0) + dt.timedelta(days=0 if n.time() < dt.time(16, 0) else 1)).isoformat()}
 
     def is_trading_day(self, date):
         return dt.date.fromisoformat(date).weekday() < 5
@@ -190,7 +191,9 @@ class FakeLLM:
             d.append({"symbol": "ZZZZ", "action": "BUY", "conviction": 5, "reason": "not on our list (should be blocked)"})
             if held:
                 d.append({"symbol": held[0], "action": "SELL", "conviction": 4, "reason": "Fake sell"})
-            return {"market_view": "Fake view.", "decisions": d, "experiment": "fake"}
+            ideas = [{"symbol": s, "conviction": 3, "stop_loss_pct": 0.015, "take_profit_pct": 0.03,
+                      "reason": f"Backup idea {s}"} for s in tickers if s not in buys][:5]
+            return {"market_view": "Fake view.", "decisions": d, "ranked_ideas": ideas, "experiment": "fake"}
         if "Executive" in role:
             return {"summary": "Teams followed orders (fake).", "team_notes": {}, "escalations": [], "coordination": ""}
         if role == "reporter":

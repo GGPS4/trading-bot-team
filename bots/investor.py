@@ -47,15 +47,15 @@ def execute(broker, desk, team, plan, prices):
             journal.add_blocked(team["id"], sym, "SELL", f"broker error: {e}")
             results.append(f"SELL {sym} failed: {e}")
 
-    for d in buys:
+    def buy(d, deploying=False):
         sym = str(d.get("symbol", "")).upper()
         price = prices.get(sym)
         ok, why, p = desk.check_buy(team["id"], sym, price, d.get("conviction"),
-                                    d.get("stop_loss_pct"), d.get("take_profit_pct"))
+                                    d.get("stop_loss_pct"), d.get("take_profit_pct"), deploying=deploying)
         if not ok:
             journal.add_blocked(team["id"], sym, "BUY", why)
             results.append(f"BUY {sym} blocked: {why}")
-            continue
+            return
         cid = journal.new_id(team["id"], sym)
         try:
             if p["kind"] == "bracket":
@@ -65,16 +65,34 @@ def execute(broker, desk, team, plan, prices):
         except Exception as e:
             journal.add_blocked(team["id"], sym, "BUY", f"broker error: {e}")
             results.append(f"BUY {sym} failed: {e}")
-            continue
+            return
+        reason = d.get("reason", "")
+        if deploying:
+            reason = f"[75% invested rule] {reason}"
         journal.add({
             "id": cid, "date": today(), "time": now_et().strftime("%H:%M"), "team": team["id"],
             "symbol": sym, "side": "buy", "kind": p["kind"], "qty": p["qty"], "dollars": p["dollars"],
             "est_price": price, "stop_price": p["stop_price"], "take_profit_price": p["take_profit_price"],
-            "conviction": d.get("conviction"), "reason": d.get("reason", ""),
+            "conviction": d.get("conviction"), "reason": reason,
             "order_id": order.get("id"), "status": "submitted", "entry_price": None,
         })
-        results.append(f"BUY {sym} x{p['qty']} (~${p['dollars']})")
-        log(f"{team['id']}: BUY {sym} x{p['qty']} stop {p['stop_price']} target {p['take_profit_price']}")
+        results.append(f"BUY {sym} x{p['qty']} (~${p['dollars']})" + (" [deploy]" if deploying else ""))
+        log(f"{team['id']}: BUY {sym} x{p['qty']} stop {p['stop_price']} target {p['take_profit_price']}"
+            + (" (75% rule)" if deploying else ""))
+
+    for d in buys:
+        buy(d)
+
+    # Minimum-invested rule: if the team still holds too much cash, buy the manager's next-best ideas.
+    tried = {str(d.get("symbol", "")).upper() for d in buys}
+    for d in plan.get("ranked_ideas") or []:
+        if desk.deploy_gap(team["id"]) < 1 or desk.past_buy_cutoff() or not desk.market_open:
+            break
+        sym = str(d.get("symbol", "")).upper()
+        if sym in tried or sym in desk.positions:
+            continue
+        tried.add(sym)
+        buy(d, deploying=True)
     return results
 
 

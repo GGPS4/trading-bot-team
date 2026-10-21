@@ -5,7 +5,7 @@ says no, the order is blocked and logged for the Reporter.
 """
 import math
 
-from .common import clamp
+from .common import clamp, now_et
 
 TIGHTEN_ONLY_MAX = ("max_position_pct", "max_daily_loss_pct", "max_open_positions_per_team",
                     "max_trades_per_team_per_day", "max_stop_loss_pct")
@@ -27,8 +27,10 @@ def effective_limits(base: dict, overrides: dict | None) -> dict:
 
 
 class RiskDesk:
-    def __init__(self, limits, account, capital, positions, owner_of, budgets, trades_today, market_open, paused):
+    def __init__(self, limits, account, capital, positions, owner_of, budgets, trades_today, market_open, paused,
+                 no_buys_after=None):
         self.l = limits
+        self.no_buys_after = no_buys_after          # "HH:MM" ET, or None
         self.capital = capital                      # dollars the bots are allowed to manage
         self.cash = float(account["cash"])
         self.equity = float(account["equity"])
@@ -47,6 +49,18 @@ class RiskDesk:
     def team_invested(self, team):
         return sum(abs(float(p["market_value"])) for s, p in self.positions.items() if self.owner_of.get(s) == team)
 
+    def deploy_gap(self, team):
+        """Dollars a team still has to put to work to meet the minimum-invested rule."""
+        need = self.budgets.get(team, 0) * self.l.get("min_invested_pct", 0)
+        return max(0.0, need - self.team_invested(team))
+
+    def past_buy_cutoff(self):
+        if not self.no_buys_after:
+            return False
+        hh, mm = (int(x) for x in self.no_buys_after.split(":"))
+        n = now_et()
+        return (n.hour, n.minute) >= (hh, mm)
+
     def team_open_count(self, team):
         return sum(1 for s in self.positions if self.owner_of.get(s) == team)
 
@@ -54,13 +68,16 @@ class RiskDesk:
         return sum(abs(float(p["market_value"])) for p in self.positions.values())
 
     # ---------- checks ----------
-    def check_buy(self, team, symbol, price, conviction, stop_pct, tp_pct):
-        """Returns (ok, reason, plan). plan has qty or notional, stop and take-profit prices."""
+    def check_buy(self, team, symbol, price, conviction, stop_pct, tp_pct, deploying=False):
+        """Returns (ok, reason, plan). plan has qty or notional, stop and take-profit prices.
+        deploying=True: a buy made to meet the minimum-invested rule (accepts conviction 2+)."""
         l = self.l
         if self.paused:
             return False, "trading is paused in settings", None
         if not self.market_open:
             return False, "market is closed", None
+        if self.past_buy_cutoff():
+            return False, f"no new day trades after {self.no_buys_after}", None
         if self.owner_of.get(symbol) != team:
             return False, f"{symbol} is not on this team's list", None
         if self.day_change() <= -l["max_daily_loss_pct"]:
@@ -71,7 +88,7 @@ class RiskDesk:
             return False, "already holding this stock", None
         if self.team_open_count(team) >= l["max_open_positions_per_team"]:
             return False, "team already has the maximum number of positions", None
-        if (conviction or 0) < l["min_conviction_to_buy"]:
+        if (conviction or 0) < (min(2, l["min_conviction_to_buy"]) if deploying else l["min_conviction_to_buy"]):
             return False, f"conviction {conviction} is below the minimum {l['min_conviction_to_buy']}", None
         if not price or price <= 0:
             return False, "no current price", None
