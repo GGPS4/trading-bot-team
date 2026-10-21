@@ -2,7 +2,6 @@
 
 - Gemini (Google): your API key plus your $10/month credit
 - Groq:            free tier, very fast open-source models
-- GitHub Models:   free with your GitHub account (works inside GitHub Actions)
 - OpenRouter:      free models (50 requests/day, or 1,000/day after a one-time $10 top-up)
 
 config/settings.yaml decides which bots use which provider first (ai_routing).
@@ -251,11 +250,6 @@ def build_providers():
             "https://api.groq.com/openai/v1/models",
             ["openai/gpt-oss-120b", "qwen/qwen3.6-27b", "openai/gpt-oss-20b", "llama-3.3-70b-versatile"],
             max_chars=24000),
-        "github": OpenAIStyle(
-            "github", "https://models.github.ai/inference/chat/completions", "GITHUB_TOKEN",
-            None, ["openai/gpt-4.1-mini", "openai/gpt-4o-mini", "openai/gpt-4.1"], max_chars=26000,
-            extra_headers={"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"},
-            json_mode=False),
         "openrouter": OpenAIStyle(
             "openrouter", "https://openrouter.ai/api/v1/chat/completions", "OPENROUTER_API_KEY",
             None, ["openrouter/free"], max_chars=60000,
@@ -281,7 +275,7 @@ class Router:
     def ask_json(self, tier, role, system, prompt):
         check_budget()
         cfg = settings()
-        order = (cfg.get("ai_routing") or {}).get(tier) or ["gemini", "groq", "github", "openrouter"]
+        order = (cfg.get("ai_routing") or {}).get(tier) or ["gemini", "groq", "openrouter"]
         caps = cfg.get("ai_daily_caps") or {}
         errors = []
         for name in order:
