@@ -58,6 +58,19 @@ class Ctx:
             + (" PAUSED" if self.paused else ""))
 
 
+def log_plan(tid, trigger, plan, results):
+    """Keep a history of every look a manager took, for the team pages on the dashboard."""
+    path = STATE / "plans" / f"{tid}_log.json"
+    rows = read_json(path, [])
+    rows.append({"date": today(), "time": now_et().strftime("%H:%M"), "trigger": trigger,
+                 "market_view": plan.get("market_view", ""), "experiment": plan.get("experiment", ""),
+                 "decisions": [{k: d.get(k) for k in ("symbol", "action", "conviction", "reason",
+                                                       "stop_loss_pct", "take_profit_pct")}
+                               for d in (plan.get("decisions") or [])],
+                 "results": results})
+    write_json(path, rows[-400:])
+
+
 def team_holdings(positions, owner_of, team_id):
     return [{"symbol": p["symbol"], "qty": p["qty"], "entry": p["avg_entry_price"],
              "price": p["current_price"], "pnl_pct": p["unrealized_plpc"]}
@@ -105,6 +118,7 @@ def trading_cycle(ctx: Ctx, phase: str, force: bool):
             p = manager_plan(ctx.llm, team, orders, research, holdings, phase)
             write_json(STATE / "plans" / f"{tid}.json", {"date": today(), "phase": phase, **p})
             results = execute(b, desk, team, p, prices)
+            log_plan(tid, phase, p, results)
             log(f"{tid}: {results or 'no trades'}")
         except Exception as e:
             log(f"{tid}: cycle failed, skipping this team: {e}")
@@ -315,6 +329,7 @@ def session(ctx: Ctx, until: str, force: bool):
                     write_json(STATE / "plans" / f"{tid}.json",
                                {"date": today(), "time": now_et().strftime("%H:%M"), "trigger": why, **p})
                     results = execute(b, desk, team, p, prices)
+                    log_plan(tid, why, p, results)
                     log(f"{tid}: {results or 'no trades'}")
                 except Exception as e:
                     log(f"{tid}: skipped this check: {e}")
