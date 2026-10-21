@@ -38,6 +38,7 @@ concurrency:
 
 permissions:
   contents: write
+  models: read      # lets the bots use GitHub Models for free
 
 jobs:
   run:
@@ -50,6 +51,9 @@ jobs:
       ALPACA_LIVE_KEY: ${{ secrets.ALPACA_LIVE_KEY }}
       ALPACA_LIVE_SECRET: ${{ secrets.ALPACA_LIVE_SECRET }}
       X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       BOT_GIT_PUSH: "1"
     steps:
       - uses: actions/checkout@v4
