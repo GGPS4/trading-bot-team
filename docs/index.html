@@ -55,6 +55,8 @@ svg text{fill:var(--muted);font-size:11px}
   <section class="card"><h2>Today's trades</h2><div class="scroll" id="trades"></div></section>
   <section class="card"><h2>Blocked by risk rules today</h2><div class="scroll" id="blocked"></div></section>
   <section class="card"><h2>Recently closed trades</h2><div class="scroll" id="closed"></div></section>
+  <section class="card"><h2>Political &amp; social media watch</h2><div id="watch" class="muted">Nothing yet.</div></section>
+  <section class="card"><h2>After-hours research</h2><div id="overnight" class="muted">Nothing yet.</div></section>
   <section class="card"><h2>Manager lessons</h2><div id="lessons" class="muted">None yet.</div></section>
 
   <section class="card" id="golive">
@@ -128,6 +130,8 @@ async function load(){
   $("blocked").innerHTML=table(d.blocked_today,[{h:"Time",k:"time"},{h:"Team",f:tn},{h:"Order",f:r=>esc(r.action+" "+r.symbol)},{h:"Rule",k:"reason"}]);
   $("closed").innerHTML=table(d.recent_trades,[{h:"Date",k:"date"},{h:"Team",f:tn},{h:"Stock",k:"symbol"},{h:"Bought",f:r=>money(r.entry_price),n:1},{h:"Sold",f:r=>money(r.exit_price),n:1},
     {h:"Result",f:r=>r.pnl==null?"–":`${money(r.pnl)} (${pc(r.pnl_pct)})`,n:1,c:r=>cls(r.pnl)},{h:"Exit",k:"exit_reason"}]);
+  const mw=d.market_watch||{};if((mw.findings||[]).length){$("watch").className="";$("watch").innerHTML=`<p class="muted">${esc(mw.overall||"")}</p>`+table(mw.findings.slice(0,12),[{h:"Seen",f:r=>esc((r.seen_at||"").slice(5,16).replace("T"," "))},{h:"Source",k:"source"},{h:"Post",f:r=>`<div class="reason">${esc(r.post)}</div>`},{h:"Affects",f:r=>esc(r.market_wide?"whole market":(r.affected||[]).join(", "))},{h:"Importance",k:"importance",n:1},{h:"Why",f:r=>`<div class="reason">${esc(r.why)}</div>`}])}
+  const ov=Object.entries(d.overnight||{}).flatMap(([t,v])=>v.map(f=>({...f,team:t})));if(ov.length){$("overnight").className="";$("overnight").innerHTML=table(ov.slice(0,16),[{h:"Seen",f:r=>esc((r.seen_at||"").slice(5,16).replace("T"," "))},{h:"Team",f:tn},{h:"Stock",k:"symbol"},{h:"What",f:r=>`<div class="reason">${esc(r.summary)}</div>`},{h:"Importance",k:"importance",n:1},{h:"Mood",f:r=>r.sentiment==null?"–":(r.sentiment>0?"+":"")+r.sentiment,n:1,c:r=>cls(r.sentiment)}])}
   const L=d.lessons||{};if(Object.values(L).some(v=>v.length)){$("lessons").className="";$("lessons").innerHTML=Object.entries(L).map(([t,v])=>`<h3>${esc(d.teams[t]?.name||t)}</h3><ul>${v.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`).join("")}
   const g=d.go_live||{items:[]};$("checklist").innerHTML=g.items.map(i=>`<div class="check"><span class="${i.ok?'up':'down'}">${i.ok?"✓":"✗"}</span><span>${esc(i.rule)} <span class="muted">(${esc(i.value)})</span></span></div>`).join("");
   const ga=s?.go_live_assessment;if(ga)$("assessment").textContent=`President: ${ga.ready?"ready":"not ready yet"}. ${ga.reason||""}`;
