@@ -43,6 +43,12 @@ GitHub jobs can last at most 6 hours, so the day runs as two back-to-back sessio
 You can change the timing in the `intraday:` part of `config/settings.yaml`. Set `close_positions_before_close: true` for pure day trading, so everything is sold before 4 PM.
 The bots stop making new AI decisions after `max_ai_calls_per_day`, to stay in Gemini's free limit. Stop-losses keep working after that.
 
+## Strategy: day trading with money always in play
+
+- **Minimum invested:** while the market is open, every team must keep at least 75% of its budget in stocks (`risk.min_invested_pct`). If a manager leaves too much cash, the investor buys the manager's next-best ranked ideas. A team that's under the line gets a fresh manager look within about 10 minutes.
+- **Day trading:** tight stops (about 1.5%), quick profit targets (about 3%), and up to 25 buys per team per day. There are no new positions after 3:30 PM, and everything is sold about 10 minutes before the close. Each day starts fresh in cash.
+- **Safety still comes first:** the 3% daily loss limit and the 10% cash reserve override the 75% rule.
+
 ## Research never stops
 
 Outside market hours (evenings, overnight, pre-market and weekends), "watch" jobs keep the researchers reading every 15 minutes:

@@ -293,7 +293,8 @@ def session(ctx: Ctx, until: str, force: bool):
                 if e["date"] == today():
                     trades_today[e["team"]] = trades_today.get(e["team"], 0) + 1
             desk = RiskDesk(ctx.limits, with_baseline(b.account()), ctx.capital, positions, ctx.owner_of, ctx.budgets,
-                            trades_today, is_open, ctx.paused or closed_for_day)
+                            trades_today, is_open, ctx.paused or closed_for_day,
+                            no_buys_after=cfg.get("no_new_buys_after"))
 
             refresh_social = time.time() - last_social > 2 * 3600
             try:
@@ -318,14 +319,23 @@ def session(ctx: Ctx, until: str, force: bool):
                     urgent = (r.get("news") or {}).get("urgent") or [f["symbol"] for f in new
                                                                       if (f.get("importance") or 0) >= 4]
                     due = time.time() - last_plan[tid] >= replan
-                    if closed_for_day or not (due or (new and urgent) or moved or hot_posts):
+                    gap = desk.deploy_gap(tid)
+                    under = (gap >= 0.05 * ctx.budgets[tid] and not desk.past_buy_cutoff()
+                             and time.time() - last_plan[tid] >= 600)  # at most every 10 min
+                    if closed_for_day or not (due or (new and urgent) or moved or hot_posts or under):
                         continue
                     why = ("scheduled look" if due else f"big news on {urgent}" if new and urgent
+                           else f"must invest ${gap:,.0f} more (75% rule)" if under
                            else "market-moving post: " + hot_posts[0].get("post", "")[:80] if hot_posts
                            else f"price moves in {moved}")
                     log(f"{tid}: manager takes a look ({why})")
                     holdings = team_holdings(positions, ctx.owner_of, tid)
                     orders = orders_for_team(team, ctx.strategy, ctx.budgets[tid], ctx.limits)
+                    inv = desk.team_invested(tid)
+                    orders["deployment"] = (
+                        f"budget ${ctx.budgets[tid]:,.0f}, invested ${inv:,.0f} "
+                        f"({inv / ctx.budgets[tid]:.0%}), minimum {ctx.limits.get('min_invested_pct', 0):.0%}"
+                        + (f" -> you must put about ${gap:,.0f} more to work now" if gap >= 1 and not desk.past_buy_cutoff() else ""))
                     p = manager_plan(ctx.llm, team, orders, r, holdings, "intraday")
                     last_plan[tid] = time.time()
                     last_plan_prices[tid] = {s: snaps[s]["price"] for s in team["tickers"] if s in snaps}
