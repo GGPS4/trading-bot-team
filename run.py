@@ -237,7 +237,8 @@ def session(ctx: Ctx, until: str, force: bool):
     while now_et() < end:
         started = time.time()
         ticks += 1
-        if not force and not b.clock().get("is_open"):
+        is_open = bool(b.clock().get("is_open"))
+        if not is_open and not force:
             log("Market closed.")
             break
         try:
@@ -246,7 +247,7 @@ def session(ctx: Ctx, until: str, force: bool):
             all_symbols = sorted(set(ctx.owner_of) | {p["symbol"] for p in positions})
             snaps = b.snapshots(all_symbols)
             prices = {s: v["price"] for s, v in snaps.items()}
-            if check_software_stops(b, prices, ctx.paused, True):
+            if check_software_stops(b, prices, ctx.paused, is_open):
                 positions = b.positions()
 
             n = now_et()
@@ -264,7 +265,7 @@ def session(ctx: Ctx, until: str, force: bool):
                 if e["date"] == today():
                     trades_today[e["team"]] = trades_today.get(e["team"], 0) + 1
             desk = RiskDesk(ctx.limits, b.account(), ctx.capital, positions, ctx.owner_of, ctx.budgets,
-                            trades_today, True, ctx.paused or closed_for_day)
+                            trades_today, is_open, ctx.paused or closed_for_day)
 
             refresh_social = time.time() - last_social > 2 * 3600
             for tid, team in ctx.org.items():
