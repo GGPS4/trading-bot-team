@@ -4,10 +4,12 @@ Morning: pass the President's orders and budget down to each team (code).
 Evening: summarize their teams' results for the Reporter and flag issues (AI).
 """
 from .common import teams_config
+from . import watchlist
 
 
 def build_org():
-    """Load teams and apply the overlap rule: special teams own shared companies."""
+    """Load teams (with their current watchlists) and apply the overlap rule:
+    special teams own shared companies."""
     cfg = teams_config()
     teams, owner_of, overlaps = {}, {}, []
     for kind in ("special", "sector"):
@@ -15,7 +17,9 @@ def build_org():
             if not t.get("enabled"):
                 continue
             tickers = []
-            for s in [x.upper() for x in t.get("tickers", [])]:
+            seed = [x.upper() for x in t.get("tickers", [])]
+            current = watchlist.load(t["id"], seed)["symbols"]  # the team's live watchlist
+            for s in current:
                 if s in owner_of:
                     overlaps.append({"symbol": s, "kept_by": owner_of[s], "skipped_by": t["id"]})
                     continue

@@ -130,6 +130,7 @@ def snapshot(broker, org, owner_of, budgets, mode):
         "updated": now_et().isoformat(timespec="minutes"), "date": date, "mode": mode,
         "paused": bool(settings().get("paused")),
         "rules": {"min_invested_pct": settings().get("risk", {}).get("min_invested_pct", 0),
+                  "max_positions": settings().get("risk", {}).get("max_open_positions_per_team"),
                   "strategy": settings().get("intraday", {}).get("strategy", "")},
         "account": {"equity": round(equity, 2), "cash": round(_f(acct["cash"]), 2),
                     "day_change": round(equity - last_equity, 2),
@@ -199,6 +200,7 @@ def team_details(teams):
             "reviews": [{"date": r.get("numbers", {}).get("date"), **(r.get("reviews", {}).get(tid) or {})}
                         for r in reports if (r.get("reviews") or {}).get(tid)][-20:],
             "pnl_days": pnl_days,
+            "watchlist": read_json(STATE / "watchlists" / f"{tid}.json", {}),
             "research": {k: research.get(k) for k in ("time", "news", "social", "overnight", "technicals")},
         }
     return out

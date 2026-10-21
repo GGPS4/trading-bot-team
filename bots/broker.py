@@ -127,3 +127,34 @@ class Alpaca:
                          params={"symbols": ",".join(symbols), "start": start, "limit": limit,
                                  "sort": "desc", "include_content": "false"})
         return data.get("news", [])
+
+    # ---------- discovery ----------
+    def asset(self, symbol):
+        """Is this a real US stock we can trade? (tradable, active, fractionable...)"""
+        return self._req("GET", f"{self.base}/v2/assets/{symbol}")
+
+    def movers(self, top=20):
+        """Today's biggest gainers/losers and most-traded stocks across the whole market."""
+        out = {"gainers": [], "losers": [], "most_active": []}
+        try:
+            m = self._req("GET", f"{self.DATA}/v1beta1/screener/stocks/movers", params={"top": top})
+            out["gainers"] = [{"symbol": x["symbol"], "change_pct": round(x.get("percent_change", 0), 2),
+                               "price": x.get("price")} for x in m.get("gainers", [])]
+            out["losers"] = [{"symbol": x["symbol"], "change_pct": round(x.get("percent_change", 0), 2),
+                              "price": x.get("price")} for x in m.get("losers", [])]
+        except BrokerError:
+            pass
+        try:
+            a = self._req("GET", f"{self.DATA}/v1beta1/screener/stocks/most-actives",
+                          params={"by": "volume", "top": top})
+            out["most_active"] = [x["symbol"] for x in a.get("most_actives", [])]
+        except BrokerError:
+            pass
+        return out
+
+    def market_news(self, hours=6, limit=50):
+        """Market-wide headlines (not limited to a team's list), used to discover new names."""
+        start = (dt.datetime.utcnow() - dt.timedelta(hours=hours)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        data = self._req("GET", f"{self.DATA}/v1beta1/news",
+                         params={"start": start, "limit": limit, "sort": "desc", "include_content": "false"})
+        return data.get("news", [])

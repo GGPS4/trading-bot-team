@@ -155,6 +155,18 @@ class FakeBroker:
             out[s] = rows
         return out
 
+    def asset(self, symbol):
+        if symbol.startswith("ZZ"):
+            raise Exception("404 asset not found")
+        return {"symbol": symbol, "tradable": True, "status": "active", "class": "us_equity"}
+
+    def movers(self, top=20):
+        return {"gainers": [{"symbol": "SMCI", "change_pct": 9.1, "price": 40.0}, {"symbol": "PENY", "change_pct": 80.0, "price": 1.2}],
+                "losers": [{"symbol": "INTC", "change_pct": -6.0, "price": 30.0}], "most_active": ["NVDA", "TSLA", "INTC"]}
+
+    def market_news(self, hours=6, limit=50):
+        return [{"symbols": ["SMCI"], "headline": "SMCI wins AI server deal"}]
+
     def news(self, symbols, hours=24, limit=50):
         r = random.Random(now_et().strftime("%Y%m%d%H"))
         picks = r.sample(symbols, min(3, len(symbols)))
@@ -182,7 +194,8 @@ class FakeLLM:
                                  for s in picks], "urgent": [], "overall": "Mixed mood (fake)."}
         if role.endswith("manager review"):
             return {"what_went_well": "Followed the rules.", "what_went_wrong": "Bought one stock into weakness.",
-                    "lessons": [f"Fake lesson {now_et():%m%d}"], "strategy_ideas": ["Test buying only above the 20-day average"]}
+                    "lessons": [f"Fake lesson {now_et():%m%d}"], "strategy_ideas": ["Test buying only above the 20-day average"],
+                    "watchlist_changes": {"add": [{"symbol": "INTC", "reason": "earnings next week (fake)"}]} if role.startswith("tech") else {}}
         if role.endswith("manager"):
             held = re.findall(r"'symbol': '([A-Z]+)'", prompt.split("Current positions held by your team:")[1].split("News researcher")[0])
             buys = r.sample(tickers, min(3, len(tickers)))
@@ -193,7 +206,11 @@ class FakeLLM:
                 d.append({"symbol": held[0], "action": "SELL", "conviction": 4, "reason": "Fake sell"})
             ideas = [{"symbol": s, "conviction": 3, "stop_loss_pct": 0.015, "take_profit_pct": 0.03,
                       "reason": f"Backup idea {s}"} for s in tickers if s not in buys][:5]
-            return {"market_view": "Fake view.", "decisions": d, "ranked_ideas": ideas, "experiment": "fake"}
+            wl = {"add": [{"symbol": "SMCI", "reason": "AI server deal (fake)"}, {"symbol": "ZZTOP", "reason": "fake bad"},
+                          {"symbol": "LMT", "reason": "owned by another team"}],
+                  "remove": [{"symbol": tickers[-1], "reason": "quiet (fake)"}]} if "tech" in role else {}
+            return {"market_view": "Fake view.", "decisions": d, "ranked_ideas": ideas, "experiment": "fake",
+                    "watchlist_changes": wl}
         if "Executive" in role:
             return {"summary": "Teams followed orders (fake).", "team_notes": {}, "escalations": [], "coordination": ""}
         if role == "reporter":

@@ -18,22 +18,35 @@ PLAN_FORMAT = """Answer in JSON:
     {"symbol": "TICKER", "conviction": 1-5, "stop_loss_pct": 0.015, "take_profit_pct": 0.03,
      "reason": "short reason"}
   ],
-  "experiment": "which strategy idea you are testing today, or empty"
+  "experiment": "which strategy idea you are testing today, or empty",
+  "watchlist_changes": {
+    "add": [{"symbol": "TICKER", "reason": "why it belongs on the watchlist now (news, unusual move, volume)"}],
+    "remove": [{"symbol": "TICKER", "reason": "why it no longer deserves a spot (quiet, no catalyst)"}]
+  }
 }
 Only list stocks you want to BUY (not already held) or SELL (currently held). Everything else is a hold.
 ranked_ideas: your next 5 best stocks to buy (not held, not already in decisions), best first. If the
 team is below its minimum invested level after your decisions, the investor buys from this list.
 Only use symbols from the team's list. It is fine to return no decisions if nothing is convincing.
-stop_loss_pct and take_profit_pct are fractions of the buy price (0.05 = 5%)."""
+stop_loss_pct and take_profit_pct are fractions of the buy price (0.05 = 5%).
+WATCHLIST: you watch 15-20 stocks and hold at most 5. Keep the watchlist full of the stocks in your
+team's field with the best day-trading setups right now: add companies that are in the news, moving
+unusually, or trading heavy volume (see the market discovery data), and drop ones that have gone quiet.
+Only add companies that truly belong to your team's field. At most 3 adds and 3 removes per look; leave
+both lists empty if the watchlist is fine. New stocks can be bought starting with your next look."""
 
 REVIEW_FORMAT = """Answer in JSON:
 {
   "what_went_well": "1-2 sentences",
   "what_went_wrong": "1-2 sentences, be specific about losing trades",
   "lessons": ["short, specific rules for yourself, e.g. 'Don't buy right after a 10% jump on earnings day'"],
-  "strategy_ideas": ["new strategies or tweaks to test in the coming days"]
+  "strategy_ideas": ["new strategies or tweaks to test in the coming days"],
+  "watchlist_changes": {"add": [{"symbol": "TICKER", "reason": "..."}], "remove": [{"symbol": "TICKER", "reason": "..."}]}
 }
-Give at most 3 lessons and 2 ideas. Only write a lesson if today's trades actually taught one."""
+Give at most 3 lessons and 2 ideas. Only write a lesson if today's trades actually taught one.
+watchlist_changes: set up tomorrow's 15-20 stock watchlist for day trading. Add companies in your field
+with news or catalysts coming (earnings, launches, contracts, approvals); drop ones with nothing going on.
+At most 3 adds and 3 removes; empty lists are fine."""
 
 
 def lessons_path(team_id):
@@ -80,7 +93,9 @@ def plan(llm, team, orders, research, holdings, phase):
         timing = "It is the midday check. Only act if new, important information came in since the morning."
     prompt = f"""{timing}
 {strategy_text}
-Team companies: {', '.join(team['tickers'])}
+Team companies (your watchlist, {len(team['tickers'])} stocks): {', '.join(team['tickers'])}
+Market discovery (whole market, for finding new watchlist names):
+{research.get('discovery') or 'not available'}
 Money: {orders.get('deployment', '')}
 
 Orders from your executive (from the President):
@@ -118,11 +133,14 @@ Strategy ideas you wanted to test:
     return llm.ask_json("smart", f"{team['id']} manager", system, prompt)
 
 
-def review(llm, team, todays_trades, holdings, blocked):
+def review(llm, team, todays_trades, holdings, blocked, overnight=None, discovery=None):
     system = (f"You are the Team Manager of the {team['name']} team. The market has closed. Review today's "
               "trades honestly, especially the ones that lost money, and figure out what went wrong so the team "
               "learns from its mistakes instead of repeating them.")
-    prompt = f"""Today's trades (entry, exit, reason, result):
+    prompt = f"""Your watchlist ({len(team['tickers'])} stocks): {', '.join(team['tickers'])}
+Team focus: {team.get('focus') or team['name']}
+
+Today's trades (entry, exit, reason, result):
 {todays_trades or 'no trades today'}
 
 Positions still open:
@@ -133,6 +151,12 @@ Orders the risk rules blocked today:
 
 Your existing lessons:
 {recent_lessons(team['id']) or 'none yet'}
+
+News and filings since the close:
+{overnight or 'none'}
+
+What moved across the whole market today:
+{discovery or 'not available'}
 
 {REVIEW_FORMAT}"""
     out = llm.ask_json("smart", f"{team['id']} manager review", system, prompt)
