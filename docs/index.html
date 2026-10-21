@@ -4,142 +4,625 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bot Team Dashboard</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a78d6'/%3E%3Cpath d='M7 21l6-6 4 4 8-9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--ink:#16181d;--muted:#5f6670;--line:#e3e6ea;--up:#0f8a4f;--down:#c8372d;--accent:#2f5bea;--bench:#9aa1ab;--warn:#b26a00}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a20;--ink:#e8eaed;--muted:#9aa1ab;--line:#2a2f37;--up:#3ccf8e;--down:#ff6b5e;--accent:#7b9cff;--bench:#6b7280;--warn:#f0a740}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-main{max-width:1100px;margin:0 auto;padding:20px 16px 60px}
-header{display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;margin-bottom:16px}
-h1{font-size:22px;margin:0}h2{font-size:16px;margin:0 0 10px}h3{font-size:14px;margin:0 0 4px}
-.muted{color:var(--muted)}.up{color:var(--up)}.down{color:var(--down)}
-.badge{display:inline-block;padding:3px 10px;border-radius:99px;font-weight:600;font-size:12px;letter-spacing:.04em}
-.paper{background:#e6ecff;color:#2f5bea}.live{background:#ffe5e2;color:#c8372d}
-@media (prefers-color-scheme:dark){.paper{background:#1f2a4d;color:#9db2ff}.live{background:#4a1f1b;color:#ff8d82}}
-.banner{background:var(--warn);color:#fff;padding:8px 12px;border-radius:8px;margin-bottom:12px;font-weight:600}
-.grid{display:grid;gap:12px}.kpis{grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));margin-bottom:12px}
-.two{grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
-.kpi .v{font-size:24px;font-weight:650;font-variant-numeric:tabular-nums}.kpi .l{font-size:12px;color:var(--muted)}
-section{margin-top:12px}
-table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
-th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-weight:600;font-size:12px}
-td.n,th.n{text-align:right}.scroll{overflow-x:auto}
-.scroll{max-width:100%}html,body{overflow-x:clip}
-.reason{color:var(--muted);font-size:12.5px;max-width:420px}
-ul{margin:6px 0;padding-left:18px}
-.check{display:flex;gap:8px;align-items:baseline;padding:3px 0}
-.btn{display:inline-block;margin-top:10px;padding:9px 14px;border-radius:8px;background:var(--down);color:#fff;text-decoration:none;font-weight:600}
-.btn.secondary{background:transparent;color:var(--accent);border:1px solid var(--line)}
-svg text{fill:var(--muted);font-size:11px}
-.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden}.bar>i{display:block;height:100%;background:var(--accent)}
+:root{
+  color-scheme:light;
+  --plane:#f4f4f1;--surface:#fcfcfb;--surface-2:#f6f6f3;--raised:#ffffff;
+  --ink:#0b0b0b;--ink-2:#52514e;--muted:#898781;--grid:#e8e7e1;--axis:#c3c2b7;
+  --line:rgba(11,11,11,.09);--line-strong:rgba(11,11,11,.16);
+  --accent:#2a78d6;--accent-soft:rgba(42,120,214,.10);--bench:#a3a199;
+  --up:#006300;--up-mark:#0ca30c;--down:#c22f2f;--down-mark:#d03b3b;--warn:#b26a00;
+  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--s5:#e87ba4;--s6:#008300;--s7:#6250d6;--s8:#e34948;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.04);
+  --shadow-hover:0 2px 4px rgba(0,0,0,.05),0 12px 32px rgba(0,0,0,.08);
+  --r:14px;--ease:cubic-bezier(.2,.8,.2,1);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --plane:#0d0d0d;--surface:#161615;--surface-2:#1d1d1c;--raised:#1f1f1e;
+  --ink:#f0efec;--ink-2:#c3c2b7;--muted:#898781;--grid:#2a2a28;--axis:#383835;
+  --line:rgba(255,255,255,.08);--line-strong:rgba(255,255,255,.14);
+  --accent:#3987e5;--accent-soft:rgba(57,135,229,.14);--bench:#6f6e68;
+  --up:#3ccf6e;--down:#ff7b72;--warn:#f0a740;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--s6:#008300;--s7:#9085e9;--s8:#e66767;
+  --shadow:0 1px 2px rgba(0,0,0,.4);--shadow-hover:0 8px 28px rgba(0,0,0,.5);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --plane:#0d0d0d;--surface:#161615;--surface-2:#1d1d1c;--raised:#1f1f1e;
+  --ink:#f0efec;--ink-2:#c3c2b7;--muted:#898781;--grid:#2a2a28;--axis:#383835;
+  --line:rgba(255,255,255,.08);--line-strong:rgba(255,255,255,.14);
+  --accent:#3987e5;--accent-soft:rgba(57,135,229,.14);--bench:#6f6e68;
+  --up:#3ccf6e;--down:#ff7b72;--warn:#f0a740;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--s6:#008300;--s7:#9085e9;--s8:#e66767;
+  --shadow:0 1px 2px rgba(0,0,0,.4);--shadow-hover:0 8px 28px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--plane);color:var(--ink);overflow-x:clip}
+body{font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+.num{font-variant-numeric:tabular-nums}
+.up{color:var(--up)}.down{color:var(--down)}.muted{color:var(--muted)}.ink2{color:var(--ink-2)}
+
+.app{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
+.side{position:sticky;top:0;height:100vh;padding:20px 14px;border-right:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;gap:18px;overflow-y:auto}
+.brand{display:flex;align-items:center;gap:10px;padding:4px 8px}
+.logo{width:32px;height:32px;border-radius:9px;background:var(--accent);display:grid;place-items:center;flex:none;box-shadow:0 4px 14px var(--accent-soft)}
+.brand b{font-size:15px;letter-spacing:-.01em}.brand small{display:block;color:var(--muted);font-size:12px}
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav .lbl{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:12px 10px 6px}
+.nav a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:9px;color:var(--ink-2);transition:background .2s var(--ease),color .2s var(--ease);position:relative}
+.nav a:hover{background:var(--surface-2);color:var(--ink)}
+.nav a.on{background:var(--accent-soft);color:var(--ink);font-weight:600}
+.nav a.on::before{content:"";position:absolute;left:-14px;top:8px;bottom:8px;width:3px;border-radius:0 3px 3px 0;background:var(--accent)}
+.nav svg{width:18px;height:18px;flex:none;opacity:.85}
+.dot{width:9px;height:9px;border-radius:50%;flex:none;display:inline-block}
+.side-foot{margin-top:auto;display:flex;flex-direction:column;gap:10px;padding:0 6px}
+.mode{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:650;letter-spacing:.04em;padding:5px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent);width:max-content;white-space:nowrap}
+.mode.live{background:rgba(208,59,59,.14);color:var(--down)}
+.pulse{width:7px;height:7px;border-radius:50%;background:currentColor;position:relative}
+.pulse::after{content:"";position:absolute;inset:0;border-radius:50%;background:currentColor;animation:ping 2s var(--ease) infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.6}80%,100%{transform:scale(2.6);opacity:0}}
+.theme-btn{display:flex;align-items:center;gap:8px;background:none;border:1px solid var(--line);border-radius:9px;padding:7px 10px;cursor:pointer;color:var(--ink-2);transition:background .2s;white-space:nowrap}
+.theme-btn:hover{background:var(--surface-2)}
+main{min-width:0;padding:28px 32px 64px}
+.view{max-width:1240px;margin:0 auto}
+.view.enter{animation:viewIn .45s var(--ease) both}
+.view.leave{animation:viewOut .16s ease-in both}
+@keyframes viewIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes viewOut{to{opacity:0;transform:translateY(-4px)}}
+.stagger>*{animation:rise .5s var(--ease) both}
+.stagger>*:nth-child(2){animation-delay:.05s}.stagger>*:nth-child(3){animation-delay:.1s}.stagger>*:nth-child(4){animation-delay:.15s}
+.stagger>*:nth-child(5){animation-delay:.2s}.stagger>*:nth-child(6){animation-delay:.25s}.stagger>*:nth-child(n+7){animation-delay:.3s}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:22px}
+.head h1{font-size:26px;line-height:1.15;margin:0;letter-spacing:-.02em}
+.head p{margin:4px 0 0;color:var(--ink-2)}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:6px}.crumb a:hover{color:var(--accent)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:3px 9px;border-radius:99px;border:1px solid var(--line);color:var(--ink-2);background:var(--surface)}
+.section-h{display:flex;justify-content:space-between;align-items:center;margin:28px 0 12px}
+.section-h h2{font-size:16px;margin:0;letter-spacing:-.01em}
+
+.grid{display:grid;gap:16px}
+.k4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.k6{grid-template-columns:repeat(6,minmax(0,1fr))}
+.g21{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+.g11{grid-template-columns:repeat(2,minmax(0,1fr))}
+.gteams{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.mt{margin-top:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow);min-width:0}
+.card h2{font-size:14px;font-weight:650;margin:0;letter-spacing:-.005em}
+.card .ch{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:14px}
+.sub{font-size:12.5px;color:var(--muted)}
+.kpi .l{font-size:12.5px;color:var(--ink-2)}
+.kpi .v{font-size:27px;font-weight:650;letter-spacing:-.02em;margin-top:6px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi .d{font-size:12.5px;margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.kpi .spark{margin-top:10px}
+.delta{display:inline-flex;align-items:center;gap:3px;font-weight:600;font-size:12px;padding:2px 7px;border-radius:99px;white-space:nowrap}
+.delta.up{background:rgba(12,163,12,.11)}.delta.down{background:rgba(208,59,59,.11)}.delta.flat{background:var(--surface-2);color:var(--ink-2)}
+
+.team{display:block;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s;position:relative;overflow:hidden}
+.team:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--line-strong)}
+.team::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--c)}
+.team .top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.team h3{margin:0;font-size:15px;letter-spacing:-.01em}
+.team .go{opacity:0;transform:translateX(-4px);transition:.25s var(--ease);color:var(--muted)}
+.team:hover .go{opacity:1;transform:none}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.stats div{min-width:0}.stats b{display:block;font-size:15px;font-weight:650;white-space:nowrap}.stats span{font-size:11.5px;color:var(--muted)}
+.meter{height:6px;border-radius:99px;background:var(--surface-2);overflow:hidden;margin-top:10px}
+.meter i{display:block;height:100%;border-radius:99px;background:var(--c,var(--accent));transform-origin:left;animation:grow .9s var(--ease) both}
+@keyframes grow{from{transform:scaleX(0)}}
+
+.tw{overflow-x:auto;margin:0 -20px;padding:0 20px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:11.5px;font-weight:600;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap;letter-spacing:.02em}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr.row{transition:background .15s}tr.row:hover{background:var(--surface-2)}
+tr.click{cursor:pointer}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.why{color:var(--ink-2);font-size:12.5px;max-width:460px;min-width:180px}
+tr.detail td{background:var(--surface-2);font-size:13px;color:var(--ink-2)}
+tr.detail .inner{animation:rise .3s var(--ease) both}
+.sym{font-weight:650;letter-spacing:.01em;white-space:nowrap}
+td .num{white-space:nowrap}
+.brand b{white-space:nowrap}
+.more{display:block;margin:14px auto 0}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:99px;white-space:nowrap;border:1px solid var(--line)}
+.pill.buy{color:var(--accent);background:var(--accent-soft);border-color:transparent}
+.pill.sell{color:var(--s2);background:rgba(235,104,52,.12);border-color:transparent}
+.pill.win{color:var(--up);background:rgba(12,163,12,.11);border-color:transparent}
+.pill.loss{color:var(--down);background:rgba(208,59,59,.11);border-color:transparent}
+.pill.open{color:var(--ink-2)}
+.pill.block{color:var(--warn);background:rgba(250,178,25,.14);border-color:transparent}
+
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:24px 0 16px;position:relative;overflow-x:auto}
+.tabs button{background:none;border:0;padding:10px 14px;cursor:pointer;color:var(--ink-2);font-weight:550;white-space:nowrap;transition:color .2s}
+.tabs button:hover,.tabs button.on{color:var(--ink)}
+.tabs .ink{position:absolute;bottom:0;height:2px;background:var(--accent);border-radius:2px;transition:left .35s var(--ease),width .35s var(--ease)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:5px 12px;font-size:12.5px;cursor:pointer;color:var(--ink-2);transition:all .2s var(--ease);display:inline-flex;align-items:center;gap:6px}
+.chip:hover{border-color:var(--line-strong);color:var(--ink)}
+.chip.on{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.chip .c{opacity:.6}
+.search{border:1px solid var(--line);background:var(--surface);border-radius:9px;padding:8px 12px;font:inherit;color:var(--ink);min-width:220px;outline:none;transition:border-color .2s,box-shadow .2s}
+.search:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.tick{display:inline-block;font-size:12px;padding:3px 8px;border-radius:7px;background:var(--surface-2);margin:0 4px 4px 0;font-weight:600;color:var(--ink-2);border:1px solid var(--line)}
+.tick.held{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+
+.tl{position:relative;padding-left:24px}
+.tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--grid);border-radius:2px}
+.ti{position:relative;padding-bottom:18px}
+.ti:last-child{padding-bottom:0}
+.ti::before{content:"";position:absolute;left:-23px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--c,var(--accent))}
+.ti .t{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ti p{margin:6px 0 0;color:var(--ink-2)}
+.decs{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+
+.feed{display:flex;flex-direction:column}
+.fi{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:12px;align-items:start;padding:11px 0;border-bottom:1px solid var(--line)}
+.fi:last-child{border:0;padding-bottom:0}
+.fi .tm{font-size:12px;color:var(--muted);padding-top:2px}
+.fi .tx b{font-weight:650}
+.fi .tx div{font-size:12.5px;color:var(--ink-2);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+
+.prose p{margin:0 0 10px;color:var(--ink-2)}.prose h3{font-size:16px;margin:0 0 8px;letter-spacing:-.01em}
+.prose ul{margin:6px 0 10px;padding-left:18px;color:var(--ink-2)}.prose li{margin:3px 0}
+.label{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:16px 0 6px}
+.check{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line)}
+.check:last-of-type{border:0}
+.ic{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;flex:none;font-size:11px;font-weight:700;color:#fff}
+.ic.ok{background:var(--up-mark)}.ic.no{background:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:10px;font-weight:600;border:1px solid var(--line);background:var(--surface);cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow-hover)}
+.btn.danger{background:var(--down-mark);color:#fff;border-color:transparent}
+.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;padding:26px 12px;color:var(--muted)}
+.empty svg{opacity:.5}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:3px;border-radius:2px;display:inline-block}
+.split{display:flex;height:10px;border-radius:99px;overflow:hidden;gap:2px}
+.split span{animation:grow .9s var(--ease) both;transform-origin:left}
+
+.chart{position:relative;width:100%}
+.chart svg{display:block;width:100%;overflow:visible}
+.chart text{fill:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}
+.draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 1.2s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.fadein{animation:fade .9s .35s var(--ease) both}@keyframes fade{from{opacity:0}}
+.bar{transform-box:view-box;animation:barUp .7s var(--ease) both;transition:opacity .15s}
+@keyframes barUp{from{transform:scaleY(0)}}
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--raised);border:1px solid var(--line-strong);box-shadow:var(--shadow-hover);border-radius:10px;padding:9px 11px;font-size:12.5px;min-width:160px;opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s}
+.tip.on{opacity:1;transform:none}
+.tip .tt{font-weight:650;margin-bottom:4px}
+.tip .tr{display:flex;justify-content:space-between;gap:16px;color:var(--ink-2)}
+.tip .tr b{color:var(--ink);font-variant-numeric:tabular-nums}
+.range{display:block;width:150px;height:22px}
+.skel{background:linear-gradient(90deg,var(--surface-2),var(--grid),var(--surface-2));background-size:200% 100%;animation:sh 1.2s linear infinite;border-radius:12px}
+@keyframes sh{to{background-position:-200% 0}}
+
+@media (max-width:1180px){.k6{grid-template-columns:repeat(3,minmax(0,1fr))}.g21{grid-template-columns:1fr}}
+@media (max-width:860px){
+  .app{grid-template-columns:1fr}
+  .brand>span:last-child{display:none}
+  .side{position:sticky;top:0;z-index:20;height:auto;flex-direction:row;align-items:center;padding:10px 16px;border-right:0;border-bottom:1px solid var(--line);gap:12px;overflow-x:auto;overflow-y:hidden}
+  .brand small,.nav .lbl,.side-foot .upd,.theme-btn span{display:none}
+  .nav{flex-direction:row}.nav a{white-space:nowrap}.nav a.on::before{display:none}
+  .side-foot{margin:0;flex-direction:row;align-items:center}
+  main{padding:20px 16px 48px}
+  .k4,.g11,.k6{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpi .v{font-size:21px}
+}
+@media (max-width:560px){.k4,.g11{grid-template-columns:1fr}.fi{grid-template-columns:44px minmax(0,1fr)}.fi>:last-child{grid-column:2}.search{min-width:0;width:100%}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
-<main>
-  <header>
-    <div><h1>AI Trading Bot Team</h1><div class="muted" id="updated">Loading…</div></div>
-    <span id="mode" class="badge paper">PAPER</span>
-  </header>
-  <div id="paused"></div>
-  <div class="grid kpis" id="kpis"></div>
-
-  <div class="card"><h2>Performance vs <span id="benchName">SPY</span></h2><div id="chart"></div></div>
-
-  <div class="grid two">
-    <section class="card"><h2>Reporter's daily report</h2><div id="report" class="muted">No report yet. It appears after the first evening run.</div></section>
-    <section class="card"><h2>President's orders</h2><div id="president" class="muted">No strategy yet.</div></section>
-  </div>
-
-  <section class="card"><h2>Teams</h2><div class="grid two" id="teams"></div></section>
-  <section class="card"><h2>Open positions</h2><div class="scroll" id="positions"></div></section>
-  <section class="card"><h2>Today's trades</h2><div class="scroll" id="trades"></div></section>
-  <section class="card"><h2>Blocked by risk rules today</h2><div class="scroll" id="blocked"></div></section>
-  <section class="card"><h2>Recently closed trades</h2><div class="scroll" id="closed"></div></section>
-  <section class="card"><h2>Political &amp; social media watch</h2><div id="watch" class="muted">Nothing yet.</div></section>
-  <section class="card"><h2>After-hours research</h2><div id="overnight" class="muted">Nothing yet.</div></section>
-  <section class="card"><h2>Manager lessons</h2><div id="lessons" class="muted">None yet.</div></section>
-
-  <section class="card" id="golive">
-    <h2>Ready for real money?</h2>
-    <div id="checklist"></div>
-    <div id="assessment" class="muted"></div>
-    <a class="btn" id="liveBtn" target="_blank" rel="noopener">Switch to real money…</a>
-    <div class="muted" style="font-size:12.5px;margin-top:6px">Opens GitHub. You choose "live", type GO LIVE, then approve it yourself. Nothing switches from this page alone.</div>
-  </section>
-</main>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="#/">
+      <span class="logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-9"/></svg></span>
+      <span><b>Bot Team</b><small>AI trading desk</small></span>
+    </a>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-foot">
+      <span class="mode" id="mode"><span class="pulse"></span><span>PAPER</span></span>
+      <span class="upd muted" style="font-size:12px" id="upd">Loading…</span>
+      <button class="theme-btn" id="theme" aria-label="Switch light or dark theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg><span>Theme</span>
+      </button>
+    </div>
+  </aside>
+  <main><div class="view" id="view"><div class="skel" style="height:40px;width:260px"></div><div class="grid k4 mt"><div class="skel" style="height:120px"></div><div class="skel" style="height:120px"></div><div class="skel" style="height:120px"></div><div class="skel" style="height:120px"></div></div><div class="skel mt" style="height:320px"></div></div></main>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
 <script>
-const $=id=>document.getElementById(id);
-const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const money=x=>x==null?"–":(x<0?"-":"")+"$"+Math.abs(x).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
-const pc=x=>x==null?"–":(x>0?"+":"")+(x*100).toFixed(2)+"%";
+"use strict";
+/* ============================== utilities ============================== */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money=(x,dp=2)=>x==null||isNaN(x)?"–":(x<0?"−":"")+"$"+Math.abs(x).toLocaleString(undefined,{minimumFractionDigits:dp,maximumFractionDigits:dp});
+const smoney=x=>x==null?"–":(x>0?"+":"")+money(x);
+const pct=(x,dp=2)=>x==null||isNaN(x)?"–":(x>0?"+":x<0?"−":"")+Math.abs(x*100).toFixed(dp)+"%";
+const upct=(x,dp=0)=>x==null?"–":Math.round(x*100*10**dp)/10**dp+"%";
 const cls=x=>x>0?"up":x<0?"down":"";
-function table(rows,cols){if(!rows||!rows.length)return'<div class="muted">None.</div>';
-  return`<table><tr>${cols.map(c=>`<th class="${c.n?'n':''}">${c.h}</th>`).join("")}</tr>${rows.map(r=>`<tr>${cols.map(c=>`<td class="${c.n?'n':''} ${c.c?c.c(r):''}">${c.f?c.f(r):esc(r[c.k])}</td>`).join("")}</tr>`).join("")}</table>`}
-function repoUrl(){const h=location.hostname,p=location.pathname.split("/").filter(Boolean);
-  if(h.endsWith("github.io")&&p.length)return`https://github.com/${h.split(".")[0]}/${p[0]}`;return null}
+const delta=x=>x==null?"":`<span class="delta ${x>0?"up":x<0?"down":"flat"} num">${x>0?"▲":x<0?"▼":"■"} ${pct(x)}</span>`;
+const fmtDate=d=>{if(!d)return"–";const t=new Date(d.length<=10?d+"T12:00":d);return isNaN(t)?d:t.toLocaleDateString(undefined,{month:"short",day:"numeric"})};
+const ago=iso=>{const m=Math.round((Date.now()-new Date(iso))/60000);return isNaN(m)?"":m<1?"just now":m<60?m+" min ago":m<1440?Math.round(m/60)+" h ago":Math.round(m/1440)+" d ago"};
+const SERIES=["--s1","--s2","--s3","--s4","--s5","--s6","--s7","--s8"];
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const REDUCED=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const ICON={
+  home:'<path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/>',
+  trades:'<path d="M7 7h13l-3-3M17 17H4l3 3"/>',
+  research:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>',
+  strategy:'<path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/>',
+  empty:'<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18"/>',
+  arrow:'<path d="M9 6l6 6-6 6"/>'
+};
+const svgI=(k,s=18)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
+const empty=(msg,sub="")=>`<div class="empty">${svgI("empty",26)}<div>${esc(msg)}</div>${sub?`<div style="font-size:12px">${esc(sub)}</div>`:""}</div>`;
 
-function chart(hist){
-  if(!hist||hist.length<2){$("chart").innerHTML='<div class="muted">The chart starts after two trading days.</div>';return}
-  const W=1000,H=260,P={l:46,r:90,t:12,b:24};
-  const s0=hist[0],b0=hist.find(h=>h.benchmark)?.benchmark;
-  const port=hist.map(h=>h.equity/s0.equity-1),bench=hist.map(h=>b0&&h.benchmark?h.benchmark/b0-1:null);
-  const all=port.concat(bench.filter(v=>v!=null),[0]);let lo=Math.min(...all),hi=Math.max(...all);const pad=(hi-lo)*.1||.01;lo-=pad;hi+=pad;
-  const x=i=>P.l+i*(W-P.l-P.r)/(hist.length-1),y=v=>P.t+(hi-v)*(H-P.t-P.b)/(hi-lo);
-  const path=a=>a.map((v,i)=>v==null?"":`${i&&a[i-1]!=null?"L":"M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
-  let ticks="";for(let k=0;k<5;k++){const v=lo+(hi-lo)*k/4;ticks+=`<line x1="${P.l}" x2="${W-P.r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${P.l-6}" y="${y(v)+4}" text-anchor="end">${(v*100).toFixed(1)}%</text>`}
-  const lp=port.at(-1),lb=bench.at(-1);
-  $("chart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Bot team return vs benchmark">${ticks}
-  <line x1="${P.l}" x2="${W-P.r}" y1="${y(0)}" y2="${y(0)}" stroke="var(--muted)" stroke-dasharray="3 3"/>
-  ${lb!=null?`<path d="${path(bench)}" fill="none" stroke="var(--bench)" stroke-width="2"/><text x="${W-P.r+6}" y="${y(lb)+4}">${esc($("benchName").textContent)} ${pc(lb)}</text>`:""}
-  <path d="${path(port)}" fill="none" stroke="var(--accent)" stroke-width="2.5"/><text x="${W-P.r+6}" y="${y(lp)+4}" style="fill:var(--accent);font-weight:600">Bots ${pc(lp)}</text>
-  <text x="${P.l}" y="${H-6}">${esc(hist[0].date)}</text><text x="${W-P.r}" y="${H-6}" text-anchor="end">${esc(hist.at(-1).date)}</text></svg>`}
+let D=null,H=[],COLOR={};
+const teamName=id=>D?.teams?.[id]?.name||id;
+const shortName=id=>teamName(id).replace(/^Team \d+: /,"");
+const teamColor=id=>`var(${COLOR[id]||"--s1"})`;
+const tdet=id=>D?.team_details?.[id]||{};
 
-async function load(){
-  let d,hist;
-  try{[d,hist]=await Promise.all(["data/dashboard.json","data/history.json"].map(u=>fetch(u+"?t="+Date.now()).then(r=>r.ok?r.json():null)))}catch(e){}
-  if(!d){$("updated").textContent="No data yet. It appears after the first bot run.";return}
-  $("updated").textContent="Updated "+new Date(d.updated).toLocaleString();
-  $("mode").textContent=d.mode.toUpperCase()+" TRADING";$("mode").className="badge "+(d.mode==="live"?"live":"paper");
-  if(d.paused)$("paused").innerHTML='<div class="banner">Trading is paused (settings.yaml → paused: true)</div>';
-  const a=d.account,p=d.performance||{};$("benchName").textContent=d.benchmark?.symbol||"SPY";
-  $("kpis").innerHTML=[["Account value",money(a.equity),""],["Today",`${money(a.day_change)} (${pc(a.day_change_pct)})`,cls(a.day_change)],
-    ["Since start",pc(p.return_since_start),cls(p.return_since_start)],[`${d.benchmark?.symbol||"SPY"} since start`,pc(p.benchmark_since_start),cls(p.benchmark_since_start)],
-    ["Worst drop",pc(-(p.max_drawdown||0)),""],["Cash",money(a.cash),""]]
-    .map(([l,v,c])=>`<div class="card kpi"><div class="l">${l}</div><div class="v ${c}">${v}</div></div>`).join("");
-  chart(hist);
-  const r=d.report;if(r){$("report").className="";$("report").innerHTML=`<h3>${esc(r.headline)}</h3><p>${esc(r.summary)}</p>
-    <p><b>Best:</b> ${esc(r.best_trade)}<br><b>Worst:</b> ${esc(r.worst_trade)}</p>
-    ${(r.concerns||[]).length?`<b>Concerns</b><ul>${r.concerns.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>`:""}
-    ${(r.rule_issues||[]).length?`<b>Rule issues</b><ul>${r.rule_issues.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>`:""}
-    <p class="muted">${esc(r.patterns||"")}</p>`}
-  const s=d.president;if(s){$("president").className="";const al=s.allocations||{};
-    $("president").innerHTML=`<p>${esc(s.strategy_notes)}</p>${Object.entries(s.team_focus||{}).map(([t,v])=>`<p><b>${esc(d.teams[t]?.name||t)}:</b> ${esc(v)}</p>`).join("")}
-    <b>Money per team</b>${Object.entries(al).map(([t,v])=>`<div style="margin:4px 0"><div style="display:flex;justify-content:space-between;font-size:13px"><span>${esc(d.teams[t]?.name||t)}</span><span>${(v*100).toFixed(0)}%</span></div><div class="bar"><i style="width:${v*100}%"></i></div></div>`).join("")}
-    ${Object.keys(s.risk_overrides||{}).length?`<p><b>Stricter rules today:</b> ${esc(JSON.stringify(s.risk_overrides))}</p>`:""}
-    <p class="muted">${esc(s.decision_log||"")}</p>`}
-  $("teams").innerHTML=Object.entries(d.teams).map(([id,t])=>{const at=t.all_time||{},rv=(d.reviews||{})[id];return`<div class="card"><h3>${esc(t.name)} <span class="muted" style="font-weight:400">· ${t.kind}</span></h3>
-    <div class="muted" style="font-size:13px">Budget ${money(t.budget)} · invested ${money(t.invested)} · open P&L <span class="${cls(t.unrealized_pnl)}">${money(t.unrealized_pnl)}</span></div>
-    <div style="font-size:13px">Today: ${t.trades_today} trades, ${t.blocked_today} blocked, realized <span class="${cls(t.realized_today)}">${money(t.realized_today)}</span></div>
-    <div style="font-size:13px">All time: ${at.closed_trades||0} closed, win rate ${at.win_rate==null?"–":(at.win_rate*100).toFixed(0)+"%"}, realized <span class="${cls(at.realized_pnl)}">${money(at.realized_pnl)}</span></div>
-    ${rv?`<p class="reason">${esc(rv.what_went_well)} ${esc(rv.what_went_wrong)}</p>`:""}</div>`}).join("");
-  const tn=r=>esc(d.teams[r.team]?.name||r.team);
-  $("positions").innerHTML=table(d.positions,[{h:"Stock",k:"symbol"},{h:"Team",f:tn},{h:"Qty",k:"qty",n:1},{h:"Bought",f:r=>money(r.entry),n:1},{h:"Now",f:r=>money(r.price),n:1},
-    {h:"P&L",f:r=>`${money(r.pnl)} (${pc(r.pnl_pct)})`,n:1,c:r=>cls(r.pnl)},{h:"Stop / Target",f:r=>r.stop?`${money(r.stop)} / ${money(r.target)}`:"–",n:1},{h:"Why",f:r=>`<div class="reason">${esc(r.reason)}</div>`}]);
-  $("trades").innerHTML=table(d.trades_today,[{h:"Time",k:"time"},{h:"Team",f:tn},{h:"Stock",k:"symbol"},{h:"Status",f:r=>esc(r.status+(r.exit_reason?" · "+r.exit_reason:""))},
-    {h:"Conviction",k:"conviction",n:1},{h:"P&L",f:r=>r.pnl==null?"–":`${money(r.pnl)} (${pc(r.pnl_pct)})`,n:1,c:r=>cls(r.pnl)},{h:"Why",f:r=>`<div class="reason">${esc(r.reason)}</div>`}]);
-  $("blocked").innerHTML=table(d.blocked_today,[{h:"Time",k:"time"},{h:"Team",f:tn},{h:"Order",f:r=>esc(r.action+" "+r.symbol)},{h:"Rule",k:"reason"}]);
-  $("closed").innerHTML=table(d.recent_trades,[{h:"Date",k:"date"},{h:"Team",f:tn},{h:"Stock",k:"symbol"},{h:"Bought",f:r=>money(r.entry_price),n:1},{h:"Sold",f:r=>money(r.exit_price),n:1},
-    {h:"Result",f:r=>r.pnl==null?"–":`${money(r.pnl)} (${pc(r.pnl_pct)})`,n:1,c:r=>cls(r.pnl)},{h:"Exit",k:"exit_reason"}]);
-  const mw=d.market_watch||{};if((mw.findings||[]).length){$("watch").className="";$("watch").innerHTML=`<p class="muted">${esc(mw.overall||"")}</p>`+table(mw.findings.slice(0,12),[{h:"Seen",f:r=>esc((r.seen_at||"").slice(5,16).replace("T"," "))},{h:"Source",k:"source"},{h:"Post",f:r=>`<div class="reason">${esc(r.post)}</div>`},{h:"Affects",f:r=>esc(r.market_wide?"whole market":(r.affected||[]).join(", "))},{h:"Importance",k:"importance",n:1},{h:"Why",f:r=>`<div class="reason">${esc(r.why)}</div>`}])}
-  const ov=Object.entries(d.overnight||{}).flatMap(([t,v])=>v.map(f=>({...f,team:t})));if(ov.length){$("overnight").className="";$("overnight").innerHTML=table(ov.slice(0,16),[{h:"Seen",f:r=>esc((r.seen_at||"").slice(5,16).replace("T"," "))},{h:"Team",f:tn},{h:"Stock",k:"symbol"},{h:"What",f:r=>`<div class="reason">${esc(r.summary)}</div>`},{h:"Importance",k:"importance",n:1},{h:"Mood",f:r=>r.sentiment==null?"–":(r.sentiment>0?"+":"")+r.sentiment,n:1,c:r=>cls(r.sentiment)}])}
-  const L=d.lessons||{};if(Object.values(L).some(v=>v.length)){$("lessons").className="";$("lessons").innerHTML=Object.entries(L).map(([t,v])=>`<h3>${esc(d.teams[t]?.name||t)}</h3><ul>${v.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`).join("")}
-  const g=d.go_live||{items:[]};$("checklist").innerHTML=g.items.map(i=>`<div class="check"><span class="${i.ok?'up':'down'}">${i.ok?"✓":"✗"}</span><span>${esc(i.rule)} <span class="muted">(${esc(i.value)})</span></span></div>`).join("");
-  const ga=s?.go_live_assessment;if(ga)$("assessment").textContent=`President: ${ga.ready?"ready":"not ready yet"}. ${ga.reason||""}`;
-  const repo=repoUrl(),btn=$("liveBtn");
-  if(d.mode==="live"){btn.textContent="Switch back to paper…";btn.className="btn secondary"}
-  if(repo)btn.href=repo+"/actions/workflows/switch-mode.yml";else btn.style.display="none";
+function countUp(root){
+  root.querySelectorAll("[data-count]").forEach(el=>{
+    const end=+el.dataset.count,fmt=el.dataset.fmt;const f=v=>fmt==="pct"?upct(v):fmt==="smoney"?smoney(Math.round(v*100)/100):money(v);
+    if(REDUCED||!isFinite(end)){el.textContent=f(end);return}
+    const t0=performance.now(),dur=1000;
+    const step=t=>{const k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,3);el.textContent=f(k<1?end*e:end);if(k<1)requestAnimationFrame(step)};
+    requestAnimationFrame(step);
+  });
 }
-load();setInterval(load,5*60*1000);
+const tip=$("#tip");
+function showTip(e,html){tip.innerHTML=html;tip.classList.add("on");const w=tip.offsetWidth,h=tip.offsetHeight;let x=e.clientX+16,y=e.clientY+16;if(x+w>innerWidth-8)x=e.clientX-w-16;if(y+h>innerHeight-8)y=e.clientY-h-16;tip.style.left=x+"px";tip.style.top=y+"px"}
+function hideTip(){tip.classList.remove("on")}
+
+/* ============================== charts ============================== */
+function niceTicks(lo,hi,n=4){const span=hi-lo||1,s0=span/n,mag=Math.pow(10,Math.floor(Math.log10(s0))),err=s0/mag,step=(err>=7.5?10:err>=3.5?5:err>=1.5?2:1)*mag;const t=[];for(let v=Math.ceil(lo/step)*step;v<=hi+1e-9;v+=step)t.push(+v.toFixed(10));return t}
+
+function lineChart(el,series,{height=260,yFmt=pct,area=true,zero=true}={}){
+  const W=Math.max(300,el.clientWidth||800),Hh=height,P={l:56,r:12,t:12,b:28};
+  const n=Math.max(...series.map(s=>s.values.length));
+  if(n<2){el.innerHTML=empty("The chart fills in after two trading days.");return}
+  const xs=series[0].values.map(v=>v.x);
+  const all=series.flatMap(s=>s.values.map(v=>v.y)).filter(v=>v!=null);if(zero)all.push(0);
+  let lo=Math.min(...all),hi=Math.max(...all);const pad=(hi-lo)*.12||Math.abs(hi)*.1||.01;lo-=pad;hi+=pad;
+  const X=i=>P.l+i*(W-P.l-P.r)/(n-1),Y=v=>P.t+(hi-v)*(Hh-P.t-P.b)/(hi-lo);
+  let g=niceTicks(lo,hi,4).map(t=>`<line x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}" stroke="var(--grid)"/><text x="${P.l-8}" y="${Y(t)+4}" text-anchor="end">${yFmt(t,true)}</text>`).join("");
+  if(zero&&lo<0&&hi>0)g+=`<line x1="${P.l}" x2="${W-P.r}" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--axis)"/>`;
+  const every=Math.ceil(n/(W<500?4:7));
+  g+=xs.map((x,i)=>(i%every===0&&(n-1-i>=every*.6||i===0))||i===n-1?`<text x="${X(i)}" y="${Hh-8}" text-anchor="${i===0?"start":i===n-1?"end":"middle"}">${esc(fmtDate(x))}</text>`:"").join("");
+  const base=Y(Math.max(lo,Math.min(0,hi)));
+  const paths=series.map((s,si)=>{
+    const pts=s.values.map((v,i)=>v.y==null?null:[X(i),Y(v.y)]).filter(Boolean);if(pts.length<2)return"";
+    const d=pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+","+p[1].toFixed(1)).join("");
+    const ar=area&&si===0?`<path class="fadein" d="${d}L${pts.at(-1)[0]},${base}L${pts[0][0]},${base}Z" fill="url(#gr${el.id})"/>`:"";
+    return ar+`<path class="draw ${s.dash?"dash":""}" d="${d}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  }).join("");
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${Hh}" height="${Hh}" role="img" aria-label="${esc(series.map(s=>s.name).join(" and "))} over time">
+    <defs><linearGradient id="gr${el.id}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${series[0].color}" stop-opacity=".22"/><stop offset="1" stop-color="${series[0].color}" stop-opacity="0"/></linearGradient></defs>
+    ${g}${paths}<line class="xh" y1="${P.t}" y2="${Hh-P.b}" stroke="var(--axis)" stroke-dasharray="3 3" opacity="0"/>${series.map((s,i)=>`<circle class="hd${i}" r="4.5" fill="${s.color}" stroke="var(--surface)" stroke-width="2" opacity="0"/>`).join("")}
+    <rect x="${P.l}" y="0" width="${W-P.l-P.r}" height="${Hh}" fill="transparent" class="hit"/></svg>`;
+  el.querySelectorAll("path.draw").forEach(p=>p.style.setProperty("--len",p.getTotalLength()));
+  const svg=el.querySelector("svg"),xh=svg.querySelector(".xh"),hit=svg.querySelector(".hit");
+  hit.addEventListener("pointermove",e=>{
+    const r=svg.getBoundingClientRect(),px=(e.clientX-r.left)*W/r.width;const i=Math.max(0,Math.min(n-1,Math.round((px-P.l)/((W-P.l-P.r)/(n-1)))));
+    xh.setAttribute("x1",X(i));xh.setAttribute("x2",X(i));xh.setAttribute("opacity",1);
+    series.forEach((s,si)=>{const c=svg.querySelector(".hd"+si),v=s.values[i]?.y;if(v==null){c.setAttribute("opacity",0);return}c.setAttribute("cx",X(i));c.setAttribute("cy",Y(v));c.setAttribute("opacity",1)});
+    showTip(e,`<div class="tt">${esc(fmtDate(xs[i]))}</div>`+series.map(s=>`<div class="tr"><span><span class="dot" style="background:${s.color};width:8px;height:8px;margin-right:6px"></span>${esc(s.name)}</span><b>${s.values[i]?.y==null?"–":yFmt(s.values[i].y)}</b></div>`).join("")+(series[0].extra?series[0].extra(i):""));
+  });
+  hit.addEventListener("pointerleave",()=>{hideTip();xh.setAttribute("opacity",0);series.forEach((s,si)=>svg.querySelector(".hd"+si).setAttribute("opacity",0))});
+}
+
+function barChart(el,items,{height=220,fmt=smoney}={}){
+  if(!items.length){el.innerHTML=empty("No closed trades yet.");return}
+  const W=Math.max(300,el.clientWidth||600),Hh=height,P={l:56,r:8,t:10,b:26};
+  const vals=items.map(i=>i.value);let lo=Math.min(0,...vals),hi=Math.max(0,...vals);const pad=(hi-lo)*.1||1;if(lo<0)lo-=pad;hi+=pad;
+  const Y=v=>P.t+(hi-v)*(Hh-P.t-P.b)/(hi-lo),bw=(W-P.l-P.r)/items.length,gap=Math.max(2,Math.min(8,bw*.3)),y0=Y(0);
+  let g=niceTicks(lo,hi,4).map(t=>`<line x1="${P.l}" x2="${W-P.r}" y1="${Y(t)}" y2="${Y(t)}" stroke="var(--grid)"/><text x="${P.l-8}" y="${Y(t)+4}" text-anchor="end">${money(t,0)}</text>`).join("");
+  g+=`<line x1="${P.l}" x2="${W-P.r}" y1="${y0}" y2="${y0}" stroke="var(--axis)"/>`;
+  const every=Math.ceil(items.length/(W<500?5:10));
+  const bars=items.map((it,i)=>{const x=P.l+i*bw+gap/2,w=Math.max(2,bw-gap),y=Y(it.value),h=Math.max(1.5,Math.abs(y-y0)),r=Math.min(4,w/2,h),up=it.value>=0;
+    const d=up?`M${x},${y0}V${y0-h+r}Q${x},${y0-h} ${x+r},${y0-h}H${x+w-r}Q${x+w},${y0-h} ${x+w},${y0-h+r}V${y0}Z`:`M${x},${y0}V${y0+h-r}Q${x},${y0+h} ${x+r},${y0+h}H${x+w-r}Q${x+w},${y0+h} ${x+w},${y0+h-r}V${y0}Z`;
+    return`<path class="bar" data-i="${i}" d="${d}" fill="${up?"var(--up-mark)":"var(--down-mark)"}" style="transform-origin:0 ${y0}px;animation-delay:${Math.min(i*22,550)}ms"/>`+(i%every===0?`<text x="${x+w/2}" y="${Hh-8}" text-anchor="middle">${esc(it.label)}</text>`:"")}).join("");
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${Hh}" height="${Hh}" role="img" aria-label="Profit or loss of each closed trade">${g}${bars}${items.map((it,i)=>`<rect data-i="${i}" class="hb" x="${P.l+i*bw}" y="0" width="${bw}" height="${Hh}" fill="transparent"/>`).join("")}</svg>`;
+  const bs=[...el.querySelectorAll(".bar")];
+  el.querySelectorAll(".hb").forEach(r=>{const it=items[+r.dataset.i];
+    r.addEventListener("pointermove",e=>{bs.forEach(b=>b.style.opacity=b.dataset.i===r.dataset.i?1:.4);showTip(e,`<div class="tt">${esc(it.title||it.label)}</div><div class="tr"><span>Result</span><b class="${cls(it.value)}">${fmt(it.value)}</b></div>${it.sub||""}`)});
+    r.addEventListener("pointerleave",()=>{hideTip();bs.forEach(b=>b.style.opacity=1)})});
+}
+
+function spark(values,color,h=36){
+  if(!values||values.length<2)return`<svg viewBox="0 0 100 ${h}" preserveAspectRatio="none" height="${h}" width="100%" aria-hidden="true"><line x1="0" x2="100" y1="${h/2}" y2="${h/2}" stroke="var(--grid)" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/></svg>`;
+  const lo=Math.min(...values),hi=Math.max(...values),sp=hi-lo||1;
+  const pts=values.map((v,i)=>[i*100/(values.length-1),h-3-(v-lo)*(h-6)/sp]);
+  const d=pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(2)+","+p[1].toFixed(2)).join("");
+  return`<svg viewBox="0 0 100 ${h}" preserveAspectRatio="none" height="${h}" width="100%" aria-hidden="true"><path class="fadein" d="${d}L100,${h}L0,${h}Z" fill="${color}" opacity=".12"/><path d="${d}" fill="none" stroke="${color}" stroke-width="1.8" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg>`;
+}
+
+function rangeBar(p){
+  if(!p.stop||!p.target)return'<span class="muted">–</span>';
+  const lo=Math.min(p.stop,p.price),hi=Math.max(p.target,p.price),X=v=>6+(v-lo)/(hi-lo||1)*138;
+  return`<svg class="range" viewBox="0 0 150 22" role="img" aria-label="Stop ${money(p.stop)}, bought ${money(p.entry)}, now ${money(p.price)}, target ${money(p.target)}">
+   <rect x="${X(p.stop)}" y="9" width="${Math.max(0,X(p.entry)-X(p.stop))}" height="4" rx="2" fill="var(--down-mark)" opacity=".35"/>
+   <rect x="${X(p.entry)}" y="9" width="${Math.max(0,X(p.target)-X(p.entry))}" height="4" rx="2" fill="var(--up-mark)" opacity=".35"/>
+   <line x1="${X(p.entry)}" x2="${X(p.entry)}" y1="4" y2="18" stroke="var(--ink-2)" stroke-width="1.5"/>
+   <circle cx="${X(p.price)}" cy="11" r="5" fill="${p.price>=p.entry?"var(--up-mark)":"var(--down-mark)"}" stroke="var(--surface)" stroke-width="2"/></svg>`;
+}
+
+function table(rows,cols,{detail}={}){
+  if(!rows?.length)return empty("Nothing here yet.");
+  return`<div class="tw"><table><thead><tr>${cols.map(c=>`<th class="${c.n?"n":""}">${c.h}</th>`).join("")}</tr></thead><tbody>${rows.map((r,i)=>
+    `<tr class="row ${detail?"click":""}" ${detail?`data-d="${i}" tabindex="0"`:""}>${cols.map(c=>`<td class="${c.n?"n":""}">${c.f?c.f(r):esc(r[c.k])}</td>`).join("")}</tr>`+
+    (detail?`<tr class="detail" data-dd="${i}" hidden><td colspan="${cols.length}"><div class="inner">${detail(r)}</div></td></tr>`:"")).join("")}</tbody></table></div>`;
+}
+function wireDetails(root){root.querySelectorAll("tr[data-d]").forEach(tr=>{const t=()=>{const d=root.querySelector(`tr[data-dd="${tr.dataset.d}"]`);d.hidden=!d.hidden};tr.addEventListener("click",t);tr.addEventListener("keydown",e=>{if(e.key==="Enter")t()})})}
+
+const tradeStatus=t=>t.status==="closed"?(t.pnl>0?'<span class="pill win">Win</span>':t.pnl<0?'<span class="pill loss">Loss</span>':'<span class="pill open">Even</span>'):t.status==="open"?'<span class="pill open">Open</span>':t.status==="submitted"?'<span class="pill open">Pending</span>':`<span class="pill open">${esc(t.status)}</span>`;
+const exitText=r=>({stop_loss:"Stop-loss hit",take_profit:"Target hit",manager_sell:"Manager sold",end_of_day:"End of day"})[r]||r||"";
+const conv=c=>c?`<span title="Conviction ${c}/5" class="num" style="letter-spacing:1px">${"●".repeat(c)}<span class="muted">${"●".repeat(Math.max(0,5-c))}</span></span>`:"–";
+const tradeDetail=t=>`<div class="grid g11" style="gap:10px 28px">
+  <div><div class="label" style="margin-top:0">Why the manager bought</div><div style="color:var(--ink)">${esc(t.reason)||"–"}</div></div>
+  <div><div class="label" style="margin-top:0">The plan</div>Bought ${t.qty??"–"} share(s) at ${money(t.entry_price??t.est_price)}. Stop-loss ${money(t.stop_price)}, target ${money(t.take_profit_price)}. Conviction ${t.conviction??"–"}/5.
+  ${t.status==="closed"?`<br>Sold at ${money(t.exit_price)}: ${esc(exitText(t.exit_reason))}${t.exit_note?" (“"+esc(t.exit_note)+"”)":""}.`:""}</div></div>`;
+
+/* ============================== views ============================== */
+const kpi=(label,valueHtml,sub="",sparkHtml="")=>`<div class="card kpi"><div class="l">${label}</div><div class="v num">${valueHtml}</div><div class="d">${sub}</div>${sparkHtml?`<div class="spark">${sparkHtml}</div>`:""}</div>`;
+
+function overview(){
+  const a=D.account||{},p=D.performance||{},teams=Object.entries(D.teams||{}),bench=esc(D.benchmark?.symbol||"SPY");
+  const closed=teams.flatMap(([id])=>tdet(id).trades||[]).filter(t=>t.status==="closed"&&t.pnl!=null);
+  const wins=closed.filter(t=>t.pnl>0).length,wr=closed.length?wins/closed.length:null;
+  const beat=p.return_since_start!=null&&p.benchmark_since_start!=null?p.return_since_start-p.benchmark_since_start:null;
+  const r=D.report,s=D.president||{};
+  const feed=[...(D.trades_today||[]).map(t=>({time:t.time||"",t})),...(D.blocked_today||[]).map(b=>({time:b.time,b}))].sort((x,y)=>(y.time||"").localeCompare(x.time||"")).slice(0,10);
+  return`
+  <div class="head"><div><h1>Overview</h1><p>${new Date(D.updated).toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"})} · updated ${ago(D.updated)}</p></div>
+    <div class="legend">${D.paused?'<span class="pill block">Trading paused</span>':""}<span class="tag">${teams.length} teams</span><span class="tag">${(D.positions||[]).length} open positions</span></div></div>
+  <div class="grid k4 stagger">
+    ${kpi("Account value",`<span data-count="${a.equity}">${money(a.equity)}</span>`,`${delta(a.day_change_pct)}<span class="muted">today</span>`,spark(H.map(h=>h.equity),css("--accent")))}
+    ${kpi("Today's profit / loss",`<span class="${cls(a.day_change)}" data-count="${a.day_change}" data-fmt="smoney">${smoney(a.day_change)}</span>`,`<span class="muted">Cash on hand ${money(a.cash,0)}</span>`)}
+    ${kpi("Since start",`<span class="${cls(p.return_since_start)}">${pct(p.return_since_start)}</span>`,`<span class="muted">${bench} ${pct(p.benchmark_since_start)}</span>${beat!=null?`<span class="delta ${beat>=0?"up":"down"}">${beat>=0?"Beating":"Behind"} by ${pct(Math.abs(beat)).replace("+","")}</span>`:""}`)}
+    ${kpi("Win rate",wr==null?"–":`<span data-count="${wr}" data-fmt="pct">${upct(wr)}</span>`,`<span class="muted">${wins} wins · ${closed.length-wins} losses · worst drop ${pct(-(p.max_drawdown||0))}</span>`)}
+  </div>
+  <div class="grid g21 mt stagger">
+    <div class="card"><div class="ch"><div><h2>Performance vs ${bench}</h2><div class="sub">Return since the bots started, after slippage</div></div>
+      <div class="legend"><span><i style="background:var(--accent)"></i>Bot team</span><span><i style="background:var(--bench)"></i>${bench}</span></div></div>
+      <div class="chart" id="cPerf"></div></div>
+    <div class="card"><div class="ch"><div><h2>Money per team</h2><div class="sub">Invested out of each team's budget</div></div></div>
+      ${teams.map(([id,t])=>`<a href="#/team/${id}" style="display:block;margin-bottom:14px"><div style="display:flex;justify-content:space-between;gap:8px;font-size:13px"><span style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:${teamColor(id)}"></span>${esc(shortName(id))}</span><span class="num ink2">${money(t.invested,0)} / ${money(t.budget,0)}</span></div><div class="meter" style="--c:${teamColor(id)}"><i style="width:${Math.min(100,t.budget?t.invested/t.budget*100:0)}%"></i></div></a>`).join("")||empty("No teams yet.")}
+      ${s.allocations?`<div class="label">President's split of the money</div><div class="split">${Object.entries(s.allocations).map(([id,v])=>`<span title="${esc(teamName(id))} ${Math.round(v*100)}%" style="flex:${v};background:${teamColor(id)}"></span>`).join("")}</div><div class="legend" style="margin-top:8px">${Object.entries(s.allocations).map(([id,v])=>`<span><span class="dot" style="background:${teamColor(id)};width:8px;height:8px"></span>${esc(shortName(id))} ${Math.round(v*100)}%</span>`).join("")}</div>`:""}
+    </div>
+  </div>
+  <div class="section-h"><h2>Teams</h2><span class="sub">Open a team to see its trades and the strategies it tried</span></div>
+  <div class="grid gteams stagger">${teams.map(([id,t])=>teamCard(id,t)).join("")}</div>
+  <div class="grid g11 mt stagger">
+    <div class="card"><div class="ch"><div><h2>Today's activity</h2><div class="sub">Trades, and orders the risk rules blocked</div></div><a class="sub" href="#/trades" style="color:var(--accent)">All trades →</a></div>
+      ${feed.length?`<div class="feed">${feed.map(f=>f.t?`<div class="fi"><span class="tm num">${esc(f.t.time)}</span><div class="tx"><b>${esc(f.t.symbol)}</b> <span class="muted">· ${esc(shortName(f.t.team))}</span><div>${esc(f.t.reason)}</div></div><span>${f.t.status==="closed"?`<span class="num ${cls(f.t.pnl)}">${smoney(f.t.pnl)}</span>`:'<span class="pill buy">Bought</span>'}</span></div>`:`<div class="fi"><span class="tm num">${esc(f.b.time)}</span><div class="tx"><b>${esc(f.b.action)} ${esc(f.b.symbol)}</b> <span class="muted">· ${esc(shortName(f.b.team))}</span><div>${esc(f.b.reason)}</div></div><span class="pill block">Blocked</span></div>`).join("")}</div>`:empty("No trades yet today.")}</div>
+    <div class="card prose"><div class="ch"><div><h2>Reporter's daily report</h2><div class="sub">${r?.date?fmtDate(r.date):"Written after each close"}</div></div></div>
+      ${r?`<h3>${esc(r.headline)}</h3><p>${esc(r.summary)}</p><div class="grid g11" style="gap:12px"><div><div class="label">Best trade</div><p>${esc(r.best_trade)}</p></div><div><div class="label">Worst trade</div><p>${esc(r.worst_trade)}</p></div></div>${(r.concerns||[]).length?`<div class="label">Concerns</div><ul>${r.concerns.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>`:""}`:empty("The first report arrives after the first trading day.")}</div>
+  </div>
+  <div class="grid g21 mt stagger">
+    <div class="card prose"><div class="ch"><div><h2>President's orders</h2><div class="sub">${s.updated?"Set "+ago(s.updated):"Strategy for the next session"}</div></div><a class="sub" href="#/strategy" style="color:var(--accent)">Strategy history →</a></div>
+      ${s.strategy_notes?`<p style="color:var(--ink);font-size:14.5px">${esc(s.strategy_notes)}</p>${Object.entries(s.team_focus||{}).map(([id,v])=>`<div style="display:flex;gap:10px;margin:10px 0"><span class="dot" style="background:${teamColor(id)};margin-top:6px"></span><div><b>${esc(teamName(id))}</b><p style="margin:2px 0 0">${esc(v)}</p></div></div>`).join("")}`:empty("No strategy yet.")}</div>
+    ${goLiveCard()}
+  </div>`;
+}
+function afterOverview(){
+  const b0=H.find(h=>h.benchmark)?.benchmark,e0=H[0]?.equity;
+  lineChart($("#cPerf"),[
+    {name:"Bot team",color:css("--accent"),values:H.map(h=>({x:h.date,y:e0?h.equity/e0-1:null})),extra:i=>`<div class="tr"><span>Account value</span><b>${money(H[i].equity)}</b></div>`},
+    {name:D.benchmark?.symbol||"SPY",color:css("--bench"),values:H.map(h=>({x:h.date,y:b0&&h.benchmark?h.benchmark/b0-1:null}))}],{height:280});
+}
+function teamCard(id,t){
+  const d=tdet(id),at=t.all_time||{},cum=(d.pnl_days||[]).map(x=>x.cum);
+  return`<a class="card team" href="#/team/${id}" style="--c:${teamColor(id)}">
+    <div class="top"><div><h3>${esc(t.name)}</h3><div class="sub">${t.kind==="special"?"Special team":"Sector team"} · ${t.tickers.length} companies</div></div><span class="go">${svgI("arrow")}</span></div>
+    <div class="stats"><div><b class="num ${cls(t.unrealized_pnl)}">${smoney(t.unrealized_pnl)}</b><span>Open P&amp;L</span></div><div><b class="num ${cls(at.realized_pnl)}">${smoney(at.realized_pnl)}</b><span>Realized</span></div><div><b class="num">${at.win_rate==null?"–":upct(at.win_rate)}</b><span>Win rate</span></div></div>
+    <div style="margin-top:12px">${spark(cum,css(COLOR[id]||"--s1"),42)}</div>
+    <div class="meter" style="--c:${teamColor(id)}"><i style="width:${Math.min(100,t.budget?t.invested/t.budget*100:0)}%"></i></div>
+    <div class="sub" style="margin-top:6px">${money(t.invested,0)} invested of ${money(t.budget,0)} · ${t.trades_today} trade${t.trades_today===1?"":"s"} today</div></a>`;
+}
+function goLiveCard(){
+  const g=D.go_live||{items:[]},ga=D.president?.go_live_assessment,live=D.mode==="live",repo=repoUrl();
+  return`<div class="card"><div class="ch"><div><h2>Ready for real money?</h2><div class="sub">${g.items.filter(i=>i.ok).length} of ${g.items.length} checks passed</div></div></div>
+    ${g.items.map(i=>`<div class="check"><span class="ic ${i.ok?"ok":"no"}" aria-label="${i.ok?"Passed":"Not yet"}">${i.ok?"✓":"–"}</span><div><div>${esc(i.rule)}</div><div class="sub num">${esc(i.value)}</div></div></div>`).join("")}
+    ${ga?`<p class="ink2" style="font-size:13px;margin:10px 0 0"><b>President:</b> ${ga.ready?"ready.":"not ready yet."} ${esc(ga.reason||"")}</p>`:""}
+    ${repo?`<a class="btn ${live?"":"danger"}" style="margin-top:14px" target="_blank" rel="noopener" href="${repo}/actions/workflows/switch-mode.yml">${live?"Switch back to paper…":"Switch to real money…"}</a><div class="sub" style="margin-top:6px">Opens GitHub. You type GO LIVE and approve it yourself.</div>`:""}</div>`;
+}
+
+/* ---------------- team page ---------------- */
+let teamTab="trades",tradeFilter="all",showN=25;
+function team(id){
+  const t=D.teams?.[id];if(!t)return`<div class="head"><div><h1>Team not found</h1><p><a href="#/" style="color:var(--accent)">Back to overview</a></p></div></div>`;
+  const d=tdet(id),at=t.all_time||{},held=new Set((D.positions||[]).filter(p=>p.team===id).map(p=>p.symbol));
+  return`
+  <div class="crumb"><a href="#/">Overview</a> / Teams</div>
+  <div class="head"><div><h1 style="display:flex;align-items:center;gap:12px"><span class="dot" style="background:${teamColor(id)};width:14px;height:14px"></span>${esc(t.name)}</h1>
+    <p>${t.kind==="special"?"Special team":"Sector team"} · ${t.tickers.length} companies · ${held.size} held right now</p></div>
+    <div style="max-width:600px">${t.tickers.map(s=>`<span class="tick ${held.has(s)?"held":""}" title="${held.has(s)?"Held now":"Watching"}">${esc(s)}</span>`).join("")}</div></div>
+  <div class="grid k6 stagger">
+    ${kpi("Budget",`<span data-count="${t.budget}">${money(t.budget,0)}</span>`)}
+    ${kpi("Invested",money(t.invested,0),`<span class="muted">${t.budget?Math.round(t.invested/t.budget*100):0}% of budget</span>`)}
+    ${kpi("Open P&amp;L",`<span class="${cls(t.unrealized_pnl)}">${smoney(t.unrealized_pnl)}</span>`)}
+    ${kpi("Realized, all time",`<span class="${cls(at.realized_pnl)}">${smoney(at.realized_pnl)}</span>`,`<span class="muted">${smoney(t.realized_today)} today</span>`)}
+    ${kpi("Win rate",at.win_rate==null?"–":upct(at.win_rate),`<span class="muted">${at.wins||0} wins · ${at.losses||0} losses</span>`)}
+    ${kpi("Manager decisions",(d.plans||[]).length,`<span class="muted">${t.trades_today} trades today</span>`)}
+  </div>
+  <div class="grid g11 mt stagger">
+    <div class="card"><div class="ch"><div><h2>Realized profit over time</h2><div class="sub">Running total of closed trades, after slippage</div></div></div><div class="chart" id="cCum"></div></div>
+    <div class="card"><div class="ch"><div><h2>Every closed trade</h2><div class="sub">Last 30, oldest to newest</div></div><div class="legend"><span><i style="background:var(--up-mark);height:8px;width:8px;border-radius:2px"></i>Win</span><span><i style="background:var(--down-mark);height:8px;width:8px;border-radius:2px"></i>Loss</span></div></div><div class="chart" id="cTrades"></div></div>
+  </div>
+  <div class="card mt"><div class="ch"><div><h2>Holding right now</h2><div class="sub">Bar runs from stop-loss (left) through the buy price to the target (right); the dot is today's price</div></div></div>
+    ${table((D.positions||[]).filter(p=>p.team===id),[{h:"Stock",f:p=>`<span class="sym">${esc(p.symbol)}</span>`},{h:"Shares",f:p=>+(+p.qty).toFixed(4),n:1},{h:"Bought at",f:p=>money(p.entry),n:1},{h:"Now",f:p=>money(p.price),n:1},{h:"P&amp;L",f:p=>`<span class="${cls(p.pnl)}">${smoney(p.pnl)}</span> <span class="muted">${pct(p.pnl_pct)}</span>`,n:1},{h:"Stop → target",f:rangeBar},{h:"Why it was bought",f:p=>`<div class="why">${esc(p.reason)}</div>`}])}</div>
+  <div class="tabs" id="tabs" role="tablist">${[["trades","Trade history"],["strategy","Strategy log"],["lessons","Lessons & ideas"],["research","Research"]].map(([k,l])=>`<button role="tab" data-tab="${k}" class="${teamTab===k?"on":""}">${l}</button>`).join("")}<span class="ink"></span></div>
+  <div id="tabBody"></div>`;
+}
+const triggerText=t=>!t?"Look":t==="morning"?"Morning plan":t==="midday"?"Midday check":t==="scheduled look"?"Scheduled look":t.startsWith("big news")?"Big news":t.startsWith("market-moving")?"Market-moving post":t.startsWith("price moves")?"Price move":t;
+function teamTabBody(id){
+  const d=tdet(id);
+  if(teamTab==="trades"){
+    const trades=[...(d.trades||[])].reverse(),blocked=[...(d.blocked||[])].reverse();
+    const F={all:trades,open:trades.filter(t=>t.status==="open"||t.status==="submitted"),closed:trades.filter(t=>t.status==="closed"),wins:trades.filter(t=>t.status==="closed"&&t.pnl>0),losses:trades.filter(t=>t.status==="closed"&&t.pnl<0)};
+    const chips=[["all","All"],["open","Open"],["closed","Closed"],["wins","Wins"],["losses","Losses"],["blocked","Blocked"]].map(([k,l])=>`<button class="chip ${tradeFilter===k?"on":""}" data-f="${k}">${l}<span class="c num">${k==="blocked"?blocked.length:F[k].length}</span></button>`).join("");
+    const body=tradeFilter==="blocked"?table(blocked,[{h:"When",f:b=>`<span class="num">${fmtDate(b.date)} ${esc(b.time)}</span>`},{h:"Order",f:b=>`<span class="pill ${b.action==="BUY"?"buy":"sell"}">${esc(b.action)}</span> <span class="sym">${esc(b.symbol)}</span>`},{h:"Rule that stopped it",k:"reason"}])
+      :table(F[tradeFilter].slice(0,showN),[{h:"When",f:t=>`<span class="num">${fmtDate(t.date)} ${esc(t.time||"")}</span>`},{h:"Stock",f:t=>`<span class="sym">${esc(t.symbol)}</span>`},{h:"Result",f:tradeStatus},{h:"Bought",f:t=>money(t.entry_price??t.est_price),n:1},{h:"Sold",f:t=>money(t.exit_price),n:1},{h:"Profit",f:t=>t.pnl==null?"–":`<span class="${cls(t.pnl)}">${smoney(t.pnl)}</span> <span class="muted">${pct(t.pnl_pct)}</span>`,n:1},{h:"How it ended",f:t=>t.status==="closed"?esc(exitText(t.exit_reason)):t.exit_reason?'<span class="muted">Sell order placed</span>':""},{h:"Conviction",f:t=>conv(t.conviction)}],{detail:tradeDetail});
+    return`<div class="card"><div class="chips">${chips}</div>${body}${tradeFilter!=="blocked"&&F[tradeFilter].length>showN?`<button class="btn more" data-more>Show more (${F[tradeFilter].length-showN} older)</button>`:""}${tradeFilter!=="blocked"&&F[tradeFilter].length?'<div class="sub" style="margin-top:10px">Click a trade to see why it was made.</div>':""}</div>`;
+  }
+  if(teamTab==="strategy"){
+    const allPlans=[...(d.plans||[])].reverse(),plans=allPlans.slice(0,Math.min(showN,80));
+    return`<div class="card"><div class="ch"><div><h2>Every decision the manager made</h2><div class="sub">What it saw, what it was testing, and what it did</div></div></div>
+      ${plans.length?`<div class="tl">${plans.map(p=>`<div class="ti" style="--c:${teamColor(id)}"><div class="t num">${fmtDate(p.date)} · ${esc(p.time)} <span class="tag" style="padding:1px 8px">${esc(triggerText(p.trigger))}</span></div>
+        <p style="color:var(--ink)">${esc(p.market_view)}</p>${p.experiment?`<p><b style="color:var(--ink)">Testing:</b> ${esc(p.experiment)}</p>`:""}
+        <div class="decs">${(p.decisions||[]).map(x=>{const res=(p.results||[]).find(r=>r.split(" ")[1]===x.symbol&&r.startsWith(x.action));const bl=res&&/blocked|failed/.test(res);return`<span class="pill ${bl?"block":x.action==="SELL"?"sell":"buy"}" title="${esc((x.reason||"")+(res?" — "+res:""))}">${esc(x.action)} ${esc(x.symbol)}${x.conviction?" · "+x.conviction+"/5":""}${bl?" · blocked":""}</span>`}).join("")||'<span class="sub">Decided to hold.</span>'}</div></div>`).join("")}</div>${allPlans.length>plans.length&&showN<80?`<button class="btn more" data-more>Show more (${allPlans.length-plans.length} older)</button>`:""}`:empty("No manager decisions logged yet.")}</div>`;
+  }
+  if(teamTab==="lessons"){
+    const L=[...(d.lessons||[])].reverse(),ideas=d.ideas?.strategy_ideas||[],rv=[...(d.reviews||[])].reverse();
+    return`<div class="grid g11">
+      <div class="card"><div class="ch"><div><h2>Lessons learned</h2><div class="sub">Written after each close. The manager rereads these before every decision.</div></div></div>
+        ${L.length?`<div class="tl">${L.slice(0,30).map(l=>`<div class="ti" style="--c:var(--s4)"><div class="t">${fmtDate(l.date)}</div><p style="color:var(--ink)">${esc(l.lesson)}</p></div>`).join("")}</div>`:empty("No lessons yet.")}</div>
+      <div class="grid" style="align-content:start">
+        <div class="card prose"><div class="ch"><div><h2>Strategies being tested</h2><div class="sub">${d.ideas?.date?"Since "+fmtDate(d.ideas.date):""}</div></div></div>${ideas.length?`<ul>${ideas.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>`:empty("No ideas yet.")}</div>
+        <div class="card prose"><div class="ch"><h2>Daily reviews</h2></div>${rv.length?rv.slice(0,10).map(r=>`<div style="margin-bottom:14px"><div class="label" style="margin-top:0">${fmtDate(r.date)}</div><p><b class="up">Went well:</b> ${esc(r.what_went_well)}</p><p><b class="down">Went wrong:</b> ${esc(r.what_went_wrong)}</p></div>`).join(""):empty("No reviews yet.")}</div>
+      </div></div>`;
+  }
+  const R=d.research||{},news=R.news||{},soc=R.social||{},tick=D.teams[id].tickers;
+  const mw=(D.market_watch?.findings||[]).filter(f=>f.market_wide||(f.affected||[]).some(s=>tick.includes(s)));
+  const tech=Object.entries(R.technicals||{});
+  return`<div class="grid g11">
+    <div class="card"><div class="ch"><div><h2>News researcher</h2><div class="sub">${esc(news.overall||"")}</div></div></div>${findings(news.findings)}</div>
+    <div class="card"><div class="ch"><div><h2>Overnight &amp; after hours</h2><div class="sub">Handed to the manager at the open</div></div></div>${findings(R.overnight)}</div>
+    <div class="card"><div class="ch"><div><h2>Reddit mood</h2><div class="sub">${esc(soc.overall||"")}</div></div></div>${findings(soc.findings)}</div>
+    <div class="card"><div class="ch"><div><h2>Truth Social &amp; X</h2><div class="sub">Posts that could move this team's stocks</div></div></div>${postList(mw)}</div>
+  </div>
+  <div class="card mt"><div class="ch"><div><h2>Price check</h2><div class="sub">The price data the manager sees for each company</div></div></div>
+    ${table(tech.map(([s,v])=>({s,...v})),[{h:"Stock",f:r=>`<span class="sym">${esc(r.s)}</span>`},{h:"Price",f:r=>money(r.price),n:1},{h:"1 day",f:r=>`<span class="${cls(r.change_1d)}">${pct(r.change_1d)}</span>`,n:1},{h:"5 days",f:r=>`<span class="${cls(r.change_5d)}">${pct(r.change_5d)}</span>`,n:1},{h:"20 days",f:r=>`<span class="${cls(r.change_20d)}">${pct(r.change_20d)}</span>`,n:1},{h:"RSI",f:r=>r.rsi_14==null?"–":`${r.rsi_14}${r.rsi_14>70?' <span class="pill block">overbought</span>':r.rsi_14<30?' <span class="pill buy">oversold</span>':""}`,n:1},{h:"Trend",f:r=>r.above_50d_avg==null?"–":r.above_50d_avg?'<span class="up">▲ Above 50-day average</span>':'<span class="down">▼ Below 50-day average</span>'}])}</div>`;
+}
+function afterTeam(id,animate){
+  const d=tdet(id),days=d.pnl_days||[];
+  lineChart($("#cCum"),[{name:"Realized profit",color:css(COLOR[id]||"--s1"),values:days.map(x=>({x:x.date,y:x.cum})),extra:i=>`<div class="tr"><span>That day</span><b class="${cls(days[i].realized)}">${smoney(days[i].realized)}</b></div>`}],{height:230,yFmt:(v,ax)=>ax?money(v,0):money(v)});
+  const closed=(d.trades||[]).filter(t=>t.status==="closed"&&t.pnl!=null).slice(-30);
+  barChart($("#cTrades"),closed.map(t=>({label:t.symbol,value:t.pnl,title:`${t.symbol} · bought ${fmtDate(t.date)}`,sub:`<div class="tr"><span>How it ended</span><b>${esc(exitText(t.exit_reason))}</b></div><div class="tr"><span>Return</span><b>${pct(t.pnl_pct)}</b></div>`})),{height:230});
+  const tabs=$("#tabs"),ink=tabs.querySelector(".ink");
+  const place=()=>{const on=tabs.querySelector("button.on");ink.style.left=on.offsetLeft+"px";ink.style.width=on.offsetWidth+"px"};
+  const renderTab=(anim=true)=>{const b=$("#tabBody");b.innerHTML=teamTabBody(id);if(anim){b.classList.remove("enter");void b.offsetWidth;b.classList.add("view","enter")}wireDetails(b);
+    b.querySelectorAll("[data-f]").forEach(c=>c.addEventListener("click",()=>{tradeFilter=c.dataset.f;showN=25;renderTab()}));
+    b.querySelector("[data-more]")?.addEventListener("click",()=>{showN+=25;const y=scrollY;renderTab(false);scrollTo({top:y})})};
+  tabs.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",()=>{teamTab=btn.dataset.tab;tradeFilter="all";showN=25;tabs.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===btn));place();renderTab()}));
+  place();renderTab(animate);
+}
+function findings(list){
+  if(!list?.length)return empty("Nothing notable.");
+  return`<div class="feed">${list.slice(0,10).map(f=>`<div class="fi"><span class="tm"><span class="sym" style="color:var(--ink)">${esc(f.symbol||"")}</span></span><div class="tx"><div style="-webkit-line-clamp:3;color:var(--ink)">${esc(f.summary)}</div><div>${esc(f.source||"")}${f.unconfirmed_rumor?" · unconfirmed":""}${f.seen_at?" · "+ago(f.seen_at):f.time?" · "+esc(f.time):""}</div></div><span class="num" style="white-space:nowrap" title="Mood ${f.sentiment>0?"positive":f.sentiment<0?"negative":"neutral"}, importance ${f.importance}/5"><span class="${cls(f.sentiment)}">${f.sentiment>0?"▲":f.sentiment<0?"▼":"■"}</span> <span style="letter-spacing:1px">${"▮".repeat(f.importance||0)}<span class="muted">${"▮".repeat(Math.max(0,5-(f.importance||0)))}</span></span></span></div>`).join("")}</div>`;
+}
+function postList(list){
+  if(!list?.length)return empty("No market-moving posts right now.");
+  return`<div class="feed">${list.slice(0,10).map(f=>`<div class="fi"><span class="tm">${f.seen_at?ago(f.seen_at).replace(" ago",""):""}</span><div class="tx"><b>${esc(f.source)}</b><div style="color:var(--ink);-webkit-line-clamp:3">${esc(f.post)}</div><div>${esc(f.why)}</div></div><span>${f.market_wide?'<span class="pill block">Whole market</span>':(f.affected||[]).map(s=>`<span class="tick">${esc(s)}</span>`).join("")}</span></div>`).join("")}</div>`;
+}
+
+/* ---------------- all trades ---------------- */
+let tf={team:"all",status:"all",q:""};
+function trades(){
+  return`<div class="head"><div><h1>All trades</h1><p>Every trade from every team. Click a row to see the reasoning.</p></div>
+    <input class="search" id="q" type="search" placeholder="Search a stock or a reason…" value="${esc(tf.q)}" aria-label="Search trades"></div>
+    <div class="card stagger"><div><div class="chips" id="tfTeam">${[["all","All teams"],...Object.entries(D.teams).map(([id])=>[id,shortName(id)])].map(([k,l])=>`<button class="chip ${tf.team===k?"on":""}" data-k="${k}">${k!=="all"?`<span class="dot" style="background:${teamColor(k)};width:8px;height:8px"></span>`:""}${esc(l)}</button>`).join("")}</div>
+    <div class="chips" id="tfStatus">${[["all","Any result"],["open","Open"],["wins","Wins"],["losses","Losses"]].map(([k,l])=>`<button class="chip ${tf.status===k?"on":""}" data-k="${k}">${l}</button>`).join("")}</div>
+    <div id="tradeTable"></div></div></div>`;
+}
+function afterTrades(){
+  const all=Object.keys(D.teams).flatMap(id=>(tdet(id).trades||[]).map(t=>({...t,team:id}))).sort((a,b)=>((b.date||"")+(b.time||"")).localeCompare((a.date||"")+(a.time||"")));
+  const draw=anim=>{let r=all.filter(t=>tf.team==="all"||t.team===tf.team);
+    if(tf.status==="open")r=r.filter(t=>t.status==="open"||t.status==="submitted");if(tf.status==="wins")r=r.filter(t=>t.pnl>0);if(tf.status==="losses")r=r.filter(t=>t.pnl<0);
+    if(tf.q){const q=tf.q.toLowerCase();r=r.filter(t=>((t.symbol||"")+" "+(t.reason||"")).toLowerCase().includes(q))}
+    const el=$("#tradeTable");el.innerHTML=`<div class="sub" style="margin-bottom:8px">${r.length} trade${r.length===1?"":"s"} · total result <b class="${cls(r.reduce((s,t)=>s+(t.pnl||0),0))}">${smoney(Math.round(r.reduce((s,t)=>s+(t.pnl||0),0)*100)/100)}</b></div>`+table(r.slice(0,250),[{h:"When",f:t=>`<span class="num">${fmtDate(t.date)} ${esc(t.time||"")}</span>`},{h:"Team",f:t=>`<span style="display:inline-flex;align-items:center;gap:6px;white-space:nowrap"><span class="dot" style="background:${teamColor(t.team)}"></span>${esc(shortName(t.team))}</span>`},{h:"Stock",f:t=>`<span class="sym">${esc(t.symbol)}</span>`},{h:"Result",f:tradeStatus},{h:"Bought",f:t=>money(t.entry_price??t.est_price),n:1},{h:"Sold",f:t=>money(t.exit_price),n:1},{h:"Profit",f:t=>t.pnl==null?"–":`<span class="${cls(t.pnl)}">${smoney(t.pnl)}</span>`,n:1},{h:"How it ended",f:t=>t.status==="closed"?esc(exitText(t.exit_reason)):t.exit_reason?'<span class="muted">Sell order placed</span>':""}],{detail:tradeDetail});
+    if(anim){el.classList.remove("enter");void el.offsetWidth;el.classList.add("view","enter")}wireDetails(el)};
+  [["#tfTeam","team"],["#tfStatus","status"]].forEach(([s,k])=>$(s).querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{tf[k]=c.dataset.k;$(s).querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x===c));draw(true)})));
+  $("#q").addEventListener("input",e=>{tf.q=e.target.value;draw(false)});draw(false);
+}
+
+/* ---------------- research ---------------- */
+function research(){
+  const mw=D.market_watch||{};
+  return`<div class="head"><div><h1>Research desk</h1><p>What the researchers are reading, day and night</p></div>${mw.updated?`<span class="tag">Social watch: ${mw.posts_read||0} posts read · updated ${ago(mw.updated)}</span>`:""}</div>
+  <div class="stagger"><div class="card"><div class="ch"><div><h2>Truth Social &amp; X watch</h2><div class="sub">${esc(mw.overall||"Posts by the President and other influential accounts that could move markets")}</div></div></div>${postList(mw.findings)}</div></div>
+  <div class="grid g11 mt stagger">${Object.entries(D.teams).map(([id,t])=>{const R=tdet(id).research||{};return`<div class="card"><div class="ch"><div><h2 style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:${teamColor(id)}"></span>${esc(t.name)}</h2><div class="sub">${esc(R.news?.overall||"")}</div></div><a class="sub" style="color:var(--accent);white-space:nowrap" href="#/team/${id}">Team →</a></div>
+    <div class="label" style="margin-top:0">Latest news</div>${findings(R.news?.findings)}<div class="label">Overnight &amp; after hours</div>${findings(R.overnight)}</div>`}).join("")}</div>`;
+}
+
+/* ---------------- strategy ---------------- */
+function strategy(){
+  const s=D.president||{},log=[...(D.strategy_log||[])].reverse(),ex=D.executives||{},idx=[...(D.reports_index||[])].reverse();
+  return`<div class="head"><div><h1>Strategy</h1><p>How the President steers the team, and how that has changed</p></div></div>
+  <div class="grid g21 stagger">
+    <div class="card prose"><div class="ch"><div><h2>Current orders</h2><div class="sub">${s.updated?"Set "+ago(s.updated):""}</div></div></div>${s.strategy_notes?`<p style="color:var(--ink);font-size:15px">${esc(s.strategy_notes)}</p>${Object.entries(s.team_focus||{}).map(([id,v])=>`<div style="display:flex;gap:10px;margin:10px 0"><span class="dot" style="background:${teamColor(id)};margin-top:6px"></span><div><b>${esc(teamName(id))}</b><p style="margin:2px 0 0">${esc(v)}</p></div></div>`).join("")}`:empty("No strategy yet.")}
+      ${Object.keys(s.risk_overrides||{}).length?`<div class="label">Stricter rules in force</div><div class="decs">${Object.entries(s.risk_overrides).map(([k,v])=>`<span class="pill block">${esc(k.replace(/_/g," "))}: ${esc(v)}</span>`).join("")}</div>`:""}</div>
+    ${goLiveCard()}
+  </div>
+  <div class="card mt"><div class="ch"><div><h2>Money per team over time</h2><div class="sub">The President's split, decided each evening</div></div><div class="legend">${Object.keys(D.teams).map(id=>`<span><i style="background:${teamColor(id)}"></i>${esc(shortName(id))}</span>`).join("")}</div></div><div class="chart" id="cAlloc"></div></div>
+  <div class="grid g11 mt stagger">
+    <div class="card"><div class="ch"><div><h2>President's decision log</h2><div class="sub">What changed each evening, and why</div></div></div>${log.length?`<div class="tl">${log.slice(0,30).map(l=>`<div class="ti"><div class="t">${fmtDate(l.date)}</div><p style="color:var(--ink)">${esc(l.decision)}</p><div class="decs">${Object.entries(l.allocations||{}).map(([id,v])=>`<span class="tag"><span class="dot" style="background:${teamColor(id)}"></span>${esc(shortName(id))} ${Math.round(v*100)}%</span>`).join("")}</div></div>`).join("")}</div>`:empty("No decisions yet.")}</div>
+    <div class="grid" style="align-content:start">
+      ${Object.values(ex).map(e=>`<div class="card prose"><div class="ch"><h2>${esc(e.title)}</h2></div><p>${esc(e.summary)}</p>${(e.escalations||[]).length?`<div class="label">Escalated to the President</div><ul>${e.escalations.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}</div>`).join("")}
+      <div class="card"><div class="ch"><h2>Report history</h2></div>${idx.length?table(idx.slice(0,20),[{h:"Date",f:r=>`<span class="num">${fmtDate(r.date)}</span>`},{h:"Headline",f:r=>`<div class="why" style="color:var(--ink)">${esc(r.headline)}</div>`},{h:"Day",f:r=>`<span class="${cls(r.day_change_pct)}">${pct(r.day_change_pct)}</span>`,n:1}]):empty("No reports yet.")}</div>
+    </div>
+  </div>`;
+}
+function afterStrategy(){
+  const log=D.strategy_log||[],ids=Object.keys(D.teams);
+  lineChart($("#cAlloc"),ids.map(id=>({name:shortName(id),color:css(COLOR[id]),values:log.map(l=>({x:l.date,y:l.allocations?.[id]??null}))})),{height:220,area:false,zero:false,yFmt:v=>Math.round(v*100)+"%"});
+}
+
+/* ============================== shell & routing ============================== */
+function repoUrl(){const h=location.hostname,p=location.pathname.split("/").filter(Boolean);return h.endsWith("github.io")&&p.length?`https://github.com/${h.split(".")[0]}/${p[0]}`:null}
+function renderNav(r){
+  const teams=Object.keys(D?.teams||{});
+  $("#nav").innerHTML=`<a href="#/" class="${r==="overview"?"on":""}">${svgI("home")}Overview</a>
+    <a href="#/trades" class="${r==="trades"?"on":""}">${svgI("trades")}All trades</a>
+    <a href="#/research" class="${r==="research"?"on":""}">${svgI("research")}Research</a>
+    <a href="#/strategy" class="${r==="strategy"?"on":""}">${svgI("strategy")}Strategy</a>
+    <div class="lbl">Teams</div>${teams.map(id=>`<a href="#/team/${id}" class="${r==="team/"+id?"on":""}"><span class="dot" style="background:${teamColor(id)}"></span>${esc(shortName(id))}</a>`).join("")}`;
+  const m=$("#mode");m.className="mode"+(D?.mode==="live"?" live":"");m.lastElementChild.textContent=(D?.mode==="live"?"LIVE":"PAPER")+" TRADING"+(D?.paused?" · PAUSED":"");
+  $("#upd").textContent=D?.updated?"Updated "+ago(D.updated):"";
+}
+const route=()=>location.hash.replace(/^#\/?/,"")||"overview";
+let current=null;
+function render(animate=true){
+  if(!D)return;
+  const r=route(),v=$("#view");renderNav(r);
+  const go=()=>{
+    if(r.startsWith("team/")){const id=r.slice(5);v.innerHTML=team(id);if(D.teams?.[id])afterTeam(id,animate)}
+    else if(r==="trades"){v.innerHTML=trades();afterTrades()}
+    else if(r==="research"){v.innerHTML=research()}
+    else if(r==="strategy"){v.innerHTML=strategy();afterStrategy()}
+    else{v.innerHTML=overview();afterOverview()}
+    if(animate){countUp(v);v.classList.remove("leave");v.classList.add("enter")}
+    else{v.classList.remove("enter","leave");v.querySelectorAll(".stagger").forEach(s=>s.classList.remove("stagger"));v.querySelectorAll(".draw,.bar,.fadein,.meter i,.split span").forEach(e=>e.style.animation="none");v.querySelectorAll(".draw").forEach(e=>e.style.strokeDasharray="none")}
+    current=r;
+  };
+  if(animate&&current!==null&&!REDUCED){v.classList.remove("enter");v.classList.add("leave");setTimeout(()=>{go();scrollTo({top:0})},150)}else go();
+}
+async function load(first){
+  try{
+    const [d,h]=await Promise.all(["data/dashboard.json","data/history.json"].map(u=>fetch(u+"?t="+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)));
+    if(!d){$("#view").innerHTML=`<div class="head"><div><h1>Getting ready</h1><p>No data yet. It appears after the bots' first run.</p></div></div>`;return}
+    const changed=!D||d.updated!==D.updated;D=d;H=h||[];
+    Object.keys(D.teams||{}).forEach((id,i)=>COLOR[id]=SERIES[i%SERIES.length]);
+    if(first||changed)render(!!first);
+  }catch(e){console.error(e)}
+}
+addEventListener("hashchange",()=>render(true));
+let rt,lastW=innerWidth;addEventListener("resize",()=>{if(Math.abs(innerWidth-lastW)<40)return;lastW=innerWidth;clearTimeout(rt);rt=setTimeout(()=>render(false),200)});
+try{const t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}
+$("#theme").addEventListener("click",()=>{const cur=document.documentElement.dataset.theme,dark=cur?cur==="dark":matchMedia("(prefers-color-scheme: dark)").matches,t=dark?"light":"dark";document.documentElement.dataset.theme=t;try{localStorage.setItem("theme",t)}catch(e){}render(false)});
+load(true);setInterval(()=>load(false),120000);
 </script>
 </body>
 </html>
