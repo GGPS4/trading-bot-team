@@ -63,6 +63,12 @@ watchlist:
   max_changes_per_look: 3    # most adds (and most drops) in one manager look
   min_price: 5               # don't add penny stocks
 
+# Earnings dates (Nasdaq) and big US economic releases (CPI, jobs, Fed) are fed to the
+# managers. New buys pause briefly around HIGH-impact releases during market hours.
+events:
+  pause_buys_minutes_before: 10
+  pause_buys_minutes_after: 5
+
 # All-day trading. The bots watch the market from open to close.
 intraday:
   check_every_minutes: 5          # prices, stop-losses and fresh news are checked this often
