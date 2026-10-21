@@ -1,0 +1,51 @@
+[
+  {
+    "date": "2026-10-21",
+    "time": "11:03",
+    "trigger": "scheduled look",
+    "market_view": "Financials are mixed, with JPMorgan's downgrade offsetting positive catalysts at BlackRock, Wells Fargo, Visa, and Mastercard, while no urgent macro or policy catalyst is evident. BLK has the strongest setup, but its overbought RSI and the CEO's recession warning warrant a measured position; MA, V, and AXP are too extended to chase.",
+    "experiment": "Test a catalyst-confirmation momentum entry: buy a high-importance analyst upgrade only when the price trend is positive, while using a 5% stop and a conservative initial position size.",
+    "decisions": [
+      {
+        "symbol": "BLK",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "TD Cowen upgraded BLK to Buy with a $1,405 price target, about 23.5% above the current price. BLK is up 0.81% today, remains above its 20-day and 50-day averages, and has positive 5-day and 20-day momentum. The overbought RSI of 73.5 and Fink's warning about AI construction delays and recession risk argue for sizing the position at no more than 20% of the team budget.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      }
+    ],
+    "results": [
+      "BUY BLK x2 (~$2274.99)"
+    ]
+  },
+  {
+    "date": "2026-10-21",
+    "time": "11:30",
+    "trigger": "scheduled look",
+    "market_view": "The financial services sector shows mixed momentum with American Express and Visa leading positive sentiment due to new product launches and partnerships. BlackRock presents mixed signals with concerns about AI infrastructure while maintaining bond market resilience. Most stocks are showing modest gains with RSI indicating neither extreme overbought nor oversold conditions.",
+    "experiment": "Reducing the BLK position due to mixed signals and CEO warnings while adding exposure to V for its B2B payment innovation and strong positive catalyst.",
+    "decisions": [
+      {
+        "symbol": "BLK",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": null,
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "V",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": null,
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      }
+    ],
+    "results": [
+      "SELL BLK",
+      "BUY V x6 (~$2454.03)"
+    ]
+  }
+]
