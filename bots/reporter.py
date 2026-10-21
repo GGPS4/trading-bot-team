@@ -84,7 +84,7 @@ def snapshot(broker, org, owner_of, budgets, mode):
         bench_price = broker.latest_prices([bench]).get(bench)
     except Exception:
         bench_price = None
-    open_by_symbol = {e["symbol"]: e for e in entries if e["status"] == "open"}
+    open_by_symbol = {e["symbol"]: e for e in entries if e["status"] in ("open", "submitted")}
 
     pos_rows = []
     for p in positions:
@@ -145,8 +145,50 @@ def write_dashboard(snap, extra=None):
     data["market_watch"] = read_json(STATE / "research" / "_market_watch.json", {})
     data["overnight"] = {tid: (read_json(STATE / "research" / f"{tid}.json", {}).get("overnight") or [])[:8]
                          for tid in snap["teams"]}
+    data["team_details"] = team_details(snap["teams"])
+    data["strategy_log"] = read_json(STATE / "strategy_log.json", [])[-90:]
+    data["reports_index"] = read_json(STATE / "reports" / "index.json", [])[-60:]
+    data["blocked_recent"] = read_json(journal.BLOCKED, [])[-150:]
     write_json(DOCS_DATA / "dashboard.json", data)
     write_json(DOCS_DATA / "history.json", read_json(HISTORY, []))
+
+
+def team_details(teams):
+    """Everything the dashboard's team pages show: full trade history, every look the
+    manager took, lessons, strategy ideas, past reviews and the latest research."""
+    entries = journal.load()
+    blocked = read_json(journal.BLOCKED, [])
+    report_files = sorted((STATE / "reports").glob("20*.json"))[-30:]
+    reports = [read_json(f, {}) for f in report_files]
+    out = {}
+    for tid in teams:
+        mine = [e for e in entries if e["team"] == tid]
+        closed = sorted([e for e in mine if e["status"] == "closed" and e.get("pnl") is not None],
+                        key=lambda e: e.get("exit_time") or "")
+        by_day, cum = {}, 0.0
+        for e in closed:
+            d = (e.get("exit_time") or e["date"])[:10]
+            by_day[d] = by_day.get(d, 0) + e["pnl"]
+        pnl_days = []
+        for d in sorted(by_day):
+            cum += by_day[d]
+            pnl_days.append({"date": d, "realized": round(by_day[d], 2), "cum": round(cum, 2)})
+        research = read_json(STATE / "research" / f"{tid}.json", {})
+        out[tid] = {
+            "trades": [{k: e.get(k) for k in ("id", "date", "time", "symbol", "kind", "qty", "dollars", "est_price",
+                                               "entry_price", "exit_price", "exit_time", "exit_reason", "exit_note",
+                                               "pnl", "pnl_pct", "status", "conviction", "reason", "stop_price",
+                                               "take_profit_price")} for e in mine[-250:]],
+            "blocked": [b for b in blocked if b["team"] == tid][-60:],
+            "plans": read_json(STATE / "plans" / f"{tid}_log.json", [])[-80:],
+            "lessons": read_json(STATE / "lessons" / f"{tid}.json", [])[-60:],
+            "ideas": read_json(STATE / "manager_notes" / f"{tid}.json", {}),
+            "reviews": [{"date": r.get("numbers", {}).get("date"), **(r.get("reviews", {}).get(tid) or {})}
+                        for r in reports if (r.get("reviews") or {}).get(tid)][-20:],
+            "pnl_days": pnl_days,
+            "research": {k: research.get(k) for k in ("time", "news", "social", "overnight", "technicals")},
+        }
+    return out
 
 
 def daily_report(llm, snap, reviews, exec_summaries, research_overview):
