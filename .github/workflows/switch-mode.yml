@@ -1,0 +1,53 @@
+name: Switch trading mode
+
+# Paper -> live needs you to type GO LIVE and then approve the
+# "live-trading" environment. Live -> paper is instant (safety first).
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Switch to"
+        type: choice
+        options: [paper, live]
+        default: paper
+      confirm:
+        description: "To go live, type GO LIVE"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  to-paper:
+    if: inputs.target == 'paper'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sed -i 's/^mode: .*/mode: paper/' config/settings.yaml
+      - run: |
+          git config user.name "bot-team"
+          git config user.email "bot-team@users.noreply.github.com"
+          git commit -am "Switch to PAPER trading" || echo "Already in paper mode."
+          git push
+
+  to-live:
+    if: inputs.target == 'live' && inputs.confirm == 'GO LIVE'
+    runs-on: ubuntu-latest
+    environment: live-trading   # you must approve this run on GitHub
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make sure live keys exist
+        env:
+          K: ${{ secrets.ALPACA_LIVE_KEY }}
+          S: ${{ secrets.ALPACA_LIVE_SECRET }}
+        run: |
+          if [ -z "$K" ] || [ -z "$S" ]; then
+            echo "::error::Add ALPACA_LIVE_KEY and ALPACA_LIVE_SECRET secrets before going live."; exit 1
+          fi
+      - run: sed -i 's/^mode: .*/mode: live/' config/settings.yaml
+      - run: |
+          git config user.name "bot-team"
+          git config user.email "bot-team@users.noreply.github.com"
+          git commit -am "Switch to LIVE trading (approved by ${{ github.actor }})" || echo "Already live."
+          git push
