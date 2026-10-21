@@ -138,6 +138,10 @@ td .num{white-space:nowrap}
 .pill.win{color:var(--up);background:rgba(12,163,12,.11);border-color:transparent}
 .pill.loss{color:var(--down);background:rgba(208,59,59,.11);border-color:transparent}
 .pill.open{color:var(--ink-2)}
+.health{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 18px;padding:12px 16px;border-radius:12px;font-size:14px;border:1px solid var(--line);animation:viewIn .4s var(--ease)}
+.health.bad{border-color:var(--down);color:var(--down);background:color-mix(in srgb,var(--down) 8%,transparent)}
+.health.warn{border-color:var(--warn);color:var(--warn);background:color-mix(in srgb,var(--warn) 8%,transparent)}
+.health b{color:inherit}.health a{color:inherit;text-decoration:underline;margin-left:auto}
 .pill.block{color:var(--warn);background:rgba(250,178,25,.14);border-color:transparent}
 
 .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:24px 0 16px;position:relative;overflow-x:auto}
@@ -237,7 +241,7 @@ td .num{white-space:nowrap}
       </button>
     </div>
   </aside>
-  <main><div class="view" id="view"><div class="skel" style="height:40px;width:260px"></div><div class="grid k4 mt"><div class="skel" style="height:120px"></div><div class="skel" style="height:120px"></div><div class="skel" style="height:120px"></div><div class="skel" style="height:120px"></div></div><div class="skel mt" style="height:320px"></div></div></main>
+  <main><div id="health" class="health" role="status" hidden></div><div class="view" id="view"><div class="skel" style="height:40px;width:260px"></div><div class="grid k4 mt"><div class="skel" style="height:120px"></div><div class="skel" style="height:120px"></div><div class="skel" style="height:120px"></div><div class="skel" style="height:120px"></div></div><div class="skel mt" style="height:320px"></div></div></main>
 </div>
 <div class="tip" id="tip" role="tooltip"></div>
 <script>
@@ -504,6 +508,8 @@ function teamTabBody(id){
       <div class="card"><div class="ch"><div><h2>Lessons learned</h2><div class="sub">Written after each close. The manager rereads these before every decision.</div></div></div>
         ${L.length?`<div class="tl">${L.slice(0,30).map(l=>`<div class="ti" style="--c:var(--s4)"><div class="t">${fmtDate(l.date)}</div><p style="color:var(--ink)">${esc(l.lesson)}</p></div>`).join("")}</div>`:empty("No lessons yet.")}</div>
       <div class="grid" style="align-content:start">
+        <div class="card"><div class="ch"><div><h2>Scorecard</h2><div class="sub">This team's closed trades by setup, last 30 days</div></div></div>${scoreTable(D.scorecard?.by_team?.[id]?.by_setup,"Setup")}
+          ${Object.keys(D.scorecard?.by_team?.[id]?.by_experiment||{}).length?`<div class="label">By experiment</div>${scoreTable(D.scorecard.by_team[id].by_experiment,"Experiment")}`:""}</div>
         <div class="card prose"><div class="ch"><div><h2>Strategies being tested</h2><div class="sub">${d.ideas?.date?"Since "+fmtDate(d.ideas.date):""}</div></div></div>${ideas.length?`<ul>${ideas.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>`:empty("No ideas yet.")}</div>
         <div class="card prose"><div class="ch"><h2>Daily reviews</h2></div>${rv.length?rv.slice(0,10).map(r=>`<div style="margin-bottom:14px"><div class="label" style="margin-top:0">${fmtDate(r.date)}</div><p><b class="up">Went well:</b> ${esc(r.what_went_well)}</p><p><b class="down">Went wrong:</b> ${esc(r.what_went_wrong)}</p></div>`).join(""):empty("No reviews yet.")}</div>
       </div></div>`;
@@ -566,9 +572,38 @@ function afterTrades(){
 function research(){
   const mw=D.market_watch||{};
   return`<div class="head"><div><h1>Research desk</h1><p>What the researchers are reading, day and night</p></div>${mw.updated?`<span class="tag">Social watch: ${mw.posts_read||0} posts read · updated ${ago(mw.updated)}</span>`:""}</div>
-  <div class="stagger"><div class="card"><div class="ch"><div><h2>Truth Social &amp; X watch</h2><div class="sub">${esc(mw.overall||"Posts by the President and other influential accounts that could move markets")}</div></div></div>${postList(mw.findings)}</div></div>
+  ${calendarCards()}
+  <div class="stagger mt"><div class="card"><div class="ch"><div><h2>Truth Social &amp; X watch</h2><div class="sub">${esc(mw.overall||"Posts by the President and other influential accounts that could move markets")}</div></div></div>${postList(mw.findings)}</div></div>
   <div class="grid g11 mt stagger">${Object.entries(D.teams).map(([id,t])=>{const R=tdet(id).research||{};return`<div class="card"><div class="ch"><div><h2 style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:${teamColor(id)}"></span>${esc(t.name)}</h2><div class="sub">${esc(R.news?.overall||"")}</div></div><a class="sub" style="color:var(--accent);white-space:nowrap" href="#/team/${id}">Team →</a></div>
     <div class="label" style="margin-top:0">Latest news</div>${findings(R.news?.findings)}<div class="label">Overnight &amp; after hours</div>${findings(R.overnight)}</div>`}).join("")}</div>`;
+}
+
+function calendarCards(){
+  const C=D.calendar||{},E=C.earnings||[],X=C.economy||[];
+  const when=e=>`<span class="num">${fmtDate(e.date)}</span> <span class="muted">${esc(e.when||"")}</span>`;
+  return`<div class="grid g11 stagger">
+    <div class="card"><div class="ch"><div><h2>Earnings coming up</h2><div class="sub">Watched stocks reporting in the next 5 trading days (Nasdaq)</div></div></div>
+      ${E.length?table(E,[{h:"Stock",f:e=>`<span class="sym">${esc(e.symbol)}</span>`},{h:"Team",f:e=>e.team&&D.teams[e.team]?`<span class="dot" style="background:${teamColor(e.team)}"></span> ${esc(shortName(e.team))}`:"–"},{h:"When",f:when},{h:"EPS forecast",f:e=>esc(e.eps_forecast||"–"),n:1},{h:"Last year",f:e=>esc(e.last_year_eps||"–"),n:1}]):empty("No watched stocks report in the next few days.")}</div>
+    <div class="card"><div class="ch"><div><h2>Economic calendar</h2><div class="sub">US releases that move the whole market · new buys pause briefly around high-impact ones</div></div></div>
+      ${X.length?table(X.slice(0,20),[{h:"When",f:e=>`<span class="num">${esc(e.time)}</span>`},{h:"Event",k:"event"},{h:"Impact",f:e=>`<span class="pill ${e.impact==="High"?"sell":"block"}">${esc(e.impact)}</span>`},{h:"Forecast",f:e=>esc(e.forecast||"–"),n:1},{h:"Previous",f:e=>esc(e.previous||"–"),n:1}]):empty(C.time?"No big US releases in the next week.":"Calendar not loaded yet.")}</div>
+  </div>`;
+}
+
+function scoreTable(groups,label){return scoreTable0(groups,label)+(Object.values(groups||{}).some(v=>v&&!v.enough_data)?'<div class="sub" style="margin-top:8px">* fewer than 5 trades, too few to judge yet</div>':"")}
+function scoreTable0(groups,label){
+  const rows=Object.entries(groups||{}).filter(([,v])=>v).map(([k,v])=>({k,...v}));
+  if(!rows.length)return empty("No closed trades yet.");
+  return table(rows,[{h:label,f:r=>`<b style="color:var(--ink)">${esc(r.k)}</b>${r.enough_data?"":'<sup class="muted" title="Fewer than 5 trades: too few to judge">*</sup>'}`},
+    {h:"Trades",f:r=>r.trades,n:1},{h:"Win rate",f:r=>upct(r.win_rate),n:1},{h:"Avg return",f:r=>`<span class="${cls(r.avg_return)}">${pct(r.avg_return)}</span>`,n:1},
+    {h:"Profit factor",f:r=>r.profit_factor==null?"–":`<span class="${r.profit_factor>=1?"up":"down"}">${r.profit_factor}</span>`,n:1},
+    {h:"Total P&amp;L",f:r=>`<span class="${cls(r.total_pnl)}">${smoney(r.total_pnl)}</span>`,n:1}]);
+}
+function scorecardCard(){
+  const c=D.scorecard||{},o=c.overall;
+  return`<div class="grid g11 mt stagger">
+    <div class="card"><div class="ch"><div><h2>Scorecard: which setups make money</h2><div class="sub">All teams · closed trades, last ${c.days||30} days${o?` · ${o.trades} trades, ${upct(o.win_rate)} won`:""}. The President and managers read this every day.</div></div></div>${scoreTable(c.by_setup,"Setup")}</div>
+    <div class="card"><div class="ch"><div><h2>How trades ended</h2><div class="sub">Stop-loss, profit target, manager sell or end-of-day close</div></div></div>${scoreTable(Object.fromEntries(Object.entries(c.by_exit||{}).map(([k,v])=>[exitText(k),v])),"Exit")}</div>
+  </div>`;
 }
 
 /* ---------------- strategy ---------------- */
@@ -580,6 +615,7 @@ function strategy(){
       ${Object.keys(s.risk_overrides||{}).length?`<div class="label">Stricter rules in force</div><div class="decs">${Object.entries(s.risk_overrides).map(([k,v])=>`<span class="pill block">${esc(k.replace(/_/g," "))}: ${esc(v)}</span>`).join("")}</div>`:""}</div>
     ${goLiveCard()}
   </div>
+  ${scorecardCard()}
   <div class="card mt"><div class="ch"><div><h2>Money per team over time</h2><div class="sub">The President's split, decided each evening</div></div><div class="legend">${Object.keys(D.teams).map(id=>`<span><i style="background:${teamColor(id)}"></i>${esc(shortName(id))}</span>`).join("")}</div></div><div class="chart" id="cAlloc"></div></div>
   <div class="grid g11 mt stagger">
     <div class="card"><div class="ch"><div><h2>President's decision log</h2><div class="sub">What changed each evening, and why</div></div></div>${log.length?`<div class="tl">${log.slice(0,30).map(l=>`<div class="ti"><div class="t">${fmtDate(l.date)}</div><p style="color:var(--ink)">${esc(l.decision)}</p><div class="decs">${Object.entries(l.allocations||{}).map(([id,v])=>`<span class="tag"><span class="dot" style="background:${teamColor(id)}"></span>${esc(shortName(id))} ${Math.round(v*100)}%</span>`).join("")}</div></div>`).join("")}</div>`:empty("No decisions yet.")}</div>
@@ -605,7 +641,23 @@ function renderNav(r){
     <div class="lbl">Teams</div>${teams.map(id=>`<a href="#/team/${id}" class="${r==="team/"+id?"on":""}"><span class="dot" style="background:${teamColor(id)}"></span>${esc(shortName(id))}</a>`).join("")}`;
   const m=$("#mode");m.className="mode"+(D?.mode==="live"?" live":"");m.lastElementChild.textContent=(D?.mode==="live"?"LIVE":"PAPER")+" TRADING"+(D?.paused?" · PAUSED":"");
   $("#upd").textContent=D?.updated?"Updated "+ago(D.updated):"";
+  renderHealth();
 }
+/* health check: is the data fresh? */
+function etNow(){const p=Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date()).map(x=>[x.type,x.value]));return{day:p.weekday,mins:(+p.hour%24)*60+ +p.minute}}
+function renderHealth(){
+  const el=$("#health");if(!el||!D?.updated)return;
+  const age=(Date.now()-new Date(D.updated).getTime())/60000,t=etNow(),weekday=!["Sat","Sun"].includes(t.day);
+  const open=weekday&&t.mins>=9*60+35&&t.mins<16*60,repo=repoUrl(),link=repo?`<a href="${repo}/actions" target="_blank" rel="noopener">Check the bot runs</a>`:"";
+  let cls="",msg="";
+  if(open&&age>45){cls="bad";msg=`<b>No update for ${Math.round(age)} minutes during market hours.</b> The bots may have stopped (or the market is closed for a holiday).`}
+  else if(open&&age>25){cls="warn";msg=`<b>Last update ${Math.round(age)} minutes ago.</b> Updates normally arrive every 5–15 minutes while the market is open.`}
+  else if(!open&&age>8*60){cls="warn";msg=`<b>No update for ${Math.round(age/60)} hours.</b> After-hours research may have stopped.`}
+  const issues=(D.health?.issues||[]);
+  if(!cls&&issues.length){cls="warn";msg=`<b>Heads up:</b> ${esc(issues.join(" · "))}`}
+  el.hidden=!cls;el.className="health "+cls;el.innerHTML=cls?`<span>${msg}</span>${link}`:"";
+}
+setInterval(renderHealth,60000);
 const route=()=>location.hash.replace(/^#\/?/,"")||"overview";
 let current=null;
 function render(animate=true){
