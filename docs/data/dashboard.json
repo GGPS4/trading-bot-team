@@ -1,13 +1,21 @@
 {
-  "updated": "2026-10-21T22:07-04:00",
+  "updated": "2026-10-21T23:17-04:00",
   "date": "2026-10-21",
   "mode": "paper",
+  "health": {
+    "issues": []
+  },
   "paused": false,
+  "rules": {
+    "min_invested_pct": 0.75,
+    "max_positions": 5,
+    "strategy": "day_trading"
+  },
   "account": {
-    "equity": 99693.89,
+    "equity": 99511.71,
     "cash": 41824.25,
-    "day_change": -306.11,
-    "day_change_pct": -0.0031
+    "day_change": -488.29,
+    "day_change_pct": -0.0049
   },
   "benchmark": {
     "symbol": "SPY",
@@ -16,9 +24,9 @@
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 2,
-    "return_since_start": -0.0031,
+    "return_since_start": -0.0049,
     "benchmark_since_start": 0.0034,
-    "max_drawdown": 0.0031
+    "max_drawdown": 0.0049
   },
   "go_live": {
     "items": [
@@ -30,12 +38,12 @@
       {
         "rule": "Beating SPY since the start",
         "ok": false,
-        "value": "-0.3% vs +0.3%"
+        "value": "-0.5% vs +0.3%"
       },
       {
         "rule": "Worst drop under 15%",
         "ok": true,
-        "value": "0.3%"
+        "value": "0.5%"
       }
     ],
     "all_ok": false
@@ -54,11 +62,18 @@
         "LDOS",
         "TXT",
         "KTOS",
-        "AVAV"
+        "AVAV",
+        "PLTR",
+        "BAH",
+        "CACI",
+        "SAIC",
+        "HEI",
+        "CW",
+        "MRCY"
       ],
-      "budget": 12879.4,
-      "invested": 9705.15,
-      "unrealized_pnl": 17.49,
+      "budget": 12821.62,
+      "invested": 9690.68,
+      "unrealized_pnl": 3.02,
       "realized_today": 0,
       "trades_today": 5,
       "blocked_today": 0,
@@ -83,11 +98,16 @@
         "RDW",
         "GE",
         "HWM",
-        "TDG"
+        "TDG",
+        "BKSY",
+        "IRDM",
+        "VSAT",
+        "SATS",
+        "FLY"
       ],
-      "budget": 12879.4,
-      "invested": 12471.45,
-      "unrealized_pnl": -207.09,
+      "budget": 12821.62,
+      "invested": 12379.04,
+      "unrealized_pnl": -299.5,
       "realized_today": 0,
       "trades_today": 4,
       "blocked_today": 0,
@@ -109,11 +129,17 @@
         "WMG",
         "LYV",
         "ROKU",
-        "CNK",
         "IMAX",
-        "SONY"
+        "SONY",
+        "WBD",
+        "FOXA",
+        "CMCSA",
+        "TKO",
+        "EA",
+        "TTWO",
+        "BAM"
       ],
-      "budget": 12879.4,
+      "budget": 12821.62,
       "invested": 2548.32,
       "unrealized_pnl": -0.96,
       "realized_today": 0,
@@ -145,11 +171,14 @@
         "QCOM",
         "TXN",
         "NOW",
-        "AMAT"
+        "AMAT",
+        "MU",
+        "PANW",
+        "ANET"
       ],
-      "budget": 12879.4,
-      "invested": 11912.98,
-      "unrealized_pnl": -120.4,
+      "budget": 12821.62,
+      "invested": 11843.11,
+      "unrealized_pnl": -190.27,
       "realized_today": 0,
       "trades_today": 2,
       "blocked_today": 0,
@@ -174,11 +203,19 @@
         "SBUX",
         "BKNG",
         "TJX",
-        "CMG"
+        "CMG",
+        "ABNB",
+        "ORLY",
+        "MAR",
+        "RCL",
+        "GM",
+        "F",
+        "LULU",
+        "DPZ"
       ],
-      "budget": 12879.4,
-      "invested": 2350.8,
-      "unrealized_pnl": -6.24,
+      "budget": 12821.62,
+      "invested": 2344.23,
+      "unrealized_pnl": -12.81,
       "realized_today": 0,
       "trades_today": 2,
       "blocked_today": 0,
@@ -203,11 +240,19 @@
         "MA",
         "AXP",
         "BLK",
-        "SCHW"
+        "SCHW",
+        "C",
+        "PYPL",
+        "COF",
+        "SPGI",
+        "CME",
+        "ICE",
+        "HOOD",
+        "COIN"
       ],
-      "budget": 12879.4,
-      "invested": 9559.29,
-      "unrealized_pnl": -19.36,
+      "budget": 12821.62,
+      "invested": 9560.43,
+      "unrealized_pnl": -18.22,
       "realized_today": 5.95,
       "trades_today": 2,
       "blocked_today": 0,
@@ -232,9 +277,17 @@
         "TMO",
         "ABT",
         "AMGN",
-        "ISRG"
+        "ISRG",
+        "BMY",
+        "GILD",
+        "VRTX",
+        "REGN",
+        "CVS",
+        "MDT",
+        "DHR",
+        "HCA"
       ],
-      "budget": 12879.4,
+      "budget": 12821.62,
       "invested": 9321.65,
       "unrealized_pnl": -14.59,
       "realized_today": 25.86,
@@ -261,33 +314,48 @@
       "pnl_pct": 0.0042,
       "stop": 269.31,
       "target": 311.83,
-      "reason": "Barclays and Baird raised price target to $325 and secured reimbursement agreement for ELAHERE; bullish sentiment and price target upgrade provide a clear buying signal."
+      "reason": "Barclays and Baird raised price target to $325 and secured reimbursement agreement for ELAHERE; bullish sentiment and price target upgrade provide a clear buying signal.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "AMD",
       "team": "tech",
       "qty": 4.0,
       "entry": 545.53,
-      "price": 540.21,
-      "value": 2160.84,
-      "pnl": -21.28,
-      "pnl_pct": -0.0097,
+      "price": 537.1,
+      "value": 2148.4,
+      "pnl": -33.72,
+      "pnl_pct": -0.0155,
       "stop": 519.17,
       "target": 601.14,
-      "reason": "Susquehanna raised AMD's price target to $620 following an AI supercluster win in India. The stock is rebounding strongly (+2.28% today) out of near-oversold territory (RSI 32.9) while holding above its 50-day average."
+      "reason": "Susquehanna raised AMD's price target to $620 following an AI supercluster win in India. The stock is rebounding strongly (+2.28% today) out of near-oversold territory (RSI 32.9) while holding above its 50-day average.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "AMZN",
       "team": "consumer",
       "qty": 9.0,
       "entry": 261.89,
-      "price": 261.2,
-      "value": 2350.8,
-      "pnl": -6.24,
-      "pnl_pct": -0.0027,
+      "price": 260.47,
+      "value": 2344.23,
+      "pnl": -12.81,
+      "pnl_pct": -0.0054,
       "stop": 240.53,
       "target": 300.67,
-      "reason": "Multiple positive partnership news (AWS with 3Business, 3M stock warrant, Credera collaboration) and after\u2011hours analyst optimism, while price is modestly down 0.5% offering a better entry point."
+      "reason": "Multiple positive partnership news (AWS with 3Business, 3M stock warrant, Credera collaboration) and after\u2011hours analyst optimism, while price is modestly down 0.5% offering a better entry point.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "AXP",
@@ -300,7 +368,12 @@
       "pnl_pct": -0.0097,
       "stop": null,
       "target": null,
-      "reason": ""
+      "reason": "",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "BLK",
@@ -313,7 +386,12 @@
       "pnl_pct": 0.0094,
       "stop": null,
       "target": null,
-      "reason": ""
+      "reason": "",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "IMAX",
@@ -326,7 +404,12 @@
       "pnl_pct": -0.0004,
       "stop": null,
       "target": null,
-      "reason": ""
+      "reason": "",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "ISRG",
@@ -339,20 +422,30 @@
       "pnl_pct": -0.0097,
       "stop": null,
       "target": null,
-      "reason": ""
+      "reason": "",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "LDOS",
       "team": "defense",
       "qty": 20.0,
       "entry": 127.82,
-      "price": 129.23,
-      "value": 2584.6,
-      "pnl": 28.2,
-      "pnl_pct": 0.011,
+      "price": 128.5,
+      "value": 2570.0,
+      "pnl": 13.6,
+      "pnl_pct": 0.0053,
       "stop": 122.64,
       "target": 137.98,
-      "reason": "Secured a new $160M U.S. Cyber Command award and shows steady trend above 20-day moving average with balanced RSI (59.6), offering favorable risk/reward on contract-driven momentum."
+      "reason": "Secured a new $160M U.S. Cyber Command award and shows steady trend above 20-day moving average with balanced RSI (59.6), offering favorable risk/reward on contract-driven momentum.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "LHX",
@@ -365,20 +458,30 @@
       "pnl_pct": -0.0057,
       "stop": 231.63,
       "target": 286.42,
-      "reason": "Sentiment 0.7 and importance 5 from news on a new solid\u2011rocket\u2011motor facility; price up modestly, RSI 62 indicates room for upside. Position size within 20% budget limit."
+      "reason": "Sentiment 0.7 and importance 5 from news on a new solid\u2011rocket\u2011motor facility; price up modestly, RSI 62 indicates room for upside. Position size within 20% budget limit.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "LUNR",
       "team": "space",
       "qty": 233.0,
       "entry": 11.02,
-      "price": 10.76,
-      "value": 2507.08,
-      "pnl": -60.58,
-      "pnl_pct": -0.0236,
+      "price": 10.67,
+      "value": 2486.11,
+      "pnl": -81.55,
+      "pnl_pct": -0.0318,
       "stop": 10.48,
       "target": 12.13,
-      "reason": "LUNR rose 4.7% on sympathy with SpaceX earnings; RSI near oversold (31) and sentiment 0.7 (importance 3) give a modest\u2011conviction buy."
+      "reason": "LUNR rose 4.7% on sympathy with SpaceX earnings; RSI near oversold (31) and sentiment 0.7 (importance 3) give a modest\u2011conviction buy.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "MRK",
@@ -391,7 +494,12 @@
       "pnl_pct": 0.0016,
       "stop": 143.36,
       "target": 158.96,
-      "reason": "Clear regulatory catalyst with European Commission approval of Keytruda-Padcev combination; stock displays steady positive momentum (+0.85% from open) with a healthy RSI of 57.7."
+      "reason": "Clear regulatory catalyst with European Commission approval of Keytruda-Padcev combination; stock displays steady positive momentum (+0.85% from open) with a healthy RSI of 57.7.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "NOC",
@@ -404,111 +512,156 @@
       "pnl_pct": 0.0046,
       "stop": 519.95,
       "target": 581.91,
-      "reason": "Strong Q3 earnings beat accompanied by raised FY26 guidance and multiple analyst upgrades/PT increases (Baird to $675, Guggenheim to $640). Showing positive relative strength today (+0.88%)."
+      "reason": "Strong Q3 earnings beat accompanied by raised FY26 guidance and multiple analyst upgrades/PT increases (Baird to $675, Guggenheim to $640). Showing positive relative strength today (+0.88%).",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "NOW",
       "team": "tech",
       "qty": 16.0,
       "entry": 153.12,
-      "price": 152.65,
-      "value": 2442.4,
-      "pnl": -7.52,
-      "pnl_pct": -0.0031,
+      "price": 152.0,
+      "value": 2432.0,
+      "pnl": -17.92,
+      "pnl_pct": -0.0073,
       "stop": null,
       "target": null,
-      "reason": ""
+      "reason": "",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "NVDA",
       "team": "tech",
       "qty": 11.0,
       "entry": 220.25,
-      "price": 219.69,
-      "value": 2416.59,
-      "pnl": -6.17,
-      "pnl_pct": -0.0026,
+      "price": 218.58,
+      "value": 2404.38,
+      "pnl": -18.38,
+      "pnl_pct": -0.0076,
       "stop": 211.12,
       "target": 237.51,
-      "reason": "Multiple high-impact catalysts including Google Cloud's commitment to 960k Vera Rubin GPUs, major supply chain expansion, and enterprise AI agent partnerships with CrowdStrike and ServiceNow. Technically, the stock is turning up (+1.62% today) from an oversold RSI of 37.5."
+      "reason": "Multiple high-impact catalysts including Google Cloud's commitment to 960k Vera Rubin GPUs, major supply chain expansion, and enterprise AI agent partnerships with CrowdStrike and ServiceNow. Technically, the stock is turning up (+1.62% today) from an oversold RSI of 37.5.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "ORCL",
       "team": "tech",
       "qty": 19.0,
       "entry": 130.18,
-      "price": 127.85,
-      "value": 2429.15,
-      "pnl": -44.27,
-      "pnl_pct": -0.0179,
+      "price": 127.13,
+      "value": 2415.47,
+      "pnl": -57.95,
+      "pnl_pct": -0.0234,
       "stop": null,
       "target": null,
-      "reason": ""
+      "reason": "",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "PL",
       "team": "space",
       "qty": 188.0,
       "entry": 13.67,
-      "price": 13.6,
-      "value": 2556.8,
-      "pnl": -13.16,
-      "pnl_pct": -0.0051,
+      "price": 13.46,
+      "value": 2530.48,
+      "pnl": -39.48,
+      "pnl_pct": -0.0154,
       "stop": null,
       "target": null,
-      "reason": ""
+      "reason": "",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "QCOM",
       "team": "tech",
       "qty": 14.0,
       "entry": 178.94,
-      "price": 176.0,
-      "value": 2464.0,
-      "pnl": -41.16,
-      "pnl_pct": -0.0164,
+      "price": 174.49,
+      "value": 2442.86,
+      "pnl": -62.3,
+      "pnl_pct": -0.0249,
       "stop": null,
       "target": null,
-      "reason": ""
+      "reason": "",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "RDW",
       "team": "space",
       "qty": 300.0,
       "entry": 8.55,
-      "price": 8.47,
-      "value": 2541.0,
-      "pnl": -24.0,
-      "pnl_pct": -0.0094,
+      "price": 8.4,
+      "value": 2520.0,
+      "pnl": -45.0,
+      "pnl_pct": -0.0175,
       "stop": 8.13,
       "target": 9.41,
-      "reason": "Redwire signed an MoU with EnduroSat expanding European space\u2011infrastructure market; sentiment 0.6, importance 4 supports a solid conviction entry."
+      "reason": "Redwire signed an MoU with EnduroSat expanding European space\u2011infrastructure market; sentiment 0.6, importance 4 supports a solid conviction entry.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "RKLB",
       "team": "space",
       "qty": 48.0,
       "entry": 52.94,
-      "price": 52.54,
-      "value": 2521.92,
-      "pnl": -19.2,
-      "pnl_pct": -0.0076,
+      "price": 52.0,
+      "value": 2496.0,
+      "pnl": -45.12,
+      "pnl_pct": -0.0178,
       "stop": 50.54,
       "target": 58.52,
-      "reason": "Rocket Lab secured an $81M NASA contract to launch a spacecraft for a satellite relay demonstration, driving a strong 4.5% price increase today. The stock remains deeply oversold with an RSI of 24.5, indicating significant upside potential as the positive catalyst begins to be priced in."
+      "reason": "Rocket Lab secured an $81M NASA contract to launch a spacecraft for a satellite relay demonstration, driving a strong 4.5% price increase today. The stock remains deeply oversold with an RSI of 24.5, indicating significant upside potential as the positive catalyst begins to be priced in.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "RTX",
       "team": "defense",
       "qty": 13.0,
       "entry": 191.78,
-      "price": 191.29,
-      "value": 2486.77,
-      "pnl": -6.37,
-      "pnl_pct": -0.0026,
+      "price": 191.3,
+      "value": 2486.9,
+      "pnl": -6.24,
+      "pnl_pct": -0.0025,
       "stop": 178.33,
       "target": 214.76,
-      "reason": "Barclays and other analysts upgraded RTX, raising price target to $235; new air\u2011traffic\u2011control system and PT9 engine boost outlook. Sentiment 0.5\u20110.6, importance 3\u20114, price dipped 0.8% today, providing entry at ~191.75 within position size limit."
+      "reason": "Barclays and other analysts upgraded RTX, raising price target to $235; new air\u2011traffic\u2011control system and PT9 engine boost outlook. Sentiment 0.5\u20110.6, importance 3\u20114, price dipped 0.8% today, providing entry at ~191.75 within position size limit.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "SCHW",
@@ -521,20 +674,30 @@
       "pnl_pct": -0.0027,
       "stop": null,
       "target": null,
-      "reason": ""
+      "reason": "",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "SPCX",
       "team": "space",
       "qty": 15.0,
       "entry": 162.32,
-      "price": 156.31,
-      "value": 2344.65,
-      "pnl": -90.15,
-      "pnl_pct": -0.037,
+      "price": 156.43,
+      "value": 2346.45,
+      "pnl": -88.35,
+      "pnl_pct": -0.0363,
       "stop": 153.99,
       "target": 178.3,
-      "reason": "SpaceX surged 10% after a strong earnings beat; multiple analysts raised price targets (importance 5, sentiment 1.0) providing a high\u2011conviction entry."
+      "reason": "SpaceX surged 10% after a strong earnings beat; multiple analysts raised price targets (importance 5, sentiment 1.0) providing a high\u2011conviction entry.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "TMO",
@@ -547,20 +710,30 @@
       "pnl_pct": -0.004,
       "stop": 667.64,
       "target": 751.1,
-      "reason": "Reported a solid Q3 beat ($6.68 EPS) and raised full-year guidance, generating strong intraday demand with price rebounding +4.49% from open above both the 20-day and 50-day moving averages."
+      "reason": "Reported a solid Q3 beat ($6.68 EPS) and raised full-year guidance, generating strong intraday demand with price rebounding +4.49% from open above both the 20-day and 50-day moving averages.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     },
     {
       "symbol": "V",
       "team": "financials",
       "qty": 6.0,
       "entry": 409.48,
-      "price": 407.5,
-      "value": 2445.0,
-      "pnl": -11.88,
-      "pnl_pct": -0.0048,
+      "price": 407.69,
+      "value": 2446.14,
+      "pnl": -10.74,
+      "pnl_pct": -0.0044,
       "stop": 388.55,
       "target": 449.91,
-      "reason": ""
+      "reason": "",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
     }
   ],
   "trades_today": [
@@ -571,6 +744,7 @@
       "qty": 4.0,
       "est_price": 538.81,
       "entry_price": 537.08,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -588,6 +762,7 @@
       "qty": 20.0,
       "est_price": 127.755,
       "entry_price": 127.82,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -605,6 +780,7 @@
       "qty": 48.0,
       "est_price": 53.2,
       "entry_price": 52.94,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -622,6 +798,7 @@
       "qty": 11.0,
       "est_price": 219.92,
       "entry_price": 220.250909,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -639,6 +816,7 @@
       "qty": 4.0,
       "est_price": 546.49,
       "entry_price": 545.53,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -656,6 +834,7 @@
       "qty": 6.0,
       "est_price": 385.59,
       "entry_price": 385.58,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": "sold outside the bot",
       "pnl": null,
@@ -673,6 +852,7 @@
       "qty": 9.0,
       "est_price": 261.45,
       "entry_price": 261.893333,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -690,6 +870,7 @@
       "qty": 2.0,
       "est_price": 1137.495,
       "entry_price": 1134.92,
+      "side": "buy",
       "exit_price": 1139.03,
       "exit_reason": "manager_sell",
       "pnl": 5.95,
@@ -707,6 +888,7 @@
       "qty": 3.0,
       "est_price": 695.46,
       "entry_price": 698.78,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -724,6 +906,7 @@
       "qty": 17.0,
       "est_price": 148.56,
       "entry_price": 148.76,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -741,6 +924,7 @@
       "qty": 6.0,
       "est_price": 426.005,
       "entry_price": 427.0,
+      "side": "buy",
       "exit_price": 431.74,
       "exit_reason": "manager_sell",
       "pnl": 25.86,
@@ -758,6 +942,7 @@
       "qty": 10.0,
       "est_price": 249.06,
       "entry_price": 248.98,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -775,6 +960,7 @@
       "qty": 33.0,
       "est_price": 76.745,
       "entry_price": 76.83,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": "sold outside the bot",
       "pnl": null,
@@ -792,6 +978,7 @@
       "qty": 15.0,
       "est_price": 162.09,
       "entry_price": 162.32,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -809,6 +996,7 @@
       "qty": 300.0,
       "est_price": 8.555,
       "entry_price": 8.55,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -826,6 +1014,7 @@
       "qty": 233.0,
       "est_price": 11.03,
       "entry_price": 11.02,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -843,6 +1032,7 @@
       "qty": 6.0,
       "est_price": 409.005,
       "entry_price": 409.48,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -860,6 +1050,7 @@
       "qty": 9.0,
       "est_price": 283.48,
       "entry_price": 283.57,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -877,6 +1068,7 @@
       "qty": 13.0,
       "est_price": 191.75,
       "entry_price": 191.78,
+      "side": "buy",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
@@ -944,37 +1136,195 @@
   },
   "executives": {
     "sector": {
-      "summary": "The teams delivered a solid day with total realized gains of $31.81 and an overall unrealized profit of about $52.2. All sectors stayed within their $12,879.40 budgets, though tech and consumer have unused capacity. Financials and healthcare generated realized profits, while tech and consumer posted modest unrealized gains. No major issues arose.",
+      "summary": "The tech and consumer teams posted modest activity with two trades each but both saw negative unrealized PnL, indicating pressure on their positions. Financials realized a small gain of $5.95 on two trades, while healthcare delivered a stronger $25.86 realized profit despite a slight unrealized loss. Overall, the portfolio is under pressure with most sectors showing negative unrealized performance, though realized gains helped offset some losses.",
       "team_notes": {
-        "tech": "Tech stayed within budget, posted a modest $32.42 unrealized gain and no realized profit today.",
-        "consumer": "Consumer kept a small exposure, earned an $8.7 unrealized gain and no realized profit today.",
-        "financials": "Financials realized $5.95 profit with a $14.0 unrealized gain, staying within budget.",
-        "healthcare": "Healthcare realized $25.86 profit but saw a slight $2.92 unrealized loss, remaining within budget."
+        "tech": "Two trades were executed but the sector remains down with a $141 unrealized loss.",
+        "consumer": "Two trades were made; unrealized loss of $9 suggests the sector is slightly underperforming.",
+        "financials": "Two trades produced a $5.95 realized gain and a small unrealized loss, keeping the sector in the green.",
+        "healthcare": "Four trades yielded a $25.86 realized profit despite a $14.59 unrealized loss."
+      },
+      "escalations": [
+        "Consider reallocating budget from underperforming tech and consumer sectors to higher\u2011performing healthcare to improve overall returns."
+      ],
+      "coordination": "No overlapping tickers were identified between teams.",
+      "title": "Executive of Sector Teams"
+    },
+    "special": {
+      "summary": "The Defense team posted a modest unrealized gain of $17.49 but saw mixed trade outcomes, with strong catalyst picks like NOC and LDOS offset by weaker entries in TXT, LHX, and RTX. The Space & Aerospace team ended slightly negative with a $218.92 unrealized loss, hindered by premature entry into SPCX and tight stops on RKLB and RDW. The Entertainment team remained flat, preserving capital with a near\u2011break\u2011even IMAX position but missed trading opportunities due to inactivity. Overall, the teams stayed within budget and adhered to risk limits, though execution and catalyst timing need improvement.",
+      "team_notes": {
+        "defense": "Good catalyst selection but overtrading intraday dips hurt performance.",
+        "space": "Clear entry criteria helped, yet early exits and tight stops reduced gains.",
+        "entertainment": "Capital was preserved but lack of trades missed potential upside."
       },
       "escalations": [],
-      "coordination": "No overlapping companies were identified between teams.",
-      "title": "Executive of Sector Teams"
+      "coordination": "There are no overlapping symbols across the special teams, so no coordination conflicts.",
+      "title": "Executive of Special Teams"
     }
   },
   "reviews": {
-    "space": {
-      "what_went_well": "RKLB and RDW are already showing modest gains, confirming our oversold entry thesis.",
-      "what_went_wrong": "SPCX and LUNR were bought on sharp post\u2011earnings rallies and quickly reversed, showing we entered on fleeting momentum without a pull\u2011back confirmation.",
+    "defense": {
+      "what_went_well": "Catalyst selection on NOC (earnings beat and upgrades) and LDOS (Cyber Command contract award) proved solid, generating positive end-of-day gains.",
+      "what_went_wrong": "Entered TXT on weak, low-impact commercial jet news rather than a defense catalyst leading to a premature exit, while LHX and RTX were bought into intraday dips that continued drifting lower.",
       "lessons": [
-        "Don't buy immediately after a >5% earnings jump; wait for a pull\u2011back confirmation",
+        "Only take positions on news with an importance score of 4 or higher that directly impacts core defense programs or major contract wins, avoiding peripheral commercial PR.",
+        "Do not buy intraday dips on large-cap defense contractors without confirmed volume and price stabilization above intraday VWAP."
+      ],
+      "strategy_ideas": [
+        "Deploy an opening range breakout (ORB) strategy for LMT tomorrow morning, waiting 15 to 30 minutes after open to ride post-earnings institutional volume.",
+        "Implement an automatic 50% scale-out at 1R on contract-driven momentum plays like LDOS to lock in intraday gains against late-day mean reversion."
+      ],
+      "watchlist_changes": {
+        "add": [],
+        "remove": []
+      },
+      "watchlist": []
+    },
+    "space": {
+      "what_went_well": "We entered multiple positions with clear catalysts and set predefined bracket orders, keeping risk under control.",
+      "what_went_wrong": "We bought SPCX right after a >10% earnings jump and saw a pull\u2011back, and our stop levels were too tight on RKLB and RDW, resulting in early losses.",
+      "lessons": [
+        "Don't buy immediately after a large earnings jump; wait for a pull\u2011back confirmation",
         "Set stops based on recent volatility rather than fixed percentages",
         "Limit position size on symbols that have moved >8% intraday"
       ],
       "strategy_ideas": [
-        "Require a minimum 1% retracement after an earnings\u2011driven spike before entering",
-        "Add a multi\u2011timeframe trend filter (e.g., daily bullish bias) before taking short\u2011term momentum trades"
+        "Add trailing stops that activate after a 3% favorable move to lock in gains",
+        "Incorporate a volume\u2011spike filter for entries following earnings or contract announcements"
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "BA",
+            "reason": "Boeing earnings on Oct 27 with potential defense contract news"
+          },
+          {
+            "symbol": "ASTS",
+            "reason": "Astra Space scheduled launch this week providing catalyst"
+          },
+          {
+            "symbol": "GE",
+            "reason": "Recent analyst coverage and price\u2011target adjustments"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "TDG",
+            "reason": "No upcoming launches or contracts"
+          },
+          {
+            "symbol": "IRDM",
+            "reason": "Lack of news and low liquidity"
+          },
+          {
+            "symbol": "SATS",
+            "reason": "No near\u2011term catalyst"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-21T22:10-04:00",
+          "action": "remove_rejected",
+          "symbol": "TDG",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-21T22:10-04:00",
+          "action": "remove_rejected",
+          "symbol": "IRDM",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-21T22:10-04:00",
+          "action": "remove_rejected",
+          "symbol": "SATS",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "entertainment": {
+      "what_went_well": "We kept the IMAX long position with virtually no loss, preserving capital.",
+      "what_went_wrong": "No trades were executed today, so there were no losing trades, but the lack of activity missed potential opportunities.",
+      "lessons": [],
+      "strategy_ideas": [
+        "Implement a pre\u2011market catalyst scan to trigger entries on earnings or major news releases",
+        "Use tighter stop\u2011losses on high\u2011volatility streaming stocks after negative analyst upgrades"
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "ATVI",
+            "reason": "Activision Blizzard has upcoming game releases and earnings soon, providing catalyst for entertainment sector"
+          },
+          {
+            "symbol": "BAM",
+            "reason": "BAMTech (now part of Disney) expected to benefit from new streaming content launches"
+          },
+          {
+            "symbol": "DIS",
+            "reason": "New trailer for 'Hexed' and ticket sales indicate near\u2011term revenue boost"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "CNK",
+            "reason": "No recent news or catalyst for Cinemark"
+          },
+          {
+            "symbol": "TKO",
+            "reason": "Unclear relevance to core entertainment focus"
+          },
+          {
+            "symbol": "TTWO",
+            "reason": "Lack of upcoming releases or earnings catalyst"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-21T22:11-04:00",
+          "action": "add_rejected",
+          "symbol": "ATVI",
+          "reason": "not tradable at the broker"
+        },
+        {
+          "time": "2026-10-21T22:11-04:00",
+          "action": "removed",
+          "symbol": "CNK",
+          "reason": "No recent news or catalyst for Cinemark",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-21T22:11-04:00",
+          "action": "remove_rejected",
+          "symbol": "TKO",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-21T22:11-04:00",
+          "action": "remove_rejected",
+          "symbol": "TTWO",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-21T22:11-04:00",
+          "action": "added",
+          "symbol": "BAM",
+          "reason": "BAMTech (now part of Disney) expected to benefit from new streaming content launches",
+          "by": "evening review"
+        }
       ]
     }
   },
   "lessons": {
-    "defense": [],
+    "defense": [
+      "2026-10-21: Only take positions on news with an importance score of 4 or higher that directly impacts core defense programs or major contract wins, avoiding peripheral commercial PR.",
+      "2026-10-21: Do not buy intraday dips on large-cap defense contractors without confirmed volume and price stabilization above intraday VWAP."
+    ],
     "space": [
-      "2026-10-21: Don't buy immediately after a >5% earnings jump; wait for a pull\u2011back confirmation",
+      "2026-10-21: Set stops based on recent volatility rather than fixed percentages",
+      "2026-10-21: Limit position size on symbols that have moved >8% intraday",
+      "2026-10-21: Don't buy immediately after a large earnings jump; wait for a pull\u2011back confirmation",
       "2026-10-21: Set stops based on recent volatility rather than fixed percentages",
       "2026-10-21: Limit position size on symbols that have moved >8% intraday"
     ],
@@ -1516,8 +1866,39 @@
       ]
     },
     "political_and_social_media": {
-      "overall": "Recent posts consist entirely of routine Get Out The Vote (GOTV) campaign messaging and local rally coverage ahead of elections, with no market-moving policy, regulatory, or corporate commentary.",
-      "findings": []
+      "overall": "Political rhetoric about Russia sanctions is raising caution, but without concrete policy moves markets remain wary and focused on defense and aerospace sectors.",
+      "findings": [
+        {
+          "source": "Truth Social @realDonaldTrump",
+          "post": "Trump says sanctions on Russia were delayed, allowing his negotiation for Stephen Hubbard's release; sanctions would have halted the deal",
+          "market_wide": false,
+          "affected": [
+            "LMT",
+            "RTX",
+            "NOC",
+            "GD",
+            "LHX",
+            "HII",
+            "LDOS",
+            "TXT",
+            "KTOS",
+            "AVAV",
+            "BA",
+            "RKLB",
+            "LUNR",
+            "ASTS",
+            "PL",
+            "RDW",
+            "GE",
+            "HWM",
+            "TDG"
+          ],
+          "sentiment": -0.2,
+          "importance": 3,
+          "why": "The mention of delayed sanctions against Russia suggests heightened geopolitical tension, which could boost defense and aerospace contractors as governments may increase spending on military and space capabilities.",
+          "seen_at": "2026-10-21T18:32-04:00"
+        }
+      ]
     }
   },
   "market_watch": {
@@ -1557,8 +1938,222 @@
       }
     ]
   },
+  "calendar": {
+    "time": "2026-10-21T23:17-04:00",
+    "earnings": [
+      {
+        "date": "2026-10-21",
+        "symbol": "TSLA",
+        "when": "after the close",
+        "eps_forecast": "$0.22",
+        "last_year_eps": "$0.37",
+        "team": "consumer"
+      },
+      {
+        "date": "2026-10-21",
+        "symbol": "TMO",
+        "when": "before the open",
+        "eps_forecast": "$6.40",
+        "last_year_eps": "$5.79",
+        "team": "healthcare"
+      },
+      {
+        "date": "2026-10-21",
+        "symbol": "TXN",
+        "when": "after the close",
+        "eps_forecast": "$2.40",
+        "last_year_eps": "$1.48",
+        "team": "tech"
+      },
+      {
+        "date": "2026-10-21",
+        "symbol": "IBM",
+        "when": "after the close",
+        "eps_forecast": "$2.88",
+        "last_year_eps": "$2.65",
+        "team": "tech"
+      },
+      {
+        "date": "2026-10-21",
+        "symbol": "ABT",
+        "when": "before the open",
+        "eps_forecast": "$1.43",
+        "last_year_eps": "$1.30",
+        "team": "healthcare"
+      },
+      {
+        "date": "2026-10-21",
+        "symbol": "DHR",
+        "when": "before the open",
+        "eps_forecast": "$1.92",
+        "last_year_eps": "$1.89",
+        "team": "healthcare"
+      },
+      {
+        "date": "2026-10-21",
+        "symbol": "CME",
+        "when": "before the open",
+        "eps_forecast": "$2.98",
+        "last_year_eps": "$2.68",
+        "team": "financials"
+      },
+      {
+        "date": "2026-10-21",
+        "symbol": "CACI",
+        "when": "after the close",
+        "eps_forecast": "$6.45",
+        "last_year_eps": "$6.85",
+        "team": "defense"
+      },
+      {
+        "date": "2026-10-22",
+        "symbol": "LMT",
+        "when": "before the open",
+        "eps_forecast": "$7.49",
+        "last_year_eps": "$6.95",
+        "team": "defense"
+      },
+      {
+        "date": "2026-10-22",
+        "symbol": "SPOT",
+        "when": "before the open",
+        "eps_forecast": "$3.10",
+        "last_year_eps": "$3.83",
+        "team": "entertainment"
+      },
+      {
+        "date": "2026-10-22",
+        "symbol": "CMCSA",
+        "when": "before the open",
+        "eps_forecast": "$0.98",
+        "last_year_eps": "$1.12",
+        "team": "entertainment"
+      },
+      {
+        "date": "2026-10-23",
+        "symbol": "AXP",
+        "when": "before the open",
+        "eps_forecast": "$4.47",
+        "last_year_eps": "$4.14",
+        "team": "financials"
+      },
+      {
+        "date": "2026-10-23",
+        "symbol": "BAH",
+        "when": "before the open",
+        "eps_forecast": "$1.44",
+        "last_year_eps": "$1.49",
+        "team": "defense"
+      },
+      {
+        "date": "2026-10-27",
+        "symbol": "V",
+        "when": "after the close",
+        "eps_forecast": "$3.43",
+        "last_year_eps": "$2.98",
+        "team": "financials"
+      },
+      {
+        "date": "2026-10-27",
+        "symbol": "BA",
+        "when": "before the open",
+        "eps_forecast": "($0.21)",
+        "last_year_eps": "($7.47)",
+        "team": "space"
+      },
+      {
+        "date": "2026-10-27",
+        "symbol": "SPGI",
+        "when": "before the open",
+        "eps_forecast": "$4.43",
+        "last_year_eps": "$4.73",
+        "team": "financials"
+      },
+      {
+        "date": "2026-10-27",
+        "symbol": "HCA",
+        "when": "before the open",
+        "eps_forecast": "$6.75",
+        "last_year_eps": "$6.96",
+        "team": "healthcare"
+      },
+      {
+        "date": "2026-10-27",
+        "symbol": "HOOD",
+        "when": "after the close",
+        "eps_forecast": "$0.55",
+        "last_year_eps": "$0.61",
+        "team": "financials"
+      },
+      {
+        "date": "2026-10-27",
+        "symbol": "RCL",
+        "when": "before the open",
+        "eps_forecast": "$6.37",
+        "last_year_eps": "$5.75",
+        "team": "consumer"
+      },
+      {
+        "date": "2026-10-27",
+        "symbol": "PYPL",
+        "when": "before the open",
+        "eps_forecast": "$1.31",
+        "last_year_eps": "$1.34",
+        "team": "financials"
+      }
+    ],
+    "economy": [
+      {
+        "time": "Thu Oct 22 08:30 AM ET",
+        "event": "Unemployment Claims",
+        "impact": "Medium",
+        "forecast": "200K",
+        "previous": "199K"
+      },
+      {
+        "time": "Fri Oct 23 09:45 AM ET",
+        "event": "Flash Manufacturing PMI",
+        "impact": "Medium",
+        "forecast": "55.4",
+        "previous": "57.0"
+      },
+      {
+        "time": "Fri Oct 23 09:45 AM ET",
+        "event": "Flash Services PMI",
+        "impact": "Medium",
+        "forecast": "57.9",
+        "previous": "58.7"
+      },
+      {
+        "time": "Fri Oct 23 10:00 AM ET",
+        "event": "Revised UoM Consumer Sentiment",
+        "impact": "Medium",
+        "forecast": "46.3",
+        "previous": "46.3"
+      },
+      {
+        "time": "Fri Oct 23 10:00 AM ET",
+        "event": "Revised UoM Inflation Expectations",
+        "impact": "Medium",
+        "forecast": null,
+        "previous": "4.7%"
+      }
+    ]
+  },
+  "scorecard": {},
+  "mood": {},
+  "premarket": {},
   "overnight": {
     "defense": [
+      {
+        "symbol": "PLTR",
+        "sentiment": -0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Ark Invest trimmed its Palantir stake, indicating selling pressure.",
+        "source": "benzinga",
+        "seen_at": "2026-10-21T22:32-04:00"
+      },
       {
         "symbol": "NOC",
         "sentiment": 0.8,
@@ -1621,15 +2216,6 @@
         "summary": "RTX's Pratt & Whitney Canada unveiled the PT9 turboprop engine, promising higher power and fuel efficiency, which could boost its aerospace and defense offerings.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-21T07:39-04:00"
-      },
-      {
-        "symbol": "NOC",
-        "sentiment": 0.6,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Baird upgraded Northrop Grumman to Outperform with a $675 price target.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-21T06:39-04:00"
       }
     ],
     "space": [
@@ -1708,6 +2294,33 @@
     ],
     "entertainment": [
       {
+        "symbol": "CMCSA",
+        "sentiment": -0.2,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Comcast is planning significant job cuts as part of a broader cable, broadband and wireless restructuring.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-21T22:20-04:00"
+      },
+      {
+        "symbol": "TKO",
+        "sentiment": 0.4,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "BTIG analyst Tyler DiMatteo maintains a bullish rating and a $237 price target for TKO Group Holdings.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-21T22:20-04:00"
+      },
+      {
+        "symbol": "BAM",
+        "sentiment": 0.0,
+        "importance": 1,
+        "unconfirmed_rumor": false,
+        "summary": "Brookfield partners with The Nuclear Company on the 'Prosperity One' nuclear project, unrelated to its entertainment assets.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-21T22:20-04:00"
+      },
+      {
         "symbol": "DIS",
         "sentiment": 0.3,
         "importance": 3,
@@ -1751,33 +2364,6 @@
         "summary": "Netflix shares fell to a 52\u2011week low after weak Q4 guidance despite a Q3 earnings beat.",
         "source": "benzinga",
         "seen_at": "2026-10-21T08:24-04:00"
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": -0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Analyst downgrades include Netflix, adding to the negative sentiment around the stock.",
-        "source": "benzinga",
-        "seen_at": "2026-10-21T08:24-04:00"
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": -0.8,
-        "importance": 5,
-        "unconfirmed_rumor": false,
-        "summary": "Netflix fell ~6-7% pre\u2011market after mixed Q3 results and weaker-than\u2011expected guidance.",
-        "source": "benzinga",
-        "seen_at": "2026-10-21T08:09-04:00"
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": -0.4,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Rosenblatt keeps a neutral rating on Netflix and cuts its price target to $71.",
-        "source": "Benzinga",
-        "seen_at": "2026-10-21T07:54-04:00"
       }
     ],
     "tech": [
@@ -2089,6 +2675,11 @@
           "qty": 4.0,
           "dollars": 2155.24,
           "est_price": 538.81,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 537.08,
           "exit_price": null,
           "exit_time": null,
@@ -2111,6 +2702,11 @@
           "qty": 20.0,
           "dollars": 2555.1,
           "est_price": 127.755,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 127.82,
           "exit_price": null,
           "exit_time": null,
@@ -2133,6 +2729,11 @@
           "qty": 10.0,
           "dollars": 2490.6,
           "est_price": 249.06,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 248.98,
           "exit_price": null,
           "exit_time": null,
@@ -2155,6 +2756,11 @@
           "qty": 33.0,
           "dollars": 2532.59,
           "est_price": 76.745,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 76.83,
           "exit_price": null,
           "exit_time": "2026-10-21T16:30:29.788920-04:00",
@@ -2177,6 +2783,11 @@
           "qty": 13.0,
           "dollars": 2492.75,
           "est_price": 191.75,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 191.78,
           "exit_price": null,
           "exit_time": null,
@@ -2272,10 +2883,68 @@
           ]
         }
       ],
-      "lessons": [],
-      "ideas": {},
+      "lessons": [
+        {
+          "date": "2026-10-21",
+          "lesson": "Only take positions on news with an importance score of 4 or higher that directly impacts core defense programs or major contract wins, avoiding peripheral commercial PR."
+        },
+        {
+          "date": "2026-10-21",
+          "lesson": "Do not buy intraday dips on large-cap defense contractors without confirmed volume and price stabilization above intraday VWAP."
+        }
+      ],
+      "ideas": {
+        "date": "2026-10-21",
+        "strategy_ideas": [
+          "Deploy an opening range breakout (ORB) strategy for LMT tomorrow morning, waiting 15 to 30 minutes after open to ride post-earnings institutional volume.",
+          "Implement an automatic 50% scale-out at 1R on contract-driven momentum plays like LDOS to lock in intraday gains against late-day mean reversion."
+        ]
+      },
       "reviews": [],
       "pnl_days": [],
+      "watchlist": {
+        "symbols": [
+          "LMT",
+          "RTX",
+          "NOC",
+          "GD",
+          "LHX",
+          "HII",
+          "LDOS",
+          "TXT",
+          "KTOS",
+          "AVAV",
+          "PLTR",
+          "BAH",
+          "CACI",
+          "SAIC",
+          "HEI",
+          "CW",
+          "MRCY"
+        ],
+        "seed": [
+          "LMT",
+          "RTX",
+          "NOC",
+          "GD",
+          "LHX",
+          "HII",
+          "LDOS",
+          "TXT",
+          "KTOS",
+          "AVAV",
+          "PLTR",
+          "BAH",
+          "CACI",
+          "SAIC",
+          "HEI",
+          "CW",
+          "MRCY"
+        ],
+        "log": [],
+        "rejected": [],
+        "updated": "2026-10-21T22:08-04:00"
+      },
       "research": {
         "time": "2026-10-21T10:48-04:00",
         "news": {
@@ -2481,6 +3150,15 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "PLTR",
+            "sentiment": -0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Ark Invest trimmed its Palantir stake, indicating selling pressure.",
+            "source": "benzinga",
+            "seen_at": "2026-10-21T22:32-04:00"
+          },
           {
             "symbol": "NOC",
             "sentiment": 0.8,
@@ -2714,6 +3392,11 @@
           "qty": 48.0,
           "dollars": 2553.6,
           "est_price": 53.2,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 52.94,
           "exit_price": null,
           "exit_time": null,
@@ -2736,6 +3419,11 @@
           "qty": 15.0,
           "dollars": 2431.35,
           "est_price": 162.09,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 162.32,
           "exit_price": null,
           "exit_time": null,
@@ -2758,6 +3446,11 @@
           "qty": 300.0,
           "dollars": 2566.5,
           "est_price": 8.555,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 8.55,
           "exit_price": null,
           "exit_time": null,
@@ -2780,6 +3473,11 @@
           "qty": 233.0,
           "dollars": 2569.99,
           "est_price": 11.03,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 11.02,
           "exit_price": null,
           "exit_time": null,
@@ -2867,17 +3565,87 @@
         {
           "date": "2026-10-21",
           "lesson": "Limit position size on symbols that have moved >8% intraday"
+        },
+        {
+          "date": "2026-10-21",
+          "lesson": "Don't buy immediately after a large earnings jump; wait for a pull\u2011back confirmation"
+        },
+        {
+          "date": "2026-10-21",
+          "lesson": "Set stops based on recent volatility rather than fixed percentages"
+        },
+        {
+          "date": "2026-10-21",
+          "lesson": "Limit position size on symbols that have moved >8% intraday"
         }
       ],
       "ideas": {
         "date": "2026-10-21",
         "strategy_ideas": [
-          "Require a minimum 1% retracement after an earnings\u2011driven spike before entering",
-          "Add a multi\u2011timeframe trend filter (e.g., daily bullish bias) before taking short\u2011term momentum trades"
+          "Add trailing stops that activate after a 3% favorable move to lock in gains",
+          "Incorporate a volume\u2011spike filter for entries following earnings or contract announcements"
         ]
       },
       "reviews": [],
       "pnl_days": [],
+      "watchlist": {
+        "symbols": [
+          "SPCX",
+          "BA",
+          "RKLB",
+          "LUNR",
+          "ASTS",
+          "PL",
+          "RDW",
+          "GE",
+          "HWM",
+          "TDG",
+          "BKSY",
+          "IRDM",
+          "VSAT",
+          "SATS",
+          "FLY"
+        ],
+        "seed": [
+          "SPCX",
+          "BA",
+          "RKLB",
+          "LUNR",
+          "ASTS",
+          "PL",
+          "RDW",
+          "GE",
+          "HWM",
+          "TDG",
+          "BKSY",
+          "IRDM",
+          "VSAT",
+          "SATS",
+          "FLY"
+        ],
+        "log": [],
+        "rejected": [
+          {
+            "time": "2026-10-21T22:10-04:00",
+            "action": "remove_rejected",
+            "symbol": "TDG",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-21T22:10-04:00",
+            "action": "remove_rejected",
+            "symbol": "IRDM",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-21T22:10-04:00",
+            "action": "remove_rejected",
+            "symbol": "SATS",
+            "reason": "list would drop below 15 stocks"
+          }
+        ],
+        "updated": "2026-10-21T22:10-04:00"
+      },
       "research": {
         "time": "2026-10-21T10:48-04:00",
         "news": {
@@ -3485,9 +4253,88 @@
         }
       ],
       "lessons": [],
-      "ideas": {},
+      "ideas": {
+        "date": "2026-10-21",
+        "strategy_ideas": [
+          "Implement a pre\u2011market catalyst scan to trigger entries on earnings or major news releases",
+          "Use tighter stop\u2011losses on high\u2011volatility streaming stocks after negative analyst upgrades"
+        ]
+      },
       "reviews": [],
       "pnl_days": [],
+      "watchlist": {
+        "symbols": [
+          "DIS",
+          "NFLX",
+          "SPOT",
+          "WMG",
+          "LYV",
+          "ROKU",
+          "IMAX",
+          "SONY",
+          "WBD",
+          "FOXA",
+          "CMCSA",
+          "TKO",
+          "EA",
+          "TTWO",
+          "BAM"
+        ],
+        "seed": [
+          "DIS",
+          "NFLX",
+          "SPOT",
+          "WMG",
+          "LYV",
+          "ROKU",
+          "CNK",
+          "IMAX",
+          "SONY",
+          "WBD",
+          "FOXA",
+          "CMCSA",
+          "TKO",
+          "EA",
+          "TTWO"
+        ],
+        "log": [
+          {
+            "time": "2026-10-21T22:11-04:00",
+            "action": "removed",
+            "symbol": "CNK",
+            "reason": "No recent news or catalyst for Cinemark",
+            "by": "evening review"
+          },
+          {
+            "time": "2026-10-21T22:11-04:00",
+            "action": "added",
+            "symbol": "BAM",
+            "reason": "BAMTech (now part of Disney) expected to benefit from new streaming content launches",
+            "by": "evening review"
+          }
+        ],
+        "rejected": [
+          {
+            "time": "2026-10-21T22:11-04:00",
+            "action": "add_rejected",
+            "symbol": "ATVI",
+            "reason": "not tradable at the broker"
+          },
+          {
+            "time": "2026-10-21T22:11-04:00",
+            "action": "remove_rejected",
+            "symbol": "TKO",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-21T22:11-04:00",
+            "action": "remove_rejected",
+            "symbol": "TTWO",
+            "reason": "list would drop below 15 stocks"
+          }
+        ],
+        "updated": "2026-10-21T22:11-04:00"
+      },
       "research": {
         "time": "2026-10-21T10:48-04:00",
         "news": {
@@ -3572,6 +4419,33 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "CMCSA",
+            "sentiment": -0.2,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Comcast is planning significant job cuts as part of a broader cable, broadband and wireless restructuring.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-21T22:20-04:00"
+          },
+          {
+            "symbol": "TKO",
+            "sentiment": 0.4,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "BTIG analyst Tyler DiMatteo maintains a bullish rating and a $237 price target for TKO Group Holdings.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-21T22:20-04:00"
+          },
+          {
+            "symbol": "BAM",
+            "sentiment": 0.0,
+            "importance": 1,
+            "unconfirmed_rumor": false,
+            "summary": "Brookfield partners with The Nuclear Company on the 'Prosperity One' nuclear project, unrelated to its entertainment assets.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-21T22:20-04:00"
+          },
           {
             "symbol": "DIS",
             "sentiment": 0.3,
@@ -3840,6 +4714,11 @@
           "qty": 11.0,
           "dollars": 2419.12,
           "est_price": 219.92,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 220.250909,
           "exit_price": null,
           "exit_time": null,
@@ -3862,6 +4741,11 @@
           "qty": 4.0,
           "dollars": 2185.96,
           "est_price": 546.49,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 545.53,
           "exit_price": null,
           "exit_time": null,
@@ -3921,6 +4805,7 @@
       "ideas": {},
       "reviews": [],
       "pnl_days": [],
+      "watchlist": {},
       "research": {
         "time": "2026-10-21T10:49-04:00",
         "news": {
@@ -4545,6 +5430,11 @@
           "qty": 6.0,
           "dollars": 2313.54,
           "est_price": 385.59,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 385.58,
           "exit_price": null,
           "exit_time": "2026-10-21T16:30:28.608947-04:00",
@@ -4567,6 +5457,11 @@
           "qty": 9.0,
           "dollars": 2353.05,
           "est_price": 261.45,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 261.893333,
           "exit_price": null,
           "exit_time": null,
@@ -4626,6 +5521,7 @@
       "ideas": {},
       "reviews": [],
       "pnl_days": [],
+      "watchlist": {},
       "research": {
         "time": "2026-10-21T10:49-04:00",
         "news": {
@@ -5013,6 +5909,11 @@
           "qty": 2.0,
           "dollars": 2274.99,
           "est_price": 1137.495,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 1134.92,
           "exit_price": 1139.03,
           "exit_time": "2026-10-21T15:30:09.361143145Z",
@@ -5035,6 +5936,11 @@
           "qty": 6.0,
           "dollars": 2454.03,
           "est_price": 409.005,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 409.48,
           "exit_price": null,
           "exit_time": null,
@@ -5111,6 +6017,7 @@
           "cum": 5.95
         }
       ],
+      "watchlist": {},
       "research": {
         "time": "2026-10-21T10:50-04:00",
         "news": {
@@ -5489,6 +6396,11 @@
           "qty": 3.0,
           "dollars": 2086.38,
           "est_price": 695.46,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 698.78,
           "exit_price": null,
           "exit_time": null,
@@ -5511,6 +6423,11 @@
           "qty": 17.0,
           "dollars": 2525.52,
           "est_price": 148.56,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 148.76,
           "exit_price": null,
           "exit_time": null,
@@ -5533,6 +6450,11 @@
           "qty": 6.0,
           "dollars": 2556.03,
           "est_price": 426.005,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 427.0,
           "exit_price": 431.74,
           "exit_time": "2026-10-21T15:41:36.196947233Z",
@@ -5555,6 +6477,11 @@
           "qty": 9.0,
           "dollars": 2551.32,
           "est_price": 283.48,
+          "setup": null,
+          "side": "buy",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
           "entry_price": 283.57,
           "exit_price": null,
           "exit_time": null,
@@ -5660,6 +6587,7 @@
           "cum": 25.86
         }
       ],
+      "watchlist": {},
       "research": {
         "time": "2026-10-21T10:51-04:00",
         "news": {
