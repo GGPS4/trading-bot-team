@@ -19,7 +19,8 @@ import time
 from bots import journal
 from bots.common import ET, STATE, log, now_et, read_json, settings, today, write_json
 from bots.executive import build_org, evening_summary, orders_for_team
-from bots.investor import _sell, check_software_stops, execute
+from bots.investor import _sell, execute
+from bots import exits, mood, premarket
 from bots.manager import plan as manager_plan, recent_lessons, review as manager_review
 from bots.president import decide, load_strategy, normalize_allocations
 from bots.reporter import daily_report, snapshot, with_baseline, write_dashboard
@@ -76,9 +77,19 @@ def log_plan(tid, trigger, plan, results):
 
 
 def team_holdings(positions, owner_of, team_id):
-    return [{"symbol": p["symbol"], "qty": p["qty"], "entry": p["avg_entry_price"],
-             "price": p["current_price"], "pnl_pct": p["unrealized_plpc"]}
-            for p in positions if owner_of.get(p["symbol"]) == team_id]
+    """What the team holds, with its exit plan (stop, first target, trailing / scaled-out state)."""
+    plan = {e["symbol"]: e for e in journal.load() if e["status"] == "open"}
+    out = []
+    for p in positions:
+        if owner_of.get(p["symbol"]) != team_id:
+            continue
+        e = plan.get(p["symbol"], {})
+        out.append({"symbol": p["symbol"], "side": "short" if float(p["qty"]) < 0 else "long",
+                    "qty": abs(float(p["qty"])), "entry": p["avg_entry_price"], "price": p["current_price"],
+                    "pnl_pct": p["unrealized_plpc"], "stop": e.get("stop_price"),
+                    "first_target": e.get("take_profit_price"), "trailing": bool(e.get("trail_active")),
+                    "scaled_out": bool(e.get("scaled")), "bought_at": e.get("time"), "setup": e.get("setup")})
+    return out
 
 
 def worth_a_midday_look(research, holdings):
@@ -99,7 +110,7 @@ def trading_cycle(ctx: Ctx, phase: str, force: bool):
     positions = b.positions()
     all_symbols = sorted(set(ctx.owner_of) | {p["symbol"] for p in positions})
     prices = b.latest_prices(all_symbols)
-    stopped = check_software_stops(b, prices, ctx.paused, market_open)
+    stopped = exits.manage(b, prices, ctx.paused, market_open)
     if stopped:
         positions = b.positions()
 
@@ -269,6 +280,17 @@ def session(ctx: Ctx, until: str, force: bool):
     disc, last_disc = {}, 0.0
     cal, blackouts, last_cal = {}, [], 0.0
     card = scorecard.build()
+    pm = premarket.latest()
+    mood_now, regime = {}, None
+    exit_every = max(15, ctx.cfg.get("exits", {}).get("check_every_seconds", 60))
+
+    def exit_pass():  # between manager looks: trailing stops, scale-outs, stop checks (no AI)
+        try:
+            held = [p["symbol"] for p in b.positions()]
+            if held:
+                exits.manage(b, b.latest_prices(held), ctx.paused, True)
+        except Exception as e:
+            log(f"Exit check failed: {e}")
 
     # 2. full research at the start of the session
     research, seen = {}, load_seen()
@@ -295,11 +317,15 @@ def session(ctx: Ctx, until: str, force: bool):
         try:
             journal.sync(b)
             positions = b.positions()
-            all_symbols = sorted(set(ctx.owner_of) | {p["symbol"] for p in positions})
+            all_symbols = sorted(set(ctx.owner_of) | {p["symbol"] for p in positions} | set(mood.SYMBOLS))
             snaps = b.snapshots(all_symbols)
             prices = {s: v["price"] for s, v in snaps.items()}
-            if check_software_stops(b, prices, ctx.paused, is_open):
+            if exits.manage(b, prices, ctx.paused, is_open):
                 positions = b.positions()
+            mood_now = mood.compute(snaps, list(ctx.owner_of))
+            if mood_now["regime"] != regime:
+                log(f"Market mood: {mood_now['regime']} ({mood_now['why']})")
+                regime = mood_now["regime"]
 
             n = now_et()
             mins_left = 16 * 60 - (n.hour * 60 + n.minute)
@@ -318,6 +344,7 @@ def session(ctx: Ctx, until: str, force: bool):
             desk = RiskDesk(ctx.limits, with_baseline(b.account()), ctx.capital, positions, ctx.owner_of, ctx.budgets,
                             trades_today, is_open, ctx.paused or closed_for_day,
                             no_buys_after=cfg.get("no_new_buys_after"), blackouts=blackouts)
+            desk.mood = mood_now
 
             refresh_social = time.time() - last_social > 2 * 3600
             if time.time() - last_disc >= 600:  # what's moving across the whole market
@@ -363,6 +390,7 @@ def session(ctx: Ctx, until: str, force: bool):
                     due = time.time() - last_plan[tid] >= replan
                     gap = desk.deploy_gap(tid)
                     under = (gap >= 0.05 * ctx.budgets[tid] and not desk.past_buy_cutoff()
+                             and desk.team_open_count(tid) < ctx.limits["max_open_positions_per_team"]
                              and time.time() - last_plan[tid] >= 600)  # at most every 10 min
                     if closed_for_day or not (due or (new and urgent) or moved or hot_posts or under):
                         continue
@@ -381,13 +409,16 @@ def session(ctx: Ctx, until: str, force: bool):
                     r["discovery"] = watchlist.for_team(disc, tid)
                     r["calendar"] = events.for_team(cal, tid)
                     r["scorecard"] = scorecard.for_manager(card, tid)
+                    r["mood"] = mood_now
+                    r["premarket"] = premarket.for_team(pm, tid)
                     intraday.add_to_view(r["intraday"], get_signals())
                     p = manager_plan(ctx.llm, team, orders, r, holdings, "intraday")
                     last_plan[tid] = time.time()
                     last_plan_prices[tid] = {s: snaps[s]["price"] for s in team["tickers"] if s in snaps}
                     write_json(STATE / "plans" / f"{tid}.json",
                                {"date": today(), "time": now_et().strftime("%H:%M"), "trigger": why, **p})
-                    results = execute(b, desk, team, p, prices)
+                    vol = {sym: v.get("daily_volatility") for sym, v in (r.get("technicals") or {}).items()}
+                    results = execute(b, desk, team, p, prices, vol)
                     wl = watchlist.apply_changes(b, ctx.org, ctx.owner_of, tid, p.get("watchlist_changes"),
                                                  {x["symbol"] for x in b.positions()})
                     for c in wl:
@@ -416,7 +447,13 @@ def session(ctx: Ctx, until: str, force: bool):
             last_save, traded = time.time(), False
         if fake and ticks >= int(os.environ.get("BOT_FAKE_TICKS", "3")):
             break
-        time.sleep(0 if fake else max(5, every - (time.time() - started)))
+        while not fake and now_et() < end:  # until the next look: check exits about once a minute
+            left = every - (time.time() - started)
+            if left <= 5:
+                break
+            time.sleep(min(exit_every, left))
+            if not closed_for_day:
+                exit_pass()
 
     write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
     save_progress(f"Bot team: session end {now_et():%Y-%m-%d %H:%M}")
@@ -441,6 +478,15 @@ def watch(ctx: Ctx, minutes: int):
                 break
         except Exception:
             pass
+        n = now_et()
+        scan_from = ctx.cfg.get("premarket", {}).get("scan_from", "08:00")
+        if (n.hour, n.minute) >= tuple(int(x) for x in scan_from.split(":")) and (n.hour, n.minute) < (9, 30):
+            try:
+                if fake or b.is_trading_day(today()):
+                    premarket.scan(b, ctx.org)
+                    last_save = 0  # put the scan on the dashboard right away
+            except Exception as e:
+                log(f"Pre-market scan failed: {e}")
         try:
             market_watch.check(ctx.llm, ctx.org)
         except Exception as e:

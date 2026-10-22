@@ -50,6 +50,16 @@ The bots stop making new AI decisions after `max_ai_calls_per_day`, to stay in G
 - **Safety still comes first:** the 3% daily loss limit and the 10% cash reserve override the 75% rule.
 - **Watch 15-20, hold 5:** each team watches 15-20 stocks (`watchlist` in settings) and holds at most 5 at a time. The starter lists are in `config/teams.yaml`. During the day, managers add names that are in the news, moving unusually or trading heavy volume (using Alpaca's market-wide top movers, most-active list and headlines), and drop names that have gone quiet. The evening review sets up the next day's list from after-hours news. Code enforces the limits: at most 3 changes per look, real and tradable stocks over $5 only, one team per stock, and held stocks can't be dropped. The live lists and every change are on each team's **Watchlist** tab.
 
+## How trades are entered and exited
+
+- **Long and short:** managers can BUY (profit if the price rises) or SHORT (profit if it falls; whole shares of easy-to-borrow stocks, at most half a team's budget). SELL closes a long, COVER closes a short.
+- **Size by volatility:** each trade risks about 0.4% of the team budget if its stop is hit. Stops are at least 35% of the stock's typical daily move, so jumpy stocks get wider stops and smaller positions (`sizing`).
+- **Protective stops at the broker:** whole-share positions keep a real stop order at Alpaca. Fractional positions are watched by code about once a minute.
+- **Scale out:** at the first target, half the position is sold and the stop on the rest moves to the entry price (`exits`).
+- **Trailing stop:** once a trade is up 1%, the stop follows the best price 0.8% behind and only moves in the trade's favor.
+- **Market mood** (`bots/mood.py`): SPY, QQQ, the VIXY fear gauge and breadth set the regime. *Caution* makes longs 25% smaller. *Risk-off* makes longs half size, requires conviction +1, and favors shorts.
+- **Pre-market scan** (`bots/premarket.py`): from 8:00 AM ET, stocks gapping 2%+ on the watchlists (and 3%+ ones in the overnight news) go to the managers' first look and to the Research page.
+
 ## What the managers see
 
 - **Day-trading signals** (`bots/intraday.py`), from today's 5-minute bars: VWAP and distance from it, the opening range (first 30 min) with breakout/breakdown flags, 15- and 60-minute momentum, the short-term trend, and relative volume (today vs a normal day at this hour).
