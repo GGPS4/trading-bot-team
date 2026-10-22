@@ -1,106 +1,55 @@
 {
   "date": "2026-10-22",
-  "time": "12:47",
+  "time": "13:21",
   "trigger": "scheduled look",
-  "market_view": "Market is in risk-off: SPY -1.2%, QQQ -2.4%, index down ~2.4%, VIXY +4.5%. Consumer discretionary breadth is mixed but momentum is weak. I favor shorting breakdowns below VWAP or the opening range in this environment, while longs require strong relative strength and are half size.",
-  "decisions": [
-    {
-      "symbol": "DPZ",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0163,
-      "take_profit_pct": 0.0287,
-      "setup": "momentum",
-      "reason": "Stalled opening-range breakout with weak follow-through (look -0.5%, m60 -0.5%, rvol 0.42); risk-off favors avoiding weak longs."
-    },
-    {
-      "symbol": "LULU",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0168,
-      "take_profit_pct": 0.0232,
-      "setup": "news catalyst",
-      "reason": "Fading momentum and negative Lululemon settlement news; exit long."
-    },
-    {
-      "symbol": "CMG",
-      "action": "SHORT",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Breakdown below opening range and VWAP, weak trend, risk-off; short weakness."
-    },
-    {
-      "symbol": "BKNG",
-      "action": "SHORT",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Breakdown below opening range/VWAP with weak momentum and risk-off; short despite BTIG headline."
-    }
-  ],
+  "decisions": [],
   "ranked_ideas": [
     {
-      "symbol": "MAR",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Breakdown below opening range with high volume; risk-off favors momentum shorts."
+      "symbol": "LULU",
+      "side": "long",
+      "conviction": 4,
+      "setup": "opening range breakout",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reasoning": "Strongest relative strength on the list (+4.7% day, +5.5% off open) with a clear opening range breakout and price holding above VWAP. In a risk-off market, buying relative strength is the preferred strategy. The legal news is a minor negative but the price action is dominant."
     },
     {
-      "symbol": "MCD",
-      "direction": "long",
+      "symbol": "LOW",
+      "side": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above VWAP and uptrend; but low rvol, risk-off half size."
+      "setup": "momentum",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reasoning": "Home Depot and Lowe's are showing strong momentum (+3.1% day) with high relative volume (1.9). Price is above VWAP and broke the opening range. This is a defensive consumer discretionary play that is outperforming the broader market."
     },
     {
       "symbol": "NKE",
-      "direction": "long",
+      "side": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "Barclays PT raise and OR breakout; low rvol, risk-off half size."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reasoning": "Despite the 'underperform' rating, the stock is up +2.0% and broke the opening range. Price is above VWAP. The conflicting analyst notes (Barclays overweight) suggest the negative news is being absorbed. Momentum is key here."
     },
     {
-      "symbol": "SBUX",
-      "direction": "long",
+      "symbol": "HD",
+      "side": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "OR breakout but low rvol; mild continuation setup."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reasoning": "Already held, but if I were to open a new position, this would be a top candidate. Strong +3.4% move, above VWAP, and clear OR breakout. However, since I already hold it, I am not listing it as a new buy idea, but it validates the 'buy strength' strategy."
     },
     {
-      "symbol": "TJX",
-      "direction": "long",
+      "symbol": "ABNB",
+      "side": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout but low rvol; mild continuation setup."
+      "setup": "news catalyst",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reasoning": "Positive news catalyst (Amex partnership) and price is above VWAP with an OR breakout. However, volume is low (rvol 0.31), which makes the move less reliable. Conviction is moderate."
     }
   ],
-  "experiment": "momentum shorting after breakdown in risk-off regime",
-  "watchlist_changes": {
-    "add": [
-      {
-        "symbol": "MAR",
-        "reason": "Breakdown below opening range with high volume and risk-off setup."
-      }
-    ],
-    "remove": [
-      {
-        "symbol": "DPZ",
-        "reason": "Stalled breakout and weak follow-through; no longer a watchlist priority."
-      }
-    ]
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

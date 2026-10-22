@@ -172,5 +172,25 @@
       "BUY JPM blocked: conviction None is below the minimum 3 (risk-off market)",
       "BUY GS blocked: conviction None is below the minimum 3 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "13:21",
+    "trigger": "must invest $2,278 more (75% rule)",
+    "market_view": "Market is in risk-off: SPY -1.3%, QQQ -2.6%, VIXY +5.8%, broad selloff. Most watchlist stocks are weak or flat, but a few breakdowns and resilient long breakouts are emerging. No broad reversal yet; focus on high-quality shorting and only strong long setups.",
+    "experiment": "Testing opening range breakout momentum in a risk-off regime with reduced size.",
+    "decisions": [
+      {
+        "symbol": "V",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "V cleared the opening range high at 411.41, held above VWAP, and showed rvol 1.36 with day +1.3. M&A speculation added a positive catalyst, but risk-off regime limits size and requires high conviction.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY V x3 (~$1239.3)"
+    ]
   }
 ]

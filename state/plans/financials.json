@@ -1,58 +1,69 @@
 {
   "date": "2026-10-22",
-  "time": "13:06",
-  "trigger": "scheduled look",
+  "time": "13:21",
+  "trigger": "must invest $2,278 more (75% rule)",
+  "market_view": "Market is in risk-off: SPY -1.3%, QQQ -2.6%, VIXY +5.8%, broad selloff. Most watchlist stocks are weak or flat, but a few breakdowns and resilient long breakouts are emerging. No broad reversal yet; focus on high-quality shorting and only strong long setups.",
   "decisions": [
     {
-      "action": "SELL",
-      "symbol": "SCHW",
-      "reason": "Position opened at 09:30 with no defined stop or setup. In a risk-off market (SPY -1.4%, QQQ -2.7%), holding an undefined long is high-risk. Closing to free up capital for better-defined setups or to maintain discipline.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
+      "symbol": "V",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "V cleared the opening range high at 411.41, held above VWAP, and showed rvol 1.36 with day +1.3. M&A speculation added a positive catalyst, but risk-off regime limits size and requires high conviction."
     }
   ],
   "ranked_ideas": [
     {
       "symbol": "COIN",
-      "side": "short",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "Strong breakdown below opening range and VWAP (-1.6%). RSI 42 but falling. Negative news (Ireland settlement). Risk-off environment favors shorts on weak names. Targeting further downside as it breaks support.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03
-    },
-    {
-      "symbol": "BAC",
-      "side": "short",
-      "setup": "momentum",
-      "reason": "RSI 28.4 (oversold but weak), 20d trend -9.7%. TD Cowen downgrade. Trading near lows. In a risk-off market, weak banks often underperform. Looking for a bounce to short or continuation down.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025
-    },
-    {
-      "symbol": "C",
-      "side": "short",
-      "setup": "momentum",
-      "reason": "RSI 36.3, 20d -7.8%. Trading flat but below average volume. Weak relative to peers. If the market dips further, C is a candidate for a short on a breakdown.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025
-    },
-    {
-      "symbol": "JPM",
-      "side": "long",
-      "setup": "VWAP bounce",
-      "reason": "Trading just above VWAP (+0.1%). RSI 51.8 (neutral). If the market stabilizes, JPM is a defensive play. However, risk-off requires high conviction. Only buy if it holds above VWAP on volume.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03
+      "reason": "Breakdown below opening range on bad Ireland settlement; short weakness favored in risk-off."
     },
     {
       "symbol": "GS",
-      "side": "long",
-      "setup": "VWAP bounce",
-      "reason": "Trading slightly below VWAP (-0.2%) but m15 momentum is positive (+0.1%). RSI 44.7. Potential bounce candidate if it reclaims VWAP. Low conviction due to risk-off.",
+      "direction": "short",
+      "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Below VWAP and weak day momentum, rvol 1.38; financial sector selloff."
+    },
+    {
+      "symbol": "MS",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Below VWAP and weak, rvol 1.29; risk-off pressure."
+    },
+    {
+      "symbol": "WFC",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Trend down and below VWAP; weak long setup for shorting."
+    },
+    {
+      "symbol": "MA",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above 627.45, above VWAP, rvol 1.19; but trend down, risk-off half size."
     }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Testing opening range breakout momentum in a risk-off regime with reduced size.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }
