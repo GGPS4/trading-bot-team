@@ -1,24 +1,42 @@
 {
   "date": "2026-10-22",
-  "time": "11:59",
+  "time": "12:43",
   "trigger": "scheduled look",
+  "market_view": "Market is in risk-off with SPY down 1.2%, QQQ down 2.4%, and VIXY up 4.5%. The tape is risk-off, so long conviction requirements are elevated and weak names below VWAP or the opening range are favored for shorts. With about three hours to close, I am prioritizing risk control over new long entries.",
   "decisions": [
     {
-      "symbol": "COIN",
-      "action": "short",
+      "symbol": "V",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.005,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "V is overbought (RSI 92.4) and extended in a risk-off tape; exiting the long to reduce risk and free a slot for a weak-name short."
+    },
+    {
+      "symbol": "COF",
+      "action": "SHORT",
+      "conviction": 3,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "take_profit_pct": -0.035,
       "setup": "momentum",
-      "reason": "Strong breakdown below VWAP and opening range in a risk-off market. Down -4% on the day with negative news (Irish settlement) and weak momentum. Shorting weakness is favored in this regime."
+      "reason": "COF broke below its opening range and VWAP with momentum; in a risk-off regime, shorting weak financials is favored. Stop above entry, first target lower."
     }
   ],
-  "ranked_ideas": [
-    "COF",
-    "BAC",
-    "JPM",
-    "WFC",
-    "GS"
-  ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "ranked_ideas": [],
+  "experiment": "No new experiment today; managing existing risk and executing a risk-off short after exiting overbought V.",
+  "watchlist_changes": {
+    "add": [
+      {
+        "symbol": "MA",
+        "reason": "New Zealand Commerce Commission interchange fee cap is a fresh regulatory headline for Mastercard and fits the financial services watchlist."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "PYPL",
+        "reason": "Quiet on news and low relative volume, so it does not offer a clean intraday setup right now."
+      }
+    ]
+  }
 }

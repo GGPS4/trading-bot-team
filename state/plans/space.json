@@ -1,43 +1,56 @@
 {
   "date": "2026-10-22",
-  "time": "12:17",
-  "trigger": "scheduled look",
+  "time": "12:29",
+  "trigger": "must invest $5,110 more (75% rule)",
+  "market_view": "The market is in a sharp risk-off regime with QQQ down 2.2% and VIX spiking, making long positions high-risk and favoring short setups on weak aerospace names. Most of the watchlist has broken down below the opening range and VWAP, presenting clear short opportunities, while SPCX remains the only name trading above its 50-day average despite today's drop.",
   "decisions": [
     {
       "symbol": "HWM",
-      "action": "SELL",
-      "reason": "Short is losing money (-1.4%) and price is breaking above VWAP with strong momentum (m15 +1.2%, rvol 4.67). The breakdown thesis is failing. Covering to stop the bleed and rotate capital into stronger setups."
+      "action": "short",
+      "reason": "Strong breakdown below opening range (196.25-203.05) and VWAP with high relative volume (4.4x). The stock is down 6.8% on the day and has a very low RSI (15.2), indicating significant weakness in a risk-off environment. Shorting this weakness aligns with the current market mood.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum"
     },
     {
       "symbol": "ASTS",
-      "action": "SELL",
-      "reason": "Short is slightly underwater (-0.5%) and price is bouncing (+0.7% look) with decent volume (rvol 1.68). In a risk-off market, shorts should be tight. Exiting to free up capital for higher conviction setups."
-    },
-    {
-      "symbol": "SPCX",
-      "action": "BUY",
-      "side": "long",
+      "action": "short",
+      "reason": "Clear breakdown below the opening range (38.92-40.3) and VWAP. The stock is down 5.4% with elevated volume (1.61x rvol). In a risk-off market, this weakness is likely to persist, offering a good risk-reward for a short.",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Strong fundamental catalysts: BofA raised PT to $275, Pivotal Research upgrade to Buy with $260 PT. Despite the -6% day drop, the stock is holding above the opening range low and has high relative volume (3.92). The 'Musk/Robotics' narrative is driving interest. Buying a dip in a high-momentum name with fresh analyst support."
+      "setup": "momentum"
     },
     {
-      "symbol": "BKSY",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Secured a seven-figure Gen-3 Assured defense contract. This is a direct revenue catalyst. The stock is down 2.8% today but showing signs of stabilization (m15 +0.2%). Defense sector news is strong. Entering on the news catalyst with a tight stop."
+      "symbol": "RKLB",
+      "action": "short",
+      "reason": "Trading below VWAP and has broken down below the opening range (51.48-52.97). The stock is down 4.5% with a very low RSI (15.9). The combination of technical breakdown and bearish market sentiment supports a short entry.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum"
+    },
+    {
+      "symbol": "LUNR",
+      "action": "short",
+      "reason": "Broken down below the opening range (10.47-10.93) and is trading below VWAP. The stock is down 4.1% with an oversold RSI (22.1). In a risk-off environment, this weakness is a valid short setup.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum"
+    },
+    {
+      "symbol": "PL",
+      "action": "short",
+      "reason": "Trading below VWAP and has broken down below the opening range (13.25-13.6). The stock is down 4.2% with an oversold RSI (23.7). The technicals and market mood favor a short position.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum"
     }
   ],
   "ranked_ideas": [
-    "FLY",
-    "RKLB",
-    "LUNR",
-    "PL",
-    "RDW"
+    "BKSY",
+    "IRDM",
+    "GE",
+    "BA",
+    "TDG"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

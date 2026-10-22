@@ -117,5 +117,35 @@
     "results": [
       "SHORT COIN blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "12:43",
+    "trigger": "scheduled look",
+    "market_view": "Market is in risk-off with SPY down 1.2%, QQQ down 2.4%, and VIXY up 4.5%. The tape is risk-off, so long conviction requirements are elevated and weak names below VWAP or the opening range are favored for shorts. With about three hours to close, I am prioritizing risk control over new long entries.",
+    "experiment": "No new experiment today; managing existing risk and executing a risk-off short after exiting overbought V.",
+    "decisions": [
+      {
+        "symbol": "V",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "V is overbought (RSI 92.4) and extended in a risk-off tape; exiting the long to reduce risk and free a slot for a weak-name short.",
+        "stop_loss_pct": 0.005,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "COF",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "COF broke below its opening range and VWAP with momentum; in a risk-off regime, shorting weak financials is favored. Stop above entry, first target lower.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": -0.035
+      }
+    ],
+    "results": [
+      "SELL V",
+      "SHORT COF x12 (~$2448.96)",
+      "WATCHLIST removed PYPL"
+    ]
   }
 ]

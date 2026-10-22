@@ -176,5 +176,45 @@
       "BUY BMY blocked: conviction None is below the minimum 3 (risk-off market)",
       "BUY GILD blocked: conviction None is below the minimum 3 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "12:43",
+    "trigger": "price moves in ['MRK']",
+    "market_view": "Market is risk-off, with SPY -1.2%, QQQ -2.4%, VIXY +4.5%. Healthcare is mixed, but we see clear breakdowns in MRK and DHR/TMO below VWAP and opening range, while ABT attempted an OR breakout. We are focusing on shorting weak breakdowns and buying high-quality OR breakouts only with tight risk.",
+    "experiment": "risk-off breakdown shorting",
+    "decisions": [
+      {
+        "symbol": "MRK",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "MRK broke below VWAP and opening range, m15 -3.8%, m60 -3.7%, rvol 1.95; risk-off breakdown shorting favored, exit long.",
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "DHR",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "DHR broke below OR/VWAP, m15 -1.0%, m60 -2.1%, rvol 2.13, trend down; risk-off shorting breakdown favored despite PT raise.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "ABT",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "ABT broke above OR, above VWAP, rvol 1.42, m15 -0.1%, m60 +0.3%; Wells Fargo PT raise; clear OR breakout but risk-off half size.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL MRK",
+      "SHORT DHR x4 (~$916.82)",
+      "BUY ABT blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "BUY AMGN x2 (~$895.56) [deploy]",
+      "WATCHLIST removed CVS"
+    ]
   }
 ]

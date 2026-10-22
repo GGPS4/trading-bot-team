@@ -1,29 +1,53 @@
 {
-  "updated": "2026-10-22T11:29-04:00",
+  "updated": "2026-10-22T12:34-04:00",
   "days": 30,
   "overall": {
-    "trades": 15,
-    "win_rate": 0.2,
-    "avg_return": -0.0248,
-    "total_pnl": -890.57,
-    "profit_factor": 0.06,
+    "trades": 29,
+    "win_rate": 0.241,
+    "avg_return": -0.016,
+    "total_pnl": -1039.58,
+    "profit_factor": 0.09,
     "enough_data": true
   },
   "by_setup": {
     "untagged": {
-      "trades": 14,
-      "win_rate": 0.214,
-      "avg_return": -0.0254,
-      "total_pnl": -869.47,
-      "profit_factor": 0.06,
+      "trades": 20,
+      "win_rate": 0.2,
+      "avg_return": -0.0189,
+      "total_pnl": -906.45,
+      "profit_factor": 0.09,
       "enough_data": true
     },
+    "momentum": {
+      "trades": 4,
+      "win_rate": 0.25,
+      "avg_return": -0.0078,
+      "total_pnl": -63.14,
+      "profit_factor": 0.11,
+      "enough_data": false
+    },
     "news catalyst": {
-      "trades": 1,
+      "trades": 3,
       "win_rate": 0.0,
-      "avg_return": -0.0166,
-      "total_pnl": -21.1,
+      "avg_return": -0.0199,
+      "total_pnl": -72.46,
       "profit_factor": 0.0,
+      "enough_data": false
+    },
+    "earnings gap": {
+      "trades": 1,
+      "win_rate": 1.0,
+      "avg_return": 0.0026,
+      "total_pnl": 1.31,
+      "profit_factor": null,
+      "enough_data": false
+    },
+    "opening range breakout": {
+      "trades": 1,
+      "win_rate": 1.0,
+      "avg_return": 0.0011,
+      "total_pnl": 1.16,
+      "profit_factor": null,
       "enough_data": false
     }
   },
@@ -49,22 +73,106 @@
       },
       "by_experiment": {}
     },
-    "financials": {
+    "defense": {
       "overall": {
         "trades": 2,
-        "win_rate": 0.5,
-        "avg_return": 0.0006,
-        "total_pnl": 3.07,
-        "profit_factor": 2.07,
+        "win_rate": 0.0,
+        "avg_return": -0.0154,
+        "total_pnl": -38.94,
+        "profit_factor": 0.0,
         "enough_data": false
       },
       "by_setup": {
         "untagged": {
+          "trades": 1,
+          "win_rate": 0.0,
+          "avg_return": -0.0004,
+          "total_pnl": -0.47,
+          "profit_factor": 0.0,
+          "enough_data": false
+        },
+        "news catalyst": {
+          "trades": 1,
+          "win_rate": 0.0,
+          "avg_return": -0.0303,
+          "total_pnl": -38.47,
+          "profit_factor": 0.0,
+          "enough_data": false
+        }
+      },
+      "by_experiment": {
+        "Implement an automatic 50% scale-out at 1R on contract-driven momentum plays like LDOS to lock in intraday gains against": {
+          "trades": 1,
+          "win_rate": 0.0,
+          "avg_return": -0.0303,
+          "total_pnl": -38.47,
+          "profit_factor": 0.0,
+          "enough_data": false
+        }
+      }
+    },
+    "entertainment": {
+      "overall": {
+        "trades": 3,
+        "win_rate": 0.333,
+        "avg_return": -0.0064,
+        "total_pnl": -34.28,
+        "profit_factor": 0.04,
+        "enough_data": false
+      },
+      "by_setup": {
+        "untagged": {
+          "trades": 1,
+          "win_rate": 0.0,
+          "avg_return": -0.0089,
+          "total_pnl": -22.7,
+          "profit_factor": 0.0,
+          "enough_data": false
+        },
+        "earnings gap": {
+          "trades": 1,
+          "win_rate": 1.0,
+          "avg_return": 0.0026,
+          "total_pnl": 1.31,
+          "profit_factor": null,
+          "enough_data": false
+        },
+        "news catalyst": {
+          "trades": 1,
+          "win_rate": 0.0,
+          "avg_return": -0.0129,
+          "total_pnl": -12.89,
+          "profit_factor": 0.0,
+          "enough_data": false
+        }
+      },
+      "by_experiment": {
+        "Implement a pre-market catalyst scan to trigger entries on earnings or major news releases": {
           "trades": 2,
           "win_rate": 0.5,
-          "avg_return": 0.0006,
-          "total_pnl": 3.07,
-          "profit_factor": 2.07,
+          "avg_return": -0.0052,
+          "total_pnl": -11.58,
+          "profit_factor": 0.1,
+          "enough_data": false
+        }
+      }
+    },
+    "financials": {
+      "overall": {
+        "trades": 3,
+        "win_rate": 0.333,
+        "avg_return": -0.0003,
+        "total_pnl": -2.07,
+        "profit_factor": 0.74,
+        "enough_data": false
+      },
+      "by_setup": {
+        "untagged": {
+          "trades": 3,
+          "win_rate": 0.333,
+          "avg_return": -0.0003,
+          "total_pnl": -2.07,
+          "profit_factor": 0.74,
           "enough_data": false
         }
       },
@@ -72,20 +180,20 @@
     },
     "healthcare": {
       "overall": {
-        "trades": 1,
-        "win_rate": 1.0,
-        "avg_return": 0.0101,
-        "total_pnl": 25.86,
-        "profit_factor": null,
+        "trades": 3,
+        "win_rate": 0.667,
+        "avg_return": 0.0019,
+        "total_pnl": 17.42,
+        "profit_factor": 1.39,
         "enough_data": false
       },
       "by_setup": {
         "untagged": {
-          "trades": 1,
-          "win_rate": 1.0,
-          "avg_return": 0.0101,
-          "total_pnl": 25.86,
-          "profit_factor": null,
+          "trades": 3,
+          "win_rate": 0.667,
+          "avg_return": 0.0019,
+          "total_pnl": 17.42,
+          "profit_factor": 1.39,
           "enough_data": false
         }
       },
@@ -93,21 +201,29 @@
     },
     "space": {
       "overall": {
-        "trades": 6,
-        "win_rate": 0.0,
-        "avg_return": -0.0345,
-        "total_pnl": -501.2,
-        "profit_factor": 0.0,
+        "trades": 10,
+        "win_rate": 0.1,
+        "avg_return": -0.0228,
+        "total_pnl": -541.92,
+        "profit_factor": 0.01,
         "enough_data": true
       },
       "by_setup": {
         "untagged": {
-          "trades": 5,
+          "trades": 6,
           "win_rate": 0.0,
-          "avg_return": -0.0381,
-          "total_pnl": -480.1,
+          "avg_return": -0.0327,
+          "total_pnl": -480.33,
           "profit_factor": 0.0,
           "enough_data": true
+        },
+        "momentum": {
+          "trades": 3,
+          "win_rate": 0.333,
+          "avg_return": -0.005,
+          "total_pnl": -40.49,
+          "profit_factor": 0.15,
+          "enough_data": false
         },
         "news catalyst": {
           "trades": 1,
@@ -120,21 +236,21 @@
       },
       "by_experiment": {
         "volume-spike filter for entries following earnings or contract announcements": {
-          "trades": 1,
-          "win_rate": 0.0,
-          "avg_return": -0.0166,
-          "total_pnl": -21.1,
-          "profit_factor": 0.0,
+          "trades": 4,
+          "win_rate": 0.25,
+          "avg_return": -0.0079,
+          "total_pnl": -61.59,
+          "profit_factor": 0.11,
           "enough_data": false
         }
       }
     },
     "tech": {
       "overall": {
-        "trades": 5,
-        "win_rate": 0.2,
-        "avg_return": -0.0274,
-        "total_pnl": -323.98,
+        "trades": 7,
+        "win_rate": 0.286,
+        "avg_return": -0.0217,
+        "total_pnl": -345.47,
         "profit_factor": 0.06,
         "enough_data": true
       },
@@ -146,34 +262,67 @@
           "total_pnl": -323.98,
           "profit_factor": 0.06,
           "enough_data": true
+        },
+        "momentum": {
+          "trades": 1,
+          "win_rate": 0.0,
+          "avg_return": -0.0163,
+          "total_pnl": -22.65,
+          "profit_factor": 0.0,
+          "enough_data": false
+        },
+        "opening range breakout": {
+          "trades": 1,
+          "win_rate": 1.0,
+          "avg_return": 0.0011,
+          "total_pnl": 1.16,
+          "profit_factor": null,
+          "enough_data": false
         }
       },
-      "by_experiment": {}
+      "by_experiment": {
+        "shorting breakdowns in risk-off regime": {
+          "trades": 1,
+          "win_rate": 0.0,
+          "avg_return": -0.0163,
+          "total_pnl": -22.65,
+          "profit_factor": 0.0,
+          "enough_data": false
+        },
+        "Testing continuation shorts after opening-range breakdowns in a risk-off tape, using momentum and news/confirmed weaknes": {
+          "trades": 1,
+          "win_rate": 1.0,
+          "avg_return": 0.0011,
+          "total_pnl": 1.16,
+          "profit_factor": null,
+          "enough_data": false
+        }
+      }
     }
   },
   "by_exit": {
     "manager_sell": {
-      "trades": 9,
-      "win_rate": 0.222,
-      "avg_return": -0.0258,
-      "total_pnl": -577.32,
-      "profit_factor": 0.05,
+      "trades": 21,
+      "win_rate": 0.238,
+      "avg_return": -0.0141,
+      "total_pnl": -689.17,
+      "profit_factor": 0.1,
       "enough_data": true
     },
     "stop_loss": {
-      "trades": 4,
+      "trades": 5,
       "win_rate": 0.0,
-      "avg_return": -0.037,
-      "total_pnl": -331.27,
+      "avg_return": -0.0356,
+      "total_pnl": -369.74,
       "profit_factor": 0.0,
-      "enough_data": false
+      "enough_data": true
     },
     "trailing_stop": {
-      "trades": 2,
-      "win_rate": 0.5,
-      "avg_return": 0.0036,
-      "total_pnl": 18.02,
-      "profit_factor": 7.26,
+      "trades": 3,
+      "win_rate": 0.667,
+      "avg_return": 0.0033,
+      "total_pnl": 19.33,
+      "profit_factor": 7.71,
       "enough_data": false
     }
   }

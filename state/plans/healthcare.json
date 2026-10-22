@@ -1,41 +1,92 @@
 {
   "date": "2026-10-22",
-  "time": "12:19",
-  "trigger": "scheduled look",
+  "time": "12:43",
+  "trigger": "price moves in ['MRK']",
+  "market_view": "Market is risk-off, with SPY -1.2%, QQQ -2.4%, VIXY +4.5%. Healthcare is mixed, but we see clear breakdowns in MRK and DHR/TMO below VWAP and opening range, while ABT attempted an OR breakout. We are focusing on shorting weak breakdowns and buying high-quality OR breakouts only with tight risk.",
   "decisions": [
     {
-      "symbol": "ISRG",
+      "symbol": "MRK",
       "action": "SELL",
-      "reason": "Negative news catalyst: ISRG narrowed its 2026 growth outlook and reported a $450M charge. The stock is stalling (m15 -0.3%, m60 -0.2%) and has lost momentum. In a risk-off market (SPY -1.0%, QQQ -2.1%), holding a stock with deteriorating fundamentals and fading intraday momentum is high risk. Exiting to redeploy capital into stronger setups."
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.0,
+      "setup": "momentum",
+      "reason": "MRK broke below VWAP and opening range, m15 -3.8%, m60 -3.7%, rvol 1.95; risk-off breakdown shorting favored, exit long."
+    },
+    {
+      "symbol": "DHR",
+      "action": "SHORT",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "DHR broke below OR/VWAP, m15 -1.0%, m60 -2.1%, rvol 2.13, trend down; risk-off shorting breakdown favored despite PT raise."
+    },
+    {
+      "symbol": "ABT",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "ABT broke above OR, above VWAP, rvol 1.42, m15 -0.1%, m60 +0.3%; Wells Fargo PT raise; clear OR breakout but risk-off half size."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "ABT",
+      "symbol": "AMGN",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout, rvol 1.36, above VWAP."
+    },
+    {
+      "symbol": "VRTX",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "news catalyst",
-      "reason": "Strong positive news (Wells Fargo PT raise to $119, Overweight). Trading above VWAP (+0.9%) with an opening range breakout. RSI 61.9 is not overbought, unlike many peers. Good risk/reward for a long in a risk-off market if it holds VWAP."
+      "reason": "FDA orphan designation, OR breakout, rvol 1.1."
     },
     {
-      "symbol": "DHR",
-      "setup": "momentum",
-      "reason": "Short candidate. Trading below VWAP (-0.7%) and broke down below the opening range. High relative volume (2.19) suggests distribution. In a risk-off market, shorting weak performers with high volume is a favored strategy. RSI 70.8 is high but the intraday breakdown is the key signal."
-    },
-    {
-      "symbol": "TMO",
-      "setup": "momentum",
-      "reason": "Short candidate. Broke down below the opening range (683.82-703.01) and is trading below VWAP (-0.5%). High relative volume (1.71). Despite some positive analyst notes, the intraday action is weak and the market is risk-off. Good short setup if it stays below VWAP."
+      "symbol": "UNH",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Mizuho upgrade, OR breakout, rvol 0.79."
     },
     {
       "symbol": "BMY",
-      "setup": "opening range breakout",
-      "reason": "Positive news (Phase 3 trial launch). Broke out of the opening range and is above VWAP (+0.8%). However, RSI is 54.8 and momentum is flat (m15 0.0%). Less compelling than ABT but a viable long if it holds the breakout level."
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Phase 3 trial, OR breakout, rvol 0.65."
     },
     {
-      "symbol": "GILD",
-      "setup": "opening range breakout",
-      "reason": "Positive news (BioNTech partnership). Broke out of the opening range and is above VWAP (+0.2%). RSI 66.8 is approaching overbought but not there yet. Momentum is slightly positive (m15 +0.2%). A decent long candidate if the market stabilizes."
+      "symbol": "MDT",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "positive real-world data, OR breakout, rvol 0.43."
     }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "risk-off breakdown shorting",
+  "watchlist_changes": {
+    "add": [],
+    "remove": [
+      {
+        "symbol": "CVS",
+        "reason": "low relative volume and no clear intraday catalyst"
+      }
+    ]
+  }
 }
