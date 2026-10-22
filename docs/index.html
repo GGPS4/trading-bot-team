@@ -140,6 +140,7 @@ td .num{white-space:nowrap}
 .pill.loss{color:var(--down);background:rgba(208,59,59,.11);border-color:transparent}
 .pill.open{color:var(--ink-2)}
 .health{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 18px;padding:12px 16px;border-radius:12px;font-size:14px;border:1px solid var(--line);animation:viewIn .4s var(--ease)}
+.health[hidden]{display:none}
 .health.bad{border-color:var(--down);color:var(--down);background:color-mix(in srgb,var(--down) 8%,transparent)}
 .health.warn{border-color:var(--warn);color:var(--warn);background:color-mix(in srgb,var(--warn) 8%,transparent)}
 .health b{color:inherit}.health a{color:inherit;text-decoration:underline;margin-left:auto}
@@ -396,6 +397,7 @@ function overview(){
   return`
   <div class="head"><div><h1>Overview</h1><p>${new Date(D.updated).toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"})} · updated ${ago(D.updated)}</p></div>
     <div class="legend">${D.paused?'<span class="pill block">Trading paused</span>':""}${D.mood?.regime?`<span class="pill ${D.mood.regime==="normal"?"buy":D.mood.regime==="caution"?"block":"sell"}" title="${esc(D.mood.why||"")} · ${esc(D.mood.note||"")}">Market mood: ${D.mood.regime==="risk_off"?"Risk-off":D.mood.regime==="caution"?"Caution":"Normal"}</span>`:""}<span class="tag">${teams.length} teams</span><span class="tag">${(D.positions||[]).length} open positions</span></div></div>
+  ${systemCheck()}
   <div class="grid k4 stagger">
     ${kpi("Account value",`<span data-count="${a.equity}">${money(a.equity)}</span>`,`${delta(a.day_change_pct)}<span class="muted">today</span>`,spark(H.map(h=>h.equity),css("--accent")))}
     ${kpi("Today's profit / loss",`<span class="${cls(a.day_change)}" data-count="${a.day_change}" data-fmt="smoney">${smoney(a.day_change)}</span>`,`<span class="muted">Cash on hand ${money(a.cash,0)}</span>`)}
@@ -583,6 +585,13 @@ function research(){
     <div class="label" style="margin-top:0">Latest news</div>${findings(R.news?.findings)}<div class="label">Overnight &amp; after hours</div>${findings(R.overnight)}</div>`}).join("")}</div>`;
 }
 
+function systemCheck(){
+  const P=D.preflight;if(!P?.checks)return"";
+  const today=new Date().toLocaleDateString("en-CA",{timeZone:"America/New_York"}),stale=P.date!==today;
+  return`<div class="syscheck fadein" style="display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:0 0 16px;font-size:13px">
+    <b style="color:var(--ink)">System check</b><span class="muted">${stale?"not run yet today":"at "+esc((P.time||"").slice(11,16))+" ET"}</span>
+    ${P.checks.map(c=>`<span title="${esc(c.detail||"")}" style="display:inline-flex;align-items:center;gap:6px"><i style="width:8px;height:8px;border-radius:50%;background:${stale?"var(--line)":c.ok?"var(--up-mark)":"var(--down-mark)"}"></i>${esc(c.name)}</span>`).join("")}</div>`;
+}
 function premarketCard(){
   const P=D.premarket||{},today=new Date().toLocaleDateString("en-CA",{timeZone:"America/New_York"});
   if(!P.time||P.date!==today)return"";
