@@ -1216,7 +1216,7 @@
     "qty_open": 4.0,
     "dollars": 1529.1,
     "est_price": 382.275,
-    "stop_price": 393.74,
+    "stop_price": 379.35,
     "first_stop": 393.74,
     "take_profit_price": 366.98,
     "risk_dollars": 45.87,
@@ -1229,10 +1229,11 @@
     "entry_price": 380.4525,
     "entry_time": "2026-10-22T15:12:45.498855011Z",
     "high": 383.67,
-    "low": 377.26,
-    "stop_order_id": "328bcb1e-2fbb-4b2e-952f-2c1ab0e695ed",
-    "stop_sent": 393.74,
-    "stop_qty_sent": 4
+    "low": 376.34,
+    "stop_order_id": "c7bfac87-b1c5-4ff4-8f0d-8c37e4b2c4ed",
+    "stop_sent": 379.35,
+    "stop_qty_sent": 4,
+    "trail_active": true
   },
   {
     "id": "consumer-DPZ-202610221112-b0b8",
@@ -1515,7 +1516,7 @@
     "entry_price": 251.94,
     "entry_time": "2026-10-22T15:33:39.4682909Z",
     "high": 253.23,
-    "low": 249.94,
+    "low": 249.66,
     "stop_order_id": "6788df74-ba46-4351-8838-4ec5b581ba72",
     "stop_sent": 256.91,
     "stop_qty_sent": 10
@@ -1645,7 +1646,7 @@
     "setup": "momentum",
     "experiment": "Testing short momentum breakdown in risk-off tape after closing weak AXP.",
     "order_id": "19232ce9-8002-40d5-b475-98166a278120",
-    "status": "open",
+    "status": "closed",
     "entry_price": 97.5,
     "entry_time": "2026-10-22T15:35:28.709301235Z",
     "high": 97.78,
@@ -1653,7 +1654,12 @@
     "stop_order_id": "c9725203-ac63-42bd-94e0-59322291318a",
     "stop_sent": 96.47,
     "stop_qty_sent": 26,
-    "trail_active": true
+    "trail_active": true,
+    "exit_price": 96.5,
+    "exit_reason": "trailing_stop",
+    "exit_time": "2026-10-22T18:20:41.781163439Z",
+    "pnl": 23.48,
+    "pnl_pct": 0.0093
   },
   {
     "id": "entertainment-NFLX-202610221148-d5ba",
@@ -1814,7 +1820,7 @@
     "qty_open": 4.0,
     "dollars": 1062.76,
     "est_price": 265.69,
-    "stop_price": 266.85,
+    "stop_price": 267.35,
     "first_stop": 261.7,
     "take_profit_price": 276.32,
     "risk_dollars": 15.94,
@@ -1826,10 +1832,10 @@
     "status": "open",
     "entry_price": 265.89,
     "entry_time": "2026-10-22T15:51:25.634889888Z",
-    "high": 269,
+    "high": 269.51,
     "low": 265.78,
-    "stop_order_id": "d27ccb9b-9d4f-4994-8956-2b30b37abb61",
-    "stop_sent": 266.85,
+    "stop_order_id": "95acc3ba-97a4-46d4-8cef-5d4c54fd3a73",
+    "stop_sent": 267.35,
     "stop_qty_sent": 4,
     "trail_active": true
   },
@@ -2096,7 +2102,7 @@
     "entry_price": 28.13,
     "entry_time": "2026-10-22T16:47:23.777490241Z",
     "high": 28.155,
-    "low": 27.94,
+    "low": 27.855,
     "stop_order_id": "739856d1-bf35-46d3-9ca5-6908a49ccee3",
     "stop_sent": 28.75,
     "stop_qty_sent": 83
@@ -2285,7 +2291,7 @@
     "setup": "momentum",
     "experiment": "continuation shorts after opening-range breakdowns in a risk-off tape, using momentum and news/confirmed weakness",
     "order_id": "c331deec-b7d4-441a-af9b-e1f730d0c204",
-    "status": "open",
+    "status": "closed",
     "entry_price": 124.12,
     "entry_time": "2026-10-22T17:06:50.593761807Z",
     "high": 124.12,
@@ -2293,7 +2299,12 @@
     "stop_order_id": "fdb4ace6-0a41-4257-b07b-458fa84bcc03",
     "stop_sent": 123.87,
     "stop_qty_sent": 1,
-    "trail_active": true
+    "trail_active": true,
+    "exit_price": 123.89,
+    "exit_reason": "trailing_stop",
+    "exit_time": "2026-10-22T18:20:45.811719629Z",
+    "pnl": 0.11,
+    "pnl_pct": 0.0009
   },
   {
     "id": "healthcare-MRK-202610221306-0c15",
@@ -2468,7 +2479,7 @@
     "entry_price": 413.65,
     "entry_time": "2026-10-22T17:21:44.496500782Z",
     "high": 414.39,
-    "low": 413.22,
+    "low": 412.83,
     "stop_order_id": "634c6aba-50d7-433b-8da9-0d03850c3f79",
     "stop_sent": 406.9,
     "stop_qty_sent": 3
@@ -2498,7 +2509,7 @@
     "entry_price": 680.07,
     "entry_time": "2026-10-22T17:32:23.911466603Z",
     "high": 681.54,
-    "low": 676.71,
+    "low": 676.05,
     "stop_order_id": "6ff365ff-4b35-46c4-a029-8cefdedd0202",
     "stop_sent": 711.24,
     "stop_qty_sent": 1
@@ -2524,7 +2535,7 @@
     "setup": "news catalyst",
     "experiment": "",
     "order_id": "9c3ee5ad-8a4e-4e6f-ae2e-10e8a2dece97",
-    "status": "open",
+    "status": "closed",
     "entry_price": 284.28,
     "entry_time": "2026-10-22T17:40:50.441018647Z",
     "high": 284.28,
@@ -2534,7 +2545,11 @@
     "stop_qty_sent": 4,
     "exit_order_id": "4ea02d3e-b827-4cc9-b561-2e4049531546",
     "exit_reason": "manager_sell",
-    "exit_note": "Position is underwater (-0.77%) and price is approaching the stop at 280.03. In a risk-off environment with the stock trading below VWAP and showing downward momentum (m60 -0.3%), it is better to exit manually to preserve capital rather than wait for the stop to be hit at a worse price. Reinvesting this capital into stronger setups is required to meet the 75% investment mandate."
+    "exit_note": "Position is underwater (-0.77%) and price is approaching the stop at 280.03. In a risk-off environment with the stock trading below VWAP and showing downward momentum (m60 -0.3%), it is better to exit manually to preserve capital rather than wait for the stop to be hit at a worse price. Reinvesting this capital into stronger setups is required to meet the 75% investment mandate.",
+    "exit_price": 281.53,
+    "exit_time": "2026-10-22T18:15:46.454979233Z",
+    "pnl": -12.13,
+    "pnl_pct": -0.0107
   },
   {
     "id": "tech-CRM-202610221340-7787",
@@ -2560,7 +2575,7 @@
     "status": "open",
     "entry_price": 248.88,
     "entry_time": "2026-10-22T17:40:52.672882999Z",
-    "high": 250.325,
+    "high": 250.53,
     "low": 248.32,
     "stop_order_id": "6cea3b85-4e55-4db1-b445-8479094184c5",
     "stop_sent": 244.96,
@@ -2590,8 +2605,8 @@
     "status": "open",
     "entry_price": 581.45,
     "entry_time": "2026-10-22T18:10:50.035653816Z",
-    "high": 581.45,
-    "low": 581.18,
+    "high": 583.6,
+    "low": 580.39,
     "stop_order_id": "ede36f22-bb15-4924-ab3d-3bc3c4cd13cd",
     "stop_sent": 569.32,
     "stop_qty_sent": 2
@@ -2620,8 +2635,8 @@
     "status": "open",
     "entry_price": 52.72,
     "entry_time": "2026-10-22T18:10:50.616283197Z",
-    "high": 52.81,
-    "low": 52.72,
+    "high": 52.93,
+    "low": 52.71,
     "stop_order_id": "a47b3d8b-694e-42c4-baec-aefad592b2ee",
     "stop_sent": 53.86,
     "stop_qty_sent": 48

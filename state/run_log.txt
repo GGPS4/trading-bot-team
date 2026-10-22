@@ -1,92 +1,3 @@
-[2026-10-22 11:26:09 ET] LLM: providers ready: gemini, groq, openrouter
-[2026-10-22 11:26:09 ET] mode=paper capital=$99,369.48 teams=['defense', 'space', 'entertainment', 'tech', 'consumer', 'financials', 'healthcare']
-[2026-10-22 11:26:09 ET] Auto: trading session until 16:00 ET
-[2026-10-22 11:26:09 ET] journal: recovered 3 position(s) from Alpaca
-[2026-10-22 11:26:10 ET] LLM: gemini gemini-3.8-flash hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-22 11:26:10 ET] LLM: gemini gemini-3.7-flash hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-22 11:26:12 ET] LLM: groq models -> ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'allam-2-7b', 'qwen/qwen3.8-27b']
-[2026-10-22 11:26:13 ET] LLM: openrouter models -> ['recursive/flint-v1.0:free', 'xingchen-agi/xing4.0-29b-a4b:free', 'nvidia/nemotron-3.5-super-vl:free', 'dots-studio/dots-3-note-preview:free', 'liquid/lfm-2.5-2.6b:free', 'nvidia/nemotron-3.5-lightning:free']
-[2026-10-22 11:26:14 ET] System check: all good
-[2026-10-22 11:26:17 ET] entertainment: watchlist remove_rejected WBD - list would drop below 15 stocks
-[2026-10-22 11:26:17 ET] entertainment: watchlist remove_rejected EA - list would drop below 15 stocks
-[2026-10-22 11:26:23 ET] defense: researching (morning)
-[2026-10-22 11:26:23 ET] LLM: groq openai/gpt-oss-120b hit its daily limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per 
-[2026-10-22 11:26:28 ET] LLM: defense news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-22 11:26:29 ET] space: researching (morning)
-[2026-10-22 11:26:29 ET] LLM: groq openai/gpt-oss-20b hit its per-minute limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per m
-[2026-10-22 11:26:29 ET] LLM: groq qwen/qwen3.8-27b hit its per-minute limit: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on input tokens p
-[2026-10-22 11:26:32 ET] LLM: gemini gemini-3.5-flash hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-22 11:27:32 ET] LLM: space news researcher answered (openrouter recursive/flint-v1.0:free)
-[2026-10-22 11:27:32 ET] entertainment: researching (morning)
-[2026-10-22 11:27:36 ET] LLM: entertainment news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-22 11:27:37 ET] tech: researching (morning)
-[2026-10-22 11:28:16 ET] LLM: tech news researcher answered (openrouter recursive/flint-v1.0:free)
-[2026-10-22 11:28:16 ET] consumer: researching (morning)
-[2026-10-22 11:28:56 ET] LLM: consumer news researcher answered (openrouter recursive/flint-v1.0:free)
-[2026-10-22 11:28:57 ET] financials: researching (morning)
-[2026-10-22 11:29:02 ET] LLM: financials news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-22 11:29:02 ET] healthcare: researching (morning)
-[2026-10-22 11:29:37 ET] LLM: healthcare news researcher answered (openrouter recursive/flint-v1.0:free)
-[2026-10-22 11:29:39 ET] journal: updated 8 trade(s)
-[2026-10-22 11:29:39 ET] ISRG: could not place stop order: POST /v2/orders -> 403: {"available":"0","code":40310000,"existing_qty":"5","held_for_orders":"5","message":"insufficient qty available for order (requested: 5, available: 0)","related_orders":["e8e2b94e-5b02-4eab-8459-cae81f91ce93"],"symbol":"ISRG"}
-[2026-10-22 11:29:40 ET] TSLA: using the existing stop order at 393.74
-[2026-10-22 11:29:40 ET] DPZ: using the existing stop order at 312.43
-[2026-10-22 11:29:40 ET] CME: using the existing stop order at 300.03
-[2026-10-22 11:29:40 ET] ICE: using the existing stop order at 159.66
-[2026-10-22 11:29:40 ET] ASTS: could not move stop: PATCH /v2/orders/1ad0ea60-8c72-44f6-85ee-5b707f245fd0 -> 422: {"code":42210000,"message":"order parameters are not changed"}
-[2026-10-22 11:29:40 ET] Market mood: risk_off (index down -2.4%)
-[2026-10-22 11:29:41 ET] entertainment: manager takes a look (first look this run)
-[2026-10-22 11:29:46 ET] LLM: defense news researcher answered (openrouter recursive/flint-v1.0:free)
-[2026-10-22 11:29:46 ET] defense: manager takes a look (first look this run)
-[2026-10-22 11:30:00 ET] LLM: space news researcher answered (openrouter recursive/flint-v1.0:free)
-[2026-10-22 11:30:00 ET] space: manager takes a look (first look this run)
-[2026-10-22 11:30:00 ET] LLM: gemini gemini-3.1-pro-preview hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-22 11:30:00 ET] LLM: gemini gemini-3.1-pro-preview-customtools hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-22 11:30:00 ET] LLM: gemini gemini-3.6-flash hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-22 11:30:37 ET] ASTS: could not move stop: PATCH /v2/orders/1ad0ea60-8c72-44f6-85ee-5b707f245fd0 -> 422: {"code":42210000,"message":"order parameters are not changed"}
-[2026-10-22 11:31:38 ET] ASTS: could not move stop: PATCH /v2/orders/1ad0ea60-8c72-44f6-85ee-5b707f245fd0 -> 422: {"code":42210000,"message":"order parameters are not changed"}
-[2026-10-22 11:32:02 ET] LLM: space manager answered (openrouter recursive/flint-v1.0:free)
-[2026-10-22 11:32:03 ET] LLM: tech news researcher answered (groq openai/gpt-oss-20b)
-[2026-10-22 11:32:03 ET] tech: manager takes a look (first look this run)
-[2026-10-22 11:32:05 ET] LLM: entertainment manager answered (openrouter recursive/flint-v1.0:free)
-[2026-10-22 11:32:05 ET] consumer: manager takes a look (first look this run)
-[2026-10-22 11:32:08 ET] LLM: consumer manager answered (groq qwen/qwen3.8-27b)
-[2026-10-22 11:32:21 ET] LLM: financials news researcher answered (openrouter recursive/flint-v1.0:free)
-[2026-10-22 11:32:21 ET] financials: manager takes a look (first look this run)
-[2026-10-22 11:32:38 ET] ASTS: could not move stop: PATCH /v2/orders/1ad0ea60-8c72-44f6-85ee-5b707f245fd0 -> 422: {"code":42210000,"message":"order parameters are not changed"}
-[2026-10-22 11:32:58 ET] LLM: defense manager answered (openrouter recursive/flint-v1.0:free)
-[2026-10-22 11:33:04 ET] LLM: healthcare news researcher answered (openrouter recursive/flint-v1.0:free)
-[2026-10-22 11:33:04 ET] healthcare: manager takes a look (first look this run)
-[2026-10-22 11:33:37 ET] defense: SELL LMT - LMT failed to hold above VWAP and gave back post-earnings momentum; closing to r
-[2026-10-22 11:33:37 ET] defense: BUY CACI x2 stop 620.9 first target 658.91
-[2026-10-22 11:33:38 ET] defense: watchlist removed GD - Quiet, no clear catalyst or volume.
-[2026-10-22 11:33:38 ET] defense: watchlist removed HII - Quiet, no clear catalyst or volume.
-[2026-10-22 11:33:38 ET] defense: ['SELL LMT', 'BUY CACI x2 (~$1267.14)', 'WATCHLIST removed GD', 'WATCHLIST removed HII']
-[2026-10-22 11:33:38 ET] space: SELL TDG - Closing the day's long as market risk-off and broad selling pressure increases; 
-[2026-10-22 11:33:38 ET] space: ['SELL TDG', 'SHORT RKLB blocked: one share costs $50.98, more than the $1.70 allowed', 'SHORT BA blocked: one share costs $189.75, more than the $1.70 allowed', 'SHORT LUNR blocked: one share costs $10.47, more than the $1.70 allowed', 'SHORT PL blocked: one share costs $13.12, more than the $1.70 allowed', 'SHORT RDW blocked: one share costs $8.22, more than the $1.70 allowed', 'SHORT VSAT blocked: one share costs $59.16, more than the $1.70 allowed']
-[2026-10-22 11:33:38 ET] entertainment: SELL IMAX - Long IMAX is -0.9% and broke below the opening range, with no protective stop; e
-[2026-10-22 11:33:38 ET] entertainment: ['SELL IMAX', 'BUY SONY blocked: conviction 3 is below the minimum 4 (risk-off market)', 'BUY NFLX blocked: conviction 2 is below the minimum 3 (risk-off market)', 'BUY DIS blocked: conviction 2 is below the minimum 3 (risk-off market)', 'BUY FOXA blocked: conviction 2 is below the minimum 3 (risk-off market)', 'BUY BAM blocked: conviction 2 is below the minimum 3 (risk-off market)', 'BUY ROKU blocked: conviction 2 is below the minimum 3 (risk-off market)']
-[2026-10-22 11:33:38 ET] ASTS: could not move stop: PATCH /v2/orders/1ad0ea60-8c72-44f6-85ee-5b707f245fd0 -> 422: {"code":42210000,"message":"order parameters are not changed"}
-[2026-10-22 11:33:39 ET] consumer: SHORT AMZN x10 stop 256.91 first target 244.31
-[2026-10-22 11:33:39 ET] consumer: BUY LULU x12 stop 99.51 first target 103.56
 [2026-10-22 11:33:39 ET] consumer: BUY HD x3 stop 319.52 first target 332.5 (75% rule)
 [2026-10-22 11:33:39 ET] consumer: ['SHORT AMZN x10 (~$2518.7)', 'BUY LULU x12 (~$1212.36)', 'BUY LOW blocked: conviction 3 is below the minimum 4 (risk-off market)', 'BUY HD x3 (~$973.17) [deploy]']
 [2026-10-22 11:33:42 ET] Saved progress to GitHub (dashboard updated).
@@ -513,3 +424,79 @@
 [2026-10-22 14:15:45 ET] tech: SELL TXN - Position is underwater (-0.77%) and price is approaching the stop at 280.03. In 
 [2026-10-22 14:15:45 ET] tech: skipped this check: 'str' object has no attribute 'get'
 [2026-10-22 14:15:45 ET] healthcare: skipped this check: 'str' object has no attribute 'get'
+[2026-10-22 14:15:48 ET] Saved progress to GitHub (dashboard updated).
+[2026-10-22 14:19:40 ET] journal: updated 1 trade(s)
+[2026-10-22 14:19:43 ET] space: manager takes a look (must invest $7,072 more (75% rule))
+[2026-10-22 14:19:43 ET] LLM: groq qwen/qwen3.8-27b hit its daily limit: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per day
+[2026-10-22 14:19:44 ET] LLM: consumer news researcher answered (groq allam-2-7b)
+[2026-10-22 14:19:44 ET] healthcare: manager takes a look (price moves in ['MRNA'])
+[2026-10-22 14:19:44 ET] LLM: all providers busy, healthcare manager waits 70s
+[2026-10-22 14:19:44 ET] LLM: tech news researcher answered (groq allam-2-7b)
+[2026-10-22 14:20:54 ET] LLM: all providers busy, healthcare manager waits 19s
+[2026-10-22 14:21:13 ET] LLM: all providers busy, healthcare manager waits 5s
+[2026-10-22 14:21:18 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed; groq: groq qwen/qwen3.8-27b is out of quota for today)
+[2026-10-22 14:21:18 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-22 14:24:40 ET] journal: updated 2 trade(s)
+[2026-10-22 14:24:42 ET] entertainment: manager takes a look (must invest $4,122 more (75% rule))
+[2026-10-22 14:24:42 ET] space: manager takes a look (must invest $7,069 more (75% rule))
+[2026-10-22 14:24:42 ET] defense: manager takes a look (must invest $2,188 more (75% rule))
+[2026-10-22 14:24:42 ET] LLM: all providers busy, space manager waits 70s
+[2026-10-22 14:24:42 ET] LLM: all providers busy, defense manager waits 70s
+[2026-10-22 14:24:42 ET] LLM: all providers busy, tech news researcher waits 70s
+[2026-10-22 14:25:52 ET] LLM: all providers busy, space manager waits 20s
+[2026-10-22 14:25:52 ET] LLM: all providers busy, defense manager waits 20s
+[2026-10-22 14:25:52 ET] LLM: all providers busy, tech news researcher waits 20s
+[2026-10-22 14:26:12 ET] LLM: all providers busy, tech news researcher waits 5s
+[2026-10-22 14:26:12 ET] LLM: all providers busy, defense manager waits 5s
+[2026-10-22 14:26:12 ET] LLM: all providers busy, space manager waits 5s
+[2026-10-22 14:26:17 ET] financials: manager takes a look (must invest $3,535 more (75% rule))
+[2026-10-22 14:26:17 ET] LLM: all providers busy, financials manager waits 70s
+[2026-10-22 14:26:18 ET] LLM: consumer news researcher answered (groq allam-2-7b)
+[2026-10-22 14:26:18 ET] consumer: manager takes a look (scheduled look)
+[2026-10-22 14:26:18 ET] LLM: all providers busy, consumer manager waits 70s
+[2026-10-22 14:26:18 ET] LLM: healthcare news researcher answered (groq allam-2-7b)
+[2026-10-22 14:26:18 ET] healthcare: manager takes a look (big news on ['ABBV'])
+[2026-10-22 14:26:18 ET] LLM: all providers busy, healthcare manager waits 70s
+[2026-10-22 14:27:27 ET] LLM: all providers busy, financials manager waits 15s
+[2026-10-22 14:27:28 ET] LLM: all providers busy, consumer manager waits 14s
+[2026-10-22 14:27:28 ET] LLM: all providers busy, healthcare manager waits 14s
+[2026-10-22 14:27:42 ET] LLM: all providers busy, consumer manager waits 5s
+[2026-10-22 14:27:42 ET] LLM: all providers busy, healthcare manager waits 5s
+[2026-10-22 14:27:42 ET] LLM: all providers busy, financials manager waits 5s
+[2026-10-22 14:27:47 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-22 14:27:47 ET] space: skipped this check: space manager: no AI provider could answer ()
+[2026-10-22 14:27:47 ET] entertainment: skipped this check: entertainment manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
+)
+[2026-10-22 14:27:47 ET] tech: skipped this check: tech news researcher: no AI provider could answer (gemini: gemini failed)
+[2026-10-22 14:27:47 ET] consumer: skipped this check: consumer manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-22 14:27:47 ET] financials: skipped this check: financials manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-22 14:27:47 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-22 14:29:41 ET] defense: manager takes a look (must invest $2,188 more (75% rule))
+[2026-10-22 14:29:41 ET] entertainment: manager takes a look (must invest $4,135 more (75% rule))
+[2026-10-22 14:29:41 ET] space: manager takes a look (must invest $7,074 more (75% rule))
+[2026-10-22 14:29:42 ET] LLM: all providers busy, entertainment manager waits 70s
+[2026-10-22 14:29:42 ET] LLM: all providers busy, space manager waits 70s
+[2026-10-22 14:29:42 ET] LLM: all providers busy, tech news researcher waits 70s
+[2026-10-22 14:30:52 ET] LLM: all providers busy, space manager waits 20s
+[2026-10-22 14:30:52 ET] LLM: all providers busy, entertainment manager waits 20s
+[2026-10-22 14:30:52 ET] LLM: all providers busy, tech news researcher waits 20s
+[2026-10-22 14:31:11 ET] LLM: all providers busy, tech news researcher waits 5s
+[2026-10-22 14:31:11 ET] LLM: all providers busy, entertainment manager waits 5s
+[2026-10-22 14:31:11 ET] LLM: all providers busy, space manager waits 5s
+[2026-10-22 14:31:15 ET] consumer: TSLA trailing stop on (up 1.1%)
+[2026-10-22 14:31:16 ET] financials: manager takes a look (must invest $3,534 more (75% rule))
+[2026-10-22 14:31:17 ET] healthcare: manager takes a look (must invest $6,016 more (75% rule))
+[2026-10-22 14:31:17 ET] LLM: all providers busy, financials manager waits 70s
+[2026-10-22 14:31:17 ET] LLM: all providers busy, healthcare manager waits 70s
+[2026-10-22 14:31:17 ET] LLM: consumer news researcher answered (groq allam-2-7b)
+[2026-10-22 14:32:27 ET] LLM: all providers busy, healthcare manager waits 15s
+[2026-10-22 14:32:27 ET] LLM: all providers busy, financials manager waits 15s
+[2026-10-22 14:32:41 ET] LLM: all providers busy, financials manager waits 5s
+[2026-10-22 14:32:41 ET] LLM: all providers busy, healthcare manager waits 5s
+[2026-10-22 14:32:47 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
+)
+[2026-10-22 14:32:47 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-22 14:32:47 ET] entertainment: skipped this check: entertainment manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-22 14:32:47 ET] tech: skipped this check: tech news researcher: no AI provider could answer (gemini: gemini failed)
+[2026-10-22 14:32:47 ET] financials: skipped this check: financials manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-22 14:32:47 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
