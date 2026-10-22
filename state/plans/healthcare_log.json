@@ -245,5 +245,36 @@
       "SELL ABBV",
       "SHORT MRK x11 (~$1595.11)"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "13:32",
+    "trigger": "scheduled look",
+    "market_view": "Market is in risk-off, with SPY down 1.3% and QQQ down 2.6%, VIXY up 5.5%. Healthcare breadth is weak, only 53% of watched stocks up, and the index is down 2.6%. Long setups are mostly losing momentum or low volume, while shorting below VWAP/opening range is favored. Close is in about 2.5 hours, so no new positions in last 15 minutes and only trades for today's moves.",
+    "experiment": "Testing intraday momentum shorting in a risk-off healthcare tape by rotating out of a fading long into a breakdown short.",
+    "decisions": [
+      {
+        "symbol": "LLY",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Closed weak long with fading momentum; m60 -0.5%, rvol 1.24, stop -2.0% risk in risk-off tape.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "TMO",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "TMO broke below opening range and VWAP with m60 -1.1% and rvol 1.76; risk-off favors shorting weakness despite PT raise.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL LLY",
+      "SHORT TMO x1 (~$677.37)",
+      "WATCHLIST removed GILD",
+      "WATCHLIST added MRNA"
+    ]
   }
 ]

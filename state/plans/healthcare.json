@@ -1,78 +1,88 @@
 {
   "date": "2026-10-22",
-  "time": "13:06",
+  "time": "13:32",
   "trigger": "scheduled look",
-  "market_view": "The market is in a risk-off regime with SPY down 1.4%, QQQ down 2.7%, and VIXY up 5.4%. Healthcare breadth is weak, with only about 52% of watched stocks advancing, so longs need strong conviction and shorts are favored on breakdowns below VWAP or the opening range.",
+  "market_view": "Market is in risk-off, with SPY down 1.3% and QQQ down 2.6%, VIXY up 5.5%. Healthcare breadth is weak, only 53% of watched stocks up, and the index is down 2.6%. Long setups are mostly losing momentum or low volume, while shorting below VWAP/opening range is favored. Close is in about 2.5 hours, so no new positions in last 15 minutes and only trades for today's moves.",
   "decisions": [
     {
-      "symbol": "ABBV",
+      "symbol": "LLY",
       "action": "SELL",
       "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "other",
-      "reason": "AbbVie lacked a clean intraday setup, was near flat with a slight loss, and showed no opening-range or momentum continuation in a risk-off tape. Closing to redeploy capital."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "Closed weak long with fading momentum; m60 -0.5%, rvol 1.24, stop -2.0% risk in risk-off tape."
     },
     {
-      "symbol": "MRK",
+      "symbol": "TMO",
       "action": "SHORT",
-      "conviction": 4,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.03,
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "Merck broke down below VWAP and its opening range, with negative 15-minute and 60-minute momentum, higher relative volume, and a -3.2% daily decline. Market risk-off favors shorting weak momentum names."
+      "reason": "TMO broke below opening range and VWAP with m60 -1.1% and rvol 1.76; risk-off favors shorting weakness despite PT raise."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "TMO",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.05,
-      "setup": "momentum",
-      "reason": "Thermo Fisher showed an opening-range breakdown and remained below VWAP, despite bullish analyst price-target updates; momentum was still negative with rvol 1.8."
-    },
-    {
-      "symbol": "VRTX",
+      "symbol": "ISRG",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.05,
-      "setup": "news catalyst",
-      "reason": "Vertex received FDA orphan designation for Atumelnant and showed an opening-range breakout with positive early momentum, though later momentum was mixed."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout with m15 +0.4 and m60 +0.2, day +3.1; risk-off long half size but momentum strong."
     },
     {
       "symbol": "ABT",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.05,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Abbott received a Wells Fargo price-target raise and showed an opening-range breakout with rvol 1.45, but momentum was fading slightly."
+      "reason": "PT raise and OR breakout, news catalyst; m15 +0.1 but rvol 1.4."
     },
     {
-      "symbol": "REGN",
+      "symbol": "VRTX",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.05,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Regeneron showed an opening-range breakout with rvol 1.39 and positive intraday momentum, though the broader tape was risk-off."
+      "reason": "FDA orphan designation and OR breakout, rvol 1.09; news catalyst."
+    },
+    {
+      "symbol": "BMY",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "BioNTech Phase 3 launch, OR breakout; low rvol but news."
     },
     {
       "symbol": "UNH",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.05,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "UnitedHealth was upgraded by Mizuho and broke its opening range, but relative volume was weak, so conviction is moderate."
+      "reason": "Mizuho upgrade, OR breakout; low rvol but news."
     }
   ],
-  "experiment": "short momentum breakdowns in a risk-off healthcare tape",
+  "experiment": "Testing intraday momentum shorting in a risk-off healthcare tape by rotating out of a fading long into a breakdown short.",
   "watchlist_changes": {
-    "add": [],
-    "remove": []
+    "add": [
+      {
+        "symbol": "MRNA",
+        "reason": "Healthcare biotech in news with downside volume after ESMO leak; moving unusually."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "GILD",
+        "reason": "Quiet and no clear catalyst or breakout; rvol 0.85, m15/m60 weak."
+      }
+    ]
   }
 }
