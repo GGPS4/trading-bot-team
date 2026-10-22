@@ -1,55 +1,46 @@
 {
   "date": "2026-10-22",
-  "time": "13:59",
-  "trigger": "scheduled look",
+  "time": "14:10",
+  "trigger": "must invest $6,576 more (75% rule)",
+  "market_view": "The market is in a sharp risk-off regime (SPY -1.4%, QQQ -2.9%), favoring shorts on weak names or strong momentum longs on earnings gappers. Spotify (SPOT) is the clear leader with a +10.7% gap on earnings, showing high relative volume and holding above VWAP, while Comcast (CMCSA) is fading despite earnings beat due to restructuring charges and job cuts.",
   "decisions": [
     {
       "symbol": "SPOT",
-      "action": "COVER",
-      "qty": 3,
-      "reason": "Short is -1.36% and stock is +10.2% with strong volume (rvol 3.03). Earnings beat on subs, high conviction long setup. Stop out to preserve capital and rotate."
-    },
-    {
-      "symbol": "NFLX",
-      "action": "COVER",
-      "qty": 38,
-      "reason": "Short is -0.25% but stock is +3.2% and above VWAP. Wolfe downgrade is being ignored by price action. Stop out to avoid further drawdown in a strong mover."
-    },
-    {
-      "symbol": "SONY",
       "action": "BUY",
-      "qty": 80,
-      "reason": "Opening range breakout (OR 25.75-25.98, price 26.29). +4.7% day, rvol 1.41. Strong momentum in risk-off market. Tight stop below OR low.",
+      "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "setup": "earnings gap",
+      "reason": "Strong earnings catalyst with 306M subscribers and margin guidance. Trading well above VWAP with 2.98x relative volume. In a risk-off market, this is the strongest relative strength play. Buying half size due to market mood."
     },
     {
-      "symbol": "DIS",
-      "action": "BUY",
-      "qty": 20,
-      "reason": "Opening range breakout (OR 111.79-112.53, price 112.86). +0.9% day, above VWAP. RSI 91 is high but breakout is clear. Small size due to high RSI and risk-off.",
+      "symbol": "IMAX",
+      "action": "SHORT",
+      "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "take_profit_pct": 0.025,
+      "setup": "opening range breakdown",
+      "reason": "Breaking down below the opening range (53.06-53.27) in a risk-off market. Weak momentum (m15 -0.2%) and below VWAP. Shorting weakness is favored in this regime."
     },
     {
-      "symbol": "BAM",
-      "action": "BUY",
-      "qty": 45,
-      "reason": "Opening range breakout (OR 45.5-46.96, price 47.30). +2.7% day, above VWAP. RSI 63 is healthy. Good momentum play.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "symbol": "CMCSA",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Position is underwater (-0.9%) and momentum has turned negative (m60 -0.7%). The thesis of 'opening range breakout' has failed as it is trading below VWAP and fading. Closing to free up capital for stronger setups like SPOT."
     }
   ],
   "ranked_ideas": [
+    "SONY",
+    "BAM",
+    "DIS",
     "WMG",
-    "ROKU",
-    "FOXA",
-    "TTWO",
-    "EA"
+    "NFLX"
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

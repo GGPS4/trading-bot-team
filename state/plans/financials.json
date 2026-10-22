@@ -1,69 +1,55 @@
 {
   "date": "2026-10-22",
-  "time": "13:21",
-  "trigger": "must invest $2,278 more (75% rule)",
-  "market_view": "Market is in risk-off: SPY -1.3%, QQQ -2.6%, VIXY +5.8%, broad selloff. Most watchlist stocks are weak or flat, but a few breakdowns and resilient long breakouts are emerging. No broad reversal yet; focus on high-quality shorting and only strong long setups.",
-  "decisions": [
-    {
-      "symbol": "V",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "V cleared the opening range high at 411.41, held above VWAP, and showed rvol 1.36 with day +1.3. M&A speculation added a positive catalyst, but risk-off regime limits size and requires high conviction."
-    }
-  ],
+  "time": "14:08",
+  "trigger": "scheduled look",
+  "decisions": [],
   "ranked_ideas": [
     {
-      "symbol": "COIN",
-      "direction": "short",
-      "conviction": 4,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.04,
+      "symbol": "MS",
+      "side": "short",
       "setup": "momentum",
-      "reason": "Breakdown below opening range on bad Ireland settlement; short weakness favored in risk-off."
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "MS is trading below VWAP (-0.3%) and has confirmed an Opening Range Breakdown. In a risk-off market (SPY -1.5%, VIXY +6.5%), shorting weak financials with negative 15m momentum is the highest probability play. RSI is 39, showing weakness but not yet oversold to the point of a snapback, and the trend is down."
+    },
+    {
+      "symbol": "COIN",
+      "side": "short",
+      "setup": "momentum",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "COIN is down -5.7% on the day, well below VWAP (-1.8%), and has broken down below its opening range. The market is risk-off, which is highly unfavorable for high-beta crypto proxies. Negative 15m and 60m momentum suggests continued selling pressure. Shorting this weakness aligns with the current regime."
+    },
+    {
+      "symbol": "C",
+      "side": "short",
+      "setup": "momentum",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Citigroup is down -1.6% and has broken down below its opening range. It is trading below VWAP (-0.3%). While RSI is 36 (approaching oversold), the trend is flat-to-down and the broader market weakness supports a short entry on a breakdown. Lower conviction than MS/COIN due to lower volume (rvol 0.61)."
     },
     {
       "symbol": "GS",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
+      "side": "short",
       "setup": "momentum",
-      "reason": "Below VWAP and weak day momentum, rvol 1.38; financial sector selloff."
-    },
-    {
-      "symbol": "MS",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Below VWAP and weak, rvol 1.29; risk-off pressure."
-    },
-    {
-      "symbol": "WFC",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Trend down and below VWAP; weak long setup for shorting."
-    },
-    {
-      "symbol": "MA",
-      "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above 627.45, above VWAP, rvol 1.19; but trend down, risk-off half size."
+      "take_profit_pct": 0.03,
+      "reason": "Goldman Sachs is down -2.0% on the day and trading below VWAP (-0.6%). It is below its opening range high. The trend is down with negative momentum. Shorting in a risk-off environment is favored. RSI 44.7 is neutral but the price action is weak."
+    },
+    {
+      "symbol": "BAC",
+      "side": "short",
+      "setup": "momentum",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Bank of America is down -0.1% on the day but has a TD Cowen downgrade (PT cut to $56). It is trading below VWAP (-0.1%) and has negative 60m momentum. The 20d trend is down -9.7%. Shorting on the breakdown/weakness in a risk-off market is a valid setup, though the daily move is less severe than MS/COIN."
     }
   ],
-  "experiment": "Testing opening range breakout momentum in a risk-off regime with reduced size.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }
