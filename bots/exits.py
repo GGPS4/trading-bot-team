@@ -11,6 +11,7 @@ For every open trade:
 Everything still gets closed before the bell by the end-of-day rule.
 """
 import math
+import time
 
 from . import journal
 from .common import log, now_et, settings
@@ -42,7 +43,10 @@ def _place_or_update_stop(broker, e):
             e["stop_order_id"] = r.get("id", sid)  # a replace creates a new order id
             e["stop_sent"], e["stop_qty_sent"] = e["stop_price"], qty
         except Exception as err:
-            log(f"{e['symbol']}: could not move stop: {err}")
+            if "not changed" in str(err):
+                e["stop_sent"], e["stop_qty_sent"] = e["stop_price"], qty  # already right
+            else:
+                log(f"{e['symbol']}: could not move stop: {err}")
         return
     try:
         o = broker.stop_order(e["symbol"], side, qty, e["stop_price"])
@@ -61,6 +65,19 @@ def _place_or_update_stop(broker, e):
                         e["kind"] = "bracket" if x.get("legs") else e.get("kind")
                         log(f"{e['symbol']}: using the existing stop order at {e['stop_price']}")
                         return
+            # No stop among them: an old take-profit order is holding the shares. The exit manager
+            # handles targets itself, so cancel it and place a proper stop.
+            for x in broker.open_orders(e["symbol"]):
+                for leg in [x] + list(x.get("legs") or []):
+                    if leg.get("type") == "limit" and leg.get("side") == side and \
+                            leg.get("status") in ("new", "accepted", "held"):
+                        broker.cancel_order(leg["id"])
+                        log(f"{e['symbol']}: canceled an old take-profit order that was holding the shares")
+            time.sleep(1)
+            o = broker.stop_order(e["symbol"], side, qty, e["stop_price"])
+            e["stop_order_id"] = o.get("id")
+            e["stop_sent"], e["stop_qty_sent"] = e["stop_price"], qty
+            return
         except Exception:
             pass
         if not e.get("stop_warned"):
