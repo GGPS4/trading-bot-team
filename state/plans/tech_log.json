@@ -36,5 +36,59 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:10",
+    "trigger": "scheduled look",
+    "market_view": "The market is in a risk-off regime, with SPY down 1.3%, QQQ down 2.4%, and VIXY up 6.1%. Semis and AI names are breaking intraday, with several breakdowns below the opening range and VWAP, and news flow offered only modest support while price action favors shorting weak stocks.",
+    "experiment": "shorting breakdowns in risk-off regime",
+    "decisions": [
+      {
+        "symbol": "NVDA",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Breakdown below opening range and VWAP with negative momentum; risk-off exit from losing long.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "ORCL",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Long is underwater and momentum is weak; risk-off regime favors avoiding weak longs.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "QCOM",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Long stalled below VWAP and breakdown risk; exit to reduce risk in risk-off tape.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "AVGO",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "Breakdown below opening range and VWAP with rvol 2.07 and risk-off selling; short weak stocks.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL NVDA",
+      "SELL ORCL",
+      "SELL QCOM",
+      "SHORT AVGO x7 (~$2268.07)",
+      "SHORT AMD x5 (~$2557.3) [deploy]",
+      "SHORT TXN x5 (~$1393.72) [deploy]",
+      "SHORT AMAT blocked: one share costs $380.18, more than the $176.01 allowed",
+      "SHORT MU blocked: one share costs $874.80, more than the $176.01 allowed",
+      "SHORT ANET x1 (~$172.19) [deploy]",
+      "WATCHLIST removed CSCO",
+      "WATCHLIST added ONDS"
+    ]
   }
 ]

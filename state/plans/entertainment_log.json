@@ -16,5 +16,47 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:07",
+    "trigger": "scheduled look",
+    "market_view": "Market is in risk-off: SPY -1.3%, QQQ -2.4%, VIXY +6.1%. Entertainment group is cautiously negative after Netflix PT cuts and Spotify Q3 miss, though Spotify engagement beat. I am focusing on clear earnings/news setups and shorting weak momentum; longs are half size and need conviction +1.",
+    "experiment": "Implement a pre-market catalyst scan to trigger entries on earnings or major news releases",
+    "decisions": [
+      {
+        "symbol": "SPOT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Pre-market gap +5.8% on Q3 beat, rvol 4.88, strong earnings gap; risk-off long with half size, conviction 4 meets +1.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "SONY",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "OR breakout above 25.98, rvol 1.86, above VWAP, positive m15/m60; risk-off long half size, conviction 3.",
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 0.06
+      },
+      {
+        "symbol": "NFLX",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "m15 +0.8, m60 +1.1, rvol 1.73, above VWAP; but below 50-day and PT cuts, news cautious, momentum long with conviction 3.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.08
+      }
+    ],
+    "results": [
+      "BUY SPOT x0.899048 (~$511.61)",
+      "BUY SONY blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "BUY NFLX blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "SHORT CMCSA x44 (~$1003.42) [deploy]",
+      "SHORT TKO x5 (~$884.93) [deploy]",
+      "SHORT LYV x5 (~$869.67) [deploy]",
+      "WATCHLIST remove rejected ROKU"
+    ]
   }
 ]

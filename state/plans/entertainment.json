@@ -1,8 +1,92 @@
 {
-  "date": "2026-10-21",
-  "time": "11:27",
+  "date": "2026-10-22",
+  "time": "11:07",
   "trigger": "scheduled look",
-  "market_view": "The entertainment group is mixed, with no broad market- or company-specific catalyst strong enough to justify opening a position. NFLX is the clearest signal after a 4.8% decline on weak guidance and analyst downgrades, but it has already rebounded 1.9% from the open, making a new long entry premature. Several other names are technically extended, while ROKU's lawsuit is not material enough on its own.",
-  "decisions": [],
-  "experiment": ""
+  "market_view": "Market is in risk-off: SPY -1.3%, QQQ -2.4%, VIXY +6.1%. Entertainment group is cautiously negative after Netflix PT cuts and Spotify Q3 miss, though Spotify engagement beat. I am focusing on clear earnings/news setups and shorting weak momentum; longs are half size and need conviction +1.",
+  "decisions": [
+    {
+      "symbol": "SPOT",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "earnings gap",
+      "reason": "Pre-market gap +5.8% on Q3 beat, rvol 4.88, strong earnings gap; risk-off long with half size, conviction 4 meets +1."
+    },
+    {
+      "symbol": "SONY",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above 25.98, rvol 1.86, above VWAP, positive m15/m60; risk-off long half size, conviction 3."
+    },
+    {
+      "symbol": "NFLX",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.08,
+      "setup": "momentum",
+      "reason": "m15 +0.8, m60 +1.1, rvol 1.73, above VWAP; but below 50-day and PT cuts, news cautious, momentum long with conviction 3."
+    }
+  ],
+  "ranked_ideas": [
+    {
+      "symbol": "CMCSA",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "news catalyst",
+      "reason": "Q3 beat but Q4 restructuring charge and weak intraday momentum; risk-off short favored."
+    },
+    {
+      "symbol": "TKO",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "Breakdown below OR/VWAP, m60 -1.6, risk-off short."
+    },
+    {
+      "symbol": "LYV",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "Breakdown below OR/VWAP, weak trend, but low rvol; momentum short."
+    },
+    {
+      "symbol": "DIS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "opening range breakout",
+      "reason": "OR breakout, above VWAP, positive m15/m60; rvol 1.25 slightly low, but risk-off long half size."
+    },
+    {
+      "symbol": "WMG",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "OR breakdown/VWAP -0.6, overbought, weak momentum; risk-off short."
+    }
+  ],
+  "experiment": "Implement a pre-market catalyst scan to trigger entries on earnings or major news releases",
+  "watchlist_changes": {
+    "add": [],
+    "remove": [
+      {
+        "symbol": "ROKU",
+        "reason": "Low relative volume (rvol 0.43) and no fresh catalyst; no clean intraday setup."
+      }
+    ]
+  }
 }
