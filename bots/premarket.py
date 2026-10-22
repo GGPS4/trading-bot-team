@@ -72,9 +72,10 @@ def latest():
 def for_team(scan_data, tid):
     if not scan_data:
         return "no pre-market scan today"
+    short = lambda r: {"symbol": r["symbol"], "gap": f"{r['gap'] * 100:+.1f}%", "news": str(r.get("headline") or "")[:80]}  # noqa: E731
     return {"scanned_at": scan_data.get("time"),
-            "your_gappers": [r for r in scan_data.get("watched", []) if r.get("team") == tid],
-            "gappers_not_on_any_watchlist": scan_data.get("outside", [])[:12],
-            "note": "Gappers with real news often keep moving in the first hour. Let the first 5-15 minutes settle, "
-                    "then trade breakouts of the opening range (gap up) or breakdowns (gap down, shorting). "
-                    "Gaps with no news often fade back. Add strong outside gappers in your field to your watchlist."}
+            "your_gappers": [short(r) for r in scan_data.get("watched", []) if r.get("team") == tid][:8],
+            "gappers_not_on_any_watchlist": [short(r) for r in scan_data.get("outside", [])[:6]],
+            "note": "Gappers with real news often keep moving in the first hour; trade opening-range breakouts "
+                    "(gap up) or breakdowns (gap down, short). Gaps without news often fade. Add strong outside "
+                    "gappers in your field to your watchlist."}

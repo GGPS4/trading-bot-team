@@ -78,9 +78,11 @@ def for_manager(card, tid):
     t = (card or {}).get("by_team", {}).get(tid)
     if not t:
         return "No closed trades yet."
-    return {"last_30_days": t["overall"], "by_setup": t["by_setup"], "by_experiment": t["by_experiment"],
-            "note": f"Results with fewer than {MIN_TRADES} trades are not reliable yet. Lean toward setups with a "
-                    "win rate x average win that beats the losses (profit_factor above 1.2); cut setups that keep losing."}
+    short = lambda g: {k: f"{v['trades']} trades, {v['win_rate']:.0%} won, avg {v['avg_return'] * 100:+.2f}%, PF {v['profit_factor']}"  # noqa: E731
+                       for k, v in (g or {}).items() if v}
+    return {"overall": short({"all": t["overall"]}).get("all"), "by_setup": short(t["by_setup"]),
+            "by_experiment": short(dict(list(t["by_experiment"].items())[:4])),
+            "note": f"Under {MIN_TRADES} trades is too few to judge. Favor setups with PF (profit factor) above 1.2."}
 
 
 def for_president(card):

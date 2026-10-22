@@ -242,7 +242,7 @@ class FakeLLM:
                     "lessons": [f"Fake lesson {now_et():%m%d}"], "strategy_ideas": ["Test buying only above the 20-day average"],
                     "watchlist_changes": {"add": [{"symbol": "INTC", "reason": "earnings next week (fake)"}]} if role.startswith("tech") else {}}
         if role.endswith("manager"):
-            held = re.findall(r"'symbol': '([A-Z]+)'", prompt.split("Current positions held by your team:")[1].split("News researcher")[0])
+            held = re.findall(r"['\"]symbol['\"]: ?['\"]([A-Z]+)['\"]", prompt.split("Current positions held by your team:")[1].split("News researcher")[0])
             buys = r.sample(tickers, min(3, len(tickers)))
             d = [{"symbol": s, "action": r.choice(["BUY", "BUY", "SHORT"]), "conviction": r.choice([2, 3, 4, 5]), "stop_loss_pct": 0.04,
                   "take_profit_pct": 0.08, "setup": r.choice(["momentum", "VWAP bounce", "opening range breakout", "news catalyst"]),

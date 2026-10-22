@@ -167,12 +167,19 @@ class Gemini:
                     last = LLMError(f"gemini server error {r.status_code}")
                     time.sleep(5)
                     continue
-                if r.status_code >= 400:
-                    self._dead.add(model)
+                if r.status_code in (403, 404):
+                    self._dead.add(model)  # model gone or not allowed on this key
                     last = LLMError(f"{model}: {r.status_code} {r.text[:200]}")
                     break
-                parts = r.json()["candidates"][0]["content"]["parts"]
-                return parse_json("".join(p.get("text", "") for p in parts if not p.get("thought"))), model
+                if r.status_code >= 400:  # a problem with this one request; the model is still fine
+                    last = LLMError(f"{model}: {r.status_code} {r.text[:200]}")
+                    break
+                try:
+                    parts = r.json()["candidates"][0]["content"]["parts"]
+                    return parse_json("".join(p.get("text", "") for p in parts if not p.get("thought"))), model
+                except (KeyError, IndexError, ValueError) as e:
+                    last = LLMError(f"{model}: unusable answer ({e})")
+                    break
         raise last or LLMError("gemini failed")
 
 
@@ -262,7 +269,7 @@ def build_providers():
             "groq", "https://api.groq.com/openai/v1/chat/completions", "GROQ_API_KEY",
             "https://api.groq.com/openai/v1/models",
             ["openai/gpt-oss-120b", "qwen/qwen3.6-27b", "openai/gpt-oss-20b", "llama-3.3-70b-versatile"],
-            max_chars=24000),
+            max_chars=16000),
         "openrouter": OpenAIStyle(
             "openrouter", "https://openrouter.ai/api/v1/chat/completions", "OPENROUTER_API_KEY",
             "https://openrouter.ai/api/v1/models",

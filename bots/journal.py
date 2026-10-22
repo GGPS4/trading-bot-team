@@ -3,11 +3,13 @@
 This is the team's memory. Managers learn from it, the Reporter reports
 from it, and the dashboard shows it.
 """
+import threading
 import uuid
 
 from .common import STATE, log, now_et, read_json, settings, today, write_json
 
 TRADES = STATE / "journal" / "trades.json"
+LOCK = threading.RLock()  # the minute-by-minute exit checker and the main loop take turns with the journal
 BLOCKED = STATE / "journal" / "blocked.json"
 
 

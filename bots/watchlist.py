@@ -169,7 +169,9 @@ def for_team(disc, tid):
         return "not available"
     taken = {s for s, t in (disc.get("taken_by_other_teams") or {}).items() if t != tid}
     pick = lambda rows: [r for r in rows if (r["symbol"] if isinstance(r, dict) else r) not in taken]
-    return {"top_gainers": pick(disc.get("gainers") or [])[:15], "top_losers": pick(disc.get("losers") or [])[:15],
-            "most_active": pick(disc.get("most_active") or [])[:20],
-            "market_headlines": disc.get("headlines") or [],
-            "owned_by_other_teams (can't add)": sorted(taken)}
+    trim = lambda rows: [{"symbol": r["symbol"], "chg": r.get("change_pct")} if isinstance(r, dict) else r for r in rows]  # noqa: E731
+    return {"top_gainers": trim(pick(disc.get("gainers") or [])[:8]), "top_losers": trim(pick(disc.get("losers") or [])[:8]),
+            "most_active": pick(disc.get("most_active") or [])[:10],
+            "headlines": [f"{','.join((h.get('symbols') or [])[:3])}: {str(h.get('headline'))[:90]}"
+                          for h in (disc.get("headlines") or [])[:10]],
+            "note": "stocks other teams already watch were left out"}

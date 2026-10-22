@@ -1,4 +1,6 @@
 """Shared helpers: paths, config loading, JSON state files, time."""
+import collections
+import time
 import datetime as dt
 import json
 import os
@@ -54,8 +56,22 @@ def write_json(path, data) -> None:
     p.write_text(json.dumps(data, indent=2, default=str))
 
 
+LOG_LINES = collections.deque(maxlen=500)   # recent log lines, saved with each dashboard update
+PROBLEMS = collections.deque(maxlen=200)    # (time, line) for failures, shown on the dashboard
+_PROBLEM_WORDS = ("failed", "skipped", "error", "traceback", "could not", "no ai provider")
+
+
 def log(msg: str) -> None:
-    print(f"[{now_et():%Y-%m-%d %H:%M:%S} ET] {msg}", flush=True)
+    line = f"[{now_et():%Y-%m-%d %H:%M:%S} ET] {msg}"
+    print(line, flush=True)
+    LOG_LINES.append(line)
+    if any(w in msg.lower() for w in _PROBLEM_WORDS):
+        PROBLEMS.append((time.time(), msg))
+
+
+def recent_problems(minutes=60):
+    cutoff = time.time() - minutes * 60
+    return [m for t, m in PROBLEMS if t >= cutoff]
 
 
 def clamp(x, lo, hi):

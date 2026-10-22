@@ -4,7 +4,7 @@ Collects everything that happened across all teams, writes the daily
 report for the President, keeps the report history, and feeds the dashboard.
 """
 from . import journal
-from .common import DOCS_DATA, STATE, now_et, read_json, settings, today, write_json
+from .common import DOCS_DATA, STATE, now_et, read_json, recent_problems, settings, today, write_json
 
 HISTORY = STATE / "history.json"
 
@@ -134,6 +134,9 @@ def snapshot(broker, org, owner_of, budgets, mode):
     limit = settings().get("risk", {}).get("max_daily_loss_pct", 0.03)
     if last_equity and equity / last_equity - 1 <= -limit:
         issues.append(f"Daily loss limit hit ({equity / last_equity - 1:.1%}); no new buys today")
+    probs = recent_problems(60)
+    if probs:
+        issues.append(f"{len(probs)} problem(s) in the last hour, latest: {probs[-1][:160]}")
     errors = [b for b in blocked if "broker error" in (b.get("reason") or "")]
     if len(errors) >= 5:
         issues.append(f"{len(errors)} orders rejected by the broker today (see blocked orders)")

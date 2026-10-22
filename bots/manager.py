@@ -4,6 +4,8 @@ plan():   decide what to buy and sell, with stop-loss and take-profit levels.
 review(): after the close, study the losing trades and write lessons so
           the team doesn't repeat its mistakes.
 """
+import json
+
 from .common import STATE, now_et, read_json, settings, write_json
 from .scorecard import SETUPS
 
@@ -105,57 +107,34 @@ def plan(llm, team, orders, research, holdings, phase):
     prompt = f"""{timing}
 {strategy_text}
 Team companies (your watchlist, {len(team['tickers'])} stocks): {', '.join(team['tickers'])}
-Event calendar (earnings for your stocks, big US economic releases):
-{research.get('calendar') or 'not available'}
-Market discovery (whole market, for finding new watchlist names):
-{research.get('discovery') or 'not available'}
 Money: {orders.get('deployment', '')}
-
-Orders from your executive (from the President):
-{orders}
+Orders from your executive (from the President): {_j({k: v for k, v in orders.items() if k != 'deployment'})}
 
 Current positions held by your team:
-{holdings or 'none'}
+{_j(holdings) if holdings else 'none'}
 
-News researcher findings:
-{research.get('news')}
+Market mood (regime affects position sizes and the conviction needed for longs): {_mood(research.get('mood'))}
 
-Social media researcher findings (Reddit):
-{research.get('social')}
+Live prices and day-trading signals (one line per stock): day = change vs yesterday's close, open = vs today's
+open, look = since your last check, vwap = price vs today's volume-weighted average price, OR = opening range
+(first 30 min) with BREAKOUT/BREAKDOWN, m15/m60 = momentum, rvol = volume vs a normal day at this hour.
+Good long setups usually trade above VWAP with an opening-range breakout or strong 15m momentum and rvol > 1.5.
+Be wary of buying far above VWAP after a big run with fading momentum.
+{_intraday(research.get('intraday'))}
 
-Political & social media watch (Truth Social, X), posts that may move your stocks or the whole market:
-{research.get('market_watch') or 'nothing notable'}
+Daily history (5d/20d change, RSI 14: >70 overbought, <30 oversold, 50d = above the 50-day average):
+{_tech(research.get('technicals'))}
 
-After-hours / overnight findings (news and filings since the last close):
-{research.get('overnight') or 'none'}
-
-Market mood (whole market; regime affects position sizes and the conviction needed for longs):
-{research.get('mood') or 'not available'}
-
-Pre-market scan (stocks that gapped before today's open):
-{research.get('premarket') or 'none'}
-
-Live prices and day-trading signals right now (fractions unless noted):
-  change_today vs yesterday's close, from_open vs today's open, since_last_look vs your previous check;
-  vwap = today's volume-weighted average price, vs_vwap = price above(+)/below(-) it;
-  opening_range = [low, high] of the first 30 minutes, breakout_up / breakdown = price outside it;
-  momentum_15m / momentum_60m = change over the last 15 / 60 minutes; trend_5m from recent 5-minute bars;
-  rel_volume = today's volume vs a normal day at this hour (2.0 = twice normal; high volume confirms a move).
-  Good long setups usually have price above VWAP, an opening-range breakout or strong 15m momentum, and
-  rel_volume above 1.5. Be wary of buying far above VWAP after a big run with fading momentum.
-{research.get('intraday') or 'not available'}
-
-Daily price history (change_* are fractions, rsi_14 > 70 = overbought, < 30 = oversold):
-{research.get('technicals')}
-
-Your scorecard (your closed trades over the last 30 days, by setup and by experiment):
-{research.get('scorecard') or 'no closed trades yet'}
-
-Lessons you wrote after past trading days (follow them):
-{recent_lessons(team['id']) or 'none yet'}
-
-Strategy ideas you wanted to test:
-{notes.get('strategy_ideas') or 'none yet'}
+News researcher: {_findings(research.get('news'), 10)}
+Reddit researcher: {_findings(research.get('social'), 5)}
+Truth Social / X watch: {_findings(research.get('market_watch'), 5)}
+Overnight findings: {_j([_f1(f) for f in (research.get('overnight') or [])[:8]]) or 'none'}
+Pre-market scan: {_j(research.get('premarket') or 'none')}
+Event calendar: {_j(research.get('calendar') or 'not available')}
+Market discovery (for new watchlist names): {_j(research.get('discovery') or 'not available')}
+Your scorecard (last 30 days): {_j(research.get('scorecard') or 'no closed trades yet')}
+Lessons you wrote after past trading days (follow them): {_j(recent_lessons(team['id']) or 'none yet')}
+Strategy ideas you wanted to test: {_j(notes.get('strategy_ideas') or 'none yet')}
 
 {PLAN_FORMAT}"""
     return llm.ask_json("smart", f"{team['id']} manager", system, prompt)
@@ -199,3 +178,73 @@ Upcoming earnings and economic events:
     write_json(STATE / "manager_notes" / f"{team['id']}.json",
                {"date": date, "strategy_ideas": (out.get("strategy_ideas") or [])[:2]})
     return out
+
+
+# ---------- compact prompt pieces (keeps prompts small so free AI providers accept them) ----------
+def _j(x):
+    if isinstance(x, str):
+        return x
+    return json.dumps(x, separators=(",", ":"), default=str)
+
+
+def _p(v):
+    return f"{v * 100:+.1f}%" if isinstance(v, (int, float)) else "-"
+
+
+def _intraday(view):
+    if not view:
+        return "not available"
+    out = []
+    for sym, v in view.items():
+        parts = [f"{sym} ${v.get('price')}", f"day {_p(v.get('change_today'))}", f"open {_p(v.get('from_open'))}"]
+        if v.get("since_last_look") is not None:
+            parts.append(f"look {_p(v['since_last_look'])}")
+        if v.get("vs_vwap") is not None:
+            parts.append(f"vwap {_p(v['vs_vwap'])}")
+        if v.get("opening_range"):
+            lo, hi = v["opening_range"]
+            parts.append(f"OR {lo}-{hi}" + (" BREAKOUT" if v.get("breakout_up") else " BREAKDOWN" if v.get("breakdown") else ""))
+        if v.get("momentum_15m") is not None:
+            parts.append(f"m15 {_p(v['momentum_15m'])}")
+        if v.get("momentum_60m") is not None:
+            parts.append(f"m60 {_p(v['momentum_60m'])}")
+        if v.get("rel_volume") is not None:
+            parts.append(f"rvol {v['rel_volume']}")
+        if v.get("trend_5m"):
+            parts.append(f"trend {v['trend_5m']}")
+        out.append(", ".join(parts))
+    return "\n".join(out)
+
+
+def _tech(t):
+    if not t:
+        return "not available"
+    return "\n".join(f"{s}: 5d {_p(v.get('change_5d'))}, 20d {_p(v.get('change_20d'))}, RSI {v.get('rsi_14')}, "
+                     f"50d {'above' if v.get('above_50d_avg') else 'below'}, daily move {_p(v.get('daily_volatility'))}"
+                     for s, v in t.items())
+
+
+def _f1(f):
+    keep = {k: f.get(k) for k in ("symbol", "sentiment", "importance", "unconfirmed_rumor") if f.get(k) is not None}
+    for k in ("source", "market_wide", "affected"):
+        if f.get(k):
+            keep[k] = f[k]
+    keep["summary"] = str(f.get("summary") or f.get("post") or "")[:160]
+    if f.get("why"):
+        keep["why"] = str(f["why"])[:100]
+    return keep
+
+
+def _findings(r, n):
+    if not r:
+        return "none"
+    items = [_f1(f) for f in (r.get("findings") or [])[:n]]
+    return _j({"overall": str(r.get("overall") or "")[:200], "urgent": r.get("urgent") or [], "findings": items})
+
+
+def _mood(m):
+    if not m:
+        return "not available"
+    return (f"{m.get('regime')} ({m.get('why')}); SPY {_p(m.get('spy'))}, QQQ {_p(m.get('qqq'))}, "
+            f"fear gauge VIXY {_p(m.get('fear_vixy'))}, {_p(m.get('breadth')).lstrip('+')} of watched stocks up. "
+            f"{m.get('note', '')}")

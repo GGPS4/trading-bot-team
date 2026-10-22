@@ -142,12 +142,10 @@ def for_team(cal, tid):
         return "not available"
     today = now_et().date().isoformat()
     mine = [e for e in cal.get("earnings", []) if e.get("team") == tid]
+    short = lambda e: {"symbol": e["symbol"], "date": e["date"], "when": e.get("when")}  # noqa: E731
     return {
-        "earnings_today": [e for e in mine if e["date"] == today],
-        "earnings_coming": [e for e in mine if e["date"] > today],
-        "economy_next_48h": [e for e in upcoming_economy(48)],
-        "note": ("Stocks that reported before today's open often gap and trade heavy volume: good day-trading "
-                 "candidates once the first 15-30 minutes settle. Stocks reporting after today's close are sold "
-                 "before the close anyway. Expect sharp, fast moves right after high-impact economic releases; "
-                 "new buys are paused for a few minutes around them."),
+        "earnings_today": [short(e) for e in mine if e["date"] == today],
+        "earnings_coming": [short(e) for e in mine if e["date"] > today][:8],
+        "economy_next_48h": [{"time": e["time"], "event": e["event"], "impact": e["impact"]} for e in upcoming_economy(48)][:8],
+        "note": "Stocks that reported before the open often gap on heavy volume. New buys pause around high-impact releases.",
     }

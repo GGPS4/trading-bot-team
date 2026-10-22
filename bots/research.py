@@ -242,7 +242,7 @@ def load_seen():
 
 
 def save_seen(seen):
-    write_json(SEEN_NEWS, sorted(x for x in seen if x is not None)[-5000:])
+    write_json(SEEN_NEWS, sorted((x for x in seen if x is not None), key=str)[-5000:])
 
 
 def recent_overnight(research, hours=30):
