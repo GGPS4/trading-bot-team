@@ -8,9 +8,11 @@ config/settings.yaml decides which bots use which provider first (ai_routing).
 If a provider is out of quota, rate-limited or down, the request moves to the
 next one automatically. Every bot asks for a JSON answer so the code can read it.
 """
+import collections
 import json
 import os
 import re
+import threading
 import time
 
 import requests
@@ -79,7 +81,15 @@ def check_budget():
         raise LLMError(f"Daily AI budget for {BUCKET['name']} used up ({cap} calls). Stop-losses still work.")
 
 
+_USAGE_LOCK = threading.Lock()
+
+
 def count_call(provider):
+    with _USAGE_LOCK:
+        _count_call(provider)
+
+
+def _count_call(provider):
     u = read_json(USAGE, {})
     u = {k: v for k, v in u.items() if k >= today()[:8]}  # keep this month only
     u[_key()] = u.get(_key(), 0) + 1
@@ -363,10 +373,22 @@ class Router:
         self.providers = build_providers()
         self.cooldown = {}  # provider -> time it can be used again
         self.calls = 0
+        self.lock = threading.Lock()          # managers ask in parallel; keep the bookkeeping safe
+        self.sent = {}                        # provider -> times of recent requests (pacing)
+        self.team_log = collections.defaultdict(collections.deque)  # team id -> times of its AI answers
         ready = [p for p, v in self.providers.items() if v.available]
         if not ready:
             raise LLMError("No AI provider keys are set (GEMINI_API_KEY, GROQ_API_KEY, ...).")
         log(f"LLM: providers ready: {', '.join(ready)}")
+
+    def team_calls(self, team, minutes=60):
+        """AI answers this team used in the last `minutes` (for the budget planner)."""
+        with self.lock:
+            q = self.team_log[team]
+            while q and q[0] < time.time() - 3600:
+                q.popleft()
+            cutoff = time.time() - minutes * 60
+            return sum(1 for t in q if t >= cutoff)
 
     def resolve(self, name):  # kept for `run.py check`
         return self.providers["gemini"].resolve(name)
@@ -396,21 +418,36 @@ class Router:
                 continue
             if caps.get(name) and provider_calls_today(name) >= caps[name]:
                 continue
-            if self.cooldown.get(name, 0) > time.time():
-                waiting.append(self.cooldown[name])
-                continue
+            with self.lock:
+                if self.cooldown.get(name, 0) > time.time():
+                    waiting.append(self.cooldown[name])
+                    continue
+                # Pacing: stay just under each provider's requests-per-minute limit instead of hitting it.
+                rpm = (cfg.get("ai_rpm") or {}).get(name)
+                q = self.sent.setdefault(name, collections.deque())
+                while q and q[0] < time.time() - 60:
+                    q.popleft()
+                if rpm and len(q) >= rpm:
+                    waiting.append(q[0] + 60)
+                    continue
+                q.append(time.time())
             try:
                 result, model = p.ask(tier, system, prompt)
             except RateLimited as e:
-                self.cooldown[name] = time.time() + 60  # per-minute limit: rest a minute
+                with self.lock:
+                    self.cooldown[name] = time.time() + 60  # per-minute limit: rest a minute
                 waiting.append(self.cooldown[name])
                 errors.append(str(e))
                 continue
             except (LLMError, requests.RequestException, KeyError, IndexError, ValueError) as e:
-                self.cooldown[name] = time.time() + 90
+                with self.lock:
+                    self.cooldown[name] = time.time() + 90
                 errors.append(f"{name}: {e}")
                 continue
-            self.calls += 1
+            with self.lock:
+                self.calls += 1
+                team = role.split(" ", 1)[0]
+                self.team_log[team].append(time.time())
             count_call(name)
             log(f"LLM: {role} answered ({name} {model})")
             return result, [], errors

@@ -134,6 +134,10 @@ def snapshot(broker, org, owner_of, budgets, mode):
     limit = settings().get("risk", {}).get("max_daily_loss_pct", 0.03)
     if last_equity and equity / last_equity - 1 <= -limit:
         issues.append(f"Daily loss limit hit ({equity / last_equity - 1:.1%}); no new buys today")
+    pf = read_json(STATE / "research" / "_preflight.json", {})
+    if pf.get("date") == date and not pf.get("all_ok", True):
+        issues.append("Morning system check: " + ", ".join(c["name"] for c in pf.get("checks", []) if not c["ok"])
+                      + " failed")
     probs = recent_problems(60)
     if probs:
         issues.append(f"{len(probs)} problem(s) in the last hour, latest: {probs[-1][:160]}")
@@ -175,6 +179,7 @@ def write_dashboard(snap, extra=None):
     data["calendar"] = read_json(STATE / "research" / "_calendar.json", {})
     data["scorecard"] = read_json(STATE / "scorecard.json", {})
     data["mood"] = read_json(STATE / "research" / "_mood.json", {})
+    data["preflight"] = read_json(STATE / "research" / "_preflight.json", {})
     data["premarket"] = read_json(STATE / "research" / "_premarket.json", {})
     data["overnight"] = {tid: (read_json(STATE / "research" / f"{tid}.json", {}).get("overnight") or [])[:8]
                          for tid in snap["teams"]}

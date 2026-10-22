@@ -223,6 +223,9 @@ class FakeLLM:
     """Returns believable answers, plus a few bad ideas so the risk rules get tested."""
     calls = 0
 
+    def team_calls(self, team, minutes=60):
+        return 0
+
     def ask_json(self, tier, role, system, prompt):
         self.calls += 1
         r = random.Random(f"{role}{now_et():%Y%m%d%H}")
