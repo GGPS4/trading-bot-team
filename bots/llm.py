@@ -135,51 +135,72 @@ class Gemini:
             log(f"LLM: gemini {name} -> {self._resolved[name]}")
         return self._resolved[name]
 
-    def ask(self, tier, system, prompt):
+    def _family(self, family, lite=False):
+        """All usable models of a family, newest first (non-lite before lite)."""
+        skip = tuple(x for x in _SKIP if x != "lite") if lite else _SKIP
+        cands = [n for n in self._list_models()
+                 if re.match(rf"^gemini-[\d.]+-{family}(-|$)", n) and not any(x in n for x in skip)]
+        rank = lambda n: ("lite" not in n,  # noqa: E731
+                          tuple(int(x) for x in re.match(r"gemini-([\d.]+)", n).group(1).split(".") if x),
+                          "preview" not in n, -len(n))
+        return sorted(cands, key=rank, reverse=True)
+
+    def chain(self, tier):
         cfg = settings().get("models", {})
-        chain = [cfg.get("smart", "auto-pro"), cfg.get("fast", "auto-flash")] if tier == "smart" \
-            else [cfg.get("fast", "auto-flash")]
-        last = None
-        for mname in chain:
-            try:
-                model = self.resolve(mname)
-            except LLMError as e:
-                last = e
-                continue
+        names = []
+        for want in ([cfg.get("smart", "auto-pro")] if tier == "smart" else []) + [cfg.get("fast", "auto-flash")]:
+            if want.startswith("auto-"):
+                try:
+                    names += self._family(want.split("-", 1)[1], lite=(want == "auto-flash"))[:4]
+                except LLMError:
+                    continue
+            else:
+                names.append(want)
+        seen = set()
+        return [n for n in names if not (n in seen or seen.add(n))]
+
+    def ask(self, tier, system, prompt):
+        """Each Gemini model has its own per-minute limit, so when one is busy try the next."""
+        cool = self.__dict__.setdefault("_cool", {})
+        last, busy = None, False
+        for model in self.chain(tier):
             if model in self._dead:
+                continue
+            if cool.get(model, 0) > time.time():
+                busy = True
                 continue
             body = {"systemInstruction": {"parts": [{"text": system}]},
                     "contents": [{"role": "user", "parts": [{"text": prompt}]}],
                     "generationConfig": {"responseMimeType": "application/json", "temperature": 0.4}}
-            for attempt in range(2):
+            try:
                 r = requests.post(f"{GEMINI_API}/models/{model}:generateContent",
-                                  headers={"x-goog-api-key": self.key}, json=body, timeout=240)
-                if r.status_code == 429:
-                    if "limit: 0" in r.text or '"limit": 0' in r.text:
-                        self._dead.add(model)
-                        last = LLMError(f"{model} has no quota on this key")
-                        break
-                    if attempt == 0:
-                        time.sleep(8)
-                        continue
-                    raise RateLimited(f"gemini {model} rate limited")
-                if r.status_code >= 500:
-                    last = LLMError(f"gemini server error {r.status_code}")
-                    time.sleep(5)
-                    continue
-                if r.status_code in (403, 404):
-                    self._dead.add(model)  # model gone or not allowed on this key
-                    last = LLMError(f"{model}: {r.status_code} {r.text[:200]}")
-                    break
-                if r.status_code >= 400:  # a problem with this one request; the model is still fine
-                    last = LLMError(f"{model}: {r.status_code} {r.text[:200]}")
-                    break
-                try:
-                    parts = r.json()["candidates"][0]["content"]["parts"]
-                    return parse_json("".join(p.get("text", "") for p in parts if not p.get("thought"))), model
-                except (KeyError, IndexError, ValueError) as e:
-                    last = LLMError(f"{model}: unusable answer ({e})")
-                    break
+                                  headers={"x-goog-api-key": self.key}, json=body, timeout=180)
+            except requests.RequestException as e:
+                last = LLMError(f"{model}: {e}")
+                continue
+            if r.status_code == 429:
+                if "limit: 0" in r.text or '"limit": 0' in r.text:
+                    self._dead.add(model)
+                    last = LLMError(f"{model} has no quota on this key")
+                else:
+                    cool[model] = time.time() + 60
+                    busy = True
+                continue
+            if r.status_code in (403, 404):
+                self._dead.add(model)
+                last = LLMError(f"{model}: {r.status_code} {r.text[:200]}")
+                continue
+            if r.status_code >= 400:
+                last = LLMError(f"{model}: {r.status_code} {r.text[:200]}")
+                continue
+            try:
+                parts = r.json()["candidates"][0]["content"]["parts"]
+                return parse_json("".join(p.get("text", "") for p in parts if not p.get("thought"))), model
+            except (KeyError, IndexError, ValueError) as e:
+                last = LLMError(f"{model}: unusable answer ({e})")
+                continue
+        if busy:
+            raise RateLimited("gemini: every model is at its per-minute limit")
         raise last or LLMError("gemini failed")
 
 
@@ -193,16 +214,18 @@ class OpenAIStyle:
         self.available = bool(self.key)
         self.prefer, self.max_chars, self.json_mode = prefer, max_chars, json_mode
         self.h = {"Authorization": f"Bearer {self.key}", "Content-Type": "application/json", **(extra_headers or {})}
-        self._model = None
+        self._cands = None
         self._tried = set()
+        self._cool = {}
 
-    def pick_model(self):
-        if self._model:
-            return self._model
+    def candidates(self):
+        """Preferred models that exist on this account, then (OpenRouter) any other free model."""
+        if self._cands is not None:
+            return self._cands
         override = (settings().get("ai_models") or {}).get(self.name)
         if override:
-            self._model = override
-            return override
+            self._cands = [override]
+            return self._cands
         ids = []
         if self.models_url:
             try:
@@ -212,54 +235,67 @@ class OpenAIStyle:
                 ids = [m.get("id") or m.get("name") for m in items if isinstance(m, dict)]
             except Exception:
                 ids = []
+        ids = [i for i in ids if i]
         if self.name == "openrouter" and ids:
             # only free models, never safety/guard classifiers or vision-only models
-            ids = [i for i in ids if i and i.endswith(":free")
+            ids = [i for i in ids if i.endswith(":free")
                    and not any(b in i for b in ("guard", "safety", "vision", "embed", "audio"))]
+        cands = []
         for p in self.prefer:
-            if p in self._tried:
-                continue
-            if not ids or p in ids:
-                self._model = p
-                break
-            match = next((i for i in ids if p in i and i not in self._tried), None)
-            if match:
-                self._model = match
-                break
-        if not self._model:
-            raise LLMError(f"{self.name}: none of the preferred models are available")
-        log(f"LLM: {self.name} -> {self._model}")
-        return self._model
+            if not ids:
+                cands.append(p)
+            elif p in ids:
+                cands.append(p)
+            else:
+                cands += [i for i in ids if p in i and i not in cands][:2]
+        if self.name == "openrouter":
+            cands += [i for i in ids if i not in cands][:6]
+        self._cands = list(dict.fromkeys(cands))
+        log(f"LLM: {self.name} models -> {self._cands[:6]}")
+        return self._cands
 
     def ask(self, tier, system, prompt):
-        for _ in range(len(self.prefer)):
-            model = self.pick_model()
+        """Rate limits are per model, so when one model is busy, try the next one."""
+        busy, last = False, None
+        for model in self.candidates():
+            if model in self._tried:
+                continue
+            if self._cool.get(model, 0) > time.time():
+                busy = True
+                continue
             body = {"model": model, "temperature": 0.4,
                     "messages": [{"role": "system", "content": system + " Reply with valid JSON only."},
                                  {"role": "user", "content": _trim(prompt, self.max_chars)}]}
             if self.json_mode:
                 body["response_format"] = {"type": "json_object"}
-            r = requests.post(self.url, headers=self.h, json=body, timeout=180)
-            if r.status_code == 429:
-                raise RateLimited(f"{self.name} rate limited")
+            try:
+                r = requests.post(self.url, headers=self.h, json=body, timeout=180)
+            except requests.RequestException as e:
+                last = LLMError(f"{self.name} {model}: {e}")
+                continue
+            if r.status_code in (413, 429):  # per-minute limit or request too big for this model's limit
+                self._cool[model] = time.time() + 60
+                busy = True
+                continue
             if r.status_code in (400, 404) and ("model" in r.text.lower()):
-                self._tried.add(model)  # model retired or unknown: try the next preferred one
-                self._model = None
+                self._tried.add(model)  # model retired or unknown
                 continue
             if r.status_code >= 400:
-                raise LLMError(f"{self.name}: {r.status_code} {r.text[:200]}")
+                last = LLMError(f"{self.name} {model}: {r.status_code} {r.text[:200]}")
+                continue
             try:
                 text = r.json()["choices"][0]["message"].get("content") or ""
-            except (ValueError, KeyError, IndexError):
-                raise LLMError(f"{self.name}: unexpected reply {r.status_code} {r.text[:160]!r}")
-            try:
                 return parse_json(text), model
-            except ValueError:
-                if self.name == "openrouter":  # this free model can't do JSON well: use another next time
-                    self._tried.add(model)
-                    self._model = None
-                raise LLMError(f"{self.name}: answer was not JSON: {text[:120]!r}")
-        raise LLMError(f"{self.name}: no working model")
+            except (ValueError, KeyError, IndexError):
+                if self.name == "openrouter":
+                    self._tried.add(model)  # this free model can't do JSON well
+                last = LLMError(f"{self.name} {model}: answer was not JSON")
+                continue
+        if busy:
+            raise RateLimited(f"{self.name}: every model is at its per-minute limit")
+        if last is None and self._tried:
+            self._tried.clear()  # everything was ruled out: give them all another chance next time
+        raise last or LLMError(f"{self.name}: no working model")
 
 
 def build_providers():
@@ -268,7 +304,9 @@ def build_providers():
         "groq": OpenAIStyle(
             "groq", "https://api.groq.com/openai/v1/chat/completions", "GROQ_API_KEY",
             "https://api.groq.com/openai/v1/models",
-            ["openai/gpt-oss-120b", "qwen/qwen3.6-27b", "openai/gpt-oss-20b", "llama-3.3-70b-versatile"],
+            ["openai/gpt-oss-120b", "llama-3.3-70b-versatile", "meta-llama/llama-4-maverick",
+             "meta-llama/llama-4-scout", "qwen/qwen3.6-27b", "qwen/qwen3-32b", "openai/gpt-oss-20b",
+             "moonshotai/kimi-k2"],
             max_chars=16000),
         "openrouter": OpenAIStyle(
             "openrouter", "https://openrouter.ai/api/v1/chat/completions", "OPENROUTER_API_KEY",
