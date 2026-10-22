@@ -165,5 +165,55 @@
       "SHORT MAR blocked: team already has the maximum number of positions",
       "SHORT TSLA blocked: already holding this stock"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "12:47",
+    "trigger": "scheduled look",
+    "market_view": "Market is in risk-off: SPY -1.2%, QQQ -2.4%, index down ~2.4%, VIXY +4.5%. Consumer discretionary breadth is mixed but momentum is weak. I favor shorting breakdowns below VWAP or the opening range in this environment, while longs require strong relative strength and are half size.",
+    "experiment": "momentum shorting after breakdown in risk-off regime",
+    "decisions": [
+      {
+        "symbol": "DPZ",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Stalled opening-range breakout with weak follow-through (look -0.5%, m60 -0.5%, rvol 0.42); risk-off favors avoiding weak longs.",
+        "stop_loss_pct": 0.0163,
+        "take_profit_pct": 0.0287
+      },
+      {
+        "symbol": "LULU",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Fading momentum and negative Lululemon settlement news; exit long.",
+        "stop_loss_pct": 0.0168,
+        "take_profit_pct": 0.0232
+      },
+      {
+        "symbol": "CMG",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "Breakdown below opening range and VWAP, weak trend, risk-off; short weakness.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "BKNG",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "Breakdown below opening range/VWAP with weak momentum and risk-off; short despite BTIG headline.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL DPZ",
+      "SELL LULU",
+      "SHORT CMG x83 (~$2339.36)",
+      "SHORT BKNG blocked: one share costs $162.13, more than the $15.67 allowed",
+      "SHORT MAR blocked: one share costs $398.09, more than the $15.67 allowed",
+      "BUY MCD x5 (~$1254.5) [deploy]",
+      "WATCHLIST remove rejected DPZ"
+    ]
   }
 ]

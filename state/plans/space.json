@@ -1,56 +1,47 @@
 {
   "date": "2026-10-22",
-  "time": "12:29",
-  "trigger": "must invest $5,110 more (75% rule)",
-  "market_view": "The market is in a sharp risk-off regime with QQQ down 2.2% and VIX spiking, making long positions high-risk and favoring short setups on weak aerospace names. Most of the watchlist has broken down below the opening range and VWAP, presenting clear short opportunities, while SPCX remains the only name trading above its 50-day average despite today's drop.",
+  "time": "12:47",
+  "trigger": "must invest $5,136 more (75% rule)",
   "decisions": [
     {
+      "symbol": "FLY",
+      "action": "SELL",
+      "reason": "Position is underwater (-0.9%) and trading below VWAP with negative momentum (m15 -0.3%, m60 -0.5%). In a risk-off market, holding a weak long is dangerous. Closing to free up capital for stronger short setups or better longs."
+    },
+    {
       "symbol": "HWM",
-      "action": "short",
-      "reason": "Strong breakdown below opening range (196.25-203.05) and VWAP with high relative volume (4.4x). The stock is down 6.8% on the day and has a very low RSI (15.2), indicating significant weakness in a risk-off environment. Shorting this weakness aligns with the current market mood.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "action": "BUY",
+      "side": "short",
+      "reason": "Strong short setup: -7.2% day, breakdown below opening range, high relative volume (4.2x), and RSI at 15.2 (oversold but in a strong downtrend). Market is risk-off, favoring shorts on weak names. Tight stop above recent resistance.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "momentum"
     },
     {
       "symbol": "ASTS",
-      "action": "short",
-      "reason": "Clear breakdown below the opening range (38.92-40.3) and VWAP. The stock is down 5.4% with elevated volume (1.61x rvol). In a risk-off market, this weakness is likely to persist, offering a good risk-reward for a short.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "action": "BUY",
+      "side": "short",
+      "reason": "Weakness: -6.6% day, breakdown below opening range, below VWAP, and high relative volume (1.58x). Trend is down. Shorting into weakness in a risk-off environment.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "momentum"
     },
     {
       "symbol": "RKLB",
-      "action": "short",
-      "reason": "Trading below VWAP and has broken down below the opening range (51.48-52.97). The stock is down 4.5% with a very low RSI (15.9). The combination of technical breakdown and bearish market sentiment supports a short entry.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum"
-    },
-    {
-      "symbol": "LUNR",
-      "action": "short",
-      "reason": "Broken down below the opening range (10.47-10.93) and is trading below VWAP. The stock is down 4.1% with an oversold RSI (22.1). In a risk-off environment, this weakness is a valid short setup.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum"
-    },
-    {
-      "symbol": "PL",
-      "action": "short",
-      "reason": "Trading below VWAP and has broken down below the opening range (13.25-13.6). The stock is down 4.2% with an oversold RSI (23.7). The technicals and market mood favor a short position.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "action": "BUY",
+      "side": "short",
+      "reason": "Weakness: -5.2% day, breakdown below opening range, below VWAP. Trend is down. Adding to short exposure on weak aerospace names.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "momentum"
     }
   ],
   "ranked_ideas": [
+    "LUNR",
+    "PL",
+    "RDW",
     "BKSY",
-    "IRDM",
-    "GE",
-    "BA",
-    "TDG"
+    "IRDM"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

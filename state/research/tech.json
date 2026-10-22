@@ -276,6 +276,15 @@
   "news": {
     "findings": [
       {
+        "symbol": "NVDA",
+        "sentiment": -0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "The Super Micro pullback tied to AI supply fears and profit-taking was linked to the Nvidia partnership narrative, suggesting near-term sentiment weakness.",
+        "source": "Benzinga",
+        "time": "12:44"
+      },
+      {
         "symbol": "TXN",
         "sentiment": 0.7,
         "importance": 3,
@@ -403,8 +412,8 @@
       }
     ],
     "urgent": [],
-    "overall": "Overall mood remains neutral to slightly positive, with a modest bullish note from Barclays on TXN.",
-    "items_read": 58
+    "overall": "The Information Technology group is showing a cautious, risk-off mood as AI supply chain worries and profit-taking hit recent AI-linked names. NVDA-related sentiment is being framed as temporarily weaker despite raised guidance and partnership context, while the broader sector awaits more confirmed news.",
+    "items_read": 59
   },
   "social": {
     "findings": [],
@@ -631,181 +640,385 @@
   },
   "intraday": {
     "AAPL": {
-      "price": 345.78,
-      "change_today": 0.0054,
-      "from_open": 0.0026,
+      "price": 345.59,
+      "change_today": 0.0048,
+      "from_open": 0.002,
       "day_high": 347.27,
       "day_low": 342.29,
-      "since_last_look": 0.0016
+      "since_last_look": 0.001,
+      "vwap": 344.87,
+      "vs_vwap": 0.0021,
+      "opening_range": [
+        344.68,
+        347.27
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0015,
+      "momentum_60m": 0.0008,
+      "rel_volume": 0.83,
+      "trend_5m": "flat"
     },
     "MSFT": {
-      "price": 525.81,
-      "change_today": -0.0131,
-      "from_open": -0.014,
+      "price": 525.31,
+      "change_today": -0.0141,
+      "from_open": -0.0149,
       "day_high": 533.26,
       "day_low": 522.52,
-      "since_last_look": -0.0006
+      "since_last_look": -0.0015,
+      "vwap": 526.19,
+      "vs_vwap": -0.0017,
+      "opening_range": [
+        525.17,
+        533.26
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.002,
+      "momentum_60m": 0.0009,
+      "rel_volume": 0.99,
+      "trend_5m": "flat"
     },
     "NVDA": {
-      "price": 213.1,
-      "change_today": -0.0397,
-      "from_open": -0.0186,
+      "price": 213.13,
+      "change_today": -0.0395,
+      "from_open": -0.0184,
       "day_high": 218.86,
       "day_low": 212.57,
-      "since_last_look": -0.0035
+      "since_last_look": -0.0034,
+      "vwap": 214.98,
+      "vs_vwap": -0.0086,
+      "opening_range": [
+        215.68,
+        218.86
+      ],
+      "breakout_up": false,
+      "breakdown": true,
+      "momentum_15m": -0.0043,
+      "momentum_60m": 0.0005,
+      "rel_volume": 1.88,
+      "trend_5m": "flat"
     },
     "AVGO": {
-      "price": 324.63,
-      "change_today": -0.0392,
-      "from_open": -0.0081,
+      "price": 325.35,
+      "change_today": -0.0371,
+      "from_open": -0.0059,
       "day_high": 330.755,
       "day_low": 322.13,
-      "since_last_look": -0.0025
+      "since_last_look": -0.0002,
+      "vwap": 326.2,
+      "vs_vwap": -0.0026,
+      "opening_range": [
+        326.45,
+        330.71
+      ],
+      "breakout_up": false,
+      "breakdown": true,
+      "momentum_15m": -0.0005,
+      "momentum_60m": 0.0084,
+      "rel_volume": 1.43,
+      "trend_5m": "flat"
     },
     "ORCL": {
-      "price": 125.75,
-      "change_today": -0.0259,
+      "price": 125.76,
+      "change_today": -0.0258,
       "from_open": -0.0044,
       "day_high": 127.92,
       "day_low": 125.31,
-      "since_last_look": -0.0042
+      "since_last_look": -0.0041,
+      "vwap": 126.67,
+      "vs_vwap": -0.0072,
+      "opening_range": [
+        125.31,
+        127.72
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0048,
+      "momentum_60m": -0.0033,
+      "rel_volume": 1.1,
+      "trend_5m": "flat"
     },
     "CRM": {
-      "price": 250.23,
-      "change_today": 0.0351,
-      "from_open": 0.0262,
+      "price": 249.02,
+      "change_today": 0.0301,
+      "from_open": 0.0213,
       "day_high": 251.23,
       "day_low": 243.83,
-      "since_last_look": 0.0022
+      "since_last_look": -0.0027,
+      "vwap": 247.87,
+      "vs_vwap": 0.0046,
+      "opening_range": [
+        243.83,
+        248.6
+      ],
+      "breakout_up": true,
+      "breakdown": false,
+      "momentum_15m": -0.0032,
+      "momentum_60m": 0.0015,
+      "rel_volume": 1.63,
+      "trend_5m": "flat"
     },
     "AMD": {
-      "price": 512.52,
-      "change_today": -0.0725,
-      "from_open": -0.0218,
+      "price": 512.58,
+      "change_today": -0.0724,
+      "from_open": -0.0217,
       "day_high": 529.64,
       "day_low": 508.7,
-      "since_last_look": -0.0064
+      "since_last_look": -0.0063,
+      "vwap": 517.19,
+      "vs_vwap": -0.0089,
+      "opening_range": [
+        519.92,
+        529.64
+      ],
+      "breakout_up": false,
+      "breakdown": true,
+      "momentum_15m": -0.0081,
+      "momentum_60m": 0.0032,
+      "rel_volume": 1.4,
+      "trend_5m": "flat"
     },
     "ADBE": {
-      "price": 270.6,
-      "change_today": 0.0609,
-      "from_open": 0.0487,
+      "price": 270.06,
+      "change_today": 0.0587,
+      "from_open": 0.0466,
       "day_high": 271.91,
       "day_low": 256.695,
-      "since_last_look": 0.0036
+      "since_last_look": 0.0016,
+      "vwap": 266.12,
+      "vs_vwap": 0.0148,
+      "opening_range": [
+        256.69,
+        262.12
+      ],
+      "breakout_up": true,
+      "breakdown": false,
+      "momentum_15m": -0.0003,
+      "momentum_60m": 0.0044,
+      "rel_volume": 2.0,
+      "trend_5m": "flat"
     },
     "IBM": {
-      "price": 249.76,
-      "change_today": -0.0064,
-      "from_open": 0.0193,
+      "price": 249.48,
+      "change_today": -0.0076,
+      "from_open": 0.0181,
       "day_high": 255.75,
       "day_low": 241.95,
-      "since_last_look": 0.0035
+      "since_last_look": 0.0024,
+      "vwap": 247.09,
+      "vs_vwap": 0.0097,
+      "opening_range": [
+        241.95,
+        255.75
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0006,
+      "momentum_60m": 0.0018,
+      "rel_volume": 4.26,
+      "trend_5m": "flat"
     },
     "INTU": {
-      "price": 356.07,
-      "change_today": 0.0613,
-      "from_open": 0.0459,
+      "price": 355.64,
+      "change_today": 0.06,
+      "from_open": 0.0446,
       "day_high": 358.025,
       "day_low": 337.58,
-      "since_last_look": 0.0012
+      "since_last_look": -0.0001,
+      "vwap": 349.91,
+      "vs_vwap": 0.0164,
+      "opening_range": [
+        337.58,
+        346.1
+      ],
+      "breakout_up": true,
+      "breakdown": false,
+      "momentum_15m": -0.0017,
+      "momentum_60m": -0.0003,
+      "rel_volume": 1.65,
+      "trend_5m": "flat"
     },
     "QCOM": {
-      "price": 174.8,
-      "change_today": -0.0175,
-      "from_open": 0.0084,
+      "price": 174.27,
+      "change_today": -0.0205,
+      "from_open": 0.0054,
       "day_high": 178.7,
       "day_low": 172.3,
-      "since_last_look": -0.001
+      "since_last_look": -0.0041,
+      "vwap": 175.63,
+      "vs_vwap": -0.0077,
+      "opening_range": [
+        172.3,
+        177.36
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0047,
+      "momentum_60m": -0.003,
+      "rel_volume": 1.18,
+      "trend_5m": "down"
     },
     "TXN": {
-      "price": 281.28,
-      "change_today": -0.012,
-      "from_open": -0.0103,
+      "price": 280.5,
+      "change_today": -0.0148,
+      "from_open": -0.0131,
       "day_high": 286.27,
       "day_low": 276.74,
-      "since_last_look": -0.0012
+      "since_last_look": -0.004,
+      "vwap": 282.08,
+      "vs_vwap": -0.0056,
+      "opening_range": [
+        280.64,
+        286.27
+      ],
+      "breakout_up": false,
+      "breakdown": true,
+      "momentum_15m": -0.0049,
+      "momentum_60m": 0.0019,
+      "rel_volume": 2.47,
+      "trend_5m": "flat"
     },
     "NOW": {
-      "price": 157.38,
-      "change_today": 0.0279,
-      "from_open": 0.0206,
+      "price": 156.71,
+      "change_today": 0.0235,
+      "from_open": 0.0162,
       "day_high": 157.55,
       "day_low": 153.59,
-      "since_last_look": 0.0041
+      "since_last_look": -0.0002,
+      "vwap": 156.32,
+      "vs_vwap": 0.0024,
+      "opening_range": [
+        153.59,
+        157.28
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0027,
+      "momentum_60m": 0.0004,
+      "rel_volume": 3.33,
+      "trend_5m": "flat"
     },
     "AMAT": {
-      "price": 381.13,
+      "price": 381.12,
       "change_today": -0.0675,
       "from_open": -0.0073,
       "day_high": 389.64,
       "day_low": 378.49,
-      "since_last_look": -0.0072
+      "since_last_look": -0.0073,
+      "vwap": 383.68,
+      "vs_vwap": -0.0067,
+      "opening_range": [
+        381.01,
+        389.44
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0043,
+      "momentum_60m": -0.0002,
+      "rel_volume": 1.53,
+      "trend_5m": "down"
     },
     "MU": {
-      "price": 862.76,
-      "change_today": -0.0557,
-      "from_open": -0.0213,
+      "price": 862.12,
+      "change_today": -0.0564,
+      "from_open": -0.022,
       "day_high": 908.03,
-      "day_low": 863.06,
-      "since_last_look": -0.0088
+      "day_low": 861.7,
+      "since_last_look": -0.0095,
+      "vwap": 883.14,
+      "vs_vwap": -0.0238,
+      "opening_range": [
+        877.45,
+        906.5
+      ],
+      "breakout_up": false,
+      "breakdown": true,
+      "momentum_15m": -0.0086,
+      "momentum_60m": -0.0109,
+      "rel_volume": 1.65,
+      "trend_5m": "down"
     },
     "PANW": {
-      "price": 359.91,
-      "change_today": 0.0366,
-      "from_open": 0.0131,
+      "price": 358.68,
+      "change_today": 0.033,
+      "from_open": 0.0097,
       "day_high": 365.48,
       "day_low": 354.97,
-      "since_last_look": -0.0003
+      "since_last_look": -0.0037,
+      "vwap": 360.3,
+      "vs_vwap": -0.0045,
+      "opening_range": [
+        355.0,
+        365.48
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0072,
+      "momentum_60m": 0.0047,
+      "rel_volume": 1.8,
+      "trend_5m": "flat"
     },
     "ANET": {
-      "price": 171.73,
-      "change_today": -0.0685,
-      "from_open": -0.0374,
+      "price": 171.9,
+      "change_today": -0.0676,
+      "from_open": -0.0365,
       "day_high": 178.5,
       "day_low": 170.76,
-      "since_last_look": -0.0075
+      "since_last_look": -0.0065,
+      "vwap": 173.52,
+      "vs_vwap": -0.0093,
+      "opening_range": [
+        174.55,
+        178.41
+      ],
+      "breakout_up": false,
+      "breakdown": true,
+      "momentum_15m": -0.0048,
+      "momentum_60m": 0.0048,
+      "rel_volume": 1.36,
+      "trend_5m": "down"
     }
   },
   "discovery": {
     "top_gainers": [
       {
+        "symbol": "SLXNW",
+        "chg": 146.67
+      },
+      {
         "symbol": "SHFS",
-        "chg": 107.85
+        "chg": 136.12
       },
       {
         "symbol": "SHFSW",
-        "chg": 94.44
+        "chg": 119.84
       },
       {
         "symbol": "STAK",
-        "chg": 75.29
+        "chg": 63.72
       },
       {
         "symbol": "NCPL",
-        "chg": 56.37
-      },
-      {
-        "symbol": "NWCLW",
-        "chg": 53.66
-      },
-      {
-        "symbol": "SLXNW",
-        "chg": 48.33
-      },
-      {
-        "symbol": "SAIQ",
-        "chg": 43.08
+        "chg": 51.91
       },
       {
         "symbol": "XLABW",
-        "chg": 42.68
+        "chg": 42.63
+      },
+      {
+        "symbol": "SAIQ",
+        "chg": 37.62
+      },
+      {
+        "symbol": "VFSWW",
+        "chg": 34.8
       }
     ],
     "top_losers": [
       {
         "symbol": "SDSTW",
-        "chg": -95.34
+        "chg": -76.7
       },
       {
         "symbol": "CDTTW",
@@ -813,19 +1026,15 @@
       },
       {
         "symbol": "TTMX",
-        "chg": -54.92
+        "chg": -57.78
       },
       {
         "symbol": "FPSX",
-        "chg": -46.45
+        "chg": -44.75
       },
       {
         "symbol": "BEATW",
-        "chg": -42.08
-      },
-      {
-        "symbol": "DAICW",
-        "chg": -41.18
+        "chg": -41.53
       },
       {
         "symbol": "NXGLW",
@@ -834,12 +1043,16 @@
       {
         "symbol": "MKDWW",
         "chg": -38.1
+      },
+      {
+        "symbol": "ZKPW",
+        "chg": -36.91
       }
     ],
     "most_active": [
       "SHFS",
-      "SOXL",
       "NOK",
+      "SOXL",
       "XXII",
       "SDST",
       "CJMB",
@@ -849,16 +1062,16 @@
       "TSLL"
     ],
     "headlines": [
-      "MLTX: Watching MoonLake Immunotherapeutics; Shares Trading Higher After AbbVie Reports Phase 3 I",
-      "IBM: Barclays Maintains Overweight on IBM, Raises Price Target to $277",
-      "LDOS: Leidos Receives Five-Year, $95M Defense Logistics Agency Contract To Support Enterprise Lo",
-      "OHB: OHB SE Successfully Completes Eu-BEST Rocket Engine Testing Project",
-      "AFX: ZEISS Medical Technology Announces Commercial Availability of CT LUCIA 621P IOL in Japan",
-      "PNDX.B: Pandox AB Reports Q3 2026 Financial Results",
-      "ELUX.B: Electrolux Scheduled to Report Third Quarter 2026 Financial Results",
-      "BEKB: Bekaert Receives OMP Supply Chain Innovation & Excellence Award",
-      "OERL: NAMIC Signs Memorandum of Understanding with Bavaria Makes",
-      "SESG: Deutsche Bank Research Cuts SES PT, Keeps Buy Rating"
+      "GROW: Molten Ventures plc Reports Half-Year Financial Results and Declares Interim Dividend",
+      "DFS: Jefferies Downgrades DFS Furniture plc to Neutral",
+      "DFS: DFS Furniture plc CFO Dominique Highfield Granted Share Award",
+      "SAG: Science Group plc Announces Share Repurchase",
+      "SAG: Science Group plc Announces Further Share Repurchase",
+      "CLIG: CEO Cooper Abbott Purchases 6,000 Shares",
+      "NIOX: NIOX Group plc Announces Block Listing Cancellation",
+      "PBEE: PensionBee Releases White Paper on Automatic Rollover IRAs",
+      "NCC: NCC Group Announces Share Buyback",
+      "AT.: Sand Grove Capital Management Reports 8.88% Stake in Ashtead Technology"
     ],
     "note": "stocks other teams already watch were left out"
   },
@@ -901,21 +1114,26 @@
     "note": "Stocks that reported before the open often gap on heavy volume. New buys pause around high-impact releases."
   },
   "scorecard": {
-    "overall": "5 trades, 20% won, avg -2.74%, PF 0.06",
+    "overall": "7 trades, 29% won, avg -2.17%, PF 0.06",
     "by_setup": {
-      "untagged": "5 trades, 20% won, avg -2.74%, PF 0.06"
+      "untagged": "5 trades, 20% won, avg -2.74%, PF 0.06",
+      "momentum": "1 trades, 0% won, avg -1.63%, PF 0.0",
+      "opening range breakout": "1 trades, 100% won, avg +0.11%, PF None"
     },
-    "by_experiment": {},
+    "by_experiment": {
+      "shorting breakdowns in risk-off regime": "1 trades, 0% won, avg -1.63%, PF 0.0",
+      "Testing continuation shorts after opening-range breakdowns in a risk-off tape, using momentum and news/confirmed weaknes": "1 trades, 100% won, avg +0.11%, PF None"
+    },
     "note": "Under 5 trades is too few to judge. Favor setups with PF (profit factor) above 1.2."
   },
   "mood": {
-    "time": "2026-10-22T12:14-04:00",
+    "time": "2026-10-22T12:39-04:00",
     "regime": "risk_off",
-    "spy": -0.0105,
-    "qqq": -0.0214,
-    "fear_vixy": 0.036,
-    "breadth": 0.57,
-    "why": "index down -2.1%",
+    "spy": -0.0122,
+    "qqq": -0.0243,
+    "fear_vixy": 0.045,
+    "breadth": 0.54,
+    "why": "index down -2.4%",
     "note": "Market is falling hard or fear is spiking. Longs are half size and need conviction +1. Shorting weak stocks (below VWAP, breaking down) is favored."
   },
   "premarket": {

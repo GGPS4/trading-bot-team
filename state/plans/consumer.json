@@ -1,75 +1,106 @@
 {
   "date": "2026-10-22",
-  "time": "12:08",
+  "time": "12:47",
   "trigger": "scheduled look",
-  "market_view": "The market is in a clear risk-off regime with QQQ down -2.2% and VIX spiking, favoring short setups over longs. Consumer Discretionary names are showing mixed performance, with defensive staples like MCD holding up while high-beta names like TSLA and AMZN are under pressure. I need to deploy capital to meet the 75% investment minimum by targeting weak names breaking down.",
+  "market_view": "Market is in risk-off: SPY -1.2%, QQQ -2.4%, index down ~2.4%, VIXY +4.5%. Consumer discretionary breadth is mixed but momentum is weak. I favor shorting breakdowns below VWAP or the opening range in this environment, while longs require strong relative strength and are half size.",
   "decisions": [
     {
-      "symbol": "MAR",
-      "action": "SHORT",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakdown",
-      "reason": "MAR is trading below its opening range (400.78-402.69) and VWAP (-0.8%) with high relative volume (2.56) and a downtrend. In a risk-off market, this breakdown is a strong short signal."
+      "symbol": "DPZ",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0163,
+      "take_profit_pct": 0.0287,
+      "setup": "momentum",
+      "reason": "Stalled opening-range breakout with weak follow-through (look -0.5%, m60 -0.5%, rvol 0.42); risk-off favors avoiding weak longs."
     },
     {
-      "symbol": "TSLA",
-      "action": "SHORT",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "symbol": "LULU",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0168,
+      "take_profit_pct": 0.0232,
       "setup": "news catalyst",
-      "reason": "TSLA is below VWAP (-0.8%) and showing negative 15m momentum (-0.4%) despite a pre-market gap down on Q3 delivery concerns. The high volume (rvol 2.65) confirms the selling pressure, making it a prime short candidate in this risk-off environment."
+      "reason": "Fading momentum and negative Lululemon settlement news; exit long."
+    },
+    {
+      "symbol": "CMG",
+      "action": "SHORT",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Breakdown below opening range and VWAP, weak trend, risk-off; short weakness."
+    },
+    {
+      "symbol": "BKNG",
+      "action": "SHORT",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Breakdown below opening range/VWAP with weak momentum and risk-off; short despite BTIG headline."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "RCL",
+      "symbol": "MAR",
       "direction": "short",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "other",
-      "reason": "RCL is below VWAP (-0.1%) with a downtrend and low momentum, fitting the risk-off short profile."
-    },
-    {
-      "symbol": "ABNB",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "other",
-      "reason": "ABNB is below VWAP (-0.2%) with a downtrend and low relative volume, suggesting weakness that could continue in a falling market."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Breakdown below opening range with high volume; risk-off favors momentum shorts."
     },
     {
       "symbol": "MCD",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "MCD is above VWAP (+0.8%) with an opening range breakout and an uptrend, providing a defensive long option if risk-off sentiment eases."
-    },
-    {
-      "symbol": "LOW",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "LOW is above VWAP (+1.0%) with a strong opening range breakout and high relative volume (2.31), indicating potential strength."
+      "reason": "OR breakout above VWAP and uptrend; but low rvol, risk-off half size."
     },
     {
       "symbol": "NKE",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "NKE is above VWAP (+1.5%) with an opening range breakout, but its high RSI (87.4) suggests it may be overbought, limiting upside potential."
+      "reason": "Barclays PT raise and OR breakout; low rvol, risk-off half size."
+    },
+    {
+      "symbol": "SBUX",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "OR breakout but low rvol; mild continuation setup."
+    },
+    {
+      "symbol": "TJX",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "OR breakout but low rvol; mild continuation setup."
     }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "momentum shorting after breakdown in risk-off regime",
+  "watchlist_changes": {
+    "add": [
+      {
+        "symbol": "MAR",
+        "reason": "Breakdown below opening range with high volume and risk-off setup."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "DPZ",
+        "reason": "Stalled breakout and weak follow-through; no longer a watchlist priority."
+      }
+    ]
+  }
 }

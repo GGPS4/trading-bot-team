@@ -197,5 +197,36 @@
       "SHORT SPOT x3 (~$1713.4)",
       "BUY CMCSA blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "12:47",
+    "trigger": "big news on ['SPOT']",
+    "market_view": "The market is in a risk-off regime with the index down about 2.6% and VIXY up 5.2%, so longs are half size and need high conviction. Spotify surged after Q3 earnings and is a clear catalyst, while CMCSA broke its opening range on high volume despite a Q4 restructuring charge. Broadly, the tape is weak, favoring shorting breakdowns, but selective names are showing intraday momentum.",
+    "experiment": "Implement a pre-market catalyst scan to trigger entries on earnings or major news releases",
+    "decisions": [
+      {
+        "symbol": "SONY",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Closing the losing long to free a position slot and rotate into the best current setup; SONY failed to hold the opening range breakout with weak m15/m60 and downtrend.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "CMCSA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "CMCSA broke above the opening range on high volume (rvol 2.21) despite Q4 restructuring charge, showing demand; earnings beat but charge limits conviction, and risk-off calls for half size with conviction +1.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL SONY",
+      "BUY CMCSA x55 (~$1262.8)",
+      "WATCHLIST remove rejected WBD",
+      "WATCHLIST remove rejected EA"
+    ]
   }
 ]
