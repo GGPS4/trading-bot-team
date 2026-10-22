@@ -270,7 +270,8 @@ class OpenAIStyle:
         if self.name == "openrouter":
             cands += [i for i in ids if i not in cands][:6]
         elif ids:  # every other chat model has its own limits too: use them as backups
-            skip = ("whisper", "guard", "tts", "playai", "orpheus", "distil", "embed", "vision", "prompt")
+            skip = ("whisper", "guard", "tts", "playai", "orpheus", "distil", "embed", "vision", "prompt",
+                    "moderation", "ocr", "pixtral", "voxtral", "codestral", "devstral")
             cands += [i for i in ids if i not in cands and not any(x in i.lower() for x in skip)][:6]
         self._cands = list(dict.fromkeys(cands))
         log(f"LLM: {self.name} models -> {self._cands[:6]}")
@@ -336,6 +337,16 @@ def build_providers():
              "meta-llama/llama-4-scout", "qwen/qwen3.6-27b", "qwen/qwen3-32b", "openai/gpt-oss-20b",
              "moonshotai/kimi-k2"],
             max_chars=16000),
+        "cerebras": OpenAIStyle(
+            "cerebras", "https://api.cerebras.ai/v1/chat/completions", "CEREBRAS_API_KEY",
+            "https://api.cerebras.ai/v1/models",
+            ["gpt-oss-120b", "qwen-3-235b", "llama-3.3-70b", "llama-4", "qwen-3-32b", "llama3.1-8b"],
+            max_chars=24000),
+        "mistral": OpenAIStyle(
+            "mistral", "https://api.mistral.ai/v1/chat/completions", "MISTRAL_API_KEY",
+            "https://api.mistral.ai/v1/models",
+            ["mistral-medium-latest", "mistral-large-latest", "mistral-small-latest", "magistral-medium-latest"],
+            max_chars=60000),
         "openrouter": OpenAIStyle(
             "openrouter", "https://openrouter.ai/api/v1/chat/completions", "OPENROUTER_API_KEY",
             "https://openrouter.ai/api/v1/models",
