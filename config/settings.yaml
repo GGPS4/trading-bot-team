@@ -63,6 +63,43 @@ watchlist:
   max_changes_per_look: 3    # most adds (and most drops) in one manager look
   min_price: 5               # don't add penny stocks
 
+# How trades are exited (checked about once a minute while the market is open).
+exits:
+  check_every_seconds: 60
+  scale_out: true
+  scale_out_fraction: 0.5     # at the first target, sell half...
+                              # ...and move the stop on the rest to the entry price
+  trailing_stop: true
+  trail_activate_pct: 0.01    # once a trade is up 1%, the stop starts following the price
+  trail_pct: 0.008            # ...staying 0.8% behind the best price since entry
+
+# Position size by volatility: every trade risks about the same dollars if its stop is hit.
+#   size = (team budget x risk_per_trade_pct) / stop distance, capped by max_position_pct.
+# Stops are at least stop_vs_volatility x the stock's typical daily move, so jumpy stocks
+# get wider stops and smaller positions.
+sizing:
+  risk_per_trade_pct: 0.004   # 0.4% of the team budget per trade
+  stop_vs_volatility: 0.35
+
+# Short selling: profit when a stock falls (borrow shares, sell now, buy back later).
+# Whole shares of easy-to-borrow stocks only. Closed before the bell like everything else.
+shorting:
+  enabled: true
+  max_short_pct_of_budget: 0.5   # at most half of a team's budget in shorts
+
+# Market mood: SPY, QQQ, the VIXY fear gauge and how many watched stocks are up.
+#   caution  -> longs 25% smaller;  risk_off -> longs half size and need conviction +1
+market_mood:
+  caution_index_drop: 0.006
+  risk_off_index_drop: 0.012
+  risk_off_fear_jump: 0.06
+  caution_breadth: 0.30
+
+# Pre-market scan (during after-hours watch): gappers from 8:00 AM ET until the open.
+premarket:
+  scan_from: "08:00"
+  min_gap_pct: 0.02
+
 # Earnings dates (Nasdaq) and big US economic releases (CPI, jobs, Fed) are fed to the
 # managers. New buys pause briefly around HIGH-impact releases during market hours.
 events:
