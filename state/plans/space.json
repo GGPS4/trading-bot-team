@@ -1,33 +1,96 @@
 {
-  "date": "2026-10-21",
-  "time": "11:26",
+  "date": "2026-10-22",
+  "time": "11:04",
   "trigger": "scheduled look",
-  "market_view": "Space and aerospace stocks are rallying on strong Q3 earnings, especially SpaceX, which is up ~10% and supported by analyst upgrades. Momentum is positive but some names like GE face mixed analyst sentiment, so focus on the clear winners while staying within tight risk limits.",
+  "market_view": "Market is in risk-off with SPY down 1.4% and QQQ down 2.4%, VIXY up 6.5%. Most space and aerospace watchlist names are breaking below VWAP or the opening range, but GE shows a high-volume bounce with UBS news. I favor tight-risk trades and will avoid chasing breakdowns.",
   "decisions": [
     {
-      "symbol": "SPCX",
-      "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "reason": "SpaceX surged 10% after a strong earnings beat; multiple analysts raised price targets (importance 5, sentiment 1.0) providing a high\u2011conviction entry."
-    },
-    {
-      "symbol": "LUNR",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "reason": "LUNR rose 4.7% on sympathy with SpaceX earnings; RSI near oversold (31) and sentiment 0.7 (importance 3) give a modest\u2011conviction buy."
+      "symbol": "PL",
+      "action": "SELL",
+      "conviction": 2,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Breakdown below opening range/VWAP, m15 negative, trend down; exit weak long."
     },
     {
       "symbol": "RDW",
+      "action": "SELL",
+      "conviction": 2,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Below VWAP and momentum negative, rvol low; exit weak long."
+    },
+    {
+      "symbol": "RKLB",
+      "action": "SELL",
+      "conviction": 2,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Opening range breakdown, below VWAP, m15/m60 negative; exit weak long."
+    },
+    {
+      "symbol": "GE",
       "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "reason": "Redwire signed an MoU with EnduroSat expanding European space\u2011infrastructure market; sentiment 0.6, importance 4 supports a solid conviction entry."
+      "conviction": 3,
+      "stop_loss_pct": 0.025,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "UBS maintained Buy and raised PT to 380; rvol 2.85, m60 +0.4, day -2.0, inside OR; news/volume bounce in risk-off, half size."
     }
   ],
-  "experiment": "Testing a strict 20% of total budget position\u2011size cap per ticker while requiring conviction\u202f\u2265\u202f3 for new buys."
+  "ranked_ideas": [
+    {
+      "symbol": "SPCX",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "OR breakdown, below VWAP, m15/m60 negative, rvol 4.68; news but breakdown in risk-off."
+    },
+    {
+      "symbol": "HWM",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "OR breakdown, below VWAP, high rvol 5.36, m15 -0.4, m60 -1.8."
+    },
+    {
+      "symbol": "FLY",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Firefly PDR completed; m60 +0.9; news catalyst."
+    },
+    {
+      "symbol": "TDG",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "rvol 2.13; m60 +0.8; momentum."
+    },
+    {
+      "symbol": "BKSY",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "OR breakdown, below VWAP, news but rvol low; weak."
+    }
+  ],
+  "experiment": "volume-spike filter for entries following earnings or contract announcements",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

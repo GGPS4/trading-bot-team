@@ -57,7 +57,10 @@
     "order_id": "3fd6fd17-ec55-46a4-994c-7f6829cbd75b",
     "status": "open",
     "entry_price": 52.94,
-    "entry_time": "2026-10-21T14:58:10.330103651Z"
+    "entry_time": "2026-10-21T14:58:10.330103651Z",
+    "exit_order_id": "6ae452a9-aa78-4204-846e-d983e2b5dc08",
+    "exit_reason": "manager_sell",
+    "exit_note": "Opening range breakdown, below VWAP, m15/m60 negative; exit weak long."
   },
   {
     "id": "tech-NVDA-202610211102-5fbe",
@@ -327,7 +330,10 @@
     "order_id": "c1181c08-3cde-4180-9eae-9690716ab041",
     "status": "open",
     "entry_price": 8.55,
-    "entry_time": "2026-10-21T15:26:57.798301817Z"
+    "entry_time": "2026-10-21T15:26:57.798301817Z",
+    "exit_order_id": "feb4ff45-ecee-4b5c-97bd-544267ce011b",
+    "exit_reason": "manager_sell",
+    "exit_note": "Below VWAP and momentum negative, rvol low; exit weak long."
   },
   {
     "id": "space-LUNR-202610211126-5c38",
@@ -435,7 +441,7 @@
     "status": "open",
     "stop_order_id": null,
     "high": 325.57,
-    "low": 323.07
+    "low": 322.83
   },
   {
     "id": "financials-BLK-202610220930-8eb1",
@@ -504,14 +510,14 @@
     "dollars": 2153.72,
     "est_price": 431.77,
     "entry_price": 431.77,
-    "stop_price": 436.54,
+    "stop_price": 437.07,
     "take_profit_price": 493.83,
     "conviction": null,
     "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
     "order_id": null,
     "status": "open",
     "stop_order_id": null,
-    "high": 440.06,
+    "high": 440.595,
     "low": 431.77,
     "trail_active": true
   },
@@ -567,7 +573,7 @@
     "status": "open",
     "stop_order_id": null,
     "high": 130.18,
-    "low": 126.305
+    "low": 126.18
   },
   {
     "id": "space-PL-202610220930-815a",
@@ -590,7 +596,10 @@
     "status": "open",
     "stop_order_id": null,
     "high": 13.67,
-    "low": 13.21
+    "low": 13.165,
+    "exit_order_id": "b177944b-f306-4efa-9e16-b694ea5080d5",
+    "exit_reason": "manager_sell",
+    "exit_note": "Breakdown below opening range/VWAP, m15 negative, trend down; exit weak long."
   },
   {
     "id": "tech-QCOM-202610220930-47c4",
@@ -613,7 +622,7 @@
     "status": "open",
     "stop_order_id": null,
     "high": 178.94,
-    "low": 174.42
+    "low": 174.09
   },
   {
     "id": "financials-SCHW-202610220930-1994",
@@ -636,6 +645,126 @@
     "status": "open",
     "stop_order_id": null,
     "high": 92.295,
-    "low": 91.67
+    "low": 91.61
+  },
+  {
+    "id": "space-SPCX-202610221104-e8a3",
+    "date": "2026-10-22",
+    "time": "11:04",
+    "team": "space",
+    "symbol": "SPCX",
+    "side": "short",
+    "kind": "shares",
+    "qty": 17,
+    "qty_open": 17,
+    "dollars": 2545.24,
+    "est_price": 149.72,
+    "stop_price": 151.97,
+    "first_stop": 151.97,
+    "take_profit_price": 145.23,
+    "risk_dollars": 38.18,
+    "conviction": 3,
+    "reason": "[75% invested rule] OR breakdown, below VWAP, m15/m60 negative, rvol 4.68; news but breakdown in risk-off.",
+    "setup": "momentum",
+    "experiment": "volume-spike filter for entries following earnings or contract announcements",
+    "order_id": "e6d6cecd-e345-4c71-9475-7dd399dcbe13",
+    "status": "submitted",
+    "entry_price": null
+  },
+  {
+    "id": "space-HWM-202610221104-96f5",
+    "date": "2026-10-22",
+    "time": "11:04",
+    "team": "space",
+    "symbol": "HWM",
+    "side": "short",
+    "kind": "shares",
+    "qty": 13,
+    "qty_open": 13,
+    "dollars": 2512.9,
+    "est_price": 193.3,
+    "stop_price": 196.2,
+    "first_stop": 196.2,
+    "take_profit_price": 187.5,
+    "risk_dollars": 37.69,
+    "conviction": 3,
+    "reason": "[75% invested rule] OR breakdown, below VWAP, high rvol 5.36, m15 -0.4, m60 -1.8.",
+    "setup": "momentum",
+    "experiment": "volume-spike filter for entries following earnings or contract announcements",
+    "order_id": "8e843d26-9c0b-4539-8ac5-136f3388e937",
+    "status": "submitted",
+    "entry_price": null
+  },
+  {
+    "id": "space-FLY-202610221104-7dd9",
+    "date": "2026-10-22",
+    "time": "11:04",
+    "team": "space",
+    "symbol": "FLY",
+    "side": "long",
+    "kind": "shares",
+    "qty": 74,
+    "qty_open": 74,
+    "dollars": 1275.76,
+    "est_price": 17.24,
+    "stop_price": 16.9,
+    "first_stop": 16.9,
+    "take_profit_price": 17.93,
+    "risk_dollars": 25.52,
+    "conviction": 3,
+    "reason": "[75% invested rule] Firefly PDR completed; m60 +0.9; news catalyst.",
+    "setup": "news catalyst",
+    "experiment": "volume-spike filter for entries following earnings or contract announcements",
+    "order_id": "c66c9f30-acc5-4f3a-b3ae-16676e77b86e",
+    "status": "submitted",
+    "entry_price": null
+  },
+  {
+    "id": "space-TDG-202610221104-e6ca",
+    "date": "2026-10-22",
+    "time": "11:04",
+    "team": "space",
+    "symbol": "TDG",
+    "side": "long",
+    "kind": "shares",
+    "qty": 1,
+    "qty_open": 1,
+    "dollars": 1118.55,
+    "est_price": 1118.55,
+    "stop_price": 1096.18,
+    "first_stop": 1096.18,
+    "take_profit_price": 1163.29,
+    "risk_dollars": 22.37,
+    "conviction": 3,
+    "reason": "[75% invested rule] rvol 2.13; m60 +0.8; momentum.",
+    "setup": "momentum",
+    "experiment": "volume-spike filter for entries following earnings or contract announcements",
+    "order_id": "79ac945e-abd0-4d7c-9f98-3441f673df95",
+    "status": "submitted",
+    "entry_price": null
+  },
+  {
+    "id": "space-BKSY-202610221104-c3b6",
+    "date": "2026-10-22",
+    "time": "11:04",
+    "team": "space",
+    "symbol": "BKSY",
+    "side": "short",
+    "kind": "shares",
+    "qty": 78,
+    "qty_open": 78,
+    "dollars": 1323.66,
+    "est_price": 16.97,
+    "stop_price": 17.22,
+    "first_stop": 17.22,
+    "take_profit_price": 16.46,
+    "risk_dollars": 19.85,
+    "conviction": 2,
+    "reason": "[75% invested rule] OR breakdown, below VWAP, news but rvol low; weak.",
+    "setup": "momentum",
+    "experiment": "volume-spike filter for entries following earnings or contract announcements",
+    "order_id": "8a64b4e1-7b4a-4d5f-b163-625d3f99d3c8",
+    "status": "submitted",
+    "entry_price": null
   }
 ]

@@ -56,5 +56,57 @@
       "BUY RDW x300 (~$2566.5)",
       "BUY LUNR x233 (~$2569.99)"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:04",
+    "trigger": "scheduled look",
+    "market_view": "Market is in risk-off with SPY down 1.4% and QQQ down 2.4%, VIXY up 6.5%. Most space and aerospace watchlist names are breaking below VWAP or the opening range, but GE shows a high-volume bounce with UBS news. I favor tight-risk trades and will avoid chasing breakdowns.",
+    "experiment": "volume-spike filter for entries following earnings or contract announcements",
+    "decisions": [
+      {
+        "symbol": "PL",
+        "action": "SELL",
+        "conviction": 2,
+        "reason": "Breakdown below opening range/VWAP, m15 negative, trend down; exit weak long.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "RDW",
+        "action": "SELL",
+        "conviction": 2,
+        "reason": "Below VWAP and momentum negative, rvol low; exit weak long.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "RKLB",
+        "action": "SELL",
+        "conviction": 2,
+        "reason": "Opening range breakdown, below VWAP, m15/m60 negative; exit weak long.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "GE",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "UBS maintained Buy and raised PT to 380; rvol 2.85, m60 +0.4, day -2.0, inside OR; news/volume bounce in risk-off, half size.",
+        "stop_loss_pct": 0.025,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL PL",
+      "SELL RDW",
+      "SELL RKLB",
+      "BUY GE blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "SHORT SPCX x17 (~$2545.24) [deploy]",
+      "SHORT HWM x13 (~$2512.9) [deploy]",
+      "BUY FLY x74 (~$1275.76) [deploy]",
+      "BUY TDG x1 (~$1118.55) [deploy]",
+      "SHORT BKSY x78 (~$1323.66) [deploy]"
+    ]
   }
 ]

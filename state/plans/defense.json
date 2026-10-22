@@ -1,17 +1,59 @@
 {
-  "date": "2026-10-21",
-  "time": "11:46",
+  "date": "2026-10-22",
+  "time": "10:58",
   "trigger": "scheduled look",
-  "market_view": "Defensive stocks are broadly stable with modest gains. Northrop and Leidos show continued analyst support, while RTX received fresh upgrades and product announcements, offering a clear buying cue. Overall market sentiment remains cautiously positive for defense sector.",
-  "decisions": [
+  "market_view": "Market mood is heavily risk-off with SPY down -1.4% and VIXY surging +6.5%. Core defense holdings (LDOS, NOC, LHX, RTX) are showing strong relative strength and keeping our portfolio 77% invested, comfortably above the 75% minimum threshold. We maintain current positions while watching for high-conviction breakout setups like BAH and CACI.",
+  "decisions": [],
+  "ranked_ideas": [
     {
-      "symbol": "RTX",
-      "action": "BUY",
+      "symbol": "BAH",
+      "direction": "long",
       "conviction": 4,
-      "stop_loss_pct": 0.07,
-      "take_profit_pct": 0.12,
-      "reason": "Barclays and other analysts upgraded RTX, raising price target to $235; new air\u2011traffic\u2011control system and PT9 engine boost outlook. Sentiment 0.5\u20110.6, importance 3\u20114, price dipped 0.8% today, providing entry at ~191.75 within position size limit."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Breakout above opening range ($75.84-$77.00), trading +0.8% above VWAP with strong 15m momentum (+0.9%)."
+    },
+    {
+      "symbol": "CACI",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Q1 EPS beat and raised full-year guidance; trading +0.7% above VWAP with heavy relative volume (rvol 2.03)."
+    },
+    {
+      "symbol": "LMT",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "earnings gap",
+      "reason": "Massive Q3 earnings beat, guidance raise, and F-35 contract win on rvol 4.23; waiting for stabilization above VWAP."
+    },
+    {
+      "symbol": "KTOS",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakdown",
+      "reason": "Breakdown below opening range ($38.40) trading -1.5% below VWAP with weak 15m momentum (-1.3%) in a risk-off tape."
+    },
+    {
+      "symbol": "PLTR",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakdown",
+      "reason": "Broke opening range support ($200.32) on heavy volume (rvol 1.82) and trades below VWAP (-0.7%)."
     }
   ],
-  "experiment": "Testing buy on analyst upgrade combined with product launch news for RTX."
+  "experiment": "Testing an automatic 50% scale-out at 1R on contract/earnings momentum plays to lock in intraday profits during risk-off market conditions.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }
