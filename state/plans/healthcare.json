@@ -1,69 +1,83 @@
 {
   "date": "2026-10-22",
-  "time": "11:15",
-  "trigger": "scheduled look",
-  "market_view": "Market is risk-off: SPY -1.3%, QQQ -2.5%, VIXY +6.3%. Healthcare sentiment is cautiously optimistic, led by Eli Lilly's $5B manufacturing expansion, but broad index weakness and fear spike mean longs are half size and need high conviction. LLY shows a clear opening-range breakout with strong volume and positive news.",
+  "time": "11:35",
+  "trigger": "first look this run",
+  "market_view": "The market is in a risk-off regime with SPY down 1.2%, QQQ down 2.4%, and VIXY up 5.1%. Healthcare is mixed but the broad tape is cautious, so longs are half size and require high conviction. We are focusing on clear intraday catalysts and opening-range breakouts while avoiding weak longs.",
   "decisions": [
     {
-      "symbol": "LLY",
+      "symbol": "TMO",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "mean reversion",
+      "reason": "TMO is underwater -1.58% and day is negative despite positive analyst commentary; stalled long setup. Exit in a risk-off tape."
+    },
+    {
+      "symbol": "JNJ",
       "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "conviction": 3,
+      "stop_loss_pct": 0.025,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "LLY +3.3% on the day, opening range breakout above 1301.26, above VWAP, rvol 2.03, positive m15/m60 momentum, and urgent $5B antibody-drug conjugate manufacturing news; strongest healthcare setup with positive sentiment."
+      "reason": "JNJ broke above the opening range high at 263.13 with rvol 1.51 and positive clinical data; clear breakout, but risk-off size is half and stop is tight."
     }
   ],
   "ranked_ideas": [
     {
       "symbol": "UNH",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "news catalyst",
-      "reason": "Mizuho overnight upgrade but today's lawsuit news; OR breakout and above VWAP, though rvol only 0.91 and RSI overbought."
-    },
-    {
-      "symbol": "JNJ",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Positive VARIPULSE/OMNYPULSE clinical data and OR breakout, rvol 1.53; cautiously positive but trend flat."
+      "reason": "Mizuho upgrade and OR breakout, but weak rvol and overbought RSI; lower conviction in risk-off."
     },
     {
       "symbol": "AMGN",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout, rvol 1.59, above VWAP, strong uptrend; solid intraday momentum setup."
+      "reason": "OR breakout with volume, but RSI overbought; momentum long only."
     },
     {
-      "symbol": "ABT",
+      "symbol": "DHR",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "High rvol 2.36 and m60 strength, but no clean OR breakout; bounce setup only."
+    },
+    {
+      "symbol": "PFE",
+      "direction": "long",
+      "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout, rvol 1.61, m15/m60 positive; recovering from prior decline with volume."
+      "reason": "OR breakout, but low rvol and overbought; not favored in risk-off."
     },
     {
       "symbol": "VRTX",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout, m15 +0.5%, m60 +1.0%, above VWAP, rvol 1.1; constructive momentum."
+      "reason": "OR breakout with rvol 1.17, day +2.3, RSI 64; acceptable momentum long."
     }
   ],
-  "experiment": "Testing opening range breakout continuation in healthcare during a risk-off tape, prioritizing news-confirmed momentum.",
+  "experiment": "Testing a risk-off mean-reversion exit playbook: sell stalled longs into weakness, buy only high-conviction OR breakouts with news, half size.",
   "watchlist_changes": {
     "add": [],
-    "remove": []
+    "remove": [
+      {
+        "symbol": "HCA",
+        "reason": "No intraday setup, low participation, and earnings next week; quiet for day-trading purposes."
+      }
+    ]
   }
 }

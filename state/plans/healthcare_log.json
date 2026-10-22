@@ -96,5 +96,40 @@
     "results": [
       "BUY LLY x0.974365 (~$1279.02)"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:35",
+    "trigger": "first look this run",
+    "market_view": "The market is in a risk-off regime with SPY down 1.2%, QQQ down 2.4%, and VIXY up 5.1%. Healthcare is mixed but the broad tape is cautious, so longs are half size and require high conviction. We are focusing on clear intraday catalysts and opening-range breakouts while avoiding weak longs.",
+    "experiment": "Testing a risk-off mean-reversion exit playbook: sell stalled longs into weakness, buy only high-conviction OR breakouts with news, half size.",
+    "decisions": [
+      {
+        "symbol": "TMO",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "TMO is underwater -1.58% and day is negative despite positive analyst commentary; stalled long setup. Exit in a risk-off tape.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "JNJ",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "JNJ broke above the opening range high at 263.13 with rvol 1.51 and positive clinical data; clear breakout, but risk-off size is half and stop is tight.",
+        "stop_loss_pct": 0.025,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL TMO",
+      "BUY JNJ blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "BUY UNH blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY AMGN blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY DHR blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY PFE blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY VRTX blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "WATCHLIST removed HCA"
+    ]
   }
 ]

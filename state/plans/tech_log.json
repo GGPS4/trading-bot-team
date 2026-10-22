@@ -90,5 +90,30 @@
       "WATCHLIST removed CSCO",
       "WATCHLIST added ONDS"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:35",
+    "trigger": "first look this run",
+    "market_view": "The market is in a clear risk-off mode: SPY is down 1.2%, QQQ is down 2.4%, and VIXY is up 5.1%, while only about 55% of watched stocks are advancing. Breakdowns are dominating, VWAP holders are failing, and the news flow is mixed but supports shorting weakness. I will stay selective and sell into weak momentum rather than chase any broad rebound.",
+    "experiment": "Testing continuation shorts after opening-range breakdowns in a risk-off tape, using momentum and news/confirmed weakness for conviction.",
+    "decisions": [
+      {
+        "symbol": "MU",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "Risk-off continuation setup: MU is breaking below its opening range and VWAP, with negative 15-minute and 60-minute momentum, high relative volume, oversold RSI, and lingering memory-glut uncertainty keeping sellers in control.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SHORT MU blocked: one share costs $873.01, more than the $9.29 allowed",
+      "SHORT NVDA blocked: one share costs $213.15, more than the $9.29 allowed",
+      "SHORT MSFT blocked: one share costs $525.34, more than the $9.29 allowed",
+      "SHORT ONDS blocked: broker can't borrow this stock for shorting",
+      "SHORT AMAT blocked: one share costs $381.29, more than the $9.29 allowed",
+      "BUY ADBE x4 (~$1077.52) [deploy]"
+    ]
   }
 ]

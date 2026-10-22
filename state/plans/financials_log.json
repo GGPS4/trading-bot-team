@@ -68,5 +68,34 @@
       "BUY CME x4 (~$1224.6)",
       "BUY ICE x7 (~$1140.44) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:35",
+    "trigger": "first look this run",
+    "market_view": "Market is in risk-off with SPY -1.2%, QQQ -2.4%, VIXY +5.1%. Financials are broadly pressured, though CME received modest positive institutional news. Longs are half size and need conviction +1; shorting weak breakdowns is favored. No broad reversal catalyst before the close.",
+    "experiment": "Testing short momentum breakdown in risk-off tape after closing weak AXP.",
+    "decisions": [
+      {
+        "symbol": "AXP",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Closing weak long with no stop and far target; -0.19% loss but risk management was inadequate.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "HOOD",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "HOOD broke below opening range and VWAP with rvol 1.68 and downtrend; risk-off regime favors shorting weak high-volume breakdowns despite minor Dubai approval.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL AXP",
+      "SHORT HOOD x26 (~$2529.8)"
+    ]
   }
 ]
