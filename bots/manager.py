@@ -11,13 +11,13 @@ PLAN_FORMAT = """Answer in JSON:
 {
   "market_view": "2-3 sentences on what you see today",
   "decisions": [
-    {"symbol": "TICKER", "action": "BUY" or "SELL",
-     "conviction": 1-5, "stop_loss_pct": 0.05, "take_profit_pct": 0.10, "setup": "one setup name (BUY only)",
+    {"symbol": "TICKER", "action": "BUY" or "SHORT" or "SELL" or "COVER",
+     "conviction": 1-5, "stop_loss_pct": 0.05, "take_profit_pct": 0.10, "setup": "one setup name (BUY/SHORT)",
      "reason": "why, citing the research or price data"}
   ],
   "ranked_ideas": [
-    {"symbol": "TICKER", "conviction": 1-5, "stop_loss_pct": 0.015, "take_profit_pct": 0.03,
-     "setup": "one setup name", "reason": "short reason"}
+    {"symbol": "TICKER", "direction": "long" or "short", "conviction": 1-5, "stop_loss_pct": 0.015,
+     "take_profit_pct": 0.03, "setup": "one setup name", "reason": "short reason"}
   ],
   "experiment": "which strategy idea you are testing today, or empty",
   "watchlist_changes": {
@@ -25,7 +25,14 @@ PLAN_FORMAT = """Answer in JSON:
     "remove": [{"symbol": "TICKER", "reason": "why it no longer deserves a spot (quiet, no catalyst)"}]
   }
 }
-Only list stocks you want to BUY (not already held) or SELL (currently held). Everything else is a hold.
+Actions: BUY opens a long (profit if the price rises). SHORT opens a short (profit if the price falls;
+whole shares of easy-to-borrow stocks only). SELL closes a long and COVER closes a short you hold.
+Only list stocks you want to open (not already held) or close (currently held). Everything else is a hold.
+Exits are automatic: stop_loss_pct sets the first stop and take_profit_pct the FIRST target. At the first
+target half the position is sold and the stop on the rest moves to the entry price; once a trade is up
+about 1% a trailing stop follows the best price. So set take_profit_pct where you'd take partial profits.
+Position size is set by code from the stop distance and the stock's volatility (about equal dollar risk
+per trade), and is cut in a weak market (see market mood).
 ranked_ideas: your next 5 best stocks to buy (not held, not already in decisions), best first. If the
 team is below its minimum invested level after your decisions, the investor buys from this list.
 Only use symbols from the team's list. It is fine to return no decisions if nothing is convincing.
@@ -73,7 +80,9 @@ def plan(llm, team, orders, research, holdings, phase):
         strategy_text = (
             "TEAM STRATEGY: DAY TRADING. Make money from moves within today's session. Look for intraday "
             "momentum, news catalysts, strong moves off the open, breakouts above today's high and bounces "
-            "with volume. Use tight stops (about 1-2%) and take profits quickly (about 2-4%). Rotate money: "
+            "with volume. Short weak stocks too: breakdowns below the opening range or VWAP on bad news, "
+            "especially when the market mood is risk-off. Use tight stops (about 1-2%) and set the first "
+            "target about 2-4% away (half is sold there, the rest trails). Rotate money: "
             "sell positions that have stalled or hit their idea's target and redeploy into the best current "
             "setup. Everything is sold before the close, so never buy for 'the long run'. "
             f"RULE: keep at least {risk.get('min_invested_pct', 0):.0%} of the team budget invested while the "
@@ -119,6 +128,12 @@ Political & social media watch (Truth Social, X), posts that may move your stock
 
 After-hours / overnight findings (news and filings since the last close):
 {research.get('overnight') or 'none'}
+
+Market mood (whole market; regime affects position sizes and the conviction needed for longs):
+{research.get('mood') or 'not available'}
+
+Pre-market scan (stocks that gapped before today's open):
+{research.get('premarket') or 'none'}
 
 Live prices and day-trading signals right now (fractions unless noted):
   change_today vs yesterday's close, from_open vs today's open, since_last_look vs your previous check;

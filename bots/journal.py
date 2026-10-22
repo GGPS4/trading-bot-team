@@ -51,21 +51,37 @@ def _f(x):
         return None
 
 
+def _slip():
+    return float(settings().get("realism", {}).get("slippage_pct", 0) or 0)
+
+
+def leg_pnl(e, qty, exit_price):
+    """Profit on `qty` shares closed at `exit_price`, after slippage on both sides. Works for shorts."""
+    entry, slip = e["entry_price"], _slip()
+    if e.get("side") == "short":
+        return (entry * (1 - slip) - exit_price * (1 + slip)) * qty
+    return (exit_price * (1 - slip) - entry * (1 + slip)) * qty
+
+
 def _close(e, price, reason, when):
     e["status"] = "closed"
     e["exit_price"] = price
     e["exit_reason"] = reason
     e["exit_time"] = when
     if price and e.get("entry_price"):
-        # Charge realistic slippage on both the buy and the sell.
-        slip = float(settings().get("realism", {}).get("slippage_pct", 0) or 0)
-        buy, sell = e["entry_price"] * (1 + slip), price * (1 - slip)
-        e["pnl"] = round((sell - buy) * e["qty"], 2)
-        e["pnl_pct"] = round(sell / buy - 1, 4)
+        partial = sum(p.get("pnl") or 0 for p in e.get("partials") or [])
+        rest = e.get("qty_open", e["qty"]) or 0
+        e["pnl"] = round(partial + leg_pnl(e, rest, price), 2)
+        cost = e["entry_price"] * (e.get("qty") or 0)
+        e["pnl_pct"] = round(e["pnl"] / cost, 4) if cost else None
+
+
+def _stop_reason(e):
+    return "trailing_stop" if e.get("trail_active") else "breakeven_stop" if e.get("scaled") else "stop_loss"
 
 
 def sync(broker):
-    """Update every unfinished trade with what actually happened at Alpaca."""
+    """Update every unfinished trade with what actually happened at the broker."""
     entries = load()
     held = {p["symbol"] for p in broker.positions()}
     changed = 0
@@ -73,23 +89,22 @@ def sync(broker):
         if e["status"] not in ("submitted", "open"):
             continue
         if not e.get("order_id"):  # recovered position (no original order on record)
-            if e["symbol"] not in held and not e.get("exit_order_id"):
+            if e["symbol"] not in held and not e.get("exit_order_id") and not e.get("stop_order_id"):
                 _close(e, None, "sold (recovered position)", now_et().isoformat())
                 changed += 1
                 continue
-            if not e.get("exit_order_id"):
-                continue
-            o = {}
+            o = {"status": "filled"}
         else:
-          try:
-            o = broker.get_order(e["order_id"])
-          except Exception as err:
-            log(f"journal: could not look up {e['symbol']} order: {err}")
-            continue
+            try:
+                o = broker.get_order(e["order_id"])
+            except Exception as err:
+                log(f"journal: could not look up {e['symbol']} order: {err}")
+                continue
         if e["status"] == "submitted":
             if _f(o.get("filled_avg_price")):
                 e["entry_price"] = _f(o["filled_avg_price"])
                 e["qty"] = _f(o.get("filled_qty")) or e.get("qty")
+                e["qty_open"] = e["qty"]
                 e["entry_time"] = o.get("filled_at")
                 e["status"] = "open"
                 changed += 1
@@ -100,7 +115,19 @@ def sync(broker):
                 continue
             else:
                 continue
-        # status is open: did it get sold?
+        # fill in prices of partial sells (scaling out)
+        for part in e.get("partials") or []:
+            if part.get("filled") or not part.get("order_id"):
+                continue
+            try:
+                x = broker.get_order(part["order_id"])
+                if _f(x.get("filled_avg_price")):
+                    part["price"], part["filled"] = _f(x["filled_avg_price"]), True
+                    part["pnl"] = round(leg_pnl(e, part["qty"], part["price"]), 2)
+                    changed += 1
+            except Exception:
+                pass
+        # status is open: did it get closed?
         if e.get("exit_order_id"):
             try:
                 x = broker.get_order(e["exit_order_id"])
@@ -110,16 +137,28 @@ def sync(broker):
             except Exception:
                 pass
             continue
-        for leg in o.get("legs") or []:
+        if e.get("stop_order_id"):
+            try:
+                x = broker.get_order(e["stop_order_id"])
+                if _f(x.get("filled_avg_price")) and x.get("status") == "filled":
+                    _close(e, _f(x["filled_avg_price"]), _stop_reason(e), x.get("filled_at"))
+                    changed += 1
+                    continue
+                if x.get("status") in ("canceled", "expired", "rejected"):
+                    e["stop_order_id"] = None  # the exit manager places a new one
+            except Exception:
+                pass
+        legs_done = False
+        for leg in o.get("legs") or []:  # older bracket orders
             if leg.get("status") == "filled" and _f(leg.get("filled_avg_price")):
                 reason = "stop_loss" if leg.get("type") in ("stop", "stop_limit", "trailing_stop") else "take_profit"
                 _close(e, _f(leg["filled_avg_price"]), reason, leg.get("filled_at"))
                 changed += 1
+                legs_done = True
                 break
-        else:
-            if e["symbol"] not in held and e["status"] == "open":
-                _close(e, None, "sold outside the bot", now_et().isoformat())
-                changed += 1
+        if not legs_done and e["symbol"] not in held and e["status"] == "open":
+            _close(e, None, "sold outside the bot", now_et().isoformat())
+            changed += 1
     save(entries)
     if changed:
         log(f"journal: updated {changed} trade(s)")
@@ -153,23 +192,26 @@ def reconcile(broker, owner_of):
         sym = p["symbol"]
         if sym in known:
             continue
-        stop = target = None
+        stop = target = stop_id = None
         try:
             for o in broker.open_orders(sym):
                 if o.get("type") in ("stop", "stop_limit") and o.get("stop_price"):
-                    stop = _f(o["stop_price"])
+                    stop, stop_id = _f(o["stop_price"]), o.get("id")
                 elif o.get("type") == "limit" and o.get("limit_price"):
                     target = _f(o["limit_price"])
         except Exception:
             pass
+        qty = abs(_f(p["qty"]) or 0)
         entries.append({
             "id": new_id(owner_of.get(sym, "unassigned"), sym), "date": today(), "time": now_et().strftime("%H:%M"),
-            "team": owner_of.get(sym, "unassigned"), "symbol": sym, "side": "buy",
-            "kind": "bracket" if stop else "fractional", "qty": _f(p["qty"]),
+            "team": owner_of.get(sym, "unassigned"), "symbol": sym,
+            "side": "short" if (_f(p["qty"]) or 0) < 0 else "long",
+            "kind": "bracket" if (stop and target) else "shares" if float(qty).is_integer() else "fractional",
+            "qty": qty, "qty_open": qty,
             "dollars": round(abs(_f(p["market_value"]) or 0), 2), "est_price": _f(p["avg_entry_price"]),
             "entry_price": _f(p["avg_entry_price"]), "stop_price": stop, "take_profit_price": target,
             "conviction": None, "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
-            "order_id": None, "status": "open",
+            "order_id": None, "status": "open", "stop_order_id": stop_id,
         })
         added += 1
     if added:

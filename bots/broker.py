@@ -4,6 +4,8 @@ import os
 
 import requests
 
+from .common import now_et
+
 
 class BrokerError(Exception):
     pass
@@ -60,8 +62,38 @@ class Alpaca:
     def cancel_order(self, order_id):
         return self._req("DELETE", f"{self.base}/v2/orders/{order_id}")
 
-    def close_position(self, symbol):
-        return self._req("DELETE", f"{self.base}/v2/positions/{symbol}")
+    def close_position(self, symbol, qty=None):
+        """Close all of a position (long or short), or just `qty` shares of it."""
+        params = {"qty": f"{qty:g}"} if qty else None
+        return self._req("DELETE", f"{self.base}/v2/positions/{symbol}", params=params)
+
+    def market_order(self, symbol, side, client_id, qty=None, notional=None):
+        """Entry order. side='buy' opens a long, side='sell' (on a stock we don't hold) opens a short.
+        Fractional amounts (notional / fractional qty) only work for longs."""
+        body = {"symbol": symbol, "side": side, "type": "market", "time_in_force": "day",
+                "client_order_id": client_id}
+        if notional:
+            body["notional"] = f"{notional:.2f}"
+        else:
+            body["qty"] = f"{qty:g}"
+        return self._req("POST", f"{self.base}/v2/orders", json=body)
+
+    def stop_order(self, symbol, side, qty, stop_price, client_id=None):
+        """Protective stop held at the broker (works even between the bots' checks).
+        side='sell' protects a long, side='buy' protects a short. Whole shares only."""
+        body = {"symbol": symbol, "side": side, "type": "stop", "qty": f"{int(qty)}",
+                "stop_price": f"{stop_price:.2f}", "time_in_force": "gtc"}
+        if client_id:
+            body["client_order_id"] = client_id
+        return self._req("POST", f"{self.base}/v2/orders", json=body)
+
+    def replace_order(self, order_id, qty=None, stop_price=None):
+        body = {}
+        if qty:
+            body["qty"] = f"{int(qty)}"
+        if stop_price:
+            body["stop_price"] = f"{stop_price:.2f}"
+        return self._req("PATCH", f"{self.base}/v2/orders/{order_id}", json=body)
 
     def buy_bracket(self, symbol, qty: int, stop_price: float, take_profit_price: float, client_id: str):
         body = {
@@ -96,14 +128,19 @@ class Alpaca:
                          params={"symbols": ",".join(symbols), "feed": "iex"})
         data = data.get("snapshots", data)
         out = {}
+        today = now_et().date().isoformat()
         for s, v in data.items():
             if not v:
                 continue
             price = (v.get("latestTrade") or {}).get("p") or (v.get("minuteBar") or {}).get("c")
             day, prev = v.get("dailyBar") or {}, v.get("prevDailyBar") or {}
-            if price:
+            if not price:
+                continue
+            if str(day.get("t", ""))[:10] >= today:   # today's session has started
                 out[s] = {"price": price, "open": day.get("o"), "high": day.get("h"), "low": day.get("l"),
                           "prev_close": prev.get("c")}
+            else:                                       # before the open: "dailyBar" is yesterday's
+                out[s] = {"price": price, "open": None, "high": None, "low": None, "prev_close": day.get("c")}
         return out
 
     def daily_bars(self, symbols, days=120):

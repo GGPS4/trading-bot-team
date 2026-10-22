@@ -31,29 +31,38 @@ class FakeBroker:
         when = when or now_et()
         day = when.date().toordinal()
         trend = math.sin(day / 7 + zlib.crc32(sym.encode()) % 10) * 0.08
-        noise = random.Random(f"{sym}{when:%Y%m%d%H}").gauss(0, 0.03)
-        return round(_base(sym) * (1 + trend + noise), 2)
+        rr = random.Random(f"{sym}{when:%Y%m%d}")
+        steps = max(0, min(26, ((when.hour * 60 + when.minute) - (9 * 60 + 30)) // 15))
+        walk = 1 + rr.gauss(0, 0.012)          # overnight gap
+        drift = rr.gauss(0, 0.002)
+        for _ in range(steps):                 # 15-minute random walk during the day
+            walk *= 1 + drift + rr.gauss(0, 0.006)
+        return round(_base(sym) * (1 + trend) * walk, 2)
 
     def _process(self):
+        """Fill resting stop orders (and old bracket legs) when the price crosses them."""
         for o in self.s["orders"].values():
-            for leg in o.get("legs") or []:
-                if leg["status"] != "new":
-                    continue
+            if o.get("type") == "stop" and o["status"] == "new":
                 p = self.price(o["symbol"])
-                hit = (leg["type"] == "limit" and p >= leg["limit_price"]) or \
-                      (leg["type"] == "stop" and p <= leg["stop_price"])
+                hit = (o["side"] == "sell" and p <= o["stop_price"]) or (o["side"] == "buy" and p >= o["stop_price"])
                 if hit and o["symbol"] in self.s["positions"]:
-                    self._sell_all(o["symbol"], p)
-                    leg.update(status="filled", filled_avg_price=str(p), filled_at=now_et().isoformat())
-                    for other in o["legs"]:
-                        if other is not leg:
-                            other["status"] = "canceled"
-                    break
+                    self._fill(o["symbol"], o["side"], o["qty"], p)
+                    o.update(status="filled", filled_avg_price=str(p), filled_qty=str(o["qty"]),
+                             filled_at=now_et().isoformat())
         self._save()
 
-    def _sell_all(self, sym, p):
-        pos = self.s["positions"].pop(sym)
-        self.s["cash"] += pos["qty"] * p
+    def _fill(self, sym, side, qty, p):
+        pos = self.s["positions"].get(sym, {"qty": 0, "avg": p})
+        signed = qty if side == "buy" else -qty
+        new = pos["qty"] + signed
+        if pos["qty"] == 0 or (pos["qty"] > 0) == (signed > 0):  # opening / adding
+            pos["avg"] = (pos["avg"] * abs(pos["qty"]) + p * qty) / (abs(pos["qty"]) + qty)
+        pos["qty"] = round(new, 6)
+        self.s["cash"] -= signed * p
+        if abs(pos["qty"]) < 1e-9:
+            self.s["positions"].pop(sym, None)
+        else:
+            self.s["positions"][sym] = pos
 
     # ----- account -----
     def clock(self):
@@ -81,58 +90,77 @@ class FakeBroker:
         out = []
         for sym, v in self.s["positions"].items():
             p = self.price(sym)
+            pl = (p - v["avg"]) * v["qty"]
             out.append({"symbol": sym, "qty": str(v["qty"]), "avg_entry_price": str(v["avg"]),
                         "current_price": str(p), "market_value": str(v["qty"] * p),
-                        "unrealized_pl": str((p - v["avg"]) * v["qty"]),
-                        "unrealized_plpc": str(p / v["avg"] - 1)})
+                        "unrealized_pl": str(pl),
+                        "unrealized_plpc": str((p / v["avg"] - 1) * (1 if v["qty"] > 0 else -1))})
         return out
 
     # ----- orders -----
-    def _new_order(self, sym, qty, legs=None):
-        p = self.price(sym)
+    def _order(self, sym, side, qty, typ="market", **extra):
         oid = uuid.uuid4().hex
-        pos = self.s["positions"].setdefault(sym, {"qty": 0, "avg": p})
-        pos["avg"] = (pos["avg"] * pos["qty"] + p * qty) / (pos["qty"] + qty)
-        pos["qty"] += qty
-        self.s["cash"] -= p * qty
-        o = {"id": oid, "symbol": sym, "status": "filled", "filled_avg_price": str(p), "filled_qty": str(qty),
-             "filled_at": now_et().isoformat(), "legs": legs}
+        o = {"id": oid, "symbol": sym, "side": side, "qty": qty, "type": typ, "status": "new", **extra}
+        if typ == "market":
+            p = self.price(sym)
+            self._fill(sym, side, qty, p)
+            o.update(status="filled", filled_avg_price=str(p), filled_qty=str(qty), filled_at=now_et().isoformat())
         self.s["orders"][oid] = o
         self._save()
         return o
 
-    def buy_bracket(self, symbol, qty, stop_price, take_profit_price, client_id):
-        legs = [{"id": uuid.uuid4().hex, "type": "limit", "status": "new", "limit_price": take_profit_price},
-                {"id": uuid.uuid4().hex, "type": "stop", "status": "new", "stop_price": stop_price}]
-        return self._new_order(symbol, qty, legs)
+    def market_order(self, symbol, side, client_id, qty=None, notional=None):
+        qty = qty if qty else round(notional / self.price(symbol), 6)
+        return self._order(symbol, side, qty)
 
-    def buy_notional(self, symbol, dollars, client_id):
-        return self._new_order(symbol, round(dollars / self.price(symbol), 6))
+    def stop_order(self, symbol, side, qty, stop_price, client_id=None):
+        held = abs(self.s["positions"].get(symbol, {}).get("qty", 0))
+        reserved = sum(o["qty"] for o in self.s["orders"].values()
+                       if o["symbol"] == symbol and o.get("type") == "stop" and o["status"] == "new")
+        if qty > held - reserved + 1e-9:
+            raise Exception("insufficient qty available for order")
+        p = self.price(symbol)
+        if (side == "sell" and stop_price >= p) or (side == "buy" and stop_price <= p):
+            raise Exception("stop price must be on the far side of the market price")
+        return self._order(symbol, side, qty, "stop", stop_price=stop_price)
+
+    def replace_order(self, order_id, qty=None, stop_price=None):
+        o = self.s["orders"][order_id]
+        if o["status"] != "new":
+            raise Exception("order is not open")
+        o["status"] = "replaced"
+        return self._order(o["symbol"], o["side"], qty or o["qty"], "stop", stop_price=stop_price or o["stop_price"])
+
+    def buy_bracket(self, symbol, qty, stop_price, take_profit_price, client_id):  # old API, unused
+        return self._order(symbol, "buy", qty)
+
+    def buy_notional(self, symbol, dollars, client_id):  # old API, unused
+        return self.market_order(symbol, "buy", client_id, notional=dollars)
 
     def get_order(self, oid):
         self._process()
         return self.s["orders"][oid]
 
     def open_orders(self, symbol=None):
-        return [leg for o in self.s["orders"].values() if o["symbol"] == symbol
-                for leg in o.get("legs") or [] if leg["status"] == "new"]
+        return [o for o in self.s["orders"].values()
+                if o["status"] == "new" and (symbol is None or o["symbol"] == symbol)]
 
     def cancel_order(self, oid):
-        for o in self.s["orders"].values():
-            for leg in o.get("legs") or []:
-                if leg["id"] == oid:
-                    leg["status"] = "canceled"
+        if oid in self.s["orders"] and self.s["orders"][oid]["status"] == "new":
+            self.s["orders"][oid]["status"] = "canceled"
         self._save()
 
-    def close_position(self, symbol):
-        p = self.price(symbol)
-        self._sell_all(symbol, p)
-        oid = uuid.uuid4().hex
-        o = {"id": oid, "symbol": symbol, "status": "filled", "filled_avg_price": str(p),
-             "filled_at": now_et().isoformat(), "legs": None}
-        self.s["orders"][oid] = o
-        self._save()
-        return o
+    def close_position(self, symbol, qty=None):
+        pos = self.s["positions"].get(symbol)
+        if not pos:
+            raise Exception("position not found")
+        held = abs(pos["qty"])
+        reserved = sum(o["qty"] for o in self.s["orders"].values()
+                       if o["symbol"] == symbol and o.get("type") == "stop" and o["status"] == "new")
+        q = qty or held
+        if q > held - reserved + 1e-9:
+            raise Exception("insufficient qty available for order")
+        return self._order(symbol, "sell" if pos["qty"] > 0 else "buy", q)
 
     # ----- data -----
     def latest_prices(self, symbols):
@@ -174,7 +202,8 @@ class FakeBroker:
     def asset(self, symbol):
         if symbol.startswith("ZZ"):
             raise Exception("404 asset not found")
-        return {"symbol": symbol, "tradable": True, "status": "active", "class": "us_equity"}
+        return {"symbol": symbol, "tradable": True, "status": "active", "class": "us_equity",
+                "shortable": True, "easy_to_borrow": zlib.crc32(symbol.encode()) % 5 != 0}
 
     def movers(self, top=20):
         return {"gainers": [{"symbol": "SMCI", "change_pct": 9.1, "price": 40.0}, {"symbol": "PENY", "change_pct": 80.0, "price": 1.2}],
@@ -215,13 +244,14 @@ class FakeLLM:
         if role.endswith("manager"):
             held = re.findall(r"'symbol': '([A-Z]+)'", prompt.split("Current positions held by your team:")[1].split("News researcher")[0])
             buys = r.sample(tickers, min(3, len(tickers)))
-            d = [{"symbol": s, "action": "BUY", "conviction": r.choice([2, 3, 4, 5]), "stop_loss_pct": 0.04,
+            d = [{"symbol": s, "action": r.choice(["BUY", "BUY", "SHORT"]), "conviction": r.choice([2, 3, 4, 5]), "stop_loss_pct": 0.04,
                   "take_profit_pct": 0.08, "setup": r.choice(["momentum", "VWAP bounce", "opening range breakout", "news catalyst"]),
                   "reason": f"Fake reason for {s}"} for s in buys]
             d.append({"symbol": "ZZZZ", "action": "BUY", "conviction": 5, "reason": "not on our list (should be blocked)"})
             if held:
                 d.append({"symbol": held[0], "action": "SELL", "conviction": 4, "reason": "Fake sell"})
-            ideas = [{"symbol": s, "conviction": 3, "stop_loss_pct": 0.015, "take_profit_pct": 0.03,
+            ideas = [{"symbol": s, "conviction": 3, "stop_loss_pct": 0.015, "take_profit_pct": 0.03, "setup": "momentum",
+                      "direction": r.choice(["long", "short"]),
                       "reason": f"Backup idea {s}"} for s in tickers if s not in buys][:5]
             wl = {"add": [{"symbol": "SMCI", "reason": "AI server deal (fake)"}, {"symbol": "ZZTOP", "reason": "fake bad"},
                           {"symbol": "LMT", "reason": "owned by another team"}],

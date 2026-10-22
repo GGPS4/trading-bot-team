@@ -106,6 +106,8 @@ def snapshot(broker, org, owner_of, budgets, mode):
             "price": round(_f(p["current_price"]), 2), "value": round(_f(p["market_value"]), 2),
             "pnl": round(_f(p["unrealized_pl"]), 2), "pnl_pct": round(_f(p["unrealized_plpc"]), 4),
             "stop": e.get("stop_price"), "target": e.get("take_profit_price"), "reason": e.get("reason", ""),
+            "side": "short" if _f(p["qty"]) < 0 else "long", "trailing": bool(e.get("trail_active")),
+            "scaled": bool(e.get("scaled")), "first_stop": e.get("first_stop"), "setup": e.get("setup"),
         })
 
     todays = journal.trades_on(date, entries)
@@ -132,8 +134,9 @@ def snapshot(broker, org, owner_of, budgets, mode):
     limit = settings().get("risk", {}).get("max_daily_loss_pct", 0.03)
     if last_equity and equity / last_equity - 1 <= -limit:
         issues.append(f"Daily loss limit hit ({equity / last_equity - 1:.1%}); no new buys today")
-    if len(blocked) >= 40:
-        issues.append(f"{len(blocked)} orders blocked by the risk rules today")
+    errors = [b for b in blocked if "broker error" in (b.get("reason") or "")]
+    if len(errors) >= 5:
+        issues.append(f"{len(errors)} orders rejected by the broker today (see blocked orders)")
     return {
         "updated": now_et().isoformat(timespec="minutes"), "date": date, "mode": mode,
         "health": {"issues": issues},
@@ -147,7 +150,7 @@ def snapshot(broker, org, owner_of, budgets, mode):
         "benchmark": {"symbol": bench, "price": bench_price},
         "performance": perf, "go_live": go_live_checklist(perf),
         "teams": teams, "positions": pos_rows,
-        "trades_today": [{k: e.get(k) for k in ("time", "team", "symbol", "qty", "est_price", "entry_price",
+        "trades_today": [{k: e.get(k) for k in ("time", "team", "symbol", "qty", "est_price", "entry_price", "side",
                                                   "exit_price", "exit_reason", "pnl", "pnl_pct", "status",
                                                   "conviction", "reason", "stop_price", "take_profit_price")}
                          for e in todays],
@@ -168,6 +171,8 @@ def write_dashboard(snap, extra=None):
     data["market_watch"] = read_json(STATE / "research" / "_market_watch.json", {})
     data["calendar"] = read_json(STATE / "research" / "_calendar.json", {})
     data["scorecard"] = read_json(STATE / "scorecard.json", {})
+    data["mood"] = read_json(STATE / "research" / "_mood.json", {})
+    data["premarket"] = read_json(STATE / "research" / "_premarket.json", {})
     data["overnight"] = {tid: (read_json(STATE / "research" / f"{tid}.json", {}).get("overnight") or [])[:8]
                          for tid in snap["teams"]}
     data["team_details"] = team_details(snap["teams"])
@@ -201,6 +206,7 @@ def team_details(teams):
         research = read_json(STATE / "research" / f"{tid}.json", {})
         out[tid] = {
             "trades": [{k: e.get(k) for k in ("id", "date", "time", "symbol", "kind", "qty", "dollars", "est_price", "setup",
+                                               "side", "partials", "trail_active", "first_stop",
                                                "entry_price", "exit_price", "exit_time", "exit_reason", "exit_note",
                                                "pnl", "pnl_pct", "status", "conviction", "reason", "stop_price",
                                                "take_profit_price")} for e in mine[-250:]],

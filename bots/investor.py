@@ -3,9 +3,22 @@
 Takes the manager's decisions, runs each one past the risk rules, places
 the orders at Alpaca, and records why every trade was made.
 """
+import time
+
 from . import journal
 from .scorecard import clean_setup
 from .common import log, now_et, today
+
+
+def _retry(fn, tries=4):
+    """Cancelling a stop order takes a moment to free the shares; retry briefly."""
+    for i in range(tries):
+        try:
+            return fn()
+        except Exception:
+            if i == tries - 1:
+                raise
+            time.sleep(1 + i)
 
 
 def _sell(broker, team_id, symbol, reason, exit_reason="manager_sell"):
@@ -14,7 +27,7 @@ def _sell(broker, team_id, symbol, reason, exit_reason="manager_sell"):
             broker.cancel_order(o["id"])
         except Exception as e:
             log(f"{team_id}: could not cancel order for {symbol}: {e}")
-    order = broker.close_position(symbol)
+    order = _retry(lambda: broker.close_position(symbol))
     entries = journal.load()
     for e in entries:
         if e["symbol"] == symbol and e["status"] == "open" and not e.get("exit_order_id"):
@@ -25,100 +38,96 @@ def _sell(broker, team_id, symbol, reason, exit_reason="manager_sell"):
     return order
 
 
-def execute(broker, desk, team, plan, prices):
+_SHORTABLE = {}
+
+
+def shortable(broker, sym):
+    if sym not in _SHORTABLE:
+        try:
+            a = broker.asset(sym)
+            _SHORTABLE[sym] = bool(a.get("shortable")) and bool(a.get("easy_to_borrow"))
+        except Exception:
+            _SHORTABLE[sym] = False
+    return _SHORTABLE[sym]
+
+
+def execute(broker, desk, team, plan, prices, volatility=None):
+    """Run the manager's decisions past the risk desk and place the orders.
+    BUY = open a long, SHORT = open a short, SELL / COVER = close whatever the team holds in that stock."""
+    volatility = volatility or {}
     results = []
     decisions = plan.get("decisions") or []
-    sells = [d for d in decisions if str(d.get("action", "")).upper() == "SELL"]
-    buys = sorted([d for d in decisions if str(d.get("action", "")).upper() == "BUY"],
-                  key=lambda d: -(d.get("conviction") or 0))
+    act = lambda d: str(d.get("action", "")).upper()  # noqa: E731
+    closes = [d for d in decisions if act(d) in ("SELL", "COVER")]
+    entries = sorted([d for d in decisions if act(d) in ("BUY", "SHORT")], key=lambda d: -(d.get("conviction") or 0))
 
-    for d in sells:
+    for d in closes:
         sym = str(d.get("symbol", "")).upper()
         ok, why = desk.check_sell(team["id"], sym)
         if not ok:
-            journal.add_blocked(team["id"], sym, "SELL", why)
-            results.append(f"SELL {sym} blocked: {why}")
+            journal.add_blocked(team["id"], sym, act(d), why)
+            results.append(f"{act(d)} {sym} blocked: {why}")
             continue
         try:
             _sell(broker, team["id"], sym, d.get("reason", ""))
             desk.positions.pop(sym, None)
-            results.append(f"SELL {sym}")
-            log(f"{team['id']}: SELL {sym} - {d.get('reason', '')[:80]}")
+            results.append(f"{act(d)} {sym}")
+            log(f"{team['id']}: {act(d)} {sym} - {d.get('reason', '')[:80]}")
         except Exception as e:
-            journal.add_blocked(team["id"], sym, "SELL", f"broker error: {e}")
-            results.append(f"SELL {sym} failed: {e}")
+            journal.add_blocked(team["id"], sym, act(d), f"broker error: {e}")
+            results.append(f"{act(d)} {sym} failed: {e}")
 
-    def buy(d, deploying=False):
+    def enter(d, deploying=False):
         sym = str(d.get("symbol", "")).upper()
+        side = "short" if act(d) == "SHORT" or str(d.get("direction", "")).lower() == "short" else "long"
+        label = "SHORT" if side == "short" else "BUY"
         price = prices.get(sym)
-        ok, why, p = desk.check_buy(team["id"], sym, price, d.get("conviction"),
-                                    d.get("stop_loss_pct"), d.get("take_profit_pct"), deploying=deploying)
+        can_short = shortable(broker, sym) if side == "short" else True
+        ok, why, p = desk.check_entry(team["id"], sym, price, d.get("conviction"), d.get("stop_loss_pct"),
+                                      d.get("take_profit_pct"), side, deploying, volatility.get(sym), can_short)
         if not ok:
-            journal.add_blocked(team["id"], sym, "BUY", why)
-            results.append(f"BUY {sym} blocked: {why}")
+            journal.add_blocked(team["id"], sym, label, why)
+            results.append(f"{label} {sym} blocked: {why}")
             return
         cid = journal.new_id(team["id"], sym)
         try:
-            if p["kind"] == "bracket":
-                order = broker.buy_bracket(sym, p["qty"], p["stop_price"], p["take_profit_price"], cid[:48])
+            if p["kind"] == "shares":
+                order = broker.market_order(sym, "buy" if side == "long" else "sell", cid[:48], qty=p["qty"])
             else:
-                order = broker.buy_notional(sym, p["dollars"], cid[:48])
+                order = broker.market_order(sym, "buy", cid[:48], notional=p["dollars"])
         except Exception as e:
-            journal.add_blocked(team["id"], sym, "BUY", f"broker error: {e}")
-            results.append(f"BUY {sym} failed: {e}")
+            journal.add_blocked(team["id"], sym, label, f"broker error: {e}")
+            results.append(f"{label} {sym} failed: {e}")
+            desk.positions.pop(sym, None)
             return
         reason = d.get("reason", "")
         if deploying:
             reason = f"[75% invested rule] {reason}"
         journal.add({
             "id": cid, "date": today(), "time": now_et().strftime("%H:%M"), "team": team["id"],
-            "symbol": sym, "side": "buy", "kind": p["kind"], "qty": p["qty"], "dollars": p["dollars"],
-            "est_price": price, "stop_price": p["stop_price"], "take_profit_price": p["take_profit_price"],
-            "conviction": d.get("conviction"), "reason": reason,
+            "symbol": sym, "side": side, "kind": p["kind"], "qty": p["qty"], "qty_open": p["qty"],
+            "dollars": p["dollars"], "est_price": price, "stop_price": p["stop_price"],
+            "first_stop": p["stop_price"], "take_profit_price": p["take_profit_price"],
+            "risk_dollars": p["risk_dollars"], "conviction": d.get("conviction"), "reason": reason,
             "setup": clean_setup(d.get("setup")), "experiment": (plan.get("experiment") or "")[:200],
             "order_id": order.get("id"), "status": "submitted", "entry_price": None,
         })
-        results.append(f"BUY {sym} x{p['qty']} (~${p['dollars']})" + (" [deploy]" if deploying else ""))
-        log(f"{team['id']}: BUY {sym} x{p['qty']} stop {p['stop_price']} target {p['take_profit_price']}"
+        results.append(f"{label} {sym} x{p['qty']} (~${p['dollars']})" + (" [deploy]" if deploying else ""))
+        log(f"{team['id']}: {label} {sym} x{p['qty']} stop {p['stop_price']} first target {p['take_profit_price']}"
             + (" (75% rule)" if deploying else ""))
 
-    for d in buys:
-        buy(d)
+    for d in entries:
+        enter(d)
 
-    # Minimum-invested rule: if the team still holds too much cash, buy the manager's next-best ideas.
-    tried = {str(d.get("symbol", "")).upper() for d in buys}
+    # Minimum-invested rule: if the team still holds too much cash, take the manager's next-best ideas.
+    tried = {str(d.get("symbol", "")).upper() for d in entries}
     for d in plan.get("ranked_ideas") or []:
-        if desk.deploy_gap(team["id"]) < 1 or desk.past_buy_cutoff() or not desk.market_open:
+        if desk.deploy_gap(team["id"]) < 1 or desk.past_buy_cutoff() or not desk.market_open \
+                or desk.team_open_count(team["id"]) >= desk.l["max_open_positions_per_team"]:
             break
         sym = str(d.get("symbol", "")).upper()
         if sym in tried or sym in desk.positions:
             continue
         tried.add(sym)
-        buy(d, deploying=True)
+        enter(d, deploying=True)
     return results
-
-
-def check_software_stops(broker, prices, paused, market_open):
-    """Fractional-share positions have no stop orders at Alpaca, so check them here."""
-    if paused or not market_open:
-        return []
-    done = []
-    for e in journal.load():
-        if e["status"] != "open" or e.get("kind") != "fractional" or e.get("exit_order_id"):
-            continue
-        price = prices.get(e["symbol"])
-        if not price or not e.get("stop_price") or not e.get("take_profit_price"):
-            continue
-        reason = None
-        if price <= e["stop_price"]:
-            reason = "stop_loss"
-        elif price >= e["take_profit_price"]:
-            reason = "take_profit"
-        if reason:
-            try:
-                _sell(broker, e["team"], e["symbol"], f"price {price} hit {reason}", exit_reason=reason)
-                done.append(f"{e['symbol']} {reason}")
-                log(f"{e['team']}: {e['symbol']} hit {reason} at {price}")
-            except Exception as err:
-                log(f"could not close {e['symbol']}: {err}")
-    return done
