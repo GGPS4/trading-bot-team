@@ -36,5 +36,66 @@
     "experiment": "Testing patience discipline on day one: only act on conviction >=3 with room to size meaningfully. Tracking TSLA merger news and CMG oversold bounce for potential entries tomorrow if setups clarify.",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:12",
+    "trigger": "scheduled look",
+    "market_view": "The market is in a clear risk-off regime, with SPY down 1.3%, QQQ down 2.5%, and VIXY up 6.3%. Consumer discretionary is mixed, but momentum is deteriorating and the team is under-invested at 18%. I am prioritizing shorting breakdown names and buying only high-quality intraday breakouts with volume while respecting the tighter risk rules.",
+    "experiment": "Testing intraday opening-range breakout rotation in a risk-off tape: sell breakdowns, buy high-quality OR breakouts only when VWAP support holds and volume confirms.",
+    "decisions": [
+      {
+        "symbol": "AMZN",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Existing long is breaking below VWAP and the opening range with negative momentum and risk-off conditions; exit the losing position.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "TSLA",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "Tesla sold off after Q3 earnings despite the beat on delivery weakness and 2026 CapEx cut; shares are below VWAP and momentum is down, fitting a risk-off short.",
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "HD",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "HD broke above its opening range and holds above VWAP with positive momentum and rvol near 1.5; long bounce in discretionary strength.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "LOW",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Low broke out with strong relative volume and holding above VWAP; momentum long intraday, though overbought conditions warrant tight risk.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "LULU",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Lululemon broke above its opening range and remains above VWAP with positive 15/60 momentum; momentum long off the open.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL AMZN",
+      "SHORT TSLA x4 (~$1529.1)",
+      "BUY HD blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "BUY LOW blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "BUY LULU blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "BUY DPZ x4 (~$1268.76) [deploy]",
+      "BUY BKNG blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY MCD blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY CMG blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY ABNB blocked: conviction 2 is below the minimum 3 (risk-off market)"
+    ]
   }
 ]

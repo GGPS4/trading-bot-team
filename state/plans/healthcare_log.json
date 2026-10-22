@@ -76,5 +76,25 @@
       "SELL ISRG",
       "BUY ABBV x9 (~$2551.32)"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:15",
+    "trigger": "scheduled look",
+    "market_view": "Market is risk-off: SPY -1.3%, QQQ -2.5%, VIXY +6.3%. Healthcare sentiment is cautiously optimistic, led by Eli Lilly's $5B manufacturing expansion, but broad index weakness and fear spike mean longs are half size and need high conviction. LLY shows a clear opening-range breakout with strong volume and positive news.",
+    "experiment": "Testing opening range breakout continuation in healthcare during a risk-off tape, prioritizing news-confirmed momentum.",
+    "decisions": [
+      {
+        "symbol": "LLY",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "LLY +3.3% on the day, opening range breakout above 1301.26, above VWAP, rvol 2.03, positive m15/m60 momentum, and urgent $5B antibody-drug conjugate manufacturing news; strongest healthcare setup with positive sentiment.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY LLY x0.974365 (~$1279.02)"
+    ]
   }
 ]

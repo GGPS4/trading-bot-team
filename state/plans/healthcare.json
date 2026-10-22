@@ -1,25 +1,69 @@
 {
-  "date": "2026-10-21",
-  "time": "11:41",
+  "date": "2026-10-22",
+  "time": "11:15",
   "trigger": "scheduled look",
-  "market_view": "Overall market is modestly down with mixed health sector news; TMO shows strong earnings momentum while ISRG and MRK have mixed analyst updates. Cautious positioning with limited new entries.",
+  "market_view": "Market is risk-off: SPY -1.3%, QQQ -2.5%, VIXY +6.3%. Healthcare sentiment is cautiously optimistic, led by Eli Lilly's $5B manufacturing expansion, but broad index weakness and fear spike mean longs are half size and need high conviction. LLY shows a clear opening-range breakout with strong volume and positive news.",
   "decisions": [
     {
-      "symbol": "ISRG",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": null,
-      "take_profit_pct": null,
-      "reason": "Position exceeds max 20% budget limit (\u2248$2.6k); reducing to 5 shares aligns with risk rules."
-    },
-    {
-      "symbol": "ABBV",
+      "symbol": "LLY",
       "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "reason": "Barclays and Baird raised price target to $325 and secured reimbursement agreement for ELAHERE; bullish sentiment and price target upgrade provide a clear buying signal."
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "LLY +3.3% on the day, opening range breakout above 1301.26, above VWAP, rvol 2.03, positive m15/m60 momentum, and urgent $5B antibody-drug conjugate manufacturing news; strongest healthcare setup with positive sentiment."
     }
   ],
-  "experiment": "Testing disciplined reduction of oversized positions while adding a new position based on analyst upgrade."
+  "ranked_ideas": [
+    {
+      "symbol": "UNH",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Mizuho overnight upgrade but today's lawsuit news; OR breakout and above VWAP, though rvol only 0.91 and RSI overbought."
+    },
+    {
+      "symbol": "JNJ",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Positive VARIPULSE/OMNYPULSE clinical data and OR breakout, rvol 1.53; cautiously positive but trend flat."
+    },
+    {
+      "symbol": "AMGN",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout, rvol 1.59, above VWAP, strong uptrend; solid intraday momentum setup."
+    },
+    {
+      "symbol": "ABT",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout, rvol 1.61, m15/m60 positive; recovering from prior decline with volume."
+    },
+    {
+      "symbol": "VRTX",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout, m15 +0.5%, m60 +1.0%, above VWAP, rvol 1.1; constructive momentum."
+    }
+  ],
+  "experiment": "Testing opening range breakout continuation in healthcare during a risk-off tape, prioritizing news-confirmed momentum.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }
