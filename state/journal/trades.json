@@ -95,9 +95,14 @@
     "conviction": 4,
     "reason": "Susquehanna raised AMD's price target to $620 following an AI supercluster win in India. The stock is rebounding strongly (+2.28% today) out of near-oversold territory (RSI 32.9) while holding above its 50-day average.",
     "order_id": "585704aa-ed9f-4f26-8419-31c000690f26",
-    "status": "open",
+    "status": "closed",
     "entry_price": 545.53,
-    "entry_time": "2026-10-21T15:02:07.765374844Z"
+    "entry_time": "2026-10-21T15:02:07.765374844Z",
+    "exit_price": 519.47,
+    "exit_reason": "stop_loss",
+    "exit_time": "2026-10-22T14:15:09.969370459Z",
+    "pnl": -106.37,
+    "pnl_pct": -0.0487
   },
   {
     "id": "consumer-TSLA-202610211102-8251",
@@ -429,7 +434,7 @@
     "order_id": null,
     "status": "open",
     "stop_order_id": null,
-    "high": 324.7,
+    "high": 325.57,
     "low": 323.89
   },
   {
@@ -476,8 +481,8 @@
     "order_id": null,
     "status": "open",
     "stop_order_id": null,
-    "high": 53.26,
-    "low": 53.11
+    "high": 53.29,
+    "low": 53.015
   },
   {
     "id": "healthcare-ISRG-202610220930-8b88",
@@ -492,15 +497,16 @@
     "dollars": 2153.72,
     "est_price": 431.77,
     "entry_price": 431.77,
-    "stop_price": null,
+    "stop_price": 435.44,
     "take_profit_price": 493.83,
     "conviction": null,
     "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
     "order_id": null,
     "status": "open",
     "stop_order_id": null,
-    "high": 434.42,
-    "low": 431.77
+    "high": 438.955,
+    "low": 431.77,
+    "trail_active": true
   },
   {
     "id": "tech-NOW-202610220930-c169",
@@ -520,11 +526,18 @@
     "conviction": null,
     "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
     "order_id": null,
-    "status": "open",
+    "status": "closed",
     "stop_order_id": null,
     "high": 156.42,
     "low": 153.12,
-    "trail_active": true
+    "trail_active": true,
+    "exit_order_id": "ceb4705f-638c-482f-ace2-8a73b5da16b8",
+    "exit_reason": "trailing_stop",
+    "exit_note": "price 154.73 hit the stop 155.17",
+    "exit_price": 154.58,
+    "exit_time": "2026-10-22T14:09:45.043650751Z",
+    "pnl": 20.9,
+    "pnl_pct": 0.0085
   },
   {
     "id": "tech-ORCL-202610220930-343f",
@@ -570,7 +583,7 @@
     "status": "open",
     "stop_order_id": null,
     "high": 13.67,
-    "low": 13.36
+    "low": 13.28
   },
   {
     "id": "tech-QCOM-202610220930-47c4",
@@ -615,7 +628,7 @@
     "order_id": null,
     "status": "open",
     "stop_order_id": null,
-    "high": 92.135,
+    "high": 92.295,
     "low": 91.67
   }
 ]
