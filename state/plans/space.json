@@ -1,96 +1,44 @@
 {
   "date": "2026-10-22",
-  "time": "11:51",
-  "trigger": "must invest $3,197 more (75% rule)",
-  "market_view": "Market is risk-off, with SPY down 1.3% and QQQ down 2.4%, VIXY up 4.9%. Space names are mostly breaking lower, but news is mixed. I favor shorting weak breakdowns and staying defensive.",
+  "time": "12:17",
+  "trigger": "scheduled look",
   "decisions": [
     {
-      "symbol": "BKSY",
+      "symbol": "HWM",
       "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "momentum",
-      "reason": "Stalled short after BlackSky contract; bounce with low rvol and price above VWAP, momentum failed. Close position."
+      "reason": "Short is losing money (-1.4%) and price is breaking above VWAP with strong momentum (m15 +1.2%, rvol 4.67). The breakdown thesis is failing. Covering to stop the bleed and rotate capital into stronger setups."
     },
     {
-      "symbol": "VSAT",
-      "action": "SHORT",
-      "conviction": 3,
-      "stop_loss_pct": 0.025,
-      "take_profit_pct": 0.02,
-      "setup": "opening range breakdown",
-      "reason": "VSAT broke below opening range and VWAP, weak momentum, day -5.8%, risk-off favors shorting breakdown."
+      "symbol": "ASTS",
+      "action": "SELL",
+      "reason": "Short is slightly underwater (-0.5%) and price is bouncing (+0.7% look) with decent volume (rvol 1.68). In a risk-off market, shorts should be tight. Exiting to free up capital for higher conviction setups."
     },
     {
-      "symbol": "RKLB",
-      "action": "SHORT",
-      "conviction": 3,
-      "stop_loss_pct": 0.045,
+      "symbol": "SPCX",
+      "action": "BUY",
+      "side": "long",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Strong fundamental catalysts: BofA raised PT to $275, Pivotal Research upgrade to Buy with $260 PT. Despite the -6% day drop, the stock is holding above the opening range low and has high relative volume (3.92). The 'Musk/Robotics' narrative is driving interest. Buying a dip in a high-momentum name with fresh analyst support."
+    },
+    {
+      "symbol": "BKSY",
+      "action": "BUY",
+      "side": "long",
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "opening range breakdown",
-      "reason": "RKLB broke opening range, weak momentum and oversold, risk-off; short breakdown."
+      "setup": "news catalyst",
+      "reason": "Secured a seven-figure Gen-3 Assured defense contract. This is a direct revenue catalyst. The stock is down 2.8% today but showing signs of stabilization (m15 +0.2%). Defense sector news is strong. Entering on the news catalyst with a tight stop."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "FLY",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.04,
-      "take_profit_pct": 0.06,
-      "setup": "news catalyst",
-      "reason": "Firefly Elytra PDR with positive sentiment, but risk-off limits long size."
-    },
-    {
-      "symbol": "GE",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.08,
-      "setup": "mean reversion",
-      "reason": "RSI 30.7 oversold, bounce, volume spike, but market risk-off."
-    },
-    {
-      "symbol": "SATS",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.05,
-      "setup": "momentum",
-      "reason": "Breakdown and trend down, but lower conviction."
-    },
-    {
-      "symbol": "LUNR",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.08,
-      "setup": "mean reversion",
-      "reason": "RSI 22 oversold, but news quiet; only if bounce holds."
-    },
-    {
-      "symbol": "PL",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Breakdown, oversold, but weak follow-through."
-    }
+    "FLY",
+    "RKLB",
+    "LUNR",
+    "PL",
+    "RDW"
   ],
-  "experiment": "Add trailing stops that activate after a 3% favorable move to lock in gains",
-  "watchlist_changes": {
-    "add": [],
-    "remove": [
-      {
-        "symbol": "BA",
-        "reason": "Quiet momentum and low sentiment, no strong day-trading setup."
-      },
-      {
-        "symbol": "LUNR",
-        "reason": "Oversold but quiet, no fresh catalyst; only mean reversion at best."
-      }
-    ]
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

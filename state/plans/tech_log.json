@@ -126,5 +126,53 @@
     "results": [
       "WATCHLIST removed ONDS"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "12:17",
+    "trigger": "scheduled look",
+    "market_view": "The market is in a clear risk-off mode: SPY is down about 1.1%, QQQ is down 2.1%, VIXY is up 3.6%, and the broad index is down roughly 2.1%. The watchlist is mostly mixed, but momentum and breakdowns are failing. I favor shorting weak stocks below VWAP or the opening range on bad news, while only taking longs with very high conviction because risk-off cuts long size in half.",
+    "experiment": "Testing risk-off news-catalyst and failed-momentum rotation; only taking high-conviction setups after closing stalled or failed positions.",
+    "decisions": [
+      {
+        "symbol": "ADBE",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Long was an opening range breakout but momentum faded (look -0.2, m15 -0.7, rvol 2.09); stalled long should be closed.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "TXN",
+        "action": "COVER",
+        "conviction": 3,
+        "reason": "Short momentum failed as stock bounced (m15 +0.3, m60 +1.7, rvol 2.6) and positive earnings/news capped downside; close short.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "CRM",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Clear OR breakout with rvol 1.71, above VWAP, day +3.3, software rotation; high-quality intraday long setup despite risk-off.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "IBM",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Bullish analyst updates (Barclays PT 277, RBC Outperform PT 270) plus high-volume bounce/rvol 4.69, holding above VWAP; news-driven long.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL ADBE",
+      "COVER TXN",
+      "BUY CRM x5 (~$1248.45)",
+      "BUY IBM x5 (~$1244.4)",
+      "WATCHLIST remove rejected ADBE"
+    ]
   }
 ]
