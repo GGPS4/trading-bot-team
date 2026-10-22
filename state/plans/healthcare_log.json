@@ -216,5 +216,34 @@
       "BUY AMGN x2 (~$895.56) [deploy]",
       "WATCHLIST removed CVS"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "13:06",
+    "trigger": "scheduled look",
+    "market_view": "The market is in a risk-off regime with SPY down 1.4%, QQQ down 2.7%, and VIXY up 5.4%. Healthcare breadth is weak, with only about 52% of watched stocks advancing, so longs need strong conviction and shorts are favored on breakdowns below VWAP or the opening range.",
+    "experiment": "short momentum breakdowns in a risk-off healthcare tape",
+    "decisions": [
+      {
+        "symbol": "ABBV",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "AbbVie lacked a clean intraday setup, was near flat with a slight loss, and showed no opening-range or momentum continuation in a risk-off tape. Closing to redeploy capital.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "MRK",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "Merck broke down below VWAP and its opening range, with negative 15-minute and 60-minute momentum, higher relative volume, and a -3.2% daily decline. Market risk-off favors shorting weak momentum names.",
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL ABBV",
+      "SHORT MRK x11 (~$1595.11)"
+    ]
   }
 ]

@@ -1,34 +1,110 @@
 {
   "date": "2026-10-22",
-  "time": "12:43",
+  "time": "13:06",
   "trigger": "scheduled look",
+  "market_view": "Market is in a risk-off tape: SPY -1.4%, QQQ -2.7%, VIXY +5.4%, and most watchlist names are breaking below VWAP or the opening range. I see mostly breakdowns and weak momentum, so I am favoring shorting confirmed weakness while staying nimble. A few names like ADBE and INTU showed relative strength, but longs require higher conviction in this regime.",
   "decisions": [
     {
-      "symbol": "NVDA",
-      "action": "BUY",
-      "side": "short",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakdown",
-      "reason": "NVDA is down 4% on the day, broke below the opening range (215.68-218.86) on high relative volume (1.88), and is trading below VWAP. In a risk-off market (QQQ -2.4%), shorting breakdowns is the favored strategy. RSI is near oversold (30.6), but the intraday momentum is weak and the breakdown is clear."
+      "symbol": "CRM",
+      "action": "SELL",
+      "conviction": 1,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Long setup failed; momentum turned down (m15 -0.2%, m60 -0.8%, trend down) and price lost the rebound structure, exit before close."
     },
     {
-      "symbol": "MU",
-      "action": "BUY",
-      "side": "short",
+      "symbol": "IBM",
+      "action": "SELL",
+      "conviction": 1,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "News catalyst but risk-off and long needs conviction +1; momentum/flow not confirming, cut loser."
+    },
+    {
+      "symbol": "NVDA",
+      "action": "SHORT",
+      "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakdown",
-      "reason": "MU is down 5.6%, well below its opening range (877.45-906.5) and VWAP (-2.4%). Relative volume is elevated at 1.65. News mentions 'memory glut fears' and uncertainty, supporting a short thesis in a risk-off environment. RSI is low (25.4), but the intraday trend is down with negative 15m momentum."
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "NVDA broke below VWAP and opening range with rvol 1.77 and m15/m60 weakness; Jensen Huang comments did not stop breakdown in risk-off tape. Short breakdown momentum."
+    },
+    {
+      "symbol": "ADBE",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "OR breakout with rvol 1.99 and strong day +5.4%; software rotation/F1 partnership. Risk-off so half size, conviction +1 met at 3."
     }
   ],
   "ranked_ideas": [
-    "TXN",
-    "ADBE",
-    "INTU",
-    "AMAT",
-    "ORCL"
+    {
+      "symbol": "MU",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Risk-off breakdown: OR BREAKDOWN, below VWAP, rvol 1.62, RSI 25.4 oversold; memory weakness."
+    },
+    {
+      "symbol": "ORCL",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "OR BREAKDOWN, below VWAP, m15 -0.6%, m60 -1.9%, weak follow-through."
+    },
+    {
+      "symbol": "AMAT",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "OR BREAKDOWN, below VWAP, day -7%, rvol 1.42; fade short-term bounce."
+    },
+    {
+      "symbol": "INTU",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
+      "setup": "opening range breakout",
+      "reason": "OR BREAKOUT, rvol 1.74, day +5.3%; AI/software momentum."
+    },
+    {
+      "symbol": "PANW",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
+      "setup": "momentum",
+      "reason": "Relative strength +2.9% but below VWAP; trend down, lower conviction."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "continuation shorts after opening-range breakdowns in a risk-off tape, using momentum and news/confirmed weakness",
+  "watchlist_changes": {
+    "add": [
+      {
+        "symbol": "ON",
+        "reason": "ON Semiconductor is in the semiconductor/IT supply chain and has fresh analyst coverage (B. Riley maintains Buy, lowers PT), fitting the watchlist's focus on sector momentum and news catalysts."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "CRM",
+        "reason": "Long setup failed in risk-off tape and momentum turned down; no remaining high-conviction long watchlist setup."
+      },
+      {
+        "symbol": "IBM",
+        "reason": "Long setup lacked conviction in risk-off regime and was exited; no fresh high-quality setup."
+      }
+    ]
+  }
 }

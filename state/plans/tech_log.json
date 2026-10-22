@@ -203,5 +203,57 @@
       "BUY NVDA blocked: team already has the maximum number of positions",
       "BUY MU blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "13:06",
+    "trigger": "scheduled look",
+    "market_view": "Market is in a risk-off tape: SPY -1.4%, QQQ -2.7%, VIXY +5.4%, and most watchlist names are breaking below VWAP or the opening range. I see mostly breakdowns and weak momentum, so I am favoring shorting confirmed weakness while staying nimble. A few names like ADBE and INTU showed relative strength, but longs require higher conviction in this regime.",
+    "experiment": "continuation shorts after opening-range breakdowns in a risk-off tape, using momentum and news/confirmed weakness",
+    "decisions": [
+      {
+        "symbol": "CRM",
+        "action": "SELL",
+        "conviction": 1,
+        "reason": "Long setup failed; momentum turned down (m15 -0.2%, m60 -0.8%, trend down) and price lost the rebound structure, exit before close.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "IBM",
+        "action": "SELL",
+        "conviction": 1,
+        "reason": "News catalyst but risk-off and long needs conviction +1; momentum/flow not confirming, cut loser.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "NVDA",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "NVDA broke below VWAP and opening range with rvol 1.77 and m15/m60 weakness; Jensen Huang comments did not stop breakdown in risk-off tape. Short breakdown momentum.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ADBE",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "OR breakout with rvol 1.99 and strong day +5.4%; software rotation/F1 partnership. Risk-off so half size, conviction +1 met at 3.",
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL CRM",
+      "SELL IBM",
+      "SHORT NVDA x6 (~$1275.24)",
+      "BUY ADBE blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "SHORT MU blocked: one share costs $855.53, more than the $135.45 allowed",
+      "SHORT ORCL x1 (~$123.98) [deploy]",
+      "WATCHLIST remove rejected CRM",
+      "WATCHLIST remove rejected IBM",
+      "WATCHLIST added ON"
+    ]
   }
 ]
