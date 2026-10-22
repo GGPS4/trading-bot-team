@@ -1,73 +1,73 @@
 {
   "date": "2026-10-22",
-  "time": "12:09",
-  "trigger": "scheduled look",
-  "market_view": "The market is in a sharp risk-off regime with QQQ down 2.2% and VIXY up 3.8%, favoring short setups on weak names or high-conviction breakouts. Spotify and Comcast gapped up on earnings but show mixed signals; I will focus on shorting weakness or riding strong momentum in resilient names.",
+  "time": "12:24",
+  "trigger": "must invest $4,015 more (75% rule)",
+  "market_view": "The market is in a clear risk-off regime with QQQ down -2.1% and VIXY up +3.3%, favoring short setups on weak stocks or high-volatility names breaking down. Spotify and Comcast reported earnings before the open; SPOT is fading hard despite a gap-up, while CMCSA is holding gains but faces restructuring news. I need to deploy capital into high-conviction shorts or strong momentum longs to meet the 75% investment rule.",
   "decisions": [
     {
-      "symbol": "CMCSA",
+      "symbol": "SPOT",
       "action": "SHORT",
       "conviction": 4,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Comcast beat Q3 but announced significant job cuts and a large Q4 restructuring charge, citing demand pressure in parks. In a risk-off market, this negative guidance is a clear short catalyst despite the initial gap up."
+      "take_profit_pct": 0.04,
+      "setup": "earnings gap",
+      "reason": "Spotify gapped up +5.8% on earnings but is fading below VWAP (-0.2%) with negative 15m momentum (-0.3%) and high relative volume (3.95). The news indicates missed EPS/revenue estimates, and the price action confirms the gap is failing. Shorting the fade is a high-probability play in a risk-off market."
     },
     {
-      "symbol": "DIS",
+      "symbol": "CMCSA",
       "action": "BUY",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Disney is breaking out above its opening range (111.79-112.53) with positive momentum and a new trailer release for 'Hexed'. It is trading above VWAP, showing relative strength in a falling market."
+      "reason": "Comcast is trading above VWAP (+0.2%) and has broken out of its opening range (22-22.88) with strong relative volume (2.31). Despite the restructuring news, the stock is holding gains (+3.9% day) and showing relative strength in a falling market, making it a defensive long candidate."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "TTWO",
-      "direction": "long",
+      "symbol": "DIS",
+      "direction": "short",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Take-Two is up 2.7% with a clear opening range breakout and positive 15m momentum. It is holding above VWAP, suggesting institutional support."
+      "setup": "mean reversion",
+      "reason": "Disney is overbought with RSI 91.1 and is trading below its opening range high despite a breakout label. In a risk-off market, extended moves like this often retrace. Shorting the overextension offers a tight risk/reward."
+    },
+    {
+      "symbol": "NFLX",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Netflix is already held short, but if the current position is closed or scaled, re-entering on weakness is valid. Analysts are lowering targets and the stock is at 2-year lows. However, since we already hold a short, this is a backup idea if we need to rotate."
     },
     {
       "symbol": "BAM",
       "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "BAM is up 2.5% with a strong opening range breakout and positive 60m momentum. It is trading above VWAP, indicating sustained buying pressure."
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "BAM is the only stock with positive 15m momentum (+0.3%) and is trading above VWAP (+0.9%) with a clear opening range breakout. It shows relative strength in a down market, suggesting institutional support."
     },
     {
-      "symbol": "WMG",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "Warner Music is up 1.5% and trading above VWAP. It has a strong 20-day trend (+16.3%) and is consolidating near its opening range high, offering a low-risk entry."
-    },
-    {
-      "symbol": "ROKU",
+      "symbol": "TTWO",
       "direction": "long",
       "conviction": 2,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Roku is up 1.2% with a breakout above its opening range. However, volume is low (rvol 0.61), so conviction is lower."
+      "reason": "Take-Two has broken out of its opening range and is above VWAP, but momentum is fading (m15 -0.3%). It's a lower conviction long due to the fading momentum, but still a valid setup if the price holds above the OR high."
     },
     {
-      "symbol": "FOXA",
-      "direction": "long",
+      "symbol": "IMAX",
+      "direction": "short",
       "conviction": 2,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Fox is up 2.6% with a breakout above its opening range. It is trading near VWAP, and momentum is flat, so it is a lower-conviction play."
+      "setup": "other",
+      "reason": "IMAX has broken down below its opening range and is trading flat with low momentum. In a risk-off environment, breakdowns often continue, but the lack of volume (rvol 1.05) makes it a lower conviction short."
     }
   ],
   "experiment": "Implement a pre-market catalyst scan to trigger entries on earnings or major news releases",

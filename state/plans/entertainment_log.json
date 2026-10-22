@@ -168,5 +168,34 @@
       "SHORT CMCSA blocked: team already has the maximum number of positions",
       "BUY DIS blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "12:24",
+    "trigger": "must invest $4,015 more (75% rule)",
+    "market_view": "The market is in a clear risk-off regime with QQQ down -2.1% and VIXY up +3.3%, favoring short setups on weak stocks or high-volatility names breaking down. Spotify and Comcast reported earnings before the open; SPOT is fading hard despite a gap-up, while CMCSA is holding gains but faces restructuring news. I need to deploy capital into high-conviction shorts or strong momentum longs to meet the 75% investment rule.",
+    "experiment": "Implement a pre-market catalyst scan to trigger entries on earnings or major news releases",
+    "decisions": [
+      {
+        "symbol": "SPOT",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "Spotify gapped up +5.8% on earnings but is fading below VWAP (-0.2%) with negative 15m momentum (-0.3%) and high relative volume (3.95). The news indicates missed EPS/revenue estimates, and the price action confirms the gap is failing. Shorting the fade is a high-probability play in a risk-off market.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "CMCSA",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Comcast is trading above VWAP (+0.2%) and has broken out of its opening range (22-22.88) with strong relative volume (2.31). Despite the restructuring news, the stock is holding gains (+3.9% day) and showing relative strength in a falling market, making it a defensive long candidate.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SHORT SPOT x3 (~$1713.4)",
+      "BUY CMCSA blocked: team already has the maximum number of positions"
+    ]
   }
 ]
