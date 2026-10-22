@@ -85,5 +85,38 @@
     "experiment": "Testing an automatic 50% scale-out at 1R on contract/earnings momentum plays to lock in intraday profits during risk-off market conditions.",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:24",
+    "trigger": "scheduled look",
+    "market_view": "Market is in risk-off: SPY -1.2%, QQQ -2.3%, VIXY +5.6%, broad selloff. Defense focus remains selective; LMT had major F-35/backlog news and earnings beat but pulled back below VWAP, while LDOS showed opening-range strength. Staying defensive and waiting for high-conviction setups.",
+    "experiment": "Testing automatic 50% scale-out at 1R on LDOS momentum play if reached; LDOS did not reach 1R, so no scale-out.",
+    "decisions": [
+      {
+        "symbol": "LHX",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "LHX stalled below VWAP with weakening m15/m60 momentum and only +1.27% gain; risk-off longs need higher conviction, so rotate out.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "CACI",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "CACI above VWAP, m15 +2.1%, m60 +2.3%, rvol 1.97, beat Q1 EPS and raised guidance; strong intraday momentum in defense sector, but risk-off half size.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL LHX",
+      "BUY CACI blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "BUY LMT x2 (~$1169.52) [deploy]",
+      "BUY BAH x16 (~$1249.92) [deploy]",
+      "WATCHLIST removed TXT",
+      "WATCHLIST removed HEI"
+    ]
   }
 ]

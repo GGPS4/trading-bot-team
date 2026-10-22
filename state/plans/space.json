@@ -1,94 +1,67 @@
 {
   "date": "2026-10-22",
-  "time": "11:04",
-  "trigger": "scheduled look",
-  "market_view": "Market is in risk-off with SPY down 1.4% and QQQ down 2.4%, VIXY up 6.5%. Most space and aerospace watchlist names are breaking below VWAP or the opening range, but GE shows a high-volume bounce with UBS news. I favor tight-risk trades and will avoid chasing breakdowns.",
+  "time": "11:18",
+  "trigger": "must invest $2,159 more (75% rule)",
+  "market_view": "Risk-off tape remains in control with SPY -1.3% and QQQ -2.5%, VIXY +5.9%, and broad selling. Space and aerospace names are mostly breaking down below VWAP and the opening range, with SPCX showing the strongest momentum short. Longs are half size and need high conviction, while shorts are favored.",
   "decisions": [
     {
-      "symbol": "PL",
-      "action": "SELL",
-      "conviction": 2,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "other",
-      "reason": "Breakdown below opening range/VWAP, m15 negative, trend down; exit weak long."
-    },
-    {
-      "symbol": "RDW",
-      "action": "SELL",
-      "conviction": 2,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "other",
-      "reason": "Below VWAP and momentum negative, rvol low; exit weak long."
-    },
-    {
-      "symbol": "RKLB",
-      "action": "SELL",
-      "conviction": 2,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "other",
-      "reason": "Opening range breakdown, below VWAP, m15/m60 negative; exit weak long."
-    },
-    {
-      "symbol": "GE",
-      "action": "BUY",
+      "symbol": "ASTS",
+      "action": "SHORT",
       "conviction": 3,
       "stop_loss_pct": 0.025,
       "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "UBS maintained Buy and raised PT to 380; rvol 2.85, m60 +0.4, day -2.0, inside OR; news/volume bounce in risk-off, half size."
+      "setup": "momentum",
+      "reason": "Risk-off and breakdown mode align. ASTS is below VWAP, opening range breakdown, m15/m60 down, rvol 1.86, trend down. Clear momentum short setup in the team sector; news flow is secondary to the weak price tape."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "SPCX",
+      "symbol": "PL",
       "direction": "short",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
       "setup": "momentum",
-      "reason": "OR breakdown, below VWAP, m15/m60 negative, rvol 4.68; news but breakdown in risk-off."
+      "reason": "OR breakdown, below VWAP, negative momentum, rvol 1.03, weak risk-off tape."
     },
     {
-      "symbol": "HWM",
+      "symbol": "LUNR",
       "direction": "short",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "OR breakdown, below VWAP, high rvol 5.36, m15 -0.4, m60 -1.8."
-    },
-    {
-      "symbol": "FLY",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Firefly PDR completed; m60 +0.9; news catalyst."
-    },
-    {
-      "symbol": "TDG",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
+      "stop_loss_pct": 0.03,
       "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "rvol 2.13; m60 +0.8; momentum."
+      "reason": "OR breakdown, below VWAP, m15/m60 down, trend flat, weak momentum."
     },
     {
-      "symbol": "BKSY",
+      "symbol": "RKLB",
       "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
       "setup": "momentum",
-      "reason": "OR breakdown, below VWAP, news but rvol low; weak."
+      "reason": "OR breakdown, below VWAP, m15/m60 down, trend down, moderate volume."
+    },
+    {
+      "symbol": "IRDM",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
+      "setup": "momentum",
+      "reason": "OR breakdown, below VWAP, m15/m60 down, trend down, weak momentum."
+    },
+    {
+      "symbol": "RDW",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
+      "setup": "momentum",
+      "reason": "OR breakdown, below VWAP, m15/m60 down, trend down, weak volume."
     }
   ],
-  "experiment": "volume-spike filter for entries following earnings or contract announcements",
+  "experiment": "Add trailing stops that activate after a 3% favorable move to lock in gains",
   "watchlist_changes": {
     "add": [],
     "remove": []

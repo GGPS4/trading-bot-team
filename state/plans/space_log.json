@@ -108,5 +108,25 @@
       "BUY TDG x1 (~$1118.55) [deploy]",
       "SHORT BKSY x78 (~$1323.66) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:18",
+    "trigger": "must invest $2,159 more (75% rule)",
+    "market_view": "Risk-off tape remains in control with SPY -1.3% and QQQ -2.5%, VIXY +5.9%, and broad selling. Space and aerospace names are mostly breaking down below VWAP and the opening range, with SPCX showing the strongest momentum short. Longs are half size and need high conviction, while shorts are favored.",
+    "experiment": "Add trailing stops that activate after a 3% favorable move to lock in gains",
+    "decisions": [
+      {
+        "symbol": "ASTS",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "Risk-off and breakdown mode align. ASTS is below VWAP, opening range breakdown, m15/m60 down, rvol 1.86, trend down. Clear momentum short setup in the team sector; news flow is secondary to the weak price tape.",
+        "stop_loss_pct": 0.025,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SHORT ASTS x1 (~$38.43)"
+    ]
   }
 ]
