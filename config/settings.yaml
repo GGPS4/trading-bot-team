@@ -16,14 +16,17 @@ paused: false
 #   fast  = researchers, executives, Reporter (lots of small jobs)
 #   smart = managers and President (fewer, more important decisions)
 ai_routing:
-  fast:  [groq, gemini, openrouter]
-  smart: [gemini, groq, openrouter]
+  fast:  [cerebras, groq, mistral, gemini, openrouter]
+  smart: [gemini, cerebras, mistral, groq, openrouter]
+# Providers without a key (GitHub secret) are skipped automatically.
 
 # Most calls per day for each provider, kept just under their free limits.
 ai_daily_caps:
   gemini: 240
   groq: 900
   openrouter: 45      # raise to ~950 if you ever add the one-time $10 on OpenRouter
+  cerebras: 700       # free tier is about 1M tokens a day; daily limits are also detected automatically
+  mistral: 1500       # free Experiment tier is about 1B tokens a month
 
 # Optional: force a specific model per provider, e.g.  groq: openai/gpt-oss-120b
 ai_models: {}
