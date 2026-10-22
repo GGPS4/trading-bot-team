@@ -1,39 +1,55 @@
 {
   "date": "2026-10-22",
-  "time": "13:09",
+  "time": "13:59",
   "trigger": "scheduled look",
-  "market_view": "The market is in a sharp risk-off regime with indices down significantly and VIX spiking, favoring short setups on weak names or high-conviction breakouts. We are currently under-invested (57%) and must deploy capital, but the risk-off environment requires tight stops and a preference for shorting breakdowns or buying only strong momentum leaders like SPOT.",
   "decisions": [
     {
       "symbol": "SPOT",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "earnings gap",
-      "conviction": 5,
-      "reason": "Strong earnings catalyst with subscriber growth beating guidance despite EPS miss. Stock is holding above VWAP with high relative volume (3.51) and positive 15m momentum. In a risk-off market, this is the strongest relative strength play on the watchlist."
+      "action": "COVER",
+      "qty": 3,
+      "reason": "Short is -1.36% and stock is +10.2% with strong volume (rvol 3.03). Earnings beat on subs, high conviction long setup. Stop out to preserve capital and rotate."
     },
     {
-      "symbol": "WMG",
+      "symbol": "NFLX",
+      "action": "COVER",
+      "qty": 38,
+      "reason": "Short is -0.25% but stock is +3.2% and above VWAP. Wolfe downgrade is being ignored by price action. Stop out to avoid further drawdown in a strong mover."
+    },
+    {
+      "symbol": "SONY",
       "action": "BUY",
-      "side": "short",
+      "qty": 80,
+      "reason": "Opening range breakout (OR 25.75-25.98, price 26.29). +4.7% day, rvol 1.41. Strong momentum in risk-off market. Tight stop below OR low.",
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "conviction": 4,
-      "reason": "Trading below VWAP and has broken down below the opening range. RSI is extremely overbought (89.8) on the 20-day, suggesting a potential mean reversion or continuation of weakness in a risk-off tape. Shorting weakness is favored in this regime."
+      "setup": "opening range breakout"
+    },
+    {
+      "symbol": "DIS",
+      "action": "BUY",
+      "qty": 20,
+      "reason": "Opening range breakout (OR 111.79-112.53, price 112.86). +0.9% day, above VWAP. RSI 91 is high but breakout is clear. Small size due to high RSI and risk-off.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
+    },
+    {
+      "symbol": "BAM",
+      "action": "BUY",
+      "qty": 45,
+      "reason": "Opening range breakout (OR 45.5-46.96, price 47.30). +2.7% day, above VWAP. RSI 63 is healthy. Good momentum play.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
     }
   ],
   "ranked_ideas": [
-    "SONY",
-    "DIS",
-    "CMCSA",
-    "IMAX",
-    "TKO"
+    "WMG",
+    "ROKU",
+    "FOXA",
+    "TTWO",
+    "EA"
   ],
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

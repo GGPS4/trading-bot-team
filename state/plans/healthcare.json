@@ -1,60 +1,51 @@
 {
   "date": "2026-10-22",
-  "time": "13:35",
-  "trigger": "big news on ['MRNA']",
+  "time": "13:55",
+  "trigger": "must invest $6,013 more (75% rule)",
   "decisions": [
     {
-      "symbol": "MRK",
-      "action": "SELL",
-      "reason": "Stop loss hit. Short position is down -2.0% and price is approaching the stop at 149.36. In a risk-off market, cutting losers quickly is essential. Reassess if it stabilizes, but for now, exit to protect capital."
-    },
-    {
-      "symbol": "DHR",
-      "action": "HOLD",
-      "reason": "Short position is slightly underwater (-0.5%) but the setup (breakdown below OR) is still valid. Price is below VWAP and the market is risk-off. Stop is wide (4.3%) but the trend is down. Will monitor for a bounce to VWAP to exit or continue down to target."
-    },
-    {
-      "symbol": "TMO",
-      "action": "HOLD",
-      "reason": "Short position is slightly in profit. Price is below VWAP and broke down the opening range. However, news is positive (Barclays raise PT). The breakdown might be a false move due to market weakness rather than company-specific weakness. Will hold for now but be ready to exit if it reclaims VWAP."
-    },
-    {
-      "symbol": "AMGN",
-      "action": "HOLD",
-      "reason": "Long position is slightly in profit. Price is above VWAP and broke out of the opening range. RSI is high (76.3) but momentum is still up. Holding for the first target."
-    },
-    {
-      "symbol": "JNJ",
-      "action": "HOLD",
-      "reason": "Long position is in profit (+0.8%). Price is above VWAP and broke out of the opening range. Good setup. Holding for the first target."
-    }
-  ],
-  "ranked_ideas": [
-    {
       "symbol": "MRNA",
+      "action": "BUY",
+      "side": "short",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "Massive breakdown (-24.8%) on high volume (rvol 2.27). Price is far below VWAP (-11.6%). In a risk-off market, this is a strong short candidate. However, the move is very large, so caution is needed. Could be a short if it stabilizes and bounces to VWAP, or a long if it mean reverts. Given the risk-off mood, shorting the weakness is favored, but the drop is so steep that a bounce is likely. I will rank it high for a potential short on a bounce or a long on a stabilization. Actually, the prompt says 'Short weak stocks too: breakdowns below the opening range or VWAP on bad news'. This fits. But the drop is 24%, which is extreme. I will rank it as a potential short on a bounce to VWAP, but since I can't set conditional orders, I will just rank it. The system will decide size based on stop. A short here is risky due to the size of the drop. Let's look for better setups."
+      "reason": "Massive -24.6% drop with high volume (rvol 2.31) and strong negative momentum (m60 -8.1%). Trading significantly below VWAP (-10.4%) and opening range breakdown. News of a put position leak and unconfirmed trial data rumors suggest continued selling pressure or a dead cat bounce that will fail. Shorting this weakness in a risk-off market is a high-conviction play."
     },
     {
-      "symbol": "LLY",
-      "setup": "opening range breakout",
-      "reason": "Strong breakout above OR, above VWAP, positive news (manufacturing site). However, RSI is very high (78.3) and it's a long position in a risk-off market. Longs are half size. Might be a good short on a pullback, but currently trending up. I will rank it as a potential long if it holds the breakout, but the risk-off mood makes longs less attractive."
+      "symbol": "MRK",
+      "action": "BUY",
+      "side": "short",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakdown",
+      "reason": "Breaking down below the opening range with high relative volume (rvol 2.6) and negative 15m momentum (-0.8%). Trading below VWAP (-1.3%). In a risk-off environment, this breakdown is likely to extend. Tight stop to manage risk on a volatile move."
     },
     {
       "symbol": "ISRG",
-      "setup": "news catalyst",
-      "reason": "Negative news (narrowed growth outlook, $450M charge). Price is up +3.2% today, which is counter to the news. This could be a short setup if it breaks down. Currently above VWAP. I will rank it as a potential short if it breaks below VWAP."
+      "action": "BUY",
+      "side": "long",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Strong opening range breakout with positive 15m and 60m momentum. Trading above VWAP (+1.1%). Despite negative news regarding guidance, the intraday price action is strong and leading the sector. High conviction needed due to risk-off market, but the technical setup is clean."
     },
     {
-      "symbol": "ABT",
+      "symbol": "LLY",
+      "action": "BUY",
+      "side": "long",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Breakout above OR, above VWAP, positive news (Wells Fargo raise PT). RSI is 63.6, not overbought. Good long candidate in a risk-off market if it holds the breakout."
-    },
-    {
-      "symbol": "BMY",
-      "setup": "opening range breakout",
-      "reason": "Breakout above OR, above VWAP, positive news (Phase 3 trial). RSI is 55.3. Good long candidate."
+      "reason": "Holding above the opening range breakout level with positive day change (+3.3%). Trading above VWAP (+0.5%). Strong fundamental news (manufacturing expansion) supports the move. Momentum is flat but stable, suggesting a potential continuation or higher low."
     }
+  ],
+  "ranked_ideas": [
+    "BMY",
+    "ABT",
+    "UNH",
+    "TMO",
+    "VRTX"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

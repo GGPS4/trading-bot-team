@@ -1,29 +1,42 @@
 {
   "date": "2026-10-22",
-  "time": "13:35",
-  "trigger": "scheduled look",
+  "time": "13:51",
+  "trigger": "must invest $2,203 more (75% rule)",
   "decisions": [
     {
       "symbol": "LMT",
-      "action": "SELL",
-      "reason": "Position is underwater (-0.4%) and trading below VWAP (-1.4%) in a risk-off market. RSI is overbought (81.9) and momentum is fading (m15 -0.2%). The news catalyst has been fully priced in. Closing to free up capital for stronger setups.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
+      "action": "BUY",
+      "side": "long",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Strong earnings beat and guidance raise, plus massive F-35 contract. Trading above VWAP with high relative volume (2.3) in a risk-off market, showing relative strength."
     },
     {
       "symbol": "BAH",
-      "action": "SELL",
-      "reason": "Position is slightly up (+0.7%) but momentum is stalling (m15 +0.6% but look +0.9% suggests a pullback from highs). RSI is extremely overbought (81.6). In a risk-off market, taking profits on extended positions is prudent. Reinvesting into higher conviction setups.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
+      "action": "BUY",
+      "side": "long",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Opening range breakout with positive momentum. Up 4.8% on the day, showing strength despite the broader market drop. Earnings are tomorrow, so potential for continued volatility/interest."
+    },
+    {
+      "symbol": "SAIC",
+      "action": "BUY",
+      "side": "long",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Opening range breakout with positive 60m momentum (+1.9%). Up 3.4% on the day. Strong relative strength in a down market."
     }
   ],
   "ranked_ideas": [
-    "KTOS",
-    "AVAV",
-    "CW",
-    "MRCY",
-    "SAIC"
+    "LMT",
+    "BAH",
+    "SAIC",
+    "LDOS",
+    "NOC"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
