@@ -22,6 +22,23 @@ class LLMError(Exception):
     pass
 
 
+_DAILY_WORDS = ("per day", "perday", "tpd", "rpd", "daily", "requests per day", "tokens per day")
+_REPORTED = set()
+
+
+def _limit_kind(text):
+    """'day' if a 429 is a daily quota (wait until tomorrow), else 'minute'."""
+    t = (text or "").lower()
+    return "day" if any(w in t for w in _DAILY_WORDS) else "minute"
+
+
+def _report_limit(provider, model, kind, text):
+    key = (provider, model, kind)
+    if key not in _REPORTED:
+        _REPORTED.add(key)
+        log(f"LLM: {provider} {model} hit its {'daily' if kind == 'day' else 'per-minute'} limit: {(text or '')[:160]}")
+
+
 def parse_json(text: str):
     text = (text or "").strip()
     text = re.sub(r"<think>.*?</think>", "", text, flags=re.S).strip()  # some open models "think" out loud
@@ -179,9 +196,11 @@ class Gemini:
                 last = LLMError(f"{model}: {e}")
                 continue
             if r.status_code == 429:
-                if "limit: 0" in r.text or '"limit": 0' in r.text:
-                    self._dead.add(model)
-                    last = LLMError(f"{model} has no quota on this key")
+                kind = _limit_kind(r.text)
+                _report_limit("gemini", model, kind, r.text)
+                if "limit: 0" in r.text or '"limit": 0' in r.text or kind == "day":
+                    self._dead.add(model)  # no quota left today on this model; others may still have some
+                    last = LLMError(f"{model} is out of quota for today")
                 else:
                     cool[model] = time.time() + 60
                     busy = True
@@ -250,6 +269,9 @@ class OpenAIStyle:
                 cands += [i for i in ids if p in i and i not in cands][:2]
         if self.name == "openrouter":
             cands += [i for i in ids if i not in cands][:6]
+        elif ids:  # every other chat model has its own limits too: use them as backups
+            skip = ("whisper", "guard", "tts", "playai", "orpheus", "distil", "embed", "vision", "prompt")
+            cands += [i for i in ids if i not in cands and not any(x in i.lower() for x in skip)][:6]
         self._cands = list(dict.fromkeys(cands))
         log(f"LLM: {self.name} models -> {self._cands[:6]}")
         return self._cands
@@ -273,7 +295,13 @@ class OpenAIStyle:
             except requests.RequestException as e:
                 last = LLMError(f"{self.name} {model}: {e}")
                 continue
-            if r.status_code in (413, 429):  # per-minute limit or request too big for this model's limit
+            if r.status_code in (413, 429):  # rate limit, or request too big for this model's limit
+                kind = _limit_kind(r.text)
+                _report_limit(self.name, model, kind, r.text)
+                if kind == "day":
+                    self._tried.add(model)  # out for today; other models have their own quotas
+                    last = LLMError(f"{self.name} {model} is out of quota for today")
+                    continue
                 self._cool[model] = time.time() + 60
                 busy = True
                 continue
@@ -293,7 +321,7 @@ class OpenAIStyle:
                 continue
         if busy:
             raise RateLimited(f"{self.name}: every model is at its per-minute limit")
-        if last is None and self._tried:
+        if last is None and self._tried and self.name == "openrouter":
             self._tried.clear()  # everything was ruled out: give them all another chance next time
         raise last or LLMError(f"{self.name}: no working model")
 
