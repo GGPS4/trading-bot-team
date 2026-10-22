@@ -111,22 +111,36 @@
   },
   {
     "date": "2026-10-22",
-    "time": "11:18",
-    "trigger": "must invest $2,159 more (75% rule)",
-    "market_view": "Risk-off tape remains in control with SPY -1.3% and QQQ -2.5%, VIXY +5.9%, and broad selling. Space and aerospace names are mostly breaking down below VWAP and the opening range, with SPCX showing the strongest momentum short. Longs are half size and need high conviction, while shorts are favored.",
+    "time": "11:33",
+    "trigger": "first look this run",
+    "market_view": "Market is in a risk-off tape, with SPY down 1.2%, QQQ down 2.4%, and VIXY up 5.1%. The space and aerospace group is mostly selling, with several stocks breaking opening ranges, though no confirmed major launch or contract news drove the last move. Focus stays on breakdowns and momentum shorts into the close.",
     "experiment": "Add trailing stops that activate after a 3% favorable move to lock in gains",
     "decisions": [
       {
-        "symbol": "ASTS",
+        "symbol": "TDG",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Closing the day's long as market risk-off and broad selling pressure increases; trims long exposure and frees a slot for a high-quality breakdown short.",
+        "stop_loss_pct": 0.014,
+        "take_profit_pct": 0.05
+      },
+      {
+        "symbol": "RKLB",
         "action": "SHORT",
         "conviction": 3,
-        "reason": "Risk-off and breakdown mode align. ASTS is below VWAP, opening range breakdown, m15/m60 down, rvol 1.86, trend down. Clear momentum short setup in the team sector; news flow is secondary to the weak price tape.",
+        "reason": "RKLB broke below the opening range and VWAP with day -5.0%, negative momentum, and risk-off sentiment favoring shorts. Tight stop above entry, first target around 5% lower.",
         "stop_loss_pct": 0.025,
-        "take_profit_pct": 0.04
+        "take_profit_pct": 0.05
       }
     ],
     "results": [
-      "SHORT ASTS x1 (~$38.43)"
+      "SELL TDG",
+      "SHORT RKLB blocked: one share costs $50.98, more than the $1.70 allowed",
+      "SHORT BA blocked: one share costs $189.75, more than the $1.70 allowed",
+      "SHORT LUNR blocked: one share costs $10.47, more than the $1.70 allowed",
+      "SHORT PL blocked: one share costs $13.12, more than the $1.70 allowed",
+      "SHORT RDW blocked: one share costs $8.22, more than the $1.70 allowed",
+      "SHORT VSAT blocked: one share costs $59.16, more than the $1.70 allowed"
     ]
   }
 ]

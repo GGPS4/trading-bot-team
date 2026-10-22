@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-22T11:15-04:00",
+  "updated": "2026-10-22T11:33-04:00",
   "date": "2026-10-22",
   "mode": "paper",
   "health": {
     "issues": [
-      "21 problem(s) in the last hour, latest: ISRG: could not place stop order: POST /v2/orders -> 403: {\"available\":\"0\",\"code\":40310000,\"existing_qty\":\"5\",\"held_for_orders\":\"5\",\"message\":\"insufficient qty "
+      "16 problem(s) in the last hour, latest: ASTS: could not move stop: PATCH /v2/orders/1ad0ea60-8c72-44f6-85ee-5b707f245fd0 -> 422: {\"code\":42210000,\"message\":\"order parameters are not changed\"}"
     ]
   },
   "paused": false,
@@ -14,21 +14,21 @@
     "strategy": "day_trading"
   },
   "account": {
-    "equity": 99453.66,
-    "cash": 80742.06,
-    "day_change": -600.17,
-    "day_change_pct": -0.006
+    "equity": 99394.09,
+    "cash": 84429.22,
+    "day_change": -659.74,
+    "day_change_pct": -0.0066
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 762.68
+    "price": 763.23
   },
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 3,
-    "return_since_start": -0.0055,
-    "benchmark_since_start": -0.0103,
-    "max_drawdown": 0.0055
+    "return_since_start": -0.0061,
+    "benchmark_since_start": -0.0096,
+    "max_drawdown": 0.0061
   },
   "go_live": {
     "items": [
@@ -40,12 +40,12 @@
       {
         "rule": "Beating SPY since the start",
         "ok": true,
-        "value": "-0.5% vs -1.0%"
+        "value": "-0.6% vs -1.0%"
       },
       {
         "rule": "Worst drop under 15%",
         "ok": true,
-        "value": "0.5%"
+        "value": "0.6%"
       }
     ],
     "all_ok": false
@@ -58,9 +58,7 @@
         "LMT",
         "RTX",
         "NOC",
-        "GD",
         "LHX",
-        "HII",
         "LDOS",
         "TXT",
         "KTOS",
@@ -73,11 +71,11 @@
         "CW",
         "MRCY"
       ],
-      "budget": 12790.2,
-      "invested": 9874.16,
-      "unrealized_pnl": 186.5,
+      "budget": 12779.91,
+      "invested": 9895.04,
+      "unrealized_pnl": 177.38,
       "realized_today": 0,
-      "trades_today": 0,
+      "trades_today": 3,
       "blocked_today": 0,
       "all_time": {
         "closed_trades": 0,
@@ -107,18 +105,18 @@
         "SATS",
         "FLY"
       ],
-      "budget": 12790.2,
-      "invested": -5202.14,
-      "unrealized_pnl": 37.07,
-      "realized_today": -480.1,
-      "trades_today": 6,
-      "blocked_today": 1,
+      "budget": 12779.91,
+      "invested": -6405.08,
+      "unrealized_pnl": -15.35,
+      "realized_today": -501.2,
+      "trades_today": 7,
+      "blocked_today": 7,
       "all_time": {
-        "closed_trades": 5,
+        "closed_trades": 6,
         "wins": 0,
-        "losses": 5,
+        "losses": 6,
         "win_rate": 0.0,
-        "realized_pnl": -480.1
+        "realized_pnl": -501.2
       }
     },
     "entertainment": {
@@ -141,12 +139,12 @@
         "TTWO",
         "BAM"
       ],
-      "budget": 12790.2,
-      "invested": 287.28,
-      "unrealized_pnl": -17.68,
+      "budget": 12779.91,
+      "invested": -2251.11,
+      "unrealized_pnl": -6.8,
       "realized_today": 0,
       "trades_today": 5,
-      "blocked_today": 2,
+      "blocked_today": 8,
       "all_time": {
         "closed_trades": 0,
         "wins": 0,
@@ -178,9 +176,9 @@
         "ANET",
         "ONDS"
       ],
-      "budget": 12790.2,
-      "invested": -6368.02,
-      "unrealized_pnl": 4.41,
+      "budget": 12779.91,
+      "invested": -6385.18,
+      "unrealized_pnl": -12.74,
       "realized_today": -323.98,
       "trades_today": 7,
       "blocked_today": 2,
@@ -215,18 +213,18 @@
         "LULU",
         "DPZ"
       ],
-      "budget": 12790.2,
-      "invested": -258.7,
-      "unrealized_pnl": -7.29,
-      "realized_today": 0,
-      "trades_today": 2,
-      "blocked_today": 7,
+      "budget": 12779.91,
+      "invested": -261.8,
+      "unrealized_pnl": -10.39,
+      "realized_today": -94.32,
+      "trades_today": 5,
+      "blocked_today": 8,
       "all_time": {
-        "closed_trades": 0,
+        "closed_trades": 1,
         "wins": 0,
-        "losses": 0,
-        "win_rate": null,
-        "realized_pnl": 0
+        "losses": 1,
+        "win_rate": 0.0,
+        "realized_pnl": -94.32
       }
     },
     "financials": {
@@ -252,9 +250,9 @@
         "HOOD",
         "COIN"
       ],
-      "budget": 12790.2,
-      "invested": 9670.93,
-      "unrealized_pnl": 5.21,
+      "budget": 12779.91,
+      "invested": 9678.94,
+      "unrealized_pnl": 13.22,
       "realized_today": -2.88,
       "trades_today": 5,
       "blocked_today": 0,
@@ -289,9 +287,9 @@
         "DHR",
         "HCA"
       ],
-      "budget": 12790.2,
-      "invested": 10707.05,
-      "unrealized_pnl": 91.79,
+      "budget": 12779.91,
+      "invested": 10694.04,
+      "unrealized_pnl": 78.8,
       "realized_today": 0,
       "trades_today": 2,
       "blocked_today": 0,
@@ -310,10 +308,10 @@
       "team": "healthcare",
       "qty": 9.0,
       "entry": 283.57,
-      "price": 285.06,
-      "value": 2565.59,
-      "pnl": 13.46,
-      "pnl_pct": 0.0053,
+      "price": 284.65,
+      "value": 2561.85,
+      "pnl": 9.72,
+      "pnl_pct": 0.0038,
       "stop": 269.31,
       "target": 311.83,
       "reason": "Barclays and Baird raised price target to $325 and secured reimbursement agreement for ELAHERE; bullish sentiment and price target upgrade provide a clear buying signal.",
@@ -328,10 +326,10 @@
       "team": "tech",
       "qty": -5.0,
       "entry": 510.0,
-      "price": 509.81,
-      "value": -2549.03,
-      "pnl": 0.97,
-      "pnl_pct": 0.0004,
+      "price": 510.87,
+      "value": -2554.35,
+      "pnl": -4.35,
+      "pnl_pct": -0.0017,
       "stop": 521.69,
       "target": 491.0,
       "reason": "[75% invested rule] Breakdown below OR/VWAP, oversold RSI, and strong downside momentum in risk-off market.",
@@ -346,10 +344,10 @@
       "team": "tech",
       "qty": -1.0,
       "entry": 171.84,
-      "price": 171.58,
-      "value": -171.58,
-      "pnl": 0.26,
-      "pnl_pct": 0.0015,
+      "price": 171.47,
+      "value": -171.47,
+      "pnl": 0.36,
+      "pnl_pct": 0.0021,
       "stop": 175.63,
       "target": 165.3,
       "reason": "[75% invested rule] Breakdown below OR/VWAP and risk-off selling; weak momentum.",
@@ -360,14 +358,32 @@
       "setup": "momentum"
     },
     {
+      "symbol": "ASTS",
+      "team": "space",
+      "qty": -1.0,
+      "entry": 38.68,
+      "price": 38.77,
+      "value": -38.77,
+      "pnl": -0.09,
+      "pnl_pct": -0.0023,
+      "stop": 39.39,
+      "target": null,
+      "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+      "side": "short",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
+    },
+    {
       "symbol": "AVGO",
       "team": "tech",
       "qty": -7.0,
       "entry": 323.3,
-      "price": 322.98,
-      "value": -2260.82,
-      "pnl": 2.27,
-      "pnl_pct": 0.001,
+      "price": 322.79,
+      "value": -2259.53,
+      "pnl": 3.57,
+      "pnl_pct": 0.0016,
       "stop": 330.49,
       "target": 311.05,
       "reason": "Breakdown below opening range and VWAP with rvol 2.07 and risk-off selling; short weak stocks.",
@@ -382,12 +398,30 @@
       "team": "financials",
       "qty": 7.0,
       "entry": 324.45,
-      "price": 323.02,
-      "value": 2261.14,
-      "pnl": -10.01,
-      "pnl_pct": -0.0044,
+      "price": 323.95,
+      "value": 2267.65,
+      "pnl": -3.5,
+      "pnl_pct": -0.0015,
       "stop": null,
       "target": 373.05,
+      "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
+    },
+    {
+      "symbol": "BAH",
+      "team": "defense",
+      "qty": 16.0,
+      "entry": 78.1,
+      "price": 78.19,
+      "value": 1250.96,
+      "pnl": 1.36,
+      "pnl_pct": 0.0011,
+      "stop": null,
+      "target": null,
       "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
       "side": "long",
       "trailing": false,
@@ -400,10 +434,10 @@
       "team": "space",
       "qty": -78.0,
       "entry": 16.87,
-      "price": 16.73,
-      "value": -1304.55,
-      "pnl": 11.31,
-      "pnl_pct": 0.0086,
+      "price": 16.82,
+      "value": -1312.35,
+      "pnl": 3.51,
+      "pnl_pct": 0.0027,
       "stop": 17.22,
       "target": 16.46,
       "reason": "[75% invested rule] OR breakdown, below VWAP, news but rvol low; weak.",
@@ -414,14 +448,32 @@
       "setup": "momentum"
     },
     {
+      "symbol": "CACI",
+      "team": "defense",
+      "qty": 2.0,
+      "entry": 635.1,
+      "price": 632.03,
+      "value": 1264.07,
+      "pnl": -6.13,
+      "pnl_pct": -0.0048,
+      "stop": 620.9,
+      "target": 658.91,
+      "reason": "CACI beat Q1 EPS and raised FY guidance, importance 4; above VWAP, m15 +0.6, m60 +3.0, rvol 2.02, trend up; risk_off half size.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 620.9,
+      "setup": "news catalyst"
+    },
+    {
       "symbol": "CMCSA",
       "team": "entertainment",
       "qty": -44.0,
       "entry": 22.79,
-      "price": 22.88,
-      "value": -1006.5,
-      "pnl": -3.74,
-      "pnl_pct": -0.0037,
+      "price": 22.86,
+      "value": -1006.06,
+      "pnl": -3.3,
+      "pnl_pct": -0.0033,
       "stop": 23.95,
       "target": 20.52,
       "reason": "[75% invested rule] Q3 beat but Q4 restructuring charge and weak intraday momentum; risk-off short favored.",
@@ -436,10 +488,10 @@
       "team": "financials",
       "qty": 4.0,
       "entry": 305.94,
-      "price": 306.15,
-      "value": 1224.6,
-      "pnl": 0.84,
-      "pnl_pct": 0.0007,
+      "price": 304.97,
+      "value": 1219.88,
+      "pnl": -3.88,
+      "pnl_pct": -0.0032,
       "stop": 300.03,
       "target": 318.4,
       "reason": "JPMorgan upgraded CME to Overweight/Buy and raised its price target to $367, per JPM and Benzinga. CME is also breaking above its opening range at $301.99-$305.43 and trading around $306.15, up 3.5% with rvol 1.34. The catalyst plus breakout is a clear intraday setup, though the market is risk-off and the stock is overbought; conviction is high but size will be disciplined.",
@@ -454,10 +506,10 @@
       "team": "consumer",
       "qty": 4.0,
       "entry": 317.6,
-      "price": 317.49,
-      "value": 1269.96,
-      "pnl": -0.44,
-      "pnl_pct": -0.0003,
+      "price": 317.33,
+      "value": 1269.32,
+      "pnl": -1.08,
+      "pnl_pct": -0.0008,
       "stop": 312.43,
       "target": 326.71,
       "reason": "[75% invested rule] DPZ broke above range with positive momentum but low relative volume; smaller intraday long if momentum holds.",
@@ -472,10 +524,10 @@
       "team": "space",
       "qty": -13.0,
       "entry": 191.56,
-      "price": 191.47,
-      "value": -2489.11,
-      "pnl": 1.17,
-      "pnl_pct": 0.0005,
+      "price": 191.35,
+      "value": -2487.55,
+      "pnl": 2.73,
+      "pnl_pct": 0.0011,
       "stop": 196.2,
       "target": 187.5,
       "reason": "[75% invested rule] OR breakdown, below VWAP, high rvol 5.36, m15 -0.4, m60 -1.8.",
@@ -490,10 +542,10 @@
       "team": "financials",
       "qty": 7.0,
       "entry": 163.01,
-      "price": 162.81,
-      "value": 1139.67,
-      "pnl": -1.4,
-      "pnl_pct": -0.0012,
+      "price": 162.85,
+      "value": 1139.95,
+      "pnl": -1.12,
+      "pnl_pct": -0.001,
       "stop": 159.66,
       "target": 167.81,
       "reason": "[75% invested rule] ICE broke above its opening range and is up 3.3%, with positive momentum and rvol 1.15; a valid intraday long if risk controls are tight.",
@@ -504,32 +556,14 @@
       "setup": "opening range breakout"
     },
     {
-      "symbol": "IMAX",
-      "team": "entertainment",
-      "qty": 48.0,
-      "entry": 53.11,
-      "price": 52.85,
-      "value": 2536.8,
-      "pnl": -12.48,
-      "pnl_pct": -0.0049,
-      "stop": null,
-      "target": 58.38,
-      "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
-      "side": "long",
-      "trailing": false,
-      "scaled": false,
-      "first_stop": null,
-      "setup": null
-    },
-    {
       "symbol": "ISRG",
       "team": "healthcare",
       "qty": 5.0,
       "entry": 431.77,
-      "price": 440.65,
-      "value": 2203.28,
-      "pnl": 44.42,
-      "pnl_pct": 0.0206,
+      "price": 440.47,
+      "value": 2202.35,
+      "pnl": 43.5,
+      "pnl_pct": 0.0202,
       "stop": 437.28,
       "target": 493.83,
       "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
@@ -544,31 +578,13 @@
       "team": "defense",
       "qty": 20.0,
       "entry": 127.82,
-      "price": 132.29,
-      "value": 2645.8,
-      "pnl": 89.4,
-      "pnl_pct": 0.035,
+      "price": 133.16,
+      "value": 2663.3,
+      "pnl": 106.9,
+      "pnl_pct": 0.0418,
       "stop": 122.64,
       "target": 137.98,
       "reason": "Secured a new $160M U.S. Cyber Command award and shows steady trend above 20-day moving average with balanced RSI (59.6), offering favorable risk/reward on contract-driven momentum.",
-      "side": "long",
-      "trailing": false,
-      "scaled": false,
-      "first_stop": null,
-      "setup": null
-    },
-    {
-      "symbol": "LHX",
-      "team": "defense",
-      "qty": 10.0,
-      "entry": 248.98,
-      "price": 252.41,
-      "value": 2524.05,
-      "pnl": 34.25,
-      "pnl_pct": 0.0138,
-      "stop": 231.63,
-      "target": 286.42,
-      "reason": "Sentiment 0.7 and importance 5 from news on a new solid\u2011rocket\u2011motor facility; price up modestly, RSI 62 indicates room for upside. Position size within 20% budget limit.",
       "side": "long",
       "trailing": false,
       "scaled": false,
@@ -580,10 +596,10 @@
       "team": "healthcare",
       "qty": 0.972325062,
       "entry": 1315.41,
-      "price": 1315.11,
-      "value": 1278.71,
-      "pnl": -0.3,
-      "pnl_pct": -0.0002,
+      "price": 1319.16,
+      "value": 1282.66,
+      "pnl": 3.65,
+      "pnl_pct": 0.0029,
       "stop": 1286.42,
       "target": 1365.18,
       "reason": "LLY +3.3% on the day, opening range breakout above 1301.26, above VWAP, rvol 2.03, positive m15/m60 momentum, and urgent $5B antibody-drug conjugate manufacturing news; strongest healthcare setup with positive sentiment.",
@@ -598,10 +614,10 @@
       "team": "entertainment",
       "qty": -5.0,
       "entry": 173.65,
-      "price": 174.01,
-      "value": -870.08,
-      "pnl": -1.82,
-      "pnl_pct": -0.0021,
+      "price": 174.43,
+      "value": -872.14,
+      "pnl": -3.89,
+      "pnl_pct": -0.0045,
       "stop": 182.63,
       "target": 156.54,
       "reason": "[75% invested rule] Breakdown below OR/VWAP, weak trend, but low rvol; momentum short.",
@@ -616,10 +632,10 @@
       "team": "healthcare",
       "qty": 17.0,
       "entry": 148.76,
-      "price": 152.77,
-      "value": 2597.09,
-      "pnl": 68.17,
-      "pnl_pct": 0.027,
+      "price": 152.49,
+      "value": 2592.24,
+      "pnl": 63.33,
+      "pnl_pct": 0.025,
       "stop": 143.36,
       "target": 158.96,
       "reason": "Clear regulatory catalyst with European Commission approval of Keytruda-Padcev combination; stock displays steady positive momentum (+0.85% from open) with a healthy RSI of 57.7.",
@@ -634,10 +650,10 @@
       "team": "defense",
       "qty": 4.0,
       "entry": 537.08,
-      "price": 551.59,
-      "value": 2206.36,
-      "pnl": 58.04,
-      "pnl_pct": 0.027,
+      "price": 554.17,
+      "value": 2216.68,
+      "pnl": 68.36,
+      "pnl_pct": 0.0318,
       "stop": 519.95,
       "target": 581.91,
       "reason": "Strong Q3 earnings beat accompanied by raised FY26 guidance and multiple analyst upgrades/PT increases (Baird to $675, Guggenheim to $640). Showing positive relative strength today (+0.88%).",
@@ -652,10 +668,10 @@
       "team": "defense",
       "qty": 13.0,
       "entry": 191.78,
-      "price": 192.15,
-      "value": 2497.95,
-      "pnl": 4.81,
-      "pnl_pct": 0.0019,
+      "price": 192.31,
+      "value": 2500.03,
+      "pnl": 6.89,
+      "pnl_pct": 0.0028,
       "stop": 178.33,
       "target": 214.76,
       "reason": "Barclays and other analysts upgraded RTX, raising price target to $235; new air\u2011traffic\u2011control system and PT9 engine boost outlook. Sentiment 0.5\u20110.6, importance 3\u20114, price dipped 0.8% today, providing entry at ~191.75 within position size limit.",
@@ -670,10 +686,10 @@
       "team": "financials",
       "qty": 28.0,
       "entry": 91.89,
-      "price": 91.86,
-      "value": 2572.08,
-      "pnl": -0.78,
-      "pnl_pct": -0.0003,
+      "price": 91.93,
+      "value": 2574.04,
+      "pnl": 1.18,
+      "pnl_pct": 0.0005,
       "stop": null,
       "target": 105.7,
       "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
@@ -688,10 +704,10 @@
       "team": "space",
       "qty": -17.0,
       "entry": 149.7,
-      "price": 148.41,
-      "value": -2522.99,
-      "pnl": 21.91,
-      "pnl_pct": 0.0086,
+      "price": 150.97,
+      "value": -2566.41,
+      "pnl": -21.5,
+      "pnl_pct": -0.0084,
       "stop": 151.97,
       "target": 145.23,
       "reason": "[75% invested rule] OR breakdown, below VWAP, m15/m60 negative, rvol 4.68; news but breakdown in risk-off.",
@@ -706,10 +722,10 @@
       "team": "entertainment",
       "qty": 0.901157977,
       "entry": 567.71,
-      "price": 569.56,
-      "value": 513.26,
-      "pnl": 1.66,
-      "pnl_pct": 0.0032,
+      "price": 568.6,
+      "value": 512.39,
+      "pnl": 0.79,
+      "pnl_pct": 0.0015,
       "stop": 540.6,
       "target": 625.96,
       "reason": "Pre-market gap +5.8% on Q3 beat, rvol 4.88, strong earnings gap; risk-off long with half size, conviction 4 meets +1.",
@@ -720,32 +736,14 @@
       "setup": "earnings gap"
     },
     {
-      "symbol": "TDG",
-      "team": "space",
-      "qty": 1.0,
-      "entry": 1111.83,
-      "price": 1114.51,
-      "value": 1114.51,
-      "pnl": 2.68,
-      "pnl_pct": 0.0024,
-      "stop": 1096.18,
-      "target": 1163.29,
-      "reason": "[75% invested rule] rvol 2.13; m60 +0.8; momentum.",
-      "side": "long",
-      "trailing": false,
-      "scaled": false,
-      "first_stop": 1096.18,
-      "setup": "momentum"
-    },
-    {
       "symbol": "TKO",
       "team": "entertainment",
       "qty": -5.0,
       "entry": 176.98,
-      "price": 177.24,
-      "value": -886.2,
-      "pnl": -1.3,
-      "pnl_pct": -0.0015,
+      "price": 177.06,
+      "value": -885.3,
+      "pnl": -0.4,
+      "pnl_pct": -0.0004,
       "stop": 185.83,
       "target": 159.29,
       "reason": "[75% invested rule] Breakdown below OR/VWAP, m60 -1.6, risk-off short.",
@@ -760,10 +758,10 @@
       "team": "healthcare",
       "qty": 3.0,
       "entry": 698.78,
-      "price": 687.46,
-      "value": 2062.38,
-      "pnl": -33.96,
-      "pnl_pct": -0.0162,
+      "price": 684.98,
+      "value": 2054.94,
+      "pnl": -41.4,
+      "pnl_pct": -0.0198,
       "stop": 667.64,
       "target": 751.1,
       "reason": "Reported a solid Q3 beat ($6.68 EPS) and raised full-year guidance, generating strong intraday demand with price rebounding +4.49% from open above both the 20-day and 50-day moving averages.",
@@ -778,10 +776,10 @@
       "team": "consumer",
       "qty": -4.0,
       "entry": 380.45,
-      "price": 382.17,
-      "value": -1528.66,
-      "pnl": -6.85,
-      "pnl_pct": -0.0045,
+      "price": 382.78,
+      "value": -1531.12,
+      "pnl": -9.31,
+      "pnl_pct": -0.0061,
       "stop": 393.74,
       "target": 366.98,
       "reason": "Tesla sold off after Q3 earnings despite the beat on delivery weakness and 2026 CapEx cut; shares are below VWAP and momentum is down, fitting a risk-off short.",
@@ -796,10 +794,10 @@
       "team": "tech",
       "qty": -5.0,
       "entry": 277.5,
-      "price": 277.32,
-      "value": -1386.59,
-      "pnl": 0.91,
-      "pnl_pct": 0.0007,
+      "price": 279.96,
+      "value": -1399.83,
+      "pnl": -12.32,
+      "pnl_pct": -0.0089,
       "stop": 284.32,
       "target": 267.6,
       "reason": "[75% invested rule] High-volume breakdown below VWAP and Mizuho PT cut; favored short in risk-off.",
@@ -814,10 +812,10 @@
       "team": "financials",
       "qty": 6.0,
       "entry": 409.48,
-      "price": 412.24,
-      "value": 2473.44,
-      "pnl": 16.56,
-      "pnl_pct": 0.0067,
+      "price": 412.9,
+      "value": 2477.42,
+      "pnl": 20.54,
+      "pnl_pct": 0.0084,
       "stop": 388.55,
       "target": 449.91,
       "reason": "",
@@ -882,6 +880,42 @@
       "reason": "Susquehanna raised AMD's price target to $620 following an AI supercluster win in India. The stock is rebounding strongly (+2.28% today) out of near-oversold territory (RSI 32.9) while holding above its 50-day average.",
       "stop_price": 519.17,
       "take_profit_price": 601.14
+    },
+    {
+      "time": "11:02",
+      "team": "consumer",
+      "symbol": "AMZN",
+      "qty": 9.0,
+      "est_price": 261.45,
+      "entry_price": 261.893333,
+      "side": "buy",
+      "exit_price": 251.67,
+      "exit_reason": "manager_sell",
+      "pnl": -94.32,
+      "pnl_pct": -0.04,
+      "status": "closed",
+      "conviction": 3,
+      "reason": "Multiple positive partnership news (AWS with 3Business, 3M stock warrant, Credera collaboration) and after\u2011hours analyst optimism, while price is modestly down 0.5% offering a better entry point.",
+      "stop_price": 240.53,
+      "take_profit_price": 300.67
+    },
+    {
+      "time": "11:21",
+      "team": "defense",
+      "symbol": "LHX",
+      "qty": 10.0,
+      "est_price": 249.06,
+      "entry_price": 248.98,
+      "side": "buy",
+      "exit_price": null,
+      "exit_reason": "sold outside the bot",
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "closed",
+      "conviction": 5,
+      "reason": "Sentiment 0.7 and importance 5 from news on a new solid\u2011rocket\u2011motor facility; price up modestly, RSI 62 indicates room for upside. Position size within 20% budget limit.",
+      "stop_price": 231.63,
+      "take_profit_price": 286.42
     },
     {
       "time": "11:26",
@@ -982,7 +1016,7 @@
       "entry_price": 53.11,
       "side": "long",
       "exit_price": null,
-      "exit_reason": null,
+      "exit_reason": "manager_sell",
       "pnl": null,
       "pnl_pct": null,
       "status": "open",
@@ -1143,11 +1177,11 @@
       "est_price": 17.24,
       "entry_price": 17.15,
       "side": "long",
-      "exit_price": null,
-      "exit_reason": null,
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "exit_price": 16.881892,
+      "exit_reason": "stop_loss",
+      "pnl": -21.1,
+      "pnl_pct": -0.0166,
+      "status": "closed",
       "conviction": 3,
       "reason": "[75% invested rule] Firefly PDR completed; m60 +0.9; news catalyst.",
       "stop_price": 16.9,
@@ -1162,7 +1196,7 @@
       "entry_price": 1111.83,
       "side": "long",
       "exit_price": null,
-      "exit_reason": null,
+      "exit_reason": "manager_sell",
       "pnl": null,
       "pnl_pct": null,
       "status": "open",
@@ -1337,15 +1371,15 @@
       "time": "11:12",
       "team": "consumer",
       "symbol": "TSLA",
-      "qty": 4,
+      "qty": 4.0,
       "est_price": 382.275,
-      "entry_price": null,
+      "entry_price": 380.4525,
       "side": "short",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 4,
       "reason": "Tesla sold off after Q3 earnings despite the beat on delivery weakness and 2026 CapEx cut; shares are below VWAP and momentum is down, fitting a risk-off short.",
       "stop_price": 393.74,
@@ -1355,15 +1389,15 @@
       "time": "11:12",
       "team": "consumer",
       "symbol": "DPZ",
-      "qty": 4,
+      "qty": 4.0,
       "est_price": 317.19,
-      "entry_price": null,
+      "entry_price": 317.6,
       "side": "long",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 3,
       "reason": "[75% invested rule] DPZ broke above range with positive momentum but low relative volume; smaller intraday long if momentum holds.",
       "stop_price": 312.43,
@@ -1373,15 +1407,15 @@
       "time": "11:14",
       "team": "financials",
       "symbol": "CME",
-      "qty": 4,
+      "qty": 4.0,
       "est_price": 306.15,
-      "entry_price": null,
+      "entry_price": 305.94,
       "side": "long",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 4,
       "reason": "JPMorgan upgraded CME to Overweight/Buy and raised its price target to $367, per JPM and Benzinga. CME is also breaking above its opening range at $301.99-$305.43 and trading around $306.15, up 3.5% with rvol 1.34. The catalyst plus breakout is a clear intraday setup, though the market is risk-off and the stock is overbought; conviction is high but size will be disciplined.",
       "stop_price": 300.03,
@@ -1391,15 +1425,15 @@
       "time": "11:14",
       "team": "financials",
       "symbol": "ICE",
-      "qty": 7,
+      "qty": 7.0,
       "est_price": 162.92,
-      "entry_price": null,
+      "entry_price": 163.01,
       "side": "long",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 3,
       "reason": "[75% invested rule] ICE broke above its opening range and is up 3.3%, with positive momentum and rvol 1.15; a valid intraday long if risk controls are tight.",
       "stop_price": 159.66,
@@ -1409,8 +1443,80 @@
       "time": "11:15",
       "team": "healthcare",
       "symbol": "LLY",
-      "qty": 0.974365,
+      "qty": 0.972325062,
       "est_price": 1312.67,
+      "entry_price": 1315.414,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 4,
+      "reason": "LLY +3.3% on the day, opening range breakout above 1301.26, above VWAP, rvol 2.03, positive m15/m60 momentum, and urgent $5B antibody-drug conjugate manufacturing news; strongest healthcare setup with positive sentiment.",
+      "stop_price": 1286.42,
+      "take_profit_price": 1365.18
+    },
+    {
+      "time": "11:26",
+      "team": "space",
+      "symbol": "ASTS",
+      "qty": 1.0,
+      "est_price": 38.68,
+      "entry_price": 38.68,
+      "side": "short",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": null,
+      "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+      "stop_price": 39.39,
+      "take_profit_price": null
+    },
+    {
+      "time": "11:26",
+      "team": "defense",
+      "symbol": "BAH",
+      "qty": 16.0,
+      "est_price": 78.1,
+      "entry_price": 78.1,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": null,
+      "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+      "stop_price": null,
+      "take_profit_price": null
+    },
+    {
+      "time": "11:26",
+      "team": "defense",
+      "symbol": "LMT",
+      "qty": 2.0,
+      "est_price": 586.49,
+      "entry_price": 586.49,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": "manager_sell",
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": null,
+      "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+      "stop_price": null,
+      "take_profit_price": null
+    },
+    {
+      "time": "11:33",
+      "team": "defense",
+      "symbol": "CACI",
+      "qty": 2,
+      "est_price": 633.57,
       "entry_price": null,
       "side": "long",
       "exit_price": null,
@@ -1419,9 +1525,63 @@
       "pnl_pct": null,
       "status": "submitted",
       "conviction": 4,
-      "reason": "LLY +3.3% on the day, opening range breakout above 1301.26, above VWAP, rvol 2.03, positive m15/m60 momentum, and urgent $5B antibody-drug conjugate manufacturing news; strongest healthcare setup with positive sentiment.",
-      "stop_price": 1286.42,
-      "take_profit_price": 1365.18
+      "reason": "CACI beat Q1 EPS and raised FY guidance, importance 4; above VWAP, m15 +0.6, m60 +3.0, rvol 2.02, trend up; risk_off half size.",
+      "stop_price": 620.9,
+      "take_profit_price": 658.91
+    },
+    {
+      "time": "11:33",
+      "team": "consumer",
+      "symbol": "AMZN",
+      "qty": 10,
+      "est_price": 251.87,
+      "entry_price": null,
+      "side": "short",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "submitted",
+      "conviction": 4,
+      "reason": "AMZN is down 4.0% on the day, trading below VWAP (-0.6%) with high relative volume (2.03). In a risk-off market, this momentum suggests further downside. The stop is tight at 2% to respect the volatility.",
+      "stop_price": 256.91,
+      "take_profit_price": 244.31
+    },
+    {
+      "time": "11:33",
+      "team": "consumer",
+      "symbol": "LULU",
+      "qty": 12,
+      "est_price": 101.03,
+      "entry_price": null,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "submitted",
+      "conviction": 4,
+      "reason": "LULU is up 4.7% with a strong opening range breakout and positive 15m momentum (+0.5%). It is trading above VWAP (+2.2%) and has the best relative strength in the group today. Longs are half-size due to risk-off, but this is a high-conviction momentum play.",
+      "stop_price": 99.51,
+      "take_profit_price": 103.56
+    },
+    {
+      "time": "11:33",
+      "team": "consumer",
+      "symbol": "HD",
+      "qty": 3,
+      "est_price": 324.39,
+      "entry_price": null,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "submitted",
+      "conviction": 3,
+      "reason": "[75% invested rule] HD is up 3.3% with a breakout and above VWAP. Strong momentum, but RSI is overbought (85.2), so entry should be cautious.",
+      "stop_price": 319.52,
+      "take_profit_price": 332.5
     }
   ],
   "blocked_today": [
@@ -1520,9 +1680,135 @@
       "symbol": "ABNB",
       "action": "BUY",
       "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "RKLB",
+      "action": "SHORT",
+      "reason": "one share costs $50.98, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "BA",
+      "action": "SHORT",
+      "reason": "one share costs $189.75, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "LUNR",
+      "action": "SHORT",
+      "reason": "one share costs $10.47, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "PL",
+      "action": "SHORT",
+      "reason": "one share costs $13.12, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "RDW",
+      "action": "SHORT",
+      "reason": "one share costs $8.22, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "VSAT",
+      "action": "SHORT",
+      "reason": "one share costs $59.16, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "SONY",
+      "action": "BUY",
+      "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "NFLX",
+      "action": "BUY",
+      "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "DIS",
+      "action": "BUY",
+      "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "FOXA",
+      "action": "BUY",
+      "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "BAM",
+      "action": "BUY",
+      "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "ROKU",
+      "action": "BUY",
+      "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "consumer",
+      "symbol": "LOW",
+      "action": "BUY",
+      "reason": "conviction 3 is below the minimum 4 (risk-off market)"
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-10-21",
+      "team": "consumer",
+      "symbol": "AMZN",
+      "entry_price": 261.893333,
+      "exit_price": 251.67,
+      "exit_reason": "manager_sell",
+      "pnl": -94.32,
+      "pnl_pct": -0.04,
+      "reason": "Multiple positive partnership news (AWS with 3Business, 3M stock warrant, Credera collaboration) and after\u2011hours analyst optimism, while price is modestly down 0.5% offering a better entry point."
+    },
+    {
+      "date": "2026-10-22",
+      "team": "space",
+      "symbol": "FLY",
+      "entry_price": 17.15,
+      "exit_price": 16.881892,
+      "exit_reason": "stop_loss",
+      "pnl": -21.1,
+      "pnl_pct": -0.0166,
+      "reason": "[75% invested rule] Firefly PDR completed; m60 +0.9; news catalyst."
+    },
     {
       "date": "2026-10-22",
       "team": "tech",
@@ -1643,6 +1929,17 @@
       "pnl": -58.46,
       "pnl_pct": -0.0228,
       "reason": "LUNR rose 4.7% on sympathy with SpaceX earnings; RSI near oversold (31) and sentiment 0.7 (importance 3) give a modest\u2011conviction buy."
+    },
+    {
+      "date": "2026-10-21",
+      "team": "defense",
+      "symbol": "LHX",
+      "entry_price": 248.98,
+      "exit_price": null,
+      "exit_reason": "sold outside the bot",
+      "pnl": null,
+      "pnl_pct": null,
+      "reason": "Sentiment 0.7 and importance 5 from news on a new solid\u2011rocket\u2011motor facility; price up modestly, RSI 62 indicates room for upside. Position size within 20% budget limit."
     },
     {
       "date": "2026-10-21",
@@ -2513,7 +2810,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-22T10:56-04:00",
+    "time": "2026-10-22T11:29-04:00",
     "earnings": [
       {
         "date": "2026-10-22",
@@ -2684,27 +2981,56 @@
     ]
   },
   "scorecard": {
-    "updated": "2026-10-22T10:56-04:00",
+    "updated": "2026-10-22T11:29-04:00",
     "days": 30,
     "overall": {
-      "trades": 7,
-      "win_rate": 0.429,
-      "avg_return": -0.0159,
-      "total_pnl": -260.34,
-      "profit_factor": 0.17,
+      "trades": 15,
+      "win_rate": 0.2,
+      "avg_return": -0.0248,
+      "total_pnl": -890.57,
+      "profit_factor": 0.06,
       "enough_data": true
     },
     "by_setup": {
       "untagged": {
-        "trades": 7,
-        "win_rate": 0.429,
-        "avg_return": -0.0159,
-        "total_pnl": -260.34,
-        "profit_factor": 0.17,
+        "trades": 14,
+        "win_rate": 0.214,
+        "avg_return": -0.0254,
+        "total_pnl": -869.47,
+        "profit_factor": 0.06,
         "enough_data": true
+      },
+      "news catalyst": {
+        "trades": 1,
+        "win_rate": 0.0,
+        "avg_return": -0.0166,
+        "total_pnl": -21.1,
+        "profit_factor": 0.0,
+        "enough_data": false
       }
     },
     "by_team": {
+      "consumer": {
+        "overall": {
+          "trades": 1,
+          "win_rate": 0.0,
+          "avg_return": -0.04,
+          "total_pnl": -94.32,
+          "profit_factor": 0.0,
+          "enough_data": false
+        },
+        "by_setup": {
+          "untagged": {
+            "trades": 1,
+            "win_rate": 0.0,
+            "avg_return": -0.04,
+            "total_pnl": -94.32,
+            "profit_factor": 0.0,
+            "enough_data": false
+          }
+        },
+        "by_experiment": {}
+      },
       "financials": {
         "overall": {
           "trades": 2,
@@ -2749,62 +3075,79 @@
       },
       "space": {
         "overall": {
-          "trades": 2,
+          "trades": 6,
           "win_rate": 0.0,
-          "avg_return": -0.0413,
-          "total_pnl": -203.8,
+          "avg_return": -0.0345,
+          "total_pnl": -501.2,
           "profit_factor": 0.0,
-          "enough_data": false
+          "enough_data": true
         },
         "by_setup": {
           "untagged": {
-            "trades": 2,
+            "trades": 5,
             "win_rate": 0.0,
-            "avg_return": -0.0413,
-            "total_pnl": -203.8,
+            "avg_return": -0.0381,
+            "total_pnl": -480.1,
+            "profit_factor": 0.0,
+            "enough_data": true
+          },
+          "news catalyst": {
+            "trades": 1,
+            "win_rate": 0.0,
+            "avg_return": -0.0166,
+            "total_pnl": -21.1,
             "profit_factor": 0.0,
             "enough_data": false
           }
         },
-        "by_experiment": {}
+        "by_experiment": {
+          "volume-spike filter for entries following earnings or contract announcements": {
+            "trades": 1,
+            "win_rate": 0.0,
+            "avg_return": -0.0166,
+            "total_pnl": -21.1,
+            "profit_factor": 0.0,
+            "enough_data": false
+          }
+        }
       },
       "tech": {
         "overall": {
-          "trades": 2,
-          "win_rate": 0.5,
-          "avg_return": -0.0201,
-          "total_pnl": -85.47,
-          "profit_factor": 0.2,
-          "enough_data": false
+          "trades": 5,
+          "win_rate": 0.2,
+          "avg_return": -0.0274,
+          "total_pnl": -323.98,
+          "profit_factor": 0.06,
+          "enough_data": true
         },
         "by_setup": {
           "untagged": {
-            "trades": 2,
-            "win_rate": 0.5,
-            "avg_return": -0.0201,
-            "total_pnl": -85.47,
-            "profit_factor": 0.2,
-            "enough_data": false
+            "trades": 5,
+            "win_rate": 0.2,
+            "avg_return": -0.0274,
+            "total_pnl": -323.98,
+            "profit_factor": 0.06,
+            "enough_data": true
           }
         },
         "by_experiment": {}
       }
     },
     "by_exit": {
-      "stop_loss": {
-        "trades": 3,
-        "win_rate": 0.0,
-        "avg_return": -0.0437,
-        "total_pnl": -310.17,
-        "profit_factor": 0.0,
-        "enough_data": false
-      },
       "manager_sell": {
-        "trades": 2,
-        "win_rate": 1.0,
-        "avg_return": 0.0063,
-        "total_pnl": 31.81,
-        "profit_factor": null,
+        "trades": 9,
+        "win_rate": 0.222,
+        "avg_return": -0.0258,
+        "total_pnl": -577.32,
+        "profit_factor": 0.05,
+        "enough_data": true
+      },
+      "stop_loss": {
+        "trades": 4,
+        "win_rate": 0.0,
+        "avg_return": -0.037,
+        "total_pnl": -331.27,
+        "profit_factor": 0.0,
         "enough_data": false
       },
       "trailing_stop": {
@@ -2818,14 +3161,76 @@
     }
   },
   "mood": {
-    "time": "2026-10-22T11:10-04:00",
+    "time": "2026-10-22T11:29-04:00",
     "regime": "risk_off",
-    "spy": -0.0133,
-    "qqq": -0.025,
-    "fear_vixy": 0.0626,
+    "spy": -0.0124,
+    "qqq": -0.0235,
+    "fear_vixy": 0.051,
     "breadth": 0.55,
-    "why": "index down -2.5%, fear gauge (VIXY) up 6.3%",
+    "why": "index down -2.4%",
     "note": "Market is falling hard or fear is spiking. Longs are half size and need conviction +1. Shorting weak stocks (below VWAP, breaking down) is favored."
+  },
+  "preflight": {
+    "date": "2026-10-22",
+    "time": "2026-10-22T11:26-04:00",
+    "checks": [
+      {
+        "name": "Alpaca account",
+        "ok": true,
+        "detail": "equity $99,370"
+      },
+      {
+        "name": "Market clock",
+        "ok": true,
+        "detail": "open"
+      },
+      {
+        "name": "Live prices",
+        "ok": true,
+        "detail": "SPY $764.31"
+      },
+      {
+        "name": "Company news",
+        "ok": true,
+        "detail": "30 recent articles"
+      },
+      {
+        "name": "Market movers",
+        "ok": true,
+        "detail": "top movers available"
+      },
+      {
+        "name": "Event calendar",
+        "ok": true,
+        "detail": "17 earnings, 4 economic events"
+      },
+      {
+        "name": "AI: gemini",
+        "ok": true,
+        "detail": "gemini-3.6-flash"
+      },
+      {
+        "name": "AI: groq",
+        "ok": true,
+        "detail": "openai/gpt-oss-120b"
+      },
+      {
+        "name": "AI: openrouter",
+        "ok": true,
+        "detail": "recursive/flint-v1.0:free"
+      },
+      {
+        "name": "AI providers working",
+        "ok": true,
+        "detail": "3 of 3"
+      },
+      {
+        "name": "Saving to GitHub",
+        "ok": true,
+        "detail": "ready"
+      }
+    ],
+    "all_ok": true
   },
   "premarket": {
     "time": "2026-10-22T09:13-04:00",
@@ -3505,12 +3910,12 @@
           "first_stop": null,
           "entry_price": 248.98,
           "exit_price": null,
-          "exit_time": null,
-          "exit_reason": null,
+          "exit_time": "2026-10-22T11:29:38.134889-04:00",
+          "exit_reason": "sold outside the bot",
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "open",
+          "status": "closed",
           "conviction": 5,
           "reason": "Sentiment 0.7 and importance 5 from news on a new solid\u2011rocket\u2011motor facility; price up modestly, RSI 62 indicates room for upside. Position size within 20% budget limit.",
           "stop_price": 231.63,
@@ -3569,6 +3974,87 @@
           "reason": "Barclays and other analysts upgraded RTX, raising price target to $235; new air\u2011traffic\u2011control system and PT9 engine boost outlook. Sentiment 0.5\u20110.6, importance 3\u20114, price dipped 0.8% today, providing entry at ~191.75 within position size limit.",
           "stop_price": 178.33,
           "take_profit_price": 214.76
+        },
+        {
+          "id": "defense-BAH-202610221126-b518",
+          "date": "2026-10-22",
+          "time": "11:26",
+          "symbol": "BAH",
+          "kind": "shares",
+          "qty": 16.0,
+          "dollars": 1249.28,
+          "est_price": 78.1,
+          "setup": null,
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
+          "entry_price": 78.1,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": null,
+          "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+          "stop_price": null,
+          "take_profit_price": null
+        },
+        {
+          "id": "defense-LMT-202610221126-a7fb",
+          "date": "2026-10-22",
+          "time": "11:26",
+          "symbol": "LMT",
+          "kind": "shares",
+          "qty": 2.0,
+          "dollars": 1173.95,
+          "est_price": 586.49,
+          "setup": null,
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
+          "entry_price": 586.49,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": "manager_sell",
+          "exit_note": "LMT failed to hold above VWAP and gave back post-earnings momentum; closing to redeploy into high-conviction defense news.",
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": null,
+          "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+          "stop_price": null,
+          "take_profit_price": null
+        },
+        {
+          "id": "defense-CACI-202610221133-105e",
+          "date": "2026-10-22",
+          "time": "11:33",
+          "symbol": "CACI",
+          "kind": "shares",
+          "qty": 2,
+          "dollars": 1267.14,
+          "est_price": 633.57,
+          "setup": "news catalyst",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 620.9,
+          "entry_price": null,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "submitted",
+          "conviction": 4,
+          "reason": "CACI beat Q1 EPS and raised FY guidance, importance 4; above VWAP, m15 +0.6, m60 +3.0, rvol 2.02, trend up; risk_off half size.",
+          "stop_price": 620.9,
+          "take_profit_price": 658.91
         }
       ],
       "blocked": [],
@@ -3659,6 +4145,37 @@
           "experiment": "Testing an automatic 50% scale-out at 1R on contract/earnings momentum plays to lock in intraday profits during risk-off market conditions.",
           "decisions": [],
           "results": []
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "trigger": "first look this run",
+          "market_view": "Market is risk-off with SPY down 1.2%, QQQ down 2.4%, and VIXY up 5.1%. Defense news is mixed but LMT/CACI had positive catalysts. We are day trading with tight risk, long bias only on high conviction setups, and shorting weak breakdowns. No new positions in last 15 min.",
+          "experiment": "Implement an automatic 50% scale-out at 1R on contract-driven momentum plays like LDOS to lock in intraday gains against late-day mean reversion.",
+          "decisions": [
+            {
+              "symbol": "LMT",
+              "action": "SELL",
+              "conviction": 3,
+              "reason": "LMT failed to hold above VWAP and gave back post-earnings momentum; closing to redeploy into high-conviction defense news.",
+              "stop_loss_pct": 0.05,
+              "take_profit_pct": 0.1
+            },
+            {
+              "symbol": "CACI",
+              "action": "BUY",
+              "conviction": 4,
+              "reason": "CACI beat Q1 EPS and raised FY guidance, importance 4; above VWAP, m15 +0.6, m60 +3.0, rvol 2.02, trend up; risk_off half size.",
+              "stop_loss_pct": 0.02,
+              "take_profit_pct": 0.04
+            }
+          ],
+          "results": [
+            "SELL LMT",
+            "BUY CACI x2 (~$1267.14)",
+            "WATCHLIST removed GD",
+            "WATCHLIST removed HII"
+          ]
         }
       ],
       "lessons": [
@@ -3685,9 +4202,7 @@
           "LMT",
           "RTX",
           "NOC",
-          "GD",
           "LHX",
-          "HII",
           "LDOS",
           "TXT",
           "KTOS",
@@ -3719,99 +4234,106 @@
           "CW",
           "MRCY"
         ],
-        "log": [],
+        "log": [
+          {
+            "time": "2026-10-22T11:33-04:00",
+            "action": "removed",
+            "symbol": "GD",
+            "reason": "Quiet, no clear catalyst or volume.",
+            "by": "manager"
+          },
+          {
+            "time": "2026-10-22T11:33-04:00",
+            "action": "removed",
+            "symbol": "HII",
+            "reason": "Quiet, no clear catalyst or volume.",
+            "by": "manager"
+          }
+        ],
         "rejected": [],
-        "updated": "2026-10-22T10:58-04:00"
+        "updated": "2026-10-22T11:33-04:00"
       },
       "research": {
-        "time": "2026-10-22T10:52-04:00",
+        "time": "2026-10-22T11:26-04:00",
         "news": {
           "findings": [
             {
-              "symbol": "PLTR",
-              "sentiment": 0.6,
-              "importance": 3,
+              "symbol": "RTX",
+              "sentiment": 0.2,
+              "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Palantir highlights sovereign AI capabilities, positioning itself as a trusted partner for NATO and European defense amid tech dependence concerns",
-              "source": "benzinga",
-              "time": "10:56"
+              "summary": "Goldman Sachs raised its price target for RTX by $2 to $208.",
+              "source": "fiscal.ai",
+              "time": "11:29"
             },
             {
               "symbol": "LMT",
               "sentiment": 1.0,
               "importance": 5,
               "unconfirmed_rumor": false,
-              "summary": "Lockheed Martin beat Q3 EPS and revenue estimates, raised FY2026 guidance, and reported a record backlog of about $292 billion while announcing an F-35 framework for 850 aircraft.",
-              "source": "Benzinga / Fiscal.ai"
-            },
-            {
-              "symbol": "PLTR",
-              "sentiment": 0.5,
-              "importance": 3,
-              "unconfirmed_rumor": false,
-              "summary": "Palantir advanced its sovereign AI delivery with L3Harris adoption and Citi raised its price target.",
-              "source": "Benzinga / Fiscal.ai"
-            },
-            {
-              "symbol": "LHX",
-              "sentiment": 0.5,
-              "importance": 3,
-              "unconfirmed_rumor": false,
-              "summary": "L3Harris adopted Palantir's sovereign AI platform, highlighting rising defense AI demand.",
-              "source": "Fiscal.ai / Benzinga"
-            },
-            {
-              "symbol": "NOC",
-              "sentiment": 0.5,
-              "importance": 3,
-              "unconfirmed_rumor": false,
-              "summary": "Northrop Grumman price targets were raised by Deutsche Bank, Barclays, and UBS.",
-              "source": "Fiscal.ai"
+              "summary": "Lockheed Martin beat Q3 estimates with $7.97 EPS and raised full-year 2026 guidance, driven by a record backlog of $292 billion and a new 10-year, 850-aircraft F-35 production framework with the DoD.",
+              "source": "benzinga/fiscal.ai"
             },
             {
               "symbol": "CACI",
-              "sentiment": 0.7,
+              "sentiment": 0.8,
+              "importance": 4,
+              "unconfirmed_rumor": false,
+              "summary": "CACI reported Q1 FY27 adjusted EPS of $7.66 (beating estimates) but revenue slightly missed at $2.475B, while raising full-year revenue and EPS guidance.",
+              "source": "benzinga/fiscal.ai"
+            },
+            {
+              "symbol": "NOC",
+              "sentiment": 0.6,
               "importance": 3,
               "unconfirmed_rumor": false,
-              "summary": "CACI beat Q1 adjusted EPS estimates and raised full-year guidance.",
-              "source": "Benzinga / Fiscal.ai"
+              "summary": "Northrop Grumman received multiple upward price target revisions from UBS ($698), Deutsche Bank ($634), and Barclays ($430), reflecting continued analyst confidence in the defense sector.",
+              "source": "benzinga/fiscal.ai"
             },
             {
               "symbol": "RTX",
-              "sentiment": 0.0,
-              "importance": 2,
+              "sentiment": 0.5,
+              "importance": 3,
               "unconfirmed_rumor": false,
-              "summary": "UBS maintained a Neutral rating on RTX while raising its price target to $212.",
-              "source": "Benzinga"
+              "summary": "RTX saw price targets raised by Goldman Sachs to $208 and UBS to $212, though UBS maintained a Neutral rating.",
+              "source": "benzinga/fiscal.ai"
             },
             {
-              "symbol": "KTOS",
-              "sentiment": 0.5,
-              "importance": 2,
+              "symbol": "LHX",
+              "sentiment": 0.4,
+              "importance": 3,
               "unconfirmed_rumor": false,
-              "summary": "Oppenheimer initiated coverage of Kratos with an Outperform rating and $50 price target.",
-              "source": "Fiscal.ai"
+              "summary": "L3Harris announced a partnership with Palantir to explore building its own AI models for mission systems, with executives claiming early tests cut costs by 95%.",
+              "source": "benzinga"
             },
             {
               "symbol": "AVAV",
-              "sentiment": 0.5,
+              "sentiment": 0.3,
               "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Oppenheimer initiated coverage of AeroVironment with an Outperform rating and $205 price target.",
-              "source": "Fiscal.ai / Benzinga"
+              "summary": "Oppenheimer initiated coverage on AeroVironment with an Outperform rating and a $205 price target.",
+              "source": "fiscal.ai/benzinga"
+            },
+            {
+              "symbol": "KTOS",
+              "sentiment": 0.3,
+              "importance": 2,
+              "unconfirmed_rumor": false,
+              "summary": "Oppenheimer initiated coverage on Kratos Defense & Security Solutions with an Outperform rating and a $50 price target.",
+              "source": "fiscal.ai"
             },
             {
               "symbol": "MRCY",
-              "sentiment": 0.5,
+              "sentiment": 0.3,
               "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Oppenheimer initiated coverage of Mercury Systems with an Outperform rating and $90 price target.",
-              "source": "Fiscal.ai"
+              "summary": "Oppenheimer initiated coverage on Mercury Systems with an Outperform rating and a $90 price target.",
+              "source": "fiscal.ai"
             }
           ],
           "urgent": [],
-          "overall": "Palantir's new sovereign AI narrative is a positive catalyst for its stock, while other defense names see no material news. Overall sentiment for the defense group remains neutral to mildly upbeat.",
-          "items_read": 40
+          "overall": "The defense group is showing a calm, mildly positive tone after only a minor price target update, with no major new contract or budget news. We should stay focused on confirmed government actions and world events that could affect military spending expectations.",
+          "items_read": 41
         },
         "social": {
           "findings": [],
@@ -4044,204 +4566,195 @@
             "summary": "Baird upgraded Northrop Grumman to Outperform and raised its price target to $675, indicating strong confidence in the company's outlook.",
             "source": "benzinga",
             "seen_at": "2026-10-21T05:39-04:00"
-          },
-          {
-            "symbol": "NOC",
-            "sentiment": 0.7,
-            "importance": 5,
-            "unconfirmed_rumor": false,
-            "summary": "Northrop Grumman beat earnings expectations, helping lift the Dow and boosting market sentiment.",
-            "source": "benzinga",
-            "seen_at": "2026-10-21T04:54-04:00"
           }
         ],
         "technicals": {
-          "CW": {
-            "price": 474.22,
-            "change_1d": -0.0398,
-            "change_5d": -0.0539,
-            "change_20d": -0.1301,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 17.8,
-            "daily_volatility": 0.0214,
-            "avg_volume_20d": 23341
-          },
-          "KTOS": {
-            "price": 38.41,
-            "change_1d": -0.0084,
-            "change_5d": -0.0574,
-            "change_20d": -0.1836,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 30.1,
-            "daily_volatility": 0.0212,
-            "avg_volume_20d": 186096
-          },
-          "LMT": {
-            "price": 588.93,
-            "change_1d": 0.067,
-            "change_5d": 0.1052,
-            "change_20d": 0.1242,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 82.3,
-            "daily_volatility": 0.0203,
-            "avg_volume_20d": 43759
-          },
-          "MRCY": {
-            "price": 74.78,
-            "change_1d": -0.0103,
-            "change_5d": -0.022,
-            "change_20d": -0.1007,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 24.2,
-            "daily_volatility": 0.019,
-            "avg_volume_20d": 29915
-          },
-          "RTX": {
-            "price": 192.07,
-            "change_1d": 0.0024,
-            "change_5d": 0.0273,
-            "change_20d": 0.0183,
+          "GD": {
+            "price": 345.75,
+            "change_1d": 0.0025,
+            "change_5d": 0.0259,
+            "change_20d": 0.0283,
             "above_20d_avg": true,
             "above_50d_avg": false,
-            "rsi_14": 62.1,
-            "daily_volatility": 0.013,
-            "avg_volume_20d": 218377
-          },
-          "TXT": {
-            "price": 77.17,
-            "change_1d": -0.0021,
-            "change_5d": 0.027,
-            "change_20d": 0.0151,
-            "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 49.5,
-            "daily_volatility": 0.0138,
-            "avg_volume_20d": 101606
-          },
-          "CACI": {
-            "price": 626.14,
-            "change_1d": 0.0096,
-            "change_5d": 0.0239,
-            "change_20d": 0.0111,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 53.9,
-            "daily_volatility": 0.0178,
-            "avg_volume_20d": 15141
+            "rsi_14": 71.2,
+            "daily_volatility": 0.0083,
+            "avg_volume_20d": 66107
           },
           "HEI": {
-            "price": 297.76,
-            "change_1d": -0.0012,
-            "change_5d": -0.035,
-            "change_20d": -0.0284,
+            "price": 297.33,
+            "change_1d": -0.0026,
+            "change_5d": -0.0364,
+            "change_20d": -0.0298,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 44.0,
+            "rsi_14": 43.5,
             "daily_volatility": 0.0126,
             "avg_volume_20d": 27852
           },
-          "HII": {
-            "price": 276.37,
-            "change_1d": 0.0081,
-            "change_5d": 0.0339,
-            "change_20d": 0.0389,
+          "KTOS": {
+            "price": 38.34,
+            "change_1d": -0.0102,
+            "change_5d": -0.0591,
+            "change_20d": -0.1851,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 29.9,
+            "daily_volatility": 0.0212,
+            "avg_volume_20d": 186096
+          },
+          "NOC": {
+            "price": 551.64,
+            "change_1d": 0.0222,
+            "change_5d": 0.1051,
+            "change_20d": 0.0838,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 78.3,
+            "daily_volatility": 0.0208,
+            "avg_volume_20d": 58838
+          },
+          "TXT": {
+            "price": 77.36,
+            "change_1d": 0.0003,
+            "change_5d": 0.0295,
+            "change_20d": 0.0176,
             "above_20d_avg": true,
             "above_50d_avg": false,
-            "rsi_14": 59.0,
+            "rsi_14": 50.2,
+            "daily_volatility": 0.0138,
+            "avg_volume_20d": 101606
+          },
+          "CW": {
+            "price": 471.2,
+            "change_1d": -0.046,
+            "change_5d": -0.06,
+            "change_20d": -0.1357,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 17.3,
+            "daily_volatility": 0.0219,
+            "avg_volume_20d": 23341
+          },
+          "HII": {
+            "price": 275.72,
+            "change_1d": 0.0057,
+            "change_5d": 0.0315,
+            "change_20d": 0.0364,
+            "above_20d_avg": true,
+            "above_50d_avg": false,
+            "rsi_14": 58.4,
             "daily_volatility": 0.0162,
             "avg_volume_20d": 31151
           },
           "LDOS": {
-            "price": 131.62,
-            "change_1d": 0.0192,
-            "change_5d": 0.062,
-            "change_20d": 0.0664,
+            "price": 132.6,
+            "change_1d": 0.0268,
+            "change_5d": 0.0699,
+            "change_20d": 0.0744,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 73.6,
-            "daily_volatility": 0.0194,
+            "rsi_14": 74.5,
+            "daily_volatility": 0.0198,
             "avg_volume_20d": 55704
           },
           "LHX": {
-            "price": 252.26,
-            "change_1d": 0.0183,
-            "change_5d": 0.0489,
-            "change_20d": 0.0598,
+            "price": 252.69,
+            "change_1d": 0.02,
+            "change_5d": 0.0507,
+            "change_20d": 0.0616,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 68.8,
-            "daily_volatility": 0.0125,
+            "rsi_14": 69.1,
+            "daily_volatility": 0.0126,
             "avg_volume_20d": 83107
           },
-          "NOC": {
-            "price": 549.07,
-            "change_1d": 0.0174,
-            "change_5d": 0.1,
-            "change_20d": 0.0787,
+          "LMT": {
+            "price": 586.04,
+            "change_1d": 0.0617,
+            "change_5d": 0.0997,
+            "change_20d": 0.1187,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 77.8,
-            "daily_volatility": 0.0206,
-            "avg_volume_20d": 58838
+            "rsi_14": 81.9,
+            "daily_volatility": 0.0195,
+            "avg_volume_20d": 43759
+          },
+          "RTX": {
+            "price": 192.18,
+            "change_1d": 0.0029,
+            "change_5d": 0.0279,
+            "change_20d": 0.0189,
+            "above_20d_avg": true,
+            "above_50d_avg": false,
+            "rsi_14": 62.3,
+            "daily_volatility": 0.0131,
+            "avg_volume_20d": 218377
+          },
+          "MRCY": {
+            "price": 74.67,
+            "change_1d": -0.0118,
+            "change_5d": -0.0235,
+            "change_20d": -0.1021,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 24.1,
+            "daily_volatility": 0.019,
+            "avg_volume_20d": 29915
+          },
+          "AVAV": {
+            "price": 117.96,
+            "change_1d": 0.0035,
+            "change_5d": -0.0426,
+            "change_20d": -0.2556,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 20.3,
+            "daily_volatility": 0.0213,
+            "avg_volume_20d": 45303
+          },
+          "CACI": {
+            "price": 632.98,
+            "change_1d": 0.0207,
+            "change_5d": 0.0351,
+            "change_20d": 0.0221,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 56.1,
+            "daily_volatility": 0.0182,
+            "avg_volume_20d": 15141
           },
           "PLTR": {
-            "price": 198.91,
-            "change_1d": -0.0139,
-            "change_5d": -0.0079,
-            "change_20d": 0.0327,
+            "price": 199.12,
+            "change_1d": -0.0128,
+            "change_5d": -0.0068,
+            "change_20d": 0.0338,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 57.8,
+            "rsi_14": 58.0,
             "daily_volatility": 0.0275,
             "avg_volume_20d": 551233
           },
           "SAIC": {
-            "price": 138.8,
-            "change_1d": 0.0147,
-            "change_5d": 0.0405,
-            "change_20d": 0.0481,
+            "price": 140.76,
+            "change_1d": 0.029,
+            "change_5d": 0.0552,
+            "change_20d": 0.0629,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 73.4,
-            "daily_volatility": 0.0191,
+            "rsi_14": 75.1,
+            "daily_volatility": 0.0198,
             "avg_volume_20d": 21907
           },
-          "AVAV": {
-            "price": 118.74,
-            "change_1d": 0.0102,
-            "change_5d": -0.0363,
-            "change_20d": -0.2507,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 21.8,
-            "daily_volatility": 0.0217,
-            "avg_volume_20d": 45303
-          },
           "BAH": {
-            "price": 77.19,
-            "change_1d": 0.029,
-            "change_5d": 0.0353,
-            "change_20d": 0.0459,
+            "price": 77.95,
+            "change_1d": 0.0391,
+            "change_5d": 0.0455,
+            "change_20d": 0.0562,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 80.8,
-            "daily_volatility": 0.0234,
+            "rsi_14": 81.6,
+            "daily_volatility": 0.024,
             "avg_volume_20d": 112003
-          },
-          "GD": {
-            "price": 347.42,
-            "change_1d": 0.0074,
-            "change_5d": 0.0309,
-            "change_20d": 0.0333,
-            "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 72.4,
-            "daily_volatility": 0.0084,
-            "avg_volume_20d": 66107
           }
         }
       }
@@ -4452,13 +4965,13 @@
           "trail_active": null,
           "first_stop": 16.9,
           "entry_price": 17.15,
-          "exit_price": null,
-          "exit_time": null,
-          "exit_reason": null,
+          "exit_price": 16.881892,
+          "exit_time": "2026-10-22T15:11:58.812246492Z",
+          "exit_reason": "stop_loss",
           "exit_note": null,
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "pnl": -21.1,
+          "pnl_pct": -0.0166,
+          "status": "closed",
           "conviction": 3,
           "reason": "[75% invested rule] Firefly PDR completed; m60 +0.9; news catalyst.",
           "stop_price": 16.9,
@@ -4481,8 +4994,8 @@
           "entry_price": 1111.83,
           "exit_price": null,
           "exit_time": null,
-          "exit_reason": null,
-          "exit_note": null,
+          "exit_reason": "manager_sell",
+          "exit_note": "Closing the day's long as market risk-off and broad selling pressure increases; trims long exposure and frees a slot for a high-quality breakdown short.",
           "pnl": null,
           "pnl_pct": null,
           "status": "open",
@@ -4517,6 +5030,33 @@
           "reason": "[75% invested rule] OR breakdown, below VWAP, news but rvol low; weak.",
           "stop_price": 17.22,
           "take_profit_price": 16.46
+        },
+        {
+          "id": "space-ASTS-202610221126-eff0",
+          "date": "2026-10-22",
+          "time": "11:26",
+          "symbol": "ASTS",
+          "kind": "shares",
+          "qty": 1.0,
+          "dollars": 38.75,
+          "est_price": 38.68,
+          "setup": null,
+          "side": "short",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": null,
+          "entry_price": 38.68,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": null,
+          "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+          "stop_price": 39.39,
+          "take_profit_price": null
         }
       ],
       "blocked": [
@@ -4527,6 +5067,54 @@
           "symbol": "GE",
           "action": "BUY",
           "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "space",
+          "symbol": "RKLB",
+          "action": "SHORT",
+          "reason": "one share costs $50.98, more than the $1.70 allowed"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "space",
+          "symbol": "BA",
+          "action": "SHORT",
+          "reason": "one share costs $189.75, more than the $1.70 allowed"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "space",
+          "symbol": "LUNR",
+          "action": "SHORT",
+          "reason": "one share costs $10.47, more than the $1.70 allowed"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "space",
+          "symbol": "PL",
+          "action": "SHORT",
+          "reason": "one share costs $13.12, more than the $1.70 allowed"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "space",
+          "symbol": "RDW",
+          "action": "SHORT",
+          "reason": "one share costs $8.22, more than the $1.70 allowed"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "space",
+          "symbol": "VSAT",
+          "action": "SHORT",
+          "reason": "one share costs $59.16, more than the $1.70 allowed"
         }
       ],
       "plans": [
@@ -4639,6 +5227,40 @@
             "BUY TDG x1 (~$1118.55) [deploy]",
             "SHORT BKSY x78 (~$1323.66) [deploy]"
           ]
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "trigger": "first look this run",
+          "market_view": "Market is in a risk-off tape, with SPY down 1.2%, QQQ down 2.4%, and VIXY up 5.1%. The space and aerospace group is mostly selling, with several stocks breaking opening ranges, though no confirmed major launch or contract news drove the last move. Focus stays on breakdowns and momentum shorts into the close.",
+          "experiment": "Add trailing stops that activate after a 3% favorable move to lock in gains",
+          "decisions": [
+            {
+              "symbol": "TDG",
+              "action": "SELL",
+              "conviction": 3,
+              "reason": "Closing the day's long as market risk-off and broad selling pressure increases; trims long exposure and frees a slot for a high-quality breakdown short.",
+              "stop_loss_pct": 0.014,
+              "take_profit_pct": 0.05
+            },
+            {
+              "symbol": "RKLB",
+              "action": "SHORT",
+              "conviction": 3,
+              "reason": "RKLB broke below the opening range and VWAP with day -5.0%, negative momentum, and risk-off sentiment favoring shorts. Tight stop above entry, first target around 5% lower.",
+              "stop_loss_pct": 0.025,
+              "take_profit_pct": 0.05
+            }
+          ],
+          "results": [
+            "SELL TDG",
+            "SHORT RKLB blocked: one share costs $50.98, more than the $1.70 allowed",
+            "SHORT BA blocked: one share costs $189.75, more than the $1.70 allowed",
+            "SHORT LUNR blocked: one share costs $10.47, more than the $1.70 allowed",
+            "SHORT PL blocked: one share costs $13.12, more than the $1.70 allowed",
+            "SHORT RDW blocked: one share costs $8.22, more than the $1.70 allowed",
+            "SHORT VSAT blocked: one share costs $59.16, more than the $1.70 allowed"
+          ]
         }
       ],
       "lessons": [
@@ -4678,8 +5300,8 @@
       "pnl_days": [
         {
           "date": "2026-10-22",
-          "realized": -480.1,
-          "cum": -480.1
+          "realized": -501.2,
+          "cum": -501.2
         }
       ],
       "watchlist": {
@@ -4738,59 +5360,51 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-22T11:04-04:00"
+        "updated": "2026-10-22T11:33-04:00"
       },
       "research": {
-        "time": "2026-10-22T10:53-04:00",
+        "time": "2026-10-22T11:26-04:00",
         "news": {
           "findings": [
             {
               "symbol": "SPCX",
               "sentiment": 0.5,
-              "importance": 3,
+              "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "SpaceX launches Super Intelligence Partner Network to collaborate with companies building products, solutions, and services.",
-              "source": "benzinga",
-              "time": "10:58"
+              "summary": "Cathie Wood's reported bullish Tesla forecast is lifting sentiment for SPCX and related robotics ETFs, but it is a long-term call rather than a confirmed immediate catalyst.",
+              "source": "Benzinga",
+              "time": "11:30"
             },
             {
               "symbol": "SPCX",
-              "sentiment": 0.7,
-              "importance": 5,
+              "sentiment": 0.8,
+              "importance": 4,
               "unconfirmed_rumor": false,
-              "summary": "SpaceX unveiled a Super Intelligence Partner Network with Grok and saw bullish analyst price targets, while Musk's $1 trillion ARR projection and CFO guidance tempered the rally.",
+              "summary": "BofA maintained Buy on SpaceX and raised its price target to $275.",
               "source": "Benzinga"
-            },
-            {
-              "symbol": "SPCX",
-              "sentiment": 0.5,
-              "importance": 3,
-              "unconfirmed_rumor": true,
-              "summary": "Comments and reports around a potential Tesla-SpaceX merger, including Musk remarks and analyst speculation, remain unconfirmed.",
-              "source": "Benzinga/Reuters"
             },
             {
               "symbol": "BKSY",
               "sentiment": 0.7,
               "importance": 3,
               "unconfirmed_rumor": false,
-              "summary": "BlackSky Technology received a seven-figure Gen-3 Assured contract from an undisclosed defense partner.",
+              "summary": "BlackSky received a seven-figure Gen-3 Assured contract from an undisclosed defense partner.",
               "source": "Benzinga"
+            },
+            {
+              "symbol": "FLY",
+              "sentiment": 0.7,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Firefly Aerospace completed the preliminary design review for its Elytra spacecraft.",
+              "source": "fiscal.ai"
             },
             {
               "symbol": "IRDM",
               "sentiment": 0.6,
               "importance": 3,
               "unconfirmed_rumor": false,
-              "summary": "Solstar Space demonstrated space-to-space connectivity using the Iridium network during a NASA technology mission.",
-              "source": "fiscal.ai"
-            },
-            {
-              "symbol": "FLY",
-              "sentiment": 0.6,
-              "importance": 3,
-              "unconfirmed_rumor": false,
-              "summary": "Firefly Aerospace completed the preliminary design review for its Elytra spacecraft.",
+              "summary": "Solstar demonstrated space-to-space connectivity using the Iridium network during a NASA mission.",
               "source": "fiscal.ai"
             },
             {
@@ -4798,21 +5412,13 @@
               "sentiment": 0.2,
               "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Boeing 777-300ERSF passenger-to-freighter conversions began in North America.",
+              "summary": "Boeing began 777-300ERSF passenger-to-freighter conversions in North America.",
               "source": "fiscal.ai"
-            },
-            {
-              "symbol": "GE",
-              "sentiment": 0.4,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "UBS maintained a Buy recommendation on GE Aerospace and raised its price target to 380.",
-              "source": "Benzinga"
             }
           ],
           "urgent": [],
-          "overall": "The space and aerospace group shows a modest positive sentiment with SpaceX's new partner network, but no major launches or contracts are reported. The market remains largely neutral across the portfolio.",
-          "items_read": 42
+          "overall": "The space and aerospace group is mostly quiet in the last two hours, with no confirmed major launch, mission result, or government contract news. The only relevant item was a Cathie Wood Tesla/robotics ETF commentary involving SPCX, which is a mildly positive but long-term sentiment driver rather than an immediate price-moving event.",
+          "items_read": 41
         },
         "social": {
           "findings": [],
@@ -5094,158 +5700,158 @@
         ],
         "technicals": {
           "GE": {
-            "price": 290.22,
-            "change_1d": -0.019,
-            "change_5d": -0.0699,
-            "change_20d": -0.0927,
+            "price": 290.47,
+            "change_1d": -0.0182,
+            "change_5d": -0.0691,
+            "change_20d": -0.0919,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 30.5,
+            "rsi_14": 30.7,
             "daily_volatility": 0.0143,
             "avg_volume_20d": 199844
           },
-          "RDW": {
-            "price": 8.32,
-            "change_1d": -0.0286,
-            "change_5d": -0.0646,
-            "change_20d": -0.2826,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 19.4,
-            "daily_volatility": 0.0291,
-            "avg_volume_20d": 583836
-          },
-          "BA": {
-            "price": 190.05,
-            "change_1d": -0.0115,
-            "change_5d": 0.0069,
-            "change_20d": -0.0346,
-            "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 43.4,
-            "daily_volatility": 0.0203,
-            "avg_volume_20d": 329113
-          },
-          "SPCX": {
-            "price": 150.23,
-            "change_1d": -0.057,
-            "change_5d": 0.0112,
-            "change_20d": 0.0143,
-            "above_20d_avg": false,
-            "above_50d_avg": true,
-            "rsi_14": 43.5,
-            "daily_volatility": 0.0375,
-            "avg_volume_20d": 2623575
-          },
-          "TDG": {
-            "price": 1118.4,
-            "change_1d": -0.0097,
-            "change_5d": -0.0146,
-            "change_20d": 0.0116,
-            "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 61.1,
-            "daily_volatility": 0.0103,
-            "avg_volume_20d": 22746
-          },
-          "FLY": {
-            "price": 17.28,
-            "change_1d": -0.021,
-            "change_5d": -0.03,
-            "change_20d": -0.2519,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 21.9,
-            "daily_volatility": 0.04,
-            "avg_volume_20d": 128072
-          },
           "IRDM": {
-            "price": 43.66,
-            "change_1d": -0.0134,
-            "change_5d": -0.0305,
-            "change_20d": -0.1067,
+            "price": 43.62,
+            "change_1d": -0.0145,
+            "change_5d": -0.0315,
+            "change_20d": -0.1076,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 16.4,
+            "rsi_14": 16.3,
             "daily_volatility": 0.0116,
             "avg_volume_20d": 49395
           },
-          "PL": {
-            "price": 13.24,
-            "change_1d": -0.035,
-            "change_5d": -0.09,
-            "change_20d": -0.2486,
-            "above_20d_avg": false,
+          "TDG": {
+            "price": 1116.93,
+            "change_1d": -0.011,
+            "change_5d": -0.0159,
+            "change_20d": 0.0103,
+            "above_20d_avg": true,
             "above_50d_avg": false,
-            "rsi_14": 24.0,
-            "daily_volatility": 0.0408,
-            "avg_volume_20d": 529090
-          },
-          "RKLB": {
-            "price": 51.45,
-            "change_1d": -0.0409,
-            "change_5d": -0.0687,
-            "change_20d": -0.301,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 16.0,
-            "daily_volatility": 0.0368,
-            "avg_volume_20d": 564640
-          },
-          "VSAT": {
-            "price": 59.54,
-            "change_1d": -0.0489,
-            "change_5d": -0.0311,
-            "change_20d": -0.1923,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 33.8,
-            "daily_volatility": 0.0397,
-            "avg_volume_20d": 81134
+            "rsi_14": 60.4,
+            "daily_volatility": 0.0103,
+            "avg_volume_20d": 22746
           },
           "BKSY": {
-            "price": 16.97,
-            "change_1d": -0.0225,
-            "change_5d": -0.0802,
-            "change_20d": -0.266,
+            "price": 16.79,
+            "change_1d": -0.0331,
+            "change_5d": -0.0902,
+            "change_20d": -0.274,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 25.0,
-            "daily_volatility": 0.0372,
+            "rsi_14": 24.5,
+            "daily_volatility": 0.0374,
             "avg_volume_20d": 40805
           },
           "HWM": {
-            "price": 193.63,
-            "change_1d": -0.0697,
-            "change_5d": -0.1189,
-            "change_20d": -0.1557,
+            "price": 191.73,
+            "change_1d": -0.0788,
+            "change_5d": -0.1275,
+            "change_20d": -0.164,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 15.7,
-            "daily_volatility": 0.0214,
+            "rsi_14": 15.2,
+            "daily_volatility": 0.0228,
             "avg_volume_20d": 176053
           },
           "LUNR": {
-            "price": 10.61,
-            "change_1d": -0.0275,
-            "change_5d": -0.0822,
-            "change_20d": -0.3242,
+            "price": 10.48,
+            "change_1d": -0.0394,
+            "change_5d": -0.0934,
+            "change_20d": -0.3325,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 22.5,
-            "daily_volatility": 0.0385,
+            "rsi_14": 22.1,
+            "daily_volatility": 0.0387,
             "avg_volume_20d": 410901
           },
-          "ASTS": {
-            "price": 39.09,
-            "change_1d": -0.0443,
-            "change_5d": -0.1207,
-            "change_20d": -0.3597,
+          "PL": {
+            "price": 13.14,
+            "change_1d": -0.0423,
+            "change_5d": -0.0969,
+            "change_20d": -0.2543,
             "above_20d_avg": false,
             "above_50d_avg": false,
             "rsi_14": 23.7,
-            "daily_volatility": 0.0494,
+            "daily_volatility": 0.041,
+            "avg_volume_20d": 529090
+          },
+          "RDW": {
+            "price": 8.26,
+            "change_1d": -0.0362,
+            "change_5d": -0.0719,
+            "change_20d": -0.2882,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 19.1,
+            "daily_volatility": 0.0293,
+            "avg_volume_20d": 583836
+          },
+          "RKLB": {
+            "price": 51.2,
+            "change_1d": -0.0457,
+            "change_5d": -0.0733,
+            "change_20d": -0.3044,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 15.9,
+            "daily_volatility": 0.037,
+            "avg_volume_20d": 564640
+          },
+          "SPCX": {
+            "price": 150.52,
+            "change_1d": -0.0552,
+            "change_5d": 0.0132,
+            "change_20d": 0.0163,
+            "above_20d_avg": false,
+            "above_50d_avg": true,
+            "rsi_14": 43.7,
+            "daily_volatility": 0.0374,
+            "avg_volume_20d": 2623575
+          },
+          "ASTS": {
+            "price": 38.77,
+            "change_1d": -0.052,
+            "change_5d": -0.1278,
+            "change_20d": -0.3649,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 23.5,
+            "daily_volatility": 0.0496,
             "avg_volume_20d": 393804
+          },
+          "BA": {
+            "price": 190.12,
+            "change_1d": -0.0112,
+            "change_5d": 0.0073,
+            "change_20d": -0.0342,
+            "above_20d_avg": true,
+            "above_50d_avg": false,
+            "rsi_14": 43.5,
+            "daily_volatility": 0.0203,
+            "avg_volume_20d": 329113
+          },
+          "VSAT": {
+            "price": 59.34,
+            "change_1d": -0.052,
+            "change_5d": -0.0343,
+            "change_20d": -0.1949,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 33.6,
+            "daily_volatility": 0.0398,
+            "avg_volume_20d": 81134
+          },
+          "FLY": {
+            "price": 17.14,
+            "change_1d": -0.0292,
+            "change_5d": -0.0382,
+            "change_20d": -0.2582,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 21.6,
+            "daily_volatility": 0.0401,
+            "avg_volume_20d": 128072
           }
         }
       }
@@ -5269,8 +5875,8 @@
           "entry_price": 53.11,
           "exit_price": null,
           "exit_time": null,
-          "exit_reason": null,
-          "exit_note": null,
+          "exit_reason": "manager_sell",
+          "exit_note": "Long IMAX is -0.9% and broke below the opening range, with no protective stop; exit to cut loss and free a slot.",
           "pnl": null,
           "pnl_pct": null,
           "status": "open",
@@ -5404,6 +6010,54 @@
           "symbol": "NFLX",
           "action": "BUY",
           "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "entertainment",
+          "symbol": "SONY",
+          "action": "BUY",
+          "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "entertainment",
+          "symbol": "NFLX",
+          "action": "BUY",
+          "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "entertainment",
+          "symbol": "DIS",
+          "action": "BUY",
+          "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "entertainment",
+          "symbol": "FOXA",
+          "action": "BUY",
+          "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "entertainment",
+          "symbol": "BAM",
+          "action": "BUY",
+          "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "entertainment",
+          "symbol": "ROKU",
+          "action": "BUY",
+          "reason": "conviction 2 is below the minimum 3 (risk-off market)"
         }
       ],
       "plans": [
@@ -5465,6 +6119,40 @@
             "SHORT TKO x5 (~$884.93) [deploy]",
             "SHORT LYV x5 (~$869.67) [deploy]",
             "WATCHLIST remove rejected ROKU"
+          ]
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "trigger": "first look this run",
+          "market_view": "Risk-off tape remains in control: SPY -1.2%, QQQ -2.4%, VIXY +5.1%. Entertainment names are mixed, with Spotify and Comcast news in focus, while broad selling pressures longs. I favor shorts below VWAP or breakdowns, but only high-conviction setups; longs need strong opening-range breakouts with volume.",
+          "experiment": "Implement a pre-market catalyst scan to trigger entries on earnings or major news releases",
+          "decisions": [
+            {
+              "symbol": "IMAX",
+              "action": "SELL",
+              "conviction": 3,
+              "reason": "Long IMAX is -0.9% and broke below the opening range, with no protective stop; exit to cut loss and free a slot.",
+              "stop_loss_pct": 0.05,
+              "take_profit_pct": 0.0
+            },
+            {
+              "symbol": "SONY",
+              "action": "BUY",
+              "conviction": 3,
+              "reason": "SONY cleared the OR high at 25.98, held above VWAP, and showed positive m15/m60 momentum with rvol 2.0; breakout long in entertainment, but risk-off halves size and requires tight risk.",
+              "stop_loss_pct": 0.02,
+              "take_profit_pct": 0.03
+            }
+          ],
+          "results": [
+            "SELL IMAX",
+            "BUY SONY blocked: conviction 3 is below the minimum 4 (risk-off market)",
+            "BUY NFLX blocked: conviction 2 is below the minimum 3 (risk-off market)",
+            "BUY DIS blocked: conviction 2 is below the minimum 3 (risk-off market)",
+            "BUY FOXA blocked: conviction 2 is below the minimum 3 (risk-off market)",
+            "BUY BAM blocked: conviction 2 is below the minimum 3 (risk-off market)",
+            "BUY ROKU blocked: conviction 2 is below the minimum 3 (risk-off market)"
           ]
         }
       ],
@@ -5577,59 +6265,73 @@
             "action": "remove_rejected",
             "symbol": "ROKU",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-22T11:26-04:00",
+            "action": "remove_rejected",
+            "symbol": "WBD",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-22T11:26-04:00",
+            "action": "remove_rejected",
+            "symbol": "EA",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-22T11:07-04:00"
+        "updated": "2026-10-22T11:33-04:00"
       },
       "research": {
-        "time": "2026-10-22T10:53-04:00",
+        "time": "2026-10-22T11:27-04:00",
         "news": {
           "findings": [
             {
-              "symbol": "NFLX",
-              "sentiment": -0.2,
-              "importance": 3,
-              "unconfirmed_rumor": false,
-              "summary": "Argus Research maintains a Buy rating on Netflix but lowers its price target to $95",
-              "source": "benzinga",
-              "time": "11:04"
-            },
-            {
               "symbol": "SPOT",
-              "sentiment": -0.5,
+              "sentiment": -0.2,
               "importance": 5,
               "unconfirmed_rumor": false,
-              "summary": "Spotify Q3 earnings missed EPS and sales estimates but said all Q3 KPIs met or exceeded guidance, with subscriber additions slightly ahead; Q4 sales guidance came in below consensus.",
-              "source": "fiscal.ai and benzinga"
+              "summary": "Spotify missed Q3 EPS and revenue estimates despite beating subscriber guidance, with a Q4 sales outlook slightly below consensus.",
+              "source": "benzinga, fiscal.ai"
             },
             {
               "symbol": "CMCSA",
-              "sentiment": 0.5,
+              "sentiment": -0.3,
               "importance": 5,
               "unconfirmed_rumor": false,
-              "summary": "Comcast Q3 beat estimates on both revenue and adjusted EPS, with Peacock revenue surging 34%, though the company guided a significant Q4 restructuring charge.",
-              "source": "benzinga and fiscal.ai"
+              "summary": "Comcast beat Q3 expectations but announced significant job cuts and a large Q4 charge for restructuring, citing demand pressure in its parks business.",
+              "source": "benzinga, fiscal.ai"
             },
             {
               "symbol": "NFLX",
-              "sentiment": -0.5,
-              "importance": 3,
+              "sentiment": -0.4,
+              "importance": 4,
               "unconfirmed_rumor": false,
-              "summary": "Netflix dated its 'Tantara' K-drama for December 11 and faced multiple analyst price target cuts while Ark Invest disclosed a small buyback purchase.",
-              "source": "benzinga and fiscal.ai"
+              "summary": "Netflix shares are at two-year lows as multiple analysts (Argus, Pivotal, UBS) lowered price targets, though Ark Invest added to its position.",
+              "source": "benzinga"
             },
             {
               "symbol": "DIS",
-              "sentiment": 0.0,
+              "sentiment": 0.1,
               "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Disney released a new trailer and opened ticket sales for upcoming film 'Hexed'.",
+              "summary": "Disney released a new trailer and opened ticket sales for its upcoming project 'Hexed'.",
+              "source": "fiscal.ai"
+            },
+            {
+              "symbol": "TKO",
+              "sentiment": 0.2,
+              "importance": 1,
+              "unconfirmed_rumor": false,
+              "summary": "BTIG maintained a bullish rating and $237 price target on TKO Group Holdings.",
               "source": "fiscal.ai"
             }
           ],
-          "urgent": [],
-          "overall": "Analyst sentiment on the entertainment group is modestly cautious after Netflix\u2019s price target was cut, though the Buy rating remains. Overall mood is slightly negative but not dramatically impactful.",
-          "items_read": 35
+          "urgent": [
+            "SPOT",
+            "CMCSA"
+          ],
+          "overall": "The entertainment sector is under pressure from mixed earnings results, with Spotify and Comcast missing expectations or signaling significant cost cuts. Netflix faces continued analyst downgrades and low stock prices, while Disney shows routine promotional activity.",
+          "items_read": 33
         },
         "social": {
           "findings": [],
@@ -5910,126 +6612,49 @@
           }
         ],
         "technicals": {
-          "FOXA": {
-            "price": 67.6,
-            "change_1d": 0.0266,
-            "change_5d": 0.0564,
-            "change_20d": 0.0586,
+          "EA": {
+            "price": 209.86,
+            "change_1d": -0.0003,
+            "change_5d": 0.0045,
+            "change_20d": 0.0217,
             "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 70.2,
-            "daily_volatility": 0.0157,
-            "avg_volume_20d": 219625
-          },
-          "SONY": {
-            "price": 25.94,
-            "change_1d": 0.0333,
-            "change_5d": 0.0508,
-            "change_20d": 0.1288,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 78.2,
-            "daily_volatility": 0.012,
-            "avg_volume_20d": 321549
-          },
-          "WMG": {
-            "price": 31.66,
-            "change_1d": 0.007,
-            "change_5d": 0.0314,
-            "change_20d": 0.1603,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 89.7,
-            "daily_volatility": 0.0178,
-            "avg_volume_20d": 144547
-          },
-          "IMAX": {
-            "price": 52.47,
-            "change_1d": -0.0121,
-            "change_5d": 0.0192,
-            "change_20d": -0.0488,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 48.3,
-            "daily_volatility": 0.0174,
-            "avg_volume_20d": 65905
-          },
-          "ROKU": {
-            "price": 159.05,
-            "change_1d": 0.008,
-            "change_5d": 0.0286,
-            "change_20d": 0.037,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 78.3,
-            "daily_volatility": 0.0062,
-            "avg_volume_20d": 71804
+            "above_50d_avg": null,
+            "rsi_14": 84.6,
+            "daily_volatility": 0.0023,
+            "avg_volume_20d": 204765
           },
           "SPOT": {
-            "price": 566.67,
-            "change_1d": 0.0794,
-            "change_5d": 0.0625,
-            "change_20d": 0.1079,
+            "price": 571.0,
+            "change_1d": 0.0876,
+            "change_5d": 0.0707,
+            "change_20d": 0.1164,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 84.4,
-            "daily_volatility": 0.0256,
+            "rsi_14": 84.8,
+            "daily_volatility": 0.0268,
             "avg_volume_20d": 110403
           },
-          "TTWO": {
-            "price": 209.36,
-            "change_1d": 0.016,
-            "change_5d": -0.0001,
-            "change_20d": 0.0308,
-            "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 57.4,
-            "daily_volatility": 0.0181,
-            "avg_volume_20d": 122387
-          },
-          "BAM": {
-            "price": 46.83,
-            "change_1d": 0.0167,
-            "change_5d": 0.0185,
-            "change_20d": 0.0502,
-            "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 62.7,
-            "daily_volatility": 0.0123,
-            "avg_volume_20d": 234846
-          },
-          "DIS": {
-            "price": 112.42,
-            "change_1d": 0.0054,
-            "change_5d": 0.0158,
-            "change_20d": 0.0649,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 90.8,
-            "daily_volatility": 0.0118,
-            "avg_volume_20d": 429622
-          },
-          "NFLX": {
-            "price": 66.27,
-            "change_1d": 0.0187,
-            "change_5d": -0.0874,
-            "change_20d": -0.0758,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 47.7,
-            "daily_volatility": 0.0205,
-            "avg_volume_20d": 2167268
-          },
           "TKO": {
-            "price": 176.59,
-            "change_1d": -0.0074,
-            "change_5d": 0.0048,
-            "change_20d": -0.0458,
+            "price": 177.21,
+            "change_1d": -0.004,
+            "change_5d": 0.0083,
+            "change_20d": -0.0425,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 51.6,
+            "rsi_14": 52.6,
             "daily_volatility": 0.0151,
             "avg_volume_20d": 51062
+          },
+          "LYV": {
+            "price": 174.24,
+            "change_1d": -0.0007,
+            "change_5d": 0.0099,
+            "change_20d": 0.017,
+            "above_20d_avg": true,
+            "above_50d_avg": false,
+            "rsi_14": 63.5,
+            "daily_volatility": 0.0104,
+            "avg_volume_20d": 84247
           },
           "WBD": {
             "price": 30.97,
@@ -6042,38 +6667,115 @@
             "daily_volatility": 0.024,
             "avg_volume_20d": 3381405
           },
-          "CMCSA": {
-            "price": 22.92,
-            "change_1d": 0.0387,
-            "change_5d": 0.0533,
-            "change_20d": 0.0352,
+          "BAM": {
+            "price": 46.97,
+            "change_1d": 0.0198,
+            "change_5d": 0.0215,
+            "change_20d": 0.0534,
             "above_20d_avg": true,
             "above_50d_avg": false,
-            "rsi_14": 65.0,
-            "daily_volatility": 0.0167,
+            "rsi_14": 63.4,
+            "daily_volatility": 0.0125,
+            "avg_volume_20d": 234846
+          },
+          "DIS": {
+            "price": 112.78,
+            "change_1d": 0.0086,
+            "change_5d": 0.019,
+            "change_20d": 0.0683,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 91.1,
+            "daily_volatility": 0.0118,
+            "avg_volume_20d": 429622
+          },
+          "FOXA": {
+            "price": 67.87,
+            "change_1d": 0.0307,
+            "change_5d": 0.0606,
+            "change_20d": 0.0629,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 70.8,
+            "daily_volatility": 0.016,
+            "avg_volume_20d": 219625
+          },
+          "NFLX": {
+            "price": 66.8,
+            "change_1d": 0.0268,
+            "change_5d": -0.0801,
+            "change_20d": -0.0684,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 49.2,
+            "daily_volatility": 0.021,
+            "avg_volume_20d": 2167268
+          },
+          "SONY": {
+            "price": 26.14,
+            "change_1d": 0.0414,
+            "change_5d": 0.0591,
+            "change_20d": 0.1377,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 79.3,
+            "daily_volatility": 0.013,
+            "avg_volume_20d": 321549
+          },
+          "TTWO": {
+            "price": 210.38,
+            "change_1d": 0.0209,
+            "change_5d": 0.0048,
+            "change_20d": 0.0358,
+            "above_20d_avg": true,
+            "above_50d_avg": false,
+            "rsi_14": 58.4,
+            "daily_volatility": 0.0184,
+            "avg_volume_20d": 122387
+          },
+          "CMCSA": {
+            "price": 22.82,
+            "change_1d": 0.034,
+            "change_5d": 0.0485,
+            "change_20d": 0.0305,
+            "above_20d_avg": true,
+            "above_50d_avg": false,
+            "rsi_14": 64.2,
+            "daily_volatility": 0.0163,
             "avg_volume_20d": 1795179
           },
-          "EA": {
-            "price": 209.86,
-            "change_1d": -0.0003,
-            "change_5d": 0.0045,
-            "change_20d": 0.0217,
+          "IMAX": {
+            "price": 52.86,
+            "change_1d": -0.0047,
+            "change_5d": 0.0268,
+            "change_20d": -0.0417,
             "above_20d_avg": true,
-            "above_50d_avg": null,
-            "rsi_14": 84.6,
-            "daily_volatility": 0.0023,
-            "avg_volume_20d": 204765
+            "above_50d_avg": true,
+            "rsi_14": 50.6,
+            "daily_volatility": 0.0173,
+            "avg_volume_20d": 65905
           },
-          "LYV": {
-            "price": 173.3,
-            "change_1d": -0.0061,
-            "change_5d": 0.0044,
-            "change_20d": 0.0116,
+          "ROKU": {
+            "price": 159.69,
+            "change_1d": 0.0121,
+            "change_5d": 0.0327,
+            "change_20d": 0.0411,
             "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 60.7,
-            "daily_volatility": 0.0105,
-            "avg_volume_20d": 84247
+            "above_50d_avg": true,
+            "rsi_14": 79.4,
+            "daily_volatility": 0.0065,
+            "avg_volume_20d": 71804
+          },
+          "WMG": {
+            "price": 31.73,
+            "change_1d": 0.0092,
+            "change_5d": 0.0337,
+            "change_20d": 0.1629,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 89.8,
+            "daily_volatility": 0.0178,
+            "avg_volume_20d": 144547
           }
         }
       }
@@ -6507,132 +7209,103 @@
         "updated": "2026-10-22T11:10-04:00"
       },
       "research": {
-        "time": "2026-10-22T10:54-04:00",
+        "time": "2026-10-22T11:27-04:00",
         "news": {
           "findings": [
             {
               "symbol": "NVDA",
               "sentiment": 0.5,
-              "importance": 2,
+              "importance": 3,
               "unconfirmed_rumor": false,
-              "summary": "Eric Schmidt downplayed AI bubble concerns and claimed Anthropic's customer revenue is growing twice as fast as Google's.",
-              "source": "Benzinga",
-              "time": "11:07"
+              "summary": "Jensen Huang downplays memory glut fears, easing concerns for NVDA.",
+              "source": "benzinga",
+              "time": "11:32"
+            },
+            {
+              "symbol": "MU",
+              "sentiment": -0.5,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Micron stock remains on edge amid memory glut fears, raising uncertainty for MU.",
+              "source": "benzinga",
+              "time": "11:32"
             },
             {
               "symbol": "NVDA",
-              "sentiment": 0.8,
-              "importance": 3,
-              "unconfirmed_rumor": false,
-              "summary": "Rockwell Automation added support for NVIDIA Nemotron models, expanding industrial AI integration.",
-              "source": "fiscal.ai",
-              "time": "11:07"
-            },
-            {
-              "symbol": "MSFT",
-              "sentiment": 0.8,
-              "importance": 3,
-              "unconfirmed_rumor": false,
-              "summary": "Microsoft announced a strategic AI collaboration with Boehringer Ingelheim to use AI and digital patient twins in clinical development.",
-              "source": "fiscal.ai",
-              "time": "11:07"
-            },
-            {
-              "symbol": "MSFT",
-              "sentiment": 0.6,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "Merck partnered with Microsoft, NVIDIA, and Dawn Health on patient support programs for rare tumors.",
-              "source": "fiscal.ai",
-              "time": "11:07"
-            },
-            {
-              "symbol": "MSFT",
-              "sentiment": 0.4,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "ModelOp released AI governance platform integrations with Microsoft Agent 365 and Copilot Studio.",
-              "source": "fiscal.ai",
-              "time": "11:07"
-            },
-            {
-              "symbol": "TXN",
-              "sentiment": 0.3,
-              "importance": 1,
-              "unconfirmed_rumor": false,
-              "summary": "Texas Instruments launched the TI-Rover BT robotic vehicle for math education.",
-              "source": "fiscal.ai",
-              "time": "11:07"
-            },
-            {
-              "symbol": "CSCO",
-              "sentiment": 0.0,
-              "importance": 1,
-              "unconfirmed_rumor": false,
-              "summary": "Senator John Boozman reportedly bought over $10K in Cisco Systems stock, according to a congressional trading report.",
-              "source": "Benzinga",
-              "time": "11:07"
-            },
-            {
-              "symbol": "IBM",
-              "sentiment": 0.5,
+              "sentiment": 1.0,
               "importance": 5,
               "unconfirmed_rumor": false,
-              "summary": "IBM reported Q3 2026 revenue of $17.1 billion and beat expectations, helped by recovery in previously delayed large deals, though shares were lower.",
+              "summary": "Nvidia CEO Jensen Huang reinforced strong AI GPU and agent demand while arguing AI systems could retain value longer, supporting GPU collateral use.",
+              "source": "Benzinga"
+            },
+            {
+              "symbol": "MSFT",
+              "sentiment": 0.5,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Microsoft announced AI healthcare collaborations and agent governance integrations with ModelOp.",
               "source": "fiscal.ai"
             },
             {
-              "symbol": "NVDA",
-              "sentiment": 1.0,
-              "importance": 3,
-              "unconfirmed_rumor": false,
-              "summary": "Nvidia CEO Jensen Huang said AI agent and GPU demand remain strong, with token and GPU demand going through the roof.",
-              "source": "Benzinga"
-            },
-            {
-              "symbol": "NVDA",
-              "sentiment": 1.0,
-              "importance": 3,
-              "unconfirmed_rumor": false,
-              "summary": "Nvidia CEO Jensen Huang said Nvidia GPUs could last over 8 years and carry high residual value, calling them among the lowest risk assets for lenders.",
-              "source": "Benzinga"
-            },
-            {
               "symbol": "TXN",
-              "sentiment": 1.0,
+              "sentiment": 0.8,
+              "importance": 4,
+              "unconfirmed_rumor": false,
+              "summary": "Texas Instruments beat Q3 earnings, guided strongly on data center demand, and saw multiple analysts raise price targets.",
+              "source": "Benzinga"
+            },
+            {
+              "symbol": "IBM",
+              "sentiment": 0.0,
               "importance": 3,
               "unconfirmed_rumor": false,
-              "summary": "Texas Instruments beat Q3 and saw data center demand strength, while multiple analysts including JPMorgan and Stifel raised price targets.",
-              "source": "Benzinga"
+              "summary": "IBM reported a Q3 revenue beat but shares fell, while analysts raised price targets.",
+              "source": "fiscal.ai"
             },
             {
               "symbol": "AVGO",
-              "sentiment": 1.0,
+              "sentiment": 0.5,
               "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Tigress Financial initiated coverage on Broadcom with a Buy rating and announced a $600 price target.",
+              "summary": "Tigress Financial initiated coverage of Broadcom with a Buy and a $600 price target.",
               "source": "fiscal.ai"
             },
             {
               "symbol": "ORCL",
-              "sentiment": 1.0,
-              "importance": 3,
+              "sentiment": 0.5,
+              "importance": 2,
               "unconfirmed_rumor": false,
               "summary": "Cantor Fitzgerald reiterated an Overweight rating on Oracle and maintained a $284 price target.",
               "source": "Benzinga"
             },
             {
-              "symbol": "MU",
-              "sentiment": 1.0,
-              "importance": 3,
+              "symbol": "ADBE",
+              "sentiment": 0.2,
+              "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Needham reiterated a Buy on Micron and maintained a $1650 price target.",
+              "summary": "Adobe announced an AI fan experience partnership with the BWT Alpine Formula One team.",
+              "source": "fiscal.ai"
+            },
+            {
+              "symbol": "MU",
+              "sentiment": 0.0,
+              "importance": 2,
+              "unconfirmed_rumor": false,
+              "summary": "Micron received analyst Buy coverage and faced competitive memory chip commentary.",
               "source": "Benzinga"
+            },
+            {
+              "symbol": "QCOM",
+              "sentiment": 0.0,
+              "importance": 2,
+              "unconfirmed_rumor": false,
+              "summary": "Qualcomm announced its Q4 and fiscal 2026 earnings release date.",
+              "source": "fiscal.ai"
             }
           ],
           "urgent": [],
-          "overall": "The Information Technology group is showing cautious optimism, with recent AI partnerships and infrastructure news providing modest support for names like NVDA and MSFT. The tone is not euphoric, however, as broader growth sentiment appeared mixed and defensive sectors led the latest session.",
-          "items_read": 58
+          "overall": "Positive sentiment for NVDA due to downplayed memory glut fears, while Micron remains uncertain, leading to a mixed mood across the sector.",
+          "items_read": 51
         },
         "social": {
           "findings": [],
@@ -6913,203 +7586,203 @@
           }
         ],
         "technicals": {
-          "ANET": {
-            "price": 172.35,
-            "change_1d": -0.0651,
-            "change_5d": -0.0711,
-            "change_20d": -0.1621,
+          "AVGO": {
+            "price": 323.76,
+            "change_1d": -0.0417,
+            "change_5d": -0.0596,
+            "change_20d": -0.0759,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 28.8,
-            "daily_volatility": 0.0282,
-            "avg_volume_20d": 281311
+            "rsi_14": 34.5,
+            "daily_volatility": 0.0235,
+            "avg_volume_20d": 695398
           },
-          "NOW": {
-            "price": 155.7,
-            "change_1d": 0.0169,
-            "change_5d": 0.0482,
-            "change_20d": 0.1299,
+          "CRM": {
+            "price": 247.49,
+            "change_1d": 0.0237,
+            "change_5d": 0.0032,
+            "change_20d": 0.0381,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 77.1,
-            "daily_volatility": 0.0242,
+            "rsi_14": 62.8,
+            "daily_volatility": 0.0196,
+            "avg_volume_20d": 308931
+          },
+          "NVDA": {
+            "price": 214.08,
+            "change_1d": -0.0352,
+            "change_5d": -0.015,
+            "change_20d": -0.0468,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 30.6,
+            "daily_volatility": 0.017,
+            "avg_volume_20d": 2951514
+          },
+          "PANW": {
+            "price": 358.13,
+            "change_1d": 0.0314,
+            "change_5d": -0.0327,
+            "change_20d": -0.082,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 36.4,
+            "daily_volatility": 0.0336,
+            "avg_volume_20d": 204935
+          },
+          "NOW": {
+            "price": 157.16,
+            "change_1d": 0.0265,
+            "change_5d": 0.058,
+            "change_20d": 0.1405,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 78.0,
+            "daily_volatility": 0.0245,
             "avg_volume_20d": 459202
           },
           "AAPL": {
-            "price": 344.11,
-            "change_1d": 0.0005,
-            "change_5d": 0.0064,
-            "change_20d": 0.0245,
+            "price": 345.45,
+            "change_1d": 0.0044,
+            "change_5d": 0.0104,
+            "change_20d": 0.0285,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 67.7,
+            "rsi_14": 69.1,
             "daily_volatility": 0.0102,
             "avg_volume_20d": 1127270
           },
-          "AMD": {
-            "price": 513.34,
-            "change_1d": -0.071,
-            "change_5d": -0.0868,
-            "change_20d": -0.1839,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 24.1,
-            "daily_volatility": 0.0296,
-            "avg_volume_20d": 509740
-          },
-          "CRM": {
-            "price": 247.19,
-            "change_1d": 0.0225,
-            "change_5d": 0.002,
-            "change_20d": 0.0368,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 62.6,
-            "daily_volatility": 0.0195,
-            "avg_volume_20d": 308931
-          },
-          "CSCO": {
-            "price": 104.03,
-            "change_1d": -0.0302,
-            "change_5d": -0.0528,
-            "change_20d": -0.0273,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 35.6,
-            "daily_volatility": 0.0201,
-            "avg_volume_20d": 602875
-          },
-          "IBM": {
-            "price": 246.88,
-            "change_1d": -0.0179,
-            "change_5d": 0.0547,
-            "change_20d": 0.0872,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 75.8,
-            "daily_volatility": 0.0169,
-            "avg_volume_20d": 183390
-          },
-          "ORCL": {
-            "price": 126.45,
-            "change_1d": -0.0205,
-            "change_5d": -0.0596,
-            "change_20d": -0.0937,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 36.1,
-            "daily_volatility": 0.0341,
-            "avg_volume_20d": 902234
-          },
           "ADBE": {
-            "price": 265.58,
-            "change_1d": 0.0412,
-            "change_5d": 0.0552,
-            "change_20d": 0.1119,
+            "price": 268.59,
+            "change_1d": 0.053,
+            "change_5d": 0.0671,
+            "change_20d": 0.1245,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 70.5,
-            "daily_volatility": 0.0221,
+            "rsi_14": 71.7,
+            "daily_volatility": 0.0231,
             "avg_volume_20d": 155229
           },
           "AMAT": {
-            "price": 381.81,
-            "change_1d": -0.0658,
-            "change_5d": -0.1123,
-            "change_20d": -0.1947,
+            "price": 381.85,
+            "change_1d": -0.0657,
+            "change_5d": -0.1122,
+            "change_20d": -0.1946,
             "above_20d_avg": false,
             "above_50d_avg": false,
             "rsi_14": 5.2,
             "daily_volatility": 0.0307,
             "avg_volume_20d": 293296
           },
-          "AVGO": {
-            "price": 324.46,
-            "change_1d": -0.0397,
-            "change_5d": -0.0576,
-            "change_20d": -0.074,
+          "ANET": {
+            "price": 172.05,
+            "change_1d": -0.0668,
+            "change_5d": -0.0728,
+            "change_20d": -0.1636,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 34.7,
-            "daily_volatility": 0.0234,
-            "avg_volume_20d": 695398
+            "rsi_14": 28.7,
+            "daily_volatility": 0.0284,
+            "avg_volume_20d": 281311
           },
-          "PANW": {
-            "price": 356.32,
-            "change_1d": 0.0262,
-            "change_5d": -0.0376,
-            "change_20d": -0.0866,
+          "IBM": {
+            "price": 249.47,
+            "change_1d": -0.0076,
+            "change_5d": 0.0658,
+            "change_20d": 0.0986,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 80.2,
+            "daily_volatility": 0.0164,
+            "avg_volume_20d": 183390
+          },
+          "INTU": {
+            "price": 355.01,
+            "change_1d": 0.0582,
+            "change_5d": 0.0752,
+            "change_20d": 0.2811,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 88.9,
+            "daily_volatility": 0.0226,
+            "avg_volume_20d": 160862
+          },
+          "MSFT": {
+            "price": 525.9,
+            "change_1d": -0.013,
+            "change_5d": -0.025,
+            "change_20d": 0.0569,
+            "above_20d_avg": false,
+            "above_50d_avg": true,
+            "rsi_14": 55.4,
+            "daily_volatility": 0.0137,
+            "avg_volume_20d": 706901
+          },
+          "AMD": {
+            "price": 511.62,
+            "change_1d": -0.0741,
+            "change_5d": -0.0899,
+            "change_20d": -0.1866,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 35.7,
-            "daily_volatility": 0.0333,
-            "avg_volume_20d": 204935
+            "rsi_14": 23.9,
+            "daily_volatility": 0.0299,
+            "avg_volume_20d": 509740
+          },
+          "ORCL": {
+            "price": 126.22,
+            "change_1d": -0.0222,
+            "change_5d": -0.0613,
+            "change_20d": -0.0953,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 36.0,
+            "daily_volatility": 0.0342,
+            "avg_volume_20d": 902234
           },
           "QCOM": {
-            "price": 174.75,
-            "change_1d": -0.0177,
-            "change_5d": -0.0202,
-            "change_20d": -0.1007,
+            "price": 174.71,
+            "change_1d": -0.018,
+            "change_5d": -0.0204,
+            "change_20d": -0.1009,
             "above_20d_avg": false,
             "above_50d_avg": false,
             "rsi_14": 36.9,
             "daily_volatility": 0.0243,
             "avg_volume_20d": 333450
           },
-          "NVDA": {
-            "price": 213.18,
-            "change_1d": -0.0393,
-            "change_5d": -0.0191,
-            "change_20d": -0.0508,
+          "TXN": {
+            "price": 280.87,
+            "change_1d": -0.0135,
+            "change_5d": 0.0062,
+            "change_20d": 0.0379,
+            "above_20d_avg": false,
+            "above_50d_avg": true,
+            "rsi_14": 37.0,
+            "daily_volatility": 0.0175,
+            "avg_volume_20d": 219179
+          },
+          "ONDS": {
+            "price": 6.09,
+            "change_1d": -0.0287,
+            "change_5d": -0.0394,
+            "change_20d": -0.2008,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 30.0,
-            "daily_volatility": 0.0174,
-            "avg_volume_20d": 2951514
-          },
-          "INTU": {
-            "price": 347.99,
-            "change_1d": 0.0372,
-            "change_5d": 0.054,
-            "change_20d": 0.2558,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 88.1,
-            "daily_volatility": 0.0209,
-            "avg_volume_20d": 160862
-          },
-          "MSFT": {
-            "price": 524.89,
-            "change_1d": -0.0148,
-            "change_5d": -0.0268,
-            "change_20d": 0.0549,
-            "above_20d_avg": false,
-            "above_50d_avg": true,
-            "rsi_14": 54.7,
-            "daily_volatility": 0.0138,
-            "avg_volume_20d": 706901
+            "rsi_14": 26.3,
+            "daily_volatility": 0.0285,
+            "avg_volume_20d": 1541554
           },
           "MU": {
-            "price": 875.22,
-            "change_1d": -0.042,
-            "change_5d": -0.0603,
-            "change_20d": -0.1897,
+            "price": 876.97,
+            "change_1d": -0.0401,
+            "change_5d": -0.0584,
+            "change_20d": -0.1881,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 25.3,
-            "daily_volatility": 0.0279,
+            "rsi_14": 25.4,
+            "daily_volatility": 0.0278,
             "avg_volume_20d": 628026
-          },
-          "TXN": {
-            "price": 279.9,
-            "change_1d": -0.0169,
-            "change_5d": 0.0027,
-            "change_20d": 0.0343,
-            "above_20d_avg": false,
-            "above_50d_avg": true,
-            "rsi_14": 36.3,
-            "daily_volatility": 0.0176,
-            "avg_volume_20d": 219179
           }
         }
       }
@@ -7158,13 +7831,13 @@
           "trail_active": null,
           "first_stop": null,
           "entry_price": 261.893333,
-          "exit_price": null,
-          "exit_time": null,
+          "exit_price": 251.67,
+          "exit_time": "2026-10-22T15:12:45.699047677Z",
           "exit_reason": "manager_sell",
           "exit_note": "Existing long is breaking below VWAP and the opening range with negative momentum and risk-off conditions; exit the losing position.",
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "pnl": -94.32,
+          "pnl_pct": -0.04,
+          "status": "closed",
           "conviction": 3,
           "reason": "Multiple positive partnership news (AWS with 3Business, 3M stock warrant, Credera collaboration) and after\u2011hours analyst optimism, while price is modestly down 0.5% offering a better entry point.",
           "stop_price": 240.53,
@@ -7176,7 +7849,7 @@
           "time": "11:12",
           "symbol": "TSLA",
           "kind": "shares",
-          "qty": 4,
+          "qty": 4.0,
           "dollars": 1529.1,
           "est_price": 382.275,
           "setup": "news catalyst",
@@ -7184,14 +7857,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 393.74,
-          "entry_price": null,
+          "entry_price": 380.4525,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 4,
           "reason": "Tesla sold off after Q3 earnings despite the beat on delivery weakness and 2026 CapEx cut; shares are below VWAP and momentum is down, fitting a risk-off short.",
           "stop_price": 393.74,
@@ -7203,7 +7876,7 @@
           "time": "11:12",
           "symbol": "DPZ",
           "kind": "shares",
-          "qty": 4,
+          "qty": 4.0,
           "dollars": 1268.76,
           "est_price": 317.19,
           "setup": "opening range breakout",
@@ -7211,6 +7884,87 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 312.43,
+          "entry_price": 317.6,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 3,
+          "reason": "[75% invested rule] DPZ broke above range with positive momentum but low relative volume; smaller intraday long if momentum holds.",
+          "stop_price": 312.43,
+          "take_profit_price": 326.71
+        },
+        {
+          "id": "consumer-AMZN-202610221133-4e0e",
+          "date": "2026-10-22",
+          "time": "11:33",
+          "symbol": "AMZN",
+          "kind": "shares",
+          "qty": 10,
+          "dollars": 2518.7,
+          "est_price": 251.87,
+          "setup": "news catalyst",
+          "side": "short",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 256.91,
+          "entry_price": null,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "submitted",
+          "conviction": 4,
+          "reason": "AMZN is down 4.0% on the day, trading below VWAP (-0.6%) with high relative volume (2.03). In a risk-off market, this momentum suggests further downside. The stop is tight at 2% to respect the volatility.",
+          "stop_price": 256.91,
+          "take_profit_price": 244.31
+        },
+        {
+          "id": "consumer-LULU-202610221133-2251",
+          "date": "2026-10-22",
+          "time": "11:33",
+          "symbol": "LULU",
+          "kind": "shares",
+          "qty": 12,
+          "dollars": 1212.36,
+          "est_price": 101.03,
+          "setup": "opening range breakout",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 99.51,
+          "entry_price": null,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "submitted",
+          "conviction": 4,
+          "reason": "LULU is up 4.7% with a strong opening range breakout and positive 15m momentum (+0.5%). It is trading above VWAP (+2.2%) and has the best relative strength in the group today. Longs are half-size due to risk-off, but this is a high-conviction momentum play.",
+          "stop_price": 99.51,
+          "take_profit_price": 103.56
+        },
+        {
+          "id": "consumer-HD-202610221133-979d",
+          "date": "2026-10-22",
+          "time": "11:33",
+          "symbol": "HD",
+          "kind": "shares",
+          "qty": 3,
+          "dollars": 973.17,
+          "est_price": 324.39,
+          "setup": "opening range breakout",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 319.52,
           "entry_price": null,
           "exit_price": null,
           "exit_time": null,
@@ -7220,9 +7974,9 @@
           "pnl_pct": null,
           "status": "submitted",
           "conviction": 3,
-          "reason": "[75% invested rule] DPZ broke above range with positive momentum but low relative volume; smaller intraday long if momentum holds.",
-          "stop_price": 312.43,
-          "take_profit_price": 326.71
+          "reason": "[75% invested rule] HD is up 3.3% with a breakout and above VWAP. Strong momentum, but RSI is overbought (85.2), so entry should be cautious.",
+          "stop_price": 319.52,
+          "take_profit_price": 332.5
         }
       ],
       "blocked": [
@@ -7281,6 +8035,14 @@
           "symbol": "ABNB",
           "action": "BUY",
           "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "team": "consumer",
+          "symbol": "LOW",
+          "action": "BUY",
+          "reason": "conviction 3 is below the minimum 4 (risk-off market)"
         }
       ],
       "plans": [
@@ -7382,12 +8144,57 @@
             "BUY CMG blocked: conviction 2 is below the minimum 3 (risk-off market)",
             "BUY ABNB blocked: conviction 2 is below the minimum 3 (risk-off market)"
           ]
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:33",
+          "trigger": "first look this run",
+          "market_view": "The market is in a clear risk-off regime with indices down over 2% and VIX spiking, favoring short setups on weak names and disciplined longs only on high-conviction breakouts. Consumer Discretionary is mixed, with defensive names like LULU and LOW showing strength while high-beta names like AMZN and TSLA are under pressure.",
+          "experiment": "Testing the efficacy of high-conviction opening range breakouts in a risk-off market vs. shorting high-volume breakdowns.",
+          "decisions": [
+            {
+              "symbol": "AMZN",
+              "action": "SHORT",
+              "conviction": 4,
+              "reason": "AMZN is down 4.0% on the day, trading below VWAP (-0.6%) with high relative volume (2.03). In a risk-off market, this momentum suggests further downside. The stop is tight at 2% to respect the volatility.",
+              "stop_loss_pct": 0.02,
+              "take_profit_pct": 0.03
+            },
+            {
+              "symbol": "LULU",
+              "action": "BUY",
+              "conviction": 4,
+              "reason": "LULU is up 4.7% with a strong opening range breakout and positive 15m momentum (+0.5%). It is trading above VWAP (+2.2%) and has the best relative strength in the group today. Longs are half-size due to risk-off, but this is a high-conviction momentum play.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.025
+            },
+            {
+              "symbol": "LOW",
+              "action": "BUY",
+              "conviction": 3,
+              "reason": "LOW is up 3.5% with a clear opening range breakout and high relative volume (2.46). It is trading above VWAP (+0.9%) and shows steady 60m momentum. A solid follow-through play in a strong sector.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.025
+            }
+          ],
+          "results": [
+            "SHORT AMZN x10 (~$2518.7)",
+            "BUY LULU x12 (~$1212.36)",
+            "BUY LOW blocked: conviction 3 is below the minimum 4 (risk-off market)",
+            "BUY HD x3 (~$973.17) [deploy]"
+          ]
         }
       ],
       "lessons": [],
       "ideas": {},
       "reviews": [],
-      "pnl_days": [],
+      "pnl_days": [
+        {
+          "date": "2026-10-22",
+          "realized": -94.32,
+          "cum": -94.32
+        }
+      ],
       "watchlist": {
         "symbols": [
           "AMZN",
@@ -7431,65 +8238,58 @@
         ],
         "log": [],
         "rejected": [],
-        "updated": "2026-10-22T11:12-04:00"
+        "updated": "2026-10-22T11:33-04:00"
       },
       "research": {
-        "time": "2026-10-22T10:55-04:00",
+        "time": "2026-10-22T11:28-04:00",
         "news": {
           "findings": [
-            {
-              "symbol": "RCL",
-              "sentiment": 0.3,
-              "importance": 3,
-              "unconfirmed_rumor": false,
-              "summary": "Royal Caribbean Group adopts Quantum Metric's MCP platform to improve digital operations and incident triage.",
-              "source": "fiscal.ai",
-              "time": "11:10"
-            },
             {
               "symbol": "TSLA",
               "sentiment": -0.8,
               "importance": 5,
-              "unconfirmed_rumor": true,
-              "summary": "Tesla shares fell after Q3 earnings despite an earnings beat, with delivery weakness and a 2026 CapEx cut fueling selling, while a Tesla-SpaceX merger remains unconfirmed.",
-              "source": "Benzinga"
+              "unconfirmed_rumor": false,
+              "summary": "Tesla shares fell after Q3 results despite an earnings beat, as vehicle delivery declines and AI/CapEx concerns pressured the stock.",
+              "source": "benzinga"
             },
             {
               "symbol": "AMZN",
               "sentiment": 0.0,
-              "importance": 3,
+              "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Amazon is in focus ahead of its earnings as investors weigh AWS growth, capital spending, and analyst expectations.",
-              "source": "Benzinga"
+              "summary": "Amazon is in focus ahead of its earnings as analysts expect updates on AWS growth, capital spending, and technical momentum.",
+              "source": "benzinga"
             },
             {
               "symbol": "ABNB",
+              "sentiment": 0.6,
+              "importance": 2,
+              "unconfirmed_rumor": false,
+              "summary": "American Express and Airbnb announced a strategic partnership to integrate over 1 million Airbnb listings into the Amex Travel platform.",
+              "source": "fiscal.ai"
+            },
+            {
+              "symbol": "NKE",
               "sentiment": 0.5,
-              "importance": 3,
+              "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "American Express and Airbnb announced a strategic partnership to integrate over one million Airbnb listings into the Amex Travel platform.",
+              "summary": "Barclays raised its price target for Nike from $37 to $45.",
               "source": "fiscal.ai"
             },
             {
-              "symbol": "SBUX",
-              "sentiment": -0.5,
+              "symbol": "BKNG",
+              "sentiment": 0.5,
               "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Starbucks Hong Kong faced public scrutiny after staff reportedly labeled a Korean customer as Kimchi.",
-              "source": "fiscal.ai"
-            },
-            {
-              "symbol": "CMG",
-              "sentiment": 0.0,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "Chipotle reaffirmed support for the National Restaurant Association's Kids LiveWell program.",
-              "source": "fiscal.ai"
+              "summary": "BTIG reiterated a Buy on Booking Holdings and maintained a $250 price target.",
+              "source": "benzinga"
             }
           ],
-          "urgent": [],
-          "overall": "The Consumer Discretionary sector remains largely neutral, with only a modest positive development for Royal Caribbean Group. No significant catalysts are expected to move the broader group today.",
-          "items_read": 51
+          "urgent": [
+            "TSLA"
+          ],
+          "overall": "The Consumer Discretionary group is tilted negative after Tesla post-earnings slide, but the weakness was tied to delivery and AI spending concerns rather than a broad sector breakdown. Travel, restaurant, and retail names mostly saw company-specific or analyst coverage news, while Amazon and Tesla remained the main attention drivers.",
+          "items_read": 50
         },
         "social": {
           "findings": [],
@@ -7770,203 +8570,203 @@
           }
         ],
         "technicals": {
-          "ABNB": {
-            "price": 174.77,
-            "change_1d": 0.0062,
-            "change_5d": 0.0029,
-            "change_20d": 0.1543,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 69.4,
-            "daily_volatility": 0.0162,
-            "avg_volume_20d": 218841
-          },
-          "DPZ": {
-            "price": 315.09,
-            "change_1d": 0.0129,
-            "change_5d": 0.0395,
-            "change_20d": 0.075,
-            "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 63.4,
-            "daily_volatility": 0.0187,
-            "avg_volume_20d": 49235
-          },
-          "F": {
-            "price": 11.96,
-            "change_1d": 0.0067,
-            "change_5d": -0.028,
-            "change_20d": -0.0508,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 46.1,
-            "daily_volatility": 0.0137,
-            "avg_volume_20d": 1732309
-          },
-          "HD": {
-            "price": 323.63,
-            "change_1d": 0.0304,
-            "change_5d": 0.0498,
-            "change_20d": 0.1077,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 85.0,
-            "daily_volatility": 0.0158,
-            "avg_volume_20d": 285879
-          },
-          "TJX": {
-            "price": 146.54,
-            "change_1d": 0.0069,
-            "change_5d": 0.0133,
-            "change_20d": 0.1133,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 87.5,
-            "daily_volatility": 0.0111,
-            "avg_volume_20d": 408958
-          },
-          "AMZN": {
-            "price": 252.41,
-            "change_1d": -0.0379,
-            "change_5d": -0.0092,
-            "change_20d": 0.0123,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 50.8,
-            "daily_volatility": 0.0192,
-            "avg_volume_20d": 1188380
-          },
           "CMG": {
-            "price": 28.18,
-            "change_1d": 0.003,
-            "change_5d": -0.0782,
-            "change_20d": -0.1198,
+            "price": 28.14,
+            "change_1d": 0.002,
+            "change_5d": -0.0792,
+            "change_20d": -0.1207,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 25.5,
+            "rsi_14": 25.2,
             "daily_volatility": 0.0246,
             "avg_volume_20d": 1510672
           },
-          "LOW": {
-            "price": 202.91,
-            "change_1d": 0.0324,
-            "change_5d": 0.0365,
-            "change_20d": 0.0764,
+          "F": {
+            "price": 11.95,
+            "change_1d": 0.005,
+            "change_5d": -0.0297,
+            "change_20d": -0.0524,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 45.5,
+            "daily_volatility": 0.0136,
+            "avg_volume_20d": 1732309
+          },
+          "GM": {
+            "price": 76.87,
+            "change_1d": 0.0103,
+            "change_5d": -0.0811,
+            "change_20d": -0.046,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 46.3,
+            "daily_volatility": 0.0238,
+            "avg_volume_20d": 539338
+          },
+          "HD": {
+            "price": 324.4,
+            "change_1d": 0.0328,
+            "change_5d": 0.0523,
+            "change_20d": 0.1104,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 75.6,
-            "daily_volatility": 0.0174,
+            "rsi_14": 85.2,
+            "daily_volatility": 0.016,
+            "avg_volume_20d": 285879
+          },
+          "MAR": {
+            "price": 396.78,
+            "change_1d": -0.0178,
+            "change_5d": 0.0287,
+            "change_20d": 0.1286,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 78.0,
+            "daily_volatility": 0.0129,
+            "avg_volume_20d": 61912
+          },
+          "ORLY": {
+            "price": 91.06,
+            "change_1d": 0.021,
+            "change_5d": 0.0289,
+            "change_20d": 0.0561,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 74.4,
+            "daily_volatility": 0.0099,
+            "avg_volume_20d": 205397
+          },
+          "TSLA": {
+            "price": 384.12,
+            "change_1d": -0.0065,
+            "change_5d": 0.0598,
+            "change_20d": 0.0162,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 57.9,
+            "daily_volatility": 0.0216,
+            "avg_volume_20d": 687268
+          },
+          "ABNB": {
+            "price": 175.45,
+            "change_1d": 0.0101,
+            "change_5d": 0.0068,
+            "change_20d": 0.1588,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 70.1,
+            "daily_volatility": 0.0162,
+            "avg_volume_20d": 218841
+          },
+          "AMZN": {
+            "price": 252.02,
+            "change_1d": -0.0394,
+            "change_5d": -0.0108,
+            "change_20d": 0.0107,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 50.5,
+            "daily_volatility": 0.0194,
+            "avg_volume_20d": 1188380
+          },
+          "BKNG": {
+            "price": 162.92,
+            "change_1d": 0.0291,
+            "change_5d": -0.0175,
+            "change_20d": 0.0351,
+            "above_20d_avg": true,
+            "above_50d_avg": false,
+            "rsi_14": 55.8,
+            "daily_volatility": 0.0185,
+            "avg_volume_20d": 386029
+          },
+          "DPZ": {
+            "price": 318.12,
+            "change_1d": 0.0226,
+            "change_5d": 0.0495,
+            "change_20d": 0.0853,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 65.1,
+            "daily_volatility": 0.0191,
+            "avg_volume_20d": 49235
+          },
+          "LOW": {
+            "price": 203.48,
+            "change_1d": 0.0353,
+            "change_5d": 0.0394,
+            "change_20d": 0.0794,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 75.9,
+            "daily_volatility": 0.0177,
             "avg_volume_20d": 132548
           },
           "LULU": {
-            "price": 99.61,
-            "change_1d": 0.0319,
-            "change_5d": 0.0048,
-            "change_20d": -0.0215,
+            "price": 101.12,
+            "change_1d": 0.0475,
+            "change_5d": 0.0201,
+            "change_20d": -0.0067,
             "above_20d_avg": true,
             "above_50d_avg": false,
-            "rsi_14": 61.0,
-            "daily_volatility": 0.021,
+            "rsi_14": 63.4,
+            "daily_volatility": 0.0224,
             "avg_volume_20d": 168117
           },
-          "ORLY": {
-            "price": 90.74,
-            "change_1d": 0.0174,
-            "change_5d": 0.0253,
-            "change_20d": 0.0523,
+          "NKE": {
+            "price": 38.09,
+            "change_1d": 0.0152,
+            "change_5d": 0.0249,
+            "change_20d": 0.0578,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 73.7,
-            "daily_volatility": 0.0096,
-            "avg_volume_20d": 205397
+            "rsi_14": 87.4,
+            "daily_volatility": 0.0173,
+            "avg_volume_20d": 1972484
           },
           "RCL": {
-            "price": 287.47,
-            "change_1d": -0.0036,
-            "change_5d": 0.0264,
-            "change_20d": 0.2028,
+            "price": 287.74,
+            "change_1d": -0.0026,
+            "change_5d": 0.0274,
+            "change_20d": 0.2039,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 58.8,
+            "rsi_14": 59.1,
             "daily_volatility": 0.0229,
             "avg_volume_20d": 169100
           },
-          "BKNG": {
-            "price": 162.71,
-            "change_1d": 0.0277,
-            "change_5d": -0.0188,
-            "change_20d": 0.0337,
-            "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 55.5,
-            "daily_volatility": 0.0184,
-            "avg_volume_20d": 386029
-          },
-          "MAR": {
-            "price": 398.04,
-            "change_1d": -0.0147,
-            "change_5d": 0.0319,
-            "change_20d": 0.1322,
+          "TJX": {
+            "price": 147.16,
+            "change_1d": 0.0112,
+            "change_5d": 0.0176,
+            "change_20d": 0.118,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 79.5,
-            "daily_volatility": 0.0126,
-            "avg_volume_20d": 61912
-          },
-          "NKE": {
-            "price": 37.87,
-            "change_1d": 0.0091,
-            "change_5d": 0.0187,
-            "change_20d": 0.0514,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 86.9,
-            "daily_volatility": 0.0171,
-            "avg_volume_20d": 1972484
-          },
-          "SBUX": {
-            "price": 100.43,
-            "change_1d": 0.0138,
-            "change_5d": 0.0363,
-            "change_20d": 0.0724,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 65.6,
-            "daily_volatility": 0.015,
-            "avg_volume_20d": 427859
-          },
-          "GM": {
-            "price": 77.17,
-            "change_1d": 0.0142,
-            "change_5d": -0.0776,
-            "change_20d": -0.0424,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 47.1,
-            "daily_volatility": 0.0239,
-            "avg_volume_20d": 539338
+            "rsi_14": 87.9,
+            "daily_volatility": 0.0112,
+            "avg_volume_20d": 408958
           },
           "MCD": {
-            "price": 249.15,
-            "change_1d": 0.0118,
-            "change_5d": 0.0273,
-            "change_20d": 0.051,
-            "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 83.3,
-            "daily_volatility": 0.0095,
-            "avg_volume_20d": 205648
-          },
-          "TSLA": {
-            "price": 386.62,
-            "change_1d": -0.0,
-            "change_5d": 0.0668,
-            "change_20d": 0.0228,
+            "price": 250.4,
+            "change_1d": 0.0169,
+            "change_5d": 0.0325,
+            "change_20d": 0.0563,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 59.6,
-            "daily_volatility": 0.0215,
-            "avg_volume_20d": 687268
+            "rsi_14": 84.1,
+            "daily_volatility": 0.0098,
+            "avg_volume_20d": 205648
+          },
+          "SBUX": {
+            "price": 101.22,
+            "change_1d": 0.0218,
+            "change_5d": 0.0444,
+            "change_20d": 0.0808,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 67.0,
+            "daily_volatility": 0.0153,
+            "avg_volume_20d": 427859
           }
         }
       }
@@ -8114,7 +8914,7 @@
           "time": "11:14",
           "symbol": "CME",
           "kind": "shares",
-          "qty": 4,
+          "qty": 4.0,
           "dollars": 1224.6,
           "est_price": 306.15,
           "setup": "news catalyst",
@@ -8122,14 +8922,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 300.03,
-          "entry_price": null,
+          "entry_price": 305.94,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 4,
           "reason": "JPMorgan upgraded CME to Overweight/Buy and raised its price target to $367, per JPM and Benzinga. CME is also breaking above its opening range at $301.99-$305.43 and trading around $306.15, up 3.5% with rvol 1.34. The catalyst plus breakout is a clear intraday setup, though the market is risk-off and the stock is overbought; conviction is high but size will be disciplined.",
           "stop_price": 300.03,
@@ -8141,7 +8941,7 @@
           "time": "11:14",
           "symbol": "ICE",
           "kind": "shares",
-          "qty": 7,
+          "qty": 7.0,
           "dollars": 1140.44,
           "est_price": 162.92,
           "setup": "opening range breakout",
@@ -8149,14 +8949,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 159.66,
-          "entry_price": null,
+          "entry_price": 163.01,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 3,
           "reason": "[75% invested rule] ICE broke above its opening range and is up 3.3%, with positive momentum and rvol 1.15; a valid intraday long if risk controls are tight.",
           "stop_price": 159.66,
@@ -8297,150 +9097,77 @@
         "updated": "2026-10-22T11:14-04:00"
       },
       "research": {
-        "time": "2026-10-22T10:55-04:00",
+        "time": "2026-10-22T11:28-04:00",
         "news": {
           "findings": [
             {
               "symbol": "CME",
               "sentiment": 0.8,
-              "importance": 4,
+              "importance": 3,
               "unconfirmed_rumor": false,
-              "summary": "JPM upgraded CME to Buy, indicating a positive outlook for the exchange operator.",
-              "source": "fiscal.ai",
-              "time": "11:12"
-            },
-            {
-              "symbol": "V",
-              "sentiment": -0.2,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "Visa denied any talks to acquire Fireblocks, dampening acquisition speculation.",
-              "source": "benzinga",
-              "time": "11:12"
-            },
-            {
-              "symbol": "JPM",
-              "sentiment": -0.8,
-              "importance": 4,
-              "unconfirmed_rumor": false,
-              "summary": "Axios reported JPMorgan and other major U.S. banks are racing to block unauthorized third-party AI agents from accessing customer accounts.",
-              "source": "benzinga"
-            },
-            {
-              "symbol": "WFC",
-              "sentiment": -0.8,
-              "importance": 4,
-              "unconfirmed_rumor": false,
-              "summary": "Axios reported Wells Fargo and other major U.S. banks are racing to block unauthorized third-party AI agents from accessing customer accounts.",
-              "source": "benzinga"
-            },
-            {
-              "symbol": "BAC",
-              "sentiment": -0.3,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "TD Cowen cut its price target for Bank of America to $56 from $60.",
-              "source": "fiscal.ai"
+              "summary": "Wells Fargo maintained its Overweight rating on CME Group and raised the price target to $333.",
+              "source": "Benzinga",
+              "time": "11:32"
             },
             {
               "symbol": "CME",
               "sentiment": 0.8,
               "importance": 4,
               "unconfirmed_rumor": false,
-              "summary": "JP Morgan upgraded CME Group to Overweight and raised its price target to $367.",
-              "source": "benzinga"
+              "summary": "JPMorgan upgraded CME to Buy with a $367 price target, and Wells Fargo raised its target to $333, signaling strong institutional confidence.",
+              "source": "benzinga, fiscal.ai"
             },
             {
               "symbol": "V",
               "sentiment": 0.6,
               "importance": 4,
               "unconfirmed_rumor": true,
-              "summary": "Visa is reportedly in talks to acquire digital asset infrastructure provider Fireblocks for about $2.5 billion.",
+              "summary": "Axios reported Visa is in talks to acquire Fireblocks for ~$2.5B, a move Fireblocks has publicly denied, creating significant M&A speculation.",
+              "source": "benzinga, fiscal.ai"
+            },
+            {
+              "symbol": "HOOD",
+              "sentiment": 0.5,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Robinhood received regulatory approval from the Dubai Financial Services Authority to launch a retail investing platform in the Middle East.",
               "source": "fiscal.ai"
             },
             {
               "symbol": "COIN",
-              "sentiment": -0.7,
-              "importance": 3,
+              "sentiment": -0.3,
+              "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Coinbase's Irish unit reached a EUR3.3 million settlement with the Central Bank of Ireland over safeguarding practices.",
-              "source": "benzinga"
+              "summary": "Coinbase Ireland reached a EUR 3.3 million settlement with the Central Bank of Ireland regarding historical safeguarding practices.",
+              "source": "fiscal.ai, benzinga"
+            },
+            {
+              "symbol": "BAC",
+              "sentiment": -0.2,
+              "importance": 2,
+              "unconfirmed_rumor": false,
+              "summary": "TD Cowen lowered its price target on Bank of America from $60 to $56, while the bank appointed two new directors and declared quarterly dividends.",
+              "source": "fiscal.ai"
             },
             {
               "symbol": "MA",
-              "sentiment": 0.3,
+              "sentiment": -0.2,
               "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Mastercard joined a global operation against AI-powered fraud networks, according to reports.",
+              "summary": "The New Zealand Commerce Commission announced plans to cap interchange fees, a minor regulatory headwind for Mastercard.",
               "source": "fiscal.ai"
             },
             {
               "symbol": "AXP",
               "sentiment": 0.4,
-              "importance": 2,
+              "importance": 3,
               "unconfirmed_rumor": false,
-              "summary": "American Express partnered with Airbnb to integrate over one million listings into Amex Travel.",
-              "source": "fiscal.ai"
-            },
-            {
-              "symbol": "MS",
-              "sentiment": 0.3,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "Morgan Stanley adopted Bloomberg's crypto exposure solution for managing crypto-related product exposure.",
-              "source": "fiscal.ai"
-            },
-            {
-              "symbol": "GS",
-              "sentiment": 0.3,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "Goldman Sachs launched a Small Business AI Institute under its 10,000 Small Businesses program.",
-              "source": "fiscal.ai"
-            },
-            {
-              "symbol": "ICE",
-              "sentiment": 0.0,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "Intercontinental Exchange prepared for its third-quarter earnings report on October 29, 2026.",
-              "source": "fiscal.ai"
-            },
-            {
-              "symbol": "SPGI",
-              "sentiment": 0.3,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "S&P Global expanded AI-powered capabilities across its private markets ecosystem.",
-              "source": "fiscal.ai"
-            },
-            {
-              "symbol": "HOOD",
-              "sentiment": 0.3,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "Robinhood received approval to launch a retail investing platform in the Middle East.",
-              "source": "fiscal.ai"
-            },
-            {
-              "symbol": "COF",
-              "sentiment": 0.2,
-              "importance": 2,
-              "unconfirmed_rumor": false,
-              "summary": "Goldman Sachs adjusted its price target on Capital One Financial to $250 from $247.",
-              "source": "fiscal.ai"
-            },
-            {
-              "symbol": "C",
-              "sentiment": 0.0,
-              "importance": 1,
-              "unconfirmed_rumor": false,
-              "summary": "Citi Wealth released a report on Singaporean high-net-worth individuals.",
-              "source": "fiscal.ai"
+              "summary": "American Express partnered with Airbnb to integrate over 1 million listings into its Amex Travel platform, enhancing its travel ecosystem.",
+              "source": "fiscal.ai, benzinga"
             }
           ],
           "urgent": [],
-          "overall": "CME receives a strong positive catalyst from an analyst upgrade, while Visa sees a modest negative impact from denying acquisition rumors. Overall sentiment in the financial services group is mixed but leans neutral.",
+          "overall": "The financial services sector news flow is light, with the main update being a modestly positive Wells Fargo rating action on CME Group. Broader sentiment around the group is neutral-to-slightly-positive, and no urgent high-impact developments were reported.",
           "items_read": 49
         },
         "social": {
@@ -8722,203 +9449,203 @@
           }
         ],
         "technicals": {
-          "CME": {
-            "price": 306.15,
-            "change_1d": 0.0348,
-            "change_5d": 0.0571,
-            "change_20d": 0.1386,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 92.6,
-            "daily_volatility": 0.0135,
-            "avg_volume_20d": 102440
-          },
           "C": {
-            "price": 121.2,
-            "change_1d": -0.0211,
-            "change_5d": -0.0163,
-            "change_20d": -0.0826,
+            "price": 121.85,
+            "change_1d": -0.0159,
+            "change_5d": -0.011,
+            "change_20d": -0.0777,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 35.3,
-            "daily_volatility": 0.0177,
+            "rsi_14": 36.3,
+            "daily_volatility": 0.0175,
             "avg_volume_20d": 417478
           },
           "HOOD": {
-            "price": 98.31,
-            "change_1d": -0.0356,
-            "change_5d": -0.0548,
-            "change_20d": -0.1863,
+            "price": 97.51,
+            "change_1d": -0.0435,
+            "change_5d": -0.0625,
+            "change_20d": -0.1929,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 32.4,
-            "daily_volatility": 0.0285,
+            "rsi_14": 31.8,
+            "daily_volatility": 0.0289,
             "avg_volume_20d": 524670
           },
-          "SCHW": {
-            "price": 91.73,
-            "change_1d": 0.0012,
-            "change_5d": -0.026,
-            "change_20d": -0.0782,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 35.3,
-            "daily_volatility": 0.0132,
-            "avg_volume_20d": 451094
-          },
-          "BAC": {
-            "price": 50.54,
-            "change_1d": -0.0053,
-            "change_5d": -0.0221,
-            "change_20d": -0.0985,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 28.0,
-            "daily_volatility": 0.0133,
-            "avg_volume_20d": 2956672
-          },
-          "COF": {
-            "price": 205.54,
-            "change_1d": -0.0044,
-            "change_5d": 0.0333,
-            "change_20d": 0.0463,
+          "ICE": {
+            "price": 162.32,
+            "change_1d": 0.0292,
+            "change_5d": 0.0246,
+            "change_20d": 0.0345,
             "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 67.9,
-            "daily_volatility": 0.0132,
-            "avg_volume_20d": 192246
+            "above_50d_avg": true,
+            "rsi_14": 72.9,
+            "daily_volatility": 0.013,
+            "avg_volume_20d": 173709
           },
-          "GS": {
-            "price": 884.49,
-            "change_1d": -0.0221,
-            "change_5d": -0.0074,
-            "change_20d": -0.042,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 43.3,
-            "daily_volatility": 0.0124,
-            "avg_volume_20d": 92245
+          "MA": {
+            "price": 629.87,
+            "change_1d": 0.0117,
+            "change_5d": 0.022,
+            "change_20d": 0.1129,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 96.8,
+            "daily_volatility": 0.0106,
+            "avg_volume_20d": 149160
           },
           "MS": {
-            "price": 182.5,
-            "change_1d": -0.0247,
-            "change_5d": 0.0022,
-            "change_20d": -0.0703,
+            "price": 183.1,
+            "change_1d": -0.0214,
+            "change_5d": 0.0056,
+            "change_20d": -0.0672,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 38.3,
-            "daily_volatility": 0.0149,
+            "rsi_14": 39.0,
+            "daily_volatility": 0.0147,
             "avg_volume_20d": 321205
           },
           "PYPL": {
-            "price": 57.41,
-            "change_1d": 0.0038,
-            "change_5d": 0.0046,
-            "change_20d": 0.092,
+            "price": 57.1,
+            "change_1d": -0.0017,
+            "change_5d": -0.0008,
+            "change_20d": 0.0861,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 88.6,
-            "daily_volatility": 0.0151,
+            "rsi_14": 86.7,
+            "daily_volatility": 0.0152,
             "avg_volume_20d": 463362
           },
-          "SPGI": {
-            "price": 455.48,
-            "change_1d": 0.0281,
-            "change_5d": 0.072,
-            "change_20d": 0.1291,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 92.6,
-            "daily_volatility": 0.0145,
-            "avg_volume_20d": 90898
-          },
           "WFC": {
-            "price": 82.52,
+            "price": 82.53,
             "change_1d": 0.0013,
             "change_5d": -0.003,
-            "change_20d": 0.0039,
+            "change_20d": 0.004,
             "above_20d_avg": true,
             "above_50d_avg": false,
             "rsi_14": 57.2,
             "daily_volatility": 0.0148,
             "avg_volume_20d": 1115211
           },
+          "BAC": {
+            "price": 50.65,
+            "change_1d": -0.0031,
+            "change_5d": -0.0199,
+            "change_20d": -0.0965,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 28.4,
+            "daily_volatility": 0.0133,
+            "avg_volume_20d": 2956672
+          },
           "BLK": {
-            "price": 1138.88,
-            "change_1d": -0.0091,
-            "change_5d": 0.0161,
-            "change_20d": 0.0614,
+            "price": 1138.49,
+            "change_1d": -0.0094,
+            "change_5d": 0.0157,
+            "change_20d": 0.0611,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 72.8,
+            "rsi_14": 72.6,
             "daily_volatility": 0.0132,
             "avg_volume_20d": 40733
           },
-          "V": {
-            "price": 410.61,
-            "change_1d": 0.0068,
-            "change_5d": 0.0278,
-            "change_20d": 0.1161,
+          "COF": {
+            "price": 204.56,
+            "change_1d": -0.0091,
+            "change_5d": 0.0284,
+            "change_20d": 0.0414,
+            "above_20d_avg": true,
+            "above_50d_avg": false,
+            "rsi_14": 65.8,
+            "daily_volatility": 0.0134,
+            "avg_volume_20d": 192246
+          },
+          "SPGI": {
+            "price": 456.47,
+            "change_1d": 0.0304,
+            "change_5d": 0.0744,
+            "change_20d": 0.1316,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 92.1,
-            "daily_volatility": 0.011,
-            "avg_volume_20d": 266338
+            "rsi_14": 92.6,
+            "daily_volatility": 0.0146,
+            "avg_volume_20d": 90898
           },
           "AXP": {
-            "price": 323.45,
-            "change_1d": -0.0013,
-            "change_5d": 0.0307,
-            "change_20d": 0.0578,
+            "price": 323.72,
+            "change_1d": -0.0004,
+            "change_5d": 0.0316,
+            "change_20d": 0.0587,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 82.4,
+            "rsi_14": 83.1,
             "daily_volatility": 0.0085,
             "avg_volume_20d": 133428
           },
-          "COIN": {
-            "price": 171.41,
-            "change_1d": -0.0317,
-            "change_5d": -0.0678,
-            "change_20d": -0.1398,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 42.9,
-            "daily_volatility": 0.0321,
-            "avg_volume_20d": 222437
-          },
-          "ICE": {
-            "price": 162.53,
-            "change_1d": 0.0306,
-            "change_5d": 0.0259,
-            "change_20d": 0.0359,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 73.1,
-            "daily_volatility": 0.0131,
-            "avg_volume_20d": 173709
-          },
           "JPM": {
-            "price": 332.89,
-            "change_1d": -0.0066,
-            "change_5d": -0.0078,
-            "change_20d": -0.0163,
+            "price": 333.26,
+            "change_1d": -0.0055,
+            "change_5d": -0.0067,
+            "change_20d": -0.0152,
             "above_20d_avg": false,
             "above_50d_avg": false,
-            "rsi_14": 51.1,
-            "daily_volatility": 0.009,
+            "rsi_14": 51.8,
+            "daily_volatility": 0.0089,
             "avg_volume_20d": 283635
           },
-          "MA": {
-            "price": 626.78,
-            "change_1d": 0.0068,
-            "change_5d": 0.017,
-            "change_20d": 0.1075,
+          "SCHW": {
+            "price": 91.96,
+            "change_1d": 0.0037,
+            "change_5d": -0.0236,
+            "change_20d": -0.0759,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 36.2,
+            "daily_volatility": 0.0132,
+            "avg_volume_20d": 451094
+          },
+          "COIN": {
+            "price": 170.3,
+            "change_1d": -0.038,
+            "change_5d": -0.0738,
+            "change_20d": -0.1453,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 42.3,
+            "daily_volatility": 0.0323,
+            "avg_volume_20d": 222437
+          },
+          "GS": {
+            "price": 888.7,
+            "change_1d": -0.0175,
+            "change_5d": -0.0027,
+            "change_20d": -0.0374,
+            "above_20d_avg": false,
+            "above_50d_avg": false,
+            "rsi_14": 44.7,
+            "daily_volatility": 0.012,
+            "avg_volume_20d": 92245
+          },
+          "V": {
+            "price": 412.95,
+            "change_1d": 0.0126,
+            "change_5d": 0.0336,
+            "change_20d": 0.1225,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 96.7,
-            "daily_volatility": 0.0105,
-            "avg_volume_20d": 149160
+            "rsi_14": 92.4,
+            "daily_volatility": 0.0111,
+            "avg_volume_20d": 266338
+          },
+          "CME": {
+            "price": 304.93,
+            "change_1d": 0.0306,
+            "change_5d": 0.0528,
+            "change_20d": 0.134,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 92.4,
+            "daily_volatility": 0.013,
+            "avg_volume_20d": 102440
           }
         }
       }
@@ -9066,7 +9793,7 @@
           "time": "11:15",
           "symbol": "LLY",
           "kind": "fractional",
-          "qty": 0.974365,
+          "qty": 0.972325062,
           "dollars": 1279.02,
           "est_price": 1312.67,
           "setup": "opening range breakout",
@@ -9074,14 +9801,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 1286.42,
-          "entry_price": null,
+          "entry_price": 1315.414,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 4,
           "reason": "LLY +3.3% on the day, opening range breakout above 1301.26, above VWAP, rvol 2.03, positive m15/m60 momentum, and urgent $5B antibody-drug conjugate manufacturing news; strongest healthcare setup with positive sentiment.",
           "stop_price": 1286.42,
@@ -9245,72 +9972,86 @@
         "updated": "2026-10-22T11:15-04:00"
       },
       "research": {
-        "time": "2026-10-22T10:56-04:00",
+        "time": "2026-10-22T11:29-04:00",
         "news": {
           "findings": [
             {
-              "symbol": "LLY",
+              "symbol": "ABT",
               "sentiment": 0.8,
-              "importance": 5,
+              "importance": 3,
               "unconfirmed_rumor": false,
-              "summary": "Eli Lilly begins construction on a $5B antibody\u2011drug conjugate manufacturing facility in Virginia.",
-              "source": "fiscal.ai",
-              "time": "11:14"
+              "summary": "Wells Fargo maintained its Overweight rating on Abbott Laboratories and raised the price target to $119.",
+              "source": "Benzinga",
+              "time": "11:33"
             },
             {
               "symbol": "ABBV",
-              "sentiment": 0.8,
-              "importance": 5,
+              "sentiment": 0.7,
+              "importance": 4,
               "unconfirmed_rumor": false,
-              "summary": "AbbVie reported positive Phase 3 hidradenitis suppurativa results and Health Canada approved Skyrizi for pediatric plaque psoriasis.",
-              "source": "fiscal.ai and Benzinga"
+              "summary": "AbbVie reported positive Phase 3 topline results for lutikizumab in hidradenitis suppurativa and said the trial met its primary endpoint plus eight secondary endpoints.",
+              "source": "fiscal.ai"
             },
             {
               "symbol": "ISRG",
-              "sentiment": -0.8,
-              "importance": 5,
+              "sentiment": -0.5,
+              "importance": 4,
               "unconfirmed_rumor": false,
-              "summary": "Intuitive Surgical declined after lowering its 2026 da Vinci growth outlook and reporting a $450 million charge, with RBC citing 2027 procedure momentum risks.",
+              "summary": "Intuitive Surgical shares declined after narrowing its 2026 global da Vinci growth outlook and reporting a $450 million charge, with RBC citing potential 2027 procedure momentum risks from pricing.",
               "source": "fiscal.ai"
+            },
+            {
+              "symbol": "LLY",
+              "sentiment": 0.5,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Eli Lilly broke ground on a $5 billion antibody-drug conjugate manufacturing site in Virginia, highlighting major capacity expansion.",
+              "source": "benzinga"
             },
             {
               "symbol": "TMO",
               "sentiment": 0.5,
               "importance": 3,
               "unconfirmed_rumor": false,
-              "summary": "Analysts including TD Cowen, Stifel, and Baird maintained buy ratings and raised Thermo Fisher price targets.",
-              "source": "Benzinga and fiscal.ai"
+              "summary": "Multiple analysts including TD Cowen, Stifel, and Baird maintained favorable ratings and raised Thermo Fisher Scientific price targets.",
+              "source": "benzinga"
             },
             {
-              "symbol": "DHR",
-              "sentiment": 0.5,
-              "importance": 3,
-              "unconfirmed_rumor": false,
-              "summary": "Multiple analysts raised Danaher price targets and maintained buy or outperform ratings.",
-              "source": "Benzinga and fiscal.ai"
-            },
-            {
-              "symbol": "UNH",
-              "sentiment": -0.5,
+              "symbol": "ABT",
+              "sentiment": 0.0,
               "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "UnitedHealth announced rural maternal healthcare support but faces lawsuits over claims handling.",
-              "source": "fiscal.ai"
+              "summary": "Abbott Laboratories received mixed Wall Street price target updates, with some analysts raising targets and others lowering or maintaining ratings.",
+              "source": "benzinga"
             },
             {
               "symbol": "JNJ",
-              "sentiment": 0.5,
+              "sentiment": 0.3,
               "importance": 2,
               "unconfirmed_rumor": false,
-              "summary": "Johnson & Johnson reported new clinical data for VARIPULSE and OMNYPULSE and joined the US Myeloma Network.",
-              "source": "fiscal.ai and Benzinga"
+              "summary": "Johnson & Johnson reported new clinical data for VARIPULSE and OMNYPULSE and became the first industry collaborator of the US Myeloma Network.",
+              "source": "fiscal.ai"
+            },
+            {
+              "symbol": "MDT",
+              "sentiment": 0.4,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Medtronic announced positive real-world registry results for the Sphere-9 catheter and PulseSelect pulsed field ablation system.",
+              "source": "fiscal.ai"
+            },
+            {
+              "symbol": "GILD",
+              "sentiment": 0.2,
+              "importance": 2,
+              "unconfirmed_rumor": false,
+              "summary": "Gilead Sciences said it will present new clinical and real-world data for liver disease treatments at The Liver Meeting 2026.",
+              "source": "fiscal.ai"
             }
           ],
-          "urgent": [
-            "LLY"
-          ],
-          "overall": "Positive sentiment dominates the healthcare group, largely driven by Lilly\u2019s significant manufacturing expansion. Other listed stocks have no new catalysts, keeping overall mood cautiously optimistic.",
-          "items_read": 44
+          "urgent": [],
+          "overall": "The healthcare sector received only a modest positive update from Wells Fargo on Abbott Laboratories, while broader sentiment remains cautious and data-driven. The immediate market reaction is likely limited, but the tone around the group is slightly more favorable after the price target increase.",
+          "items_read": 45
         },
         "social": {
           "findings": [],
@@ -9591,203 +10332,203 @@
           }
         ],
         "technicals": {
-          "BMY": {
-            "price": 62.59,
-            "change_1d": 0.0235,
-            "change_5d": 0.0333,
-            "change_20d": 0.0176,
-            "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 54.3,
-            "daily_volatility": 0.0223,
-            "avg_volume_20d": 919240
-          },
-          "CVS": {
-            "price": 93.93,
-            "change_1d": 0.0051,
-            "change_5d": 0.0147,
-            "change_20d": 0.1043,
+          "ABBV": {
+            "price": 284.18,
+            "change_1d": -0.0017,
+            "change_5d": 0.003,
+            "change_20d": 0.0719,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 74.3,
-            "daily_volatility": 0.0173,
-            "avg_volume_20d": 537271
-          },
-          "DHR": {
-            "price": 232.87,
-            "change_1d": -0.0049,
-            "change_5d": 0.0061,
-            "change_20d": 0.0411,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 69.1,
-            "daily_volatility": 0.0204,
-            "avg_volume_20d": 302128
-          },
-          "MDT": {
-            "price": 95.19,
-            "change_1d": 0.0232,
-            "change_5d": -0.003,
-            "change_20d": 0.0755,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 69.6,
-            "daily_volatility": 0.0172,
-            "avg_volume_20d": 1482965
-          },
-          "PFE": {
-            "price": 30.29,
-            "change_1d": 0.0144,
-            "change_5d": 0.0292,
-            "change_20d": 0.0654,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 77.7,
-            "daily_volatility": 0.0122,
-            "avg_volume_20d": 1606275
-          },
-          "UNH": {
-            "price": 424.71,
-            "change_1d": 0.0188,
-            "change_5d": 0.0444,
-            "change_20d": 0.1321,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 80.1,
-            "daily_volatility": 0.0172,
-            "avg_volume_20d": 307202
-          },
-          "ABT": {
-            "price": 100.81,
-            "change_1d": 0.0021,
-            "change_5d": -0.0372,
-            "change_20d": -0.0026,
-            "above_20d_avg": false,
-            "above_50d_avg": false,
-            "rsi_14": 60.2,
-            "daily_volatility": 0.0137,
-            "avg_volume_20d": 486085
-          },
-          "AMGN": {
-            "price": 448.24,
-            "change_1d": 0.0228,
-            "change_5d": 0.0328,
-            "change_20d": 0.1036,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 76.3,
-            "daily_volatility": 0.0175,
-            "avg_volume_20d": 114493
-          },
-          "ISRG": {
-            "price": 440.62,
-            "change_1d": 0.0287,
-            "change_5d": 0.0297,
-            "change_20d": 0.1028,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 77.5,
-            "daily_volatility": 0.0171,
-            "avg_volume_20d": 103855
+            "rsi_14": 71.1,
+            "daily_volatility": 0.0136,
+            "avg_volume_20d": 211663
           },
           "GILD": {
-            "price": 156.18,
-            "change_1d": 0.0168,
-            "change_5d": -0.0079,
-            "change_20d": 0.0438,
+            "price": 155.87,
+            "change_1d": 0.0147,
+            "change_5d": -0.0099,
+            "change_20d": 0.0417,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 67.1,
-            "daily_volatility": 0.0171,
+            "rsi_14": 66.8,
+            "daily_volatility": 0.017,
             "avg_volume_20d": 247519
           },
           "HCA": {
-            "price": 460.11,
-            "change_1d": 0.0021,
-            "change_5d": -0.0179,
-            "change_20d": 0.0866,
+            "price": 460.26,
+            "change_1d": 0.0024,
+            "change_5d": -0.0176,
+            "change_20d": 0.087,
             "above_20d_avg": true,
             "above_50d_avg": true,
             "rsi_14": 69.9,
             "daily_volatility": 0.0139,
             "avg_volume_20d": 58485
           },
-          "MRK": {
-            "price": 152.84,
-            "change_1d": 0.0197,
-            "change_5d": 0.052,
-            "change_20d": 0.0325,
+          "MDT": {
+            "price": 96.07,
+            "change_1d": 0.0327,
+            "change_5d": 0.0063,
+            "change_20d": 0.0855,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 62.2,
-            "daily_volatility": 0.0185,
+            "rsi_14": 70.8,
+            "daily_volatility": 0.0178,
+            "avg_volume_20d": 1482965
+          },
+          "MRK": {
+            "price": 152.48,
+            "change_1d": 0.0173,
+            "change_5d": 0.0495,
+            "change_20d": 0.0301,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 61.8,
+            "daily_volatility": 0.0184,
             "avg_volume_20d": 388208
           },
-          "REGN": {
-            "price": 819.25,
-            "change_1d": 0.0169,
-            "change_5d": 0.0288,
-            "change_20d": 0.0295,
+          "UNH": {
+            "price": 425.92,
+            "change_1d": 0.0217,
+            "change_5d": 0.0473,
+            "change_20d": 0.1353,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 76.1,
-            "daily_volatility": 0.0195,
+            "rsi_14": 80.4,
+            "daily_volatility": 0.0174,
+            "avg_volume_20d": 307202
+          },
+          "AMGN": {
+            "price": 448.63,
+            "change_1d": 0.0237,
+            "change_5d": 0.0337,
+            "change_20d": 0.1046,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 76.4,
+            "daily_volatility": 0.0175,
+            "avg_volume_20d": 114493
+          },
+          "ISRG": {
+            "price": 441.05,
+            "change_1d": 0.0297,
+            "change_5d": 0.0307,
+            "change_20d": 0.1039,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 77.6,
+            "daily_volatility": 0.0172,
+            "avg_volume_20d": 103855
+          },
+          "LLY": {
+            "price": 1318.28,
+            "change_1d": 0.0373,
+            "change_5d": 0.0532,
+            "change_20d": 0.1139,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 78.7,
+            "daily_volatility": 0.0184,
+            "avg_volume_20d": 99617
+          },
+          "ABT": {
+            "price": 101.53,
+            "change_1d": 0.0092,
+            "change_5d": -0.0303,
+            "change_20d": 0.0046,
+            "above_20d_avg": true,
+            "above_50d_avg": false,
+            "rsi_14": 61.9,
+            "daily_volatility": 0.0139,
+            "avg_volume_20d": 486085
+          },
+          "BMY": {
+            "price": 62.78,
+            "change_1d": 0.0266,
+            "change_5d": 0.0364,
+            "change_20d": 0.0207,
+            "above_20d_avg": true,
+            "above_50d_avg": false,
+            "rsi_14": 54.8,
+            "daily_volatility": 0.0225,
+            "avg_volume_20d": 919240
+          },
+          "JNJ": {
+            "price": 265.5,
+            "change_1d": 0.0306,
+            "change_5d": 0.0481,
+            "change_20d": -0.0195,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 58.0,
+            "daily_volatility": 0.0194,
+            "avg_volume_20d": 310765
+          },
+          "CVS": {
+            "price": 94.09,
+            "change_1d": 0.0068,
+            "change_5d": 0.0165,
+            "change_20d": 0.1062,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 74.5,
+            "daily_volatility": 0.0173,
+            "avg_volume_20d": 537271
+          },
+          "DHR": {
+            "price": 234.08,
+            "change_1d": 0.0003,
+            "change_5d": 0.0114,
+            "change_20d": 0.0465,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 70.8,
+            "daily_volatility": 0.0203,
+            "avg_volume_20d": 302128
+          },
+          "PFE": {
+            "price": 30.3,
+            "change_1d": 0.0147,
+            "change_5d": 0.0296,
+            "change_20d": 0.0658,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 77.7,
+            "daily_volatility": 0.0122,
+            "avg_volume_20d": 1606275
+          },
+          "REGN": {
+            "price": 821.34,
+            "change_1d": 0.0195,
+            "change_5d": 0.0314,
+            "change_20d": 0.0321,
+            "above_20d_avg": true,
+            "above_50d_avg": true,
+            "rsi_14": 76.4,
+            "daily_volatility": 0.0196,
             "avg_volume_20d": 38962
           },
           "TMO": {
-            "price": 685.67,
-            "change_1d": -0.0122,
-            "change_5d": -0.0156,
-            "change_20d": 0.0105,
+            "price": 687.12,
+            "change_1d": -0.0101,
+            "change_5d": -0.0135,
+            "change_20d": 0.0126,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 60.9,
+            "rsi_14": 61.5,
             "daily_volatility": 0.0169,
             "avg_volume_20d": 149937
           },
           "VRTX": {
-            "price": 533.94,
-            "change_1d": 0.0177,
-            "change_5d": 0.0491,
-            "change_20d": 0.0216,
+            "price": 536.81,
+            "change_1d": 0.0232,
+            "change_5d": 0.0548,
+            "change_20d": 0.0271,
             "above_20d_avg": true,
             "above_50d_avg": true,
-            "rsi_14": 63.6,
-            "daily_volatility": 0.0176,
+            "rsi_14": 64.6,
+            "daily_volatility": 0.0179,
             "avg_volume_20d": 59550
-          },
-          "ABBV": {
-            "price": 284.43,
-            "change_1d": -0.0008,
-            "change_5d": 0.0038,
-            "change_20d": 0.0728,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 71.4,
-            "daily_volatility": 0.0136,
-            "avg_volume_20d": 211663
-          },
-          "JNJ": {
-            "price": 264.03,
-            "change_1d": 0.0248,
-            "change_5d": 0.0423,
-            "change_20d": -0.025,
-            "above_20d_avg": true,
-            "above_50d_avg": false,
-            "rsi_14": 57.0,
-            "daily_volatility": 0.0189,
-            "avg_volume_20d": 310765
-          },
-          "LLY": {
-            "price": 1308.33,
-            "change_1d": 0.0295,
-            "change_5d": 0.0452,
-            "change_20d": 0.1055,
-            "above_20d_avg": true,
-            "above_50d_avg": true,
-            "rsi_14": 78.0,
-            "daily_volatility": 0.0178,
-            "avg_volume_20d": 99617
           }
         }
       }
@@ -9891,6 +10632,110 @@
       "symbol": "ABNB",
       "action": "BUY",
       "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "RKLB",
+      "action": "SHORT",
+      "reason": "one share costs $50.98, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "BA",
+      "action": "SHORT",
+      "reason": "one share costs $189.75, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "LUNR",
+      "action": "SHORT",
+      "reason": "one share costs $10.47, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "PL",
+      "action": "SHORT",
+      "reason": "one share costs $13.12, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "RDW",
+      "action": "SHORT",
+      "reason": "one share costs $8.22, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "space",
+      "symbol": "VSAT",
+      "action": "SHORT",
+      "reason": "one share costs $59.16, more than the $1.70 allowed"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "SONY",
+      "action": "BUY",
+      "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "NFLX",
+      "action": "BUY",
+      "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "DIS",
+      "action": "BUY",
+      "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "FOXA",
+      "action": "BUY",
+      "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "BAM",
+      "action": "BUY",
+      "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "entertainment",
+      "symbol": "ROKU",
+      "action": "BUY",
+      "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:33",
+      "team": "consumer",
+      "symbol": "LOW",
+      "action": "BUY",
+      "reason": "conviction 3 is below the minimum 4 (risk-off market)"
     }
   ]
 }

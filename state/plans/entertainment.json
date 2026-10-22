@@ -1,92 +1,78 @@
 {
   "date": "2026-10-22",
-  "time": "11:07",
-  "trigger": "scheduled look",
-  "market_view": "Market is in risk-off: SPY -1.3%, QQQ -2.4%, VIXY +6.1%. Entertainment group is cautiously negative after Netflix PT cuts and Spotify Q3 miss, though Spotify engagement beat. I am focusing on clear earnings/news setups and shorting weak momentum; longs are half size and need conviction +1.",
+  "time": "11:33",
+  "trigger": "first look this run",
+  "market_view": "Risk-off tape remains in control: SPY -1.2%, QQQ -2.4%, VIXY +5.1%. Entertainment names are mixed, with Spotify and Comcast news in focus, while broad selling pressures longs. I favor shorts below VWAP or breakdowns, but only high-conviction setups; longs need strong opening-range breakouts with volume.",
   "decisions": [
     {
-      "symbol": "SPOT",
-      "action": "BUY",
-      "conviction": 4,
+      "symbol": "IMAX",
+      "action": "SELL",
+      "conviction": 3,
       "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "earnings gap",
-      "reason": "Pre-market gap +5.8% on Q3 beat, rvol 4.88, strong earnings gap; risk-off long with half size, conviction 4 meets +1."
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Long IMAX is -0.9% and broke below the opening range, with no protective stop; exit to cut loss and free a slot."
     },
     {
       "symbol": "SONY",
       "action": "BUY",
       "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout above 25.98, rvol 1.86, above VWAP, positive m15/m60; risk-off long half size, conviction 3."
-    },
-    {
-      "symbol": "NFLX",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.08,
-      "setup": "momentum",
-      "reason": "m15 +0.8, m60 +1.1, rvol 1.73, above VWAP; but below 50-day and PT cuts, news cautious, momentum long with conviction 3."
+      "reason": "SONY cleared the OR high at 25.98, held above VWAP, and showed positive m15/m60 momentum with rvol 2.0; breakout long in entertainment, but risk-off halves size and requires tight risk."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "CMCSA",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "news catalyst",
-      "reason": "Q3 beat but Q4 restructuring charge and weak intraday momentum; risk-off short favored."
-    },
-    {
-      "symbol": "TKO",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "momentum",
-      "reason": "Breakdown below OR/VWAP, m60 -1.6, risk-off short."
-    },
-    {
-      "symbol": "LYV",
-      "direction": "short",
+      "symbol": "NFLX",
+      "direction": "long",
       "conviction": 2,
       "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
+      "take_profit_pct": 0.05,
       "setup": "momentum",
-      "reason": "Breakdown below OR/VWAP, weak trend, but low rvol; momentum short."
+      "reason": "Netflix is above VWAP with positive momentum and rvol 1.72, but analyst downgrades cap conviction."
     },
     {
       "symbol": "DIS",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "opening range breakout",
-      "reason": "OR breakout, above VWAP, positive m15/m60; rvol 1.25 slightly low, but risk-off long half size."
-    },
-    {
-      "symbol": "WMG",
-      "direction": "short",
       "conviction": 2,
       "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "momentum",
-      "reason": "OR breakdown/VWAP -0.6, overbought, weak momentum; risk-off short."
+      "take_profit_pct": 0.05,
+      "setup": "opening range breakout",
+      "reason": "Disney OR broke out, but low rvol 1.14; only tentative long."
+    },
+    {
+      "symbol": "FOXA",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.05,
+      "setup": "opening range breakout",
+      "reason": "Fox A OR broke out, but low rvol 0.89; weak follow-through."
+    },
+    {
+      "symbol": "BAM",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.05,
+      "setup": "opening range breakout",
+      "reason": "Broadway breakout had low rvol 0.47; no strong follow-through."
+    },
+    {
+      "symbol": "ROKU",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.05,
+      "setup": "opening range breakout",
+      "reason": "Roku OR broke out but rvol only 0.6; momentum not clean."
     }
   ],
   "experiment": "Implement a pre-market catalyst scan to trigger entries on earnings or major news releases",
   "watchlist_changes": {
     "add": [],
-    "remove": [
-      {
-        "symbol": "ROKU",
-        "reason": "Low relative volume (rvol 0.43) and no fresh catalyst; no clean intraday setup."
-      }
-    ]
+    "remove": []
   }
 }

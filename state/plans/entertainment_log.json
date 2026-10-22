@@ -58,5 +58,39 @@
       "SHORT LYV x5 (~$869.67) [deploy]",
       "WATCHLIST remove rejected ROKU"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:33",
+    "trigger": "first look this run",
+    "market_view": "Risk-off tape remains in control: SPY -1.2%, QQQ -2.4%, VIXY +5.1%. Entertainment names are mixed, with Spotify and Comcast news in focus, while broad selling pressures longs. I favor shorts below VWAP or breakdowns, but only high-conviction setups; longs need strong opening-range breakouts with volume.",
+    "experiment": "Implement a pre-market catalyst scan to trigger entries on earnings or major news releases",
+    "decisions": [
+      {
+        "symbol": "IMAX",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Long IMAX is -0.9% and broke below the opening range, with no protective stop; exit to cut loss and free a slot.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "SONY",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "SONY cleared the OR high at 25.98, held above VWAP, and showed positive m15/m60 momentum with rvol 2.0; breakout long in entertainment, but risk-off halves size and requires tight risk.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL IMAX",
+      "BUY SONY blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "BUY NFLX blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY DIS blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY FOXA blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY BAM blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY ROKU blocked: conviction 2 is below the minimum 3 (risk-off market)"
+    ]
   }
 ]

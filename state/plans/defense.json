@@ -1,86 +1,86 @@
 {
   "date": "2026-10-22",
-  "time": "11:24",
-  "trigger": "scheduled look",
-  "market_view": "Market is in risk-off: SPY -1.2%, QQQ -2.3%, VIXY +5.6%, broad selloff. Defense focus remains selective; LMT had major F-35/backlog news and earnings beat but pulled back below VWAP, while LDOS showed opening-range strength. Staying defensive and waiting for high-conviction setups.",
+  "time": "11:33",
+  "trigger": "first look this run",
+  "market_view": "Market is risk-off with SPY down 1.2%, QQQ down 2.4%, and VIXY up 5.1%. Defense news is mixed but LMT/CACI had positive catalysts. We are day trading with tight risk, long bias only on high conviction setups, and shorting weak breakdowns. No new positions in last 15 min.",
   "decisions": [
     {
-      "symbol": "LHX",
+      "symbol": "LMT",
       "action": "SELL",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "LHX stalled below VWAP with weakening m15/m60 momentum and only +1.27% gain; risk-off longs need higher conviction, so rotate out."
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "other",
+      "reason": "LMT failed to hold above VWAP and gave back post-earnings momentum; closing to redeploy into high-conviction defense news."
     },
     {
       "symbol": "CACI",
       "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "CACI above VWAP, m15 +2.1%, m60 +2.3%, rvol 1.97, beat Q1 EPS and raised guidance; strong intraday momentum in defense sector, but risk-off half size."
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "LMT",
-      "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "reason": "F-35 framework, earnings beat, raised FY2026 guidance, record backlog; highest defense conviction, but wait for VWAP/OR breakout confirmation."
-    },
+      "reason": "CACI beat Q1 EPS and raised FY guidance, importance 4; above VWAP, m15 +0.6, m60 +3.0, rvol 2.02, trend up; risk_off half size."
+    }
+  ],
+  "ranked_ideas": [
     {
-      "symbol": "BAH",
+      "symbol": "LHX",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "LHX above VWAP, m15 +0.4, rvol 1.59, trend up; Palantir AI partnership but importance 3."
+    },
+    {
+      "symbol": "GD",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "Weak momentum, no clear catalyst."
+    },
+    {
+      "symbol": "HII",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "Quiet, no clear catalyst."
+    },
+    {
+      "symbol": "TXT",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout above 77, strong momentum, day +4.1; overbought and earnings tomorrow, but intraday setup clear."
+      "reason": "OR breakout but low volume."
     },
     {
       "symbol": "SAIC",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout above 139.34, day +2.9; overbought/low rvol, but breakout clear."
-    },
-    {
-      "symbol": "GD",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "OR breakdown, below VWAP, m15 negative; risk-off short setup, but low conviction."
-    },
-    {
-      "symbol": "PLTR",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Breakdown below OR, rvol 1.64, below VWAP; positive news nearby, but high momentum breakdown."
+      "reason": "OR breakout but low volume."
     }
   ],
-  "experiment": "Testing automatic 50% scale-out at 1R on LDOS momentum play if reached; LDOS did not reach 1R, so no scale-out.",
+  "experiment": "Implement an automatic 50% scale-out at 1R on contract-driven momentum plays like LDOS to lock in intraday gains against late-day mean reversion.",
   "watchlist_changes": {
     "add": [],
     "remove": [
       {
-        "symbol": "TXT",
-        "reason": "No clear catalyst or momentum; quiet range."
+        "symbol": "GD",
+        "reason": "Quiet, no clear catalyst or volume."
       },
       {
-        "symbol": "HEI",
-        "reason": "No active breakdown/breakout or high-volume catalyst; muted."
+        "symbol": "HII",
+        "reason": "Quiet, no clear catalyst or volume."
       }
     ]
   }

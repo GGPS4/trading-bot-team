@@ -1,64 +1,73 @@
 {
   "date": "2026-10-22",
-  "time": "11:18",
-  "trigger": "must invest $2,159 more (75% rule)",
-  "market_view": "Risk-off tape remains in control with SPY -1.3% and QQQ -2.5%, VIXY +5.9%, and broad selling. Space and aerospace names are mostly breaking down below VWAP and the opening range, with SPCX showing the strongest momentum short. Longs are half size and need high conviction, while shorts are favored.",
+  "time": "11:33",
+  "trigger": "first look this run",
+  "market_view": "Market is in a risk-off tape, with SPY down 1.2%, QQQ down 2.4%, and VIXY up 5.1%. The space and aerospace group is mostly selling, with several stocks breaking opening ranges, though no confirmed major launch or contract news drove the last move. Focus stays on breakdowns and momentum shorts into the close.",
   "decisions": [
     {
-      "symbol": "ASTS",
+      "symbol": "TDG",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.014,
+      "take_profit_pct": 0.05,
+      "setup": "momentum",
+      "reason": "Closing the day's long as market risk-off and broad selling pressure increases; trims long exposure and frees a slot for a high-quality breakdown short."
+    },
+    {
+      "symbol": "RKLB",
       "action": "SHORT",
       "conviction": 3,
       "stop_loss_pct": 0.025,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Risk-off and breakdown mode align. ASTS is below VWAP, opening range breakdown, m15/m60 down, rvol 1.86, trend down. Clear momentum short setup in the team sector; news flow is secondary to the weak price tape."
+      "take_profit_pct": 0.05,
+      "setup": "opening range breakdown",
+      "reason": "RKLB broke below the opening range and VWAP with day -5.0%, negative momentum, and risk-off sentiment favoring shorts. Tight stop above entry, first target around 5% lower."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "PL",
+      "symbol": "BA",
       "direction": "short",
       "conviction": 3,
-      "stop_loss_pct": 0.03,
+      "stop_loss_pct": 0.025,
       "take_profit_pct": 0.05,
-      "setup": "momentum",
-      "reason": "OR breakdown, below VWAP, negative momentum, rvol 1.03, weak risk-off tape."
+      "setup": "opening range breakdown",
+      "reason": "BA broke below OR/VWAP, but low rvol; news is mixed in risk-off. Potential short if breakdown holds."
     },
     {
       "symbol": "LUNR",
       "direction": "short",
       "conviction": 3,
       "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.04,
+      "take_profit_pct": 0.06,
       "setup": "momentum",
-      "reason": "OR breakdown, below VWAP, m15/m60 down, trend flat, weak momentum."
+      "reason": "LUNR below VWAP and near lower OR, day -4.0%, but m15 showed bounce; avoid chasing."
     },
     {
-      "symbol": "RKLB",
+      "symbol": "PL",
       "direction": "short",
       "conviction": 3,
       "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.05,
+      "take_profit_pct": 0.06,
       "setup": "momentum",
-      "reason": "OR breakdown, below VWAP, m15/m60 down, trend down, moderate volume."
-    },
-    {
-      "symbol": "IRDM",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.05,
-      "setup": "momentum",
-      "reason": "OR breakdown, below VWAP, m15/m60 down, trend down, weak momentum."
+      "reason": "PL trend down and below VWAP, day -4.4%; weak momentum short setup."
     },
     {
       "symbol": "RDW",
       "direction": "short",
       "conviction": 3,
       "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.05,
-      "setup": "momentum",
-      "reason": "OR breakdown, below VWAP, m15/m60 down, trend down, weak volume."
+      "take_profit_pct": 0.06,
+      "setup": "opening range breakdown",
+      "reason": "RDW broke below OR, day -4.0%, but low rvol; breakdown short only if volume confirms."
+    },
+    {
+      "symbol": "VSAT",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "opening range breakdown",
+      "reason": "VSAT broke below OR, day -5.5%, but weak rvol; high downside but needs confirmation."
     }
   ],
   "experiment": "Add trailing stops that activate after a 3% favorable move to lock in gains",

@@ -97,5 +97,44 @@
       "BUY CMG blocked: conviction 2 is below the minimum 3 (risk-off market)",
       "BUY ABNB blocked: conviction 2 is below the minimum 3 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:33",
+    "trigger": "first look this run",
+    "market_view": "The market is in a clear risk-off regime with indices down over 2% and VIX spiking, favoring short setups on weak names and disciplined longs only on high-conviction breakouts. Consumer Discretionary is mixed, with defensive names like LULU and LOW showing strength while high-beta names like AMZN and TSLA are under pressure.",
+    "experiment": "Testing the efficacy of high-conviction opening range breakouts in a risk-off market vs. shorting high-volume breakdowns.",
+    "decisions": [
+      {
+        "symbol": "AMZN",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "AMZN is down 4.0% on the day, trading below VWAP (-0.6%) with high relative volume (2.03). In a risk-off market, this momentum suggests further downside. The stop is tight at 2% to respect the volatility.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "LULU",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "LULU is up 4.7% with a strong opening range breakout and positive 15m momentum (+0.5%). It is trading above VWAP (+2.2%) and has the best relative strength in the group today. Longs are half-size due to risk-off, but this is a high-conviction momentum play.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.025
+      },
+      {
+        "symbol": "LOW",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "LOW is up 3.5% with a clear opening range breakout and high relative volume (2.46). It is trading above VWAP (+0.9%) and shows steady 60m momentum. A solid follow-through play in a strong sector.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.025
+      }
+    ],
+    "results": [
+      "SHORT AMZN x10 (~$2518.7)",
+      "BUY LULU x12 (~$1212.36)",
+      "BUY LOW blocked: conviction 3 is below the minimum 4 (risk-off market)",
+      "BUY HD x3 (~$973.17) [deploy]"
+    ]
   }
 ]
