@@ -549,7 +549,9 @@ def watch(ctx: Ctx, minutes: int):
             last_save = time.time()
         if fake and checks >= int(os.environ.get("BOT_FAKE_TICKS", "2")):
             break
-        time.sleep(0 if fake else max(5, min(every - (time.time() - started), stop_at - time.time())))
+        h = now_et().hour
+        step = every if 7 <= h < 21 else max(every, ctx.cfg.get("after_hours", {}).get("overnight_every_minutes", 45) * 60)
+        time.sleep(0 if fake else max(5, min(step - (time.time() - started), stop_at - time.time())))
     write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
     save_progress(f"Bot team: after-hours research {now_et():%Y-%m-%d %H:%M}")
     log(f"Watch done. After-hours AI calls today: {llm_mod.calls_today()}")
