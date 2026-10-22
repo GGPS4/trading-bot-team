@@ -1,60 +1,69 @@
 {
   "date": "2026-10-22",
-  "time": "13:14",
-  "trigger": "must invest $3,246 more (75% rule)",
+  "time": "13:40",
+  "trigger": "scheduled look",
   "decisions": [
     {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "reason": "Position is underwater (-0.02%) and the stock is trading below VWAP with a confirmed opening range breakdown. In a risk-off market, longs need to be above VWAP. Cutting this to free up capital for stronger short setups."
+    },
+    {
+      "symbol": "LUNR",
+      "action": "SELL",
+      "reason": "Position is underwater (-0.24%) and the stock is well below VWAP (-2.6%) with negative 15m momentum. The opening range breakdown is holding. Exiting to respect the stop and free capital."
+    },
+    {
+      "symbol": "RDW",
+      "action": "SELL",
+      "reason": "Position is underwater (-0.18%) and trading below VWAP (-1.9%) with a breakdown. No positive momentum to justify holding in a risk-off environment. Exiting to redeploy."
+    },
+    {
       "symbol": "SPCX",
-      "action": "COVER",
-      "qty": 17,
-      "reason": "Short is up 1.45% and trailing stop is active. In a risk-off market, locking in profits on a strong short is prudent. Proceeds will be redeployed into a new short setup."
+      "action": "BUY",
+      "side": "short",
+      "quantity": 10,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Shorting SPCX on a strong opening range breakdown (-7.7% day, -2.4% vs VWAP) with high relative volume (3.21). Despite positive news (BofA target raise), the intraday momentum is decisively down, and the market is risk-off. This is a high-conviction short setup."
+    },
+    {
+      "symbol": "HWM",
+      "action": "HOLD",
+      "reason": "Short position is in profit (+0.50%). Stock is making new lows with high volume (rvol 3.57). Holding to let it run to the first target."
+    },
+    {
+      "symbol": "RKLB",
+      "action": "HOLD",
+      "reason": "Short position is in profit (+0.53%). Stock is below VWAP and in a breakdown. Holding to let it run."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "LUNR",
+      "symbol": "BA",
       "side": "short",
-      "setup": "opening range breakdown",
-      "conviction": 4,
-      "reason": "Strong downside momentum (m60 -2.2%), trading well below VWAP (-2.5%) and OR low. RSI is 22.1 (oversold but trending down). In a risk-off regime, shorting weak, high-beta space stocks is favored. Tight stop above recent resistance.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04
-    },
-    {
-      "symbol": "ASTS",
-      "side": "short",
-      "setup": "opening range breakdown",
-      "conviction": 3,
-      "reason": "Down 6.2% on the day, below VWAP and OR. RSI 23.5. Volume is elevated (rvol 1.56). Good candidate for a continuation short in a falling market.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04
-    },
-    {
-      "symbol": "RDW",
-      "side": "short",
-      "setup": "opening range breakdown",
-      "conviction": 3,
-      "reason": "Gapped down 4.3% and broke down. RSI 19.1. Weak momentum (m60 -2.2%). Fits the risk-off shorting strategy.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04
+      "reason": "Below VWAP, opening range breakdown, negative momentum. Weakness in a risk-off market."
     },
     {
       "symbol": "PL",
       "side": "short",
-      "setup": "opening range breakdown",
-      "conviction": 3,
-      "reason": "Below VWAP and OR. RSI 23.7. Consistent with the broader weakness in the sector.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04
+      "reason": "Below VWAP, opening range breakdown, negative momentum. Consistent weakness."
     },
     {
       "symbol": "BKSY",
       "side": "short",
-      "setup": "opening range breakdown",
-      "conviction": 2,
-      "reason": "Despite positive news (contract win), it is breaking down and below VWAP. Contrarian short if it fails to hold support, but lower conviction due to news catalyst.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04
+      "reason": "Below VWAP, opening range breakdown, negative momentum. Despite news, price action is weak."
+    },
+    {
+      "symbol": "IRDM",
+      "side": "short",
+      "reason": "Below VWAP, opening range breakdown, negative momentum. RSI is very low (16.3), but intraday trend is down."
+    },
+    {
+      "symbol": "FLY",
+      "side": "short",
+      "reason": "Below VWAP, opening range breakdown, negative momentum. Weak price action."
     }
   ],
   "watchlist_adds": [],

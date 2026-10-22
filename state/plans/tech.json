@@ -1,33 +1,65 @@
 {
   "date": "2026-10-22",
-  "time": "13:32",
-  "trigger": "scheduled look",
+  "time": "13:40",
+  "trigger": "big news on ['MU']",
   "decisions": [
     {
-      "action": "BUY",
-      "symbol": "TXN",
-      "side": "long",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Strong earnings beat and guidance raise with multiple analyst upgrades (Barclays, Mizuho). Trading above VWAP with high relative volume (2.19) and positive 15m momentum despite the risk-off market. Conviction 4."
+      "symbol": "AMD",
+      "action": "COVER",
+      "reason": "Stop loss hit. Short entry at 510, current price 511.68 is above the stop level of 521.69? No, wait. Stop is 521.69. Price is 511.68. The stop has NOT been hit. However, the position is losing money (-0.35%). The market is risk-off, but AMD is showing a slight bounce (look +0.3%, m15 +0.3%). The initial thesis was momentum short on breakdown. It broke down from OR 519.92-529.64. It is currently below VWAP (-0.9%). The stop is wide (2.1%). Given the 'risk_off' regime and the fact that it's a short, if it rallies further against us, we exit. But more importantly, I need to free up capital. The position is small (5 shares). Let's look at the other shorts. ANET is +0.375% (winning). AVGO is -0.51% (losing). NVDA is -0.28% (losing). ORCL is +0.06% (flat). I have 5 positions open. Max is 5. I cannot open new positions without closing one. I need to deploy $3,178 more. I must close a position to make room. Which one is weakest? AMD is down, but so is AVGO and NVDA. AMD has a 'whale activity' news point (bullish sentiment 0.2), which is a headwind for a short. AVGO has no specific bullish news, just general tech selloff. NVDA has negative news (-0.5 sentiment). ORCL has bullish whale news (0.2). ANET is winning. I should close the weakest short. AMD has bullish news catalyst (whale activity) working against the short. AVGO is flat/weak but no counter-news. NVDA is weak. Let's close AMD to remove the counter-narrative risk and free up a slot."
     },
     {
-      "action": "BUY",
-      "symbol": "IBM",
-      "side": "long",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Multiple analyst upgrades (BMO, Barclays, RBC, Stifel) and high relative volume (3.66). Trading above VWAP. Strong fundamental catalyst supports intraday momentum. Conviction 4."
+      "symbol": "ANET",
+      "action": "COVER",
+      "reason": "Position is profitable (+0.375%). The setup was momentum short on breakdown. It has held the breakdown. However, I need to rotate capital to deploy the required $3,178. ANET is a winner, but in a risk-off market, shorts can reverse quickly. Taking profits on a small gain to redeploy into a stronger setup is a valid day-trading tactic. Alternatively, I could hold it. But I need to open 1-2 new positions. Let's close ANET to lock in the win and free up a slot."
     }
   ],
   "ranked_ideas": [
-    "CRM",
-    "ADBE",
-    "INTU",
-    "NOW",
-    "AAPL"
+    {
+      "symbol": "TXN",
+      "side": "LONG",
+      "setup": "news catalyst",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "conviction": 4,
+      "reason": "TXN beat Q3 estimates and raised Q4 guidance. Barclays raised PT. Price is above VWAP (+0.8%) and showing positive momentum (m15 +0.5%, m60 +1.4%). Volume is high (rvol 2.15). In a risk-off market, a stock with strong fundamental news and relative strength is a prime long candidate. It is holding above the opening range."
+    },
+    {
+      "symbol": "CRM",
+      "side": "LONG",
+      "setup": "sector rotation",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "conviction": 4,
+      "reason": "CRM is up +2.9% on the day with a breakout above the opening range (243.83-248.6). News indicates sector rotation and upbeat analyst updates. Volume is high (rvol 1.9). It is above VWAP (+0.2%). This is a strong relative strength play in a down market."
+    },
+    {
+      "symbol": "ADBE",
+      "side": "LONG",
+      "setup": "momentum",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "conviction": 3,
+      "reason": "ADBE is up +5.4% with a clear breakout above the opening range. Volume is high (rvol 1.85). It is above VWAP (+0.8%). However, RSI is 72.0 (overbought), so momentum may fade. Still, a strong intraday trend. Conviction is slightly lower due to overbought conditions."
+    },
+    {
+      "symbol": "IBM",
+      "side": "LONG",
+      "setup": "news catalyst",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "conviction": 3,
+      "reason": "IBM has multiple analyst upgrades (Stifel, Baird, Susquehanna). However, it gapped down -6.9% pre-market and is currently trading flat (-1.2% day). It is above VWAP (+0.5%) and has high volume (rvol 3.57). The gap down might be an opportunity for a bounce, but the trend is flat/down. Risky, but the news is strong."
+    },
+    {
+      "symbol": "NOW",
+      "side": "LONG",
+      "setup": "momentum",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "conviction": 3,
+      "reason": "NOW is up +2.3% with a trend up. It is above VWAP (+0.2%) and has very high volume (rvol 3.5). However, RSI is 77.3 (overbought). The news is positive (new partner). It is a strong momentum play, but the overbought RSI is a caution flag."
+    }
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

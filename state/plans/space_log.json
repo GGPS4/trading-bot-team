@@ -249,5 +249,73 @@
       "BUY ASTS x33 (~$1266.54) [deploy]",
       "BUY RDW x157 (~$1277.98) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "13:40",
+    "trigger": "scheduled look",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "ASTS",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is underwater (-0.02%) and the stock is trading below VWAP with a confirmed opening range breakdown. In a risk-off market, longs need to be above VWAP. Cutting this to free up capital for stronger short setups.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "LUNR",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is underwater (-0.24%) and the stock is well below VWAP (-2.6%) with negative 15m momentum. The opening range breakdown is holding. Exiting to respect the stop and free capital.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "RDW",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is underwater (-0.18%) and trading below VWAP (-1.9%) with a breakdown. No positive momentum to justify holding in a risk-off environment. Exiting to redeploy.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "SPCX",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "Shorting SPCX on a strong opening range breakdown (-7.7% day, -2.4% vs VWAP) with high relative volume (3.21). Despite positive news (BofA target raise), the intraday momentum is decisively down, and the market is risk-off. This is a high-conviction short setup.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "HWM",
+        "action": "HOLD",
+        "conviction": null,
+        "reason": "Short position is in profit (+0.50%). Stock is making new lows with high volume (rvol 3.57). Holding to let it run to the first target.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "RKLB",
+        "action": "HOLD",
+        "conviction": null,
+        "reason": "Short position is in profit (+0.53%). Stock is below VWAP and in a breakdown. Holding to let it run.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "SELL ASTS",
+      "SELL LUNR",
+      "SELL RDW",
+      "BUY SPCX blocked: conviction None is below the minimum 4 (risk-off market)",
+      "BUY BA blocked: conviction None is below the minimum 3 (risk-off market)",
+      "BUY PL blocked: conviction None is below the minimum 3 (risk-off market)",
+      "BUY BKSY blocked: conviction None is below the minimum 3 (risk-off market)",
+      "BUY IRDM blocked: conviction None is below the minimum 3 (risk-off market)",
+      "BUY FLY blocked: conviction None is below the minimum 3 (risk-off market)"
+    ]
   }
 ]
