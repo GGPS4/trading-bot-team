@@ -20,6 +20,21 @@ ai_routing:
   smart: [gemini, cerebras, mistral, groq, openrouter]
 # Providers without a key (GitHub secret) are skipped automatically.
 
+# Pacing: most requests per minute the bots send to each provider (a little under their
+# free limits, so requests aren't turned away). Each provider also rotates across its models.
+ai_rpm:
+  gemini: 20
+  groq: 25
+  cerebras: 25
+  mistral: 50
+  openrouter: 15
+
+# AI budget planner: the trading-day budget is shared fairly. Each team gets about
+# trading_calls_per_day / teams / 6.5 hours AI answers per hour; only urgent looks
+# (big news, a 2% move, a market-moving post) may go over a team's share.
+ai_budget:
+  trading_calls_per_day: 700
+
 # Most calls per day for each provider, kept just under their free limits.
 ai_daily_caps:
   gemini: 240
@@ -111,6 +126,9 @@ events:
 
 # All-day trading. The bots watch the market from open to close.
 intraday:
+  parallel_managers: 3          # managers that may think at the same time
+  max_quiet_minutes: 45         # a team with nothing new still gets a look at least this often
+  look_if_moved_pct: 0.0075     # a scheduled look happens only if news came in or a stock moved this much
   check_every_minutes: 5          # prices, stop-losses and fresh news are checked this often
   replan_every_minutes: 20        # each manager takes a full new look at least this often
   price_move_trigger_pct: 0.02    # ...or sooner if one of its stocks moves 2% since its last look
