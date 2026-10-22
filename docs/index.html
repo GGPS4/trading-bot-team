@@ -99,6 +99,7 @@ main{min-width:0;padding:28px 32px 64px}
 .sub{font-size:12.5px;color:var(--muted)}
 .kpi .l{font-size:12.5px;color:var(--ink-2)}
 .kpi .v{font-size:27px;font-weight:650;letter-spacing:-.02em;margin-top:6px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.k6 .kpi .v{font-size:clamp(18px,1.7vw,25px)}
 .kpi .d{font-size:12.5px;margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .kpi .spark{margin-top:10px}
 .delta{display:inline-flex;align-items:center;gap:3px;font-weight:600;font-size:12px;padding:2px 7px;border-radius:99px;white-space:nowrap}
@@ -355,12 +356,12 @@ function spark(values,color,h=36){
 
 function rangeBar(p){
   if(!p.stop||!p.target)return'<span class="muted">–</span>';
-  const lo=Math.min(p.stop,p.price),hi=Math.max(p.target,p.price),X=v=>6+(v-lo)/(hi-lo||1)*138;
+  const sh=p.side==="short",lo=Math.min(p.stop,p.target,p.price,p.entry),hi=Math.max(p.stop,p.target,p.price,p.entry),X=v=>6+(sh?hi-v:v-lo)/(hi-lo||1)*138;
   return`<svg class="range" viewBox="0 0 150 22" role="img" aria-label="Stop ${money(p.stop)}, bought ${money(p.entry)}, now ${money(p.price)}, target ${money(p.target)}">
-   <rect x="${X(p.stop)}" y="9" width="${Math.max(0,X(p.entry)-X(p.stop))}" height="4" rx="2" fill="var(--down-mark)" opacity=".35"/>
+   <rect x="${Math.min(X(p.stop),X(p.entry))}" y="9" width="${Math.abs(X(p.entry)-X(p.stop))}" height="4" rx="2" fill="${p.trailing||p.scaled?"var(--up-mark)":"var(--down-mark)"}" opacity=".35"/>
    <rect x="${X(p.entry)}" y="9" width="${Math.max(0,X(p.target)-X(p.entry))}" height="4" rx="2" fill="var(--up-mark)" opacity=".35"/>
    <line x1="${X(p.entry)}" x2="${X(p.entry)}" y1="4" y2="18" stroke="var(--ink-2)" stroke-width="1.5"/>
-   <circle cx="${X(p.price)}" cy="11" r="5" fill="${p.price>=p.entry?"var(--up-mark)":"var(--down-mark)"}" stroke="var(--surface)" stroke-width="2"/></svg>`;
+   <circle cx="${X(p.price)}" cy="11" r="5" fill="${(sh?p.price<=p.entry:p.price>=p.entry)?"var(--up-mark)":"var(--down-mark)"}" stroke="var(--surface)" stroke-width="2"/></svg>`;
 }
 
 function table(rows,cols,{detail}={}){
@@ -372,11 +373,14 @@ function table(rows,cols,{detail}={}){
 function wireDetails(root){root.querySelectorAll("tr[data-d]").forEach(tr=>{const t=()=>{const d=root.querySelector(`tr[data-dd="${tr.dataset.d}"]`);d.hidden=!d.hidden};tr.addEventListener("click",t);tr.addEventListener("keydown",e=>{if(e.key==="Enter")t()})})}
 
 const tradeStatus=t=>t.status==="closed"?(t.pnl>0?'<span class="pill win">Win</span>':t.pnl<0?'<span class="pill loss">Loss</span>':'<span class="pill open">Even</span>'):t.status==="open"?'<span class="pill open">Open</span>':t.status==="submitted"?'<span class="pill open">Pending</span>':`<span class="pill open">${esc(t.status)}</span>`;
-const exitText=r=>({stop_loss:"Stop-loss hit",take_profit:"Target hit",manager_sell:"Manager sold",end_of_day:"End of day"})[r]||r||"";
+const exitText=r=>({stop_loss:"Stop-loss hit",take_profit:"Target hit",manager_sell:"Manager closed",end_of_day:"End of day",trailing_stop:"Trailing stop",breakeven_stop:"Stopped at entry after taking half"})[r]||r||"";
+const symSide=t=>`<span class="sym">${esc(t.symbol)}</span>${t.side==="short"?' <span class="pill sell" title="Short: profits if the price falls">Short</span>':""}`;
+const exitBadges=p=>[p.scaled?'<span class="tag" style="padding:1px 7px" title="Half sold at the first target; stop moved to entry">Half taken</span>':"",p.trailing?'<span class="tag" style="padding:1px 7px" title="Stop follows the best price">Trailing</span>':""].join(" ");
 const conv=c=>c?`<span title="Conviction ${c}/5" class="num" style="letter-spacing:1px">${"●".repeat(c)}<span class="muted">${"●".repeat(Math.max(0,5-c))}</span></span>`:"–";
 const tradeDetail=t=>`<div class="grid g11" style="gap:10px 28px">
-  <div><div class="label" style="margin-top:0">Why the manager bought</div><div style="color:var(--ink)">${esc(t.reason)||"–"}</div></div>
-  <div><div class="label" style="margin-top:0">The plan</div>Bought ${t.qty??"–"} share(s) at ${money(t.entry_price??t.est_price)}. Stop-loss ${money(t.stop_price)}, target ${money(t.take_profit_price)}. Conviction ${t.conviction??"–"}/5.
+  <div><div class="label" style="margin-top:0">Why the manager ${t.side==="short"?"shorted":"bought"}</div><div style="color:var(--ink)">${esc(t.reason)||"–"}</div>${t.setup?`<div class="sub" style="margin-top:6px">Setup: ${esc(t.setup)}</div>`:""}</div>
+  <div><div class="label" style="margin-top:0">The plan</div>${t.side==="short"?"Shorted":"Bought"} ${t.qty??"–"} share(s) at ${money(t.entry_price??t.est_price)}. First stop ${money(t.first_stop??t.stop_price)}${t.first_stop&&t.stop_price!==t.first_stop?`, moved to ${money(t.stop_price)}${t.trail_active?" by the trailing stop":""}`:""}, first target ${money(t.take_profit_price)}. Conviction ${t.conviction??"–"}/5.
+  ${(t.partials||[]).map(x=>`<br>Took ${+x.qty} at ${money(x.price)} (${esc(x.reason||"partial")}): <span class="${cls(x.pnl)}">${smoney(x.pnl)}</span>.`).join("")}
   ${t.status==="closed"?`<br>Sold at ${money(t.exit_price)}: ${esc(exitText(t.exit_reason))}${t.exit_note?" (“"+esc(t.exit_note)+"”)":""}.`:""}</div></div>`;
 
 /* ============================== views ============================== */
@@ -391,7 +395,7 @@ function overview(){
   const feed=[...(D.trades_today||[]).map(t=>({time:t.time||"",t})),...(D.blocked_today||[]).map(b=>({time:b.time,b}))].sort((x,y)=>(y.time||"").localeCompare(x.time||"")).slice(0,10);
   return`
   <div class="head"><div><h1>Overview</h1><p>${new Date(D.updated).toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"})} · updated ${ago(D.updated)}</p></div>
-    <div class="legend">${D.paused?'<span class="pill block">Trading paused</span>':""}<span class="tag">${teams.length} teams</span><span class="tag">${(D.positions||[]).length} open positions</span></div></div>
+    <div class="legend">${D.paused?'<span class="pill block">Trading paused</span>':""}${D.mood?.regime?`<span class="pill ${D.mood.regime==="normal"?"buy":D.mood.regime==="caution"?"block":"sell"}" title="${esc(D.mood.why||"")} · ${esc(D.mood.note||"")}">Market mood: ${D.mood.regime==="risk_off"?"Risk-off":D.mood.regime==="caution"?"Caution":"Normal"}</span>`:""}<span class="tag">${teams.length} teams</span><span class="tag">${(D.positions||[]).length} open positions</span></div></div>
   <div class="grid k4 stagger">
     ${kpi("Account value",`<span data-count="${a.equity}">${money(a.equity)}</span>`,`${delta(a.day_change_pct)}<span class="muted">today</span>`,spark(H.map(h=>h.equity),css("--accent")))}
     ${kpi("Today's profit / loss",`<span class="${cls(a.day_change)}" data-count="${a.day_change}" data-fmt="smoney">${smoney(a.day_change)}</span>`,`<span class="muted">Cash on hand ${money(a.cash,0)}</span>`)}
@@ -468,7 +472,7 @@ function team(id){
     <div class="card"><div class="ch"><div><h2>Every closed trade</h2><div class="sub">Last 30, oldest to newest</div></div><div class="legend"><span><i style="background:var(--up-mark);height:8px;width:8px;border-radius:2px"></i>Win</span><span><i style="background:var(--down-mark);height:8px;width:8px;border-radius:2px"></i>Loss</span></div></div><div class="chart" id="cTrades"></div></div>
   </div>
   <div class="card mt"><div class="ch"><div><h2>Holding right now</h2><div class="sub">Bar runs from stop-loss (left) through the buy price to the target (right); the dot is today's price</div></div></div>
-    ${table((D.positions||[]).filter(p=>p.team===id),[{h:"Stock",f:p=>`<span class="sym">${esc(p.symbol)}</span>`},{h:"Shares",f:p=>+(+p.qty).toFixed(4),n:1},{h:"Bought at",f:p=>money(p.entry),n:1},{h:"Now",f:p=>money(p.price),n:1},{h:"P&amp;L",f:p=>`<span class="${cls(p.pnl)}">${smoney(p.pnl)}</span> <span class="muted">${pct(p.pnl_pct)}</span>`,n:1},{h:"Stop → target",f:rangeBar},{h:"Why it was bought",f:p=>`<div class="why">${esc(p.reason)}</div>`}])}</div>
+    ${table((D.positions||[]).filter(p=>p.team===id),[{h:"Stock",f:p=>`${symSide(p)} ${exitBadges(p)}`},{h:"Shares",f:p=>+Math.abs(+p.qty).toFixed(4),n:1},{h:"Entry",f:p=>money(p.entry),n:1},{h:"Now",f:p=>money(p.price),n:1},{h:"P&amp;L",f:p=>`<span class="${cls(p.pnl)}">${smoney(p.pnl)}</span> <span class="muted">${pct(p.pnl_pct)}</span>`,n:1},{h:"Stop → target",f:rangeBar},{h:"Why",f:p=>`<div class="why">${esc(p.reason)}</div>`}])}</div>
   <div class="tabs" id="tabs" role="tablist">${[["trades","Trade history"],["strategy","Strategy log"],["watchlist","Watchlist"],["lessons","Lessons & ideas"],["research","Research"]].map(([k,l])=>`<button role="tab" data-tab="${k}" class="${teamTab===k?"on":""}">${l}</button>`).join("")}<span class="ink"></span></div>
   <div id="tabBody"></div>`;
 }
@@ -480,7 +484,7 @@ function teamTabBody(id){
     const F={all:trades,open:trades.filter(t=>t.status==="open"||t.status==="submitted"),closed:trades.filter(t=>t.status==="closed"),wins:trades.filter(t=>t.status==="closed"&&t.pnl>0),losses:trades.filter(t=>t.status==="closed"&&t.pnl<0)};
     const chips=[["all","All"],["open","Open"],["closed","Closed"],["wins","Wins"],["losses","Losses"],["blocked","Blocked"]].map(([k,l])=>`<button class="chip ${tradeFilter===k?"on":""}" data-f="${k}">${l}<span class="c num">${k==="blocked"?blocked.length:F[k].length}</span></button>`).join("");
     const body=tradeFilter==="blocked"?table(blocked,[{h:"When",f:b=>`<span class="num">${fmtDate(b.date)} ${esc(b.time)}</span>`},{h:"Order",f:b=>`<span class="pill ${b.action==="BUY"?"buy":"sell"}">${esc(b.action)}</span> <span class="sym">${esc(b.symbol)}</span>`},{h:"Rule that stopped it",k:"reason"}])
-      :table(F[tradeFilter].slice(0,showN),[{h:"When",f:t=>`<span class="num">${fmtDate(t.date)} ${esc(t.time||"")}</span>`},{h:"Stock",f:t=>`<span class="sym">${esc(t.symbol)}</span>`},{h:"Result",f:tradeStatus},{h:"Bought",f:t=>money(t.entry_price??t.est_price),n:1},{h:"Sold",f:t=>money(t.exit_price),n:1},{h:"Profit",f:t=>t.pnl==null?"–":`<span class="${cls(t.pnl)}">${smoney(t.pnl)}</span> <span class="muted">${pct(t.pnl_pct)}</span>`,n:1},{h:"How it ended",f:t=>t.status==="closed"?esc(exitText(t.exit_reason)):t.exit_reason?'<span class="muted">Sell order placed</span>':""},{h:"Conviction",f:t=>conv(t.conviction)}],{detail:tradeDetail});
+      :table(F[tradeFilter].slice(0,showN),[{h:"When",f:t=>`<span class="num">${fmtDate(t.date)} ${esc(t.time||"")}</span>`},{h:"Stock",f:symSide},{h:"Result",f:tradeStatus},{h:"Bought",f:t=>money(t.entry_price??t.est_price),n:1},{h:"Sold",f:t=>money(t.exit_price),n:1},{h:"Profit",f:t=>t.pnl==null?"–":`<span class="${cls(t.pnl)}">${smoney(t.pnl)}</span> <span class="muted">${pct(t.pnl_pct)}</span>`,n:1},{h:"How it ended",f:t=>t.status==="closed"?esc(exitText(t.exit_reason)):t.exit_reason?'<span class="muted">Sell order placed</span>':""},{h:"Conviction",f:t=>conv(t.conviction)}],{detail:tradeDetail});
     return`<div class="card"><div class="chips">${chips}</div>${body}${tradeFilter!=="blocked"&&F[tradeFilter].length>showN?`<button class="btn more" data-more>Show more (${F[tradeFilter].length-showN} older)</button>`:""}${tradeFilter!=="blocked"&&F[tradeFilter].length?'<div class="sub" style="margin-top:10px">Click a trade to see why it was made.</div>':""}</div>`;
   }
   if(teamTab==="strategy"){
@@ -562,7 +566,7 @@ function afterTrades(){
   const draw=anim=>{let r=all.filter(t=>tf.team==="all"||t.team===tf.team);
     if(tf.status==="open")r=r.filter(t=>t.status==="open"||t.status==="submitted");if(tf.status==="wins")r=r.filter(t=>t.pnl>0);if(tf.status==="losses")r=r.filter(t=>t.pnl<0);
     if(tf.q){const q=tf.q.toLowerCase();r=r.filter(t=>((t.symbol||"")+" "+(t.reason||"")).toLowerCase().includes(q))}
-    const el=$("#tradeTable");el.innerHTML=`<div class="sub" style="margin-bottom:8px">${r.length} trade${r.length===1?"":"s"} · total result <b class="${cls(r.reduce((s,t)=>s+(t.pnl||0),0))}">${smoney(Math.round(r.reduce((s,t)=>s+(t.pnl||0),0)*100)/100)}</b></div>`+table(r.slice(0,250),[{h:"When",f:t=>`<span class="num">${fmtDate(t.date)} ${esc(t.time||"")}</span>`},{h:"Team",f:t=>`<span style="display:inline-flex;align-items:center;gap:6px;white-space:nowrap"><span class="dot" style="background:${teamColor(t.team)}"></span>${esc(shortName(t.team))}</span>`},{h:"Stock",f:t=>`<span class="sym">${esc(t.symbol)}</span>`},{h:"Result",f:tradeStatus},{h:"Bought",f:t=>money(t.entry_price??t.est_price),n:1},{h:"Sold",f:t=>money(t.exit_price),n:1},{h:"Profit",f:t=>t.pnl==null?"–":`<span class="${cls(t.pnl)}">${smoney(t.pnl)}</span>`,n:1},{h:"How it ended",f:t=>t.status==="closed"?esc(exitText(t.exit_reason)):t.exit_reason?'<span class="muted">Sell order placed</span>':""}],{detail:tradeDetail});
+    const el=$("#tradeTable");el.innerHTML=`<div class="sub" style="margin-bottom:8px">${r.length} trade${r.length===1?"":"s"} · total result <b class="${cls(r.reduce((s,t)=>s+(t.pnl||0),0))}">${smoney(Math.round(r.reduce((s,t)=>s+(t.pnl||0),0)*100)/100)}</b></div>`+table(r.slice(0,250),[{h:"When",f:t=>`<span class="num">${fmtDate(t.date)} ${esc(t.time||"")}</span>`},{h:"Team",f:t=>`<span style="display:inline-flex;align-items:center;gap:6px;white-space:nowrap"><span class="dot" style="background:${teamColor(t.team)}"></span>${esc(shortName(t.team))}</span>`},{h:"Stock",f:symSide},{h:"Result",f:tradeStatus},{h:"Bought",f:t=>money(t.entry_price??t.est_price),n:1},{h:"Sold",f:t=>money(t.exit_price),n:1},{h:"Profit",f:t=>t.pnl==null?"–":`<span class="${cls(t.pnl)}">${smoney(t.pnl)}</span>`,n:1},{h:"How it ended",f:t=>t.status==="closed"?esc(exitText(t.exit_reason)):t.exit_reason?'<span class="muted">Sell order placed</span>':""}],{detail:tradeDetail});
     if(anim){el.classList.remove("enter");void el.offsetWidth;el.classList.add("view","enter")}wireDetails(el)};
   [["#tfTeam","team"],["#tfStatus","status"]].forEach(([s,k])=>$(s).querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{tf[k]=c.dataset.k;$(s).querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x===c));draw(true)})));
   $("#q").addEventListener("input",e=>{tf.q=e.target.value;draw(false)});draw(false);
@@ -572,12 +576,20 @@ function afterTrades(){
 function research(){
   const mw=D.market_watch||{};
   return`<div class="head"><div><h1>Research desk</h1><p>What the researchers are reading, day and night</p></div>${mw.updated?`<span class="tag">Social watch: ${mw.posts_read||0} posts read · updated ${ago(mw.updated)}</span>`:""}</div>
+  ${premarketCard()}
   ${calendarCards()}
   <div class="stagger mt"><div class="card"><div class="ch"><div><h2>Truth Social &amp; X watch</h2><div class="sub">${esc(mw.overall||"Posts by the President and other influential accounts that could move markets")}</div></div></div>${postList(mw.findings)}</div></div>
   <div class="grid g11 mt stagger">${Object.entries(D.teams).map(([id,t])=>{const R=tdet(id).research||{};return`<div class="card"><div class="ch"><div><h2 style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:${teamColor(id)}"></span>${esc(t.name)}</h2><div class="sub">${esc(R.news?.overall||"")}</div></div><a class="sub" style="color:var(--accent);white-space:nowrap" href="#/team/${id}">Team →</a></div>
     <div class="label" style="margin-top:0">Latest news</div>${findings(R.news?.findings)}<div class="label">Overnight &amp; after hours</div>${findings(R.overnight)}</div>`}).join("")}</div>`;
 }
 
+function premarketCard(){
+  const P=D.premarket||{},today=new Date().toLocaleDateString("en-CA",{timeZone:"America/New_York"});
+  if(!P.time||P.date!==today)return"";
+  const rows=[...(P.watched||[]).map(r=>({...r,where:r.team})),...(P.outside||[]).map(r=>({...r,where:null}))];
+  return`<div class="card mb stagger" style="margin-bottom:16px"><div class="ch"><div><h2>Pre-market gappers</h2><div class="sub">Stocks trading well above or below yesterday's close before the open · scanned ${esc(P.time.slice(11,16))} ET</div></div></div>
+    ${table(rows.slice(0,25),[{h:"Stock",f:r=>`<span class="sym">${esc(r.symbol)}</span>`},{h:"Gap",f:r=>`<span class="${cls(r.gap)}">${pct(r.gap)}</span>`,n:1},{h:"Price",f:r=>money(r.price),n:1},{h:"Team",f:r=>r.where&&D.teams[r.where]?`<span class="dot" style="background:${teamColor(r.where)}"></span> ${esc(shortName(r.where))}`:'<span class="muted">Not on a watchlist</span>'},{h:"News",f:r=>`<div class="why">${esc(r.headline||"–")}</div>`}])}</div>`;
+}
 function calendarCards(){
   const C=D.calendar||{},E=C.earnings||[],X=C.economy||[];
   const when=e=>`<span class="num">${fmtDate(e.date)}</span> <span class="muted">${esc(e.when||"")}</span>`;
