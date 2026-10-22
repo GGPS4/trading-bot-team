@@ -14,6 +14,7 @@ import datetime as dt
 import os
 import subprocess
 import sys
+import threading
 import time
 
 from bots import journal
@@ -217,6 +218,11 @@ def evening(ctx: Ctx, force: bool):
 # ------------------------------------------------------------------ all-day trading
 def save_progress(msg):
     """On GitHub, commit the bots' memory + dashboard so the website updates during the day."""
+    try:  # keep the latest log lines in the repo so problems can be looked at later
+        from bots.common import LOG_LINES
+        (STATE / "run_log.txt").write_text("\n".join(LOG_LINES) + "\n")
+    except Exception:
+        pass
     if os.environ.get("BOT_GIT_PUSH") != "1":
         return
     try:
@@ -259,19 +265,6 @@ def session(ctx: Ctx, until: str, force: bool):
     end = now_et().replace(hour=hh, minute=mm, second=0, microsecond=0)
     fake = os.environ.get("BOT_FAKE") == "1"
 
-    # 1. wait for the opening bell (if we started a bit early)
-    while not force and not fake:
-        clock = b.clock()
-        if clock.get("is_open"):
-            break
-        nxt = _parse_time(clock["next_open"]) if clock.get("next_open") else None
-        if not nxt or nxt.date() != now_et().date() or nxt >= end:
-            log("Market isn't open again before this session ends. Nothing to do.")
-            return
-        wait = (nxt - now_et()).total_seconds()
-        log(f"Waiting {wait / 60:.0f} min for the market to open...")
-        time.sleep(min(300, max(5, wait)))
-
     journal.reconcile(b, ctx.owner_of)  # pick up anything a stopped run didn't save
     try:  # drop watchlist stocks that stopped trading (delisted, bought out, renamed)
         watchlist.check_all(b, ctx.org, ctx.owner_of, {p["symbol"] for p in b.positions()})
@@ -292,7 +285,13 @@ def session(ctx: Ctx, until: str, force: bool):
         except Exception as e:
             log(f"Exit check failed: {e}")
 
-    # 2. full research at the start of the session
+    # 2. full research at the start of the session (before the open when the run starts early)
+    if not fake and not b.clock().get("is_open"):
+        try:
+            premarket.scan(b, ctx.org)
+            pm = premarket.latest()
+        except Exception as e:
+            log(f"Pre-market scan failed: {e}")
     research, seen = {}, load_seen()
     try:
         market_watch.check(ctx.llm, ctx.org)
@@ -301,6 +300,32 @@ def session(ctx: Ctx, until: str, force: bool):
     for tid, team in ctx.org.items():
         research[tid] = run_research(ctx.llm, b, team, "morning")
         research[tid]["market_watch"] = market_watch.for_team(team)
+    # 3. research is done before the bell; now wait for the open
+    while not force and not fake:
+        clock = b.clock()
+        if clock.get("is_open"):
+            break
+        nxt = _parse_time(clock["next_open"]) if clock.get("next_open") else None
+        if not nxt or nxt.date() != now_et().date() or nxt >= end:
+            log("Market isn't open again before this session ends. Nothing to do.")
+            return
+        wait = (nxt - now_et()).total_seconds()
+        log(f"Waiting {wait / 60:.0f} min for the market to open...")
+        time.sleep(min(300, max(5, wait)))
+
+    # Heartbeat: check stops, scale-outs and trailing stops about once a minute on its own clock,
+    # so a slow AI answer never delays an exit.
+    hb = {"closed": False, "stop": threading.Event()}
+
+    def heartbeat():
+        while not hb["stop"].wait(exit_every):
+            if not hb["closed"]:
+                with journal.LOCK:
+                    exit_pass()
+
+    if not fake:
+        threading.Thread(target=heartbeat, daemon=True).start()
+    order, rot = list(ctx.org), 0
     last_plan = {tid: 0.0 for tid in ctx.org}
     last_plan_prices = {tid: {} for tid in ctx.org}
     last_save, last_social, closed_for_day, ticks = 0.0, time.time(), False, 0
@@ -315,13 +340,15 @@ def session(ctx: Ctx, until: str, force: bool):
             log("Market closed.")
             break
         try:
-            journal.sync(b)
+            with journal.LOCK:
+                journal.sync(b)
             positions = b.positions()
             all_symbols = sorted(set(ctx.owner_of) | {p["symbol"] for p in positions} | set(mood.SYMBOLS))
             snaps = b.snapshots(all_symbols)
             prices = {s: v["price"] for s, v in snaps.items()}
-            if exits.manage(b, prices, ctx.paused, is_open):
-                positions = b.positions()
+            with journal.LOCK:
+                if exits.manage(b, prices, ctx.paused, is_open):
+                    positions = b.positions()
             mood_now = mood.compute(snaps, list(ctx.owner_of))
             if mood_now["regime"] != regime:
                 log(f"Market mood: {mood_now['regime']} ({mood_now['why']})")
@@ -330,9 +357,14 @@ def session(ctx: Ctx, until: str, force: bool):
             n = now_et()
             mins_left = 16 * 60 - (n.hour * 60 + n.minute)
             if cfg.get("close_positions_before_close") and mins_left <= 10 and not closed_for_day:
-                for p in positions:
-                    if ctx.owner_of.get(p["symbol"]) and not ctx.paused:
-                        _sell(b, ctx.owner_of[p["symbol"]], p["symbol"], "end of day", "end_of_day")
+                hb["closed"] = True
+                with journal.LOCK:
+                    for p in positions:
+                        if ctx.owner_of.get(p["symbol"]) and not ctx.paused:
+                            try:
+                                _sell(b, ctx.owner_of[p["symbol"]], p["symbol"], "end of day", "end_of_day")
+                            except Exception as e:
+                                log(f"End-of-day close failed for {p['symbol']}: {e}")
                 closed_for_day = True
                 log("Closed all positions before the bell.")
                 positions = b.positions()
@@ -371,7 +403,19 @@ def session(ctx: Ctx, until: str, force: bool):
                     sig_cache["s"] = intraday.signals(intraday.fetch(b, set(ctx.owner_of)), avg, prices)
                 return sig_cache["s"]
 
-            for tid, team in ctx.org.items():
+            budget_s = every * 0.8  # leave room for prices, exits and saving inside each 5-minute check
+            looked = 0
+            for i in range(len(order)):
+                tid = order[(rot + i) % len(order)]
+                team = ctx.org[tid]
+                if looked and time.time() - started > budget_s:
+                    rot = (rot + i) % len(order)  # pick up from this team next check
+                    log(f"Check running long; {tid} and later teams go first next check")
+                    break
+                if time.time() - last_save >= 900:  # never let the dashboard go stale mid-loop
+                    write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
+                    save_progress(f"Bot team: intraday update {now_et():%Y-%m-%d %H:%M}")
+                    last_save, traded = time.time(), False
                 try:
                     r = research[tid]
                     if refresh_social:
@@ -399,6 +443,7 @@ def session(ctx: Ctx, until: str, force: bool):
                            else "market-moving post: " + hot_posts[0].get("post", "")[:80] if hot_posts
                            else f"price moves in {moved}")
                     log(f"{tid}: manager takes a look ({why})")
+                    looked += 1
                     holdings = team_holdings(positions, ctx.owner_of, tid)
                     orders = orders_for_team(team, ctx.strategy, ctx.budgets[tid], ctx.limits)
                     inv = desk.team_invested(tid)
@@ -418,7 +463,8 @@ def session(ctx: Ctx, until: str, force: bool):
                     write_json(STATE / "plans" / f"{tid}.json",
                                {"date": today(), "time": now_et().strftime("%H:%M"), "trigger": why, **p})
                     vol = {sym: v.get("daily_volatility") for sym, v in (r.get("technicals") or {}).items()}
-                    results = execute(b, desk, team, p, prices, vol)
+                    with journal.LOCK:
+                        results = execute(b, desk, team, p, prices, vol)
                     wl = watchlist.apply_changes(b, ctx.org, ctx.owner_of, tid, p.get("watchlist_changes"),
                                                  {x["symbol"] for x in b.positions()})
                     for c in wl:
@@ -447,14 +493,10 @@ def session(ctx: Ctx, until: str, force: bool):
             last_save, traded = time.time(), False
         if fake and ticks >= int(os.environ.get("BOT_FAKE_TICKS", "3")):
             break
-        while not fake and now_et() < end:  # until the next look: check exits about once a minute
-            left = every - (time.time() - started)
-            if left <= 5:
-                break
-            time.sleep(min(exit_every, left))
-            if not closed_for_day:
-                exit_pass()
+        if not fake:
+            time.sleep(max(5, every - (time.time() - started)))
 
+    hb["stop"].set()
     write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
     save_progress(f"Bot team: session end {now_et():%Y-%m-%d %H:%M}")
     log(f"Session done. AI calls today: {__import__('bots.llm', fromlist=['calls_today']).calls_today()}")
@@ -522,7 +564,8 @@ def auto(ctx: Ctx):
     next_open = _parse_time(clock["next_open"])
     next_close = _parse_time(clock["next_close"])
     max_job = dt.timedelta(minutes=320)  # GitHub jobs can run at most 6 hours
-    if clock.get("is_open") or (next_open - now) <= dt.timedelta(minutes=20):
+    lead = dt.timedelta(minutes=45)  # start early: pre-market scan and research finish before the bell
+    if clock.get("is_open") or (next_open - now) <= lead:
         end = min(next_close, now + max_job)
         log(f"Auto: trading session until {end:%H:%M} ET")
         session(ctx, end.strftime("%H:%M"), False)
@@ -531,7 +574,7 @@ def auto(ctx: Ctx):
         return
     if b.is_trading_day(today()) and now.hour >= 16:
         evening(ctx, False)
-    minutes = int(min(max_job, next_open - now_et() - dt.timedelta(minutes=8)).total_seconds() // 60)
+    minutes = int(min(max_job, next_open - now_et() - lead + dt.timedelta(minutes=2)).total_seconds() // 60)
     log(f"Auto: after-hours research for {max(10, minutes)} minutes")
     watch(ctx, max(10, minutes))
 
