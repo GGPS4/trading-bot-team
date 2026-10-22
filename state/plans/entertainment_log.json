@@ -92,5 +92,52 @@
       "BUY BAM blocked: conviction 2 is below the minimum 3 (risk-off market)",
       "BUY ROKU blocked: conviction 2 is below the minimum 3 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "11:48",
+    "trigger": "must invest $6,298 more (75% rule)",
+    "market_view": "The market is in a clear risk-off regime with indices down over 2% and VIX spiking, favoring short setups on weak names or high-conviction momentum longs. Entertainment sector is mixed, with Netflix and Comcast showing weakness despite some earnings beats, while Spotify is extended after a massive gap up. I need to aggressively deploy capital to meet the 75% investment mandate, prioritizing shorts on breakdowns and momentum longs on breakouts.",
+    "experiment": "Implement a pre-market catalyst scan to trigger entries on earnings or major news releases",
+    "decisions": [
+      {
+        "symbol": "NFLX",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "Netflix is at two-year lows with multiple analyst downgrades (Argus, Pivotal, UBS) and a negative sentiment score of -0.4. Despite a 2.4% day gain, it is trading below its 50-day average and the broader market is risk-off, making it a prime candidate for a short on any weakness or failure to hold the opening range.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "CMCSA",
+        "action": "COVER",
+        "conviction": 3,
+        "reason": "Closing the existing short position as the stock has broken out above the opening range (22.88) and is trading above VWAP with high relative volume (2.62). The initial thesis of weakness has failed, and I need to free up capital to deploy into stronger setups to meet the 75% investment mandate.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "SONY",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Sony is up 4.3% on the day with a clear opening range breakout (25.98) and high relative volume (1.95). It is trading above VWAP and has strong 60-minute momentum (+1.2%). While RSI is high (79.3), the momentum and volume support a continuation trade in a risk-off market where relative strength is key.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "FOXA",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Fox is up 3.0% with a breakout above the opening range high (67.26) and is trading above VWAP. It has a positive trend and is one of the few entertainment stocks showing relative strength. The setup is less aggressive than Sony but offers a good risk/reward for a momentum play.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "COVER CMCSA",
+      "SHORT NFLX x38 (~$2531.75)",
+      "BUY SONY x48 (~$1256.64)",
+      "BUY FOXA blocked: team already has the maximum number of positions"
+    ]
   }
 ]
