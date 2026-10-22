@@ -1,78 +1,96 @@
 {
   "date": "2026-10-22",
-  "time": "11:33",
-  "trigger": "first look this run",
-  "market_view": "Market is in a risk-off tape, with SPY down 1.2%, QQQ down 2.4%, and VIXY up 5.1%. The space and aerospace group is mostly selling, with several stocks breaking opening ranges, though no confirmed major launch or contract news drove the last move. Focus stays on breakdowns and momentum shorts into the close.",
+  "time": "11:51",
+  "trigger": "must invest $3,197 more (75% rule)",
+  "market_view": "Market is risk-off, with SPY down 1.3% and QQQ down 2.4%, VIXY up 4.9%. Space names are mostly breaking lower, but news is mixed. I favor shorting weak breakdowns and staying defensive.",
   "decisions": [
     {
-      "symbol": "TDG",
+      "symbol": "BKSY",
       "action": "SELL",
       "conviction": 3,
-      "stop_loss_pct": 0.014,
-      "take_profit_pct": 0.05,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
       "setup": "momentum",
-      "reason": "Closing the day's long as market risk-off and broad selling pressure increases; trims long exposure and frees a slot for a high-quality breakdown short."
+      "reason": "Stalled short after BlackSky contract; bounce with low rvol and price above VWAP, momentum failed. Close position."
+    },
+    {
+      "symbol": "VSAT",
+      "action": "SHORT",
+      "conviction": 3,
+      "stop_loss_pct": 0.025,
+      "take_profit_pct": 0.02,
+      "setup": "opening range breakdown",
+      "reason": "VSAT broke below opening range and VWAP, weak momentum, day -5.8%, risk-off favors shorting breakdown."
     },
     {
       "symbol": "RKLB",
       "action": "SHORT",
       "conviction": 3,
-      "stop_loss_pct": 0.025,
-      "take_profit_pct": 0.05,
+      "stop_loss_pct": 0.045,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakdown",
-      "reason": "RKLB broke below the opening range and VWAP with day -5.0%, negative momentum, and risk-off sentiment favoring shorts. Tight stop above entry, first target around 5% lower."
+      "reason": "RKLB broke opening range, weak momentum and oversold, risk-off; short breakdown."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "BA",
-      "direction": "short",
+      "symbol": "FLY",
+      "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.025,
+      "stop_loss_pct": 0.04,
+      "take_profit_pct": 0.06,
+      "setup": "news catalyst",
+      "reason": "Firefly Elytra PDR with positive sentiment, but risk-off limits long size."
+    },
+    {
+      "symbol": "GE",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.08,
+      "setup": "mean reversion",
+      "reason": "RSI 30.7 oversold, bounce, volume spike, but market risk-off."
+    },
+    {
+      "symbol": "SATS",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.03,
       "take_profit_pct": 0.05,
-      "setup": "opening range breakdown",
-      "reason": "BA broke below OR/VWAP, but low rvol; news is mixed in risk-off. Potential short if breakdown holds."
+      "setup": "momentum",
+      "reason": "Breakdown and trend down, but lower conviction."
     },
     {
       "symbol": "LUNR",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
-      "setup": "momentum",
-      "reason": "LUNR below VWAP and near lower OR, day -4.0%, but m15 showed bounce; avoid chasing."
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.08,
+      "setup": "mean reversion",
+      "reason": "RSI 22 oversold, but news quiet; only if bounce holds."
     },
     {
       "symbol": "PL",
       "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "PL trend down and below VWAP, day -4.4%; weak momentum short setup."
-    },
-    {
-      "symbol": "RDW",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
-      "setup": "opening range breakdown",
-      "reason": "RDW broke below OR, day -4.0%, but low rvol; breakdown short only if volume confirms."
-    },
-    {
-      "symbol": "VSAT",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
-      "setup": "opening range breakdown",
-      "reason": "VSAT broke below OR, day -5.5%, but weak rvol; high downside but needs confirmation."
+      "reason": "Breakdown, oversold, but weak follow-through."
     }
   ],
   "experiment": "Add trailing stops that activate after a 3% favorable move to lock in gains",
   "watchlist_changes": {
     "add": [],
-    "remove": []
+    "remove": [
+      {
+        "symbol": "BA",
+        "reason": "Quiet momentum and low sentiment, no strong day-trading setup."
+      },
+      {
+        "symbol": "LUNR",
+        "reason": "Oversold but quiet, no fresh catalyst; only mean reversion at best."
+      }
+    ]
   }
 }

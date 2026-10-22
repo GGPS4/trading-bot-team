@@ -1,83 +1,69 @@
 {
   "date": "2026-10-22",
-  "time": "11:35",
-  "trigger": "first look this run",
-  "market_view": "The market is in a risk-off regime with SPY down 1.2%, QQQ down 2.4%, and VIXY up 5.1%. Healthcare is mixed but the broad tape is cautious, so longs are half size and require high conviction. We are focusing on clear intraday catalysts and opening-range breakouts while avoiding weak longs.",
+  "time": "11:51",
+  "trigger": "must invest $976 more (75% rule)",
+  "market_view": "Market is in risk-off with SPY -1.3%, QQQ -2.4%, and VIXY +4.9%, while long positions are half size and need conviction +1. No broad sector news is driving; stock-specific catalysts are key, and I favor clear OR breakouts above VWAP with volume or short breakdowns below VWAP. JNJ fits as a high-conviction long because it broke above its OR, held above VWAP, and has positive clinical news, but size will be reduced in this risk regime.",
   "decisions": [
-    {
-      "symbol": "TMO",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "mean reversion",
-      "reason": "TMO is underwater -1.58% and day is negative despite positive analyst commentary; stalled long setup. Exit in a risk-off tape."
-    },
     {
       "symbol": "JNJ",
       "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.025,
-      "take_profit_pct": 0.03,
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "JNJ broke above the opening range high at 263.13 with rvol 1.51 and positive clinical data; clear breakout, but risk-off size is half and stop is tight."
+      "reason": "JNJ broke above the opening range high of 263.13, held above VWAP, and has positive clinical data/news; m15/m60 momentum positive and rvol 1.45. Risk-off requires higher conviction, which this setup meets."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "UNH",
+      "symbol": "ABT",
       "direction": "long",
-      "conviction": 2,
+      "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Mizuho upgrade and OR breakout, but weak rvol and overbought RSI; lower conviction in risk-off."
+      "setup": "opening range breakout",
+      "reason": "OR breakout above 102.05, above VWAP, strong m15/m60, rvol 1.5, Wells Fargo PT raise."
+    },
+    {
+      "symbol": "UNH",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above 422.45, above VWAP, Mizuho upgrade, but weak rvol 0.89."
     },
     {
       "symbol": "AMGN",
       "direction": "long",
-      "conviction": 2,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout with volume, but RSI overbought; momentum long only."
+      "reason": "OR breakout above 446, above VWAP, rvol 1.46, positive momentum."
     },
     {
-      "symbol": "DHR",
+      "symbol": "BMY",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "High rvol 2.36 and m60 strength, but no clean OR breakout; bounce setup only."
-    },
-    {
-      "symbol": "PFE",
-      "direction": "long",
-      "conviction": 2,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout, but low rvol and overbought; not favored in risk-off."
+      "reason": "OR breakout above 61.84, above VWAP, positive news, but low rvol 0.77."
     },
     {
-      "symbol": "VRTX",
+      "symbol": "MDT",
       "direction": "long",
-      "conviction": 2,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout with rvol 1.17, day +2.3, RSI 64; acceptable momentum long."
+      "reason": "OR breakout above 94.17, above VWAP, positive news, but low rvol 0.5."
     }
   ],
-  "experiment": "Testing a risk-off mean-reversion exit playbook: sell stalled longs into weakness, buy only high-conviction OR breakouts with news, half size.",
+  "experiment": "opening range breakout",
   "watchlist_changes": {
     "add": [],
-    "remove": [
-      {
-        "symbol": "HCA",
-        "reason": "No intraday setup, low participation, and earnings next week; quiet for day-trading purposes."
-      }
-    ]
+    "remove": []
   }
 }

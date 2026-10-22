@@ -1,69 +1,64 @@
 {
   "date": "2026-10-22",
-  "time": "11:35",
-  "trigger": "first look this run",
-  "market_view": "The market is in a clear risk-off mode: SPY is down 1.2%, QQQ is down 2.4%, and VIXY is up 5.1%, while only about 55% of watched stocks are advancing. Breakdowns are dominating, VWAP holders are failing, and the news flow is mixed but supports shorting weakness. I will stay selective and sell into weak momentum rather than chase any broad rebound.",
-  "decisions": [
-    {
-      "symbol": "MU",
-      "action": "SHORT",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Risk-off continuation setup: MU is breaking below its opening range and VWAP, with negative 15-minute and 60-minute momentum, high relative volume, oversold RSI, and lingering memory-glut uncertainty keeping sellers in control."
-    }
-  ],
+  "time": "11:51",
+  "trigger": "big news on ['ADBE']",
+  "market_view": "Risk-off tape is dominant: SPY -1.3%, QQQ -2.4%, VIXY +4.9%, and broad market down -2.4%. Price action shows breakdowns below VWAP and opening ranges for many tech longs, while only a few relative-strength names are holding. Market mood lowers conviction for new longs and favors shorting weak momentum breakdowns, but timing and final 15-minute cutoff limit new trades.",
+  "decisions": [],
   "ranked_ideas": [
+    {
+      "symbol": "CRM",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Clear OR breakout, above VWAP, rvol 1.59, m60 +1.0, day +2.9%; software rotation news supportive."
+    },
+    {
+      "symbol": "INTU",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Strong long momentum: OR breakout, rvol 1.92, m60 +2.8, above VWAP, day +6.3%."
+    },
+    {
+      "symbol": "NOW",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "OR breakout-like upside, rvol 3.48, day +2.4%, Boardwalktech ServiceNow partnership; m15 slightly weak but relative strength high."
+    },
     {
       "symbol": "NVDA",
       "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Opening-range breakdown despite positive Jensen Huang memory comments; weak 60-minute momentum and high volume favor momentum short toward VWAP."
-    },
-    {
-      "symbol": "MSFT",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Clear OR breakdown and intraday weakness, though AI healthcare news is mildly positive; risk-off favors fading the breakdown setup."
-    },
-    {
-      "symbol": "ONDS",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Opening-range breakdown and below-VWAP action with weak longer momentum; simple breakdown short in a risk-off tape."
+      "reason": "Breakdown below VWAP and opening range, day -4.1%, rvol 2.12, trend down; Jensen Huang comments had helped but price action is bearish intraday."
     },
     {
       "symbol": "AMAT",
       "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Very sharp daily weakness and oversold RSI, but watch for a mean-reversion long; short breakdown momentum remains the primary read."
-    },
-    {
-      "symbol": "ADBE",
-      "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Clear OR breakout with volume and above-VWAP follow-through; momentum long despite overbought RSI, sized down in risk-off regime."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Extreme weakness: day -7.0%, OR BREAKDOWN, RSI 5.2 oversold, rvol 1.77, below VWAP; weak momentum continuation names favored in risk-off."
     }
   ],
-  "experiment": "Testing continuation shorts after opening-range breakdowns in a risk-off tape, using momentum and news/confirmed weakness for conviction.",
+  "experiment": "Testing risk-off breakdown momentum short after failed VWAP reclaims, using strict stops and partial targets; no new positions in final 15 minutes.",
   "watchlist_changes": {
     "add": [],
-    "remove": []
+    "remove": [
+      {
+        "symbol": "ONDS",
+        "reason": "Extended downtrend and no fresh catalyst; below VWAP and opening-range breakdown, not a focus for long setups."
+      }
+    ]
   }
 }

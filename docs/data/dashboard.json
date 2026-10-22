@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-22T11:48-04:00",
+  "updated": "2026-10-22T11:54-04:00",
   "date": "2026-10-22",
   "mode": "paper",
   "health": {
     "issues": [
-      "33 problem(s) in the last hour, latest: ASTS: could not move stop: PATCH /v2/orders/1ad0ea60-8c72-44f6-85ee-5b707f245fd0 -> 422: {\"code\":42210000,\"message\":\"order parameters are not changed\"}"
+      "41 problem(s) in the last hour, latest: ASTS: could not move stop: PATCH /v2/orders/1ad0ea60-8c72-44f6-85ee-5b707f245fd0 -> 422: {\"code\":42210000,\"message\":\"order parameters are not changed\"}"
     ]
   },
   "paused": false,
@@ -14,21 +14,21 @@
     "strategy": "day_trading"
   },
   "account": {
-    "equity": 99428.19,
-    "cash": 90538.95,
-    "day_change": -625.64,
-    "day_change_pct": -0.0063
+    "equity": 99324.89,
+    "cash": 89089.69,
+    "day_change": -728.94,
+    "day_change_pct": -0.0073
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 763.29
+    "price": 763.96
   },
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 3,
-    "return_since_start": -0.0057,
-    "benchmark_since_start": -0.0095,
-    "max_drawdown": 0.0057
+    "return_since_start": -0.0068,
+    "benchmark_since_start": -0.0087,
+    "max_drawdown": 0.0068
   },
   "go_live": {
     "items": [
@@ -40,12 +40,12 @@
       {
         "rule": "Beating SPY since the start",
         "ok": true,
-        "value": "-0.6% vs -0.9%"
+        "value": "-0.7% vs -0.9%"
       },
       {
         "rule": "Worst drop under 15%",
         "ok": true,
-        "value": "0.6%"
+        "value": "0.7%"
       }
     ],
     "all_ok": false
@@ -72,8 +72,8 @@
         "MRCY"
       ],
       "budget": 12779.91,
-      "invested": 9910.43,
-      "unrealized_pnl": 192.77,
+      "invested": 9874.62,
+      "unrealized_pnl": 156.96,
       "realized_today": -0.47,
       "trades_today": 3,
       "blocked_today": 0,
@@ -106,17 +106,17 @@
         "FLY"
       ],
       "budget": 12779.91,
-      "invested": -6379.29,
-      "unrealized_pnl": 10.43,
-      "realized_today": -493.79,
-      "trades_today": 7,
-      "blocked_today": 7,
+      "invested": -5750.52,
+      "unrealized_pnl": -12.85,
+      "realized_today": -500.57,
+      "trades_today": 9,
+      "blocked_today": 8,
       "all_time": {
-        "closed_trades": 7,
+        "closed_trades": 8,
         "wins": 1,
-        "losses": 6,
-        "win_rate": 0.143,
-        "realized_pnl": -493.79
+        "losses": 7,
+        "win_rate": 0.125,
+        "realized_pnl": -500.57
       }
     },
     "entertainment": {
@@ -140,17 +140,17 @@
         "BAM"
       ],
       "budget": 12779.91,
-      "invested": -2256.85,
-      "unrealized_pnl": -12.53,
-      "realized_today": -22.7,
+      "invested": -2545.22,
+      "unrealized_pnl": -17.22,
+      "realized_today": -35.59,
       "trades_today": 7,
       "blocked_today": 9,
       "all_time": {
-        "closed_trades": 1,
+        "closed_trades": 2,
         "wins": 0,
-        "losses": 1,
+        "losses": 2,
         "win_rate": 0.0,
-        "realized_pnl": -22.7
+        "realized_pnl": -35.59
       }
     },
     "tech": {
@@ -173,12 +173,11 @@
         "AMAT",
         "MU",
         "PANW",
-        "ANET",
-        "ONDS"
+        "ANET"
       ],
       "budget": 12779.91,
-      "invested": -5295.01,
-      "unrealized_pnl": -0.94,
+      "invested": -5312.34,
+      "unrealized_pnl": -18.26,
       "realized_today": -323.98,
       "trades_today": 8,
       "blocked_today": 7,
@@ -214,8 +213,8 @@
         "DPZ"
       ],
       "budget": 12779.91,
-      "invested": -583.72,
-      "unrealized_pnl": -1.81,
+      "invested": -585.99,
+      "unrealized_pnl": -4.08,
       "realized_today": -94.32,
       "trades_today": 5,
       "blocked_today": 8,
@@ -251,8 +250,8 @@
         "COIN"
       ],
       "budget": 12779.91,
-      "invested": 4885.67,
-      "unrealized_pnl": 26.1,
+      "invested": 4878.38,
+      "unrealized_pnl": 18.81,
       "realized_today": -8.02,
       "trades_today": 6,
       "blocked_today": 0,
@@ -287,10 +286,10 @@
         "DHR"
       ],
       "budget": 12779.91,
-      "invested": 8608.42,
-      "unrealized_pnl": 89.5,
+      "invested": 9676.17,
+      "unrealized_pnl": 93.7,
       "realized_today": -44.11,
-      "trades_today": 2,
+      "trades_today": 3,
       "blocked_today": 6,
       "all_time": {
         "closed_trades": 2,
@@ -307,10 +306,10 @@
       "team": "healthcare",
       "qty": 9.0,
       "entry": 283.57,
-      "price": 283.68,
-      "value": 2553.12,
-      "pnl": 0.99,
-      "pnl_pct": 0.0004,
+      "price": 283.74,
+      "value": 2553.61,
+      "pnl": 1.49,
+      "pnl_pct": 0.0006,
       "stop": 269.31,
       "target": 311.83,
       "reason": "Barclays and Baird raised price target to $325 and secured reimbursement agreement for ELAHERE; bullish sentiment and price target upgrade provide a clear buying signal.",
@@ -325,10 +324,10 @@
       "team": "tech",
       "qty": 4.0,
       "entry": 269.59,
-      "price": 270.03,
-      "value": 1080.12,
-      "pnl": 1.76,
-      "pnl_pct": 0.0016,
+      "price": 270.27,
+      "value": 1081.1,
+      "pnl": 2.74,
+      "pnl_pct": 0.0025,
       "stop": 263.99,
       "target": 280.16,
       "reason": "[75% invested rule] Clear OR breakout with volume and above-VWAP follow-through; momentum long despite overbought RSI, sized down in risk-off regime.",
@@ -343,10 +342,10 @@
       "team": "tech",
       "qty": -5.0,
       "entry": 510.0,
-      "price": 509.8,
-      "value": -2548.97,
-      "pnl": 1.02,
-      "pnl_pct": 0.0004,
+      "price": 511.63,
+      "value": -2558.15,
+      "pnl": -8.15,
+      "pnl_pct": -0.0032,
       "stop": 521.69,
       "target": 491.0,
       "reason": "[75% invested rule] Breakdown below OR/VWAP, oversold RSI, and strong downside momentum in risk-off market.",
@@ -361,10 +360,10 @@
       "team": "consumer",
       "qty": -10.0,
       "entry": 251.94,
-      "price": 251.84,
-      "value": -2518.45,
-      "pnl": 0.95,
-      "pnl_pct": 0.0004,
+      "price": 252.3,
+      "value": -2523.0,
+      "pnl": -3.6,
+      "pnl_pct": -0.0014,
       "stop": 256.91,
       "target": 244.31,
       "reason": "AMZN is down 4.0% on the day, trading below VWAP (-0.6%) with high relative volume (2.03). In a risk-off market, this momentum suggests further downside. The stop is tight at 2% to respect the volatility.",
@@ -379,10 +378,10 @@
       "team": "tech",
       "qty": -1.0,
       "entry": 171.84,
-      "price": 170.84,
-      "value": -170.84,
-      "pnl": 1.0,
-      "pnl_pct": 0.0059,
+      "price": 170.95,
+      "value": -170.95,
+      "pnl": 0.89,
+      "pnl_pct": 0.0052,
       "stop": 175.63,
       "target": 165.3,
       "reason": "[75% invested rule] Breakdown below OR/VWAP and risk-off selling; weak momentum.",
@@ -397,10 +396,10 @@
       "team": "space",
       "qty": -1.0,
       "entry": 38.68,
-      "price": 38.73,
-      "value": -38.73,
-      "pnl": -0.05,
-      "pnl_pct": -0.0013,
+      "price": 38.81,
+      "value": -38.81,
+      "pnl": -0.13,
+      "pnl_pct": -0.0034,
       "stop": 39.39,
       "target": null,
       "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
@@ -415,10 +414,10 @@
       "team": "tech",
       "qty": -7.0,
       "entry": 323.3,
-      "price": 322.81,
-      "value": -2259.67,
-      "pnl": 3.43,
-      "pnl_pct": 0.0015,
+      "price": 323.62,
+      "value": -2265.34,
+      "pnl": -2.24,
+      "pnl_pct": -0.001,
       "stop": 330.49,
       "target": 311.05,
       "reason": "Breakdown below opening range and VWAP with rvol 2.07 and risk-off selling; short weak stocks.",
@@ -433,10 +432,10 @@
       "team": "defense",
       "qty": 16.0,
       "entry": 78.1,
-      "price": 78.53,
-      "value": 1256.56,
-      "pnl": 6.96,
-      "pnl_pct": 0.0056,
+      "price": 78.02,
+      "value": 1248.32,
+      "pnl": -1.28,
+      "pnl_pct": -0.001,
       "stop": null,
       "target": null,
       "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
@@ -447,32 +446,14 @@
       "setup": null
     },
     {
-      "symbol": "BKSY",
-      "team": "space",
-      "qty": -78.0,
-      "entry": 16.87,
-      "price": 16.82,
-      "value": -1311.96,
-      "pnl": 3.9,
-      "pnl_pct": 0.003,
-      "stop": 17.22,
-      "target": 16.46,
-      "reason": "[75% invested rule] OR breakdown, below VWAP, news but rvol low; weak.",
-      "side": "short",
-      "trailing": false,
-      "scaled": false,
-      "first_stop": 17.22,
-      "setup": "momentum"
-    },
-    {
       "symbol": "CACI",
       "team": "defense",
       "qty": 2.0,
       "entry": 635.1,
-      "price": 637.1,
-      "value": 1274.19,
-      "pnl": 3.99,
-      "pnl_pct": 0.0031,
+      "price": 631.04,
+      "value": 1262.08,
+      "pnl": -8.12,
+      "pnl_pct": -0.0064,
       "stop": 620.9,
       "target": 658.91,
       "reason": "CACI beat Q1 EPS and raised FY guidance, importance 4; above VWAP, m15 +0.6, m60 +3.0, rvol 2.02, trend up; risk_off half size.",
@@ -483,32 +464,14 @@
       "setup": "news catalyst"
     },
     {
-      "symbol": "CMCSA",
-      "team": "entertainment",
-      "qty": -44.0,
-      "entry": 22.79,
-      "price": 23.06,
-      "value": -1014.64,
-      "pnl": -11.88,
-      "pnl_pct": -0.0118,
-      "stop": 23.95,
-      "target": 20.52,
-      "reason": "[75% invested rule] Q3 beat but Q4 restructuring charge and weak intraday momentum; risk-off short favored.",
-      "side": "short",
-      "trailing": false,
-      "scaled": false,
-      "first_stop": 23.95,
-      "setup": "news catalyst"
-    },
-    {
       "symbol": "CME",
       "team": "financials",
       "qty": 4.0,
       "entry": 305.94,
-      "price": 305.29,
-      "value": 1221.14,
-      "pnl": -2.62,
-      "pnl_pct": -0.0021,
+      "price": 305.54,
+      "value": 1222.16,
+      "pnl": -1.6,
+      "pnl_pct": -0.0013,
       "stop": 300.03,
       "target": 318.4,
       "reason": "JPMorgan upgraded CME to Overweight/Buy and raised its price target to $367, per JPM and Benzinga. CME is also breaking above its opening range at $301.99-$305.43 and trading around $306.15, up 3.5% with rvol 1.34. The catalyst plus breakout is a clear intraday setup, though the market is risk-off and the stock is overbought; conviction is high but size will be disciplined.",
@@ -523,10 +486,10 @@
       "team": "consumer",
       "qty": 4.0,
       "entry": 317.6,
-      "price": 317.83,
-      "value": 1271.34,
-      "pnl": 0.94,
-      "pnl_pct": 0.0007,
+      "price": 317.98,
+      "value": 1271.92,
+      "pnl": 1.52,
+      "pnl_pct": 0.0012,
       "stop": 312.43,
       "target": 326.71,
       "reason": "[75% invested rule] DPZ broke above range with positive momentum but low relative volume; smaller intraday long if momentum holds.",
@@ -537,14 +500,32 @@
       "setup": "opening range breakout"
     },
     {
+      "symbol": "FLY",
+      "team": "space",
+      "qty": 37.0,
+      "entry": 17.17,
+      "price": 17.18,
+      "value": 635.66,
+      "pnl": 0.37,
+      "pnl_pct": 0.0006,
+      "stop": 16.45,
+      "target": 18.17,
+      "reason": "[75% invested rule] Firefly Elytra PDR with positive sentiment, but risk-off limits long size.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 16.45,
+      "setup": "news catalyst"
+    },
+    {
       "symbol": "HD",
       "team": "consumer",
       "qty": 3.0,
       "entry": 324.79,
-      "price": 325.16,
-      "value": 975.48,
-      "pnl": 1.11,
-      "pnl_pct": 0.0011,
+      "price": 325.23,
+      "value": 975.69,
+      "pnl": 1.32,
+      "pnl_pct": 0.0014,
       "stop": 319.52,
       "target": 332.5,
       "reason": "[75% invested rule] HD is up 3.3% with a breakout and above VWAP. Strong momentum, but RSI is overbought (85.2), so entry should be cautious.",
@@ -559,10 +540,10 @@
       "team": "financials",
       "qty": -26.0,
       "entry": 97.5,
-      "price": 97.22,
-      "value": -2527.85,
-      "pnl": 7.15,
-      "pnl_pct": 0.0028,
+      "price": 97.53,
+      "value": -2535.78,
+      "pnl": -0.78,
+      "pnl_pct": -0.0003,
       "stop": 99.25,
       "target": 93.41,
       "reason": "HOOD broke below opening range and VWAP with rvol 1.68 and downtrend; risk-off regime favors shorting weak high-volume breakdowns despite minor Dubai approval.",
@@ -577,10 +558,10 @@
       "team": "space",
       "qty": -13.0,
       "entry": 191.56,
-      "price": 190.43,
-      "value": -2475.62,
-      "pnl": 14.66,
-      "pnl_pct": 0.0059,
+      "price": 191.61,
+      "value": -2490.96,
+      "pnl": -0.68,
+      "pnl_pct": -0.0003,
       "stop": 196.2,
       "target": 187.5,
       "reason": "[75% invested rule] OR breakdown, below VWAP, high rvol 5.36, m15 -0.4, m60 -1.8.",
@@ -595,10 +576,10 @@
       "team": "financials",
       "qty": 7.0,
       "entry": 163.01,
-      "price": 163.26,
-      "value": 1142.82,
-      "pnl": 1.75,
-      "pnl_pct": 0.0015,
+      "price": 163.09,
+      "value": 1141.63,
+      "pnl": 0.56,
+      "pnl_pct": 0.0005,
       "stop": 159.66,
       "target": 167.81,
       "reason": "[75% invested rule] ICE broke above its opening range and is up 3.3%, with positive momentum and rvol 1.15; a valid intraday long if risk controls are tight.",
@@ -613,10 +594,10 @@
       "team": "healthcare",
       "qty": 5.0,
       "entry": 431.77,
-      "price": 440.01,
-      "value": 2200.05,
-      "pnl": 41.2,
-      "pnl_pct": 0.0191,
+      "price": 440.65,
+      "value": 2203.28,
+      "pnl": 44.42,
+      "pnl_pct": 0.0206,
       "stop": 437.28,
       "target": 493.83,
       "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
@@ -627,14 +608,32 @@
       "setup": null
     },
     {
+      "symbol": "JNJ",
+      "team": "healthcare",
+      "qty": 4.0,
+      "entry": 265.89,
+      "price": 265.87,
+      "value": 1063.48,
+      "pnl": -0.08,
+      "pnl_pct": -0.0001,
+      "stop": 261.7,
+      "target": 276.32,
+      "reason": "JNJ broke above the opening range high of 263.13, held above VWAP, and has positive clinical data/news; m15/m60 momentum positive and rvol 1.45. Risk-off requires higher conviction, which this setup meets.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 261.7,
+      "setup": "opening range breakout"
+    },
+    {
       "symbol": "LDOS",
       "team": "defense",
       "qty": 20.0,
       "entry": 127.82,
-      "price": 133.23,
-      "value": 2664.6,
-      "pnl": 108.2,
-      "pnl_pct": 0.0423,
+      "price": 132.97,
+      "value": 2659.4,
+      "pnl": 103.0,
+      "pnl_pct": 0.0403,
       "stop": 122.64,
       "target": 137.98,
       "reason": "Secured a new $160M U.S. Cyber Command award and shows steady trend above 20-day moving average with balanced RSI (59.6), offering favorable risk/reward on contract-driven momentum.",
@@ -649,10 +648,10 @@
       "team": "healthcare",
       "qty": 0.972325062,
       "entry": 1315.41,
-      "price": 1311.71,
-      "value": 1275.41,
-      "pnl": -3.6,
-      "pnl_pct": -0.0028,
+      "price": 1312.46,
+      "value": 1276.14,
+      "pnl": -2.87,
+      "pnl_pct": -0.0022,
       "stop": 1286.42,
       "target": 1365.18,
       "reason": "LLY +3.3% on the day, opening range breakout above 1301.26, above VWAP, rvol 2.03, positive m15/m60 momentum, and urgent $5B antibody-drug conjugate manufacturing news; strongest healthcare setup with positive sentiment.",
@@ -667,10 +666,10 @@
       "team": "consumer",
       "qty": 12.0,
       "entry": 101.21,
-      "price": 101.6,
-      "value": 1219.15,
-      "pnl": 4.62,
-      "pnl_pct": 0.0038,
+      "price": 101.7,
+      "value": 1220.4,
+      "pnl": 5.87,
+      "pnl_pct": 0.0048,
       "stop": 99.51,
       "target": 103.56,
       "reason": "LULU is up 4.7% with a strong opening range breakout and positive 15m momentum (+0.5%). It is trading above VWAP (+2.2%) and has the best relative strength in the group today. Longs are half-size due to risk-off, but this is a high-conviction momentum play.",
@@ -685,10 +684,10 @@
       "team": "entertainment",
       "qty": -5.0,
       "entry": 173.65,
-      "price": 174.74,
-      "value": -873.7,
-      "pnl": -5.45,
-      "pnl_pct": -0.0063,
+      "price": 175.49,
+      "value": -877.42,
+      "pnl": -9.18,
+      "pnl_pct": -0.0106,
       "stop": 182.63,
       "target": 156.54,
       "reason": "[75% invested rule] Breakdown below OR/VWAP, weak trend, but low rvol; momentum short.",
@@ -704,8 +703,8 @@
       "qty": 17.0,
       "entry": 148.76,
       "price": 151.75,
-      "value": 2579.84,
-      "pnl": 50.91,
+      "value": 2579.66,
+      "pnl": 50.74,
       "pnl_pct": 0.0201,
       "stop": 143.36,
       "target": 158.96,
@@ -717,14 +716,32 @@
       "setup": null
     },
     {
+      "symbol": "NFLX",
+      "team": "entertainment",
+      "qty": -38.0,
+      "entry": 66.95,
+      "price": 67.18,
+      "value": -2552.75,
+      "pnl": -8.7,
+      "pnl_pct": -0.0034,
+      "stop": 67.96,
+      "target": 63.96,
+      "reason": "Netflix is at two-year lows with multiple analyst downgrades (Argus, Pivotal, UBS) and a negative sentiment score of -0.4. Despite a 2.4% day gain, it is trading below its 50-day average and the broader market is risk-off, making it a prime candidate for a short on any weakness or failure to hold the opening range.",
+      "side": "short",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 67.96,
+      "setup": "news catalyst"
+    },
+    {
       "symbol": "NOC",
       "team": "defense",
       "qty": 4.0,
       "entry": 537.08,
-      "price": 553.98,
-      "value": 2215.9,
-      "pnl": 67.58,
-      "pnl_pct": 0.0315,
+      "price": 552.24,
+      "value": 2208.95,
+      "pnl": 60.63,
+      "pnl_pct": 0.0282,
       "stop": 519.95,
       "target": 581.91,
       "reason": "Strong Q3 earnings beat accompanied by raised FY26 guidance and multiple analyst upgrades/PT increases (Baird to $675, Guggenheim to $640). Showing positive relative strength today (+0.88%).",
@@ -739,10 +756,10 @@
       "team": "defense",
       "qty": 13.0,
       "entry": 191.78,
-      "price": 192.25,
-      "value": 2499.18,
-      "pnl": 6.04,
-      "pnl_pct": 0.0024,
+      "price": 191.99,
+      "value": 2495.87,
+      "pnl": 2.73,
+      "pnl_pct": 0.0011,
       "stop": 178.33,
       "target": 214.76,
       "reason": "Barclays and other analysts upgraded RTX, raising price target to $235; new air\u2011traffic\u2011control system and PT9 engine boost outlook. Sentiment 0.5\u20110.6, importance 3\u20114, price dipped 0.8% today, providing entry at ~191.75 within position size limit.",
@@ -757,10 +774,10 @@
       "team": "financials",
       "qty": 28.0,
       "entry": 91.89,
-      "price": 92.06,
-      "value": 2577.68,
-      "pnl": 4.82,
-      "pnl_pct": 0.0019,
+      "price": 92.16,
+      "value": 2580.53,
+      "pnl": 7.67,
+      "pnl_pct": 0.003,
       "stop": null,
       "target": 105.7,
       "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
@@ -771,14 +788,32 @@
       "setup": null
     },
     {
+      "symbol": "SONY",
+      "team": "entertainment",
+      "qty": 48.0,
+      "entry": 26.2,
+      "price": 26.2,
+      "value": 1257.36,
+      "pnl": -0.24,
+      "pnl_pct": -0.0002,
+      "stop": 25.79,
+      "target": 26.97,
+      "reason": "Sony is up 4.3% on the day with a clear opening range breakout (25.98) and high relative volume (1.95). It is trading above VWAP and has strong 60-minute momentum (+1.2%). While RSI is high (79.3), the momentum and volume support a continuation trade in a risk-off market where relative strength is key.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 25.79,
+      "setup": "opening range breakout"
+    },
+    {
       "symbol": "SPCX",
       "team": "space",
       "qty": -17.0,
       "entry": 149.7,
-      "price": 150.18,
-      "value": -2552.98,
-      "pnl": -8.08,
-      "pnl_pct": -0.0032,
+      "price": 150.1,
+      "value": -2551.7,
+      "pnl": -6.8,
+      "pnl_pct": -0.0027,
       "stop": 151.97,
       "target": 145.23,
       "reason": "[75% invested rule] OR breakdown, below VWAP, m15/m60 negative, rvol 4.68; news but breakdown in risk-off.",
@@ -793,15 +828,15 @@
       "team": "entertainment",
       "qty": 0.901157977,
       "entry": 567.71,
-      "price": 574.5,
-      "value": 517.72,
-      "pnl": 6.12,
-      "pnl_pct": 0.012,
-      "stop": 540.6,
+      "price": 572.23,
+      "value": 515.67,
+      "pnl": 4.07,
+      "pnl_pct": 0.008,
+      "stop": 570.16,
       "target": 625.96,
       "reason": "Pre-market gap +5.8% on Q3 beat, rvol 4.88, strong earnings gap; risk-off long with half size, conviction 4 meets +1.",
       "side": "long",
-      "trailing": false,
+      "trailing": true,
       "scaled": false,
       "first_stop": 540.6,
       "setup": "earnings gap"
@@ -811,10 +846,10 @@
       "team": "entertainment",
       "qty": -5.0,
       "entry": 176.98,
-      "price": 177.25,
-      "value": -886.23,
-      "pnl": -1.32,
-      "pnl_pct": -0.0015,
+      "price": 177.62,
+      "value": -888.08,
+      "pnl": -3.17,
+      "pnl_pct": -0.0036,
       "stop": 185.83,
       "target": 159.29,
       "reason": "[75% invested rule] Breakdown below OR/VWAP, m60 -1.6, risk-off short.",
@@ -829,10 +864,10 @@
       "team": "consumer",
       "qty": -4.0,
       "entry": 380.45,
-      "price": 382.81,
-      "value": -1531.24,
-      "pnl": -9.43,
-      "pnl_pct": -0.0062,
+      "price": 382.75,
+      "value": -1531.0,
+      "pnl": -9.19,
+      "pnl_pct": -0.006,
       "stop": 393.74,
       "target": 366.98,
       "reason": "Tesla sold off after Q3 earnings despite the beat on delivery weakness and 2026 CapEx cut; shares are below VWAP and momentum is down, fitting a risk-off short.",
@@ -847,10 +882,10 @@
       "team": "tech",
       "qty": -5.0,
       "entry": 277.5,
-      "price": 279.13,
-      "value": -1395.65,
-      "pnl": -8.15,
-      "pnl_pct": -0.0059,
+      "price": 279.8,
+      "value": -1399.0,
+      "pnl": -11.5,
+      "pnl_pct": -0.0083,
       "stop": 284.32,
       "target": 267.6,
       "reason": "[75% invested rule] High-volume breakdown below VWAP and Mizuho PT cut; favored short in risk-off.",
@@ -865,10 +900,10 @@
       "team": "financials",
       "qty": 6.0,
       "entry": 409.48,
-      "price": 411.98,
-      "value": 2471.88,
-      "pnl": 15.0,
-      "pnl_pct": 0.0061,
+      "price": 411.64,
+      "value": 2469.84,
+      "pnl": 12.96,
+      "pnl_pct": 0.0053,
       "stop": 388.55,
       "target": 449.91,
       "reason": "",
@@ -877,6 +912,24 @@
       "scaled": false,
       "first_stop": null,
       "setup": null
+    },
+    {
+      "symbol": "VSAT",
+      "team": "space",
+      "qty": -22.0,
+      "entry": 59.05,
+      "price": 59.3,
+      "value": -1304.71,
+      "pnl": -5.61,
+      "pnl_pct": -0.0043,
+      "stop": 60.56,
+      "target": 57.6,
+      "reason": "VSAT broke below opening range and VWAP, weak momentum, day -5.8%, risk-off favors shorting breakdown.",
+      "side": "short",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 60.56,
+      "setup": "other"
     }
   ],
   "trades_today": [
@@ -1284,11 +1337,11 @@
       "est_price": 16.97,
       "entry_price": 16.87,
       "side": "short",
-      "exit_price": null,
-      "exit_reason": null,
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "exit_price": 16.94,
+      "exit_reason": "manager_sell",
+      "pnl": -6.78,
+      "pnl_pct": -0.0052,
+      "status": "closed",
       "conviction": 2,
       "reason": "[75% invested rule] OR breakdown, below VWAP, news but rvol low; weak.",
       "stop_price": 17.22,
@@ -1309,7 +1362,7 @@
       "status": "open",
       "conviction": 4,
       "reason": "Pre-market gap +5.8% on Q3 beat, rvol 4.88, strong earnings gap; risk-off long with half size, conviction 4 meets +1.",
-      "stop_price": 540.6,
+      "stop_price": 570.16,
       "take_profit_price": 625.96
     },
     {
@@ -1320,11 +1373,11 @@
       "est_price": 22.805,
       "entry_price": 22.79,
       "side": "short",
-      "exit_price": null,
+      "exit_price": 23.06,
       "exit_reason": "manager_sell",
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "pnl": -12.89,
+      "pnl_pct": -0.0129,
+      "status": "closed",
       "conviction": 3,
       "reason": "[75% invested rule] Q3 beat but Q4 restructuring charge and weak intraday momentum; risk-off short favored.",
       "stop_price": 23.95,
@@ -1694,15 +1747,15 @@
       "time": "11:48",
       "team": "entertainment",
       "symbol": "NFLX",
-      "qty": 38,
+      "qty": 38.0,
       "est_price": 66.625,
-      "entry_price": null,
+      "entry_price": 66.948684,
       "side": "short",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 4,
       "reason": "Netflix is at two-year lows with multiple analyst downgrades (Argus, Pivotal, UBS) and a negative sentiment score of -0.4. Despite a 2.4% day gain, it is trading below its 50-day average and the broader market is risk-off, making it a prime candidate for a short on any weakness or failure to hold the opening range.",
       "stop_price": 67.96,
@@ -1712,19 +1765,73 @@
       "time": "11:48",
       "team": "entertainment",
       "symbol": "SONY",
-      "qty": 48,
+      "qty": 48.0,
       "est_price": 26.18,
-      "entry_price": null,
+      "entry_price": 26.2,
       "side": "long",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 4,
       "reason": "Sony is up 4.3% on the day with a clear opening range breakout (25.98) and high relative volume (1.95). It is trading above VWAP and has strong 60-minute momentum (+1.2%). While RSI is high (79.3), the momentum and volume support a continuation trade in a risk-off market where relative strength is key.",
       "stop_price": 25.79,
       "take_profit_price": 26.97
+    },
+    {
+      "time": "11:51",
+      "team": "space",
+      "symbol": "VSAT",
+      "qty": 22.0,
+      "est_price": 59.08,
+      "entry_price": 59.05,
+      "side": "short",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 3,
+      "reason": "VSAT broke below opening range and VWAP, weak momentum, day -5.8%, risk-off favors shorting breakdown.",
+      "stop_price": 60.56,
+      "take_profit_price": 57.6
+    },
+    {
+      "time": "11:51",
+      "team": "space",
+      "symbol": "FLY",
+      "qty": 37.0,
+      "est_price": 17.14,
+      "entry_price": 17.17,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 3,
+      "reason": "[75% invested rule] Firefly Elytra PDR with positive sentiment, but risk-off limits long size.",
+      "stop_price": 16.45,
+      "take_profit_price": 18.17
+    },
+    {
+      "time": "11:51",
+      "team": "healthcare",
+      "symbol": "JNJ",
+      "qty": 4.0,
+      "est_price": 265.69,
+      "entry_price": 265.89,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 4,
+      "reason": "JNJ broke above the opening range high of 263.13, held above VWAP, and has positive clinical data/news; m15/m60 momentum positive and rvol 1.45. Risk-off requires higher conviction, which this setup meets.",
+      "stop_price": 261.7,
+      "take_profit_price": 276.32
     }
   ],
   "blocked_today": [
@@ -2023,9 +2130,39 @@
       "symbol": "FOXA",
       "action": "BUY",
       "reason": "team already has the maximum number of positions"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:51",
+      "team": "space",
+      "symbol": "RKLB",
+      "action": "SHORT",
+      "reason": "one share costs $51.13, more than the $20.29 allowed"
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-10-22",
+      "team": "space",
+      "symbol": "BKSY",
+      "entry_price": 16.87,
+      "exit_price": 16.94,
+      "exit_reason": "manager_sell",
+      "pnl": -6.78,
+      "pnl_pct": -0.0052,
+      "reason": "[75% invested rule] OR breakdown, below VWAP, news but rvol low; weak."
+    },
+    {
+      "date": "2026-10-22",
+      "team": "entertainment",
+      "symbol": "CMCSA",
+      "entry_price": 22.79,
+      "exit_price": 23.06,
+      "exit_reason": "manager_sell",
+      "pnl": -12.89,
+      "pnl_pct": -0.0129,
+      "reason": "[75% invested rule] Q3 beat but Q4 restructuring charge and weak intraday momentum; risk-off short favored."
+    },
     {
       "date": "2026-10-21",
       "team": "healthcare",
@@ -3455,13 +3592,13 @@
     }
   },
   "mood": {
-    "time": "2026-10-22T11:44-04:00",
+    "time": "2026-10-22T11:54-04:00",
     "regime": "risk_off",
-    "spy": -0.0128,
-    "qqq": -0.0238,
-    "fear_vixy": 0.0486,
+    "spy": -0.0119,
+    "qqq": -0.023,
+    "fear_vixy": 0.0438,
     "breadth": 0.57,
-    "why": "index down -2.4%",
+    "why": "index down -2.3%",
     "note": "Market is falling hard or fear is spiking. Longs are half size and need conviction +1. Shorting weak stocks (below VWAP, breaking down) is favored."
   },
   "preflight": {
@@ -5319,13 +5456,13 @@
           "trail_active": null,
           "first_stop": 17.22,
           "entry_price": 16.87,
-          "exit_price": null,
-          "exit_time": null,
-          "exit_reason": null,
-          "exit_note": null,
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "exit_price": 16.94,
+          "exit_time": "2026-10-22T15:51:28.292831712Z",
+          "exit_reason": "manager_sell",
+          "exit_note": "Stalled short after BlackSky contract; bounce with low rvol and price above VWAP, momentum failed. Close position.",
+          "pnl": -6.78,
+          "pnl_pct": -0.0052,
+          "status": "closed",
           "conviction": 2,
           "reason": "[75% invested rule] OR breakdown, below VWAP, news but rvol low; weak.",
           "stop_price": 17.22,
@@ -5357,6 +5494,60 @@
           "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
           "stop_price": 39.39,
           "take_profit_price": null
+        },
+        {
+          "id": "space-VSAT-202610221151-0a42",
+          "date": "2026-10-22",
+          "time": "11:51",
+          "symbol": "VSAT",
+          "kind": "shares",
+          "qty": 22.0,
+          "dollars": 1299.76,
+          "est_price": 59.08,
+          "setup": "other",
+          "side": "short",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 60.56,
+          "entry_price": 59.05,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 3,
+          "reason": "VSAT broke below opening range and VWAP, weak momentum, day -5.8%, risk-off favors shorting breakdown.",
+          "stop_price": 60.56,
+          "take_profit_price": 57.6
+        },
+        {
+          "id": "space-FLY-202610221151-cb21",
+          "date": "2026-10-22",
+          "time": "11:51",
+          "symbol": "FLY",
+          "kind": "shares",
+          "qty": 37.0,
+          "dollars": 634.18,
+          "est_price": 17.14,
+          "setup": "news catalyst",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 16.45,
+          "entry_price": 17.17,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 3,
+          "reason": "[75% invested rule] Firefly Elytra PDR with positive sentiment, but risk-off limits long size.",
+          "stop_price": 16.45,
+          "take_profit_price": 18.17
         }
       ],
       "blocked": [
@@ -5415,6 +5606,14 @@
           "symbol": "VSAT",
           "action": "SHORT",
           "reason": "one share costs $59.16, more than the $1.70 allowed"
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:51",
+          "team": "space",
+          "symbol": "RKLB",
+          "action": "SHORT",
+          "reason": "one share costs $51.13, more than the $20.29 allowed"
         }
       ],
       "plans": [
@@ -5561,6 +5760,47 @@
             "SHORT RDW blocked: one share costs $8.22, more than the $1.70 allowed",
             "SHORT VSAT blocked: one share costs $59.16, more than the $1.70 allowed"
           ]
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:51",
+          "trigger": "must invest $3,197 more (75% rule)",
+          "market_view": "Market is risk-off, with SPY down 1.3% and QQQ down 2.4%, VIXY up 4.9%. Space names are mostly breaking lower, but news is mixed. I favor shorting weak breakdowns and staying defensive.",
+          "experiment": "Add trailing stops that activate after a 3% favorable move to lock in gains",
+          "decisions": [
+            {
+              "symbol": "BKSY",
+              "action": "SELL",
+              "conviction": 3,
+              "reason": "Stalled short after BlackSky contract; bounce with low rvol and price above VWAP, momentum failed. Close position.",
+              "stop_loss_pct": 0.0,
+              "take_profit_pct": 0.0
+            },
+            {
+              "symbol": "VSAT",
+              "action": "SHORT",
+              "conviction": 3,
+              "reason": "VSAT broke below opening range and VWAP, weak momentum, day -5.8%, risk-off favors shorting breakdown.",
+              "stop_loss_pct": 0.025,
+              "take_profit_pct": 0.02
+            },
+            {
+              "symbol": "RKLB",
+              "action": "SHORT",
+              "conviction": 3,
+              "reason": "RKLB broke opening range, weak momentum and oversold, risk-off; short breakdown.",
+              "stop_loss_pct": 0.045,
+              "take_profit_pct": 0.04
+            }
+          ],
+          "results": [
+            "SELL BKSY",
+            "SHORT VSAT x22 (~$1299.76)",
+            "SHORT RKLB blocked: one share costs $51.13, more than the $20.29 allowed",
+            "BUY FLY x37 (~$634.18) [deploy]",
+            "WATCHLIST remove rejected BA",
+            "WATCHLIST remove rejected LUNR"
+          ]
         }
       ],
       "lessons": [
@@ -5600,8 +5840,8 @@
       "pnl_days": [
         {
           "date": "2026-10-22",
-          "realized": -493.79,
-          "cum": -493.79
+          "realized": -500.57,
+          "cum": -500.57
         }
       ],
       "watchlist": {
@@ -5658,9 +5898,21 @@
             "action": "remove_rejected",
             "symbol": "SATS",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-22T11:51-04:00",
+            "action": "remove_rejected",
+            "symbol": "BA",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-22T11:51-04:00",
+            "action": "remove_rejected",
+            "symbol": "LUNR",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-22T11:33-04:00"
+        "updated": "2026-10-22T11:51-04:00"
       },
       "research": {
         "time": "2026-10-22T11:26-04:00",
@@ -6197,7 +6449,7 @@
           "setup": "earnings gap",
           "side": "long",
           "partials": null,
-          "trail_active": null,
+          "trail_active": true,
           "first_stop": 540.6,
           "entry_price": 567.714,
           "exit_price": null,
@@ -6209,7 +6461,7 @@
           "status": "open",
           "conviction": 4,
           "reason": "Pre-market gap +5.8% on Q3 beat, rvol 4.88, strong earnings gap; risk-off long with half size, conviction 4 meets +1.",
-          "stop_price": 540.6,
+          "stop_price": 570.16,
           "take_profit_price": 625.96
         },
         {
@@ -6227,13 +6479,13 @@
           "trail_active": null,
           "first_stop": 23.95,
           "entry_price": 22.79,
-          "exit_price": null,
-          "exit_time": null,
+          "exit_price": 23.06,
+          "exit_time": "2026-10-22T15:48:38.217149958Z",
           "exit_reason": "manager_sell",
           "exit_note": "Closing the existing short position as the stock has broken out above the opening range (22.88) and is trading above VWAP with high relative volume (2.62). The initial thesis of weakness has failed, and I need to free up capital to deploy into stronger setups to meet the 75% investment mandate.",
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "pnl": -12.89,
+          "pnl_pct": -0.0129,
+          "status": "closed",
           "conviction": 3,
           "reason": "[75% invested rule] Q3 beat but Q4 restructuring charge and weak intraday momentum; risk-off short favored.",
           "stop_price": 23.95,
@@ -6299,7 +6551,7 @@
           "time": "11:48",
           "symbol": "NFLX",
           "kind": "shares",
-          "qty": 38,
+          "qty": 38.0,
           "dollars": 2531.75,
           "est_price": 66.625,
           "setup": "news catalyst",
@@ -6307,14 +6559,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 67.96,
-          "entry_price": null,
+          "entry_price": 66.948684,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 4,
           "reason": "Netflix is at two-year lows with multiple analyst downgrades (Argus, Pivotal, UBS) and a negative sentiment score of -0.4. Despite a 2.4% day gain, it is trading below its 50-day average and the broader market is risk-off, making it a prime candidate for a short on any weakness or failure to hold the opening range.",
           "stop_price": 67.96,
@@ -6326,7 +6578,7 @@
           "time": "11:48",
           "symbol": "SONY",
           "kind": "shares",
-          "qty": 48,
+          "qty": 48.0,
           "dollars": 1256.64,
           "est_price": 26.18,
           "setup": "opening range breakout",
@@ -6334,14 +6586,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 25.79,
-          "entry_price": null,
+          "entry_price": 26.2,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 4,
           "reason": "Sony is up 4.3% on the day with a clear opening range breakout (25.98) and high relative volume (1.95). It is trading above VWAP and has strong 60-minute momentum (+1.2%). While RSI is high (79.3), the momentum and volume support a continuation trade in a risk-off market where relative strength is key.",
           "stop_price": 25.79,
@@ -6577,8 +6829,8 @@
       "pnl_days": [
         {
           "date": "2026-10-22",
-          "realized": -22.7,
-          "cum": -22.7
+          "realized": -35.59,
+          "cum": -35.59
         }
       ],
       "watchlist": {
@@ -7643,6 +7895,17 @@
             "SHORT AMAT blocked: one share costs $381.29, more than the $9.29 allowed",
             "BUY ADBE x4 (~$1077.52) [deploy]"
           ]
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:51",
+          "trigger": "big news on ['ADBE']",
+          "market_view": "Risk-off tape is dominant: SPY -1.3%, QQQ -2.4%, VIXY +4.9%, and broad market down -2.4%. Price action shows breakdowns below VWAP and opening ranges for many tech longs, while only a few relative-strength names are holding. Market mood lowers conviction for new longs and favors shorting weak momentum breakdowns, but timing and final 15-minute cutoff limit new trades.",
+          "experiment": "Testing risk-off breakdown momentum short after failed VWAP reclaims, using strict stops and partial targets; no new positions in final 15 minutes.",
+          "decisions": [],
+          "results": [
+            "WATCHLIST removed ONDS"
+          ]
         }
       ],
       "lessons": [],
@@ -7673,8 +7936,7 @@
           "AMAT",
           "MU",
           "PANW",
-          "ANET",
-          "ONDS"
+          "ANET"
         ],
         "seed": [
           "AAPL",
@@ -7710,15 +7972,31 @@
             "symbol": "ONDS",
             "reason": "Palantir made sovereignty a selling point; ONDS appeared in high-attention news flow and is within tech field.",
             "by": "manager"
+          },
+          {
+            "time": "2026-10-22T11:51-04:00",
+            "action": "removed",
+            "symbol": "ONDS",
+            "reason": "Extended downtrend and no fresh catalyst; below VWAP and opening-range breakdown, not a focus for long setups.",
+            "by": "manager"
           }
         ],
         "rejected": [],
-        "updated": "2026-10-22T11:35-04:00"
+        "updated": "2026-10-22T11:51-04:00"
       },
       "research": {
         "time": "2026-10-22T11:27-04:00",
         "news": {
           "findings": [
+            {
+              "symbol": "ADBE",
+              "sentiment": 0.8,
+              "importance": 4,
+              "unconfirmed_rumor": false,
+              "summary": "Adobe stock surging due to software rotation and partnership with BWT Alpine F1 Team.",
+              "source": "benzinga",
+              "time": "11:49"
+            },
             {
               "symbol": "NVDA",
               "sentiment": 0.5,
@@ -7811,8 +8089,8 @@
             }
           ],
           "urgent": [],
-          "overall": "Positive sentiment for NVDA due to downplayed memory glut fears, while Micron remains uncertain, leading to a mixed mood across the sector.",
-          "items_read": 51
+          "overall": "Positive sentiment for Adobe due to recent surge and partnership announcement. Other IT stocks show no new developments, maintaining a neutral stance.",
+          "items_read": 52
         },
         "social": {
           "findings": [],
@@ -9665,6 +9943,15 @@
           "findings": [
             {
               "symbol": "CME",
+              "sentiment": 0.5,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Barclays maintains an equal-weight rating on CME Group and raises its price target to $321.",
+              "source": "benzinga",
+              "time": "11:54"
+            },
+            {
+              "symbol": "CME",
               "sentiment": 0.8,
               "importance": 3,
               "unconfirmed_rumor": false,
@@ -9730,8 +10017,8 @@
             }
           ],
           "urgent": [],
-          "overall": "The financial services sector news flow is light, with the main update being a modestly positive Wells Fargo rating action on CME Group. Broader sentiment around the group is neutral-to-slightly-positive, and no urgent high-impact developments were reported.",
-          "items_read": 49
+          "overall": "Barclays' upgrade signals a positive outlook for CME, but no other news suggests significant movement for the sector today. The overall mood remains cautiously optimistic for CME while other financial services stocks see no new developments.",
+          "items_read": 50
         },
         "social": {
           "findings": [],
@@ -10376,6 +10663,33 @@
           "reason": "LLY +3.3% on the day, opening range breakout above 1301.26, above VWAP, rvol 2.03, positive m15/m60 momentum, and urgent $5B antibody-drug conjugate manufacturing news; strongest healthcare setup with positive sentiment.",
           "stop_price": 1286.42,
           "take_profit_price": 1365.18
+        },
+        {
+          "id": "healthcare-JNJ-202610221151-884b",
+          "date": "2026-10-22",
+          "time": "11:51",
+          "symbol": "JNJ",
+          "kind": "shares",
+          "qty": 4.0,
+          "dollars": 1062.76,
+          "est_price": 265.69,
+          "setup": "opening range breakout",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 261.7,
+          "entry_price": 265.89,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 4,
+          "reason": "JNJ broke above the opening range high of 263.13, held above VWAP, and has positive clinical data/news; m15/m60 momentum positive and rvol 1.45. Risk-off requires higher conviction, which this setup meets.",
+          "stop_price": 261.7,
+          "take_profit_price": 276.32
         }
       ],
       "blocked": [
@@ -10561,6 +10875,26 @@
             "BUY VRTX blocked: conviction 2 is below the minimum 3 (risk-off market)",
             "WATCHLIST removed HCA"
           ]
+        },
+        {
+          "date": "2026-10-22",
+          "time": "11:51",
+          "trigger": "must invest $976 more (75% rule)",
+          "market_view": "Market is in risk-off with SPY -1.3%, QQQ -2.4%, and VIXY +4.9%, while long positions are half size and need conviction +1. No broad sector news is driving; stock-specific catalysts are key, and I favor clear OR breakouts above VWAP with volume or short breakdowns below VWAP. JNJ fits as a high-conviction long because it broke above its OR, held above VWAP, and has positive clinical news, but size will be reduced in this risk regime.",
+          "experiment": "opening range breakout",
+          "decisions": [
+            {
+              "symbol": "JNJ",
+              "action": "BUY",
+              "conviction": 4,
+              "reason": "JNJ broke above the opening range high of 263.13, held above VWAP, and has positive clinical data/news; m15/m60 momentum positive and rvol 1.45. Risk-off requires higher conviction, which this setup meets.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.04
+            }
+          ],
+          "results": [
+            "BUY JNJ x4 (~$1062.76)"
+          ]
         }
       ],
       "lessons": [],
@@ -10628,12 +10962,21 @@
           }
         ],
         "rejected": [],
-        "updated": "2026-10-22T11:35-04:00"
+        "updated": "2026-10-22T11:51-04:00"
       },
       "research": {
         "time": "2026-10-22T11:29-04:00",
         "news": {
           "findings": [
+            {
+              "symbol": "DHR",
+              "sentiment": 0.6,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Barclays maintains overweight on Danaher and raises price target to $260.",
+              "source": "benzinga",
+              "time": "11:54"
+            },
             {
               "symbol": "ABT",
               "sentiment": 0.8,
@@ -10709,8 +11052,8 @@
             }
           ],
           "urgent": [],
-          "overall": "After reviewing the recent news and SEC filings, we found no significant findings affecting the Healthcare sector stocks. The team should continue monitoring the sector for future developments.",
-          "items_read": 46
+          "overall": "The healthcare sector remains largely neutral with a slight positive tilt due to Barclays' upbeat stance on Danaher. No major catalysts are expected to move the broader group today.",
+          "items_read": 47
         },
         "social": {
           "findings": [],
@@ -11491,6 +11834,14 @@
       "symbol": "FOXA",
       "action": "BUY",
       "reason": "team already has the maximum number of positions"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "11:51",
+      "team": "space",
+      "symbol": "RKLB",
+      "action": "SHORT",
+      "reason": "one share costs $51.13, more than the $20.29 allowed"
     }
   ]
 }
