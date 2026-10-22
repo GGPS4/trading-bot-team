@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-22T09:35-04:00",
+  "time": "2026-10-22T10:54-04:00",
   "phase": "morning",
   "overnight": [
     {
@@ -276,27 +276,67 @@
   "news": {
     "findings": [
       {
-        "symbol": "TXN",
-        "sentiment": 0.7,
-        "importance": 4,
+        "symbol": "IBM",
+        "sentiment": 0.5,
+        "importance": 5,
         "unconfirmed_rumor": false,
-        "summary": "JP Morgan raised its price target to $365 for Texas Instruments and kept an overweight rating.",
-        "source": "benzinga",
-        "time": "10:01"
+        "summary": "IBM reported Q3 2026 revenue of $17.1 billion and beat expectations, helped by recovery in previously delayed large deals, though shares were lower.",
+        "source": "fiscal.ai"
       },
       {
-        "symbol": "IBM",
-        "sentiment": 0.7,
-        "importance": 4,
+        "symbol": "NVDA",
+        "sentiment": 1.0,
+        "importance": 3,
         "unconfirmed_rumor": false,
-        "summary": "JP Morgan raised its price target to $269 for IBM and kept an overweight rating.",
-        "source": "benzinga",
-        "time": "10:01"
+        "summary": "Nvidia CEO Jensen Huang said AI agent and GPU demand remain strong, with token and GPU demand going through the roof.",
+        "source": "Benzinga"
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": 1.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Nvidia CEO Jensen Huang said Nvidia GPUs could last over 8 years and carry high residual value, calling them among the lowest risk assets for lenders.",
+        "source": "Benzinga"
+      },
+      {
+        "symbol": "TXN",
+        "sentiment": 1.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Texas Instruments beat Q3 and saw data center demand strength, while multiple analysts including JPMorgan and Stifel raised price targets.",
+        "source": "Benzinga"
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": 1.0,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Tigress Financial initiated coverage on Broadcom with a Buy rating and announced a $600 price target.",
+        "source": "fiscal.ai"
+      },
+      {
+        "symbol": "ORCL",
+        "sentiment": 1.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Cantor Fitzgerald reiterated an Overweight rating on Oracle and maintained a $284 price target.",
+        "source": "Benzinga"
+      },
+      {
+        "symbol": "MU",
+        "sentiment": 1.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Needham reiterated a Buy on Micron and maintained a $1650 price target.",
+        "source": "Benzinga"
       }
     ],
-    "urgent": [],
-    "overall": "Analyst upgrades for Texas Instruments and IBM boost sentiment in the IT sector. The raised price targets suggest modest upside potential for these stocks today.",
-    "items_read": 2
+    "urgent": [
+      "IBM"
+    ],
+    "overall": "The IT group is showing a cautiously positive bias driven by AI infrastructure demand, Nvidia executive commentary, and upbeat earnings or analyst commentary, but offset by geopolitical chip competition and semiconductor guidance risks. NVDA and IBM were the most salient names, with TXN, AVGO, ORCL, and MU also receiving positive analyst or demand signals.",
+    "items_read": 50
   },
   "social": {
     "findings": [],
@@ -305,11 +345,110 @@
     "items_read": 0
   },
   "technicals": {
+    "ANET": {
+      "price": 172.35,
+      "change_1d": -0.0651,
+      "change_5d": -0.0711,
+      "change_20d": -0.1621,
+      "above_20d_avg": false,
+      "above_50d_avg": false,
+      "rsi_14": 28.8,
+      "daily_volatility": 0.0282,
+      "avg_volume_20d": 281311
+    },
+    "NOW": {
+      "price": 155.7,
+      "change_1d": 0.0169,
+      "change_5d": 0.0482,
+      "change_20d": 0.1299,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 77.1,
+      "daily_volatility": 0.0242,
+      "avg_volume_20d": 459202
+    },
+    "AAPL": {
+      "price": 344.11,
+      "change_1d": 0.0005,
+      "change_5d": 0.0064,
+      "change_20d": 0.0245,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 67.7,
+      "daily_volatility": 0.0102,
+      "avg_volume_20d": 1127270
+    },
+    "AMD": {
+      "price": 513.34,
+      "change_1d": -0.071,
+      "change_5d": -0.0868,
+      "change_20d": -0.1839,
+      "above_20d_avg": false,
+      "above_50d_avg": false,
+      "rsi_14": 24.1,
+      "daily_volatility": 0.0296,
+      "avg_volume_20d": 509740
+    },
+    "CRM": {
+      "price": 247.19,
+      "change_1d": 0.0225,
+      "change_5d": 0.002,
+      "change_20d": 0.0368,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 62.6,
+      "daily_volatility": 0.0195,
+      "avg_volume_20d": 308931
+    },
+    "CSCO": {
+      "price": 104.03,
+      "change_1d": -0.0302,
+      "change_5d": -0.0528,
+      "change_20d": -0.0273,
+      "above_20d_avg": false,
+      "above_50d_avg": false,
+      "rsi_14": 35.6,
+      "daily_volatility": 0.0201,
+      "avg_volume_20d": 602875
+    },
+    "IBM": {
+      "price": 246.88,
+      "change_1d": -0.0179,
+      "change_5d": 0.0547,
+      "change_20d": 0.0872,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 75.8,
+      "daily_volatility": 0.0169,
+      "avg_volume_20d": 183390
+    },
+    "ORCL": {
+      "price": 126.45,
+      "change_1d": -0.0205,
+      "change_5d": -0.0596,
+      "change_20d": -0.0937,
+      "above_20d_avg": false,
+      "above_50d_avg": false,
+      "rsi_14": 36.1,
+      "daily_volatility": 0.0341,
+      "avg_volume_20d": 902234
+    },
+    "ADBE": {
+      "price": 265.58,
+      "change_1d": 0.0412,
+      "change_5d": 0.0552,
+      "change_20d": 0.1119,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 70.5,
+      "daily_volatility": 0.0221,
+      "avg_volume_20d": 155229
+    },
     "AMAT": {
-      "price": 382.04,
-      "change_1d": -0.0653,
-      "change_5d": -0.1117,
-      "change_20d": -0.1942,
+      "price": 381.81,
+      "change_1d": -0.0658,
+      "change_5d": -0.1123,
+      "change_20d": -0.1947,
       "above_20d_avg": false,
       "above_50d_avg": false,
       "rsi_14": 5.2,
@@ -317,208 +456,92 @@
       "avg_volume_20d": 293296
     },
     "AVGO": {
-      "price": 328.9,
-      "change_1d": -0.0265,
-      "change_5d": -0.0447,
-      "change_20d": -0.0613,
-      "above_20d_avg": false,
-      "above_50d_avg": false,
-      "rsi_14": 36.3,
-      "daily_volatility": 0.0225,
-      "avg_volume_20d": 695398
-    },
-    "IBM": {
-      "price": 246.41,
-      "change_1d": -0.0198,
-      "change_5d": 0.0527,
-      "change_20d": 0.0852,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 75.1,
-      "daily_volatility": 0.017,
-      "avg_volume_20d": 183390
-    },
-    "NOW": {
-      "price": 155.23,
-      "change_1d": 0.0138,
-      "change_5d": 0.045,
-      "change_20d": 0.1265,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 76.9,
-      "daily_volatility": 0.0241,
-      "avg_volume_20d": 459202
-    },
-    "ANET": {
-      "price": 176.5,
-      "change_1d": -0.0427,
-      "change_5d": -0.0488,
-      "change_20d": -0.142,
-      "above_20d_avg": false,
-      "above_50d_avg": false,
-      "rsi_14": 30.3,
-      "daily_volatility": 0.0263,
-      "avg_volume_20d": 281311
-    },
-    "CRM": {
-      "price": 246.38,
-      "change_1d": 0.0192,
-      "change_5d": -0.0013,
-      "change_20d": 0.0335,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 62.0,
-      "daily_volatility": 0.0193,
-      "avg_volume_20d": 308931
-    },
-    "ORCL": {
-      "price": 126.86,
-      "change_1d": -0.0173,
-      "change_5d": -0.0566,
-      "change_20d": -0.0908,
-      "above_20d_avg": false,
-      "above_50d_avg": false,
-      "rsi_14": 36.4,
-      "daily_volatility": 0.0341,
-      "avg_volume_20d": 902234
-    },
-    "QCOM": {
-      "price": 174.88,
-      "change_1d": -0.017,
-      "change_5d": -0.0194,
-      "change_20d": -0.1,
-      "above_20d_avg": false,
-      "above_50d_avg": false,
-      "rsi_14": 37.0,
-      "daily_volatility": 0.0243,
-      "avg_volume_20d": 333450
-    },
-    "CSCO": {
-      "price": 105.73,
-      "change_1d": -0.0144,
-      "change_5d": -0.0374,
-      "change_20d": -0.0114,
-      "above_20d_avg": false,
-      "above_50d_avg": false,
-      "rsi_14": 37.9,
-      "daily_volatility": 0.0193,
-      "avg_volume_20d": 602875
-    },
-    "INTU": {
-      "price": 340.56,
-      "change_1d": 0.0151,
-      "change_5d": 0.0315,
-      "change_20d": 0.2289,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 87.0,
-      "daily_volatility": 0.0201,
-      "avg_volume_20d": 160862
-    },
-    "MSFT": {
-      "price": 530.09,
-      "change_1d": -0.0051,
-      "change_5d": -0.0172,
-      "change_20d": 0.0653,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 58.5,
-      "daily_volatility": 0.0133,
-      "avg_volume_20d": 706901
-    },
-    "MU": {
-      "price": 891.88,
-      "change_1d": -0.0238,
-      "change_5d": -0.0424,
-      "change_20d": -0.1743,
-      "above_20d_avg": false,
-      "above_50d_avg": false,
-      "rsi_14": 26.4,
-      "daily_volatility": 0.0271,
-      "avg_volume_20d": 628026
-    },
-    "PANW": {
-      "price": 361.24,
-      "change_1d": 0.0404,
-      "change_5d": -0.0243,
+      "price": 324.46,
+      "change_1d": -0.0397,
+      "change_5d": -0.0576,
       "change_20d": -0.074,
       "above_20d_avg": false,
       "above_50d_avg": false,
-      "rsi_14": 37.5,
-      "daily_volatility": 0.0341,
+      "rsi_14": 34.7,
+      "daily_volatility": 0.0234,
+      "avg_volume_20d": 695398
+    },
+    "PANW": {
+      "price": 356.32,
+      "change_1d": 0.0262,
+      "change_5d": -0.0376,
+      "change_20d": -0.0866,
+      "above_20d_avg": false,
+      "above_50d_avg": false,
+      "rsi_14": 35.7,
+      "daily_volatility": 0.0333,
       "avg_volume_20d": 204935
     },
-    "AAPL": {
-      "price": 345.75,
-      "change_1d": 0.0053,
-      "change_5d": 0.0112,
-      "change_20d": 0.0294,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 69.4,
-      "daily_volatility": 0.0102,
-      "avg_volume_20d": 1127270
-    },
-    "ADBE": {
-      "price": 259.38,
-      "change_1d": 0.0169,
-      "change_5d": 0.0305,
-      "change_20d": 0.0859,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 67.5,
-      "daily_volatility": 0.0207,
-      "avg_volume_20d": 155229
-    },
-    "AMD": {
-      "price": 523.1,
-      "change_1d": -0.0534,
-      "change_5d": -0.0695,
-      "change_20d": -0.1684,
+    "QCOM": {
+      "price": 174.75,
+      "change_1d": -0.0177,
+      "change_5d": -0.0202,
+      "change_20d": -0.1007,
       "above_20d_avg": false,
       "above_50d_avg": false,
-      "rsi_14": 25.2,
-      "daily_volatility": 0.028,
-      "avg_volume_20d": 509740
+      "rsi_14": 36.9,
+      "daily_volatility": 0.0243,
+      "avg_volume_20d": 333450
     },
     "NVDA": {
-      "price": 218.15,
-      "change_1d": -0.0169,
-      "change_5d": 0.0038,
-      "change_20d": -0.0287,
+      "price": 213.18,
+      "change_1d": -0.0393,
+      "change_5d": -0.0191,
+      "change_20d": -0.0508,
       "above_20d_avg": false,
       "above_50d_avg": false,
-      "rsi_14": 33.2,
-      "daily_volatility": 0.0156,
+      "rsi_14": 30.0,
+      "daily_volatility": 0.0174,
       "avg_volume_20d": 2951514
     },
-    "TXN": {
-      "price": 284.68,
-      "change_1d": -0.0001,
-      "change_5d": 0.0198,
-      "change_20d": 0.052,
+    "INTU": {
+      "price": 347.99,
+      "change_1d": 0.0372,
+      "change_5d": 0.054,
+      "change_20d": 0.2558,
       "above_20d_avg": true,
       "above_50d_avg": true,
-      "rsi_14": 40.1,
-      "daily_volatility": 0.0171,
+      "rsi_14": 88.1,
+      "daily_volatility": 0.0209,
+      "avg_volume_20d": 160862
+    },
+    "MSFT": {
+      "price": 524.89,
+      "change_1d": -0.0148,
+      "change_5d": -0.0268,
+      "change_20d": 0.0549,
+      "above_20d_avg": false,
+      "above_50d_avg": true,
+      "rsi_14": 54.7,
+      "daily_volatility": 0.0138,
+      "avg_volume_20d": 706901
+    },
+    "MU": {
+      "price": 875.22,
+      "change_1d": -0.042,
+      "change_5d": -0.0603,
+      "change_20d": -0.1897,
+      "above_20d_avg": false,
+      "above_50d_avg": false,
+      "rsi_14": 25.3,
+      "daily_volatility": 0.0279,
+      "avg_volume_20d": 628026
+    },
+    "TXN": {
+      "price": 279.9,
+      "change_1d": -0.0169,
+      "change_5d": 0.0027,
+      "change_20d": 0.0343,
+      "above_20d_avg": false,
+      "above_50d_avg": true,
+      "rsi_14": 36.3,
+      "daily_volatility": 0.0176,
       "avg_volume_20d": 219179
     }
-  },
-  "market_watch": {
-    "overall": "The posts are purely political rallying for voter turnout with no direct policy implications, so market impact is minimal.",
-    "findings": [
-      {
-        "source": "Truth Social @realDonaldTrump",
-        "post": "Trump claims Apple will spend $100\u202fmillion on U.S. titanium for new iPhone production",
-        "market_wide": false,
-        "affected": [
-          "AAPL"
-        ],
-        "sentiment": 0.6,
-        "importance": 3,
-        "why": "A direct statement about a large Apple procurement could boost investor confidence in AAPL and signal increased domestic demand for titanium, potentially benefiting Apple and related supply\u2011chain stocks.",
-        "seen_at": "2026-10-22T00:32-04:00"
-      }
-    ]
   }
 }
