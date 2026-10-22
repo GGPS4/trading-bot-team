@@ -10,6 +10,7 @@ Add --force to run even when the market is closed (orders are still blocked
 while the market is closed; useful for testing reports).
 """
 import argparse
+import concurrent.futures
 import datetime as dt
 import os
 import subprocess
@@ -21,7 +22,7 @@ from bots import journal
 from bots.common import ET, STATE, log, now_et, read_json, settings, today, write_json
 from bots.executive import build_org, evening_summary, orders_for_team
 from bots.investor import _sell, execute
-from bots import exits, mood, premarket
+from bots import exits, mood, ops, premarket
 from bots.manager import plan as manager_plan, recent_lessons, review as manager_review
 from bots.president import decide, load_strategy, normalize_allocations
 from bots.reporter import daily_report, snapshot, with_baseline, write_dashboard
@@ -266,6 +267,12 @@ def session(ctx: Ctx, until: str, force: bool):
     fake = os.environ.get("BOT_FAKE") == "1"
 
     journal.reconcile(b, ctx.owner_of)  # pick up anything a stopped run didn't save
+    if not fake:
+        ops.cleanup_start(b, ctx.owner_of)  # leftover orders from before a restart
+        try:
+            ops.preflight(ctx)  # daily system check (once a day)
+        except Exception as e:
+            log(f"System check failed to run: {e}")
     try:  # drop watchlist stocks that stopped trading (delisted, bought out, renamed)
         watchlist.check_all(b, ctx.org, ctx.owner_of, {p["symbol"] for p in b.positions()})
     except Exception as e:
@@ -325,10 +332,15 @@ def session(ctx: Ctx, until: str, force: bool):
 
     if not fake:
         threading.Thread(target=heartbeat, daemon=True).start()
-    order, rot = list(ctx.org), 0
+    ai_plan = ctx.cfg.get("ai_budget", {})
+    quiet_max = cfg.get("max_quiet_minutes", 45) * 60
+    look_move = cfg.get("look_if_moved_pct", 0.0075)
+    pool = concurrent.futures.ThreadPoolExecutor(max_workers=max(1, cfg.get("parallel_managers", 3)))
+    pending, last_regime = {}, {}
     last_plan = {tid: 0.0 for tid in ctx.org}
     last_plan_prices = {tid: {} for tid in ctx.org}
     last_save, last_social, closed_for_day, ticks = 0.0, time.time(), False, 0
+    closed_at, flat_logged = 0.0, False
     traded = False  # any orders since the last dashboard save?
 
     # 3. the all-day loop
@@ -366,8 +378,14 @@ def session(ctx: Ctx, until: str, force: bool):
                             except Exception as e:
                                 log(f"End-of-day close failed for {p['symbol']}: {e}")
                 closed_for_day = True
+                closed_at = time.time()
                 log("Closed all positions before the bell.")
                 positions = b.positions()
+            elif closed_for_day and time.time() - closed_at >= 180 and not ctx.paused:
+                left = ops.verify_flat(b, ctx.owner_of, _sell)  # anything still held gets sold again
+                if not left and not flat_logged:
+                    log("End-of-day check: all team positions are closed.")
+                    flat_logged = True
 
             trades_today = {}
             for e in journal.load():
@@ -403,65 +421,92 @@ def session(ctx: Ctx, until: str, force: bool):
                     sig_cache["s"] = intraday.signals(intraday.fetch(b, set(ctx.owner_of)), avg, prices)
                 return sig_cache["s"]
 
-            budget_s = every * 0.8  # leave room for prices, exits and saving inside each 5-minute check
-            looked = 0
-            for i in range(len(order)):
-                tid = order[(rot + i) % len(order)]
+            sigs = get_signals() if not closed_for_day else {}
+            day_minutes = max(60, (16 * 60) - (9 * 60 + 30))
+            allowance = max(4, int(ai_plan.get("trading_calls_per_day", 700) / max(1, len(ctx.org)) / (day_minutes / 60)))
+
+            def team_look(tid):
+                """Runs in a worker thread: news check, decide whether a look is worth it, ask the
+                manager. Orders are placed afterwards on the main thread."""
                 team = ctx.org[tid]
-                if looked and time.time() - started > budget_s:
-                    rot = (rot + i) % len(order)  # pick up from this team next check
-                    log(f"Check running long; {tid} and later teams go first next check")
-                    break
-                if time.time() - last_save >= 900:  # never let the dashboard go stale mid-loop
-                    write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
-                    save_progress(f"Bot team: intraday update {now_et():%Y-%m-%d %H:%M}")
-                    last_save, traded = time.time(), False
+                r = research[tid]
+                if refresh_social:
+                    from bots.research import social_researcher
+                    r["social"] = social_researcher(ctx.llm, team)
+                new = fresh_news(ctx.llm, b, team, r, seen)
+                r["market_watch"] = market_watch.for_team(team)
+                hot_posts = [f for f in watch_new if (f.get("importance") or 0) >= 4 and
+                             (f.get("market_wide") or set(f.get("affected") or []) & set(team["tickers"]))]
+                r["intraday"] = intraday_view({s: snaps[s] for s in team["tickers"] if s in snaps},
+                                              last_plan_prices[tid])
+                moves = {s: abs(v["since_last_look"]) for s, v in r["intraday"].items()
+                         if v["since_last_look"] is not None}
+                moved = [s for s, m in moves.items() if m >= trigger]
+                urgent = (r.get("news") or {}).get("urgent") or [f["symbol"] for f in new
+                                                                  if (f.get("importance") or 0) >= 4]
+                elapsed = time.time() - last_plan[tid]
+                gap = desk.deploy_gap(tid)
+                under = (gap >= 0.05 * ctx.budgets[tid] and not desk.past_buy_cutoff()
+                         and desk.team_open_count(tid) < ctx.limits["max_open_positions_per_team"]
+                         and elapsed >= 600)  # at most every 10 min
+                # Skip pointless looks: a scheduled look only happens when something changed
+                # (news, a price move, the market mood), or after a long quiet stretch.
+                changed = bool(new) or any(m >= look_move for m in moves.values()) or \
+                    last_regime.get(tid) != mood_now.get("regime")
+                due = elapsed >= replan and (changed or elapsed >= quiet_max)
+                urgent_look = bool((new and urgent) or hot_posts or moved)
+                if closed_for_day or not (due or urgent_look or under):
+                    return None
+                why = ("first look this run" if not last_plan[tid] else "scheduled look" if due
+                       else f"big news on {urgent}" if new and urgent
+                       else "market-moving post: " + hot_posts[0].get("post", "")[:80] if hot_posts
+                       else f"price moves in {moved}" if moved
+                       else f"must invest ${gap:,.0f} more (75% rule)")
+                # AI budget planner: each team gets a fair hourly share; only urgent looks go over it.
+                used = ctx.llm.team_calls(tid) if hasattr(ctx.llm, "team_calls") else 0
+                if last_plan[tid] and not urgent_look and used >= allowance:
+                    log(f"{tid}: skips a {why.split(' (')[0]} (used {used} of {allowance} AI answers this hour)")
+                    return None
+                log(f"{tid}: manager takes a look ({why})")
+                holdings = team_holdings(positions, ctx.owner_of, tid)
+                orders = orders_for_team(team, ctx.strategy, ctx.budgets[tid], ctx.limits)
+                inv = desk.team_invested(tid)
+                orders["deployment"] = (
+                    f"budget ${ctx.budgets[tid]:,.0f}, invested ${inv:,.0f} "
+                    f"({inv / ctx.budgets[tid]:.0%}), minimum {ctx.limits.get('min_invested_pct', 0):.0%}"
+                    + (f" -> you must put about ${gap:,.0f} more to work now" if gap >= 1 and not desk.past_buy_cutoff() else ""))
+                r["discovery"] = watchlist.for_team(disc, tid)
+                r["calendar"] = events.for_team(cal, tid)
+                r["scorecard"] = scorecard.for_manager(card, tid)
+                r["mood"] = mood_now
+                r["premarket"] = premarket.for_team(pm, tid)
+                intraday.add_to_view(r["intraday"], sigs)
+                plan = manager_plan(ctx.llm, team, orders, r, holdings, "intraday")
+                return {"why": why, "plan": plan, "regime": mood_now.get("regime"),
+                        "prices": {s: snaps[s]["price"] for s in team["tickers"] if s in snaps}}
+
+            # Managers think in parallel (a slow answer no longer holds up the other teams).
+            # A look still running at the end of this check is picked up at the next one.
+            for tid in ctx.org:
+                if tid not in pending:
+                    pending[tid] = pool.submit(team_look, tid)
+            concurrent.futures.wait(list(pending.values()), timeout=max(5, started + every * 0.8 - time.time()))
+            for tid, fut in list(pending.items()):
+                if not fut.done():
+                    continue
+                del pending[tid]
+                team = ctx.org[tid]
                 try:
-                    r = research[tid]
-                    if refresh_social:
-                        from bots.research import social_researcher
-                        r["social"] = social_researcher(ctx.llm, team)
-                    new = fresh_news(ctx.llm, b, team, r, seen)
-                    r["market_watch"] = market_watch.for_team(team)
-                    hot_posts = [f for f in watch_new if (f.get("importance") or 0) >= 4 and
-                                 (f.get("market_wide") or set(f.get("affected") or []) & set(team["tickers"]))]
-                    r["intraday"] = intraday_view({s: snaps[s] for s in team["tickers"] if s in snaps},
-                                                  last_plan_prices[tid])
-                    moved = [s for s, v in r["intraday"].items()
-                             if v["since_last_look"] is not None and abs(v["since_last_look"]) >= trigger]
-                    urgent = (r.get("news") or {}).get("urgent") or [f["symbol"] for f in new
-                                                                      if (f.get("importance") or 0) >= 4]
-                    due = time.time() - last_plan[tid] >= replan
-                    gap = desk.deploy_gap(tid)
-                    under = (gap >= 0.05 * ctx.budgets[tid] and not desk.past_buy_cutoff()
-                             and desk.team_open_count(tid) < ctx.limits["max_open_positions_per_team"]
-                             and time.time() - last_plan[tid] >= 600)  # at most every 10 min
-                    if closed_for_day or not (due or (new and urgent) or moved or hot_posts or under):
+                    res = fut.result()
+                    if not res:
                         continue
-                    why = ("scheduled look" if due else f"big news on {urgent}" if new and urgent
-                           else f"must invest ${gap:,.0f} more (75% rule)" if under
-                           else "market-moving post: " + hot_posts[0].get("post", "")[:80] if hot_posts
-                           else f"price moves in {moved}")
-                    log(f"{tid}: manager takes a look ({why})")
-                    looked += 1
-                    holdings = team_holdings(positions, ctx.owner_of, tid)
-                    orders = orders_for_team(team, ctx.strategy, ctx.budgets[tid], ctx.limits)
-                    inv = desk.team_invested(tid)
-                    orders["deployment"] = (
-                        f"budget ${ctx.budgets[tid]:,.0f}, invested ${inv:,.0f} "
-                        f"({inv / ctx.budgets[tid]:.0%}), minimum {ctx.limits.get('min_invested_pct', 0):.0%}"
-                        + (f" -> you must put about ${gap:,.0f} more to work now" if gap >= 1 and not desk.past_buy_cutoff() else ""))
-                    r["discovery"] = watchlist.for_team(disc, tid)
-                    r["calendar"] = events.for_team(cal, tid)
-                    r["scorecard"] = scorecard.for_manager(card, tid)
-                    r["mood"] = mood_now
-                    r["premarket"] = premarket.for_team(pm, tid)
-                    intraday.add_to_view(r["intraday"], get_signals())
-                    p = manager_plan(ctx.llm, team, orders, r, holdings, "intraday")
+                    p, why = res["plan"], res["why"]
                     last_plan[tid] = time.time()
-                    last_plan_prices[tid] = {s: snaps[s]["price"] for s in team["tickers"] if s in snaps}
+                    last_plan_prices[tid] = res["prices"]
+                    last_regime[tid] = res["regime"]
                     write_json(STATE / "plans" / f"{tid}.json",
                                {"date": today(), "time": now_et().strftime("%H:%M"), "trigger": why, **p})
+                    r = research[tid]
                     vol = {sym: v.get("daily_volatility") for sym, v in (r.get("technicals") or {}).items()}
                     with journal.LOCK:
                         results = execute(b, desk, team, p, prices, vol)
@@ -475,11 +520,12 @@ def session(ctx: Ctx, until: str, force: bool):
                             r["technicals"] = technicals(b.daily_bars(team["tickers"]))
                         except Exception as e:
                             log(f"{tid}: price history for new names failed: {e}")
-                    traded = traded or any(not ("blocked" in r or "failed" in r) for r in results)
+                    traded = traded or any(not ("blocked" in x or "failed" in x) for x in results)
                     log_plan(tid, why, p, results)
                     log(f"{tid}: {results or 'no trades'}")
                 except Exception as e:
                     log(f"{tid}: skipped this check: {e}")
+                    last_plan[tid] = max(last_plan[tid], time.time() - replan + 120)  # retry in ~2 min, not every check
             if refresh_social:
                 last_social = time.time()
             save_seen(seen)
@@ -496,7 +542,15 @@ def session(ctx: Ctx, until: str, force: bool):
         if not fake:
             time.sleep(max(5, every - (time.time() - started)))
 
+    if closed_for_day:
+        try:
+            still = [p["symbol"] for p in b.positions() if ctx.owner_of.get(p["symbol"])]
+            if still:
+                log(f"End-of-day check failed: still holding {', '.join(still)} after the close")
+        except Exception:
+            pass
     hb["stop"].set()
+    pool.shutdown(wait=False, cancel_futures=True)
     write_dashboard(snapshot(b, ctx.org, ctx.owner_of, ctx.budgets, ctx.mode))
     save_progress(f"Bot team: session end {now_et():%Y-%m-%d %H:%M}")
     log(f"Session done. AI calls today: {__import__('bots.llm', fromlist=['calls_today']).calls_today()}")

@@ -60,6 +60,16 @@ The bots stop making new AI decisions after `max_ai_calls_per_day`, to stay in G
 - **Market mood** (`bots/mood.py`): SPY, QQQ, the VIXY fear gauge and breadth set the regime. *Caution* makes longs 25% smaller. *Risk-off* makes longs half size, requires conviction +1, and favors shorts.
 - **Pre-market scan** (`bots/premarket.py`): from 8:00 AM ET, stocks gapping 2%+ on the watchlists (and 3%+ ones in the overnight news) go to the managers' first look and to the Research page.
 
+## Staying fast and consistent on free AI
+
+- **Parallel managers:** up to 3 managers think at the same time (`intraday.parallel_managers`). A look that is still running when a check ends is finished and executed at the next check.
+- **No pointless looks:** a scheduled look only happens if news came in, a stock moved 0.75%+, or the market mood changed, or after 45 quiet minutes. Big news, 2% moves, market-moving posts and the 75% rule still trigger looks right away.
+- **Pacing and backup models:** requests stay under each provider's per-minute limit (`ai_rpm`). When a model is busy or out of daily quota, the next model or provider is used.
+- **AI budget planner:** each team gets a fair hourly share of the day's AI budget (`ai_budget`). Only urgent looks may go over it.
+- **Morning system check:** before the open, the bots test Alpaca, prices, news, movers, the event calendar, every AI provider and saving. The results show as lights on the dashboard.
+- **Order cleanup:** at the start, leftover orders are canceled (exits for stocks no longer held, duplicate stops, stale entries). After the end-of-day close, anything still held is sold again.
+- **Backup clock (optional):** a free cron-job.org job can start the workflow every 30 minutes through GitHub's API, in case GitHub's own timer and the relay both stall.
+
 ## What the managers see
 
 - **Day-trading signals** (`bots/intraday.py`), from today's 5-minute bars: VWAP and distance from it, the opening range (first 30 min) with breakout/breakdown flags, 15- and 60-minute momentum, the short-term trend, and relative volume (today vs a normal day at this hour).
