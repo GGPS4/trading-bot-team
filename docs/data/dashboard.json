@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-22T16:04-04:00",
+  "updated": "2026-10-22T16:13-04:00",
   "date": "2026-10-22",
   "mode": "paper",
   "health": {
     "issues": [
-      "58 problem(s) in the last hour, latest: healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)"
+      "52 problem(s) in the last hour, latest: healthcare: review failed: healthcare manager review: no AI provider could answer (gemini: gemini failed)"
     ]
   },
   "paused": false,
@@ -21,7 +21,7 @@
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 764.03
+    "price": 764.02
   },
   "performance": {
     "start_date": "2026-10-20",
@@ -3006,186 +3006,38 @@
   },
   "executives": {
     "sector": {
-      "summary": "The tech and consumer teams posted modest activity with two trades each but both saw negative unrealized PnL, indicating pressure on their positions. Financials realized a small gain of $5.95 on two trades, while healthcare delivered a stronger $25.86 realized profit despite a slight unrealized loss. Overall, the portfolio is under pressure with most sectors showing negative unrealized performance, though realized gains helped offset some losses.",
+      "summary": "Today, our teams showed mixed results with the healthcare team experiencing losses (-86.88) and the tech team experiencing a loss (-382.04), while the financials team had a positive realized PNL of 51.14. The special team did not trade today. Coordination and overlaps were not observed.",
       "team_notes": {
-        "tech": "Two trades were executed but the sector remains down with a $141 unrealized loss.",
-        "consumer": "Two trades were made; unrealized loss of $9 suggests the sector is slightly underperforming.",
-        "financials": "Two trades produced a $5.95 realized gain and a small unrealized loss, keeping the sector in the green.",
-        "healthcare": "Four trades yielded a $25.86 realized profit despite a $14.59 unrealized loss."
+        "tech": "Team worked on diversifying the portfolio but faced some challenges due to market conditions.",
+        "healthcare": "Team decided to hold on to some positions due to uncertainty in the market.",
+        "financials": "Team focused on well-established companies with strong fundamentals."
       },
       "escalations": [
-        "Consider reallocating budget from underperforming tech and consumer sectors to higher\u2011performing healthcare to improve overall returns."
+        "Healthcare team blocked trades due to market uncertainty"
       ],
-      "coordination": "No overlapping tickers were identified between teams.",
+      "coordination": "No overlapping companies or teams stepping on each other's decisions today.",
       "title": "Executive of Sector Teams"
     },
     "special": {
-      "summary": "The Defense team posted a modest unrealized gain of $17.49 but saw mixed trade outcomes, with strong catalyst picks like NOC and LDOS offset by weaker entries in TXT, LHX, and RTX. The Space & Aerospace team ended slightly negative with a $218.92 unrealized loss, hindered by premature entry into SPCX and tight stops on RKLB and RDW. The Entertainment team remained flat, preserving capital with a near\u2011break\u2011even IMAX position but missed trading opportunities due to inactivity. Overall, the teams stayed within budget and adhered to risk limits, though execution and catalyst timing need improvement.",
+      "summary": "Team 1: Special Teams had a positive performance today with a realized PnL of 188.59, while Team 2: Space & Aerospace and Team 3: Entertainment experienced losses of 529.59 and 79.98, respectively.",
       "team_notes": {
-        "defense": "Good catalyst selection but overtrading intraday dips hurt performance.",
-        "space": "Clear entry criteria helped, yet early exits and tight stops reduced gains.",
-        "entertainment": "Capital was preserved but lack of trades missed potential upside."
+        "team_id": [
+          "Team 1: Special Teams",
+          "Team 2: Space & Aerospace",
+          "Team 3: Entertainment"
+        ]
       },
-      "escalations": [],
-      "coordination": "There are no overlapping symbols across the special teams, so no coordination conflicts.",
+      "escalations": [
+        "Overlapping companies shared between teams",
+        "Companies shared between teams"
+      ],
+      "coordination": [
+        "No issues regarding overlapping companies or teams stepping on each other, empty list"
+      ],
       "title": "Executive of Special Teams"
     }
   },
-  "reviews": {
-    "defense": {
-      "what_went_well": "Catalyst selection on NOC (earnings beat and upgrades) and LDOS (Cyber Command contract award) proved solid, generating positive end-of-day gains.",
-      "what_went_wrong": "Entered TXT on weak, low-impact commercial jet news rather than a defense catalyst leading to a premature exit, while LHX and RTX were bought into intraday dips that continued drifting lower.",
-      "lessons": [
-        "Only take positions on news with an importance score of 4 or higher that directly impacts core defense programs or major contract wins, avoiding peripheral commercial PR.",
-        "Do not buy intraday dips on large-cap defense contractors without confirmed volume and price stabilization above intraday VWAP."
-      ],
-      "strategy_ideas": [
-        "Deploy an opening range breakout (ORB) strategy for LMT tomorrow morning, waiting 15 to 30 minutes after open to ride post-earnings institutional volume.",
-        "Implement an automatic 50% scale-out at 1R on contract-driven momentum plays like LDOS to lock in intraday gains against late-day mean reversion."
-      ],
-      "watchlist_changes": {
-        "add": [],
-        "remove": []
-      },
-      "watchlist": []
-    },
-    "space": {
-      "what_went_well": "We entered multiple positions with clear catalysts and set predefined bracket orders, keeping risk under control.",
-      "what_went_wrong": "We bought SPCX right after a >10% earnings jump and saw a pull\u2011back, and our stop levels were too tight on RKLB and RDW, resulting in early losses.",
-      "lessons": [
-        "Don't buy immediately after a large earnings jump; wait for a pull\u2011back confirmation",
-        "Set stops based on recent volatility rather than fixed percentages",
-        "Limit position size on symbols that have moved >8% intraday"
-      ],
-      "strategy_ideas": [
-        "Add trailing stops that activate after a 3% favorable move to lock in gains",
-        "Incorporate a volume\u2011spike filter for entries following earnings or contract announcements"
-      ],
-      "watchlist_changes": {
-        "add": [
-          {
-            "symbol": "BA",
-            "reason": "Boeing earnings on Oct 27 with potential defense contract news"
-          },
-          {
-            "symbol": "ASTS",
-            "reason": "Astra Space scheduled launch this week providing catalyst"
-          },
-          {
-            "symbol": "GE",
-            "reason": "Recent analyst coverage and price\u2011target adjustments"
-          }
-        ],
-        "remove": [
-          {
-            "symbol": "TDG",
-            "reason": "No upcoming launches or contracts"
-          },
-          {
-            "symbol": "IRDM",
-            "reason": "Lack of news and low liquidity"
-          },
-          {
-            "symbol": "SATS",
-            "reason": "No near\u2011term catalyst"
-          }
-        ]
-      },
-      "watchlist": [
-        {
-          "time": "2026-10-21T22:10-04:00",
-          "action": "remove_rejected",
-          "symbol": "TDG",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-21T22:10-04:00",
-          "action": "remove_rejected",
-          "symbol": "IRDM",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-21T22:10-04:00",
-          "action": "remove_rejected",
-          "symbol": "SATS",
-          "reason": "list would drop below 15 stocks"
-        }
-      ]
-    },
-    "entertainment": {
-      "what_went_well": "We kept the IMAX long position with virtually no loss, preserving capital.",
-      "what_went_wrong": "No trades were executed today, so there were no losing trades, but the lack of activity missed potential opportunities.",
-      "lessons": [],
-      "strategy_ideas": [
-        "Implement a pre\u2011market catalyst scan to trigger entries on earnings or major news releases",
-        "Use tighter stop\u2011losses on high\u2011volatility streaming stocks after negative analyst upgrades"
-      ],
-      "watchlist_changes": {
-        "add": [
-          {
-            "symbol": "ATVI",
-            "reason": "Activision Blizzard has upcoming game releases and earnings soon, providing catalyst for entertainment sector"
-          },
-          {
-            "symbol": "BAM",
-            "reason": "BAMTech (now part of Disney) expected to benefit from new streaming content launches"
-          },
-          {
-            "symbol": "DIS",
-            "reason": "New trailer for 'Hexed' and ticket sales indicate near\u2011term revenue boost"
-          }
-        ],
-        "remove": [
-          {
-            "symbol": "CNK",
-            "reason": "No recent news or catalyst for Cinemark"
-          },
-          {
-            "symbol": "TKO",
-            "reason": "Unclear relevance to core entertainment focus"
-          },
-          {
-            "symbol": "TTWO",
-            "reason": "Lack of upcoming releases or earnings catalyst"
-          }
-        ]
-      },
-      "watchlist": [
-        {
-          "time": "2026-10-21T22:11-04:00",
-          "action": "add_rejected",
-          "symbol": "ATVI",
-          "reason": "not tradable at the broker"
-        },
-        {
-          "time": "2026-10-21T22:11-04:00",
-          "action": "removed",
-          "symbol": "CNK",
-          "reason": "No recent news or catalyst for Cinemark",
-          "by": "evening review"
-        },
-        {
-          "time": "2026-10-21T22:11-04:00",
-          "action": "remove_rejected",
-          "symbol": "TKO",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-21T22:11-04:00",
-          "action": "remove_rejected",
-          "symbol": "TTWO",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-21T22:11-04:00",
-          "action": "added",
-          "symbol": "BAM",
-          "reason": "BAMTech (now part of Disney) expected to benefit from new streaming content launches",
-          "by": "evening review"
-        }
-      ]
-    }
-  },
+  "reviews": {},
   "lessons": {
     "defense": [
       "2026-10-21: Only take positions on news with an importance score of 4 or higher that directly impacts core defense programs or major contract wins, avoiding peripheral commercial PR.",
@@ -3206,538 +3058,596 @@
   },
   "research": {
     "defense": {
-      "news": "Analyst upgrades are nudging sentiment upward for Northrop Grumman, but the moves are modest and unlikely to spark immediate price swings. Overall mood for the defense group remains cautiously positive.",
+      "news": "No recent significant news found regarding the defense companies in the team's list. SEC filings remain empty.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "NOC",
-          "sentiment": 0.6,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Analysts UBS and BNP Paribas raised Northrop Grumman's price targets, indicating modest upside sentiment.",
-          "source": "fiscal.ai",
-          "time": "11:08"
-        },
-        {
-          "symbol": "NOC",
-          "sentiment": 0.6,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Analysts lifted price targets and issued upgrades following Northrop Grumman's Q3 earnings beat and raised full-year guidance.",
-          "source": "benzinga / fiscal.ai",
-          "time": "10:56"
-        },
-        {
           "symbol": "LDOS",
           "sentiment": 0.5,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Leidos secured a new $160 million award to support U.S. Cyber Command in planning and executing full-spectrum military cyber operations.",
-          "source": "benzinga",
-          "time": "10:56"
-        },
-        {
-          "symbol": "HII",
-          "sentiment": 0.3,
-          "importance": 2,
-          "unconfirmed_rumor": false,
-          "summary": "Huntington Ingalls raised its quarterly cash dividend to $1.41 per share, reflecting a three-cent increase.",
+          "summary": "Leidos secured a $95 million five-year contract from the Defense Logistics Agency to modernize logistics systems using AI and cloud tech.",
           "source": "fiscal.ai",
-          "time": "10:56"
+          "time": "14:04"
         },
         {
           "symbol": "RTX",
+          "sentiment": -0.3,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "DA Davidson lowered its price target on RTX to $201 from $219 while maintaining a Neutral rating.",
+          "source": "fiscal.ai",
+          "time": "14:04"
+        },
+        {
+          "symbol": "NOC",
+          "sentiment": 0.0,
+          "importance": 1,
+          "unconfirmed_rumor": false,
+          "summary": "Multiple analysts updated ratings and price targets for Northrop Grumman, but no specific directional consensus or material change was detailed in the summary.",
+          "source": "fiscal.ai",
+          "time": "14:04"
+        },
+        {
+          "symbol": "BAH",
+          "sentiment": 0.2,
+          "importance": 1,
+          "unconfirmed_rumor": false,
+          "summary": "Booz Allen Hamilton joined SpaceX's AI partner network, a minor promotional announcement with limited direct impact on core defense contracts.",
+          "source": "fiscal.ai",
+          "time": "14:04"
+        },
+        {
+          "symbol": "PLTR",
           "sentiment": 0.1,
           "importance": 1,
           "unconfirmed_rumor": false,
-          "summary": "Collins Aerospace rolled out ARINCDirect OpenAPI and introduced radio altimeter upgrades to meet FAA 5G resilience standards.",
-          "source": "benzinga / fiscal.ai",
-          "time": "10:56"
+          "summary": "Palantir expanded partnerships with Stagwell and elevated Aplos Data to elite tier, which are routine commercial ecosystem updates rather than material defense news.",
+          "source": "fiscal.ai",
+          "time": "14:04"
         },
         {
-          "symbol": "RTX",
-          "sentiment": 0.4,
+          "symbol": "NOC",
+          "sentiment": 0.3,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Collins Aerospace launched the ARINCDirect OpenAPI, expanding its digital services platform.",
-          "source": "benzinga"
+          "summary": "Whale activity detected for NOC options, indicating potential interest.",
+          "source": "benzinga",
+          "time": "13:39"
         },
         {
-          "symbol": "LDOS",
-          "sentiment": 0.6,
+          "symbol": "MRCY",
+          "sentiment": 0.8,
           "importance": 4,
           "unconfirmed_rumor": false,
-          "summary": "Leidos secured a $160\u202fmillion award to support U.S. Cyber Command in full\u2011spectrum military cyber operations.",
-          "source": "benzinga"
+          "summary": "Oppenheimer initiates coverage on Mercury System with an outperform rating and a $90 price target.",
+          "source": "benzinga",
+          "time": "12:44"
         },
         {
-          "symbol": "HII",
-          "sentiment": 0.5,
+          "symbol": "KTOS",
+          "sentiment": 0.6,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "HII raised its quarterly cash dividend to $1.41 per share.",
-          "source": "fiscal.ai"
+          "summary": "Oppenheimer initiates coverage on Kratos Defense & Security with an Outperform rating and a $50 price target.",
+          "source": "benzinga",
+          "time": "12:39"
         }
       ]
     },
     "space": {
-      "news": "The recent coverage of SpaceX is speculative and offers no new concrete developments, keeping sentiment cautious and neutral.",
+      "news": "The positive news about SpaceX's Super Intelligence Partner Network expanding Grok AI model reach indicates growth potential for the company and could potentially impact SPCX stock positively.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
           "symbol": "SPCX",
-          "sentiment": -0.2,
+          "sentiment": 1.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "SpaceX introduces a new partner program focused on expanding Grok AI model reach",
+          "source": "fiscal.ai",
+          "time": "15:04"
+        },
+        {
+          "symbol": "ASTS",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "AST SpaceMobile shares decline due to market weakness, SpaceX earnings beat, and issues like a spectrum dispute and a pending class action.",
+          "source": "Benzinga",
+          "time": "14:44"
+        },
+        {
+          "symbol": "BA",
+          "sentiment": 0.0,
           "importance": 2,
-          "unconfirmed_rumor": true,
-          "summary": "Article speculates on SpaceX AI computing returns and hidden risk without concrete data",
-          "source": "benzinga",
-          "time": "11:41"
+          "unconfirmed_rumor": false,
+          "summary": "Boeing shares rise after successful Starliner mission to the ISS.",
+          "source": "Reuters",
+          "time": "14:44"
+        },
+        {
+          "symbol": "IRDM",
+          "sentiment": 1.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Iridium Communications wins 'IoT Innovation of the Year' award at the Mobile Breakthrough Awards.",
+          "source": "fiscal.ai",
+          "time": "14:04"
         },
         {
           "symbol": "SPCX",
-          "sentiment": 0.0,
-          "importance": 2,
-          "unconfirmed_rumor": true,
-          "summary": "Analyst notes Musk's terafab may not reach mass production until 2030, no immediate impact",
+          "sentiment": 0.8,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Bank of America raised SpaceX\u2019s target to $275 after Q3 beat and bold Starship forecasts.",
           "source": "benzinga",
-          "time": "11:41"
+          "time": "13:39"
         },
         {
-          "symbol": "GE",
+          "symbol": "SPCX",
           "sentiment": 0.3,
           "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "JP Morgan maintains Overweight rating on GE Aerospace but lowers its price target to $375.",
+          "unconfirmed_rumor": true,
+          "summary": "Elon Musk suggests humans could be uploaded into humanoid robots, hinting at future tech possibilities for Space Explorations Technologies Corp.",
           "source": "benzinga",
-          "time": "11:26"
+          "time": "12:04"
         },
         {
           "symbol": "SPCX",
-          "sentiment": 0.0,
-          "importance": 3,
+          "sentiment": 0.5,
+          "importance": 2,
           "unconfirmed_rumor": false,
-          "summary": "Analysts including UBS and Wells Fargo updated their price targets for SpaceX after its Q3 earnings release.",
-          "source": "fiscal.ai",
-          "time": "11:08"
-        },
-        {
-          "symbol": "GE",
-          "sentiment": 0.0,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Multiple analysts such as Morgan Stanley, UBS, and Deutsche Bank revised price targets and ratings for GE Aerospace on Oct 21, 2026.",
-          "source": "fiscal.ai",
-          "time": "11:08"
+          "summary": "Cathie Wood's reported bullish Tesla forecast is lifting sentiment for SPCX and related robotics ETFs, but it is a long-term call rather than a confirmed immediate catalyst.",
+          "source": "Benzinga",
+          "time": "11:30"
         },
         {
           "symbol": "SPCX",
-          "sentiment": 1.0,
-          "importance": 5,
-          "unconfirmed_rumor": false,
-          "summary": "SpaceX shares jumped 10% after a strong third\u2011quarter earnings beat.",
-          "source": "benzinga",
-          "time": "10:57"
-        },
-        {
-          "symbol": "LUNR",
-          "sentiment": 0.7,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "LUNR shares rose as investors reacted to SpaceX's strong Q3 results.",
-          "source": "benzinga",
-          "time": "10:57"
-        },
-        {
-          "symbol": "SPCX",
-          "sentiment": 0.6,
+          "sentiment": 0.8,
           "importance": 4,
           "unconfirmed_rumor": false,
-          "summary": "Evercore ISI raised its price target on SpaceX to $300, maintaining an Outperform rating.",
-          "source": "benzinga",
-          "time": "10:57"
+          "summary": "BofA maintained Buy on SpaceX and raised its price target to $275.",
+          "source": "Benzinga"
         }
       ]
     },
     "entertainment": {
-      "news": "Analyst sentiment stays positive for Netflix despite a lower price target, indicating confidence in its streaming outlook. The broader entertainment sector shows mixed signals with no major price-impacting developments today.",
+      "news": "After reviewing the news and SEC filings, we found no significant updates for the entertainment stocks in the last 2 hours. Spotify's stock rally due to strong Q4 margin guidance and analyst upgrade seems promising, but the SEC filings remain unchanged. Keep monitoring for any new developments.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
           "symbol": "NFLX",
-          "sentiment": 0.0,
+          "sentiment": -0.5,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "JP Morgan kept Netflix's Overweight rating but reduced its price target to $81.",
+          "summary": "Wolfe Research downgrades Netflix to Peer Perform.",
           "source": "benzinga",
-          "time": "11:31"
+          "time": "13:14"
         },
         {
-          "symbol": "NFLX",
-          "sentiment": 0.6,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "TD Cowen reiterates a Buy rating on Netflix with a $100 price target, supporting the stock outlook.",
-          "source": "benzinga",
-          "time": "11:08"
-        },
-        {
-          "symbol": "NFLX",
-          "sentiment": 0.4,
-          "importance": 2,
-          "unconfirmed_rumor": false,
-          "summary": "Netflix confirmed a November 12 premiere for Season 2 of 'Love is Blind Habibi', adding to its content slate.",
-          "source": "fiscal.ai",
-          "time": "11:08"
-        },
-        {
-          "symbol": "NFLX",
-          "sentiment": 0.0,
-          "importance": 2,
-          "unconfirmed_rumor": false,
-          "summary": "Piper Sandler and Evercore ISI both reaffirmed their positive ratings on Netflix but lowered their price targets, reflecting modest caution without changing their overall outlook.",
-          "source": "benzinga",
-          "time": "10:58"
-        },
-        {
-          "symbol": "NFLX",
-          "sentiment": -0.8,
-          "importance": 5,
-          "unconfirmed_rumor": false,
-          "summary": "Shares dropped 6-7% toward 52-week lows after weak Q4 guidance, narrowed FY26 revenue targets, and a reduced free cash flow outlook triggered widespread Wall Street price target cuts and a downgrade.",
-          "source": "benzinga"
-        },
-        {
-          "symbol": "NFLX",
-          "sentiment": -0.3,
-          "importance": 3,
-          "unconfirmed_rumor": true,
-          "summary": "Reports suggest film chief Dan Lin has been dismissed following internal friction over high-profile projects.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "ROKU",
-          "sentiment": -0.2,
-          "importance": 2,
-          "unconfirmed_rumor": false,
-          "summary": "VB Assets LLC filed a patent infringement lawsuit against Roku in the U.S. District Court for the District of Delaware.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "DIS",
-          "sentiment": -0.1,
+          "symbol": "SPOT",
+          "sentiment": 0,
           "importance": 1,
           "unconfirmed_rumor": false,
-          "summary": "A Disney insider filed an SEC disclosure covering a routine share sale valued at approximately $319,000.",
-          "source": "fiscal.ai"
+          "summary": "CNBC Halftime Report mentions Spotify in trade discussion.",
+          "source": "benzinga",
+          "time": "13:09"
+        },
+        {
+          "symbol": "NFLX",
+          "sentiment": 0.5,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Netflix shares climb after earnings, indicating positive sentiment.",
+          "source": "benzinga",
+          "time": "13:04"
+        },
+        {
+          "symbol": "SPOT",
+          "sentiment": 0.8,
+          "importance": 5,
+          "unconfirmed_rumor": false,
+          "summary": "Spotify's subscriber growth continues, with premium users hitting 306\u202fmillion and the stock surging 8% after an earnings miss.",
+          "source": "benzinga",
+          "time": "12:44"
+        },
+        {
+          "symbol": "SPOT",
+          "sentiment": 0.7,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Josh Brown announced buying more Spotify shares.",
+          "source": "benzinga",
+          "time": "12:34"
+        },
+        {
+          "symbol": "SPOT",
+          "sentiment": -0.2,
+          "importance": 5,
+          "unconfirmed_rumor": false,
+          "summary": "Spotify missed Q3 EPS and revenue estimates despite beating subscriber guidance, with a Q4 sales outlook slightly below consensus.",
+          "source": "benzinga, fiscal.ai"
+        },
+        {
+          "symbol": "CMCSA",
+          "sentiment": -0.3,
+          "importance": 5,
+          "unconfirmed_rumor": false,
+          "summary": "Comcast beat Q3 expectations but announced significant job cuts and a large Q4 charge for restructuring, citing demand pressure in its parks business.",
+          "source": "benzinga, fiscal.ai"
+        },
+        {
+          "symbol": "NFLX",
+          "sentiment": -0.4,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Netflix shares are at two-year lows as multiple analysts (Argus, Pivotal, UBS) lowered price targets, though Ark Invest added to its position.",
+          "source": "benzinga"
         }
       ]
     },
     "tech": {
-      "news": "No material news affecting the listed IT stocks was identified in the last two hours. The market sentiment remains neutral.",
+      "news": "No recent significant news or SEC filings were found for the Information Technology sector stocks in the past 2 hours. The team should continue monitoring for updates on their selected companies.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "ORCL",
-          "sentiment": 0.6,
+          "symbol": "NVDA",
+          "sentiment": 0.9,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Oracle unveiled a no\u2011code AI Agent Studio for industry use, expanding its AI services portfolio.",
-          "source": "fiscal.ai",
-          "time": "11:08"
+          "summary": "Bloom Energy's stock and bond yields suffer amid AI concerns, while Salesforce faces new fees.",
+          "source": "benzinga",
+          "time": "14:19"
         },
         {
           "symbol": "AAPL",
-          "sentiment": -0.2,
-          "importance": 2,
-          "unconfirmed_rumor": false,
-          "summary": "Omdia reports a 20% YoY drop in global smartphone shipments, though Apple keeps a 22% share.",
-          "source": "fiscal.ai",
-          "time": "11:08"
-        },
-        {
-          "symbol": "MSFT",
-          "sentiment": 0.5,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Volkswagen is using Microsoft\u2019s AI infrastructure for autonomous\u2011vehicle development, strengthening Microsoft\u2019s automotive AI foothold.",
-          "source": "fiscal.ai",
-          "time": "11:08"
-        },
-        {
-          "symbol": "AVGO",
-          "sentiment": 0.5,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Broadcom introduced Arcot Scam Defense to curb card\u2011not\u2011present fraud, enhancing its security offering.",
-          "source": "fiscal.ai",
-          "time": "11:08"
-        },
-        {
-          "symbol": "NVDA",
-          "sentiment": 0.7,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "CrowdStrike deepens NVIDIA partnership for AI agent security, strengthening NVDA's AI ecosystem footprint.",
-          "source": "benzinga",
-          "time": "11:01"
-        },
-        {
-          "symbol": "AMD",
-          "sentiment": 0.8,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Advanced Micro Devices gains on AI supercluster win in India and price target hike, reflecting strong semiconductor demand.",
-          "source": "benzinga",
-          "time": "11:01"
-        },
-        {
-          "symbol": "CRM",
           "sentiment": -0.5,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Analyst downgrades assess Salesforce-Braze acquisition value, weighing on CRM sentiment despite strategic fit.",
+          "summary": "Apple shares drop after weak iPhone sales forecast.",
           "source": "benzinga",
-          "time": "11:01"
+          "time": "14:19"
         },
         {
-          "symbol": "QCOM",
-          "sentiment": 0.5,
+          "symbol": "MSFT",
+          "sentiment": 0.8,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Susquehanna raises Qualcomm price target to $185 from $160, signaling positive outlook.",
-          "source": "fiscal.ai",
-          "time": "11:01"
+          "summary": "Microsoft shares rise as Q3 earnings beat expectations.",
+          "source": "benzinga",
+          "time": "14:19"
+        },
+        {
+          "symbol": "AMD",
+          "sentiment": 0.7,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Advanced Micro Devices shares surge after strong Q3 earnings report.",
+          "source": "benzinga",
+          "time": "14:19"
+        },
+        {
+          "symbol": "ADBE",
+          "sentiment": 0.8,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Adobe shares rise as Q3 earnings beat expectations.",
+          "source": "benzinga",
+          "time": "14:19"
+        },
+        {
+          "symbol": "NVDA",
+          "sentiment": 0.8,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "NVIDIA shares surge after strong Q3 earnings report.",
+          "source": "benzinga",
+          "time": "14:19"
+        },
+        {
+          "symbol": "MSFT",
+          "sentiment": 0.7,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Microsoft shares rise after strong Q3 earnings report.",
+          "source": "benzinga",
+          "time": "14:19"
+        },
+        {
+          "symbol": "ADBE",
+          "sentiment": 0.8,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Adobe shares rise as Q3 earnings beat expectations.",
+          "source": "benzinga",
+          "time": "14:19"
         }
       ]
     },
     "consumer": {
-      "news": "The consumer discretionary sector is showing a neutral to slightly cautious sentiment today, with focus shifting to pre-earnings technicals for Tesla and mixed analyst adjustments for Starbucks and Chipotle.",
+      "news": "After reviewing news and SEC filings, we find no significant updates for the Consumer Discretionary stocks in the last 2 hours. The team should continue monitoring the sector for any developments.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
           "symbol": "AMZN",
-          "sentiment": 0.3,
-          "importance": 2,
+          "sentiment": 0.0,
+          "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "AWS is partnering with 3Business to launch an AI marketplace for enterprises in Hong Kong.",
-          "source": "fiscal.ai",
-          "time": "11:02"
+          "summary": "AMZN shares fell after Q3 earnings missed expectations. Analysts mostly raised targets but warned about elevated 2027 capex higher.",
+          "source": "benzinga",
+          "time": "15:41"
         },
         {
           "symbol": "TSLA",
           "sentiment": 0.0,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Tesla stock is trading under its 200-day average as investors watch margins and cash flow ahead of its upcoming earnings report.",
+          "summary": "TSLA shares gained following a positive earnings report and strong Q3 results.",
           "source": "benzinga",
-          "time": "11:02"
+          "time": "15:41"
         },
         {
-          "symbol": "CMG",
+          "symbol": "AMZN",
           "sentiment": 0.0,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Several major financial institutions updated their analyst ratings and price targets for Chipotle Mexican Grill.",
-          "source": "fiscal.ai",
-          "time": "11:02"
-        },
-        {
-          "symbol": "SBUX",
-          "sentiment": -0.3,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Wells Fargo maintained an Overweight rating on Starbucks but lowered its price target to $120.",
+          "summary": "U.S. Treasury Department proposes regulations to make homeownership more affordable, impacting home improvement retailers like Lowe's (LOW) and Home Depot (HD).",
           "source": "benzinga",
-          "time": "11:02"
-        },
-        {
-          "symbol": "CMG",
-          "sentiment": -0.3,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Wells Fargo maintained an Overweight rating on Chipotle but lowered its price target to $40.",
-          "source": "benzinga",
-          "time": "11:02"
+          "time": "14:56"
         },
         {
           "symbol": "TSLA",
-          "sentiment": 0.5,
+          "sentiment": 1.0,
           "importance": 5,
           "unconfirmed_rumor": false,
-          "summary": "Elon Musk confirmed that special independent committees at both Tesla and SpaceX have been formed to evaluate a potential mega-merger between the two companies ahead of Tesla's upcoming earnings.",
-          "source": "fiscal.ai / benzinga"
+          "summary": "CLSA upgrades Tesla (TSLA) to Hold, raising its price target to $400.",
+          "source": "benzinga",
+          "time": "14:56"
         },
         {
-          "symbol": "BKNG",
-          "sentiment": -0.6,
-          "importance": 4,
+          "symbol": "TSLA",
+          "sentiment": 1.0,
+          "importance": 5,
           "unconfirmed_rumor": false,
-          "summary": "The European Commission has initiated formal proceedings and an in-depth probe into Booking.com under the Digital Services Act over alleged failures to mitigate risks related to fake listings and phishing scams.",
-          "source": "fiscal.ai / benzinga"
+          "summary": "Elon Musk's first wife shares an insight on Musk's personality",
+          "source": "benzinga",
+          "time": "14:26"
         },
         {
-          "symbol": "CMG",
+          "symbol": "TSLA",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "General Motors and Cruise announce partnership to develop self-driving technology for commercial vehicles.",
+          "source": "benzinga",
+          "time": "14:06"
+        },
+        {
+          "symbol": "AMZN",
           "sentiment": -0.5,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "TD Cowen downgraded Chipotle to Hold from Buy with a $32 price target, while Wells Fargo maintained its Overweight rating but trimmed its target to $40.",
-          "source": "fiscal.ai / benzinga"
+          "summary": "Amazon acquires aviation company Zoox for $1.7 billion to expand delivery services.",
+          "source": "benzinga",
+          "time": "14:06"
+        },
+        {
+          "symbol": "TSLA",
+          "sentiment": -0.5,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Elon Musk tweets about Tesla's potential acquisition of Staples, sparking rumors of a potential deal.",
+          "source": "benzinga",
+          "time": "14:06"
         }
       ]
     },
     "financials": {
-      "news": "The sector sees a modest positive note from American Express\u2019s new card launch, but no major catalysts for the broader financial services group.",
+      "news": "No new significant news or SEC filings found for the team's selected companies in the last 2 hours.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "AXP",
+          "symbol": "JPM",
           "sentiment": 0.4,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "American Express partnered with Albertsons to launch a new rewards credit card, expanding its consumer base.",
+          "summary": "J.P. Morgan Asset Management has expanded its tokenized cash management platform by making money market funds available on the Solana blockchain for qualified U.S. investors.",
           "source": "fiscal.ai",
-          "time": "11:08"
+          "time": "14:06"
         },
         {
-          "symbol": "MA",
-          "sentiment": 0.3,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Mastercard launched its Gateway in Syria, expanding digital payment capabilities into a new market.",
-          "source": "fiscal.ai",
-          "time": "11:02"
-        },
-        {
-          "symbol": "BLK",
-          "sentiment": 0.0,
-          "importance": 1,
-          "unconfirmed_rumor": false,
-          "summary": "BlackRock reaffirmed LGBTQ+ identity in its 2026 board diversity guidelines.",
-          "source": "fiscal.ai",
-          "time": "11:02"
-        },
-        {
-          "symbol": "WFC",
+          "symbol": "ICE",
           "sentiment": 0.2,
           "importance": 2,
           "unconfirmed_rumor": false,
-          "summary": "TJO expanded its banking relationship with Wells Fargo, indicating deeper client engagement.",
+          "summary": "ICE has expanded its ICE Risk Model 2 margining methodology to include interest rate and fixed income derivatives.",
           "source": "fiscal.ai",
-          "time": "11:02"
+          "time": "14:06"
         },
         {
-          "symbol": "WFC",
+          "symbol": "HOOD",
           "sentiment": 0.1,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "Robinhood's TradePMR subsidiary integrated ICE Connect Wealth into its Fusion advisor platform to enhance research capabilities.",
+          "source": "fiscal.ai",
+          "time": "14:06"
+        },
+        {
+          "symbol": "CME",
+          "sentiment": 0.8,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Wells Fargo participated in a $3.3\u202fbillion construction loan for a new NYC office tower.",
-          "source": "fiscal.ai",
-          "time": "11:02"
+          "summary": "CME Group was noted in a Benzinga report as receiving bullish analyst upgrades and price target revisions.",
+          "source": "Benzinga",
+          "time": "12:39"
         },
         {
-          "symbol": "BLK",
-          "sentiment": 0.8,
-          "importance": 5,
+          "symbol": "CME",
+          "sentiment": 0.5,
+          "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "TD Cowen upgraded BlackRock to a Buy rating with a $1,405 price target, signaling strong confidence in the company's strategic positioning.",
-          "source": "fiscal.ai"
+          "summary": "Barclays maintains an equal-weight rating on CME Group and raises its price target to $321.",
+          "source": "benzinga",
+          "time": "11:54"
         },
         {
-          "symbol": "WFC",
-          "sentiment": 0.7,
+          "symbol": "CME",
+          "sentiment": 0.8,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Wells Fargo maintained its Overweight rating on CME Group and raised the price target to $333.",
+          "source": "Benzinga",
+          "time": "11:32"
+        },
+        {
+          "symbol": "CME",
+          "sentiment": 0.8,
           "importance": 4,
           "unconfirmed_rumor": false,
-          "summary": "Wells Fargo secured a $3.3 billion construction loan for a New York City tower and expanded its banking relationship with TJO, indicating robust growth opportunities.",
-          "source": "fiscal.ai"
+          "summary": "JPMorgan upgraded CME to Buy with a $367 price target, and Wells Fargo raised its target to $333, signaling strong institutional confidence.",
+          "source": "benzinga, fiscal.ai"
         },
         {
-          "symbol": "JPM",
-          "sentiment": -0.3,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "MarketScreener downgraded JPMorgan Chase to Sell, reflecting concerns despite a bullish Bitcoin long-term forecast.",
-          "source": "fiscal.ai"
+          "symbol": "V",
+          "sentiment": 0.6,
+          "importance": 4,
+          "unconfirmed_rumor": true,
+          "summary": "Axios reported Visa is in talks to acquire Fireblocks for ~$2.5B, a move Fireblocks has publicly denied, creating significant M&A speculation.",
+          "source": "benzinga, fiscal.ai"
         }
       ]
     },
     "healthcare": {
-      "news": "The sector shows limited activity, with the only notable development being a bullish analyst upgrade for Intuitive Surgical. Otherwise, sentiment remains neutral across the healthcare stocks.",
+      "news": "No recent significant news or SEC filings found for the team's healthcare stocks. Stay tuned for updates.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "ISRG",
-          "sentiment": 0.8,
-          "importance": 4,
+          "symbol": "MRK",
+          "sentiment": -1.0,
+          "importance": 5,
           "unconfirmed_rumor": false,
-          "summary": "JP Morgan maintains overweight on Intuitive Surgical and raises its price target to $475, indicating strong confidence.",
-          "source": "Benzinga",
-          "time": "11:16"
+          "summary": "Moderna stock decline due to alleged lower-than-expected melanoma vaccine Phase 3 efficacy in ESMO 2026 abstract leak.",
+          "source": "benzinga",
+          "time": "14:52"
         },
         {
           "symbol": "MRK",
-          "sentiment": 0.5,
-          "importance": 5,
+          "sentiment": -0.5,
+          "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "EU approves Keytruda-Padcev combination for bladder cancer",
+          "summary": "Moderna shares drop after ESMO 2026 abstract leak; potential negative impact on stock.",
+          "source": "benzinga",
+          "time": "14:52"
+        },
+        {
+          "symbol": "ABBV",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "AbbVie's Phase 3 INTREPID trial results for lutikizumab in treating moderate to severe cases of hidradenitis suppurativa.",
+          "source": "benzinga",
+          "time": "14:26"
+        },
+        {
+          "symbol": "ABBV",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "AbbVie's Phase 3 INTREPID trial results for lutikizumab in treating moderate to severe cases of hidradenitis suppurativa.",
+          "source": "benzinga",
+          "time": "14:26"
+        },
+        {
+          "symbol": "ABBV",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "AbbVie shares rise after positive Phase 3 trial results for lutikizumab in treating moderate to severe cases of hidradenitis suppurativa.",
+          "source": "benzinga",
+          "time": "14:26"
+        },
+        {
+          "symbol": "ABBV",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "AbbVie shares rise after positive Phase 3 trial results for lutikizumab in treating moderate to severe cases of hidradenitis suppurativa.",
+          "source": "benzinga",
+          "time": "14:26"
+        },
+        {
+          "symbol": "MRNA",
+          "sentiment": -0.5,
+          "importance": 4,
+          "unconfirmed_rumor": true,
+          "summary": "Shares declined following unconfirmed reports of a data leak regarding the experimental melanoma vaccine partnership with Merck.",
           "source": "fiscal.ai",
-          "time": "11:04"
-        },
-        {
-          "symbol": "ISRG",
-          "sentiment": -0.2,
-          "importance": 5,
-          "unconfirmed_rumor": false,
-          "summary": "Q3 beat and raised outlook but shares fell 5.8% as analysts adjusted price targets",
-          "source": "benzinga",
-          "time": "11:04"
-        },
-        {
-          "symbol": "ABT",
-          "sentiment": -0.3,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Exec expects temporary challenges in heart device market and increased pricing pressure internationally",
-          "source": "benzinga",
-          "time": "11:04"
-        },
-        {
-          "symbol": "ABT",
-          "sentiment": 0,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Exec says litigation matters don't need full resolution for nutrition business separation",
-          "source": "benzinga",
-          "time": "11:04"
-        },
-        {
-          "symbol": "TMO",
-          "sentiment": 1.0,
-          "importance": 5,
-          "unconfirmed_rumor": false,
-          "summary": "Thermo Fisher Scientific reported a strong Q3 beat with EPS of $6.68 and raised its full-year guidance, signaling robust demand and operational execution.",
-          "source": "benzinga/fiscal.ai"
-        },
-        {
-          "symbol": "ABT",
-          "sentiment": 0.8,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Abbott Laboratories beat Q3 sales estimates, narrowed full-year EPS guidance, and announced the planned spin-off of its Nutrition business by late 2027.",
-          "source": "benzinga/fiscal.ai"
+          "time": "14:06"
         },
         {
           "symbol": "MRK",
-          "sentiment": 0.8,
+          "sentiment": -0.5,
           "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Merck received EU approval for Keytruda in combination with Padcev for bladder cancer and partnered with Nvidia and Microsoft on AI-driven patient support.",
-          "source": "fiscal.ai/benzinga"
+          "unconfirmed_rumor": true,
+          "summary": "Shares declined alongside Moderna due to reports of a potential data leak concerning their joint melanoma vaccine program.",
+          "source": "fiscal.ai",
+          "time": "14:06"
         }
       ]
     },
     "political_and_social_media": {
-      "overall": "Political rhetoric about Russia sanctions is raising caution, but without concrete policy moves markets remain wary and focused on defense and aerospace sectors.",
+      "overall": "The current social media chatter shows no direct commentary on U.S. policy or company actions that would likely influence the listed equities today. Market sentiment remains neutral with no clear catalysts emerging from the posts reviewed.",
       "findings": [
+        {
+          "source": "Truth Social",
+          "post": "President Trump shares his thoughts on the Central Park Horse-drawn Carriage industry and expresses disappointment at its end due to a single accident.",
+          "market_wide": false,
+          "affected": [
+            "TICKER"
+          ],
+          "sentiment": -0.5,
+          "importance": 3,
+          "why": "The post discusses a local issue (Central Park Horse-drawn Carriage industry) that may have some impact on tourism and related stocks but is not directly related to tariffs, trade deals, sanctions, defense, or space spending.",
+          "seen_at": "2026-10-22T15:14-04:00"
+        },
+        {
+          "source": "Truth Social",
+          "post": "President Trump shares his thoughts on the Central Park Horse-drawn Carriage industry and expresses disappointment at its end due to a single accident.",
+          "market_wide": false,
+          "affected": [
+            "TICKER"
+          ],
+          "sentiment": -0.5,
+          "importance": 3,
+          "why": "The post discusses a local issue (Central Park Horse-drawn Carriage industry) that may have some impact on tourism and related stocks but is not directly related to tariffs, trade deals, sanctions, defense, or space spending.",
+          "seen_at": "2026-10-22T15:14-04:00"
+        },
+        {
+          "source": "Truth Social",
+          "post": "President Trump shares his thoughts on the Central Park Horse-drawn Carriage industry and expresses disappointment at its end due to a single accident.",
+          "market_wide": false,
+          "affected": [
+            "TICKER"
+          ],
+          "sentiment": -0.5,
+          "importance": 3,
+          "why": "The post discusses a local issue (Central Park Horse-drawn Carriage industry) that may have some impact on tourism and related stocks but is not directly related to tariffs, trade deals, sanctions, defense, or space spending.",
+          "seen_at": "2026-10-22T15:14-04:00"
+        },
+        {
+          "source": "Truth Social @realDonaldTrump",
+          "post": "Trump claims Apple will spend $100\u202fmillion on U.S. titanium for new iPhone production",
+          "market_wide": false,
+          "affected": [
+            "AAPL"
+          ],
+          "sentiment": 0.6,
+          "importance": 3,
+          "why": "A direct statement about a large Apple procurement could boost investor confidence in AAPL and signal increased domestic demand for titanium, potentially benefiting Apple and related supply\u2011chain stocks.",
+          "seen_at": "2026-10-22T00:32-04:00"
+        },
         {
           "source": "Truth Social @realDonaldTrump",
           "post": "Trump says sanctions on Russia were delayed, allowing his negotiation for Stephen Hubbard's release; sanctions would have halted the deal",
@@ -3857,7 +3767,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-22T15:44-04:00",
+    "time": "2026-10-22T16:04-04:00",
     "earnings": [
       {
         "date": "2026-10-22",
