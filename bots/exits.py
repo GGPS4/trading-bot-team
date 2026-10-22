@@ -49,7 +49,23 @@ def _place_or_update_stop(broker, e):
         e["stop_order_id"] = o.get("id")
         e["stop_sent"], e["stop_qty_sent"] = e["stop_price"], qty
     except Exception as err:
-        log(f"{e['symbol']}: could not place stop order: {err}")
+        # Shares already held by an older order (e.g. a bracket from before a restart): adopt its stop.
+        try:
+            for x in broker.open_orders(e["symbol"]):
+                legs = [x] + list(x.get("legs") or [])
+                for leg in legs:
+                    if leg.get("type") in ("stop", "stop_limit") and leg.get("status") in ("new", "accepted", "held"):
+                        e["stop_order_id"] = leg.get("id")
+                        e["stop_price"] = float(leg.get("stop_price") or e["stop_price"])
+                        e["stop_sent"], e["stop_qty_sent"] = e["stop_price"], qty
+                        e["kind"] = "bracket" if x.get("legs") else e.get("kind")
+                        log(f"{e['symbol']}: using the existing stop order at {e['stop_price']}")
+                        return
+        except Exception:
+            pass
+        if not e.get("stop_warned"):
+            e["stop_warned"] = True
+            log(f"{e['symbol']}: could not place stop order: {err}")
 
 
 def manage(broker, prices, paused, market_open):
