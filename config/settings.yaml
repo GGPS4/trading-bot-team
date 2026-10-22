@@ -121,8 +121,9 @@ intraday:
 # researchers keep reading news, filings and social posts. What they find is
 # handed to the managers at the next open.
 after_hours:
-  check_every_minutes: 15
-  max_ai_calls_per_day: 300       # separate from the trading-day budget above
+  check_every_minutes: 15         # evenings and pre-market
+  overnight_every_minutes: 45     # 9 PM to 7 AM: slower, to save free AI quota for the trading day
+  max_ai_calls_per_day: 120       # separate from the trading-day budget above
 
 # Political & social media watch.
 market_watch:
