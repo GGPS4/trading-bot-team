@@ -1,0 +1,3500 @@
+{
+  "report": {
+    "headline": "Down 0.75% vs market down 0.86%; defense led gains",
+    "summary": "The portfolio closed the day at $99,304.07, a $749.76 loss (\u20110.75%). The benchmark SPY fell about 0.86% over the same period, so we outperformed the market slightly. Defense was the only team in profit, delivering a net +$188.58 thanks to two successful buys in NOC and LDOS, while all other teams posted losses, led by Space with \u2013$529.59. Most losses came from stop\u2011loss exits and manager sells, reflecting tight risk controls but also a lack of sustained upside. Blocked orders were high across the board, especially in Space (38) and Healthcare (27), limiting exposure in those areas. The overall return since start is \u20130.7%, just shy of the benchmark\u2019s \u20130.86%, with a max drawdown of 0.7%.",
+    "best_trade": "LDOS (+$132.18) \u2013 a high\u2011conviction buy after a $160M U.S. Cyber Command award and strong technical momentum delivered the biggest profit.",
+    "worst_trade": "SPCX (\u2011$145.34) \u2013 a high\u2011conviction entry on SpaceX earnings was stopped out quickly, highlighting over\u2011reliance on a single catalyst and tight stop placement.",
+    "rule_issues": [
+      "Defense blocked 6 orders, Space blocked 38, Entertainment 17, Tech 16, Consumer 12, Financials 6, Healthcare 27 \u2013 the risk\u2011budget limits are throttling many intended trades, especially in Space and Healthcare, which could hinder upside potential.",
+      "Multiple stop\u2011losses were triggered (AMD, SPCX, LUNR, etc.) indicating that position sizing or stop levels may be too tight relative to volatility."
+    ],
+    "concerns": [
+      "The majority of teams posted negative P&L, raising questions about overall strategy allocation.",
+      "High block rates suggest risk\u2011rule parameters may be too restrictive or market conditions are unusually volatile.",
+      "Social\u2011media sentiment from a high\u2011profile source flagged negative outlook for many defense and aerospace symbols, which could affect future price moves."
+    ],
+    "patterns": "Over the past weeks defense has consistently generated positive returns while other sectors lag, leading to a modest outperformance versus the benchmark despite overall portfolio drawdown. The team tends to close positions intraday, often at end\u2011of\u2011day, resulting in a high turnover and frequent stop\u2011loss hits. Blocked order volumes have been rising, especially in Space and Healthcare, indicating tightening risk constraints as volatility persists.",
+    "date": "2026-10-22"
+  },
+  "numbers": {
+    "updated": "2026-10-22T16:18-04:00",
+    "date": "2026-10-22",
+    "mode": "paper",
+    "health": {
+      "issues": [
+        "8 problem(s) in the last hour, latest: LLM: gemini gemini-3.5-flash hit its daily limit: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and bi"
+      ]
+    },
+    "paused": false,
+    "rules": {
+      "min_invested_pct": 0.75,
+      "max_positions": 5,
+      "strategy": "day_trading"
+    },
+    "account": {
+      "equity": 99304.07,
+      "cash": 99304.07,
+      "day_change": -749.76,
+      "day_change_pct": -0.0075
+    },
+    "benchmark": {
+      "symbol": "SPY",
+      "price": 764.02
+    },
+    "performance": {
+      "start_date": "2026-10-20",
+      "trading_days": 3,
+      "return_since_start": -0.007,
+      "benchmark_since_start": -0.0086,
+      "max_drawdown": 0.007
+    },
+    "go_live": {
+      "items": [
+        {
+          "rule": "At least 60 trading days on paper",
+          "ok": false,
+          "value": "3 days"
+        },
+        {
+          "rule": "Beating SPY since the start",
+          "ok": true,
+          "value": "-0.7% vs -0.9%"
+        },
+        {
+          "rule": "Worst drop under 15%",
+          "ok": true,
+          "value": "0.7%"
+        }
+      ],
+      "all_ok": false
+    },
+    "teams": {
+      "defense": {
+        "name": "Team 1: Defense",
+        "kind": "special",
+        "tickers": [
+          "LMT",
+          "RTX",
+          "NOC",
+          "LHX",
+          "LDOS",
+          "TXT",
+          "KTOS",
+          "AVAV",
+          "PLTR",
+          "BAH",
+          "CACI",
+          "SAIC",
+          "HEI",
+          "MRCY",
+          "HII"
+        ],
+        "budget": 12771.5,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": 188.58,
+        "trades_today": 4,
+        "blocked_today": 6,
+        "all_time": {
+          "closed_trades": 7,
+          "wins": 4,
+          "losses": 3,
+          "win_rate": 0.571,
+          "realized_pnl": 188.58
+        }
+      },
+      "space": {
+        "name": "Team 2: Space & Aerospace",
+        "kind": "special",
+        "tickers": [
+          "SPCX",
+          "BA",
+          "RKLB",
+          "LUNR",
+          "ASTS",
+          "PL",
+          "RDW",
+          "GE",
+          "HWM",
+          "TDG",
+          "BKSY",
+          "IRDM",
+          "VSAT",
+          "SATS",
+          "FLY"
+        ],
+        "budget": 12771.5,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": -529.59,
+        "trades_today": 14,
+        "blocked_today": 38,
+        "all_time": {
+          "closed_trades": 18,
+          "wins": 4,
+          "losses": 14,
+          "win_rate": 0.222,
+          "realized_pnl": -529.59
+        }
+      },
+      "entertainment": {
+        "name": "Team 3: Entertainment",
+        "kind": "special",
+        "tickers": [
+          "DIS",
+          "NFLX",
+          "SPOT",
+          "WMG",
+          "LYV",
+          "ROKU",
+          "IMAX",
+          "SONY",
+          "WBD",
+          "FOXA",
+          "CMCSA",
+          "TKO",
+          "EA",
+          "TTWO",
+          "BAM"
+        ],
+        "budget": 12771.5,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": -79.98,
+        "trades_today": 11,
+        "blocked_today": 17,
+        "all_time": {
+          "closed_trades": 11,
+          "wins": 3,
+          "losses": 8,
+          "win_rate": 0.273,
+          "realized_pnl": -79.98
+        }
+      },
+      "tech": {
+        "name": "Information Technology",
+        "kind": "sector",
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA",
+          "AVGO",
+          "CRM",
+          "AMD",
+          "ADBE",
+          "INTU",
+          "TXN",
+          "NOW",
+          "AMAT",
+          "MU",
+          "PANW",
+          "ANET",
+          "ON"
+        ],
+        "budget": 12771.5,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": -382.04,
+        "trades_today": 14,
+        "blocked_today": 16,
+        "all_time": {
+          "closed_trades": 16,
+          "wins": 6,
+          "losses": 10,
+          "win_rate": 0.375,
+          "realized_pnl": -382.04
+        }
+      },
+      "consumer": {
+        "name": "Consumer Discretionary",
+        "kind": "sector",
+        "tickers": [
+          "AMZN",
+          "TSLA",
+          "HD",
+          "MCD",
+          "LOW",
+          "BKNG",
+          "CMG",
+          "ABNB",
+          "ORLY",
+          "MAR",
+          "RCL",
+          "GM",
+          "F",
+          "LULU",
+          "DPZ"
+        ],
+        "budget": 12771.5,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": -62.44,
+        "trades_today": 7,
+        "blocked_today": 12,
+        "all_time": {
+          "closed_trades": 8,
+          "wins": 5,
+          "losses": 3,
+          "win_rate": 0.625,
+          "realized_pnl": -62.44
+        }
+      },
+      "financials": {
+        "name": "Financial Services",
+        "kind": "sector",
+        "tickers": [
+          "JPM",
+          "GS",
+          "MS",
+          "V",
+          "MA",
+          "AXP",
+          "BLK",
+          "SCHW",
+          "C",
+          "COF",
+          "SPGI",
+          "CME",
+          "ICE",
+          "HOOD",
+          "COIN"
+        ],
+        "budget": 12771.5,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": 51.14,
+        "trades_today": 8,
+        "blocked_today": 6,
+        "all_time": {
+          "closed_trades": 10,
+          "wins": 6,
+          "losses": 4,
+          "win_rate": 0.6,
+          "realized_pnl": 57.09
+        }
+      },
+      "healthcare": {
+        "name": "Healthcare",
+        "kind": "sector",
+        "tickers": [
+          "LLY",
+          "UNH",
+          "JNJ",
+          "ABBV",
+          "MRK",
+          "TMO",
+          "ABT",
+          "AMGN",
+          "ISRG",
+          "BMY",
+          "VRTX",
+          "REGN",
+          "MDT",
+          "DHR",
+          "MRNA"
+        ],
+        "budget": 12771.5,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": -86.88,
+        "trades_today": 7,
+        "blocked_today": 27,
+        "all_time": {
+          "closed_trades": 11,
+          "wins": 4,
+          "losses": 7,
+          "win_rate": 0.364,
+          "realized_pnl": -61.02
+        }
+      }
+    },
+    "positions": [],
+    "trades_today": [
+      {
+        "time": "10:57",
+        "team": "defense",
+        "symbol": "NOC",
+        "qty": 4.0,
+        "est_price": 538.81,
+        "entry_price": 537.08,
+        "side": "buy",
+        "exit_price": 553.635,
+        "exit_reason": "end_of_day",
+        "pnl": 64.04,
+        "pnl_pct": 0.0298,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Strong Q3 earnings beat accompanied by raised FY26 guidance and multiple analyst upgrades/PT increases (Baird to $675, Guggenheim to $640). Showing positive relative strength today (+0.88%).",
+        "stop_price": 519.95,
+        "take_profit_price": 581.91
+      },
+      {
+        "time": "10:57",
+        "team": "defense",
+        "symbol": "LDOS",
+        "qty": 20.0,
+        "est_price": 127.755,
+        "entry_price": 127.82,
+        "side": "buy",
+        "exit_price": 134.56,
+        "exit_reason": "end_of_day",
+        "pnl": 132.18,
+        "pnl_pct": 0.0517,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "Secured a new $160M U.S. Cyber Command award and shows steady trend above 20-day moving average with balanced RSI (59.6), offering favorable risk/reward on contract-driven momentum.",
+        "stop_price": 122.64,
+        "take_profit_price": 137.98
+      },
+      {
+        "time": "10:58",
+        "team": "space",
+        "symbol": "RKLB",
+        "qty": 48.0,
+        "est_price": 53.2,
+        "entry_price": 52.94,
+        "side": "buy",
+        "exit_price": 51.19,
+        "exit_reason": "manager_sell",
+        "pnl": -86.5,
+        "pnl_pct": -0.034,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Rocket Lab secured an $81M NASA contract to launch a spacecraft for a satellite relay demonstration, driving a strong 4.5% price increase today. The stock remains deeply oversold with an RSI of 24.5, indicating significant upside potential as the positive catalyst begins to be priced in.",
+        "stop_price": 50.54,
+        "take_profit_price": 58.52
+      },
+      {
+        "time": "11:02",
+        "team": "tech",
+        "symbol": "NVDA",
+        "qty": 11.0,
+        "est_price": 219.92,
+        "entry_price": 220.250909,
+        "side": "buy",
+        "exit_price": 213.168182,
+        "exit_reason": "manager_sell",
+        "pnl": -80.29,
+        "pnl_pct": -0.0331,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Multiple high-impact catalysts including Google Cloud's commitment to 960k Vera Rubin GPUs, major supply chain expansion, and enterprise AI agent partnerships with CrowdStrike and ServiceNow. Technically, the stock is turning up (+1.62% today) from an oversold RSI of 37.5.",
+        "stop_price": 211.12,
+        "take_profit_price": 237.51
+      },
+      {
+        "time": "11:02",
+        "team": "tech",
+        "symbol": "AMD",
+        "qty": 4.0,
+        "est_price": 546.49,
+        "entry_price": 545.53,
+        "side": "buy",
+        "exit_price": 519.47,
+        "exit_reason": "stop_loss",
+        "pnl": -106.37,
+        "pnl_pct": -0.0487,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Susquehanna raised AMD's price target to $620 following an AI supercluster win in India. The stock is rebounding strongly (+2.28% today) out of near-oversold territory (RSI 32.9) while holding above its 50-day average.",
+        "stop_price": 519.17,
+        "take_profit_price": 601.14
+      },
+      {
+        "time": "11:02",
+        "team": "consumer",
+        "symbol": "AMZN",
+        "qty": 9.0,
+        "est_price": 261.45,
+        "entry_price": 261.893333,
+        "side": "buy",
+        "exit_price": 251.67,
+        "exit_reason": "manager_sell",
+        "pnl": -94.32,
+        "pnl_pct": -0.04,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "Multiple positive partnership news (AWS with 3Business, 3M stock warrant, Credera collaboration) and after\u2011hours analyst optimism, while price is modestly down 0.5% offering a better entry point.",
+        "stop_price": 240.53,
+        "take_profit_price": 300.67
+      },
+      {
+        "time": "11:06",
+        "team": "healthcare",
+        "symbol": "TMO",
+        "qty": 3.0,
+        "est_price": 695.46,
+        "entry_price": 698.78,
+        "side": "buy",
+        "exit_price": 684.77,
+        "exit_reason": "manager_sell",
+        "pnl": -44.11,
+        "pnl_pct": -0.021,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Reported a solid Q3 beat ($6.68 EPS) and raised full-year guidance, generating strong intraday demand with price rebounding +4.49% from open above both the 20-day and 50-day moving averages.",
+        "stop_price": 667.64,
+        "take_profit_price": 751.1
+      },
+      {
+        "time": "11:06",
+        "team": "healthcare",
+        "symbol": "MRK",
+        "qty": 17.0,
+        "est_price": 148.56,
+        "entry_price": 148.76,
+        "side": "buy",
+        "exit_price": 146.430588,
+        "exit_reason": "manager_sell",
+        "pnl": -42.11,
+        "pnl_pct": -0.0167,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "Clear regulatory catalyst with European Commission approval of Keytruda-Padcev combination; stock displays steady positive momentum (+0.85% from open) with a healthy RSI of 57.7.",
+        "stop_price": 143.36,
+        "take_profit_price": 158.96
+      },
+      {
+        "time": "11:21",
+        "team": "defense",
+        "symbol": "LHX",
+        "qty": 10.0,
+        "est_price": 249.06,
+        "entry_price": 248.98,
+        "side": "buy",
+        "exit_price": null,
+        "exit_reason": "sold outside the bot",
+        "pnl": null,
+        "pnl_pct": null,
+        "status": "closed",
+        "conviction": 5,
+        "reason": "Sentiment 0.7 and importance 5 from news on a new solid\u2011rocket\u2011motor facility; price up modestly, RSI 62 indicates room for upside. Position size within 20% budget limit.",
+        "stop_price": 231.63,
+        "take_profit_price": 286.42
+      },
+      {
+        "time": "11:26",
+        "team": "space",
+        "symbol": "SPCX",
+        "qty": 15.0,
+        "est_price": 162.09,
+        "entry_price": 162.32,
+        "side": "buy",
+        "exit_price": 152.788,
+        "exit_reason": "stop_loss",
+        "pnl": -145.34,
+        "pnl_pct": -0.0597,
+        "status": "closed",
+        "conviction": 5,
+        "reason": "SpaceX surged 10% after a strong earnings beat; multiple analysts raised price targets (importance 5, sentiment 1.0) providing a high\u2011conviction entry.",
+        "stop_price": 153.99,
+        "take_profit_price": 178.3
+      },
+      {
+        "time": "11:26",
+        "team": "space",
+        "symbol": "RDW",
+        "qty": 300.0,
+        "est_price": 8.555,
+        "entry_price": 8.55,
+        "side": "buy",
+        "exit_price": 8.26,
+        "exit_reason": "manager_sell",
+        "pnl": -89.52,
+        "pnl_pct": -0.0349,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Redwire signed an MoU with EnduroSat expanding European space\u2011infrastructure market; sentiment 0.6, importance 4 supports a solid conviction entry.",
+        "stop_price": 8.13,
+        "take_profit_price": 9.41
+      },
+      {
+        "time": "11:26",
+        "team": "space",
+        "symbol": "LUNR",
+        "qty": 233.0,
+        "est_price": 11.03,
+        "entry_price": 11.02,
+        "side": "buy",
+        "exit_price": 10.78,
+        "exit_reason": "stop_loss",
+        "pnl": -58.46,
+        "pnl_pct": -0.0228,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "LUNR rose 4.7% on sympathy with SpaceX earnings; RSI near oversold (31) and sentiment 0.7 (importance 3) give a modest\u2011conviction buy.",
+        "stop_price": 10.48,
+        "take_profit_price": 12.13
+      },
+      {
+        "time": "11:30",
+        "team": "financials",
+        "symbol": "V",
+        "qty": 6.0,
+        "est_price": 409.005,
+        "entry_price": 409.48,
+        "side": "buy",
+        "exit_price": 413.47,
+        "exit_reason": "manager_sell",
+        "pnl": 21.47,
+        "pnl_pct": 0.0087,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "",
+        "stop_price": 388.55,
+        "take_profit_price": 449.91
+      },
+      {
+        "time": "11:41",
+        "team": "healthcare",
+        "symbol": "ABBV",
+        "qty": 9.0,
+        "est_price": 283.48,
+        "entry_price": 283.57,
+        "side": "buy",
+        "exit_price": 283.188889,
+        "exit_reason": "manager_sell",
+        "pnl": -5.98,
+        "pnl_pct": -0.0023,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "Barclays and Baird raised price target to $325 and secured reimbursement agreement for ELAHERE; bullish sentiment and price target upgrade provide a clear buying signal.",
+        "stop_price": 269.31,
+        "take_profit_price": 311.83
+      },
+      {
+        "time": "11:46",
+        "team": "defense",
+        "symbol": "RTX",
+        "qty": 13.0,
+        "est_price": 191.75,
+        "entry_price": 191.78,
+        "side": "buy",
+        "exit_price": 194.38,
+        "exit_reason": "end_of_day",
+        "pnl": 31.29,
+        "pnl_pct": 0.0126,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Barclays and other analysts upgraded RTX, raising price target to $235; new air\u2011traffic\u2011control system and PT9 engine boost outlook. Sentiment 0.5\u20110.6, importance 3\u20114, price dipped 0.8% today, providing entry at ~191.75 within position size limit.",
+        "stop_price": 178.33,
+        "take_profit_price": 214.76
+      },
+      {
+        "time": "09:30",
+        "team": "financials",
+        "symbol": "AXP",
+        "qty": 7.0,
+        "est_price": 324.45,
+        "entry_price": 324.45,
+        "side": "long",
+        "exit_price": 324.04,
+        "exit_reason": "manager_sell",
+        "pnl": -5.14,
+        "pnl_pct": -0.0023,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": null,
+        "take_profit_price": 373.05
+      },
+      {
+        "time": "09:30",
+        "team": "financials",
+        "symbol": "BLK",
+        "qty": 2.0,
+        "est_price": 1138.88,
+        "entry_price": 1138.88,
+        "side": "long",
+        "exit_price": 1138.58,
+        "exit_reason": "trailing_stop",
+        "pnl": -2.88,
+        "pnl_pct": -0.0013,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 1146.98,
+        "take_profit_price": 1309.62
+      },
+      {
+        "time": "09:30",
+        "team": "entertainment",
+        "symbol": "IMAX",
+        "qty": 48.0,
+        "est_price": 53.11,
+        "entry_price": 53.11,
+        "side": "long",
+        "exit_price": 52.69,
+        "exit_reason": "manager_sell",
+        "pnl": -22.7,
+        "pnl_pct": -0.0089,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": null,
+        "take_profit_price": 58.38
+      },
+      {
+        "time": "09:30",
+        "team": "healthcare",
+        "symbol": "ISRG",
+        "qty": 5.0,
+        "est_price": 431.77,
+        "entry_price": 431.77,
+        "side": "long",
+        "exit_price": 439.34,
+        "exit_reason": "manager_sell",
+        "pnl": 35.67,
+        "pnl_pct": 0.0165,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 437.98,
+        "take_profit_price": 493.83
+      },
+      {
+        "time": "09:30",
+        "team": "tech",
+        "symbol": "NOW",
+        "qty": 16.0,
+        "est_price": 153.12,
+        "entry_price": 153.12,
+        "side": "long",
+        "exit_price": 154.58,
+        "exit_reason": "trailing_stop",
+        "pnl": 20.9,
+        "pnl_pct": 0.0085,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 155.17,
+        "take_profit_price": 168.33
+      },
+      {
+        "time": "09:30",
+        "team": "tech",
+        "symbol": "ORCL",
+        "qty": 19.0,
+        "est_price": 130.18,
+        "entry_price": 130.18,
+        "side": "long",
+        "exit_price": 126.06,
+        "exit_reason": "manager_sell",
+        "pnl": -80.71,
+        "pnl_pct": -0.0326,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": null,
+        "take_profit_price": 143.37
+      },
+      {
+        "time": "09:30",
+        "team": "space",
+        "symbol": "PL",
+        "qty": 188.0,
+        "est_price": 13.67,
+        "entry_price": 13.67,
+        "side": "long",
+        "exit_price": 13.15,
+        "exit_reason": "manager_sell",
+        "pnl": -100.28,
+        "pnl_pct": -0.039,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": null,
+        "take_profit_price": 15.31
+      },
+      {
+        "time": "09:30",
+        "team": "tech",
+        "symbol": "QCOM",
+        "qty": 14.0,
+        "est_price": 178.94,
+        "entry_price": 178.94,
+        "side": "long",
+        "exit_price": 173.58,
+        "exit_reason": "manager_sell",
+        "pnl": -77.51,
+        "pnl_pct": -0.0309,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": null,
+        "take_profit_price": 196.58
+      },
+      {
+        "time": "09:30",
+        "team": "financials",
+        "symbol": "SCHW",
+        "qty": 28.0,
+        "est_price": 91.887857,
+        "entry_price": 91.887857,
+        "side": "long",
+        "exit_price": 92.27,
+        "exit_reason": "manager_sell",
+        "pnl": 8.12,
+        "pnl_pct": 0.0032,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": null,
+        "take_profit_price": 105.7
+      },
+      {
+        "time": "11:04",
+        "team": "space",
+        "symbol": "SPCX",
+        "qty": 17.0,
+        "est_price": 149.72,
+        "entry_price": 149.7,
+        "side": "short",
+        "exit_price": 147.57,
+        "exit_reason": "manager_sell",
+        "pnl": 33.68,
+        "pnl_pct": 0.0132,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] OR breakdown, below VWAP, m15/m60 negative, rvol 4.68; news but breakdown in risk-off.",
+        "stop_price": 148.69,
+        "take_profit_price": 145.23
+      },
+      {
+        "time": "11:04",
+        "team": "space",
+        "symbol": "HWM",
+        "qty": 13.0,
+        "est_price": 193.3,
+        "entry_price": 191.56,
+        "side": "short",
+        "exit_price": 194.53,
+        "exit_reason": "manager_sell",
+        "pnl": -41.12,
+        "pnl_pct": -0.0165,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] OR breakdown, below VWAP, high rvol 5.36, m15 -0.4, m60 -1.8.",
+        "stop_price": 196.2,
+        "take_profit_price": 187.5
+      },
+      {
+        "time": "11:04",
+        "team": "space",
+        "symbol": "FLY",
+        "qty": 74.0,
+        "est_price": 17.24,
+        "entry_price": 17.15,
+        "side": "long",
+        "exit_price": 16.881892,
+        "exit_reason": "stop_loss",
+        "pnl": -21.1,
+        "pnl_pct": -0.0166,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] Firefly PDR completed; m60 +0.9; news catalyst.",
+        "stop_price": 16.9,
+        "take_profit_price": 17.93
+      },
+      {
+        "time": "11:04",
+        "team": "space",
+        "symbol": "TDG",
+        "qty": 1.0,
+        "est_price": 1118.55,
+        "entry_price": 1111.83,
+        "side": "long",
+        "exit_price": 1120.36,
+        "exit_reason": "manager_sell",
+        "pnl": 7.41,
+        "pnl_pct": 0.0067,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] rvol 2.13; m60 +0.8; momentum.",
+        "stop_price": 1096.18,
+        "take_profit_price": 1163.29
+      },
+      {
+        "time": "11:04",
+        "team": "space",
+        "symbol": "BKSY",
+        "qty": 78.0,
+        "est_price": 16.97,
+        "entry_price": 16.87,
+        "side": "short",
+        "exit_price": 16.94,
+        "exit_reason": "manager_sell",
+        "pnl": -6.78,
+        "pnl_pct": -0.0052,
+        "status": "closed",
+        "conviction": 2,
+        "reason": "[75% invested rule] OR breakdown, below VWAP, news but rvol low; weak.",
+        "stop_price": 17.22,
+        "take_profit_price": 16.46
+      },
+      {
+        "time": "11:07",
+        "team": "entertainment",
+        "symbol": "SPOT",
+        "qty": 0.901157977,
+        "est_price": 569.055,
+        "entry_price": 567.714,
+        "side": "long",
+        "exit_price": 569.734,
+        "exit_reason": "trailing_stop",
+        "pnl": 1.31,
+        "pnl_pct": 0.0026,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Pre-market gap +5.8% on Q3 beat, rvol 4.88, strong earnings gap; risk-off long with half size, conviction 4 meets +1.",
+        "stop_price": 570.16,
+        "take_profit_price": 625.96
+      },
+      {
+        "time": "11:07",
+        "team": "entertainment",
+        "symbol": "CMCSA",
+        "qty": 44.0,
+        "est_price": 22.805,
+        "entry_price": 22.79,
+        "side": "short",
+        "exit_price": 23.06,
+        "exit_reason": "manager_sell",
+        "pnl": -12.89,
+        "pnl_pct": -0.0129,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] Q3 beat but Q4 restructuring charge and weak intraday momentum; risk-off short favored.",
+        "stop_price": 23.95,
+        "take_profit_price": 20.52
+      },
+      {
+        "time": "11:07",
+        "team": "entertainment",
+        "symbol": "TKO",
+        "qty": 5.0,
+        "est_price": 176.985,
+        "entry_price": 176.98,
+        "side": "short",
+        "exit_price": 177.31,
+        "exit_reason": "end_of_day",
+        "pnl": -2.54,
+        "pnl_pct": -0.0029,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] Breakdown below OR/VWAP, m60 -1.6, risk-off short.",
+        "stop_price": 185.83,
+        "take_profit_price": 159.29
+      },
+      {
+        "time": "11:07",
+        "team": "entertainment",
+        "symbol": "LYV",
+        "qty": 5.0,
+        "est_price": 173.935,
+        "entry_price": 173.65,
+        "side": "short",
+        "exit_price": 174.408,
+        "exit_reason": "end_of_day",
+        "pnl": -4.66,
+        "pnl_pct": -0.0054,
+        "status": "closed",
+        "conviction": 2,
+        "reason": "[75% invested rule] Breakdown below OR/VWAP, weak trend, but low rvol; momentum short.",
+        "stop_price": 182.63,
+        "take_profit_price": 156.54
+      },
+      {
+        "time": "11:10",
+        "team": "tech",
+        "symbol": "AVGO",
+        "qty": 7.0,
+        "est_price": 324.01,
+        "entry_price": 323.3,
+        "side": "short",
+        "exit_price": 324.127143,
+        "exit_reason": "end_of_day",
+        "pnl": -8.06,
+        "pnl_pct": -0.0036,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Breakdown below opening range and VWAP with rvol 2.07 and risk-off selling; short weak stocks.",
+        "stop_price": 330.49,
+        "take_profit_price": 311.05
+      },
+      {
+        "time": "11:10",
+        "team": "tech",
+        "symbol": "AMD",
+        "qty": 5.0,
+        "est_price": 511.46,
+        "entry_price": 510.0,
+        "side": "short",
+        "exit_price": 511.35,
+        "exit_reason": "manager_sell",
+        "pnl": -9.3,
+        "pnl_pct": -0.0036,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] Breakdown below OR/VWAP, oversold RSI, and strong downside momentum in risk-off market.",
+        "stop_price": 521.69,
+        "take_profit_price": 491.0
+      },
+      {
+        "time": "11:10",
+        "team": "tech",
+        "symbol": "TXN",
+        "qty": 5.0,
+        "est_price": 278.745,
+        "entry_price": 277.5,
+        "side": "short",
+        "exit_price": 281.75,
+        "exit_reason": "manager_sell",
+        "pnl": -22.65,
+        "pnl_pct": -0.0163,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "[75% invested rule] High-volume breakdown below VWAP and Mizuho PT cut; favored short in risk-off.",
+        "stop_price": 284.32,
+        "take_profit_price": 267.6
+      },
+      {
+        "time": "11:10",
+        "team": "tech",
+        "symbol": "ANET",
+        "qty": 1.0,
+        "est_price": 172.185,
+        "entry_price": 171.84,
+        "side": "short",
+        "exit_price": 171.2,
+        "exit_reason": "manager_sell",
+        "pnl": 0.47,
+        "pnl_pct": 0.0027,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] Breakdown below OR/VWAP and risk-off selling; weak momentum.",
+        "stop_price": 175.63,
+        "take_profit_price": 165.3
+      },
+      {
+        "time": "11:12",
+        "team": "consumer",
+        "symbol": "TSLA",
+        "qty": 4.0,
+        "est_price": 382.275,
+        "entry_price": 380.4525,
+        "side": "short",
+        "exit_price": 378.18,
+        "exit_reason": "trailing_stop",
+        "pnl": 7.57,
+        "pnl_pct": 0.005,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Tesla sold off after Q3 earnings despite the beat on delivery weakness and 2026 CapEx cut; shares are below VWAP and momentum is down, fitting a risk-off short.",
+        "stop_price": 378.12,
+        "take_profit_price": 366.98
+      },
+      {
+        "time": "11:12",
+        "team": "consumer",
+        "symbol": "DPZ",
+        "qty": 4.0,
+        "est_price": 317.19,
+        "entry_price": 317.6,
+        "side": "long",
+        "exit_price": 315.43,
+        "exit_reason": "manager_sell",
+        "pnl": -9.95,
+        "pnl_pct": -0.0078,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] DPZ broke above range with positive momentum but low relative volume; smaller intraday long if momentum holds.",
+        "stop_price": 312.43,
+        "take_profit_price": 326.71
+      },
+      {
+        "time": "11:14",
+        "team": "financials",
+        "symbol": "CME",
+        "qty": 4.0,
+        "est_price": 306.15,
+        "entry_price": 305.94,
+        "side": "long",
+        "exit_price": 305.77,
+        "exit_reason": "end_of_day",
+        "pnl": -1.9,
+        "pnl_pct": -0.0016,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "JPMorgan upgraded CME to Overweight/Buy and raised its price target to $367, per JPM and Benzinga. CME is also breaking above its opening range at $301.99-$305.43 and trading around $306.15, up 3.5% with rvol 1.34. The catalyst plus breakout is a clear intraday setup, though the market is risk-off and the stock is overbought; conviction is high but size will be disciplined.",
+        "stop_price": 300.03,
+        "take_profit_price": 318.4
+      },
+      {
+        "time": "11:14",
+        "team": "financials",
+        "symbol": "ICE",
+        "qty": 7.0,
+        "est_price": 162.92,
+        "entry_price": 163.01,
+        "side": "long",
+        "exit_price": 163.498571,
+        "exit_reason": "end_of_day",
+        "pnl": 2.28,
+        "pnl_pct": 0.002,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] ICE broke above its opening range and is up 3.3%, with positive momentum and rvol 1.15; a valid intraday long if risk controls are tight.",
+        "stop_price": 159.66,
+        "take_profit_price": 167.81
+      },
+      {
+        "time": "11:15",
+        "team": "healthcare",
+        "symbol": "LLY",
+        "qty": 0.972325062,
+        "est_price": 1312.67,
+        "entry_price": 1315.414,
+        "side": "long",
+        "exit_price": 1311.58,
+        "exit_reason": "manager_sell",
+        "pnl": -5.01,
+        "pnl_pct": -0.0039,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "LLY +3.3% on the day, opening range breakout above 1301.26, above VWAP, rvol 2.03, positive m15/m60 momentum, and urgent $5B antibody-drug conjugate manufacturing news; strongest healthcare setup with positive sentiment.",
+        "stop_price": 1286.42,
+        "take_profit_price": 1365.18
+      },
+      {
+        "time": "11:26",
+        "team": "space",
+        "symbol": "ASTS",
+        "qty": 1.0,
+        "est_price": 38.68,
+        "entry_price": 38.68,
+        "side": "short",
+        "exit_price": 38.87,
+        "exit_reason": "manager_sell",
+        "pnl": -0.23,
+        "pnl_pct": -0.0059,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 39.39,
+        "take_profit_price": null
+      },
+      {
+        "time": "11:26",
+        "team": "defense",
+        "symbol": "BAH",
+        "qty": 16.0,
+        "est_price": 78.1,
+        "entry_price": 78.1,
+        "side": "long",
+        "exit_price": 78.6,
+        "exit_reason": "manager_sell",
+        "pnl": 6.75,
+        "pnl_pct": 0.0054,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": null,
+        "take_profit_price": null
+      },
+      {
+        "time": "11:26",
+        "team": "defense",
+        "symbol": "LMT",
+        "qty": 2.0,
+        "est_price": 586.49,
+        "entry_price": 586.49,
+        "side": "long",
+        "exit_price": 586.84,
+        "exit_reason": "manager_sell",
+        "pnl": -0.47,
+        "pnl_pct": -0.0004,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": null,
+        "take_profit_price": null
+      },
+      {
+        "time": "11:33",
+        "team": "defense",
+        "symbol": "CACI",
+        "qty": 2.0,
+        "est_price": 633.57,
+        "entry_price": 635.1,
+        "side": "long",
+        "exit_price": 616.49,
+        "exit_reason": "stop_loss",
+        "pnl": -38.47,
+        "pnl_pct": -0.0303,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "CACI beat Q1 EPS and raised FY guidance, importance 4; above VWAP, m15 +0.6, m60 +3.0, rvol 2.02, trend up; risk_off half size.",
+        "stop_price": 620.9,
+        "take_profit_price": 658.91
+      },
+      {
+        "time": "11:33",
+        "team": "consumer",
+        "symbol": "AMZN",
+        "qty": 10.0,
+        "est_price": 251.87,
+        "entry_price": 251.94,
+        "side": "short",
+        "exit_price": 250.006,
+        "exit_reason": "end_of_day",
+        "pnl": 16.83,
+        "pnl_pct": 0.0067,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "AMZN is down 4.0% on the day, trading below VWAP (-0.6%) with high relative volume (2.03). In a risk-off market, this momentum suggests further downside. The stop is tight at 2% to respect the volatility.",
+        "stop_price": 250.25,
+        "take_profit_price": 244.31
+      },
+      {
+        "time": "11:33",
+        "team": "consumer",
+        "symbol": "LULU",
+        "qty": 12.0,
+        "est_price": 101.03,
+        "entry_price": 101.210833,
+        "side": "long",
+        "exit_price": 100.78,
+        "exit_reason": "manager_sell",
+        "pnl": -6.38,
+        "pnl_pct": -0.0053,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "LULU is up 4.7% with a strong opening range breakout and positive 15m momentum (+0.5%). It is trading above VWAP (+2.2%) and has the best relative strength in the group today. Longs are half-size due to risk-off, but this is a high-conviction momentum play.",
+        "stop_price": 99.51,
+        "take_profit_price": 103.56
+      },
+      {
+        "time": "11:33",
+        "team": "consumer",
+        "symbol": "HD",
+        "qty": 3.0,
+        "est_price": 324.39,
+        "entry_price": 324.79,
+        "side": "long",
+        "exit_price": 327.333333,
+        "exit_reason": "end_of_day",
+        "pnl": 6.65,
+        "pnl_pct": 0.0068,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] HD is up 3.3% with a breakout and above VWAP. Strong momentum, but RSI is overbought (85.2), so entry should be cautious.",
+        "stop_price": 319.52,
+        "take_profit_price": 332.5
+      },
+      {
+        "time": "11:35",
+        "team": "tech",
+        "symbol": "ADBE",
+        "qty": 4.0,
+        "est_price": 269.38,
+        "entry_price": 269.59,
+        "side": "long",
+        "exit_price": 270.15,
+        "exit_reason": "manager_sell",
+        "pnl": 1.16,
+        "pnl_pct": 0.0011,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] Clear OR breakout with volume and above-VWAP follow-through; momentum long despite overbought RSI, sized down in risk-off regime.",
+        "stop_price": 263.99,
+        "take_profit_price": 280.16
+      },
+      {
+        "time": "11:35",
+        "team": "financials",
+        "symbol": "HOOD",
+        "qty": 26.0,
+        "est_price": 97.3,
+        "entry_price": 97.5,
+        "side": "short",
+        "exit_price": 96.5,
+        "exit_reason": "trailing_stop",
+        "pnl": 23.48,
+        "pnl_pct": 0.0093,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "HOOD broke below opening range and VWAP with rvol 1.68 and downtrend; risk-off regime favors shorting weak high-volume breakdowns despite minor Dubai approval.",
+        "stop_price": 96.47,
+        "take_profit_price": 93.41
+      },
+      {
+        "time": "11:48",
+        "team": "entertainment",
+        "symbol": "NFLX",
+        "qty": 38.0,
+        "est_price": 66.625,
+        "entry_price": 66.948684,
+        "side": "short",
+        "exit_price": 67.12,
+        "exit_reason": "manager_sell",
+        "pnl": -9.06,
+        "pnl_pct": -0.0036,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Netflix is at two-year lows with multiple analyst downgrades (Argus, Pivotal, UBS) and a negative sentiment score of -0.4. Despite a 2.4% day gain, it is trading below its 50-day average and the broader market is risk-off, making it a prime candidate for a short on any weakness or failure to hold the opening range.",
+        "stop_price": 67.96,
+        "take_profit_price": 63.96
+      },
+      {
+        "time": "11:48",
+        "team": "entertainment",
+        "symbol": "SONY",
+        "qty": 48.0,
+        "est_price": 26.18,
+        "entry_price": 26.2,
+        "side": "long",
+        "exit_price": 26.12,
+        "exit_reason": "manager_sell",
+        "pnl": -5.1,
+        "pnl_pct": -0.0041,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Sony is up 4.3% on the day with a clear opening range breakout (25.98) and high relative volume (1.95). It is trading above VWAP and has strong 60-minute momentum (+1.2%). While RSI is high (79.3), the momentum and volume support a continuation trade in a risk-off market where relative strength is key.",
+        "stop_price": 25.79,
+        "take_profit_price": 26.97
+      },
+      {
+        "time": "11:51",
+        "team": "space",
+        "symbol": "VSAT",
+        "qty": 22.0,
+        "est_price": 59.08,
+        "entry_price": 59.05,
+        "side": "short",
+        "exit_price": 58.87,
+        "exit_reason": "trailing_stop",
+        "pnl": 2.66,
+        "pnl_pct": 0.002,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "VSAT broke below opening range and VWAP, weak momentum, day -5.8%, risk-off favors shorting breakdown.",
+        "stop_price": 58.81,
+        "take_profit_price": 57.6
+      },
+      {
+        "time": "11:51",
+        "team": "space",
+        "symbol": "FLY",
+        "qty": 37.0,
+        "est_price": 17.14,
+        "entry_price": 17.17,
+        "side": "long",
+        "exit_price": 16.98,
+        "exit_reason": "manager_sell",
+        "pnl": -7.66,
+        "pnl_pct": -0.0121,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] Firefly Elytra PDR with positive sentiment, but risk-off limits long size.",
+        "stop_price": 16.45,
+        "take_profit_price": 18.17
+      },
+      {
+        "time": "11:51",
+        "team": "healthcare",
+        "symbol": "JNJ",
+        "qty": 4.0,
+        "est_price": 265.69,
+        "entry_price": 265.89,
+        "side": "long",
+        "exit_price": 268.255,
+        "exit_reason": "end_of_day",
+        "pnl": 8.39,
+        "pnl_pct": 0.0079,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "JNJ broke above the opening range high of 263.13, held above VWAP, and has positive clinical data/news; m15/m60 momentum positive and rvol 1.45. Risk-off requires higher conviction, which this setup meets.",
+        "stop_price": 267.46,
+        "take_profit_price": 276.32
+      },
+      {
+        "time": "12:09",
+        "team": "defense",
+        "symbol": "LMT",
+        "qty": 2.0,
+        "est_price": 583.11,
+        "entry_price": 583.67,
+        "side": "long",
+        "exit_price": 580.88,
+        "exit_reason": "manager_sell",
+        "pnl": -6.74,
+        "pnl_pct": -0.0058,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "LMT beat Q3 EPS and raised FY2026 guidance, secured 850 F-35 contract; news importance 5, sentiment 1.0, direct core defense impact. Despite intraday VWAP below, the fundamental catalyst is clear.",
+        "stop_price": 571.45,
+        "take_profit_price": 606.43
+      },
+      {
+        "time": "12:17",
+        "team": "tech",
+        "symbol": "CRM",
+        "qty": 5.0,
+        "est_price": 249.69,
+        "entry_price": 249.99,
+        "side": "long",
+        "exit_price": 248.42,
+        "exit_reason": "manager_sell",
+        "pnl": -9.1,
+        "pnl_pct": -0.0073,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Clear OR breakout with rvol 1.71, above VWAP, day +3.3, software rotation; high-quality intraday long setup despite risk-off.",
+        "stop_price": 245.94,
+        "take_profit_price": 259.68
+      },
+      {
+        "time": "12:17",
+        "team": "tech",
+        "symbol": "IBM",
+        "qty": 5.0,
+        "est_price": 248.88,
+        "entry_price": 249.26,
+        "side": "long",
+        "exit_price": 248.51,
+        "exit_reason": "manager_sell",
+        "pnl": -4.99,
+        "pnl_pct": -0.004,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Bullish analyst updates (Barclays PT 277, RBC Outperform PT 270) plus high-volume bounce/rvol 4.69, holding above VWAP; news-driven long.",
+        "stop_price": 245.15,
+        "take_profit_price": 256.35
+      },
+      {
+        "time": "12:24",
+        "team": "entertainment",
+        "symbol": "SPOT",
+        "qty": 3.0,
+        "est_price": 571.135,
+        "entry_price": 570.65,
+        "side": "short",
+        "exit_price": 578.9,
+        "exit_reason": "manager_sell",
+        "pnl": -26.47,
+        "pnl_pct": -0.0155,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Spotify gapped up +5.8% on earnings but is fading below VWAP (-0.2%) with negative 15m momentum (-0.3%) and high relative volume (3.95). The news indicates missed EPS/revenue estimates, and the price action confirms the gap is failing. Shorting the fade is a high-probability play in a risk-off market.",
+        "stop_price": 582.56,
+        "take_profit_price": 548.29
+      },
+      {
+        "time": "12:43",
+        "team": "financials",
+        "symbol": "COF",
+        "qty": 12.0,
+        "est_price": 204.08,
+        "entry_price": 203.63,
+        "side": "short",
+        "exit_price": 202.87,
+        "exit_reason": "end_of_day",
+        "pnl": 6.68,
+        "pnl_pct": 0.0027,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "COF broke below its opening range and VWAP with momentum; in a risk-off regime, shorting weak financials is favored. Stop above entry, first target lower.",
+        "stop_price": 207.14,
+        "take_profit_price": 201.02
+      },
+      {
+        "time": "12:43",
+        "team": "healthcare",
+        "symbol": "DHR",
+        "qty": 4.0,
+        "est_price": 229.205,
+        "entry_price": 228.76,
+        "side": "short",
+        "exit_price": 228.87,
+        "exit_reason": "end_of_day",
+        "pnl": -1.36,
+        "pnl_pct": -0.0015,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "DHR broke below OR/VWAP, m15 -1.0%, m60 -2.1%, rvol 2.13, trend down; risk-off shorting breakdown favored despite PT raise.",
+        "stop_price": 240.67,
+        "take_profit_price": 206.28
+      },
+      {
+        "time": "12:43",
+        "team": "healthcare",
+        "symbol": "AMGN",
+        "qty": 2.0,
+        "est_price": 447.78,
+        "entry_price": 447.56,
+        "side": "long",
+        "exit_price": 447.45,
+        "exit_reason": "end_of_day",
+        "pnl": -1.12,
+        "pnl_pct": -0.0013,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] OR breakout, rvol 1.36, above VWAP.",
+        "stop_price": 441.06,
+        "take_profit_price": 461.21
+      },
+      {
+        "time": "12:47",
+        "team": "consumer",
+        "symbol": "CMG",
+        "qty": 83.0,
+        "est_price": 28.185,
+        "entry_price": 28.13,
+        "side": "short",
+        "exit_price": 27.96759,
+        "exit_reason": "end_of_day",
+        "pnl": 11.15,
+        "pnl_pct": 0.0048,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "Breakdown below opening range and VWAP, weak trend, risk-off; short weakness.",
+        "stop_price": 28.75,
+        "take_profit_price": 27.06
+      },
+      {
+        "time": "12:47",
+        "team": "consumer",
+        "symbol": "MCD",
+        "qty": 5.0,
+        "est_price": 250.9,
+        "entry_price": 250.86,
+        "side": "long",
+        "exit_price": 252.314,
+        "exit_reason": "end_of_day",
+        "pnl": 6.01,
+        "pnl_pct": 0.0048,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] OR breakout above VWAP and uptrend; but low rvol, risk-off half size.",
+        "stop_price": 245.88,
+        "take_profit_price": 260.94
+      },
+      {
+        "time": "12:47",
+        "team": "entertainment",
+        "symbol": "CMCSA",
+        "qty": 55.0,
+        "est_price": 22.96,
+        "entry_price": 22.93,
+        "side": "long",
+        "exit_price": 22.72,
+        "exit_reason": "manager_sell",
+        "pnl": -12.81,
+        "pnl_pct": -0.0102,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "CMCSA broke above the opening range on high volume (rvol 2.21) despite Q4 restructuring charge, showing demand; earnings beat but charge limits conviction, and risk-off calls for half size with conviction +1.",
+        "stop_price": 22.5,
+        "take_profit_price": 23.88
+      },
+      {
+        "time": "12:59",
+        "team": "space",
+        "symbol": "HWM",
+        "qty": 13.0,
+        "est_price": 193.84,
+        "entry_price": 193.74,
+        "side": "short",
+        "exit_price": 194.032308,
+        "exit_reason": "end_of_day",
+        "pnl": -6.32,
+        "pnl_pct": -0.0025,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Strong breakdown below the opening range (196.25-203.05) with massive relative volume (4.01) and a -6.9% daily drop. RSI is 15.2 (oversold) but momentum is still negative (m60 +0.9% is likely a lagging indicator or typo in data, but m15 is +0.3% and price is well below VWAP). The high volume confirms institutional selling pressure.",
+        "stop_price": 196.75,
+        "take_profit_price": 188.02
+      },
+      {
+        "time": "12:59",
+        "team": "space",
+        "symbol": "RKLB",
+        "qty": 26.0,
+        "est_price": 50.935,
+        "entry_price": 50.89,
+        "side": "short",
+        "exit_price": 50.399615,
+        "exit_reason": "trailing_stop",
+        "pnl": 11.43,
+        "pnl_pct": 0.0086,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "Broke down below the opening range (51.48-52.97) and is trading below VWAP. RSI is 15.9, indicating extreme weakness. While relative volume is lower (0.77), the trend is clearly down and the stock is part of the high-beta space sector selloff.",
+        "stop_price": 50.39,
+        "take_profit_price": 48.9
+      },
+      {
+        "time": "13:06",
+        "team": "tech",
+        "symbol": "NVDA",
+        "qty": 6.0,
+        "est_price": 212.54,
+        "entry_price": 212.485,
+        "side": "short",
+        "exit_price": 212.118333,
+        "exit_reason": "end_of_day",
+        "pnl": 0.93,
+        "pnl_pct": 0.0007,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "NVDA broke below VWAP and opening range with rvol 1.77 and m15/m60 weakness; Jensen Huang comments did not stop breakdown in risk-off tape. Short breakdown momentum.",
+        "stop_price": 216.79,
+        "take_profit_price": 204.04
+      },
+      {
+        "time": "13:06",
+        "team": "tech",
+        "symbol": "ORCL",
+        "qty": 1.0,
+        "est_price": 123.985,
+        "entry_price": 124.12,
+        "side": "short",
+        "exit_price": 123.89,
+        "exit_reason": "trailing_stop",
+        "pnl": 0.11,
+        "pnl_pct": 0.0009,
+        "status": "closed",
+        "conviction": 2,
+        "reason": "[75% invested rule] OR BREAKDOWN, below VWAP, m15 -0.6%, m60 -1.9%, weak follow-through.",
+        "stop_price": 123.87,
+        "take_profit_price": 119.03
+      },
+      {
+        "time": "13:06",
+        "team": "healthcare",
+        "symbol": "MRK",
+        "qty": 11.0,
+        "est_price": 145.01,
+        "entry_price": 144.81,
+        "side": "short",
+        "exit_price": 147.88,
+        "exit_reason": "manager_sell",
+        "pnl": -35.38,
+        "pnl_pct": -0.0222,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Merck broke down below VWAP and its opening range, with negative 15-minute and 60-minute momentum, higher relative volume, and a -3.2% daily decline. Market risk-off favors shorting weak momentum names.",
+        "stop_price": 149.36,
+        "take_profit_price": 140.66
+      },
+      {
+        "time": "13:14",
+        "team": "space",
+        "symbol": "LUNR",
+        "qty": 124.0,
+        "est_price": 10.28,
+        "entry_price": 10.28,
+        "side": "long",
+        "exit_price": 10.22,
+        "exit_reason": "manager_sell",
+        "pnl": -8.71,
+        "pnl_pct": -0.0068,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "[75% invested rule] Strong downside momentum (m60 -2.2%), trading well below VWAP (-2.5%) and OR low. RSI is 22.1 (oversold but trending down). In a risk-off regime, shorting weak, high-beta space stocks is favored. Tight stop above recent resistance.",
+        "stop_price": 10.07,
+        "take_profit_price": 10.69
+      },
+      {
+        "time": "13:14",
+        "team": "space",
+        "symbol": "ASTS",
+        "qty": 33.0,
+        "est_price": 38.38,
+        "entry_price": 38.386667,
+        "side": "long",
+        "exit_price": 38.267576,
+        "exit_reason": "manager_sell",
+        "pnl": -5.19,
+        "pnl_pct": -0.0041,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] Down 6.2% on the day, below VWAP and OR. RSI 23.5. Volume is elevated (rvol 1.56). Good candidate for a continuation short in a falling market.",
+        "stop_price": 37.61,
+        "take_profit_price": 39.92
+      },
+      {
+        "time": "13:14",
+        "team": "space",
+        "symbol": "RDW",
+        "qty": 157.0,
+        "est_price": 8.14,
+        "entry_price": 8.15,
+        "side": "long",
+        "exit_price": 8.11,
+        "exit_reason": "manager_sell",
+        "pnl": -7.56,
+        "pnl_pct": -0.0059,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] Gapped down 4.3% and broke down. RSI 19.1. Weak momentum (m60 -2.2%). Fits the risk-off shorting strategy.",
+        "stop_price": 7.98,
+        "take_profit_price": 8.47
+      },
+      {
+        "time": "13:21",
+        "team": "financials",
+        "symbol": "V",
+        "qty": 3.0,
+        "est_price": 413.1,
+        "entry_price": 413.65,
+        "side": "long",
+        "exit_price": 413.74,
+        "exit_reason": "end_of_day",
+        "pnl": -0.97,
+        "pnl_pct": -0.0008,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "V cleared the opening range high at 411.41, held above VWAP, and showed rvol 1.36 with day +1.3. M&A speculation added a positive catalyst, but risk-off regime limits size and requires high conviction.",
+        "stop_price": 406.9,
+        "take_profit_price": 429.62
+      },
+      {
+        "time": "13:32",
+        "team": "healthcare",
+        "symbol": "TMO",
+        "qty": 1.0,
+        "est_price": 677.37,
+        "entry_price": 680.07,
+        "side": "short",
+        "exit_price": 675.26,
+        "exit_reason": "end_of_day",
+        "pnl": 4.13,
+        "pnl_pct": 0.0061,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "TMO broke below opening range and VWAP with m60 -1.1% and rvol 1.76; risk-off favors shorting weakness despite PT raise.",
+        "stop_price": 711.24,
+        "take_profit_price": 643.5
+      },
+      {
+        "time": "13:40",
+        "team": "tech",
+        "symbol": "TXN",
+        "qty": 4.0,
+        "est_price": 284.29,
+        "entry_price": 284.28,
+        "side": "long",
+        "exit_price": 281.53,
+        "exit_reason": "manager_sell",
+        "pnl": -12.13,
+        "pnl_pct": -0.0107,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "[75% invested rule] TXN beat Q3 estimates and raised Q4 guidance. Barclays raised PT. Price is above VWAP (+0.8%) and showing positive momentum (m15 +0.5%, m60 +1.4%). Volume is high (rvol 2.15). In a risk-off market, a stock with strong fundamental news and relative strength is a prime long candidate. It is holding above the opening range.",
+        "stop_price": 280.03,
+        "take_profit_price": 292.82
+      },
+      {
+        "time": "13:40",
+        "team": "tech",
+        "symbol": "CRM",
+        "qty": 5.0,
+        "est_price": 248.69,
+        "entry_price": 248.88,
+        "side": "long",
+        "exit_price": 250.23,
+        "exit_reason": "trailing_stop",
+        "pnl": 5.5,
+        "pnl_pct": 0.0044,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "[75% invested rule] CRM is up +2.9% on the day with a breakout above the opening range (243.83-248.6). News indicates sector rotation and upbeat analyst updates. Volume is high (rvol 1.9). It is above VWAP (+0.2%). This is a strong relative strength play in a down market.",
+        "stop_price": 250.25,
+        "take_profit_price": 256.15
+      },
+      {
+        "time": "14:10",
+        "team": "entertainment",
+        "symbol": "SPOT",
+        "qty": 2.0,
+        "est_price": 580.94,
+        "entry_price": 581.45,
+        "side": "long",
+        "exit_price": 583.08,
+        "exit_reason": "trailing_stop",
+        "pnl": 2.1,
+        "pnl_pct": 0.0018,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Strong earnings catalyst with 306M subscribers and margin guidance. Trading well above VWAP with 2.98x relative volume. In a risk-off market, this is the strongest relative strength play. Buying half size due to market mood.",
+        "stop_price": 583.35,
+        "take_profit_price": 598.37
+      },
+      {
+        "time": "14:10",
+        "team": "entertainment",
+        "symbol": "IMAX",
+        "qty": 48.0,
+        "est_price": 52.8,
+        "entry_price": 52.72,
+        "side": "short",
+        "exit_price": 52.4,
+        "exit_reason": "end_of_day",
+        "pnl": 12.84,
+        "pnl_pct": 0.0051,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "Breaking down below the opening range (53.06-53.27) in a risk-off market. Weak momentum (m15 -0.2%) and below VWAP. Shorting weakness is favored in this regime.",
+        "stop_price": 53.86,
+        "take_profit_price": 51.48
+      }
+    ],
+    "blocked_today": [
+      {
+        "date": "2026-10-22",
+        "time": "11:04",
+        "team": "space",
+        "symbol": "GE",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:07",
+        "team": "entertainment",
+        "symbol": "SONY",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:07",
+        "team": "entertainment",
+        "symbol": "NFLX",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:10",
+        "team": "tech",
+        "symbol": "AMAT",
+        "action": "SHORT",
+        "reason": "one share costs $380.18, more than the $176.01 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:10",
+        "team": "tech",
+        "symbol": "MU",
+        "action": "SHORT",
+        "reason": "one share costs $874.80, more than the $176.01 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:12",
+        "team": "consumer",
+        "symbol": "HD",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:12",
+        "team": "consumer",
+        "symbol": "LOW",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:12",
+        "team": "consumer",
+        "symbol": "LULU",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:12",
+        "team": "consumer",
+        "symbol": "BKNG",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:12",
+        "team": "consumer",
+        "symbol": "MCD",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:12",
+        "team": "consumer",
+        "symbol": "CMG",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:12",
+        "team": "consumer",
+        "symbol": "ABNB",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "space",
+        "symbol": "RKLB",
+        "action": "SHORT",
+        "reason": "one share costs $50.98, more than the $1.70 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "space",
+        "symbol": "BA",
+        "action": "SHORT",
+        "reason": "one share costs $189.75, more than the $1.70 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "space",
+        "symbol": "LUNR",
+        "action": "SHORT",
+        "reason": "one share costs $10.47, more than the $1.70 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "space",
+        "symbol": "PL",
+        "action": "SHORT",
+        "reason": "one share costs $13.12, more than the $1.70 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "space",
+        "symbol": "RDW",
+        "action": "SHORT",
+        "reason": "one share costs $8.22, more than the $1.70 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "space",
+        "symbol": "VSAT",
+        "action": "SHORT",
+        "reason": "one share costs $59.16, more than the $1.70 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "entertainment",
+        "symbol": "SONY",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "entertainment",
+        "symbol": "NFLX",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "entertainment",
+        "symbol": "DIS",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "entertainment",
+        "symbol": "FOXA",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "entertainment",
+        "symbol": "BAM",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "entertainment",
+        "symbol": "ROKU",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:33",
+        "team": "consumer",
+        "symbol": "LOW",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:35",
+        "team": "tech",
+        "symbol": "MU",
+        "action": "SHORT",
+        "reason": "one share costs $873.01, more than the $9.29 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:35",
+        "team": "tech",
+        "symbol": "NVDA",
+        "action": "SHORT",
+        "reason": "one share costs $213.15, more than the $9.29 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:35",
+        "team": "tech",
+        "symbol": "MSFT",
+        "action": "SHORT",
+        "reason": "one share costs $525.34, more than the $9.29 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:35",
+        "team": "tech",
+        "symbol": "ONDS",
+        "action": "SHORT",
+        "reason": "broker can't borrow this stock for shorting"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:35",
+        "team": "tech",
+        "symbol": "AMAT",
+        "action": "SHORT",
+        "reason": "one share costs $381.29, more than the $9.29 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:35",
+        "team": "healthcare",
+        "symbol": "JNJ",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:35",
+        "team": "healthcare",
+        "symbol": "UNH",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:35",
+        "team": "healthcare",
+        "symbol": "AMGN",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:35",
+        "team": "healthcare",
+        "symbol": "DHR",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:35",
+        "team": "healthcare",
+        "symbol": "PFE",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:35",
+        "team": "healthcare",
+        "symbol": "VRTX",
+        "action": "BUY",
+        "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:48",
+        "team": "entertainment",
+        "symbol": "FOXA",
+        "action": "BUY",
+        "reason": "team already has the maximum number of positions"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:51",
+        "team": "space",
+        "symbol": "RKLB",
+        "action": "SHORT",
+        "reason": "one share costs $51.13, more than the $20.29 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "11:59",
+        "team": "financials",
+        "symbol": "COIN",
+        "action": "SHORT",
+        "reason": "team already has the maximum number of positions"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:08",
+        "team": "consumer",
+        "symbol": "MAR",
+        "action": "SHORT",
+        "reason": "team already has the maximum number of positions"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:08",
+        "team": "consumer",
+        "symbol": "TSLA",
+        "action": "SHORT",
+        "reason": "already holding this stock"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:09",
+        "team": "entertainment",
+        "symbol": "CMCSA",
+        "action": "SHORT",
+        "reason": "team already has the maximum number of positions"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:09",
+        "team": "entertainment",
+        "symbol": "DIS",
+        "action": "BUY",
+        "reason": "team already has the maximum number of positions"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:17",
+        "team": "space",
+        "symbol": "SPCX",
+        "action": "BUY",
+        "reason": "already holding this stock"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:17",
+        "team": "space",
+        "symbol": "BKSY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:19",
+        "team": "healthcare",
+        "symbol": "ABT",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:19",
+        "team": "healthcare",
+        "symbol": "DHR",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:19",
+        "team": "healthcare",
+        "symbol": "TMO",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:19",
+        "team": "healthcare",
+        "symbol": "BMY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:19",
+        "team": "healthcare",
+        "symbol": "GILD",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:24",
+        "team": "entertainment",
+        "symbol": "CMCSA",
+        "action": "BUY",
+        "reason": "team already has the maximum number of positions"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:29",
+        "team": "space",
+        "symbol": "HWM",
+        "action": "SHORT",
+        "reason": "conviction None is below the minimum 3"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:29",
+        "team": "space",
+        "symbol": "ASTS",
+        "action": "SHORT",
+        "reason": "conviction None is below the minimum 3"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:29",
+        "team": "space",
+        "symbol": "RKLB",
+        "action": "SHORT",
+        "reason": "conviction None is below the minimum 3"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:29",
+        "team": "space",
+        "symbol": "LUNR",
+        "action": "SHORT",
+        "reason": "conviction None is below the minimum 3"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:29",
+        "team": "space",
+        "symbol": "PL",
+        "action": "SHORT",
+        "reason": "conviction None is below the minimum 3"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:34",
+        "team": "healthcare",
+        "symbol": "DHR",
+        "action": "SHORT",
+        "reason": "conviction None is below the minimum 3"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:43",
+        "team": "tech",
+        "symbol": "NVDA",
+        "action": "BUY",
+        "reason": "team already has the maximum number of positions"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:43",
+        "team": "tech",
+        "symbol": "MU",
+        "action": "BUY",
+        "reason": "team already has the maximum number of positions"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:43",
+        "team": "healthcare",
+        "symbol": "ABT",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:47",
+        "team": "consumer",
+        "symbol": "BKNG",
+        "action": "SHORT",
+        "reason": "one share costs $162.13, more than the $15.67 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:47",
+        "team": "consumer",
+        "symbol": "MAR",
+        "action": "SHORT",
+        "reason": "one share costs $398.09, more than the $15.67 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:47",
+        "team": "space",
+        "symbol": "HWM",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:47",
+        "team": "space",
+        "symbol": "ASTS",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:47",
+        "team": "space",
+        "symbol": "RKLB",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:59",
+        "team": "space",
+        "symbol": "SPCX",
+        "action": "SHORT",
+        "reason": "already holding this stock"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:59",
+        "team": "space",
+        "symbol": "LUNR",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:59",
+        "team": "space",
+        "symbol": "ASTS",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:59",
+        "team": "space",
+        "symbol": "VSAT",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:59",
+        "team": "space",
+        "symbol": "RDW",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:59",
+        "team": "space",
+        "symbol": "BKSY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:06",
+        "team": "tech",
+        "symbol": "ADBE",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:06",
+        "team": "tech",
+        "symbol": "MU",
+        "action": "SHORT",
+        "reason": "one share costs $855.53, more than the $135.45 allowed"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:06",
+        "team": "financials",
+        "symbol": "COIN",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:06",
+        "team": "financials",
+        "symbol": "BAC",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:06",
+        "team": "financials",
+        "symbol": "C",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:06",
+        "team": "financials",
+        "symbol": "JPM",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:06",
+        "team": "financials",
+        "symbol": "GS",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:09",
+        "team": "entertainment",
+        "symbol": "SPOT",
+        "action": "BUY",
+        "reason": "already holding this stock"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:09",
+        "team": "entertainment",
+        "symbol": "WMG",
+        "action": "BUY",
+        "reason": "team already has the maximum number of positions"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:32",
+        "team": "tech",
+        "symbol": "TXN",
+        "action": "BUY",
+        "reason": "team already has the maximum number of positions"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:32",
+        "team": "tech",
+        "symbol": "IBM",
+        "action": "BUY",
+        "reason": "team already has the maximum number of positions"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:35",
+        "team": "healthcare",
+        "symbol": "MRNA",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:35",
+        "team": "healthcare",
+        "symbol": "LLY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:35",
+        "team": "healthcare",
+        "symbol": "ISRG",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:35",
+        "team": "healthcare",
+        "symbol": "ABT",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:35",
+        "team": "healthcare",
+        "symbol": "BMY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:40",
+        "team": "space",
+        "symbol": "SPCX",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:40",
+        "team": "space",
+        "symbol": "BA",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:40",
+        "team": "space",
+        "symbol": "PL",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:40",
+        "team": "space",
+        "symbol": "BKSY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:40",
+        "team": "space",
+        "symbol": "IRDM",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:40",
+        "team": "space",
+        "symbol": "FLY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:51",
+        "team": "defense",
+        "symbol": "LMT",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:51",
+        "team": "defense",
+        "symbol": "BAH",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:51",
+        "team": "defense",
+        "symbol": "SAIC",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "space",
+        "symbol": "SPCX",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "space",
+        "symbol": "ASTS",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "space",
+        "symbol": "LUNR",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "space",
+        "symbol": "RDW",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "space",
+        "symbol": "PL",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "space",
+        "symbol": "BKSY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "space",
+        "symbol": "VSAT",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "space",
+        "symbol": "FLY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 3 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "healthcare",
+        "symbol": "MRNA",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "healthcare",
+        "symbol": "MRK",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "healthcare",
+        "symbol": "ISRG",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:55",
+        "team": "healthcare",
+        "symbol": "LLY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:59",
+        "team": "entertainment",
+        "symbol": "SONY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:59",
+        "team": "entertainment",
+        "symbol": "DIS",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "13:59",
+        "team": "entertainment",
+        "symbol": "BAM",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "14:10",
+        "team": "defense",
+        "symbol": "LMT",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "14:10",
+        "team": "defense",
+        "symbol": "BAH",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "14:10",
+        "team": "defense",
+        "symbol": "SAIC",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "14:15",
+        "team": "tech",
+        "symbol": "IBM",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "14:15",
+        "team": "tech",
+        "symbol": "AMD",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "14:15",
+        "team": "tech",
+        "symbol": "ANET",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "14:15",
+        "team": "healthcare",
+        "symbol": "MRNA",
+        "action": "SHORT",
+        "reason": "conviction None is below the minimum 3"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "14:15",
+        "team": "healthcare",
+        "symbol": "MRK",
+        "action": "SHORT",
+        "reason": "conviction None is below the minimum 3"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "14:15",
+        "team": "healthcare",
+        "symbol": "BMY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "14:15",
+        "team": "healthcare",
+        "symbol": "LLY",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "14:15",
+        "team": "healthcare",
+        "symbol": "ISRG",
+        "action": "BUY",
+        "reason": "conviction None is below the minimum 4 (risk-off market)"
+      }
+    ],
+    "recent_trades": [
+      {
+        "date": "2026-10-22",
+        "team": "tech",
+        "symbol": "NVDA",
+        "entry_price": 212.485,
+        "exit_price": 212.118333,
+        "exit_reason": "end_of_day",
+        "pnl": 0.93,
+        "pnl_pct": 0.0007,
+        "reason": "NVDA broke below VWAP and opening range with rvol 1.77 and m15/m60 weakness; Jensen Huang comments did not stop breakdown in risk-off tape. Short breakdown momentum."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "space",
+        "symbol": "HWM",
+        "entry_price": 193.74,
+        "exit_price": 194.032308,
+        "exit_reason": "end_of_day",
+        "pnl": -6.32,
+        "pnl_pct": -0.0025,
+        "reason": "Strong breakdown below the opening range (196.25-203.05) with massive relative volume (4.01) and a -6.9% daily drop. RSI is 15.2 (oversold) but momentum is still negative (m60 +0.9% is likely a lagging indicator or typo in data, but m15 is +0.3% and price is well below VWAP). The high volume confirms institutional selling pressure."
+      },
+      {
+        "date": "2026-10-21",
+        "team": "defense",
+        "symbol": "NOC",
+        "entry_price": 537.08,
+        "exit_price": 553.635,
+        "exit_reason": "end_of_day",
+        "pnl": 64.04,
+        "pnl_pct": 0.0298,
+        "reason": "Strong Q3 earnings beat accompanied by raised FY26 guidance and multiple analyst upgrades/PT increases (Baird to $675, Guggenheim to $640). Showing positive relative strength today (+0.88%)."
+      },
+      {
+        "date": "2026-10-21",
+        "team": "defense",
+        "symbol": "LDOS",
+        "entry_price": 127.82,
+        "exit_price": 134.56,
+        "exit_reason": "end_of_day",
+        "pnl": 132.18,
+        "pnl_pct": 0.0517,
+        "reason": "Secured a new $160M U.S. Cyber Command award and shows steady trend above 20-day moving average with balanced RSI (59.6), offering favorable risk/reward on contract-driven momentum."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "consumer",
+        "symbol": "MCD",
+        "entry_price": 250.86,
+        "exit_price": 252.314,
+        "exit_reason": "end_of_day",
+        "pnl": 6.01,
+        "pnl_pct": 0.0048,
+        "reason": "[75% invested rule] OR breakout above VWAP and uptrend; but low rvol, risk-off half size."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "entertainment",
+        "symbol": "LYV",
+        "entry_price": 173.65,
+        "exit_price": 174.408,
+        "exit_reason": "end_of_day",
+        "pnl": -4.66,
+        "pnl_pct": -0.0054,
+        "reason": "[75% invested rule] Breakdown below OR/VWAP, weak trend, but low rvol; momentum short."
+      },
+      {
+        "date": "2026-10-21",
+        "team": "defense",
+        "symbol": "RTX",
+        "entry_price": 191.78,
+        "exit_price": 194.38,
+        "exit_reason": "end_of_day",
+        "pnl": 31.29,
+        "pnl_pct": 0.0126,
+        "reason": "Barclays and other analysts upgraded RTX, raising price target to $235; new air\u2011traffic\u2011control system and PT9 engine boost outlook. Sentiment 0.5\u20110.6, importance 3\u20114, price dipped 0.8% today, providing entry at ~191.75 within position size limit."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "healthcare",
+        "symbol": "JNJ",
+        "entry_price": 265.89,
+        "exit_price": 268.255,
+        "exit_reason": "end_of_day",
+        "pnl": 8.39,
+        "pnl_pct": 0.0079,
+        "reason": "JNJ broke above the opening range high of 263.13, held above VWAP, and has positive clinical data/news; m15/m60 momentum positive and rvol 1.45. Risk-off requires higher conviction, which this setup meets."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "entertainment",
+        "symbol": "TKO",
+        "entry_price": 176.98,
+        "exit_price": 177.31,
+        "exit_reason": "end_of_day",
+        "pnl": -2.54,
+        "pnl_pct": -0.0029,
+        "reason": "[75% invested rule] Breakdown below OR/VWAP, m60 -1.6, risk-off short."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "financials",
+        "symbol": "V",
+        "entry_price": 413.65,
+        "exit_price": 413.74,
+        "exit_reason": "end_of_day",
+        "pnl": -0.97,
+        "pnl_pct": -0.0008,
+        "reason": "V cleared the opening range high at 411.41, held above VWAP, and showed rvol 1.36 with day +1.3. M&A speculation added a positive catalyst, but risk-off regime limits size and requires high conviction."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "consumer",
+        "symbol": "HD",
+        "entry_price": 324.79,
+        "exit_price": 327.333333,
+        "exit_reason": "end_of_day",
+        "pnl": 6.65,
+        "pnl_pct": 0.0068,
+        "reason": "[75% invested rule] HD is up 3.3% with a breakout and above VWAP. Strong momentum, but RSI is overbought (85.2), so entry should be cautious."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "healthcare",
+        "symbol": "TMO",
+        "entry_price": 680.07,
+        "exit_price": 675.26,
+        "exit_reason": "end_of_day",
+        "pnl": 4.13,
+        "pnl_pct": 0.0061,
+        "reason": "TMO broke below opening range and VWAP with m60 -1.1% and rvol 1.76; risk-off favors shorting weakness despite PT raise."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "tech",
+        "symbol": "AVGO",
+        "entry_price": 323.3,
+        "exit_price": 324.127143,
+        "exit_reason": "end_of_day",
+        "pnl": -8.06,
+        "pnl_pct": -0.0036,
+        "reason": "Breakdown below opening range and VWAP with rvol 2.07 and risk-off selling; short weak stocks."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "entertainment",
+        "symbol": "IMAX",
+        "entry_price": 52.72,
+        "exit_price": 52.4,
+        "exit_reason": "end_of_day",
+        "pnl": 12.84,
+        "pnl_pct": 0.0051,
+        "reason": "Breaking down below the opening range (53.06-53.27) in a risk-off market. Weak momentum (m15 -0.2%) and below VWAP. Shorting weakness is favored in this regime."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "healthcare",
+        "symbol": "DHR",
+        "entry_price": 228.76,
+        "exit_price": 228.87,
+        "exit_reason": "end_of_day",
+        "pnl": -1.36,
+        "pnl_pct": -0.0015,
+        "reason": "DHR broke below OR/VWAP, m15 -1.0%, m60 -2.1%, rvol 2.13, trend down; risk-off shorting breakdown favored despite PT raise."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "financials",
+        "symbol": "COF",
+        "entry_price": 203.63,
+        "exit_price": 202.87,
+        "exit_reason": "end_of_day",
+        "pnl": 6.68,
+        "pnl_pct": 0.0027,
+        "reason": "COF broke below its opening range and VWAP with momentum; in a risk-off regime, shorting weak financials is favored. Stop above entry, first target lower."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "financials",
+        "symbol": "ICE",
+        "entry_price": 163.01,
+        "exit_price": 163.498571,
+        "exit_reason": "end_of_day",
+        "pnl": 2.28,
+        "pnl_pct": 0.002,
+        "reason": "[75% invested rule] ICE broke above its opening range and is up 3.3%, with positive momentum and rvol 1.15; a valid intraday long if risk controls are tight."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "consumer",
+        "symbol": "CMG",
+        "entry_price": 28.13,
+        "exit_price": 27.96759,
+        "exit_reason": "end_of_day",
+        "pnl": 11.15,
+        "pnl_pct": 0.0048,
+        "reason": "Breakdown below opening range and VWAP, weak trend, risk-off; short weakness."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "consumer",
+        "symbol": "AMZN",
+        "entry_price": 251.94,
+        "exit_price": 250.006,
+        "exit_reason": "end_of_day",
+        "pnl": 16.83,
+        "pnl_pct": 0.0067,
+        "reason": "AMZN is down 4.0% on the day, trading below VWAP (-0.6%) with high relative volume (2.03). In a risk-off market, this momentum suggests further downside. The stop is tight at 2% to respect the volatility."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "financials",
+        "symbol": "CME",
+        "entry_price": 305.94,
+        "exit_price": 305.77,
+        "exit_reason": "end_of_day",
+        "pnl": -1.9,
+        "pnl_pct": -0.0016,
+        "reason": "JPMorgan upgraded CME to Overweight/Buy and raised its price target to $367, per JPM and Benzinga. CME is also breaking above its opening range at $301.99-$305.43 and trading around $306.15, up 3.5% with rvol 1.34. The catalyst plus breakout is a clear intraday setup, though the market is risk-off and the stock is overbought; conviction is high but size will be disciplined."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "healthcare",
+        "symbol": "AMGN",
+        "entry_price": 447.56,
+        "exit_price": 447.45,
+        "exit_reason": "end_of_day",
+        "pnl": -1.12,
+        "pnl_pct": -0.0013,
+        "reason": "[75% invested rule] OR breakout, rvol 1.36, above VWAP."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "tech",
+        "symbol": "CRM",
+        "entry_price": 248.88,
+        "exit_price": 250.23,
+        "exit_reason": "trailing_stop",
+        "pnl": 5.5,
+        "pnl_pct": 0.0044,
+        "reason": "[75% invested rule] CRM is up +2.9% on the day with a breakout above the opening range (243.83-248.6). News indicates sector rotation and upbeat analyst updates. Volume is high (rvol 1.9). It is above VWAP (+0.2%). This is a strong relative strength play in a down market."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "entertainment",
+        "symbol": "SPOT",
+        "entry_price": 581.45,
+        "exit_price": 583.08,
+        "exit_reason": "trailing_stop",
+        "pnl": 2.1,
+        "pnl_pct": 0.0018,
+        "reason": "Strong earnings catalyst with 306M subscribers and margin guidance. Trading well above VWAP with 2.98x relative volume. In a risk-off market, this is the strongest relative strength play. Buying half size due to market mood."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "consumer",
+        "symbol": "TSLA",
+        "entry_price": 380.4525,
+        "exit_price": 378.18,
+        "exit_reason": "trailing_stop",
+        "pnl": 7.57,
+        "pnl_pct": 0.005,
+        "reason": "Tesla sold off after Q3 earnings despite the beat on delivery weakness and 2026 CapEx cut; shares are below VWAP and momentum is down, fitting a risk-off short."
+      },
+      {
+        "date": "2026-10-22",
+        "team": "tech",
+        "symbol": "ORCL",
+        "entry_price": 124.12,
+        "exit_price": 123.89,
+        "exit_reason": "trailing_stop",
+        "pnl": 0.11,
+        "pnl_pct": 0.0009,
+        "reason": "[75% invested rule] OR BREAKDOWN, below VWAP, m15 -0.6%, m60 -1.9%, weak follow-through."
+      }
+    ]
+  },
+  "reviews": {
+    "defense": {
+      "what_went_well": "Most bracket trades (NOC,LDOS,RTX) generated solid profits, confirming our news\u2011catalyst approach.",
+      "what_went_wrong": "The CACI trade hit a stop loss and both LMT positions lost money after earnings despite a bullish news headline; buying on weak post\u2011earnings momentum and overbought conditions hurt.",
+      "lessons": [
+        "Require a minimum conviction of 4 and verify price is above VWAP before entering, especially in risk\u2011off markets",
+        "Avoid entering long positions immediately after earnings if the stock trades below VWAP or shows overbought RSI",
+        "Implement a partial\u2011scale\u2011out (e.g., 50% at 1R) to lock in gains and reduce exposure to late\u2011day reversals"
+      ],
+      "strategy_ideas": [
+        "Expand the 50% scale\u2011out rule to all bracket trades with a 1R target",
+        "Add a filter to skip entries when RSI>80 or when price is below VWAP within 30\u202fminutes of earnings release"
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "AVAV",
+            "reason": "New Oppenheimer coverage with $205 target, importance 4"
+          },
+          {
+            "symbol": "SAIC",
+            "reason": "Pending contract announcements and upcoming earnings"
+          },
+          {
+            "symbol": "HII",
+            "reason": "Dividend raise and moderate importance, adds defensive exposure"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "CW",
+            "reason": "Low importance and oversold signal, no near\u2011term catalyst"
+          },
+          {
+            "symbol": "TXT",
+            "reason": "No news or earnings in the next week"
+          },
+          {
+            "symbol": "KTOS",
+            "reason": "No upcoming contracts or earnings, low activity"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-22T16:15-04:00",
+          "action": "removed",
+          "symbol": "CW",
+          "reason": "Low importance and oversold signal, no near\u2011term catalyst",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-22T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "TXT",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-22T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "KTOS",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-22T16:15-04:00",
+          "action": "added",
+          "symbol": "HII",
+          "reason": "Dividend raise and moderate importance, adds defensive exposure",
+          "by": "evening review"
+        }
+      ]
+    },
+    "space": {
+      "what_went_well": "The short on SPCX captured a 33.68 profit by exiting early before the market turned risk\u2011off, and the small gain on TDG showed that our momentum filter can work for long entries in a volatile day.",
+      "what_went_wrong": "RKLB, SPX, RDW, LUNR, PL, HWM, FLY, BKSY, and ASTS all closed at a loss; most were exited because the price broke out of the opening range or crossed VWAP before the catalyst could fully play out. In several cases we entered immediately after a large jump (SPX, RKLB) or set a stop that was too tight for the stock\u2019s volatility (FLY).",
+      "lessons": [
+        "Avoid buying immediately after a 10%+ jump on earnings day; wait at least 30 minutes for trend confirmation.",
+        "For short entries, require price to stay below VWAP and both m15 and m60 to remain negative; exit if either crosses above.",
+        "Set stops that account for a stock\u2019s recent volatility (e.g., use ATR\u2011based stops for high\u2011rvol stocks like FLY)."
+      ],
+      "strategy_ideas": [
+        "Implement a 30\u2011minute wait rule after earnings or contract announcements before entering long positions.",
+        "Add a momentum filter for short entries: require m15 < -0.5% and m60 < -0.5% before taking the trade."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "BA",
+            "reason": "Upcoming earnings on 2026-10-27, likely to generate volatility"
+          },
+          {
+            "symbol": "LUNR",
+            "reason": "Upcoming launch and potential contract announcements"
+          },
+          {
+            "symbol": "VSAT",
+            "reason": "Upcoming launch window and recent contract win"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "RKLB",
+            "reason": "No upcoming catalyst and high volatility"
+          },
+          {
+            "symbol": "RDW",
+            "reason": "No upcoming launch or contract"
+          },
+          {
+            "symbol": "BKSY",
+            "reason": "No upcoming catalyst and low momentum"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-22T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "RKLB",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-22T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "RDW",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-22T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "BKSY",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "entertainment": {
+      "what_went_well": "The short IMAX trade and the two small SPOT long trades generated profit, showing the trailing\u2011stop and breakout logic can work when the price respects the range.",
+      "what_went_wrong": "Several losing trades (SPOT short, CMCSA short/long, NFLX short, SONY long) suffered from weak stop placement, over\u2011reliance on earnings\u2011gap entries without confirming momentum, and taking positions with conviction below the required level in a risk\u2011off market.",
+      "lessons": [
+        "Never enter a long trade without a protective stop below the opening range; the IMAX long loss proved this.",
+        "Avoid shorting high\u2011volatility earnings\u2011gap stocks unless you can set a tight stop; the SPOT short loss was a clear example.",
+        "Only take trades with conviction >=4 in a risk\u2011off environment; the blocked SONY and NFLX buys highlighted this rule."
+      ],
+      "strategy_ideas": [
+        "Add a tighter trailing\u2011stop rule for earnings\u2011gap entries (e.g., max 1% adverse move before exit).",
+        "Introduce a VWAP\u2011bias filter: go long only if price is above VWAP with positive 15\u2011minute momentum, short only if below VWAP with negative momentum."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "DIS",
+            "reason": "Disney Q3 earnings and subscriber update next week"
+          },
+          {
+            "symbol": "TTWO",
+            "reason": "Upcoming major game launch driving potential stock move"
+          },
+          {
+            "symbol": "WBD",
+            "reason": "Warner Bros Discovery earnings and streaming content slate"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "TKO",
+            "reason": "No near\u2011term catalyst and recent weak performance"
+          },
+          {
+            "symbol": "LYV",
+            "reason": "Low volatility and no upcoming news"
+          },
+          {
+            "symbol": "NFLX",
+            "reason": "Recent price weakness with no catalyst in the pipeline"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-22T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "TKO",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-22T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "LYV",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-22T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "NFLX",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "tech": {
+      "what_went_well": "Small gains on NOW, ADBE and ANET and a few positions closed before loss; overall we kept losses limited to a few trades.",
+      "what_went_wrong": "NVDA, AMD, ORCL, QCOM, TXN, CRM and IBM all exited due to risk\u2011off momentum reversal or stop loss; many entries lacked sufficient confirmation and were too exposed to the prevailing risk\u2011off regime.",
+      "lessons": [
+        "Avoid long momentum breakouts in a risk\u2011off market unless VWAP and trend are firmly above; exit earlier if momentum turns negative.",
+        "For shorts, use tighter stops or a counter\u2011news filter to avoid being held while the market rallies.",
+        "Implement a volatility filter (ATR > X%) before taking new positions to reduce whipsaw losses."
+      ],
+      "strategy_ideas": [
+        "Add a VIX\u2011based risk\u2011off rule: skip new trades when VIX > 20 or market breadth negative.",
+        "Test a momentum\u2011reversal exit: close position if 5\u2011min momentum turns negative even if price still above stop."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "MSFT",
+            "reason": "Upcoming earnings on 2026-10-28"
+          },
+          {
+            "symbol": "NOW",
+            "reason": "Upcoming earnings on 2026-10-28"
+          },
+          {
+            "symbol": "AMAT",
+            "reason": "New contract announcement"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "IBM",
+            "reason": "No catalysts or news"
+          },
+          {
+            "symbol": "ORCL",
+            "reason": "No catalysts or news"
+          },
+          {
+            "symbol": "QCOM",
+            "reason": "No catalysts or news"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-22T16:16-04:00",
+          "action": "removed",
+          "symbol": "IBM",
+          "reason": "No catalysts or news",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-22T16:16-04:00",
+          "action": "removed",
+          "symbol": "ORCL",
+          "reason": "No catalysts or news",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-22T16:16-04:00",
+          "action": "removed",
+          "symbol": "QCOM",
+          "reason": "No catalysts or news",
+          "by": "evening review"
+        }
+      ]
+    },
+    "consumer": {
+      "what_went_well": "Shorting high-volume breakdowns in a risk-off tape proved effective, with TSLA and AMZN shorts generating positive PnL. The discipline to exit weak longs (DPZ, LULU) quickly when momentum failed to follow through limited losses.",
+      "what_went_wrong": "The AMZN long from the previous day was held too long, resulting in a significant loss as it broke below VWAP and the opening range. Buying LULU on a breakout despite negative settlement news and fading momentum led to an immediate loss.",
+      "lessons": [
+        "Do not hold overnight longs if the stock breaks below VWAP and the opening range with negative momentum; exit immediately.",
+        "Avoid long breakouts on stocks with concurrent negative news catalysts (e.g., legal settlements) even if technicals look strong.",
+        "In risk-off regimes, prioritize shorting high-volume breakdowns over chasing low-volume breakouts."
+      ],
+      "strategy_ideas": [
+        "Implement a strict 'news filter' that blocks long entries on any stock with negative sentiment news in the last 24 hours.",
+        "Test a 'VWAP Reclaim' strategy: only enter longs if price reclaims VWAP with increasing volume after a dip, rather than buying the initial breakout."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "RCL",
+            "reason": "Earnings report before the open on Oct 27; high volatility expected."
+          },
+          {
+            "symbol": "ORLY",
+            "reason": "Earnings report after the close on Oct 28; strong recent performance suggests potential gap."
+          },
+          {
+            "symbol": "F",
+            "reason": "Earnings report after the close on Oct 28; auto sector may react to macro PMI data."
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "SBUX",
+            "reason": "Low volatility and minor PR issue unlikely to drive significant intraday moves."
+          },
+          {
+            "symbol": "NKE",
+            "reason": "Lack of immediate catalysts or significant news flow compared to other names."
+          },
+          {
+            "symbol": "TJX",
+            "reason": "No upcoming earnings or news catalysts in the next 48 hours."
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-22T16:16-04:00",
+          "action": "removed",
+          "symbol": "SBUX",
+          "reason": "Low volatility and minor PR issue unlikely to drive significant intraday moves.",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-22T16:16-04:00",
+          "action": "removed",
+          "symbol": "NKE",
+          "reason": "Lack of immediate catalysts or significant news flow compared to other names.",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-22T16:16-04:00",
+          "action": "removed",
+          "symbol": "TJX",
+          "reason": "No upcoming earnings or news catalysts in the next 48 hours.",
+          "by": "evening review"
+        }
+      ]
+    },
+    "financials": {
+      "what_went_well": "The team generated a net profit of ~+$51, with most trades (V, SCHW, HOOD, COF, ICE) delivering positive returns.",
+      "what_went_wrong": "AXP was entered without any stop loss, BLK\u2019s trailing stop was mis\u2011configured, and we took long positions in overbought stocks (CME, second V) despite a risk\u2011off market, leading to small losses.",
+      "lessons": [
+        "Never open a long position without a predefined stop loss, even on high\u2011conviction ideas.",
+        "Validate trailing\u2011stop parameters before sending the order to avoid premature exits.",
+        "Avoid long entries on overbought symbols in a risk\u2011off regime unless a strong catalyst justifies it."
+      ],
+      "strategy_ideas": [
+        "Add a rule to filter long entries by RSI\u202f<\u202f70 and positive volume momentum during risk\u2011off periods.",
+        "Expand short\u2011momentum breakdowns as the primary risk\u2011off play, focusing on high\u2011volume breakdowns like HOOD and similar tickers."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "V",
+            "reason": "Earnings on Oct\u202f27 and recent acquisition rumor"
+          },
+          {
+            "symbol": "HOOD",
+            "reason": "Earnings on Oct\u202f27 and regulatory approval news"
+          },
+          {
+            "symbol": "SPGI",
+            "reason": "Earnings on Oct\u202f27 with potential guidance impact"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "WFC",
+            "reason": "No near\u2011term catalyst or news"
+          },
+          {
+            "symbol": "BAC",
+            "reason": "Low conviction and risk\u2011off environment"
+          },
+          {
+            "symbol": "GS",
+            "reason": "Low conviction and no upcoming catalyst"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-22T16:18-04:00",
+          "action": "removed",
+          "symbol": "WFC",
+          "reason": "No near\u2011term catalyst or news",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-22T16:18-04:00",
+          "action": "removed",
+          "symbol": "BAC",
+          "reason": "Low conviction and risk\u2011off environment",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-22T16:18-04:00",
+          "action": "remove_rejected",
+          "symbol": "GS",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "healthcare": {
+      "what_went_well": "ISRG and JNJ trades captured clear intraday momentum and closed with modest gains; the risk\u2011off filter prevented over\u2011exposure to weak setups.",
+      "what_went_wrong": "TMO and MRK buys fell short of intraday momentum and closed in a risk\u2011off market, leading to small losses; ABBV and LLY were entered with weak setups and exited early; the MRK short hit its stop, and AMGN/DHR suffered small whipsaw losses.",
+      "lessons": [
+        "In a risk\u2011off market, avoid buying on earnings even if the data is positive unless intraday momentum (m15 > 0.5%) and rvol > 1.5 are confirmed.",
+        "Only enter a long when the price is above VWAP and shows a clear breakout with strong volume; avoid buying near the stop or in low\u2011volatility conditions.",
+        "Tighten stop placement (e.g., 1\u20131.5% below entry) to reduce whipsaw losses in choppy markets."
+      ],
+      "strategy_ideas": [
+        "Add an earnings\u2011plus\u2011momentum filter: buy only if post\u2011earnings price breaks above VWAP with rvol > 1.5 and m15 > 0.5%.\nAdd a risk\u2011off filter that blocks buys when VIX > 20 or major indices fall >1% to avoid chasing weak momentum."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "BMY",
+            "reason": "Upcoming launch of new oncology drug"
+          },
+          {
+            "symbol": "REGN",
+            "reason": "New antibody contract announced"
+          },
+          {
+            "symbol": "MRNA",
+            "reason": "Upcoming Q3 earnings"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "PFE",
+            "reason": "No catalysts, low volatility"
+          },
+          {
+            "symbol": "VRTX",
+            "reason": "No catalysts"
+          },
+          {
+            "symbol": "DHR",
+            "reason": "No catalysts"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-22T16:18-04:00",
+          "action": "removed",
+          "symbol": "PFE",
+          "reason": "No catalysts, low volatility",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-22T16:18-04:00",
+          "action": "remove_rejected",
+          "symbol": "VRTX",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-22T16:18-04:00",
+          "action": "remove_rejected",
+          "symbol": "DHR",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    }
+  },
+  "executives": {
+    "sector": {
+      "summary": "The portfolio recorded a net loss of $460.22 today, driven primarily by significant underperformance in the Technology and Healthcare sectors. Financial Services was the only team to generate a profit (+$51.14), while Consumer Discretionary remained relatively flat with a minor loss. A key systemic issue emerged where multiple teams failed to adhere to risk-off protocols, leading to excessive exposure in high-volatility names during a negative market regime.",
+      "team_notes": {
+        "tech": "Suffered a heavy $382 loss due to chasing momentum breakouts in a risk-off market, resulting in a 37.5% win rate and multiple stop-outs on core holdings like NVDA and AMD.",
+        "consumer": "Maintained a healthy 62.5% win rate but incurred a $62 loss by holding an overnight long on AMZN that broke key support levels, despite successful shorting of TSLA.",
+        "financials": "Generated a $51 profit with a 60% win rate, though operational errors including missing stop-losses on AXP and misconfigured trailing stops on BLK created unnecessary risk.",
+        "healthcare": "Recorded an $87 loss with a poor 36.4% win rate, largely due to entering long positions on weak setups during a risk-off tape and failing to confirm momentum on earnings plays."
+      },
+      "escalations": [
+        "Mandatory implementation of a global VIX > 20 risk-off filter across all teams to prevent new long entries during high-volatility regimes, as recommended independently by Tech, Consumer, and Healthcare teams.",
+        "Review of order execution protocols in Financials to address recurring stop-loss configuration errors and missing initial stops, which pose a compliance and risk management threat."
+      ],
+      "coordination": "No overlapping companies detected between teams; no coordination actions required.",
+      "title": "Executive of Sector Teams"
+    },
+    "special": {
+      "summary": "Today was a mixed day with Team 1 (Defense) posting a solid profit of $188.58, while Teams 2 (Space) and 3 (Entertainment) suffered losses of -$529.59 and -$79.98 respectively. The Space team's poor performance was driven by a low 22.2% win rate and excessive trading activity (14 trades, 38 blocked) in a volatile environment. Overall, the portfolio realized a net loss of -$420.99, highlighting the need for stricter entry filters and position sizing controls across the underperforming teams.",
+      "team_notes": {
+        "defense": "Team 1 performed well with a 57.1% win rate, successfully capitalizing on news catalysts while learning to avoid weak post-earnings momentum.",
+        "space": "Team 2 struggled significantly with a 22.2% win rate, losing money on most trades due to entering after large jumps and using stops too tight for high-volatility stocks.",
+        "entertainment": "Team 3 had a 27.3% win rate, with losses stemming from weak stop placement and over-reliance on earnings-gap entries without confirmed momentum."
+      },
+      "escalations": [
+        "Team 2 (Space) has a critically low win rate (22.2%) and high trade frequency (14 trades/day) resulting in significant drawdowns; recommend President mandate a mandatory 24-hour trading pause or strict reduction in position size until win rate improves.",
+        "Multiple teams (Space, Entertainment) are requesting removal of tickers but are being blocked by the 'minimum 15 stocks' rule, leading to stagnant watchlists that include low-catalyst names; request President clarify if the minimum stock count rule should be relaxed for special teams or if new additions should be prioritized over removals."
+      ],
+      "coordination": "No overlapping companies were identified between teams today.",
+      "title": "Executive of Special Teams"
+    }
+  }
+}

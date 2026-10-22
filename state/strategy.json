@@ -1,0 +1,33 @@
+{
+  "updated": "2026-10-22T16:20-04:00",
+  "strategy_notes": "Tomorrow all teams will trade only on high\u2011conviction setups with clear catalyst confirmation and price above VWAP. Keep the portfolio net\u2011long but enforce a minimum 75% invested rule while respecting tighter position limits. Prioritize sectors that showed profitability (Defense, Financials, Consumer) and sharply curtail Space and Entertainment activity until win rates improve.",
+  "team_focus": {
+    "defense": "Add AVAV, SAIC and HII as suggested; only open new buys with conviction >=4 and price > VWAP; use 50% scale\u2011out at 1R and tighten stop\u2011loss to 1.5% ATR.",
+    "space": "Implement a 24\u2011hour pause on new long entries; only short after 30\u2011minute VWAP confirmation and ATR\u2011based stops; aim to reduce trade count to \u22646 per day.",
+    "entertainment": "Limit trades to max 4 per day; only add stocks with strong short\u2011term momentum and conviction >=4; tighten stops to 2% and avoid earnings\u2011day entries.",
+    "tech": "Avoid new positions in high\u2011volatility earnings windows; require RSI<70 and price above VWAP; set stops at 1.5% ATR and reduce trade frequency to \u22648.",
+    "consumer": "Maintain current exposure; short TSLA only if price stays below VWAP for 15\u202fmin; long AMZN only after a bounce above VWAP; keep trade count \u22645.",
+    "financials": "Continue current strategy but enforce stop\u2011loss on all new trades; ensure trailing stops are active; limit new entries to high\u2011conviction (>=4) opportunities.",
+    "healthcare": "Cut new long entries; only trade after a confirmed catalyst and price above VWAP; use ATR\u2011based stops of at least 2%."
+  },
+  "allocations": {
+    "defense": 0.3,
+    "space": 0.05,
+    "entertainment": 0.1,
+    "tech": 0.1,
+    "consumer": 0.15,
+    "financials": 0.2,
+    "healthcare": 0.1
+  },
+  "risk_overrides": {
+    "max_position_pct": 0.15,
+    "max_daily_loss_pct": 0.02,
+    "min_conviction_to_buy": 4,
+    "cash_reserve_pct": 0.15
+  },
+  "go_live_assessment": {
+    "ready": false,
+    "reason": "Paper\u2011trading period is only 3 days (needs 60) and risk\u2011budget constraints are still causing high block rates; further validation required."
+  },
+  "decision_log": "Tightened position and daily loss limits, raised conviction threshold, and re\u2011allocated capital toward winning teams to protect equity after a broadly negative day."
+}
