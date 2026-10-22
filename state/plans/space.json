@@ -1,61 +1,62 @@
 {
   "date": "2026-10-22",
-  "time": "12:59",
-  "trigger": "must invest $7,060 more (75% rule)",
-  "market_view": "The market is in a sharp risk-off mode with QQQ down 2.6% and VIXY spiking, favoring short setups over longs. Most aerospace names are breaking down below their opening ranges and VWAP, presenting clear short opportunities, particularly in high-beta names like HWM and SPCX. I will deploy capital into these breakdowns while maintaining strict risk controls.",
+  "time": "13:14",
+  "trigger": "must invest $3,246 more (75% rule)",
   "decisions": [
     {
-      "symbol": "HWM",
-      "action": "SHORT",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Strong breakdown below the opening range (196.25-203.05) with massive relative volume (4.01) and a -6.9% daily drop. RSI is 15.2 (oversold) but momentum is still negative (m60 +0.9% is likely a lagging indicator or typo in data, but m15 is +0.3% and price is well below VWAP). The high volume confirms institutional selling pressure."
-    },
-    {
       "symbol": "SPCX",
-      "action": "SHORT",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Already holding a short, but adding to it or treating as a fresh signal for the investor to deploy. Price is -6.8% on the day, broke below the opening range (151.25-154.16), and has high relative volume (3.49). Despite positive news (BofA upgrade), the market is ignoring it in favor of the broader sell-off. Shorting the breakdown is the highest probability play."
-    },
-    {
-      "symbol": "RKLB",
-      "action": "SHORT",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Broke down below the opening range (51.48-52.97) and is trading below VWAP. RSI is 15.9, indicating extreme weakness. While relative volume is lower (0.77), the trend is clearly down and the stock is part of the high-beta space sector selloff."
+      "action": "COVER",
+      "qty": 17,
+      "reason": "Short is up 1.45% and trailing stop is active. In a risk-off market, locking in profits on a strong short is prudent. Proceeds will be redeployed into a new short setup."
     }
   ],
   "ranked_ideas": [
     {
       "symbol": "LUNR",
-      "reason": "Trend down, RSI 22.1, broke opening range. Good candidate for a short if HWM/SPCX fills are limited."
+      "side": "short",
+      "setup": "opening range breakdown",
+      "conviction": 4,
+      "reason": "Strong downside momentum (m60 -2.2%), trading well below VWAP (-2.5%) and OR low. RSI is 22.1 (oversold but trending down). In a risk-off regime, shorting weak, high-beta space stocks is favored. Tight stop above recent resistance.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04
     },
     {
       "symbol": "ASTS",
-      "reason": "Broke opening range, RSI 23.5, high relative volume (1.61). Strong short candidate."
-    },
-    {
-      "symbol": "VSAT",
-      "reason": "Broke opening range, RSI 33.6, down 6.1% on the day. Fits the risk-off short theme."
+      "side": "short",
+      "setup": "opening range breakdown",
+      "conviction": 3,
+      "reason": "Down 6.2% on the day, below VWAP and OR. RSI 23.5. Volume is elevated (rvol 1.56). Good candidate for a continuation short in a falling market.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04
     },
     {
       "symbol": "RDW",
-      "reason": "Trend down, RSI 19.1, broke opening range. Weak stock in a weak market."
+      "side": "short",
+      "setup": "opening range breakdown",
+      "conviction": 3,
+      "reason": "Gapped down 4.3% and broke down. RSI 19.1. Weak momentum (m60 -2.2%). Fits the risk-off shorting strategy.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04
+    },
+    {
+      "symbol": "PL",
+      "side": "short",
+      "setup": "opening range breakdown",
+      "conviction": 3,
+      "reason": "Below VWAP and OR. RSI 23.7. Consistent with the broader weakness in the sector.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04
     },
     {
       "symbol": "BKSY",
-      "reason": "Despite positive contract news, it broke its opening range (17-17.21) and is down 3%. In a risk-off market, news is often sold. Short candidate if it fails to bounce."
+      "side": "short",
+      "setup": "opening range breakdown",
+      "conviction": 2,
+      "reason": "Despite positive news (contract win), it is breaking down and below VWAP. Contrarian short if it fails to hold support, but lower conviction due to news catalyst.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04
     }
   ],
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

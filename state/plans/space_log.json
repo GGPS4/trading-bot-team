@@ -226,5 +226,28 @@
       "BUY RDW blocked: conviction None is below the minimum 3 (risk-off market)",
       "BUY BKSY blocked: conviction None is below the minimum 3 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "time": "13:14",
+    "trigger": "must invest $3,246 more (75% rule)",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "SPCX",
+        "action": "COVER",
+        "conviction": null,
+        "reason": "Short is up 1.45% and trailing stop is active. In a risk-off market, locking in profits on a strong short is prudent. Proceeds will be redeployed into a new short setup.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "COVER SPCX",
+      "BUY LUNR x124 (~$1274.72) [deploy]",
+      "BUY ASTS x33 (~$1266.54) [deploy]",
+      "BUY RDW x157 (~$1277.98) [deploy]"
+    ]
   }
 ]
