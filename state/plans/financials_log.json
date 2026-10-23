@@ -343,5 +343,34 @@
       "BUY COF x9 (~$1806.03)",
       "BUY HOOD x19 (~$1830.36) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:46",
+    "trigger": "scheduled look",
+    "market_view": "The market is in a cautious, risk-off regime with SPY down and most financial stocks trading below VWAP and inside or below their opening ranges. Volume is concentrated in breakdowns like AXP, while long setups lack follow-through and many names are overbought. We are at the five-position limit, so we are rotating out of the weakest stalled long (C) to make room for a high-conviction short momentum setup in AXP while staying net-long.",
+    "experiment": "Expand short-momentum breakdowns as the primary risk-off play, focusing on high-volume breakdowns on bad news.",
+    "decisions": [
+      {
+        "symbol": "C",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Stale momentum long with no catalyst, trading just above its stop at 120.07 on low volume (rvol 0.99) and a flat trend; exit before the stop is hit in this risk-off tape and redeploy the slot.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "AXP",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "High-volume breakdown (rvol 3.31) below the opening range low and VWAP (-1.1%) on bad news: cutting 5% of workforce despite an earnings beat, with sales missing. Fits the risk-off short-momentum play on weak financials.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL C",
+      "SHORT AXP x8 (~$2506.56)"
+    ]
   }
 ]

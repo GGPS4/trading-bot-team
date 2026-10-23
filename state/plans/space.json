@@ -1,48 +1,105 @@
 {
   "date": "2026-10-23",
-  "time": "10:29",
+  "time": "10:46",
   "trigger": "must invest $3,165 more (75% rule)",
+  "market_view": "The market is sliding with SPY down 0.5%, VIXY up 3.7%, and only 17% of watchlist stocks advancing, so caution is warranted and longs should be smaller and pickier. Several aerospace/space names are breaking out of their opening ranges above VWAP with volume, offering the best intraday setups. Despite the executive preference for fewer new longs, the 75% invested rule is hard, so I am deploying into the strongest breakout candidates while keeping stops tight.",
   "decisions": [
     {
       "symbol": "SPCX",
       "action": "BUY",
-      "reason": "Opening range breakout above 147.99 with 3.57x relative volume. Positive overnight catalyst from American Airlines CEO endorsing Starlink for 1,000+ aircraft. Trading above VWAP (+1.0%) with flat-to-positive momentum. Fits the 'momentum' setup which has historically performed best for this team (50% win rate).",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
-    },
-    {
-      "symbol": "ASTS",
-      "action": "BUY",
-      "reason": "Opening range breakout above 38.42 with 1.89x relative volume. Trading well above VWAP (+2.2%). Despite negative news regarding lawsuits, the price action shows strong intraday demand and a bounce from recent lows (RSI 23.6). This is a high-risk/high-reward momentum play against the trend, sized down due to market caution.",
+      "conviction": 4,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum"
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Broke above OR (144.15-147.99) on 3.16x volume, 1.8% above VWAP, uptrend intact; American Airlines Starlink endorsement adds catalyst."
     },
     {
-      "symbol": "VSAT",
+      "symbol": "GE",
       "action": "BUY",
-      "reason": "Opening range breakout above 59.50 with strong 15m momentum (+1.3%). Trading above VWAP (+1.4%). While relative volume is low (0.34), the price structure is clean and it is one of the few stocks showing consistent upward momentum in a down market. Positive sector sentiment from GE's consortium news may spill over.",
-      "stop_loss_pct": 0.015,
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "setup": "opening range breakout",
+      "reason": "Broke above OR (278.37-285.29) on 2.59x volume, above VWAP; defense/aerospace aligns with executive priority, NATICA consortium news positive."
     },
     {
       "symbol": "PL",
       "action": "BUY",
-      "reason": "Opening range breakout above 13.13. Trading above VWAP (+0.5%). Positive news from NASA board appointment for LUNR (same sector) may provide slight sympathy, but PL's own technicals are the primary driver. Low risk entry near the opening range high.",
-      "stop_loss_pct": 0.015,
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "setup": "opening range breakout",
+      "reason": "Broke above OR (12.79-13.13) above VWAP with uptrend; small-cap space momentum name."
+    },
+    {
+      "symbol": "BA",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Trading at top of OR (182.5-185.33) above VWAP; record backlog and munitions demand news; defense sector priority."
+    },
+    {
+      "symbol": "HWM",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "RSI 15.6 deeply oversold after -3.2% day, above VWAP with 2.29x volume; potential bounce in defense name."
     }
   ],
   "ranked_ideas": [
-    "BKSY",
-    "RKLB",
-    "RDW",
-    "IRDM",
-    "BA"
+    {
+      "symbol": "ASTS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Strong breakout above OR with m60 +5.8% and above VWAP, though lawsuit news is a headwind."
+    },
+    {
+      "symbol": "RKLB",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Marginal OR breakout above VWAP but low volume (0.92 rvol) makes it a backup."
+    },
+    {
+      "symbol": "LUNR",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "Board addition news and flat trend near VWAP; low conviction backup."
+    },
+    {
+      "symbol": "RDW",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Near OR high with 1.55x volume and above VWAP; small-cap space."
+    },
+    {
+      "symbol": "VSAT",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above VWAP but very low volume (0.32 rvol); watch only."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Add a momentum filter for short entries: require m15 < -0.5% and m60 < -0.5% before taking the trade.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

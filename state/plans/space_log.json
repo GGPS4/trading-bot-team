@@ -434,5 +434,65 @@
       "COVER RKLB",
       "WATCHLIST remove rejected SATS"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:46",
+    "trigger": "must invest $3,165 more (75% rule)",
+    "market_view": "The market is sliding with SPY down 0.5%, VIXY up 3.7%, and only 17% of watchlist stocks advancing, so caution is warranted and longs should be smaller and pickier. Several aerospace/space names are breaking out of their opening ranges above VWAP with volume, offering the best intraday setups. Despite the executive preference for fewer new longs, the 75% invested rule is hard, so I am deploying into the strongest breakout candidates while keeping stops tight.",
+    "experiment": "Add a momentum filter for short entries: require m15 < -0.5% and m60 < -0.5% before taking the trade.",
+    "decisions": [
+      {
+        "symbol": "SPCX",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Broke above OR (144.15-147.99) on 3.16x volume, 1.8% above VWAP, uptrend intact; American Airlines Starlink endorsement adds catalyst.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "GE",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Broke above OR (278.37-285.29) on 2.59x volume, above VWAP; defense/aerospace aligns with executive priority, NATICA consortium news positive.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "PL",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Broke above OR (12.79-13.13) above VWAP with uptrend; small-cap space momentum name.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "BA",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Trading at top of OR (182.5-185.33) above VWAP; record backlog and munitions demand news; defense sector priority.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "HWM",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "RSI 15.6 deeply oversold after -3.2% day, above VWAP with 2.29x volume; potential bounce in defense name.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY SPCX x3 (~$447.09)",
+      "BUY GE blocked: conviction 3 is below the minimum 4",
+      "BUY PL blocked: conviction 3 is below the minimum 4",
+      "BUY BA blocked: conviction 3 is below the minimum 4",
+      "BUY HWM blocked: conviction 3 is below the minimum 4",
+      "BUY ASTS x12 (~$469.2) [deploy]",
+      "BUY RKLB x9 (~$460.98) [deploy]",
+      "BUY LUNR x46 (~$471.04) [deploy]",
+      "BUY RDW x58 (~$472.12) [deploy]"
+    ]
   }
 ]
