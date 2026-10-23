@@ -1,105 +1,109 @@
 {
   "date": "2026-10-23",
-  "time": "10:46",
-  "trigger": "must invest $3,165 more (75% rule)",
-  "market_view": "The market is sliding with SPY down 0.5%, VIXY up 3.7%, and only 17% of watchlist stocks advancing, so caution is warranted and longs should be smaller and pickier. Several aerospace/space names are breaking out of their opening ranges above VWAP with volume, offering the best intraday setups. Despite the executive preference for fewer new longs, the 75% invested rule is hard, so I am deploying into the strongest breakout candidates while keeping stops tight.",
+  "time": "11:15",
+  "trigger": "scheduled look",
+  "market_view": "Market is in caution: only 23% of watched stocks are up, SPY -0.3%, VIXY +1.8% \u2014 a sliding, risk-off tape. Most space names are weak or trending down (LUNR, SPCX, ASTS all negative momentum), but defense/aerospace names BA and GE broke above their opening ranges and hold above VWAP on elevated volume (rvol 1.25 and 2.24), making them the strongest long candidates today. I'm rotating out of the two weakest space positions to redeploy into these defense breakouts while the 75%-invested rule is enforced via the top-up mechanism.",
   "decisions": [
     {
-      "symbol": "SPCX",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Broke above OR (144.15-147.99) on 3.16x volume, 1.8% above VWAP, uptrend intact; American Airlines Starlink endorsement adds catalyst."
+      "symbol": "ASTS",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Position down -0.83% and news researcher flags two securities class-action lawsuits alleging misleading liquidity statements (fiscal.ai, importance 4) plus SpaceX competition and ViaSat spectrum dispute. President directs curtailing space exposure. Rotating capital into defense breakouts."
+    },
+    {
+      "symbol": "LUNR",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Weakest position on the book: below VWAP (-0.2%), m15 -0.5% and m60 -0.6% both negative, trend down, no positive catalyst. Rotating out of space per executive guidance into higher-quality defense setups."
     },
     {
       "symbol": "GE",
       "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
+      "conviction": 4,
+      "stop_loss_pct": 0.018,
+      "take_profit_pct": 0.035,
       "setup": "opening range breakout",
-      "reason": "Broke above OR (278.37-285.29) on 2.59x volume, above VWAP; defense/aerospace aligns with executive priority, NATICA consortium news positive."
-    },
-    {
-      "symbol": "PL",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Broke above OR (12.79-13.13) above VWAP with uptrend; small-cap space momentum name."
+      "reason": "Defense/priority sector. Opening-range breakout confirmed (OR 278.37-285.29, now 286.63); trades above VWAP +1.0%; rvol 2.24 shows strong volume; m60 +0.6%; RSI 32.8 not overbought. Catalyst: GE Aerospace joined the NATICA consortium for air-traffic services (fiscal.ai, sentiment +0.3)."
     },
     {
       "symbol": "BA",
       "action": "BUY",
-      "conviction": 3,
+      "conviction": 4,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "Trading at top of OR (182.5-185.33) above VWAP; record backlog and munitions demand news; defense sector priority."
-    },
-    {
-      "symbol": "HWM",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "RSI 15.6 deeply oversold after -3.2% day, above VWAP with 2.29x volume; potential bounce in defense name."
+      "reason": "Defense/priority sector. Opening-range breakout confirmed (OR 182.5-185.33, now 185.54); above VWAP +0.5%; RSI 39.6 neutral (not overbought). Catalyst: record backlog and rising munitions demand amid global threats (benzinga, sentiment +0.6, importance 3). Earnings not until 10/27."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "ASTS",
+      "symbol": "HWM",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 4,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Strong breakout above OR with m60 +5.8% and above VWAP, though lawsuit news is a headwind."
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "Defense sector, deeply oversold (RSI 15.6), holds above VWAP +0.1% with positive m15 +0.1% and m60 +0.4%, rvol 2.33 on heavy volume \u2014 a strong bounce candidate if the tape stabilizes."
+    },
+    {
+      "symbol": "GE",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.018,
+      "take_profit_pct": 0.035,
+      "setup": "opening range breakout",
+      "reason": "Already held new defense breakout; best name to add to if the top-up needs to deploy capital while staying in the president's priority sector."
+    },
+    {
+      "symbol": "BA",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "Clean defense breakout with positive munitions/backlog news and neutral RSI; second-best deployment vehicle after GE."
     },
     {
       "symbol": "RKLB",
       "direction": "long",
-      "conviction": 2,
+      "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "Marginal OR breakout above VWAP but low volume (0.92 rvol) makes it a backup."
+      "reason": "Best remaining space setup: OR breakout confirmed, above VWAP +0.7%, m60 +0.6%, and Rocket Lab completed its 98th Electron launch for HawkEye 360 (fiscal.ai, sentiment +0.7). Add only if defense names are full."
     },
     {
-      "symbol": "LUNR",
+      "symbol": "PL",
       "direction": "long",
-      "conviction": 2,
+      "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "other",
-      "reason": "Board addition news and flat trend near VWAP; low conviction backup."
-    },
-    {
-      "symbol": "RDW",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "Near OR high with 1.55x volume and above VWAP; small-cap space."
-    },
-    {
-      "symbol": "VSAT",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above VWAP but very low volume (0.32 rvol); watch only."
+      "reason": "OR breakout above VWAP +0.5% with m60 +0.6% and deeply oversold RSI 23.6 \u2014 a mean-reversion bounce candidate if risk sentiment improves."
     }
   ],
-  "experiment": "Add a momentum filter for short entries: require m15 < -0.5% and m60 < -0.5% before taking the trade.",
+  "experiment": "Implement a 30-minute wait rule after earnings or contract announcements before entering long positions. Applied today by requiring every new long to show a confirmed opening-range breakout, price above VWAP, and elevated relative volume before entry \u2014 matching the executive's 'clear catalyst confirmation and price above VWAP' standard rather than chasing intraday moves.",
   "watchlist_changes": {
     "add": [],
-    "remove": []
+    "remove": [
+      {
+        "symbol": "LUNR",
+        "reason": "Rotated out: weakest technicals (below VWAP, negative m15/m60, trend down) and space sector the president wants curtailed."
+      },
+      {
+        "symbol": "ASTS",
+        "reason": "Rotated out: securities class-action lawsuits and SpaceX/ViaSat competition pressure; space exposure being reduced per executive guidance."
+      },
+      {
+        "symbol": "SATS",
+        "reason": "No meaningful live data or catalyst; gone quiet and offers no day-trading edge."
+      }
+    ]
   }
 }

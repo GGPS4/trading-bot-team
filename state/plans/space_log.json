@@ -494,5 +494,55 @@
       "BUY LUNR x46 (~$471.04) [deploy]",
       "BUY RDW x58 (~$472.12) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "11:15",
+    "trigger": "scheduled look",
+    "market_view": "Market is in caution: only 23% of watched stocks are up, SPY -0.3%, VIXY +1.8% \u2014 a sliding, risk-off tape. Most space names are weak or trending down (LUNR, SPCX, ASTS all negative momentum), but defense/aerospace names BA and GE broke above their opening ranges and hold above VWAP on elevated volume (rvol 1.25 and 2.24), making them the strongest long candidates today. I'm rotating out of the two weakest space positions to redeploy into these defense breakouts while the 75%-invested rule is enforced via the top-up mechanism.",
+    "experiment": "Implement a 30-minute wait rule after earnings or contract announcements before entering long positions. Applied today by requiring every new long to show a confirmed opening-range breakout, price above VWAP, and elevated relative volume before entry \u2014 matching the executive's 'clear catalyst confirmation and price above VWAP' standard rather than chasing intraday moves.",
+    "decisions": [
+      {
+        "symbol": "ASTS",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Position down -0.83% and news researcher flags two securities class-action lawsuits alleging misleading liquidity statements (fiscal.ai, importance 4) plus SpaceX competition and ViaSat spectrum dispute. President directs curtailing space exposure. Rotating capital into defense breakouts.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "LUNR",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Weakest position on the book: below VWAP (-0.2%), m15 -0.5% and m60 -0.6% both negative, trend down, no positive catalyst. Rotating out of space per executive guidance into higher-quality defense setups.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "GE",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Defense/priority sector. Opening-range breakout confirmed (OR 278.37-285.29, now 286.63); trades above VWAP +1.0%; rvol 2.24 shows strong volume; m60 +0.6%; RSI 32.8 not overbought. Catalyst: GE Aerospace joined the NATICA consortium for air-traffic services (fiscal.ai, sentiment +0.3).",
+        "stop_loss_pct": 0.018,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "BA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Defense/priority sector. Opening-range breakout confirmed (OR 182.5-185.33, now 185.54); above VWAP +0.5%; RSI 39.6 neutral (not overbought). Catalyst: record backlog and rising munitions demand amid global threats (benzinga, sentiment +0.6, importance 3). Earnings not until 10/27.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL ASTS",
+      "SELL LUNR",
+      "BUY GE x1 (~$286.93)",
+      "BUY BA x2 (~$371.58)",
+      "WATCHLIST remove rejected LUNR",
+      "WATCHLIST remove rejected ASTS",
+      "WATCHLIST remove rejected SATS"
+    ]
   }
 ]

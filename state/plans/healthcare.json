@@ -1,95 +1,46 @@
 {
   "date": "2026-10-23",
-  "time": "11:08",
-  "trigger": "must invest $2,907 more (75% rule)",
-  "market_view": "The market is in a caution regime with SPY down 0.2% and VIXY up 2.0%, indicating risk-off sentiment. Only 20% of watched healthcare stocks are up, so long positions are sized 25% smaller. I need to meet the 75% invested rule by approximately $2,907, so I will sell underperforming positions and buy strong stocks with confirmed catalysts and price above VWAP.",
+  "time": "11:20",
+  "trigger": "must invest $2,872 more (75% rule)",
   "decisions": [
     {
-      "symbol": "JNJ",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "JNJ is below VWAP with negative PnL despite positive news, so I sell to make room for better opportunities."
-    },
-    {
-      "symbol": "MRK",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "MRK is below VWAP with negative PnL despite positive news, so I sell to reduce exposure in weak positions."
-    },
-    {
-      "symbol": "UNH",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "UNH has negative news about network loss, and I want to redeploy into stocks with positive catalysts."
-    },
-    {
-      "symbol": "ABT",
-      "action": "SELL",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "I sell ABT to close the existing position and reopen with larger size to meet the invested rule."
-    },
-    {
-      "symbol": "ABT",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "ABT has positive catalysts from Wells Fargo and Oncodetect news, and price is at VWAP, so I buy with larger size."
-    },
-    {
       "symbol": "MRNA",
-      "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "MRNA has strong positive news from Phase 3 results with Merck, price above VWAP, and high volume (rvol 2.02)."
+      "action": "SELL",
+      "qty": 2,
+      "reason": "Scaling out half at +1.4% gain. Strong momentum (rvol 1.96, above VWAP) but market is in caution mode. Locking in partial profit to free up capital for higher conviction setups per executive order to cut new longs and only trade confirmed catalysts."
     },
     {
-      "symbol": "AMGN",
+      "symbol": "ABT",
       "action": "BUY",
-      "conviction": 4,
+      "qty": 25,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "take_profit_pct": 0.03,
       "setup": "news catalyst",
-      "reason": "AMGN has positive news from Oppenheimer price target raise, price above VWAP, though volume is low."
+      "reason": "Strongest long setup on watchlist. Trading above VWAP (+0.3%), opening range breakout (101.79-103.7, current 102.88), positive 15m/60m momentum, and high-impact news (Wells Fargo PT raise to $120, Oncodetect data). Fits 'confirmed catalyst and price above VWAP' rule. RSI 64 is healthy, not overbought."
     },
     {
       "symbol": "ISRG",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "ISRG has a breakout above the opening range, price above VWAP, and high volume (rvol 2.32), with overnight positive news."
+      "action": "HOLD",
+      "reason": "Already held. Strong breakout setup, rvol 2.24. Holding to let it run toward first target of $472.26. No need to add more given max position limits and caution regime."
     },
     {
       "symbol": "ABBV",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "ABBV is above VWAP with positive momentum, and I include it to meet the 75% invested rule despite no specific catalyst today."
+      "action": "HOLD",
+      "reason": "Flat trend, low volume (rvol 0.82). RSI 71.9 is overbought. Holding for now but will monitor for stall. If it breaks below $282.51 (OR low) or VWAP, will exit."
+    },
+    {
+      "symbol": "AMGN",
+      "action": "HOLD",
+      "reason": "Flat trend, very low volume (rvol 0.32). RSI 76.1 is overbought. Holding but low conviction. Will exit if it breaks below VWAP or OR low."
     }
   ],
-  "ranked_ideas": [],
-  "experiment": "Testing the executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops of at least 2%.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "ranked_ideas": [
+    "ABT",
+    "UNH",
+    "JNJ",
+    "MRK",
+    "TMO"
+  ],
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }
