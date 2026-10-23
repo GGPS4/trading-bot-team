@@ -354,5 +354,52 @@
       "BUY CACI x4 (~$2478.08)",
       "BUY SAIC x19 (~$2717.76)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:57",
+    "trigger": "scheduled look",
+    "market_view": "The market is in a caution regime with defense stocks mixed, as only 21% of watched stocks are up and the VIXY fear gauge rises. Booz Allen is falling sharply on contract delays, while Palantir shows strength on positive analyst commentary. I am rotating out of overbought names like Lockheed and Saic into stronger momentum plays like Palantir and Raytheon to meet the 75% invested rule.",
+    "experiment": "Testing the 50% scale-out rule at 1R for all new trades to lock in gains and reduce exposure.",
+    "decisions": [
+      {
+        "symbol": "LMT",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "RSI overbought at 82.4, momentum stalling with look -0.3%, take profits to free capital for better setups.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "SAIC",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "RSI overbought at 77.2, m15 negative indicating fading momentum, close position to reduce exposure.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "PLTR",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Price above VWAP +1.6%, strong momentum with m60 +1.3%, positive analyst news on AI monetization, RSI 55.5 not overbought.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.015
+      },
+      {
+        "symbol": "RTX",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Price above VWAP +0.4%, high volume rvol 2.85, positive overnight news on Pratt & Whitney expansion, RSI 65 not overbought.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.015
+      }
+    ],
+    "results": [
+      "SELL LMT",
+      "SELL SAIC",
+      "BUY PLTR x14 (~$2752.12)",
+      "BUY RTX x14 (~$2678.62)"
+    ]
   }
 ]

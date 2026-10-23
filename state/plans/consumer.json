@@ -1,66 +1,48 @@
 {
   "date": "2026-10-23",
-  "time": "10:44",
-  "trigger": "scheduled look",
-  "decisions": [
-    {
-      "symbol": "TSLA",
-      "action": "COVER",
-      "reason": "Price has reclaimed VWAP (+0.5%) and is moving up (+0.9% since last check) with high relative volume (2.61). The President's order to short TSLA only if it stays below VWAP for 15 minutes is no longer valid as it has broken above. Closing the short to avoid being stopped out or missing the upside momentum."
-    },
-    {
-      "symbol": "GM",
-      "action": "SELL",
-      "reason": "GM is down -3.1% on the day, trading below VWAP (-0.3%), and has broken down below the opening range. The 'news catalyst' setup is failing as the stock continues to drift lower with no momentum. Cutting losses to redeploy capital into stronger setups."
-    },
-    {
-      "symbol": "ABNB",
-      "action": "BUY",
-      "side": "long",
-      "qty": 10,
-      "entry": 172.93,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "VWAP bounce",
-      "reason": "ABNB is trading near VWAP (-0.2%) with flat momentum and decent volume (rvol 1.51). It is one of the few stocks not in a clear breakdown. The President prioritizes Consumer sectors. This is a defensive long to meet the 75% investment rule while the market is in caution mode."
-    },
-    {
-      "symbol": "CMG",
-      "action": "BUY",
-      "side": "long",
-      "qty": 100,
-      "entry": 27.48,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "CMG is oversold (RSI 25) and down -2.3% on the day. Despite the Mizuho PT cut, the stock is near its opening range low. In a risk-off environment, buying a beaten-down consumer name with oversold indicators offers a good risk/reward for a bounce. Low price allows for higher quantity within position limits."
-    }
-  ],
+  "time": "10:57",
+  "trigger": "must invest $5,652 more (75% rule)",
+  "decisions": [],
   "ranked_ideas": [
     {
-      "symbol": "RCL",
+      "symbol": "TSLA",
       "side": "long",
-      "reason": "Trading flat near VWAP, positive 15m momentum, and upcoming earnings next week may drive interest. Consumer sector priority."
+      "setup": "momentum",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Strong 15m momentum (+0.2%) and 60m momentum (+1.8%) with high relative volume (2.42). Trading above VWAP (+0.8%) and near the top of the opening range. Market mood is caution, but TSLA is showing relative strength. Executive order allows long if above VWAP."
+    },
+    {
+      "symbol": "LULU",
+      "side": "long",
+      "setup": "momentum",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Strongest 15m momentum on the list (+1.1%) with high relative volume (1.58). Trading above VWAP (+0.1%) and above the opening range low. Despite negative news (Wolfe Underperform), price action is strong, suggesting a potential short squeeze or divergence from sentiment."
     },
     {
       "symbol": "MAR",
       "side": "long",
-      "reason": "Already held, but if stopped out, it's a candidate for re-entry on a bounce. Strong 20d trend."
+      "setup": "pullback in uptrend",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Already held, but if I need to add to position or if it breaks out further, it has strong momentum (+0.7% 15m) and is above VWAP. However, since I already hold it, this is a backup idea if I sell another position."
     },
     {
       "symbol": "AMZN",
       "side": "long",
-      "reason": "Already held. If stopped out, re-enter on a clear VWAP bounce with volume."
+      "setup": "VWAP bounce",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Already held. If I need to add, it is above VWAP and has positive momentum. But I am already at max positions (3 held, max 5). I have room for 2 more."
     },
     {
-      "symbol": "DPZ",
+      "symbol": "RCL",
       "side": "long",
-      "reason": "Down -1.8%, near VWAP. Consumer staple within discretionary. Potential for mean reversion if it stabilizes."
-    },
-    {
-      "symbol": "F",
-      "side": "long",
-      "reason": "Down -3.9%, breakdown. Only consider if it shows a strong reversal signal. High risk."
+      "setup": "mean reversion",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "reason": "Trading above VWAP (+0.5%) with positive 15m momentum (+0.6%) despite a -3.1% day drop. This suggests a bounce from oversold levels. RSI is 57.6, not oversold, but intraday momentum is positive."
     }
   ],
   "watchlist_adds": [],
