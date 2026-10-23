@@ -629,5 +629,73 @@
     "results": [
       "SHORT HWM blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "13:49",
+    "trigger": "price moves in ['BKSY']",
+    "market_view": "Market is calm with SPY flat and QQQ slightly up. Space/Aerospace names are mixed: some strong breakouts (BA, RKLB, RDW) while SPCX drifts lower on mixed news (debt concerns, Ukraine slowdowns). President directs curtailment of Space activity, so I'm trimming SPCX and adding to Defense/Aerospace leaders (BA, GE) plus a clean momentum setup (LUNR) to reach the 75% invested floor.",
+    "experiment": "Add a momentum filter for short entries: require m15 < -0.5% and m60 < -0.5% before taking the trade.",
+    "decisions": [
+      {
+        "symbol": "SPCX",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Mixed overnight news: Starlink growth vs debt concerns and Ukraine slowdowns. Price below VWAP (-0.3%), trend down, OR range failed to hold above 147. President wants to curtail Space exposure; this is the weakest Space name in the portfolio.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.02
+      },
+      {
+        "symbol": "BA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Defense priority per president. Boeing sees record backlog and rising munitions demand. Strong OR breakout (182.5-185.33 breakout). Price above VWAP (+1.3%). RSI 39.6 not overbought. Positive news catalyst. Adding to existing position.",
+        "stop_loss_pct": 0.003,
+        "take_profit_pct": 0.027
+      },
+      {
+        "symbol": "GE",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Defense/Aerospace priority. GE Aerospace joined NATICA consortium for air traffic services platform. OR breakout confirmed (278.37-285.29). Price above VWAP (+0.6%). RSI 32.8 not overbought. Adding to existing position.",
+        "stop_loss_pct": 0.016,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "RDW",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Strong OR breakout (7.84-8.1). Price above VWAP (+2.0%). Positive momentum (m15 +0.1%, m60 +0.4%). Good volume profile. Adding to existing position.",
+        "stop_loss_pct": 0.004,
+        "take_profit_pct": 0.014
+      },
+      {
+        "symbol": "RKLB",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Positive news: Rocket Lab completed 98th Electron launch for HawkEye 360. OR breakout (49.53-50.75). Price above VWAP (+2.2%). Momentum improving. Adding to existing position.",
+        "stop_loss_pct": 0.003,
+        "take_profit_pct": 0.01
+      },
+      {
+        "symbol": "LUNR",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Clean momentum setup: price above VWAP (+2.5%), OR breakout (10.04-10.3), strong 15m momentum (m15 +0.1%, m60 +1.2%). Volume reasonable (rvol 0.74). New position to reach 75% invested floor and diversify into Space plays with cleaner setup than SPCX.",
+        "stop_loss_pct": 0.003,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL SPCX",
+      "BUY BA blocked: already holding this stock",
+      "BUY GE blocked: already holding this stock",
+      "BUY RDW blocked: already holding this stock",
+      "BUY RKLB blocked: already holding this stock",
+      "BUY LUNR blocked: conviction 3 is below the minimum 4",
+      "SHORT HWM x3 (~$555.66) [deploy]",
+      "WATCHLIST remove rejected SPCX",
+      "WATCHLIST remove rejected SATS"
+    ]
   }
 ]

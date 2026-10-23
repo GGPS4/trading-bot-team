@@ -1,23 +1,123 @@
 {
   "date": "2026-10-23",
-  "time": "12:44",
-  "trigger": "scheduled look",
-  "market_view": "Market mood is cautious with SPY -0.3%, VIXY +2.3%, and only 27% of watched stocks up. The space/aerospace sector shows divergence with HWM down 3.8% and BA holding gains. Executives 24-hour pause on new long entries forces focus on shorts and portfolio rebalancing while maintaining the 75% invested minimum. Long entries are on hold; short opportunities in weak names are the priority.",
+  "time": "13:49",
+  "trigger": "price moves in ['BKSY']",
+  "market_view": "Market is calm with SPY flat and QQQ slightly up. Space/Aerospace names are mixed: some strong breakouts (BA, RKLB, RDW) while SPCX drifts lower on mixed news (debt concerns, Ukraine slowdowns). President directs curtailment of Space activity, so I'm trimming SPCX and adding to Defense/Aerospace leaders (BA, GE) plus a clean momentum setup (LUNR) to reach the 75% invested floor.",
   "decisions": [
     {
-      "symbol": "HWM",
-      "action": "SHORT",
+      "symbol": "SPCX",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.02,
+      "setup": "other",
+      "reason": "Mixed overnight news: Starlink growth vs debt concerns and Ukraine slowdowns. Price below VWAP (-0.3%), trend down, OR range failed to hold above 147. President wants to curtail Space exposure; this is the weakest Space name in the portfolio."
+    },
+    {
+      "symbol": "BA",
+      "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "stop_loss_pct": 0.003,
+      "take_profit_pct": 0.027,
+      "setup": "opening range breakout",
+      "reason": "Defense priority per president. Boeing sees record backlog and rising munitions demand. Strong OR breakout (182.5-185.33 breakout). Price above VWAP (+1.3%). RSI 39.6 not overbought. Positive news catalyst. Adding to existing position."
+    },
+    {
+      "symbol": "GE",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.016,
+      "take_profit_pct": 0.035,
+      "setup": "opening range breakout",
+      "reason": "Defense/Aerospace priority. GE Aerospace joined NATICA consortium for air traffic services platform. OR breakout confirmed (278.37-285.29). Price above VWAP (+0.6%). RSI 32.8 not overbought. Adding to existing position."
+    },
+    {
+      "symbol": "RDW",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.004,
+      "take_profit_pct": 0.014,
+      "setup": "opening range breakout",
+      "reason": "Strong OR breakout (7.84-8.1). Price above VWAP (+2.0%). Positive momentum (m15 +0.1%, m60 +0.4%). Good volume profile. Adding to existing position."
+    },
+    {
+      "symbol": "RKLB",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.003,
+      "take_profit_pct": 0.01,
+      "setup": "opening range breakout",
+      "reason": "Positive news: Rocket Lab completed 98th Electron launch for HawkEye 360. OR breakout (49.53-50.75). Price above VWAP (+2.2%). Momentum improving. Adding to existing position."
+    },
+    {
+      "symbol": "LUNR",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.003,
+      "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "HWM down 3.8% on day, price 0.4% below VWAP, m15 -0.5% and m60 -0.8% both negative, rvol 1.87 above average, trend down. Short after 30-min VWAP confirmation per executive orders. Caution mode favors shorts in risk-off environment."
+      "reason": "Clean momentum setup: price above VWAP (+2.5%), OR breakout (10.04-10.3), strong 15m momentum (m15 +0.1%, m60 +1.2%). Volume reasonable (rvol 0.74). New position to reach 75% invested floor and diversify into Space plays with cleaner setup than SPCX."
     }
   ],
-  "ranked_ideas": [],
-  "experiment": "Testing short momentum filter criteria from strategy ideas (m15 < -0.5% and m60 < -0.5%) versus lesson guidance (m15 < 0 and m60 < 0). HWM's m15 -0.5% is borderline under the stricter filter; using lesson criteria (both negative) for entry.",
+  "ranked_ideas": [
+    {
+      "symbol": "HWM",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "Below VWAP (-0.6%), bearish 60m momentum (m60 -0.8%), high volume (rvol 1.76). 5d/20d declines show sustained weakness. Shorting on breakdown below VWAP with momentum confirmation."
+    },
+    {
+      "symbol": "TDG",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "Below VWAP (-0.4%), bearish momentum (m60 -0.1%), extremely high volume (rvol 3.08). 5d/20d mixed but short-term weakness. Short on breakdown with high volume signal."
+    },
+    {
+      "symbol": "ASTS",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Above VWAP (+1.9%), OR breakout (36.78-38.42), positive momentum. But RSI 23.6 oversold and two securities class action lawsuits create risk. Lower conviction due to legal overhang."
+    },
+    {
+      "symbol": "VSAT",
+      "direction": "long",
+      "conv2": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Above VWAP (+1.4%), strong 15m momentum (m15 +0.5%, m60 +0.8%), OR breakout. But ViaSat dispute weighs on sentiment and volume is low (rvol 0.34). Watch for volume confirmation."
+    },
+    {
+      "symbol": "FLY",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Strong momentum (m15 +0.6%, m60 +1.6%), OR breakout (17.06-17.36), above VWAP (+2.5%). But very low volume (rvol 0.57) and 50d below average. High risk/reward; tight stop needed."
+    }
+  ],
+  "experiment": "Add a momentum filter for short entries: require m15 < -0.5% and m60 < -0.5% before taking the trade.",
   "watchlist_changes": {
     "add": [],
-    "remove": []
+    "remove": [
+      {
+        "symbol": "SPCX",
+        "reason": "Poor setup: below VWAP, mixed negative news (debt, Ukraine), trend down. President directs curtailment of Space activity."
+      },
+      {
+        "symbol": "SATS",
+        "reason": "Flat day (0.3%), no catalyst, no movement. Quiet stock with no trading setup."
+      }
+    ]
   }
 }
