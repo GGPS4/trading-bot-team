@@ -1,40 +1,42 @@
 {
   "date": "2026-10-23",
-  "time": "09:58",
-  "trigger": "scheduled look",
+  "time": "10:14",
+  "trigger": "must invest $3,615 more (75% rule)",
   "decisions": [
     {
-      "symbol": "WMG",
-      "action": "SELL",
-      "reason": "Stop hit. Price $31.51 is below the stop level of $31.06. Trend is down, RSI is 89.7 (overbought), and volume is very low (rvol 0.35). Cutting this loser to free up capital for better setups."
+      "symbol": "CMCSA",
+      "action": "buy",
+      "side": "long",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "VWAP bounce",
+      "reason": "Trading below VWAP with high relative volume (1.68) in a risk-off market. Looking for a bounce to VWAP or opening range high. Tight stop below opening range low."
+    },
+    {
+      "symbol": "SPOT",
+      "action": "buy",
+      "side": "long",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Strong positive news flow (analyst upgrades, AI partnerships) despite intraday breakdown. RSI is overbought (86), but momentum from news may drive a V-recovery. High conviction due to multiple positive catalysts."
+    },
+    {
+      "symbol": "IMAX",
+      "action": "buy",
+      "side": "long",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "Clear opening range breakout with positive momentum (m15 +1.4%) and trading above VWAP. Strongest technical setup on the watchlist."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "SPOT",
-      "setup": "momentum",
-      "reason": "Strongest momentum on the watchlist. Trading above VWAP, rvol 2.19, and supported by multiple analyst upgrades (Barclays, Guggenheim) despite the earnings miss. Market is risk-off, but SPOT is showing relative strength. Adding to position as it is the best available setup."
-    },
-    {
-      "symbol": "NFLX",
-      "setup": "VWAP bounce",
-      "reason": "Trading above VWAP, strong 15m momentum (+1.0%), and rvol 1.23. The stock is bouncing off the opening range low. A good candidate for a mean reversion or continuation play in the current market."
-    },
-    {
-      "symbol": "CMCSA",
-      "setup": "pullback in uptrend",
-      "reason": "Trading above VWAP, rvol 1.85, and has a strong 5-day trend (+5.1%). However, TD Cowen cut its price target, which is a negative signal. Entering with caution and a tight stop."
-    },
-    {
-      "symbol": "LYV",
-      "setup": "momentum",
-      "reason": "Trading above VWAP, rvol 0.44, and has a steady uptrend. A lower-risk play compared to SPOT and NFLX."
-    },
-    {
-      "symbol": "TTWO",
-      "setup": "VWAP bounce",
-      "reason": "Trading above VWAP, rvol 0.33, and has a positive 15m momentum (+1.1%). A small-cap play with potential for a quick move."
-    }
+    "IMAX",
+    "SPOT",
+    "CMCSA",
+    "LYV",
+    "WMG"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

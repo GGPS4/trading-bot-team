@@ -1,13 +1,37 @@
 {
   "date": "2026-10-23",
-  "time": "09:58",
-  "trigger": "price moves in ['ASTS', 'RDW']",
-  "market_view": "The market is sliding under caution with SPY down and only about 20% of stocks advancing. Our two existing shorts (BA, RKLB) are slightly underwater but within stops; both now trade above VWAP with positive 15m momentum, which conflicts with our short-exit discipline, yet covering them would leave us at 0% invested while new longs are paused and no valid breakdown shorts exist to replace them. No watchlist stock currently meets our short criteria (price below VWAP with negative momentum and an opening-range breakdown), so we are holding current exposure and waiting for a confirmed setup rather than forcing low-conviction trades.",
-  "decisions": [],
+  "time": "10:14",
+  "trigger": "price moves in ['ASTS']",
+  "market_view": "The market is sliding with SPY down 0.4% and only 18% of watched stocks advancing. Both existing shorts (BA and RKLB) are now trading above VWAP with positive 15m momentum and are breaking above their opening-range highs, which invalidates the short setups per our risk rules. With new long entries paused for 24 hours and no short candidates confirmed below VWAP with negative momentum, the disciplined move is to cover the losers and stand aside rather than chase low-quality setups.",
+  "decisions": [
+    {
+      "symbol": "BA",
+      "action": "COVER",
+      "conviction": 4,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Short setup invalidated: price above VWAP (+0.5%), m15 +0.4%, breaking above OR high 185.33; positive Boeing backlog/munitions news. Cut loss per short exit rules before stop at 189.66."
+    },
+    {
+      "symbol": "RKLB",
+      "action": "COVER",
+      "conviction": 4,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Short setup invalidated: price above VWAP (+1.3%), m15 +0.9%, OR breakout above 50.75 with positive momentum. Exit per short rules before stop at 52.51."
+    }
+  ],
   "ranked_ideas": [],
   "experiment": "",
   "watchlist_changes": {
     "add": [],
-    "remove": []
+    "remove": [
+      {
+        "symbol": "SATS",
+        "reason": "No price data or volume; quiet and not tradable today."
+      }
+    ]
   }
 }

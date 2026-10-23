@@ -268,5 +268,53 @@
       "BUY CACI x4 (~$2460.32)",
       "BUY KTOS x76 (~$2825.3)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:14",
+    "trigger": "price moves in ['BAH', 'HEI']",
+    "market_view": "The market is sliding with SPY -0.5%, VIXY +3.0%, and only about 21% of watched stocks up, so caution is warranted and longs must be small and selective. Several defense names are showing relative strength with opening-range breakouts above VWAP (AVAV, HEI, CACI, LMT), while current holdings LHX and RTX are stalling flat near VWAP with weak intraday momentum. I am rotating out of the laggards into AVAV and HEI to deploy capital toward the 75% invested minimum while keeping new-buy conviction at 4 or higher.",
+    "experiment": "Expand the 50% scale-out rule to all bracket trades with a 1R target",
+    "decisions": [
+      {
+        "symbol": "LHX",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Stalled intraday: flat trend, m15 +0.1%, price barely above VWAP (+0.2%); rotating capital to stronger breakout setups to meet the 75% invested rule.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "RTX",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Weak follow-through on contract news: day -1.8%, trend flat, price near VWAP (+0.2%); rotating out of a laggard into higher-conviction breakout names.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "AVAV",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Executive order to add AVAV; price above VWAP (+1.8%), OR breakout (113.37-116.4), m15 +1.9%, rvol 1.12, trend up; RSI 19.5 suggests an oversold bounce setup in defense.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "HEI",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Price above VWAP (+1.8%), OR breakout (285.93-294.54), m15 +1.5%, rvol 1.63, trend up; strongest volume-backed breakout among non-held defense names in a cautious market.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL LHX",
+      "SELL RTX",
+      "BUY AVAV x24 (~$2822.64)",
+      "BUY HEI x9 (~$2656.98)",
+      "BUY PLTR x14 (~$2731.19) [deploy]"
+    ]
   }
 ]
