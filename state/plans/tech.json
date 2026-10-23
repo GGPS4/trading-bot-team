@@ -1,51 +1,60 @@
 {
   "date": "2026-10-23",
-  "time": "11:14",
+  "time": "11:25",
   "trigger": "must invest $4,072 more (75% rule)",
   "decisions": [
     {
-      "symbol": "PANW",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Strong +5.7% move with OR breakout and high relative volume (1.64). Price is well above VWAP (+1.7%) and has positive 60m momentum. Fits the 'high conviction' and 'above VWAP' criteria despite the cautious market mood."
+      "symbol": "NVDA",
+      "action": "SELL",
+      "reason": "Price is below VWAP and showing negative 15m momentum. Market is in caution mode. RSI is near oversold but trend is down. Exiting to free up capital for stronger setups."
     },
     {
-      "symbol": "AMD",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Strong +2.3% intraday move with OR breakout. Trading above VWAP (+0.6%). RSI is low (23.6) suggesting potential for further rebound or continuation of the morning strength. High relative volume (1.48) supports the move."
-    },
-    {
-      "symbol": "AVGO",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Up +0.9% with a clear OR breakout. Price is above VWAP (+0.5%). Positive 60m momentum. Fits the criteria for a disciplined long entry in a cautious market."
-    },
-    {
-      "symbol": "ANET",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Up +2.1% with OR breakout. Price is above VWAP (+0.5%). Positive 60m momentum. Despite the overnight CVE news, the intraday price action is strong and above key levels."
+      "symbol": "MU",
+      "action": "SELL",
+      "reason": "Stalled at the top of the opening range with negative 15m momentum. RSI is very low (24.2) indicating weakness. No clear continuation signal. Exiting to redeploy capital."
     }
   ],
   "ranked_ideas": [
-    "TXN",
-    "NOW",
-    "AMAT",
-    "CRM",
-    "INTU"
+    {
+      "symbol": "PANW",
+      "setup": "opening range breakout",
+      "conviction": 5,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Strong +6.0% day, clear OR breakout, above VWAP, high relative volume (1.57). Best momentum play on the list."
+    },
+    {
+      "symbol": "AMD",
+      "setup": "opening range breakout",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "+2.1% day, OR breakout, above VWAP. RSI is low (23.6) suggesting potential for a bounce/continuation. Volume is decent (1.37)."
+    },
+    {
+      "symbol": "AVGO",
+      "setup": "opening range breakout",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "+0.9% day, OR breakout, above VWAP. Positive 60m momentum. RSI is low (34.3), offering room to run."
+    },
+    {
+      "symbol": "ANET",
+      "setup": "opening range breakout",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "+2.2% day, OR breakout, above VWAP. However, news of a CVE vulnerability is a negative catalyst, reducing conviction."
+    },
+    {
+      "symbol": "TXN",
+      "setup": "VWAP bounce",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.02,
+      "reason": "+1.4% day, above VWAP, positive 60m momentum. RSI is low (36.1). Weaker setup than the breakouts but solid."
+    }
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

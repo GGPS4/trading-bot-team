@@ -398,5 +398,16 @@
       "BUY BAM x20 (~$942.7)",
       "BUY DIS blocked: already holding this stock"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "11:31",
+    "trigger": "must invest $2,694 more (75% rule)",
+    "market_view": "The market is in a cautious mode with SPY down 0.1% and the VIX up 1.2%, indicating risk-off sentiment. Within the entertainment sector, stocks are mixed; SPOT shows strong positive momentum from earnings news, while others like NFLX and FOXA exhibit breakdowns below their opening ranges.",
+    "experiment": "Introduce a VWAP-bias filter: go long only if price is above VWAP with positive 15-minute momentum, short only if below VWAP with negative momentum.",
+    "decisions": [],
+    "results": [
+      "BUY SPOT x1 (~$578.25) [deploy]"
+    ]
   }
 ]

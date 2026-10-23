@@ -483,5 +483,38 @@
       "BUY NVDA blocked: already holding this stock",
       "BUY MU blocked: already holding this stock"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "11:25",
+    "trigger": "must invest $4,072 more (75% rule)",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "NVDA",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Price is below VWAP and showing negative 15m momentum. Market is in caution mode. RSI is near oversold but trend is down. Exiting to free up capital for stronger setups.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "MU",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Stalled at the top of the opening range with negative 15m momentum. RSI is very low (24.2) indicating weakness. No clear continuation signal. Exiting to redeploy capital.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "SELL NVDA",
+      "SELL MU",
+      "BUY PANW x2 (~$752.18) [deploy]",
+      "BUY AMD x1 (~$518.97) [deploy]",
+      "BUY AVGO x2 (~$652.22) [deploy]",
+      "BUY ANET x5 (~$873.65) [deploy]"
+    ]
   }
 ]
