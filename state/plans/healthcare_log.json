@@ -674,5 +674,79 @@
       "BUY MRK x6 (~$868.74)",
       "BUY MRNA x4 (~$808.24)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "12:04",
+    "trigger": "scheduled look",
+    "market_view": "The market is in a cautious regime with mixed signals; healthcare stocks are showing divergence, with strong momentum and news catalysts driving gains in MRNA and MRK, while others like ABBV and AMGN are stalling. The overall sentiment is risk-off, requiring high conviction and adherence to VWAP-based entries.",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "ABBV",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Position has stalled with weak momentum (m15 flat) and low relative volume (rvol 0.73), not meeting the criteria for holding in a cautious market. Selling to redeploy capital into stronger setups.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "AMGN",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Position shows weak momentum (m15 flat) and very low relative volume (rvol 0.41), indicating lack of interest. The news catalyst has not translated into strong price action, so exiting to free up capital.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "MRNA",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Strong news catalyst with Phase 3 results showing 42% reduction in risk, price above VWAP (+3.9%), breakout from opening range, positive momentum (m15 +1.5%, m60 +1.4%), and high relative volume (rvol 1.63). Adding to position to increase exposure.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "MRK",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Confirmed news catalyst with Phase 3 results for melanoma treatment, price above VWAP (+0.5%), positive momentum (m15 +0.1%, m60 +0.7%), and solid relative volume (rvol 1.24). Adding to position due to strong fundamentals and technicals.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ISRG",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Opening range breakout with high relative volume (rvol 2.05), price above VWAP (+0.7%), and despite flat short-term momentum, the setup is valid for a healthcare stock in a cautious market. Adding to position.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ABT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Positive news catalysts including Wells Fargo overweight and Abbott's Oncodetect test sensitivity boost, price above VWAP (+0.1%), though momentum is weak (m15 -0.2%). Entering as a new position with high conviction based on catalysts.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "REGN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Price above VWAP (+0.4%) with positive momentum (m15 +0.3%, m60 +0.7%), though relative volume is low (rvol 0.43). Entering as a new position to diversify, with conviction based on momentum despite volume concerns.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL ABBV",
+      "SELL AMGN",
+      "BUY MRNA blocked: already holding this stock",
+      "BUY MRK blocked: already holding this stock",
+      "BUY ISRG blocked: already holding this stock",
+      "BUY ABT x9 (~$923.85)",
+      "BUY REGN x1 (~$808.51)"
+    ]
   }
 ]
