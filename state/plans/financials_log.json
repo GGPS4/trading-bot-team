@@ -410,5 +410,27 @@
       "BUY SPGI blocked: team already has the maximum number of positions",
       "BUY CME blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "11:45",
+    "trigger": "must invest $6,305 more (75% rule)",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "BLK",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is below entry and below VWAP. Opening range breakdown with high relative volume (2.04) and negative 15m momentum. Market is in caution mode; cutting the weak hand to redeploy capital into stronger setups.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "SELL BLK",
+      "BUY CME x6 (~$1838.1) [deploy]",
+      "BUY SPGI x4 (~$1801.2) [deploy]"
+    ]
   }
 ]

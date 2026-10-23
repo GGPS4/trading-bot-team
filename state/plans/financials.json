@@ -1,38 +1,55 @@
 {
   "date": "2026-10-23",
-  "time": "11:31",
-  "trigger": "scheduled look",
+  "time": "11:45",
+  "trigger": "must invest $6,305 more (75% rule)",
   "decisions": [
     {
-      "symbol": "AXP",
-      "action": "COVER",
-      "reason": "Stop loss triggered. Price $314.52 is above the short stop of $319.59? No, wait. Short entry 313.94. Stop 319.59. Price 314.52. The stop is NOT triggered. However, the setup is weak. AXP is down 3.2% on the day, but my short is only -0.00089% (basically flat). The news is mixed (earnings beat but stock down). The market is cautious. I have a max of 5 positions. I am currently at 5. I need to free up capital to meet the 75% invested rule. AXP is the weakest performer in my portfolio relative to the market (underperforming V/MA). I will close this short to redeploy capital into stronger setups like CME or C which have better momentum and news."
-    },
-    {
-      "symbol": "CME",
-      "action": "BUY",
-      "qty": 1,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "CME is up +0.1% day, +0.7% open, above VWAP. RSI is 92.5 (overbought but strong momentum). News: Goldman raised PT to $271. Trend is up. Volume is decent (1.3). This is a high-conviction momentum play in a cautious market where I need to be selective. It fits the 'Financials' sector priority."
-    },
-    {
-      "symbol": "C",
-      "action": "BUY",
-      "qty": 1,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "C is up +0.5% open, above VWAP, m60 +1.0%. Trend is up. RSI 37.3 (room to run). It is a strong relative performer in a down market. Fits the 'Financials' sector priority."
+      "symbol": "BLK",
+      "action": "SELL",
+      "reason": "Position is below entry and below VWAP. Opening range breakdown with high relative volume (2.04) and negative 15m momentum. Market is in caution mode; cutting the weak hand to redeploy capital into stronger setups."
     }
   ],
   "ranked_ideas": [
-    "CME",
-    "C",
-    "SPGI",
-    "GS",
-    "JPM"
+    {
+      "symbol": "CME",
+      "setup": "momentum",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Strongest relative strength on the watchlist. Trading above VWAP (+0.4%), positive 15m/60m momentum, and supported by a recent price target raise from Goldman Sachs. Fits the 'high conviction' criteria despite the broader market caution."
+    },
+    {
+      "symbol": "SPGI",
+      "setup": "pullback in uptrend",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Trading above VWAP with positive 60m momentum. Strong 20-day trend (+12.3%). Although RSI is high (92.3), the intraday stability and volume (1.22) suggest it is holding support better than peers. Earnings are next week, so today is a pre-earnings drift play."
+    },
+    {
+      "symbol": "C",
+      "setup": "VWAP bounce",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Trading slightly above VWAP (+0.1%) with flat-to-positive 60m momentum. Lower conviction due to neutral news flow and flat trend, but offers a tighter risk profile if it holds the VWAP level."
+    },
+    {
+      "symbol": "ICE",
+      "setup": "other",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Trading near VWAP (-0.1%). News of a technical halt on NYSE Options Exchange is minor but could create volatility. Low conviction due to lack of clear directional momentum."
+    },
+    {
+      "symbol": "GS",
+      "setup": "hold",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Already held. If position size allows, this is a strong candidate for adding, but currently we are rotating out of BLK to meet the 75% invested rule. GS is performing well (above VWAP, trailing stop active)."
+    }
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
