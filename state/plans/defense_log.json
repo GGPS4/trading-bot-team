@@ -401,5 +401,25 @@
       "BUY PLTR x14 (~$2752.12)",
       "BUY RTX x14 (~$2678.62)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "11:14",
+    "trigger": "must invest $8,064 more (75% rule)",
+    "market_view": "The market is showing a cautious sentiment with only 23% of watched stocks up, and the defense sector is mixed. Booz Allen (BAH) is sliding due to contract delays, but other defense stocks like CACI are resilient with positive analyst actions. Lockheed Martin (LMT) has raised price targets, but overbought RSI limits upside. Overall, intraday momentum is weak, so I'm focusing on high-conviction longs above VWAP with clear catalysts.",
+    "experiment": "Testing the expansion of the 50% scale-out rule to all bracket trades with a 1R target, as suggested in strategy ideas. This will be applied to the CACI trade to lock in gains early and reduce exposure to late-day reversals.",
+    "decisions": [
+      {
+        "symbol": "CACI",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "CACI has a strong catalyst with Stifel upgrading to Buy and raising the price target to $925, indicating high analyst confidence. The stock is trading above VWAP (+1.1%) with an opening range breakout, solid rvol of 1.64, and neutral RSI (51.8), making it a compelling long despite the cautious market mood.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY CACI x4 (~$2501.56)"
+    ]
   }
 ]

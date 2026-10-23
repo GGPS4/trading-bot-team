@@ -405,5 +405,55 @@
       "BUY LULU blocked: conviction None is below the minimum 2",
       "BUY RCL blocked: conviction None is below the minimum 2"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "11:14",
+    "trigger": "must invest $5,656 more (75% rule)",
+    "market_view": "The market is sliding with caution, only 23% of our watchlist is up. SPY is down 0.3% while QQQ is up 0.3%, and the VIXY is rising. We must deploy cash into high-conviction longs while keeping risk tight.",
+    "experiment": "VWAP Reclaim",
+    "decisions": [
+      {
+        "symbol": "AMZN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Price reclaimed VWAP; executive directive to long AMZN after bounce above VWAP.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "TSLA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strong intraday momentum, above VWAP, high relative volume (2.32), positive analyst target raise.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ABNB",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Price above VWAP with positive 15m and 60m momentum, trend up.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "MAR",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Existing position, stock holding above VWAP after pullback; need to increase exposure to meet 75% invested rule.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY AMZN blocked: already holding this stock",
+      "BUY TSLA x3 (~$1126.41)",
+      "BUY ABNB x8 (~$1389.68)",
+      "BUY MAR blocked: already holding this stock",
+      "WATCHLIST removed DPZ",
+      "WATCHLIST remove rejected F",
+      "WATCHLIST added DECK"
+    ]
   }
 ]
