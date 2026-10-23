@@ -553,5 +553,97 @@
       "BUY UNH x2 (~$844.09)",
       "BUY ABT x9 (~$919.62)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "11:08",
+    "trigger": "must invest $2,907 more (75% rule)",
+    "market_view": "The market is in a caution regime with SPY down 0.2% and VIXY up 2.0%, indicating risk-off sentiment. Only 20% of watched healthcare stocks are up, so long positions are sized 25% smaller. I need to meet the 75% invested rule by approximately $2,907, so I will sell underperforming positions and buy strong stocks with confirmed catalysts and price above VWAP.",
+    "experiment": "Testing the executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops of at least 2%.",
+    "decisions": [
+      {
+        "symbol": "JNJ",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "JNJ is below VWAP with negative PnL despite positive news, so I sell to make room for better opportunities.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "MRK",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "MRK is below VWAP with negative PnL despite positive news, so I sell to reduce exposure in weak positions.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "UNH",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "UNH has negative news about network loss, and I want to redeploy into stocks with positive catalysts.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ABT",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "I sell ABT to close the existing position and reopen with larger size to meet the invested rule.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ABT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "ABT has positive catalysts from Wells Fargo and Oncodetect news, and price is at VWAP, so I buy with larger size.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "MRNA",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "MRNA has strong positive news from Phase 3 results with Merck, price above VWAP, and high volume (rvol 2.02).",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "AMGN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "AMGN has positive news from Oppenheimer price target raise, price above VWAP, though volume is low.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ISRG",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "ISRG has a breakout above the opening range, price above VWAP, and high volume (rvol 2.32), with overnight positive news.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ABBV",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "ABBV is above VWAP with positive momentum, and I include it to meet the 75% invested rule despite no specific catalyst today.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL JNJ",
+      "SELL MRK",
+      "SELL UNH",
+      "SELL ABT",
+      "BUY MRNA x4 (~$800.36)",
+      "BUY ABT failed: POST /v2/orders -> 403: {\"code\":40310000,\"existing_order_id\":\"ff2bca24-6c4f-4172-a31c-d1a993b4ba72\",\"message\":\"potential wash trade detected. use complex orders\",\"reject_reason\":\"opposite side market/stop order exists\"}",
+      "BUY AMGN x2 (~$884.62)",
+      "BUY ISRG x2 (~$908.19)",
+      "BUY ABBV x3 (~$852.57)"
+    ]
   }
 ]

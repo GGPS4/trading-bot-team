@@ -372,5 +372,43 @@
       "SELL C",
       "SHORT AXP x8 (~$2506.56)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "11:08",
+    "trigger": "must invest $4,901 more (75% rule)",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "BLK",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Trading above VWAP with strong relative volume (2.2) and positive 15m/60m momentum. Trend is up. Fits the 'Financials' sector priority and high-conviction requirement.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "SPGI",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Positive look (+0.6%) and 15m momentum (+0.2%) with rising volume (1.4). Trading near VWAP. Strong 20d trend supports intraday bounce potential.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "CME",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Goldman Sachs raised price target to $271. Trading above VWAP with positive 15m momentum. Strong 20d uptrend provides support.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY BLK x1 (~$1127.2)",
+      "BUY SPGI blocked: team already has the maximum number of positions",
+      "BUY CME blocked: team already has the maximum number of positions"
+    ]
   }
 ]
