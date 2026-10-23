@@ -806,5 +806,91 @@
       "BUY ABBV x4 (~$1142.28)",
       "BUY VRTX x2 (~$1053.92)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "13:52",
+    "trigger": "scheduled look",
+    "market_view": "The market is calm with SPY slightly down and healthcare sector mixed. Several stocks show breakdowns below opening range (LLY, UNH, BMY) but positive catalysts exist for JNJ, DHR, MRK, and MRNA above VWAP. We are rotating out underperforming positions and adding high\u2011conviction longs with confirmed catalysts.",
+    "experiment": "Testing the executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR\u2011based stops of at least 2%.",
+    "decisions": [
+      {
+        "symbol": "REGN",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Stalled below entry, trend flat; freeing cash for new setups",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "VRTX",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Below entry, trend down, risking stop; reducing exposure",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "ABT",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Not showing strong momentum; freeing cash for new high\u2011conviction setups",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "ISRG",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Breakout but weak momentum; reducing risk and freeing cash",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "JNJ",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Above VWAP, positive momentum, MHRA approval catalyst confirmed",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "DHR",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Above VWAP, positive momentum, HSBC price target raise",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "MRK",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Above VWAP, positive momentum, melanoma vaccine catalyst",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "MRNA",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Above VWAP, breakout above opening range, mild positive catalyst",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL REGN",
+      "SELL VRTX",
+      "SELL ABT",
+      "SELL ISRG",
+      "BUY JNJ x4 (~$1053.72)",
+      "BUY DHR x5 (~$1137.75)",
+      "BUY MRK x8 (~$1158.72)",
+      "BUY MRNA blocked: conviction 3 is below the minimum 4",
+      "BUY MDT x13 (~$1248.78) [deploy]",
+      "WATCHLIST added ARGX",
+      "WATCHLIST added MOH"
+    ]
   }
 ]
