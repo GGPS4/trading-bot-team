@@ -1,131 +1,57 @@
 {
   "date": "2026-10-23",
-  "time": "13:34",
-  "trigger": "scheduled look",
-  "market_view": "The market is calm with SPY slightly down and QQQ up, indicating a neutral to slightly bullish environment. Defense stocks are mixed but several are showing strength, particularly AVAV, CACI, and LMT. The team needs to increase long exposure to meet the 75% invested requirement, so scaling up all five existing positions to their maximum allowed size is necessary.",
+  "time": "14:21",
+  "trigger": "first look this run",
   "decisions": [
     {
-      "symbol": "AVAV",
-      "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "setup": "opening range breakout",
-      "reason": "Price above VWAP with strong momentum (m15 +0.3%, m60 +2.1%), scaling up to max position size to meet 75% invested requirement. News: defense sector broadly strong with analyst upgrades."
-    },
-    {
-      "symbol": "CACI",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "setup": "opening range breakout",
-      "reason": "Price above VWAP, momentum mixed but above OR, scaling up to max position size to meet 75% invested requirement. News: Stifel upgraded to Buy with target $925."
-    },
-    {
-      "symbol": "LHX",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "setup": "news catalyst",
-      "reason": "Price near entry, news catalyst (dividend), scaling up to max position size to meet 75% invested requirement."
-    },
-    {
-      "symbol": "LMT",
-      "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "setup": "opening range breakout",
-      "reason": "Price above VWAP with strong momentum (m15 +0.4%, m60 +1.1%), scaling up to max position size to meet 75% invested requirement. News: analyst upgrades and record backlog."
-    },
-    {
       "symbol": "SAIC",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "setup": "opening range breakout",
-      "reason": "Price above VWAP with momentum (m15 -0.0%, m60 +0.9%), scaling up to max position size to meet 75% invested requirement."
+      "action": "SELL",
+      "quantity": 19,
+      "reason": "Position has hit its first target of 146.23 (current price 145.86 is effectively at target). Per strategy, take partial profits or exit stalled positions. RSI is 77.7 (overbought) and momentum is fading (m15 +0.5% but rvol 0.49). Reallocate capital to higher-conviction setups."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "BAH",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "setup": "momentum",
-      "reason": "Strong momentum (m15 +0.8%, m60 +1.7%), above VWAP, high volume (rvol 2.35), news: raised guidance but fell on delays; however, price is up and trend is flat to up."
-    },
-    {
-      "symbol": "PLTR",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "setup": "VWAP bounce",
-      "reason": "Above VWAP, news about AI monetization gap suggesting higher earnings, momentum flat but stable, setup is breakout above OR."
-    },
-    {
       "symbol": "HII",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "setup": "opening range breakout",
-      "reason": "Momentum up (m15 +0.0%, m60 +0.7%), above VWAP, currently inside OR but could breakout, news: upcoming earnings before open."
-    },
-    {
-      "symbol": "MRCY",
-      "direction": "short",
-      "conviction": 3,
+      "setup": "pullback in uptrend",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "breakdown below VWAP",
-      "reason": "Below VWAP (-0.1%), broke above OR but sellers pushing down, momentum down, low volume (rvol 0.44), trend down."
+      "conviction": 4,
+      "reason": "Executive order to add HII. Price is above VWAP (+0.7%) and trending up. RSI 59.2 is healthy, not overbought. 20d trend is up +4.2%. Fits the 'conviction >=4 and price > VWAP' rule."
+    },
+    {
+      "symbol": "NOC",
+      "setup": "opening range breakout",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "conviction": 4,
+      "reason": "Strong opening range breakout. Price above VWAP (+0.5%). Goldman raised PT to $525. However, RSI is 78.1 (overbought) and rvol is low (0.42), so conviction is capped at 4. Good for a quick scalp if it holds VWAP."
+    },
+    {
+      "symbol": "KTOS",
+      "setup": "mean reversion",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "conviction": 3,
+      "reason": "RSI 33.1 (oversold) and 20d trend is down -15.9%. Price is above VWAP (+1.1%) and has broken out of the opening range. However, Piper Sandler cut the PT, which is negative news. Conviction is lower due to conflicting signals."
+    },
+    {
+      "symbol": "LDOS",
+      "setup": "opening range breakout",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "conviction": 3,
+      "reason": "Opening range breakout, above VWAP (+1.0%). News: joined NATICA project. But RSI 76.4 is overbought and rvol is very low (0.33), suggesting lack of participation. Lower conviction."
     },
     {
       "symbol": "RTX",
-      "direction": "short",
-      "conviction": 2,
+      "setup": "VWAP bounce",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "trend down",
-      "reason": "Down trend, below VWAP? vwap +0.1% so slightly above, but momentum negative, could break below VWAP on bad news."
+      "conviction": 3,
+      "reason": "Price is above VWAP (+0.4%) and flat. News: $350M Air Force contract. However, day change is -1.5% and trend is flat. Needs to show more strength to justify a buy. Lower conviction."
     }
   ],
-  "experiment": "",
-  "watchlist_changes": {
-    "add": [
-      {
-        "symbol": "GPUS",
-        "reason": "Active in market discovery, likely defense, unusual move"
-      },
-      {
-        "symbol": "XXII",
-        "reason": "Active in market discovery, likely defense, unusual move"
-      },
-      {
-        "symbol": "SHFS",
-        "reason": "Active in market discovery, likely defense, unusual move"
-      }
-    ],
-    "remove": [
-      {
-        "symbol": "TXT",
-        "reason": "Low volume (rvol 0.23), weak momentum, no catalyst"
-      },
-      {
-        "symbol": "HEI",
-        "reason": "Low volume (rvol 0.98), weak momentum, no catalyst"
-      },
-      {
-        "symbol": "MRCY",
-        "reason": "Low volume (rvol 0.44), weak momentum, below VWAP, no news"
-      }
-    ]
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }
