@@ -304,5 +304,44 @@
       "BUY BLK x1 (~$1131.6)",
       "BUY CME x6 (~$1831.86)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:16",
+    "trigger": "scheduled look",
+    "market_view": "Risk-off tape continues with only 21% of watchlist stocks up and VIXY +3%; financials are broadly weak with most names below VWAP. GS is the only current long showing strength above VWAP on earnings/buyback news, while BLK and CME are breaking down or trending weak. I\u2019m cutting the two weakest longs and redeploying into the best available catalyst/oversold setups to satisfy the 75% invested rule without chasing overbought names.",
+    "experiment": "Testing news-catalyst and oversold mean-reversion longs in a risk-off regime after cutting breakdown longs BLK and CME.",
+    "decisions": [
+      {
+        "symbol": "BLK",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": "BLK broke below its opening range (1123.63-1131.6), trades below VWAP (-0.3%), and is trending down on high rvol (2.59). Exiting the weakest long before the 1114.63 stop is tested in a risk-off tape.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "CME",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "CME is trending down, below VWAP (-0.2%), with look -0.9% and fading momentum. Taking the small open profit to redeploy capital into better setups while staying invested.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "COF",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Autonomous Research raised COF price target to $256 from $240 (fiscal.ai), a clear catalyst in the prioritized Financials sector. RSI 63.3 is not overbought. Deploying cash to meet the 75% invested rule; 2% stop, 4% first target.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL BLK",
+      "SELL CME",
+      "BUY COF x9 (~$1806.03)",
+      "BUY HOOD x19 (~$1830.36) [deploy]"
+    ]
   }
 ]
