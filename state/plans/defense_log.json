@@ -154,5 +154,81 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-23",
+    "time": "09:37",
+    "trigger": "first look this run",
+    "market_view": "Caution regime: SPY -0.5%, QQQ -0.4%, VIXY +2.9%; only 5% of watched stocks up. Defense sector is mixed, but headlines are not yet clean enough for high-conviction longs. Prefer names with clear defense catalysts and price above VWAP; size longs down in risk-off.",
+    "experiment": "Add a filter to skip entries when RSI>80 or when price is below VWAP within 30 minutes of earnings release",
+    "decisions": [
+      {
+        "symbol": "RTX",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Clear $350M US Air Force contract and Pratt & Whitney $100M Poland expansion; research importance 5; price above VWAP; defense focus.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "LDOS",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Five-year $95M Defense Logistics Agency contract; sentiment 0.6 importance 4; clear revenue win; use 50% scale-out at 1R.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "SAIC",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Executive suggested; +2.2 on strong 5-day; above VWAP; momentum in defense; RSI 77.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "HII",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Executive suggested; +1.7; RSI 61; momentum; above VWAP.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "LHX",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "LMT CEO geopolitical comments driving record backlog; LHX exposure; momentum; above VWAP.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY RTX x14 (~$2663.22)",
+      "BUY LDOS x21 (~$2830.59)",
+      "BUY SAIC x19 (~$2712.82)",
+      "BUY HII x10 (~$2752.7)",
+      "BUY LHX x11 (~$2743.29)"
+    ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "09:44",
+    "trigger": "price moves in ['RTX', 'KTOS', 'AVAV', 'PLTR', 'BAH', 'HEI', 'HII']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "SAIC",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is down -1.87% and price is below the opening range and VWAP. Market mood is caution/risk-off. Executive rules require price > VWAP for new buys, and this position is failing its momentum setup. Stop loss is too close to current price (140.64 vs 142.78), indicating high risk of immediate stop-out or further downside. Closing to redeploy capital into stronger setups.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      }
+    ],
+    "results": [
+      "SELL SAIC failed: DELETE /v2/positions/SAIC -> 404: {\"code\":40410000,\"message\":\"position not found: SAIC\"}"
+    ]
   }
 ]

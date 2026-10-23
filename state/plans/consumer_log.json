@@ -224,5 +224,93 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-23",
+    "time": "09:37",
+    "trigger": "first look this run",
+    "market_view": "The market is in a caution regime with SPY -0.5%, QQQ -0.4%, and VIXY up 2.9%, while only about 5% of watched stocks are up. Macro recession fears and AI spending volatility are driving headlines, and the tape is weak. Longs must have clear catalysts and VWAP support, while shorts favor high-volume breakdowns on bad news.",
+    "experiment": "VWAP Reclaim",
+    "decisions": [
+      {
+        "symbol": "RCL",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Royal Caribbean confirmed 110 cruise calls for Antigua, stable demand; stock above 50-day, daily move +2.3, strong momentum in consumer sector.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "DPZ",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Darden Restaurants up 5% on 5-day, above 50-day, RSI 64.9, daily move +1.9; momentum long.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "GM",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "GM Tech Day EV platform and AI manufacturing news; positive catalyst despite below-50-day weakness, bounce setup.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "AMZN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "AWS margin expansion and bullish analyst commentary, but AI spend pressure; long only after reclaim of VWAP, news catalyst confirmation.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "BKNG",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "President prioritizes Financials sector; BKNG showing relative positive daily move in financials, though weak trend.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY RCL x5 (~$1376.85)",
+      "BUY DPZ x4 (~$1271.1)",
+      "BUY GM x18 (~$1355.4)",
+      "BUY AMZN x5 (~$1240.05)",
+      "BUY BKNG x9 (~$1415.25)",
+      "WATCHLIST remove rejected LULU",
+      "WATCHLIST remove rejected CMG",
+      "WATCHLIST remove rejected F"
+    ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "09:44",
+    "trigger": "price moves in ['CMG', 'RCL', 'GM', 'F', 'LULU']",
+    "market_view": "The market is in a risk-off mood with SPY down 0.6%, VIXY spiking +3.8%, and only 14% of watched stocks showing gains. Broad weakness across consumer discretionary requires exiting underperforming longs below VWAP and focusing capital on the few resilient setups holding above VWAP.",
+    "experiment": "Testing intraday rotation out of weak breakdowns into relative strength holds above VWAP during risk-off sessions.",
+    "decisions": [
+      {
+        "symbol": "RCL",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "RCL is down -3.9% today, trading -0.5% below VWAP with negative intraday momentum, breaking setup criteria in a risk-off tape.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "ORLY",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "ORLY is showing relative strength, trading positive on the day (+0.2%) and above VWAP (+0.1%) while the broader market trends down.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL RCL",
+      "BUY ORLY x15 (~$1383.0)"
+    ]
   }
 ]

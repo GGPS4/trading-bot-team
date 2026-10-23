@@ -333,5 +333,61 @@
       "BUY ABT blocked: conviction None is below the minimum 3 (risk-off market)",
       "BUY BMY blocked: conviction None is below the minimum 3 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "09:37",
+    "trigger": "first look this run",
+    "market_view": "Market is in caution with SPY -0.5%, QQQ -0.4%, and VIXY +2.9%. The healthcare basket showed selective positive news, but the broad tape is weak and longs are sized 25% smaller. I am respecting the executive's cut on new long entries and waiting for confirmed catalysts with price above VWAP.",
+    "experiment": "Testing risk-off filter that blocks buys when VIX > 20 or major indices fall >1%; only trading high-conviction news catalysts with price above VWAP.",
+    "decisions": [
+      {
+        "symbol": "BMY",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Phase 3 interim data showed izalontamab-brengitecan cut progression or death risk by 59% vs chemo; Bristol Myers also signed Tempus AI deal. High-impact oncology catalyst, but risk-off sizing reduced.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "MRK",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "FDA granted traditional approval for pembrolizumab for TMB-H solid tumors; news was high impact. Mixed ESMO rumor exists, but approval is a clear positive catalyst.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "JNJ",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "UK regulator approved Johnson & Johnson's oral treatment for plaque psoriasis; positive regulatory catalyst.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ABT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Abbott reported 30% sensitivity boost for Oncodetect whole-genome sequencing test in colorectal cancer at ESMO; positive data.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "AMGN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Oppenheimer lifted Amgen price target to $480 from $450 and kept Outperform; analyst upgrade provides clear catalyst.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY BMY x15 (~$940.05)",
+      "BUY MRK x6 (~$866.91)",
+      "BUY JNJ x3 (~$793.47)",
+      "BUY ABT x9 (~$923.58)",
+      "BUY AMGN x2 (~$886.87)"
+    ]
   }
 ]

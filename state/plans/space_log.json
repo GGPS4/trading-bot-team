@@ -375,5 +375,25 @@
       "SHORT RKLB x8 (~$409.84) [deploy]",
       "BUY TDG x0.415786 (~$474.78) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "09:37",
+    "trigger": "big news on ['ASTS']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "TDG",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is down 1.2% and trading below VWAP in a risk-off market. RSI is overbought at 70.2, making a pullback likely. Releasing capital to meet the 75% invested mandate with higher-conviction shorts.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      }
+    ],
+    "results": [
+      "SELL TDG failed: DELETE /v2/positions/TDG -> 404: {\"code\":40410000,\"message\":\"position not found: TDG\"}"
+    ]
   }
 ]
