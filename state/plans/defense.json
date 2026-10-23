@@ -1,69 +1,73 @@
 {
   "date": "2026-10-23",
-  "time": "11:14",
-  "trigger": "must invest $8,064 more (75% rule)",
-  "market_view": "The market is showing a cautious sentiment with only 23% of watched stocks up, and the defense sector is mixed. Booz Allen (BAH) is sliding due to contract delays, but other defense stocks like CACI are resilient with positive analyst actions. Lockheed Martin (LMT) has raised price targets, but overbought RSI limits upside. Overall, intraday momentum is weak, so I'm focusing on high-conviction longs above VWAP with clear catalysts.",
+  "time": "11:36",
+  "trigger": "scheduled look",
   "decisions": [
     {
+      "symbol": "AVAV",
+      "action": "SELL",
+      "qty": 24,
+      "reason": "Position has hit first target area (121.14) and is trailing. Market mood is caution. Rotating capital to deploy into higher conviction setups to meet 75% invested rule."
+    },
+    {
       "symbol": "CACI",
-      "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "CACI has a strong catalyst with Stifel upgrading to Buy and raising the price target to $925, indicating high analyst confidence. The stock is trading above VWAP (+1.1%) with an opening range breakout, solid rvol of 1.64, and neutral RSI (51.8), making it a compelling long despite the cautious market mood."
-    }
-  ],
-  "ranked_ideas": [
+      "action": "SELL",
+      "qty": 4,
+      "reason": "Position is flat/slightly positive but momentum is stalling (m15 +0.1%). Rvol is decent but price is extended. Selling to free up capital for stronger momentum plays like LMT or KTOS."
+    },
+    {
+      "symbol": "HEI",
+      "action": "SELL",
+      "qty": 9,
+      "reason": "Position is underperforming relative to other defense names. RSI is neutral but trend is flat. Selling to redeploy into LMT which has stronger news catalysts and breakout momentum."
+    },
+    {
+      "symbol": "PLTR",
+      "action": "SELL",
+      "qty": 14,
+      "reason": "Position is slightly negative. While news is positive, price action is weak (m15 +0.1%, rvol 1.05). In a caution regime, I prefer holding stocks with stronger immediate momentum or clear breakouts."
+    },
+    {
+      "symbol": "RTX",
+      "action": "SELL",
+      "qty": 14,
+      "reason": "Position is slightly negative. Trend is down, m15 is negative. No clear catalyst to hold. Selling to meet minimum investment threshold with higher conviction names."
+    },
     {
       "symbol": "LMT",
-      "direction": "long",
-      "conviction": 3,
+      "action": "BUY",
+      "qty": 10,
+      "reason": "Strong opening range breakout, above VWAP, high relative volume (1.72). Multiple analyst upgrades (RBC, Barclays, Goldman). CEO comments on record backlog. High conviction setup.",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "LMT has positive news with raised price targets from RBC and Barclays, and it's above VWAP with high rvol (1.92). However, RSI is overbought at 82.4, which reduces conviction in this risk-off environment."
+      "setup": "opening range breakout"
     },
     {
       "symbol": "KTOS",
-      "direction": "long",
-      "conviction": 3,
+      "action": "BUY",
+      "qty": 100,
+      "reason": "Opening range breakout, above VWAP, positive 60m momentum. RSI is low (29.7) suggesting potential for a bounce, but the intraday breakout is the primary trigger. Good risk/reward.",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "KTOS is oversold with RSI at 29.7 and has an opening range breakout above VWAP. Although rvol is moderate (1.09) and trend is flat, a bounce is possible in a defensive sector."
+      "setup": "opening range breakout"
     },
     {
       "symbol": "SAIC",
-      "direction": "long",
-      "conviction": 3,
+      "action": "BUY",
+      "qty": 20,
+      "reason": "Opening range breakout, above VWAP, positive momentum. Executive order specifically suggested adding SAIC. Conviction is moderate but fits the criteria.",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "SAIC is suggested by executive orders and is above VWAP with an OR breakout. However, RSI is overbought (77.2) and rvol is low (0.58), so conviction is limited without stronger momentum."
-    },
-    {
-      "symbol": "MRCY",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "MRCY is oversold with RSI at 25.2 and has an OR breakout above VWAP. But very low rvol (0.28) and flat trend suggest weak follow-through, so conviction is low."
-    },
-    {
-      "symbol": "LHX",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "VWAP bounce",
-      "reason": "LHX is above VWAP with a minor OR breakout and decent rvol (1.06), but RSI is approaching overbought (70.1) and m15 momentum is flat, making it a less attractive setup."
+      "setup": "opening range breakout"
     }
   ],
-  "experiment": "Testing the expansion of the 50% scale-out rule to all bracket trades with a 1R target, as suggested in strategy ideas. This will be applied to the CACI trade to lock in gains early and reduce exposure to late-day reversals.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "ranked_ideas": [
+    "LMT",
+    "KTOS",
+    "SAIC",
+    "AVAV",
+    "HEI"
+  ],
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }
