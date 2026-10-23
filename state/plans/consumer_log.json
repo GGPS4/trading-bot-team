@@ -342,5 +342,55 @@
       "SHORT TSLA x5 (~$1844.4)",
       "BUY MAR x3 (~$1178.07) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:44",
+    "trigger": "scheduled look",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "TSLA",
+        "action": "COVER",
+        "conviction": null,
+        "reason": "Price has reclaimed VWAP (+0.5%) and is moving up (+0.9% since last check) with high relative volume (2.61). The President's order to short TSLA only if it stays below VWAP for 15 minutes is no longer valid as it has broken above. Closing the short to avoid being stopped out or missing the upside momentum.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "GM",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "GM is down -3.1% on the day, trading below VWAP (-0.3%), and has broken down below the opening range. The 'news catalyst' setup is failing as the stock continues to drift lower with no momentum. Cutting losses to redeploy capital into stronger setups.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "ABNB",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "ABNB is trading near VWAP (-0.2%) with flat momentum and decent volume (rvol 1.51). It is one of the few stocks not in a clear breakdown. The President prioritizes Consumer sectors. This is a defensive long to meet the 75% investment rule while the market is in caution mode.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "CMG",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "CMG is oversold (RSI 25) and down -2.3% on the day. Despite the Mizuho PT cut, the stock is near its opening range low. In a risk-off environment, buying a beaten-down consumer name with oversold indicators offers a good risk/reward for a bounce. Low price allows for higher quantity within position limits.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "COVER TSLA",
+      "SELL GM",
+      "BUY ABNB blocked: conviction None is below the minimum 4",
+      "BUY CMG blocked: conviction None is below the minimum 4",
+      "BUY RCL blocked: conviction None is below the minimum 2",
+      "BUY DPZ blocked: conviction None is below the minimum 2",
+      "BUY F blocked: conviction None is below the minimum 2"
+    ]
   }
 ]
