@@ -516,5 +516,106 @@
       "BUY AVGO x2 (~$652.22) [deploy]",
       "BUY ANET x5 (~$873.65) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "12:06",
+    "trigger": "scheduled look",
+    "market_view": "Market is sliding with broad risk-off sentiment; only 30% of watched stocks are up. To meet the 75% invested requirement, we will rotate out of existing positions and deploy capital into high-conviction longs that meet RSI<70 and price above VWAP.",
+    "experiment": "Test a momentum-reversal exit: close position if 5-min momentum turns negative even if price still above stop.",
+    "decisions": [
+      {
+        "symbol": "AMD",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "Rotate capital to higher-conviction names; position up but market risk-off.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "ANET",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "Negative news about vulnerability and slight loss; exit.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "AVGO",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "Rotate to stronger momentum names.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "MSFT",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "Take profits after gain; reallocate.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "PANW",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "Lock in gains; rotate.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "MU",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Strong momentum, high volume (rvol 1.57), RSI 24.2 oversold, price above VWAP.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "CRM",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Positive news (DBS PT raise), RSI 64.7, price above VWAP, trend up.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "TXN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "RSI 36.1, price above VWAP, positive 15m momentum.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "AMAT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "RSI 5.1 extremely oversold, price above VWAP, potential bounce.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "ON",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "RSI 28.0, price above VWAP, flat trend but cheap.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL AMD",
+      "SELL ANET",
+      "SELL AVGO",
+      "SELL MSFT",
+      "SELL PANW",
+      "BUY MU x1 (~$890.99)",
+      "BUY CRM x3 (~$736.78)",
+      "BUY TXN x3 (~$855.5)",
+      "BUY AMAT x2 (~$766.56)",
+      "BUY ON x13 (~$944.45)"
+    ]
   }
 ]
