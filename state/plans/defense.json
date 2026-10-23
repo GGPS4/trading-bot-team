@@ -1,105 +1,80 @@
 {
   "date": "2026-10-23",
-  "time": "11:53",
-  "trigger": "must invest $18,991 more (75% rule)",
-  "market_view": "The market is cautious with defense stocks mixed; some like CACI and LMT have positive catalysts, while others like BAH face delays. We focus on high-conviction longs above VWAP to meet the 75% invested rule, using tight stops and 1R scale-out as per executive orders.",
+  "time": "12:29",
+  "trigger": "scheduled look",
+  "market_view": "The market is in a cautiously defensive regime with only 29% of defended stocks up today. Defense sector shows differentiated momentum: Lockheed Martin (LMT) and CACI are breaking above their VWAP ranges with strong intraday momentum and positive analyst coverage, creating prime long setups. Avanessa Health (AVAV) is also breaking its VWAP range with elevated volume. NOC and RTX are lagging behind, but the top three opportunities remain focused on LMT, CACI, and AVAV.",
   "decisions": [
     {
-      "symbol": "CACI",
-      "action": "BUY",
+      "symbol": "LMT",
+      "action": "SELL",
       "conviction": 5,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.015,
-      "setup": "news catalyst",
-      "reason": "Stifel upgraded CACI to Buy with raised price target, and stock is above VWAP with OR breakout and strong momentum."
+      "take_profit_pct": 0.1,
+      "setup": "opening range breakout"
+    },
+    {
+      "symbol": "CACI",
+      "action": "SELL",
+      "conviction": 5,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.1,
+      "setup": "news catalyst"
     },
     {
       "symbol": "AVAV",
-      "action": "BUY",
+      "action": "SELL",
       "conviction": 4,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.015,
-      "setup": "opening range breakout",
-      "reason": "Oversold RSI at 19.5, price above VWAP with OR breakout, and executive suggested adding; potential bounce despite lower rvol."
-    },
-    {
-      "symbol": "PLTR",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.015,
-      "setup": "news catalyst",
-      "reason": "Positive analyst comments on AI CapEx monetization, price above VWAP with OR breakout, and decent rvol."
-    },
-    {
-      "symbol": "SAIC",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.015,
-      "setup": "opening range breakout",
-      "reason": "Executive suggested adding, price above VWAP with OR breakout, though RSI is high at 77.2, it's not overbought."
-    },
-    {
-      "symbol": "LMT",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.015,
-      "setup": "news catalyst",
-      "reason": "Multiple analyst price target raises, price above VWAP with OR breakout, but RSI overbought at 82.4; included to meet invested rule."
+      "take_profit_pct": 0.1,
+      "setup": "opening range breakout"
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "HEI",
+      "symbol": "CACI",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 5,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.015,
-      "setup": "opening range breakout",
-      "reason": "Price above VWAP with OR breakout and decent rvol, but no strong news catalyst."
+      "take_profit_pct": 0.1,
+      "setup": "news catalyst"
     },
     {
-      "symbol": "NOC",
+      "symbol": "LMT",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 5,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.015,
-      "setup": "momentum",
-      "reason": "Positive sentiment from Lockheed CEO news, but low rvol and flat trend limit conviction."
+      "take_profit_pct": 0.1,
+      "setup": "opening range breakout"
     },
     {
-      "symbol": "LDOS",
+      "symbol": "AVAV",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 4,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.015,
-      "setup": "news catalyst",
-      "reason": "NATICA project news, price above VWAP with OR breakout, but low rvol and RSI near overbought."
+      "take_profit_pct": 0.1,
+      "setup": "opening range breakout"
     },
     {
-      "symbol": "KTOS",
+      "symbol": "LHX",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 4,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.015,
-      "setup": "mean reversion",
-      "reason": "Oversold RSI at 29.7, price above VWAP with OR breakout, but moderate rvol and no strong news."
-    },
-    {
-      "symbol": "MRCY",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.015,
-      "setup": "mean reversion",
-      "reason": "Oversold RSI at 25.2, price above VWAP with OR breakout, but very low rvol suggests weak momentum."
+      "take_profit_pct": 0.08,
+      "setup": "news catalyst"
     }
   ],
-  "experiment": "Expand the 50% scale-out rule to all bracket trades with a 1R target",
+  "experiment": "Expanding the 50% scale-out rule to all bracket trades with a 1R target",
   "watchlist_changes": {
     "add": [],
-    "remove": []
+    "remove": [
+      {
+        "symbol": "NOC",
+        "reason": "Weak performer with negative day move (-0.9%) and flat momentum; lower priority compared to stronger long setups"
+      },
+      {
+        "symbol": "RTX",
+        "reason": "Underperforming long position with significant negative day move (-1.8%); limited upside visibility"
+      }
+    ]
   }
 }

@@ -477,5 +477,49 @@
       "BUY SAIC x19 (~$2737.33)",
       "BUY LMT x4 (~$2386.6)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "12:29",
+    "trigger": "scheduled look",
+    "market_view": "The market is in a cautiously defensive regime with only 29% of defended stocks up today. Defense sector shows differentiated momentum: Lockheed Martin (LMT) and CACI are breaking above their VWAP ranges with strong intraday momentum and positive analyst coverage, creating prime long setups. Avanessa Health (AVAV) is also breaking its VWAP range with elevated volume. NOC and RTX are lagging behind, but the top three opportunities remain focused on LMT, CACI, and AVAV.",
+    "experiment": "Expanding the 50% scale-out rule to all bracket trades with a 1R target",
+    "decisions": [
+      {
+        "symbol": "LMT",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": null,
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "CACI",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": null,
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "AVAV",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": null,
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.1
+      }
+    ],
+    "results": [
+      "SELL LMT",
+      "SELL CACI",
+      "SELL AVAV",
+      "BUY CACI failed: POST /v2/orders -> 403: {\"code\":40310000,\"existing_order_id\":\"14a8b1c3-6606-43cc-9eb7-7f71237cd87c\",\"message\":\"potential wash trade detected. use complex orders\",\"reject_reason\":\"opposite side market/stop order exists\"}",
+      "BUY LMT x4 (~$2391.24) [deploy]",
+      "BUY AVAV failed: POST /v2/orders -> 403: {\"code\":40310000,\"existing_order_id\":\"7faee534-d75e-4a98-b0d7-fc111913793d\",\"message\":\"potential wash trade detected. use complex orders\",\"reject_reason\":\"opposite side market/stop order exists\"}",
+      "BUY LHX x11 (~$2772.11) [deploy]",
+      "WATCHLIST remove rejected NOC",
+      "WATCHLIST remove rejected RTX"
+    ]
   }
 ]
