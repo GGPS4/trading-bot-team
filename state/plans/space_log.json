@@ -360,5 +360,20 @@
       "BUY VSAT blocked: conviction None is below the minimum 3 (risk-off market)",
       "BUY FLY blocked: conviction None is below the minimum 3 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "09:34",
+    "trigger": "first look this run",
+    "market_view": "The market opens in a caution regime with SPY down 0.5% and VIXY rising 2.9%. Following executive instructions, we are respecting a 24-hour pause on new manual long entries and waiting for 30-minute VWAP confirmation before triggering short trades.",
+    "experiment": "Add a momentum filter for short entries: require m15 < -0.5% and m60 < -0.5% before taking the trade.",
+    "decisions": [],
+    "results": [
+      "SHORT ASTS x14 (~$543.06) [deploy]",
+      "SHORT BKSY x33 (~$550.44) [deploy]",
+      "SHORT BA x3 (~$557.82) [deploy]",
+      "SHORT RKLB x8 (~$409.84) [deploy]",
+      "BUY TDG x0.415786 (~$474.78) [deploy]"
+    ]
   }
 ]

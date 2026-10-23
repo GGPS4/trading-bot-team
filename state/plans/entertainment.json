@@ -1,44 +1,94 @@
 {
-  "date": "2026-10-22",
-  "time": "14:10",
-  "trigger": "must invest $6,576 more (75% rule)",
-  "market_view": "The market is in a sharp risk-off regime (SPY -1.4%, QQQ -2.9%), favoring shorts on weak names or strong momentum longs on earnings gappers. Spotify (SPOT) is the clear leader with a +10.7% gap on earnings, showing high relative volume and holding above VWAP, while Comcast (CMCSA) is fading despite earnings beat due to restructuring charges and job cuts.",
+  "date": "2026-10-23",
+  "time": "09:34",
+  "trigger": "first look this run",
+  "market_view": "The broader market is opening with caution (SPY -0.5%, VIXY +2.9%), requiring disciplined selective long entries on high-conviction setups. Streaming and music sector leaders like SPOT, DIS, SONY, and WMG demonstrate resilient medium-term momentum and positive analyst/catalyst backing.",
   "decisions": [
     {
       "symbol": "SPOT",
       "action": "BUY",
       "conviction": 4,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "earnings gap",
-      "reason": "Strong earnings catalyst with 306M subscribers and margin guidance. Trading well above VWAP with 2.98x relative volume. In a risk-off market, this is the strongest relative strength play. Buying half size due to market mood."
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Multiple Wall Street target increases (Guggenheim to $650, Citizens to $625) after Q3 outlook support and AI distribution partnerships."
     },
     {
-      "symbol": "IMAX",
-      "action": "SHORT",
-      "conviction": 3,
+      "symbol": "DIS",
+      "action": "BUY",
+      "conviction": 4,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.025,
-      "setup": "opening range breakdown",
-      "reason": "Breaking down below the opening range (53.06-53.27) in a risk-off market. Weak momentum (m15 -0.2%) and below VWAP. Shorting weakness is favored in this regime."
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "New Marvel Entertainment partnership catalyst along with steady trend above the 50-day moving average."
     },
     {
-      "symbol": "CMCSA",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "other",
-      "reason": "Position is underwater (-0.9%) and momentum has turned negative (m60 -0.7%). The thesis of 'opening range breakout' has failed as it is trading below VWAP and fading. Closing to free up capital for stronger setups like SPOT."
+      "symbol": "SONY",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Strong multi-week momentum (+14.0% 20d) trading cleanly above its 50-day moving average."
+    },
+    {
+      "symbol": "WMG",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Music industry strength driving a 16.2% 20-day gain with consistent uptrend structure."
     }
   ],
   "ranked_ideas": [
-    "SONY",
-    "BAM",
-    "DIS",
-    "WMG",
-    "NFLX"
+    {
+      "symbol": "FOXA",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Sustained uptrend above 50-day moving average (+6.9% 20d)."
+    },
+    {
+      "symbol": "ROKU",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Expanding original content distribution slate alongside Tubi partnership."
+    },
+    {
+      "symbol": "WBD",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Strong 20-day momentum (+9.6%) trading above the 50-day average."
+    },
+    {
+      "symbol": "LYV",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Live entertainment demand keeping price stable above 50-day MA."
+    },
+    {
+      "symbol": "EA",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "pullback in uptrend",
+      "reason": "Consolidating near 20-day gains with low relative volatility."
+    }
   ],
+  "experiment": "Introduce a VWAP-bias filter: go long only if price is above VWAP with positive 15-minute momentum, short only if below VWAP with negative momentum.",
   "watchlist_changes": {
     "add": [],
     "remove": []

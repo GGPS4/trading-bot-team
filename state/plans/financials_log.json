@@ -201,5 +201,61 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-23",
+    "time": "09:34",
+    "trigger": "first look this run",
+    "market_view": "Caution regime with SPY -0.5%, QQQ -0.4%, and VIXY +2.9%; only 5% of watched stocks are up. Market is sliding and no watchlist gappers are flashing. AXP reported before the open with a Q3 beat and raised FY2026 guidance, while GS and JPM also beat, but the risk-off tape warrants pickiness. Prefer long setups with RSI below 70 and positive momentum.",
+    "experiment": "Adding a rule to filter long entries by RSI < 70 and positive volume momentum during risk-off periods.",
+    "decisions": [
+      {
+        "symbol": "GS",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Q3 earnings beat and buyback confidence; RSI 45 not overbought; financials priority; risk-off smaller size.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "JPM",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Q3 earnings beat and asset management expansion; RSI 57; financials; clear catalyst.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "COF",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Capital One Discover integration progress; sentiment positive; RSI 63; financials.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "MS",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Financials momentum with positive daily move and RSI 40; risk-off favors improving internals.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "C",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Financials bounce with positive daily move and RSI 37; risk-off financials focus.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY GS x2 (~$1782.26)",
+      "BUY JPM x5 (~$1682.55)",
+      "BUY COF x9 (~$1830.24)",
+      "BUY MS x10 (~$1839.3)",
+      "BUY C x15 (~$1837.8)"
+    ]
   }
 ]

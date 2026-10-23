@@ -1,15 +1,59 @@
 {
-  "date": "2026-10-22",
-  "time": "14:08",
-  "trigger": "big news on ['IRDM']",
+  "date": "2026-10-23",
+  "time": "09:34",
+  "trigger": "first look this run",
+  "market_view": "The market opens in a caution regime with SPY down 0.5% and VIXY rising 2.9%. Following executive instructions, we are respecting a 24-hour pause on new manual long entries and waiting for 30-minute VWAP confirmation before triggering short trades.",
   "decisions": [],
   "ranked_ideas": [
-    "IRDM",
-    "BKSY",
-    "SPCX",
-    "TDG",
-    "GE"
+    {
+      "symbol": "ASTS",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "news catalyst",
+      "reason": "Shares face downside pressure from spectrum dispute news, class-action lawsuit, and severe 20-day weakness (-36.5%)."
+    },
+    {
+      "symbol": "BKSY",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "news catalyst",
+      "reason": "CEO insider sale of $337k shares signals potential internal concern amid persistent multi-week downtrend (-27.9%)."
+    },
+    {
+      "symbol": "BA",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Stock opening down 0.9% in a weak overall market regime, trading below 50-day moving average."
+    },
+    {
+      "symbol": "RKLB",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.025,
+      "take_profit_pct": 0.05,
+      "setup": "news catalyst",
+      "reason": "Neutron vehicle delays and stock pressure weigh on price despite successful Electron satellite deployment."
+    },
+    {
+      "symbol": "TDG",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "pullback in uptrend",
+      "reason": "Strongest relative performer in aerospace watchlist, trading above 50-day average with RSI 70.2 in defensive sector."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Add a momentum filter for short entries: require m15 < -0.5% and m60 < -0.5% before taking the trade.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }
