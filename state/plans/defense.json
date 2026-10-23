@@ -1,87 +1,131 @@
 {
   "date": "2026-10-23",
-  "time": "12:54",
-  "trigger": "must invest $8,297 more (75% rule)",
-  "market_view": "Market is in caution with SPY -0.2%, VIXY +2.0%, and only 30% of watched stocks up. Defense long setups above VWAP and opening-range breakouts are preferred, but position sizes are reduced in this risk-off mood. We have high-conviction defense names like AVAV and CACI breaking out, while PLTR is a space/AI drag to trim.",
+  "time": "13:34",
+  "trigger": "scheduled look",
+  "market_view": "The market is calm with SPY slightly down and QQQ up, indicating a neutral to slightly bullish environment. Defense stocks are mixed but several are showing strength, particularly AVAV, CACI, and LMT. The team needs to increase long exposure to meet the 75% invested requirement, so scaling up all five existing positions to their maximum allowed size is necessary.",
   "decisions": [
-    {
-      "symbol": "PLTR",
-      "action": "SELL",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "other",
-      "reason": "President instructed to sharply curtail Space and Entertainment activity; PLTR is stalled and underwater, so close long position."
-    },
     {
       "symbol": "AVAV",
       "action": "BUY",
-      "conviction": 4,
+      "conviction": 5,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "take_profit_pct": 0.025,
       "setup": "opening range breakout",
-      "reason": "Executive suggested; AVAV broke opening range, above VWAP, m15 +0.6, m60 +0.9, trend up; geopolitical tension provides catalyst."
+      "reason": "Price above VWAP with strong momentum (m15 +0.3%, m60 +2.1%), scaling up to max position size to meet 75% invested requirement. News: defense sector broadly strong with analyst upgrades."
     },
     {
       "symbol": "CACI",
       "action": "BUY",
       "conviction": 4,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "take_profit_pct": 0.025,
       "setup": "opening range breakout",
-      "reason": "Stifel upgrade to Buy and PT $925; CACI broke opening range, above VWAP, m15 +1.2, m60 +1.3, rvol 1.13; defense sector strength."
+      "reason": "Price above VWAP, momentum mixed but above OR, scaling up to max position size to meet 75% invested requirement. News: Stifel upgraded to Buy with target $925."
+    },
+    {
+      "symbol": "LHX",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "setup": "news catalyst",
+      "reason": "Price near entry, news catalyst (dividend), scaling up to max position size to meet 75% invested requirement."
+    },
+    {
+      "symbol": "LMT",
+      "action": "BUY",
+      "conviction": 5,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "setup": "opening range breakout",
+      "reason": "Price above VWAP with strong momentum (m15 +0.4%, m60 +1.1%), scaling up to max position size to meet 75% invested requirement. News: analyst upgrades and record backlog."
+    },
+    {
+      "symbol": "SAIC",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "setup": "opening range breakout",
+      "reason": "Price above VWAP with momentum (m15 -0.0%, m60 +0.9%), scaling up to max position size to meet 75% invested requirement."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "LDOS",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Leidos NATICA expansion; OR breakout and above VWAP, but low rvol."
-    },
-    {
       "symbol": "BAH",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 4,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "earnings gap",
-      "reason": "Raised FY2027 EPS guidance; reported before open, but intraday rebound above VWAP."
+      "take_profit_pct": 0.025,
+      "setup": "momentum",
+      "reason": "Strong momentum (m15 +0.8%, m60 +1.7%), above VWAP, high volume (rvol 2.35), news: raised guidance but fell on delays; however, price is up and trend is flat to up."
     },
     {
-      "symbol": "HEI",
+      "symbol": "PLTR",
       "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout and above VWAP; m15 +0.6, m60 +0.6, rvol 1.09, trend up."
+      "take_profit_pct": 0.025,
+      "setup": "VWAP bounce",
+      "reason": "Above VWAP, news about AI monetization gap suggesting higher earnings, momentum flat but stable, setup is breakout above OR."
     },
     {
-      "symbol": "KTOS",
+      "symbol": "HII",
       "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "take_profit_pct": 0.025,
       "setup": "opening range breakout",
-      "reason": "OR breakout and above VWAP; m15 +0.6, m60 +0.7, rvol 1.21, trend up, but RSI oversold/PT lowered."
+      "reason": "Momentum up (m15 +0.0%, m60 +0.7%), above VWAP, currently inside OR but could breakout, news: upcoming earnings before open."
     },
     {
       "symbol": "MRCY",
-      "direction": "long",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "breakdown below VWAP",
+      "reason": "Below VWAP (-0.1%), broke above OR but sellers pushing down, momentum down, low volume (rvol 0.44), trend down."
+    },
+    {
+      "symbol": "RTX",
+      "direction": "short",
       "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout and above VWAP; m15 +0.2, m60 +2.0, rvol 0.39, RSI oversold."
+      "setup": "trend down",
+      "reason": "Down trend, below VWAP? vwap +0.1% so slightly above, but momentum negative, could break below VWAP on bad news."
     }
   ],
-  "experiment": "Testing the 50% scale-out rule at 1R for all new trades to lock in gains and reduce exposure.",
+  "experiment": "",
   "watchlist_changes": {
-    "add": [],
-    "remove": []
+    "add": [
+      {
+        "symbol": "GPUS",
+        "reason": "Active in market discovery, likely defense, unusual move"
+      },
+      {
+        "symbol": "XXII",
+        "reason": "Active in market discovery, likely defense, unusual move"
+      },
+      {
+        "symbol": "SHFS",
+        "reason": "Active in market discovery, likely defense, unusual move"
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "TXT",
+        "reason": "Low volume (rvol 0.23), weak momentum, no catalyst"
+      },
+      {
+        "symbol": "HEI",
+        "reason": "Low volume (rvol 0.98), weak momentum, no catalyst"
+      },
+      {
+        "symbol": "MRCY",
+        "reason": "Low volume (rvol 0.44), weak momentum, below VWAP, no news"
+      }
+    ]
   }
 }
