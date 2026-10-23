@@ -234,6 +234,24 @@
     "findings": [
       {
         "symbol": "BMY",
+        "sentiment": 0.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Bristol Myers Squibb shares rose after announcing interim Phase 1 data for CAR T-cell therapy in cancer treatment and expanding AI partnerships with Tempus AI and Pathos AI.",
+        "source": "fiscal.ai",
+        "time": "14:10"
+      },
+      {
+        "symbol": "ABBV",
+        "sentiment": 0.0,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Goldman Sachs maintains a neutral stance on AbbVie after reporting their Q3 earnings.",
+        "source": "benzinga",
+        "time": "14:10"
+      },
+      {
+        "symbol": "BMY",
         "sentiment": 0.7,
         "importance": 3,
         "unconfirmed_rumor": false,
@@ -468,27 +486,13 @@
         "unconfirmed_rumor": false,
         "summary": "Citi maintains buy on Abbott but lowers price target to $122",
         "source": "benzinga"
-      },
-      {
-        "symbol": "TMO",
-        "sentiment": 0.6,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Rothschild & Co Redburn raises Thermo Fisher price target to $750",
-        "source": "fiscal.ai"
-      },
-      {
-        "symbol": "DHR",
-        "sentiment": -0.4,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Danaher shares fall despite upbeat Q3 earnings under new CEO, citing execution concerns",
-        "source": "benzinga"
       }
     ],
-    "urgent": [],
-    "overall": "After reviewing the provided news and SEC filings for the Healthcare sector, we found no significant news or filings affecting the stocks of the team's list. The team should continue monitoring these stocks for any updates.",
-    "items_read": 45
+    "urgent": [
+      "BMY"
+    ],
+    "overall": "The Healthcare sector has received positive news from Bristol Myers Squibb regarding its CAR T-cell therapy and AI partnerships. AbbVie's Q3 earnings report was neutral according to Goldman Sachs. Keep an eye on Bristol Myers Squibb shares for potential price movement.",
+    "items_read": 48
   },
   "social": {
     "findings": [],
@@ -497,169 +501,191 @@
     "items_read": 0
   },
   "technicals": {
-    "ABBV": {
-      "price": 284.92,
-      "change_1d": 0.0009,
-      "change_5d": 0.0056,
-      "change_20d": 0.0746,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 71.9,
-      "daily_volatility": 0.0136,
-      "avg_volume_20d": 219959
-    },
-    "ABT": {
-      "price": 102.53,
-      "change_1d": 0.0192,
-      "change_5d": -0.0208,
-      "change_20d": 0.0144,
-      "above_20d_avg": true,
-      "above_50d_avg": false,
-      "rsi_14": 64.0,
-      "daily_volatility": 0.0144,
-      "avg_volume_20d": 503962
-    },
-    "MRK": {
-      "price": 147.19,
-      "change_1d": -0.018,
-      "change_5d": 0.013,
-      "change_20d": -0.0057,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 54.1,
-      "daily_volatility": 0.0185,
-      "avg_volume_20d": 419801
-    },
-    "UNH": {
-      "price": 424.89,
-      "change_1d": 0.0193,
-      "change_5d": 0.0448,
-      "change_20d": 0.1325,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 80.2,
-      "daily_volatility": 0.0173,
-      "avg_volume_20d": 307591
-    },
-    "DHR": {
-      "price": 229.71,
-      "change_1d": -0.0183,
-      "change_5d": -0.0075,
-      "change_20d": 0.027,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 65.0,
-      "daily_volatility": 0.0208,
-      "avg_volume_20d": 317737
-    },
-    "MRNA": {
-      "price": 202.91,
-      "change_1d": -0.175,
-      "change_5d": -0.1418,
-      "change_20d": 0.0413,
-      "above_20d_avg": false,
-      "above_50d_avg": true,
-      "rsi_14": 53.4,
-      "daily_volatility": 0.0664,
-      "avg_volume_20d": 562048
-    },
-    "VRTX": {
-      "price": 535.2,
-      "change_1d": 0.0201,
-      "change_5d": 0.0516,
-      "change_20d": 0.024,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 64.1,
-      "daily_volatility": 0.0177,
-      "avg_volume_20d": 61332
-    },
-    "ISRG": {
-      "price": 443.87,
-      "change_1d": 0.0363,
-      "change_5d": 0.0373,
-      "change_20d": 0.111,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 78.3,
-      "daily_volatility": 0.0177,
-      "avg_volume_20d": 106879
-    },
-    "JNJ": {
-      "price": 267.72,
-      "change_1d": 0.0392,
-      "change_5d": 0.0569,
-      "change_20d": -0.0113,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 59.6,
-      "daily_volatility": 0.0201,
-      "avg_volume_20d": 315622
-    },
-    "MDT": {
-      "price": 96.58,
-      "change_1d": 0.0382,
-      "change_5d": 0.0116,
-      "change_20d": 0.0913,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 71.4,
-      "daily_volatility": 0.0183,
-      "avg_volume_20d": 1479936
-    },
-    "TMO": {
-      "price": 676.25,
-      "change_1d": -0.0258,
-      "change_5d": -0.0291,
-      "change_20d": -0.0034,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 57.1,
-      "daily_volatility": 0.0177,
-      "avg_volume_20d": 157692
-    },
-    "AMGN": {
-      "price": 447.57,
-      "change_1d": 0.0212,
-      "change_5d": 0.0312,
-      "change_20d": 0.102,
-      "above_20d_avg": true,
-      "above_50d_avg": true,
-      "rsi_14": 76.1,
-      "daily_volatility": 0.0174,
-      "avg_volume_20d": 115934
-    },
     "BMY": {
-      "price": 63.01,
-      "change_1d": 0.0303,
-      "change_5d": 0.0402,
-      "change_20d": 0.0245,
+      "price": 61.56,
+      "change_1d": -0.023,
+      "change_5d": 0.0289,
+      "change_20d": -0.0211,
       "above_20d_avg": true,
       "above_50d_avg": false,
-      "rsi_14": 55.4,
+      "rsi_14": 58.5,
       "daily_volatility": 0.0227,
       "avg_volume_20d": 913063
     },
-    "LLY": {
-      "price": 1306.85,
-      "change_1d": 0.0283,
-      "change_5d": 0.044,
-      "change_20d": 0.1042,
+    "ISRG": {
+      "price": 456.0,
+      "change_1d": 0.0273,
+      "change_5d": 0.0682,
+      "change_20d": 0.1256,
       "above_20d_avg": true,
       "above_50d_avg": true,
-      "rsi_14": 77.9,
+      "rsi_14": 77.7,
+      "daily_volatility": 0.0182,
+      "avg_volume_20d": 106879
+    },
+    "UNH": {
+      "price": 419.22,
+      "change_1d": -0.0134,
+      "change_5d": 0.0443,
+      "change_20d": 0.1129,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 73.4,
       "daily_volatility": 0.0178,
+      "avg_volume_20d": 307591
+    },
+    "MDT": {
+      "price": 96.06,
+      "change_1d": -0.0053,
+      "change_5d": 0.0137,
+      "change_20d": 0.0843,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 67.7,
+      "daily_volatility": 0.0184,
+      "avg_volume_20d": 1479936
+    },
+    "MRK": {
+      "price": 144.85,
+      "change_1d": -0.0159,
+      "change_5d": -0.0076,
+      "change_20d": -0.0263,
+      "above_20d_avg": false,
+      "above_50d_avg": false,
+      "rsi_14": 58.2,
+      "daily_volatility": 0.0188,
+      "avg_volume_20d": 419801
+    },
+    "TMO": {
+      "price": 670.87,
+      "change_1d": -0.008,
+      "change_5d": -0.0279,
+      "change_20d": -0.0056,
+      "above_20d_avg": false,
+      "above_50d_avg": true,
+      "rsi_14": 48.0,
+      "daily_volatility": 0.0177,
+      "avg_volume_20d": 157692
+    },
+    "VRTX": {
+      "price": 525.47,
+      "change_1d": -0.0182,
+      "change_5d": 0.0514,
+      "change_20d": -0.0015,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 59.4,
+      "daily_volatility": 0.0182,
+      "avg_volume_20d": 61332
+    },
+    "ABT": {
+      "price": 103.38,
+      "change_1d": 0.0083,
+      "change_5d": -0.0143,
+      "change_20d": 0.0209,
+      "above_20d_avg": true,
+      "above_50d_avg": false,
+      "rsi_14": 60.0,
+      "daily_volatility": 0.0144,
+      "avg_volume_20d": 503962
+    },
+    "AMGN": {
+      "price": 441.34,
+      "change_1d": -0.0139,
+      "change_5d": 0.0201,
+      "change_20d": 0.0643,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 71.0,
+      "daily_volatility": 0.0175,
+      "avg_volume_20d": 115934
+    },
+    "ARGX": {
+      "price": 877.33,
+      "change_1d": 0.0045,
+      "change_5d": 0.071,
+      "change_20d": -0.0857,
+      "above_20d_avg": false,
+      "above_50d_avg": false,
+      "rsi_14": 44.3,
+      "daily_volatility": 0.0334,
+      "avg_volume_20d": 37480
+    },
+    "JNJ": {
+      "price": 263.5,
+      "change_1d": -0.0158,
+      "change_5d": 0.0312,
+      "change_20d": -0.0284,
+      "above_20d_avg": true,
+      "above_50d_avg": false,
+      "rsi_14": 58.6,
+      "daily_volatility": 0.0204,
+      "avg_volume_20d": 315622
+    },
+    "MOH": {
+      "price": 211.99,
+      "change_1d": -0.02,
+      "change_5d": 0.024,
+      "change_20d": 0.1107,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 67.9,
+      "daily_volatility": 0.0233,
+      "avg_volume_20d": 52869
+    },
+    "MRNA": {
+      "price": 203.53,
+      "change_1d": 0.0031,
+      "change_5d": -0.0644,
+      "change_20d": 0.0236,
+      "above_20d_avg": false,
+      "above_50d_avg": true,
+      "rsi_14": 50.1,
+      "daily_volatility": 0.0663,
+      "avg_volume_20d": 562048
+    },
+    "ABBV": {
+      "price": 286.38,
+      "change_1d": 0.0051,
+      "change_5d": 0.0032,
+      "change_20d": 0.0836,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 71.1,
+      "daily_volatility": 0.0135,
+      "avg_volume_20d": 219959
+    },
+    "DHR": {
+      "price": 227.85,
+      "change_1d": -0.0081,
+      "change_5d": -0.005,
+      "change_20d": 0.0146,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 57.1,
+      "daily_volatility": 0.0209,
+      "avg_volume_20d": 317737
+    },
+    "LLY": {
+      "price": 1269.72,
+      "change_1d": -0.0284,
+      "change_5d": 0.0099,
+      "change_20d": 0.0724,
+      "above_20d_avg": true,
+      "above_50d_avg": true,
+      "rsi_14": 69.1,
+      "daily_volatility": 0.0192,
       "avg_volume_20d": 100820
     },
     "REGN": {
-      "price": 819.45,
-      "change_1d": 0.0171,
-      "change_5d": 0.029,
-      "change_20d": 0.0297,
+      "price": 807.33,
+      "change_1d": -0.0148,
+      "change_5d": 0.0203,
+      "change_20d": 0.0251,
       "above_20d_avg": true,
       "above_50d_avg": true,
-      "rsi_14": 76.1,
-      "daily_volatility": 0.0195,
+      "rsi_14": 74.7,
+      "daily_volatility": 0.0197,
       "avg_volume_20d": 40313
     }
   },
@@ -699,135 +725,151 @@
   },
   "intraday": {
     "LLY": {
-      "price": 1275.51,
-      "change_today": -0.024,
-      "from_open": -0.0198,
+      "price": 1268.76,
+      "change_today": -0.0291,
+      "from_open": -0.025,
       "day_high": 1305.96,
-      "day_low": 1274.02,
-      "since_last_look": 0.0002
+      "day_low": 1267.48,
+      "since_last_look": -0.0008
     },
     "UNH": {
-      "price": 420.85,
-      "change_today": -0.0095,
-      "from_open": -0.0081,
+      "price": 417.89,
+      "change_today": -0.0165,
+      "from_open": -0.0151,
       "day_high": 424.92,
-      "day_low": 420.65,
-      "since_last_look": -0.005
+      "day_low": 417.945,
+      "since_last_look": -0.0036
     },
     "JNJ": {
-      "price": 262.82,
-      "change_today": -0.0183,
-      "from_open": -0.011,
+      "price": 263.36,
+      "change_today": -0.0163,
+      "from_open": -0.009,
       "day_high": 265.93,
       "day_low": 262.42,
       "since_last_look": -0.0003
     },
     "ABBV": {
-      "price": 285.84,
-      "change_today": 0.0032,
-      "from_open": 0.0047,
-      "day_high": 286.01,
+      "price": 286.24,
+      "change_today": 0.0046,
+      "from_open": 0.0061,
+      "day_high": 286.55,
       "day_low": 282.43,
-      "since_last_look": 0.0009
+      "since_last_look": -0.0001
     },
     "MRK": {
-      "price": 144.88,
-      "change_today": -0.0157,
-      "from_open": -0.001,
+      "price": 145.04,
+      "change_today": -0.0146,
+      "from_open": 0.0001,
       "day_high": 145.265,
       "day_low": 143.455,
-      "since_last_look": 0.003
+      "since_last_look": 0.0014
     },
     "TMO": {
-      "price": 669.71,
-      "change_today": -0.0097,
-      "from_open": -0.0067,
+      "price": 669.95,
+      "change_today": -0.0093,
+      "from_open": -0.0064,
       "day_high": 676.17,
       "day_low": 663.89,
-      "since_last_look": 0.002
-    },
-    "ABT": {
-      "price": 103.26,
-      "change_today": 0.0071,
-      "from_open": 0.0075,
-      "day_high": 103.7,
-      "day_low": 101.58,
-      "since_last_look": 0.0003
-    },
-    "AMGN": {
-      "price": 441.32,
-      "change_today": -0.014,
-      "from_open": -0.0056,
-      "day_high": 444.03,
-      "day_low": 440.245,
       "since_last_look": -0.0009
     },
+    "ABT": {
+      "price": 103.21,
+      "change_today": 0.0066,
+      "from_open": 0.007,
+      "day_high": 103.7,
+      "day_low": 101.58,
+      "since_last_look": -0.0016
+    },
+    "AMGN": {
+      "price": 440.84,
+      "change_today": -0.015,
+      "from_open": -0.0067,
+      "day_high": 444.03,
+      "day_low": 440.245,
+      "since_last_look": -0.0011
+    },
     "ISRG": {
-      "price": 456.6,
-      "change_today": 0.0287,
-      "from_open": 0.0261,
+      "price": 454.89,
+      "change_today": 0.0248,
+      "from_open": 0.0222,
       "day_high": 458.385,
       "day_low": 442.91,
-      "since_last_look": -0.0029
+      "since_last_look": -0.0021
     },
     "BMY": {
       "price": 61.52,
-      "change_today": -0.0237,
-      "from_open": -0.0189,
+      "change_today": -0.0236,
+      "from_open": -0.0187,
       "day_high": 62.805,
       "day_low": 61.32,
-      "since_last_look": -0.0031
+      "since_last_look": -0.0008
     },
     "VRTX": {
-      "price": 525.9,
-      "change_today": -0.0174,
-      "from_open": -0.0114,
+      "price": 524.28,
+      "change_today": -0.0204,
+      "from_open": -0.0144,
       "day_high": 531.95,
       "day_low": 522.92,
-      "since_last_look": -0.002
+      "since_last_look": -0.0023
     },
     "REGN": {
-      "price": 806.09,
-      "change_today": -0.0163,
-      "from_open": -0.0126,
+      "price": 805.51,
+      "change_today": -0.017,
+      "from_open": -0.0133,
       "day_high": 816.38,
       "day_low": 801.9,
-      "since_last_look": -0.0034
+      "since_last_look": -0.0023
     },
     "MDT": {
-      "price": 95.85,
-      "change_today": -0.0076,
-      "from_open": -0.0009,
+      "price": 95.98,
+      "change_today": -0.0062,
+      "from_open": 0.0004,
       "day_high": 96.845,
       "day_low": 95.45,
-      "since_last_look": -0.0014
+      "since_last_look": -0.0008
     },
     "DHR": {
-      "price": 226.93,
-      "change_today": -0.0121,
-      "from_open": -0.005,
+      "price": 228.06,
+      "change_today": -0.0072,
+      "from_open": -0.0,
       "day_high": 228.495,
       "day_low": 225.61,
-      "since_last_look": 0.0009
+      "since_last_look": 0.0022
     },
     "MRNA": {
-      "price": 203.51,
-      "change_today": 0.003,
-      "from_open": 0.033,
+      "price": 202.66,
+      "change_today": -0.0012,
+      "from_open": 0.0287,
       "day_high": 206.96,
       "day_low": 183.12,
-      "since_last_look": -0.0002
+      "since_last_look": -0.0045
+    },
+    "ARGX": {
+      "price": 877.33,
+      "change_today": 0.0045,
+      "from_open": 0.0015,
+      "day_high": 886.5,
+      "day_low": 866.68,
+      "since_last_look": null
+    },
+    "MOH": {
+      "price": 211.7,
+      "change_today": -0.0214,
+      "from_open": -0.0153,
+      "day_high": 215,
+      "day_low": 206.74,
+      "since_last_look": null
     }
   },
   "discovery": {
     "top_gainers": [
       {
         "symbol": "BGLWW",
-        "chg": 795
+        "chg": 800
       },
       {
         "symbol": "AIOK",
-        "chg": 184
+        "chg": 203.76
       },
       {
         "symbol": "GCLWW",
@@ -835,29 +877,33 @@
       },
       {
         "symbol": "BOLT",
-        "chg": 64.08
+        "chg": 60.46
       },
       {
         "symbol": "CLRO",
-        "chg": 58.85
+        "chg": 58.33
+      },
+      {
+        "symbol": "MYND",
+        "chg": 49.88
       },
       {
         "symbol": "EONR.WS",
         "chg": 45.35
       },
       {
-        "symbol": "MYND",
+        "symbol": "HTCO",
         "chg": 44.78
-      },
-      {
-        "symbol": "GPUS",
-        "chg": 43.81
       }
     ],
     "top_losers": [
       {
+        "symbol": "BIAFW",
+        "chg": -59.94
+      },
+      {
         "symbol": "AARD",
-        "chg": -57.22
+        "chg": -57.34
       },
       {
         "symbol": "HUBCZ",
@@ -865,27 +911,23 @@
       },
       {
         "symbol": "SHFS",
-        "chg": -55.96
+        "chg": -55.38
       },
       {
         "symbol": "KCAI",
         "chg": -53.21
       },
       {
-        "symbol": "DAVI",
-        "chg": -49.79
+        "symbol": "BEATW",
+        "chg": -50.94
       },
       {
-        "symbol": "BIAFW",
-        "chg": -47.43
+        "symbol": "DAVI",
+        "chg": -48.58
       },
       {
         "symbol": "LNAI",
-        "chg": -46.81
-      },
-      {
-        "symbol": "FGL",
-        "chg": -41.82
+        "chg": -44.68
       }
     ],
     "most_active": [
@@ -894,23 +936,23 @@
       "SHFS",
       "LUCD",
       "NVD",
-      "RIME",
       "SOXL",
+      "RIME",
       "MSTZ",
       "NOK",
-      "MYND"
+      "TSLG"
     ],
     "headlines": [
-      "SPOT: Oppenheimer Maintains Outperform on Spotify Technology, Raises Price Target to $650",
-      "SHOP: Oppenheimer Maintains Outperform on Shopify, Raises Price Target to $205",
-      "RNG: Oppenheimer Maintains Outperform on RingCentral, Raises Price Target to $110",
-      "AAPL,MSFT,NVDA: S&P 500 Near Record Highs, But 60% of Stocks Are in a Bear Market. Is SPY Hiding a Bigger ",
-      "MPWR: Oppenheimer Maintains Outperform on Monolithic Power Systems, Lowers Price Target to $1500",
-      "DBGI,DXLG,FLL: 12 Consumer Discretionary Stocks Moving In Friday's Intraday Session",
-      "AARD,BOLT,ESLA: 12 Health Care Stocks Moving In Friday's Intraday Session",
-      "BURU,EPOW,FBYD: 12 Industrials Stocks Moving In Friday's Intraday Session",
-      "AIB,AIXI,BKYI: 12 Information Technology Stocks Moving In Friday's Intraday Session",
-      "BX: Oppenheimer Maintains Outperform on Blackstone, Raises Price Target to $168"
+      "MOH: Morgan Stanley Maintains Equal-Weight on Molina Healthcare, Raises Price Target to $192",
+      "LAZ: Morgan Stanley Maintains Underweight on Lazard, Lowers Price Target to $40",
+      "HXL: Morgan Stanley Maintains Equal-Weight on Hexcel, Lowers Price Target to $92",
+      "ARGX: Morgan Stanley Maintains Overweight on argenx, Raises Price Target to $1190",
+      "SPY,USO: 'U.S. Notifies Iraq of Iran Strike; PM Warns Armed Groups' - Channel 8",
+      "GM: QUICK SPARK: GM Stock Heads for Worst Week Since 2023 Despite $20 Billion Buyback",
+      "AMT,BE,BTC: Oil Tops $100 on Iran Fears, Energy ETF XLE Hits New Record: Stock Market Today",
+      "NVR: NVR Faces Double Squeeze As Homebuyers Retreat and Construction Costs Climb",
+      "CVX: Chevron Stock Moves Higher: What's Going On?",
+      "META: 'Meta's Muse AI To Counter China Models With Subscribers, Not Ads; Meta Plans To Offer Pai"
     ],
     "note": "stocks other teams already watch were left out"
   },
@@ -954,11 +996,11 @@
     "note": "Under 5 trades is too few to judge. Favor setups with PF (profit factor) above 1.2."
   },
   "mood": {
-    "time": "2026-10-23T13:15-04:00",
+    "time": "2026-10-23T13:40-04:00",
     "regime": "normal",
-    "spy": -0.0045,
-    "qqq": 0.0013,
-    "fear_vixy": 0.0311,
+    "spy": -0.0046,
+    "qqq": 0.0012,
+    "fear_vixy": 0.0299,
     "breadth": 0.32,
     "why": "no warning signs",
     "note": "Market is calm or rising. Trade your best setups as usual."
