@@ -1,105 +1,34 @@
 {
   "date": "2026-10-23",
-  "time": "09:47",
+  "time": "10:09",
   "trigger": "price moves in ['MRNA']",
-  "market_view": "The market is in a caution regime with healthcare stocks broadly down, only 16% of watched stocks up, and indices sliding. The VIX is rising, indicating risk-off sentiment, but some stocks like MRK show positive momentum above VWAP with strong catalysts. Despite the mood, I need to increase investment to meet the 75% rule, so I'll add to existing positions with conviction based on news catalysts.",
   "decisions": [
     {
-      "symbol": "MRK",
       "action": "BUY",
-      "conviction": 5,
+      "symbol": "ISRG",
+      "side": "long",
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "MRK has strong positive catalysts including FDA approval for pembrolizumab and Phase 3 melanoma trial results. Price is above VWAP with positive momentum (look +0.5%, vwap +0.4%, rvol 1.85), making it the best setup today."
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Strong opening range breakout above $452.16 with high relative volume (2.37) and positive 15m momentum. Price is above VWAP. Meets executive criteria for confirmed catalyst and price above VWAP."
     },
     {
-      "symbol": "ABT",
       "action": "BUY",
-      "conviction": 4,
+      "symbol": "MRNA",
+      "side": "long",
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Abbott's news on 30% sensitivity boost for Oncodetect test is a strong catalyst (importance 4). Although price is below VWAP, the catalyst may drive a reversal, and adding helps meet investment requirements."
-    },
-    {
-      "symbol": "JNJ",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "JNJ has positive catalysts including UK approval for oral psoriasis treatment and EU approval for TECVAYLI. News importance 4 supports conviction, despite price being below VWAP."
-    },
-    {
-      "symbol": "BMY",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "BMY's multiyear deal with Tempus AI and positive Phase 3 data for izalontamab provide strong catalysts (importance 4). Price below VWAP, but catalyst justifies adding for potential upside."
-    },
-    {
-      "symbol": "AMGN",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Amgen has a price target raise from Oppenheimer to $480, which is positive (importance 3). Although news importance is lower, overall healthcare sentiment supports conviction 4 for adding to meet investment rules."
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Strong intraday momentum with +2.1% move since last check and price significantly above VWAP (+3.8%). High relative volume (3.28) supports the move. Meets executive criteria for price above VWAP."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "TMO",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "TMO is above VWAP (vwap +0.7%) with positive look (+0.9%) and rvol 1.23, but lacks a specific catalyst, so conviction is limited to 3."
-    },
-    {
-      "symbol": "DHR",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "DHR has positive news from HSBC raising price target to $260. Price is at VWAP (vwap -0.0%), so not strongly above, but catalyst supports conviction 3."
-    },
-    {
-      "symbol": "MRNA",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "other",
-      "reason": "MRNA has strong price above VWAP (vwap +3.7%) and high volume (rvol 4.12), but negative catalyst from ESMO data leak reduces long conviction to 2. Consider short if risk-off."
-    },
-    {
-      "symbol": "ABBV",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "pullback in uptrend",
-      "reason": "ABBV is at VWAP (vwap +0.0%) with flat trend and no major catalyst. RSI overbought at 71.9, so conviction is low at 2 for a long."
-    },
-    {
-      "symbol": "ISRG",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "ISRG has positive news from Rothschild raising PT to $560, but price is below VWAP (vwap -0.1%) and RSI overbought at 78.3, limiting conviction to 2."
-    }
+    "TMO",
+    "ABBV",
+    "DHR",
+    "UNH",
+    "LLY"
   ],
-  "experiment": "Testing risk-off filter: will avoid new long entries when VIX > 20 or indices fall >1%, but for existing positions, adding may be allowed to meet investment rules. Today, market is risk-off, but I'm adding to existing positions due to catalysts.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

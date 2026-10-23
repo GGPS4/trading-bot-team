@@ -445,5 +445,34 @@
       "BUY BMY blocked: already holding this stock",
       "BUY AMGN blocked: already holding this stock"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:09",
+    "trigger": "price moves in ['MRNA']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "ISRG",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "Strong opening range breakout above $452.16 with high relative volume (2.37) and positive 15m momentum. Price is above VWAP. Meets executive criteria for confirmed catalyst and price above VWAP.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "MRNA",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "Strong intraday momentum with +2.1% move since last check and price significantly above VWAP (+3.8%). High relative volume (3.28) supports the move. Meets executive criteria for price above VWAP.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY ISRG blocked: team already has the maximum number of positions",
+      "BUY MRNA blocked: team already has the maximum number of positions"
+    ]
   }
 ]
