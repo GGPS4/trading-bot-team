@@ -1,49 +1,64 @@
 {
   "date": "2026-10-23",
-  "time": "09:47",
-  "trigger": "price moves in ['CRM']",
+  "time": "10:00",
+  "trigger": "must invest $4,224 more (75% rule)",
   "decisions": [
     {
+      "symbol": "AMAT",
       "action": "COVER",
-      "symbol": "ANET",
-      "reason": "Short is losing money (-1.76%) and price is above VWAP. The CVE news is a negative catalyst, but the stock is showing relative strength and breaking out above the opening range high. In a risk-off market, shorts on strong stocks are dangerous. Closing to free up capital for better setups."
+      "reason": "Short is underwater (-0.53%) and stock is consolidating below VWAP. Market is sliding, but AMAT has extreme oversold RSI (5.1) and high volume (rvol 1.84), suggesting a bounce is imminent. Closing to free up capital for stronger setups.",
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0
     },
     {
-      "action": "SELL",
-      "symbol": "AAPL",
-      "reason": "Long position is underwater (-0.62%) and trading below VWAP. RSI is overbought (71.8) and the stock is near the top of the opening range. The market mood is caution/risk-off, and AAPL lacks strong intraday momentum. Closing to reduce risk and free up capital."
-    },
-    {
-      "action": "BUY",
-      "symbol": "TXN",
-      "setup": "momentum",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "TXN is up +1.7% on the day with strong volume (rvol 3.25) and is trading above VWAP. It has a clean setup with RSI at 36.1 (not overbought) and is part of the broader tech strength. The market is risk-off, but TXN is showing relative strength and momentum. Buying for intraday continuation."
-    },
-    {
-      "action": "BUY",
-      "symbol": "MU",
-      "setup": "momentum",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "MU is up +2.6% on the day with very high volume (rvol 3.15) and is trading above VWAP. It is in a strong uptrend (5d -8.1% but daily move +2.9% suggests a bounce) and has a clear momentum setup. RSI is low (24.2), indicating room for further upside. Buying for intraday momentum."
-    },
-    {
-      "action": "BUY",
-      "symbol": "AMD",
-      "setup": "VWAP bounce",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "AMD is up +1.2% on the day and is trading slightly above VWAP. It has a strong volume profile (rvol 2.1) and is in a recovery phase (5d -9.6%, 20d -19.2%). The stock is showing signs of a VWAP bounce with positive momentum. Buying for intraday bounce continuation."
+      "symbol": "AVGO",
+      "action": "COVER",
+      "reason": "Short is underwater (-1.0%) and stock has broken out above the opening range high ($325.27) with positive momentum (m15 +0.5%). The breakout invalidates the short thesis. Closing to avoid further losses.",
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0
     }
   ],
   "ranked_ideas": [
-    "NVDA",
-    "PANW",
-    "ON",
-    "MSFT",
-    "CRM"
+    {
+      "symbol": "MU",
+      "setup": "opening range breakout",
+      "conviction": 5,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Strong breakout above opening range high ($885.23) with high relative volume (2.63) and price well above VWAP (+1.4%). Trend is up. Fits the 'price above VWAP' rule."
+    },
+    {
+      "symbol": "PANW",
+      "setup": "momentum",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Trading above VWAP (+1.2%) with strong 15m momentum (+1.4%) and positive daily trend. RSI is 35.1 (not overbought). Good candidate for intraday momentum."
+    },
+    {
+      "symbol": "MSFT",
+      "setup": "VWAP bounce",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Price is above VWAP (+0.5%) and showing upward momentum (m15 +0.7%). RSI 52.6 is neutral. Upcoming earnings buzz provides a catalyst, but we are trading the current strength."
+    },
+    {
+      "symbol": "NVDA",
+      "setup": "VWAP bounce",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Price is above VWAP (+0.7%) and near the top of its opening range. However, negative news sentiment (China market concerns) makes this a lower conviction play. Only buy if it holds above VWAP."
+    },
+    {
+      "symbol": "TXN",
+      "setup": "pullback in uptrend",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Price is at VWAP (0.0%) after a strong open (+2.3%). High volume (rvol 2.36) suggests institutional interest. RSI 36.1 is not overbought. Watch for a bounce off VWAP."
+    }
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

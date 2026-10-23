@@ -356,5 +356,37 @@
       "SHORT AVGO x3 (~$967.41) [deploy]",
       "BUY AAPL x2 (~$698.16) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:00",
+    "trigger": "must invest $4,224 more (75% rule)",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "AMAT",
+        "action": "COVER",
+        "conviction": null,
+        "reason": "Short is underwater (-0.53%) and stock is consolidating below VWAP. Market is sliding, but AMAT has extreme oversold RSI (5.1) and high volume (rvol 1.84), suggesting a bounce is imminent. Closing to free up capital for stronger setups.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "AVGO",
+        "action": "COVER",
+        "conviction": null,
+        "reason": "Short is underwater (-1.0%) and stock has broken out above the opening range high ($325.27) with positive momentum (m15 +0.5%). The breakout invalidates the short thesis. Closing to avoid further losses.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      }
+    ],
+    "results": [
+      "COVER AMAT failed: DELETE /v2/positions/AMAT -> 403: {\"available\":\"0\",\"code\":40310000,\"existing_qty\":\"3\",\"held_for_orders\":\"3\",\"message\":\"insufficient qty available for order (requested: 3, available: 0)\",\"symbol\":\"AMAT\"}",
+      "COVER AVGO failed: DELETE /v2/positions/AVGO -> 403: {\"available\":\"0\",\"code\":40310000,\"existing_qty\":\"3\",\"held_for_orders\":\"3\",\"message\":\"insufficient qty available for order (requested: 3, available: 0)\",\"symbol\":\"AVGO\"}",
+      "BUY MU x1 (~$885.39) [deploy]",
+      "BUY PANW x2 (~$722.82) [deploy]",
+      "BUY MSFT x1 (~$521.03) [deploy]"
+    ]
   }
 ]
