@@ -759,5 +759,52 @@
     "results": [
       "BUY MRNA x4 (~$819.6) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "12:58",
+    "trigger": "scheduled look",
+    "market_view": "Market is calm to slightly higher, with SPY -0.3%, QQQ +0.3%, and VIXY +2.5%. Healthcare is mixed, with LLY and BMY breaking down while ISRG and ABBV showed intraday strength. News catalysts were largely absorbed, and we are into the last hour before close.",
+    "experiment": "executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops of at least 2%",
+    "decisions": [
+      {
+        "symbol": "MRK",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Closing losing long; stop was -1.9% vs ATR-based minimum 2%, and price lacked above-VWAP breakout confirmation.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "MRNA",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Closing long with fading momentum after OR breakout; m15 -1.2%, price still above VWAP but losing -1.09%.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "ABBV",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "OR breakout above VWAP with intraday uptrend; stop at 2% ATR-based, first target 3%.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "VRTX",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Above VWAP and in uptrend, but weak rvol; stop at 2%, first target 3%.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL MRK",
+      "SELL MRNA",
+      "BUY ABBV x4 (~$1142.28)",
+      "BUY VRTX x2 (~$1053.92)"
+    ]
   }
 ]

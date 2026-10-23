@@ -451,5 +451,36 @@
       "BUY FOXA x14 (~$939.96) [deploy]",
       "BUY ROKU x5 (~$795.07) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "12:58",
+    "trigger": "scheduled look",
+    "market_view": "Market is calm and slightly rising, with SPY -0.2%, QQQ +0.4%, VIXY +2.0%, and 32% of watched stocks up. No immediate macro catalysts; SPOT had analyst news but is breaking down and below VWAP. Entertainment names are mostly lower or flat, so I am focusing on relative strength and VWAP.",
+    "experiment": "Introduce a VWAP-bias filter: go long only if price is above VWAP with positive 15-minute momentum, short only if below VWAP with negative momentum.",
+    "decisions": [
+      {
+        "symbol": "BAM",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Stalled momentum long, inside opening range, flat P&L, low volume; cut failed setup.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "WBD",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "WBD in strong uptrend, daily move +2.4%, above 50-day, but overbought; momentum continuation attempt.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL BAM",
+      "BUY WBD failed: POST /v2/orders -> 422: {\"code\":40010001,\"message\":\"asset WBD is not active\"}",
+      "BUY TTWO x6 (~$1244.34) [deploy]",
+      "WATCHLIST remove rejected BAM"
+    ]
   }
 ]

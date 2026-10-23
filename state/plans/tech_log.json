@@ -617,5 +617,53 @@
       "BUY AMAT x2 (~$766.56)",
       "BUY ON x13 (~$944.45)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "12:58",
+    "trigger": "big news on ['NVDA']",
+    "market_view": "Market is calm and slightly mixed; SPY -0.3%, QQQ +0.3%, VIXY +2.5%. Sector performance is mixed, with big tech earnings beats but NVDA negative sentiment. Best day-trading longs are above VWAP with opening-range breakouts or strong momentum, while weak breakdowns are being avoided.",
+    "experiment": "Testing VIX-based risk-off rule: skip new trades when VIX > 20 or market breadth negative; also momentum-reversal exit if 5-min momentum turns negative even if price is above stop.",
+    "decisions": [
+      {
+        "symbol": "AMAT",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Weak follow-through after mean reversion long; price near stop, below VWAP, no fresh catalyst, and longer trend negative.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "ON",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Failed VWAP bounce; below VWAP, momentum negative, and stop proximity makes it vulnerable.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "PANW",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "OR breakout 351.53-362.23, price above, above VWAP, rvol 1.3, day +6.2, strong momentum.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "NOW",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Bullish analyst PT raise, above VWAP, rvol 1.08, trend up, and momentum positive.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL AMAT",
+      "SELL ON",
+      "BUY PANW x3 (~$1130.95)",
+      "BUY NOW x8 (~$1258.4)",
+      "WATCHLIST remove rejected AMD"
+    ]
   }
 ]

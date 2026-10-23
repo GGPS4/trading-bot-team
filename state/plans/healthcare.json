@@ -1,57 +1,94 @@
 {
   "date": "2026-10-23",
-  "time": "12:19",
-  "trigger": "must invest $2,810 more (75% rule)",
-  "market_view": "The market is sliding with caution, only 29% of watched stocks are up; SPY -0.2%, QQQ +0.4%, VIXY +1.6%. We must increase long exposure to at least 75% of the budget while respecting risk limits.",
-  "decisions": [],
-  "ranked_ideas": [
+  "time": "12:58",
+  "trigger": "scheduled look",
+  "market_view": "Market is calm to slightly higher, with SPY -0.3%, QQQ +0.3%, and VIXY +2.5%. Healthcare is mixed, with LLY and BMY breaking down while ISRG and ABBV showed intraday strength. News catalysts were largely absorbed, and we are into the last hour before close.",
+  "decisions": [
+    {
+      "symbol": "MRK",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "news catalyst",
+      "reason": "Closing losing long; stop was -1.9% vs ATR-based minimum 2%, and price lacked above-VWAP breakout confirmation."
+    },
     {
       "symbol": "MRNA",
-      "direction": "long",
-      "conviction": 5,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
       "setup": "news catalyst",
-      "reason": "Phase 3 results with Merck show 42% reduction in death or recurrence risk; price broke above opening range with rvol 1.54 and is above VWAP."
+      "reason": "Closing long with fading momentum after OR breakout; m15 -1.2%, price still above VWAP but losing -1.09%."
     },
     {
       "symbol": "ABBV",
-      "direction": "long",
+      "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.015,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "ABBV broke above its opening range and is trading above VWAP, though volume is modest."
+      "reason": "OR breakout above VWAP with intraday uptrend; stop at 2% ATR-based, first target 3%."
     },
+    {
+      "symbol": "VRTX",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Above VWAP and in uptrend, but weak rvol; stop at 2%, first target 3%."
+    }
+  ],
+  "ranked_ideas": [
     {
       "symbol": "JNJ",
       "direction": "long",
       "conviction": 4,
-      "stop_loss_pct": 0.015,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
       "setup": "news catalyst",
-      "reason": "MHRA approval for Icotrokinra Hydrochloride to treat plaque psoriasis provides catalyst; price near lower bound of range, potential bounce."
+      "reason": "MHRA approval high sentiment, but price below VWAP; watch for reclaim."
     },
     {
-      "symbol": "VRTX",
+      "symbol": "TMO",
       "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Positive 60\u2011minute momentum (+0.6%) and price above VWAP suggest upside continuation."
+      "reason": "Trend up, but below VWAP; not high conviction."
+    },
+    {
+      "symbol": "AMGN",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "PT raise, but below VWAP; weak momentum."
     },
     {
       "symbol": "UNH",
       "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "VWAP bounce",
-      "reason": "Trading above VWAP with slight positive momentum; despite negative news, technicals support a short\u2011term bounce."
+      "setup": "other",
+      "reason": "Overbought and negative network news; avoid."
+    },
+    {
+      "symbol": "BMY",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Breakdown below OR on FDA trial news; short bias."
     }
   ],
-  "experiment": "Testing risk-off filter that blocks buys when VIX > 20 or major indices fall >1%; only trading high-conviction news catalysts",
+  "experiment": "executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops of at least 2%",
   "watchlist_changes": {
     "add": [],
     "remove": []
