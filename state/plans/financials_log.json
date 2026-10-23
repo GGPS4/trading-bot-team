@@ -432,5 +432,43 @@
       "BUY CME x6 (~$1838.1) [deploy]",
       "BUY SPGI x4 (~$1801.2) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "11:53",
+    "trigger": "big news on ['HOOD']",
+    "market_view": "The market is in a risk-off regime with the majority of financial services stocks declining. Several key stocks have experienced breakdowns below their opening ranges, indicating selling pressure, while overbought conditions in stocks like MA, V, and SPGI suggest potential pullbacks. The caution sentiment is heightened with only 29% of watched stocks up, and long positions are sized smaller to mitigate risk.",
+    "experiment": "Testing short momentum breakdown in risk-off tape after closing weak AXP, as per strategy idea to expand short plays focusing on high-volume breakdowns.",
+    "decisions": [
+      {
+        "symbol": "SPGI",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "SPGI is overbought with RSI at 92.3 and showing a downward trend below VWAP. Selling this position to cut losses and reallocate capital into stronger setups with better risk-reward.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "GS",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Adding to GS position due to positive news catalyst (share repurchase program) and price above VWAP. The stock is not overbought (RSI 45.5), and the trailing stop is active, making it a high-conviction long in a risk-off market.",
+        "stop_loss_pct": 0.0054,
+        "take_profit_pct": 0.0486
+      },
+      {
+        "symbol": "AXP",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "AXP shows a clear breakdown below the opening range with high relative volume (rvol 2.3), overbought RSI (84.0), and negative news sentiment (underperformance after earnings). This aligns with testing short momentum breakdowns in a risk-off tape.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL SPGI",
+      "BUY GS blocked: already holding this stock",
+      "SHORT AXP x8 (~$2505.68)"
+    ]
   }
 ]

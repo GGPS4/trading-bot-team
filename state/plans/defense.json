@@ -1,73 +1,105 @@
 {
   "date": "2026-10-23",
-  "time": "11:36",
-  "trigger": "scheduled look",
+  "time": "11:53",
+  "trigger": "must invest $18,991 more (75% rule)",
+  "market_view": "The market is cautious with defense stocks mixed; some like CACI and LMT have positive catalysts, while others like BAH face delays. We focus on high-conviction longs above VWAP to meet the 75% invested rule, using tight stops and 1R scale-out as per executive orders.",
   "decisions": [
     {
-      "symbol": "AVAV",
-      "action": "SELL",
-      "qty": 24,
-      "reason": "Position has hit first target area (121.14) and is trailing. Market mood is caution. Rotating capital to deploy into higher conviction setups to meet 75% invested rule."
-    },
-    {
       "symbol": "CACI",
-      "action": "SELL",
-      "qty": 4,
-      "reason": "Position is flat/slightly positive but momentum is stalling (m15 +0.1%). Rvol is decent but price is extended. Selling to free up capital for stronger momentum plays like LMT or KTOS."
+      "action": "BUY",
+      "conviction": 5,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.015,
+      "setup": "news catalyst",
+      "reason": "Stifel upgraded CACI to Buy with raised price target, and stock is above VWAP with OR breakout and strong momentum."
     },
     {
-      "symbol": "HEI",
-      "action": "SELL",
-      "qty": 9,
-      "reason": "Position is underperforming relative to other defense names. RSI is neutral but trend is flat. Selling to redeploy into LMT which has stronger news catalysts and breakout momentum."
+      "symbol": "AVAV",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.015,
+      "setup": "opening range breakout",
+      "reason": "Oversold RSI at 19.5, price above VWAP with OR breakout, and executive suggested adding; potential bounce despite lower rvol."
     },
     {
       "symbol": "PLTR",
-      "action": "SELL",
-      "qty": 14,
-      "reason": "Position is slightly negative. While news is positive, price action is weak (m15 +0.1%, rvol 1.05). In a caution regime, I prefer holding stocks with stronger immediate momentum or clear breakouts."
-    },
-    {
-      "symbol": "RTX",
-      "action": "SELL",
-      "qty": 14,
-      "reason": "Position is slightly negative. Trend is down, m15 is negative. No clear catalyst to hold. Selling to meet minimum investment threshold with higher conviction names."
-    },
-    {
-      "symbol": "LMT",
       "action": "BUY",
-      "qty": 10,
-      "reason": "Strong opening range breakout, above VWAP, high relative volume (1.72). Multiple analyst upgrades (RBC, Barclays, Goldman). CEO comments on record backlog. High conviction setup.",
+      "conviction": 4,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
-    },
-    {
-      "symbol": "KTOS",
-      "action": "BUY",
-      "qty": 100,
-      "reason": "Opening range breakout, above VWAP, positive 60m momentum. RSI is low (29.7) suggesting potential for a bounce, but the intraday breakout is the primary trigger. Good risk/reward.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "take_profit_pct": 0.015,
+      "setup": "news catalyst",
+      "reason": "Positive analyst comments on AI CapEx monetization, price above VWAP with OR breakout, and decent rvol."
     },
     {
       "symbol": "SAIC",
       "action": "BUY",
-      "qty": 20,
-      "reason": "Opening range breakout, above VWAP, positive momentum. Executive order specifically suggested adding SAIC. Conviction is moderate but fits the criteria.",
+      "conviction": 4,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "take_profit_pct": 0.015,
+      "setup": "opening range breakout",
+      "reason": "Executive suggested adding, price above VWAP with OR breakout, though RSI is high at 77.2, it's not overbought."
+    },
+    {
+      "symbol": "LMT",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.015,
+      "setup": "news catalyst",
+      "reason": "Multiple analyst price target raises, price above VWAP with OR breakout, but RSI overbought at 82.4; included to meet invested rule."
     }
   ],
   "ranked_ideas": [
-    "LMT",
-    "KTOS",
-    "SAIC",
-    "AVAV",
-    "HEI"
+    {
+      "symbol": "HEI",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.015,
+      "setup": "opening range breakout",
+      "reason": "Price above VWAP with OR breakout and decent rvol, but no strong news catalyst."
+    },
+    {
+      "symbol": "NOC",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.015,
+      "setup": "momentum",
+      "reason": "Positive sentiment from Lockheed CEO news, but low rvol and flat trend limit conviction."
+    },
+    {
+      "symbol": "LDOS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.015,
+      "setup": "news catalyst",
+      "reason": "NATICA project news, price above VWAP with OR breakout, but low rvol and RSI near overbought."
+    },
+    {
+      "symbol": "KTOS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.015,
+      "setup": "mean reversion",
+      "reason": "Oversold RSI at 29.7, price above VWAP with OR breakout, but moderate rvol and no strong news."
+    },
+    {
+      "symbol": "MRCY",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.015,
+      "setup": "mean reversion",
+      "reason": "Oversold RSI at 25.2, price above VWAP with OR breakout, but very low rvol suggests weak momentum."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Expand the 50% scale-out rule to all bracket trades with a 1R target",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }
