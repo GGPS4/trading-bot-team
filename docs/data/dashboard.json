@@ -1,10 +1,9 @@
 {
-  "updated": "2026-10-23T16:11-04:00",
+  "updated": "2026-10-23T17:19-04:00",
   "date": "2026-10-23",
   "mode": "paper",
   "health": {
     "issues": [
-      "42 problem(s) in the last hour, latest: healthcare: review failed: healthcare manager review: no AI provider could answer (gemini: gemini failed)",
       "9 orders rejected by the broker today (see blocked orders)"
     ]
   },
@@ -69,10 +68,10 @@
         "CACI",
         "SAIC",
         "HEI",
-        "MRCY",
-        "HII"
+        "HII",
+        "GD"
       ],
-      "budget": 25288.28,
+      "budget": 25299.97,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": 99.82,
@@ -106,7 +105,7 @@
         "SATS",
         "FLY"
       ],
-      "budget": 4214.71,
+      "budget": 4216.66,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -16.37,
@@ -140,7 +139,7 @@
         "TTWO",
         "BAM"
       ],
-      "budget": 8429.43,
+      "budget": 8433.32,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -73.72,
@@ -172,9 +171,9 @@
         "MU",
         "PANW",
         "ANET",
-        "ON"
+        "IBM"
       ],
-      "budget": 8429.43,
+      "budget": 8433.32,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -64.69,
@@ -208,7 +207,7 @@
         "DECK",
         "LKQ"
       ],
-      "budget": 12644.14,
+      "budget": 12649.99,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -126.77,
@@ -242,7 +241,7 @@
         "HOOD",
         "COIN"
       ],
-      "budget": 16858.85,
+      "budget": 16866.65,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -19.78,
@@ -274,11 +273,9 @@
         "REGN",
         "MDT",
         "DHR",
-        "MRNA",
-        "ARGX",
-        "MOH"
+        "MRNA"
       ],
-      "budget": 8429.43,
+      "budget": 8433.32,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -51.9,
@@ -3573,108 +3570,444 @@
       "reason": "Stifel upgrade to Buy and PT $925; CACI broke opening range, above VWAP, m15 +1.2, m60 +1.3, rvol 1.13; defense sector strength."
     }
   ],
-  "report": null,
+  "report": {
+    "headline": "Down 0.09% vs market, defense still leading gains",
+    "summary": "The portfolio slipped 0.09% today, a modest decline compared to the 0.86% market fall. Defense contributed a net gain of $99.82, while the other sectors posted losses totaling $-152.69, resulting in a net realized loss of $252.51. The short\u2011term performance remains 0.78% below the start, still outpacing the benchmark\u2019s 1.37% decline. The day\u2019s activity was dominated by defensive and technology shorting, with several stop\u2011losses triggered. The overall risk profile stayed within limits, though the high number of blocked orders in Space and Defense indicates tightening exposure limits.",
+    "best_trade": "Defense RTX long yielded $4.62, driven by a $350M Air Force contract and a price above VWAP.",
+    "worst_trade": "Defense SAIC long incurred a $73.56 loss after a stop\u2011loss hit, reflecting a sharp reversal in the stock\u2019s momentum.",
+    "rule_issues": [
+      "Blocked 22 space trades and 16 defense trades due to the 75% invested rule, highlighting tight exposure limits; several stop\u2011losses triggered close to risk thresholds, indicating potential risk\u2011limit breaches."
+    ],
+    "concerns": [
+      "High volume of blocked orders in Space and Defense suggests exposure limits are being approached; the net realized loss of $252.51 despite a positive equity balance warrants review of trade sizing."
+    ],
+    "patterns": "Over the past weeks the portfolio has trended slightly down but remains ahead of the benchmark; defense continues to be the primary driver of gains, while technology and entertainment have been net losers.",
+    "date": "2026-10-23"
+  },
   "president": {
-    "updated": "2026-10-22T16:20-04:00",
-    "strategy_notes": "Tomorrow all teams will trade only on high\u2011conviction setups with clear catalyst confirmation and price above VWAP. Keep the portfolio net\u2011long but enforce a minimum 75% invested rule while respecting tighter position limits. Prioritize sectors that showed profitability (Defense, Financials, Consumer) and sharply curtail Space and Entertainment activity until win rates improve.",
+    "updated": "2026-10-23T16:19-04:00",
+    "strategy_notes": "We are outperforming the benchmark in a down market, which validates our defensive bias, but the high volume of blocked orders indicates we are fighting our own risk constraints. Tomorrow, we shift to a 'quality over quantity' approach: if you cannot get a high-conviction entry within the 75% invested mandate, you wait rather than force a trade that gets rejected or hits a stop. We are implementing ATR-based stops across all teams to reduce premature stop-outs on volatile names. All teams must respect the 50-day moving average regime filter; if the market is below it, new entries are restricted to high-conviction defensive or mean-reversion setups only. We are pausing the Space team to prevent further capital erosion while we overhaul their strategy.",
     "team_focus": {
-      "defense": "Add AVAV, SAIC and HII as suggested; only open new buys with conviction >=4 and price > VWAP; use 50% scale\u2011out at 1R and tighten stop\u2011loss to 1.5% ATR.",
-      "space": "Implement a 24\u2011hour pause on new long entries; only short after 30\u2011minute VWAP confirmation and ATR\u2011based stops; aim to reduce trade count to \u22646 per day.",
-      "entertainment": "Limit trades to max 4 per day; only add stocks with strong short\u2011term momentum and conviction >=4; tighten stops to 2% and avoid earnings\u2011day entries.",
-      "tech": "Avoid new positions in high\u2011volatility earnings windows; require RSI<70 and price above VWAP; set stops at 1.5% ATR and reduce trade frequency to \u22648.",
-      "consumer": "Maintain current exposure; short TSLA only if price stays below VWAP for 15\u202fmin; long AMZN only after a bounce above VWAP; keep trade count \u22645.",
-      "financials": "Continue current strategy but enforce stop\u2011loss on all new trades; ensure trailing stops are active; limit new entries to high\u2011conviction (>=4) opportunities.",
-      "healthcare": "Cut new long entries; only trade after a confirmed catalyst and price above VWAP; use ATR\u2011based stops of at least 2%."
+      "defense": "Maintain current strategy; you are the portfolio's anchor. Focus on high-liquidity primes (LMT, RTX, GD) and avoid opening-bell entries on overextended small-caps. Enforce the 30-minute cooldown on re-entries to stop churning.",
+      "space": "TRADING PAUSED. Your 22.6% win rate and negative PnL are unsustainable. Do not place any new orders tomorrow. The manager must submit a strategy overhaul plan focusing on liquidity and entry timing before capital is redeployed.",
+      "entertainment": "Stop forcing low-conviction trades to meet allocation targets. If a stock breaks down, do not re-enter. Require RSI > 30 for shorts and positive volume expansion for longs. Focus on high-liquidity names like DIS and NFLX.",
+      "tech": "Implement the RSI floor filter (>30) for all short trades immediately. Do not short deeply oversold stocks (RSI < 25). Focus on relative strength leaders like MSFT and PANW for long setups.",
+      "consumer": "Reduce trade frequency. The 31.6% win rate suggests we are entering too many weak momentum trades. Wait for confirmed breakouts with high relative volume. Avoid premature exits on manager-sell signals unless the trend is clearly broken.",
+      "financials": "You are the most resilient team. Maintain current discipline. Focus on opening-range breakouts in high-momentum names like JPM and GS. Keep stops tight but use ATR to avoid noise.",
+      "healthcare": "Switch to ATR-based stops to handle news-catalyst volatility. Avoid fixed-dollar stops on names like LLY or UNH. Focus on high-conviction momentum plays and avoid low-liquidity small-caps."
     },
     "allocations": {
-      "defense": 0.3,
-      "space": 0.05,
-      "entertainment": 0.1,
-      "tech": 0.1,
-      "consumer": 0.15,
-      "financials": 0.2,
-      "healthcare": 0.1
+      "defense": 0.3063,
+      "space": 0.125,
+      "entertainment": 0.0438,
+      "tech": 0.1313,
+      "consumer": 0.0875,
+      "financials": 0.175,
+      "healthcare": 0.1313
     },
     "risk_overrides": {
       "max_position_pct": 0.15,
-      "max_daily_loss_pct": 0.02,
-      "min_conviction_to_buy": 4,
-      "cash_reserve_pct": 0.15
+      "max_trades_per_team_per_day": 15,
+      "min_conviction_to_buy": 4
     },
     "go_live_assessment": {
       "ready": false,
-      "reason": "Paper\u2011trading period is only 3 days (needs 60) and risk\u2011budget constraints are still causing high block rates; further validation required."
+      "reason": "Only 4 days of paper trading data available; need 60 days. Additionally, high order rejection rates indicate execution/risk rule conflicts that must be resolved before live capital is deployed."
     },
-    "decision_log": "Tightened position and daily loss limits, raised conviction threshold, and re\u2011allocated capital toward winning teams to protect equity after a broadly negative day."
+    "decision_log": "Paused Space team due to persistent losses and low win rate. Tightened risk limits (lower max position size, higher conviction threshold, lower trade cap) to reduce churn and forced low-quality entries. Reallocated capital from Space to Defense and Financials to strengthen the portfolio's core."
   },
   "executives": {
     "sector": {
-      "summary": "Today, all teams showed mixed results with some positive gains and negative losses. Team 'tech' experienced a loss of -64.69, while Team 'healthcare' had a loss of -51.9. Team 'financials' maintained a neutral position with no realized PnL. The team with no companies shared between teams is 'healthcare'. There were no escalations or coordination issues reported.",
+      "summary": "All four sector teams posted losses today, totaling approximately $263.14 in realized P&L, driven primarily by failed momentum trades in a risk-off environment. The Technology and Healthcare teams suffered the most significant drawdowns due to aggressive shorting of oversold assets and tight stop-losses on volatile names. Financials remained the most resilient, ending the day nearly flat with a 50% win rate, while Consumer Discretionary struggled with premature exits and weak sector sentiment. Immediate implementation of volatility-based stops and market regime filters is required to halt the bleeding in Tech and Healthcare.",
       "team_notes": {
-        "tech": "Team 'tech' reviewed their strategy and will adjust risk management.",
-        "healthcare": "Team 'healthcare' will conduct a risk assessment.",
-        "financials": "Team 'financials' will monitor market conditions for potential opportunities."
+        "tech": "Lost $64.69 today by shorting deeply oversold stocks like AMAT and MU, which triggered sharp counter-trend bounces.",
+        "consumer": "Lost $126.77 due to entering momentum trades in a risk-off tape and exiting prematurely on manager-sell signals.",
+        "financials": "Lost only $19.78, maintaining a 50% win rate, though issues with opening-range breakouts on low-momentum stocks need tightening.",
+        "healthcare": "Lost $51.90 with a 33% win rate, primarily due to fixed-dollar stops being too tight for the volatility of news-catalyst names."
       },
       "escalations": [
-        "Team 'tech' needs to adjust risk management"
+        "Approve the implementation of a market-regime filter that disables new entries for all teams when the S&P 500 is below its 50-day moving average.",
+        "Mandate the switch from fixed-dollar stops to ATR-based dynamic stops across all sector teams to reduce premature stop-outs.",
+        "Authorize the addition of an RSI floor filter (>30) for all short trades to prevent shorting into climax bottoms."
       ],
-      "coordination": "Team 'healthcare' reported no overlapping companies with other teams",
+      "coordination": "No overlapping companies between teams; no conflicts detected.",
       "title": "Executive of Sector Teams"
     },
     "special": {
-      "summary": "Today, Team 1's special defense team performed well with a win rate of 0.562, Team 2's special space & aerospace team faced losses, and Team 3's special entertainment team had a win rate of 0.28.",
+      "summary": "Today was a mixed bag with Team 1 (Defense) posting a strong +$99.82 gain, while Team 2 (Space) and Team 3 (Entertainment) incurred losses of -$16.37 and -$73.72 respectively. A significant operational issue arose as all three teams experienced high numbers of blocked orders (48 total), suggesting systemic execution or rule-compliance problems. Team 2's persistent low win rate (22.6%) and Team 3's tendency to force low-conviction trades highlight the need for stricter entry discipline.",
       "team_notes": {
-        "defense": "Team 1's special defense team performed well with a win rate of 0.562.",
-        "space_aerospace": "Team 2's special space & aerospace team faced losses.",
-        "entertainment": "Team 3's special entertainment team had a win rate of 0.28."
+        "defense": "Team 1 performed well with a 56.2% win rate, successfully scaling out at 1R, but needs to curb aggressive opening entries and intra-day churning that led to 16 blocked orders.",
+        "space": "Team 2 struggled with a 22.6% win rate and 22 blocked orders, primarily due to premature short entries and tight stops on low-liquidity names; immediate review of short-entry criteria is required.",
+        "entertainment": "Team 3 lost money by forcing low-conviction trades to meet allocation targets and re-entering broken-down stocks; a strict volume and conviction filter must be enforced to stop capital erosion."
       },
       "escalations": [
-        "No escalations"
+        "Investigate the root cause of 48 blocked orders across all teams today, as this volume suggests a potential bug in the order routing system or overly strict pre-trade checks that need President-level intervention.",
+        "Decide whether to pause trading for Team 2 (Space) given its 22.6% win rate and negative all-time PnL of -$545.96, or mandate a complete strategy overhaul before further capital is deployed."
       ],
-      "coordination": "No coordination issues reported.",
+      "coordination": "No overlapping companies were identified between teams.",
       "title": "Executive of Special Teams"
     }
   },
-  "reviews": {},
+  "reviews": {
+    "defense": {
+      "what_went_well": "The 50% scale-out at 1R worked exceptionally well on AVAV (+91.18), and high-conviction catalyst leaders like LMT and CACI generated solid gains when allowed to run.",
+      "what_went_wrong": "Aggressive entries at the opening bell in overextended stocks like SAIC (RSI 77) and LDOS resulted in immediate stop-outs, while excessive intra-day churning exhausted the daily trade quota and caused order rejections.",
+      "lessons": [
+        "Do not enter momentum longs in the first 15 minutes of the open if the stock's 5-minute RSI is above 75, as opening whipsaws frequently hit stops.",
+        "Do not re-enter a ticker more than twice in a single session to avoid churn, wash-trade rejections, and depleting the daily trade limit."
+      ],
+      "strategy_ideas": [
+        "Enforce a 30-minute cooldown period before re-entering any symbol exited due to stalled momentum.",
+        "Make the 50% scale-out at 1R standard across all opening range breakout setups to guarantee profits during choppy sessions."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "GD",
+            "reason": "Major prime defense contractor with steady contract flow and high liquidity to replace low-activity small-caps."
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "MRCY",
+            "reason": "Low relative volume and lack of near-term defense contract or earnings catalysts."
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-23T16:16-04:00",
+          "action": "removed",
+          "symbol": "MRCY",
+          "reason": "Low relative volume and lack of near-term defense contract or earnings catalysts.",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-23T16:16-04:00",
+          "action": "added",
+          "symbol": "GD",
+          "reason": "Major prime defense contractor with steady contract flow and high liquidity to replace low-activity small-caps.",
+          "by": "evening review"
+        }
+      ]
+    },
+    "space": {
+      "what_went_well": "Long trades in RKLB, RDW, and BA capitalized on opening range breakouts with strong momentum, yielding solid profits and partial target hits.",
+      "what_went_wrong": "Early short positions across ASTS, BKSY, BA, and RKLB all lost money as opening momentum reversed quickly, and TDG long stopped out immediately due to a tight stop in early market volatility.",
+      "lessons": [
+        "Avoid entering morning short trades on multi-day downtrends without waiting for confirmed VWAP rejection and negative intraday momentum across m15 and m60.",
+        "Widen initial stops slightly for high-priced or lower-liquidity stocks like TDG during the first 15 minutes to avoid getting prematurely stopped out on normal open spread."
+      ],
+      "strategy_ideas": [
+        "Test requiring a minimum 15-minute wait post-open before taking short setups to allow initial range expansion and VWAP levels to stabilize.",
+        "Automate trailing stops to activate immediately after taking partial profits on ORB long winners to lock in gains."
+      ],
+      "watchlist_changes": {
+        "add": [],
+        "remove": []
+      },
+      "watchlist": []
+    },
+    "entertainment": {
+      "what_went_well": "We successfully captured small gains on IMAX and SPOT using trailing stops and disciplined exit execution. We also cut several underperforming positions early to protect capital rather than letting them hit full stops.",
+      "what_went_wrong": "We repeatedly forced low-conviction trades (such as LYV, BAM, and FOXA) to satisfy capital deployment rules despite opening range breakdowns. Re-entering FOXA after an earlier breakdown and buying TTWO on weak relative volume led to unnecessary losses.",
+      "lessons": [
+        "Never re-enter a stock on the same day if it has already broken down below its opening range and VWAP.",
+        "Do not execute fallback trades with conviction below 4 just to satisfy cash allocation targets.",
+        "Require relative volume (rvol) of at least 1.0 before entering momentum trades in weak market regimes."
+      ],
+      "strategy_ideas": [
+        "Implement a mandatory 30-minute cooling-off period and VWAP reclaim check before re-entering any stock sold earlier in the day.",
+        "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries."
+      ],
+      "watchlist_changes": {
+        "add": [],
+        "remove": [
+          {
+            "symbol": "WBD",
+            "reason": "Asset is inactive on the trading platform, causing order rejection errors."
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-23T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "WBD",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "tech": {
+      "what_went_well": "Long momentum setups on high-conviction relative strength leaders like PANW, MSFT, and NOW performed well and protected portfolio capital.",
+      "what_went_wrong": "We shorted deeply oversold stocks (AMAT with RSI 5.1, MU with RSI 24.2) expecting downtrend continuation, only to get caught in sharp counter-trend bounces.",
+      "lessons": [
+        "Never open short positions on stocks with extreme oversold RSI levels (< 25) due to high bounce risk.",
+        "Avoid taking opposing long and short trades on the same stock within the same intraday session."
+      ],
+      "strategy_ideas": [
+        "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "IBM",
+            "reason": "Multiple price target increases (Stifel to $260, Susquehanna to $256) providing positive momentum catalyst."
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "ON",
+            "reason": "Weak price action and failed VWAP bounce setups showing low institutional volume."
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-23T16:16-04:00",
+          "action": "removed",
+          "symbol": "ON",
+          "reason": "Weak price action and failed VWAP bounce setups showing low institutional volume.",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-23T16:16-04:00",
+          "action": "added",
+          "symbol": "IBM",
+          "reason": "Multiple price target increases (Stifel to $260, Susquehanna to $256) providing positive momentum catalyst.",
+          "by": "evening review"
+        }
+      ]
+    },
+    "consumer": {
+      "what_went_well": "The AMZN long yielded a modest profit, showing the VWAP bounce can work when momentum stays positive.",
+      "what_went_wrong": "Most trades lost due to entering on weak momentum in a risk\u2011off environment, premature exits after manager\u2011sell signals, and a short TSLA that reversed after breaching VWAP.",
+      "lessons": [
+        "Require multi\u2011timeframe confirmation before taking momentum trades in a risk\u2011off market",
+        "Avoid entering positions when overall sector sentiment is negative, even if the individual stock looks strong",
+        "Set stops based on volatility (ATR) rather than fixed dollar amounts to reduce being stopped out on normal swings"
+      ],
+      "strategy_ideas": [
+        "Implement a market\u2011regime filter that disables new entries when the S&P 500 is below its 50\u2011day moving average",
+        "Test a trend\u2011following approach with ATR\u2011based stops and profit targets instead of fixed VWAP reclaim entries"
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "LKQ",
+            "reason": "Earnings before open on Oct 29, potential catalyst"
+          },
+          {
+            "symbol": "CMG",
+            "reason": "Earnings after close on Oct 28, strong growth outlook"
+          },
+          {
+            "symbol": "RCL",
+            "reason": "Upcoming earnings on Oct 27, cruise demand catalyst"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "ORLY",
+            "reason": "Repeated stop\u2011losses and weak momentum"
+          },
+          {
+            "symbol": "BKNG",
+            "reason": "Failed long thesis, poor sector rotation"
+          },
+          {
+            "symbol": "DPZ",
+            "reason": "Consistently underperformed and no near\u2011term catalyst"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-23T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "BKNG",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "financials": {
+      "what_went_well": "Long positions in GS, JPM, MS, COF and HOOD generated modest gains, showing our news\u2011catalyst and mean\u2011reversion filters can work on the right setups.",
+      "what_went_wrong": "Several losing trades (C, both BLK entries, CME, and the AXP short) were entered on weak or flat momentum and exited after the price drifted against us, highlighting overly aggressive opening\u2011range breakouts and insufficient stop discipline.",
+      "lessons": [
+        "Avoid opening\u2011range breakout entries when relative volume is high but price is already losing momentum; require VWAP confirmation before entry.",
+        "Tighten stop distances on low\u2011volume or flat\u2011trend stocks and use tighter trailing stops for mean\u2011reversion plays.",
+        "Do not re\u2011enter the same ticker after an early manager\u2011sell unless a new catalyst emerges."
+      ],
+      "strategy_ideas": [
+        "Add a VWAP\u2011above\u2011price filter for all breakout entries to ensure the trade aligns with the intraday trend.",
+        "Implement dynamic profit targets (e.g., 1.5\u00d7 risk) with trailing stops that tighten after a 0.5% move in our favor for mean\u2011reversion longs."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "V",
+            "reason": "Earnings on 2026-10-27 after close \u2013 high\u2011impact catalyst for financials"
+          },
+          {
+            "symbol": "SPGI",
+            "reason": "Earnings on 2026-10-27 before open \u2013 strong sector relevance"
+          },
+          {
+            "symbol": "MA",
+            "reason": "Earnings on 2026-10-29 before open \u2013 potential volatility"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "C",
+            "reason": "Flat momentum, low volume, and recent loss"
+          },
+          {
+            "symbol": "BLK",
+            "reason": "Multiple losing entries, breakout setup not reliable in risk\u2011off tape"
+          },
+          {
+            "symbol": "AXP",
+            "reason": "Short position underperformed and added to portfolio drag"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-23T16:17-04:00",
+          "action": "remove_rejected",
+          "symbol": "C",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-23T16:17-04:00",
+          "action": "remove_rejected",
+          "symbol": "BLK",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-23T16:17-04:00",
+          "action": "remove_rejected",
+          "symbol": "AXP",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "healthcare": {
+      "what_went_well": "ABT and UNH trades closed with modest gains, confirming that our VWAP\u2011based exit criteria can capture small upside when price remains near support.",
+      "what_went_wrong": "Several long positions were exited below VWAP or hit stop loss (BMY, MRK, JNJ, ABT, AMGN) because the initial entry did not confirm a bullish trend or the stop was too tight for the stock\u2019s volatility. The risk\u2011off filter also prevented us from adjusting position sizing to the actual volatility of the news catalyst.",
+      "lessons": [
+        "Confirm a clear uptrend (price above VWAP and positive momentum) before buying news catalysts;",
+        "Use an ATR\u2011based stop (\u22652% of ATR) instead of a fixed dollar stop to avoid premature stop\u2011outs on volatile moves;",
+        "Hold a position until it recovers above VWAP for at least 15 minutes before exiting on a VWAP dip."
+      ],
+      "strategy_ideas": [
+        "Implement ATR\u2011based dynamic stops for all news\u2011catalyst trades;",
+        "Add a rule to keep a position until it has moved at least 1% above VWAP before considering an exit."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "LLY",
+            "reason": "Upcoming earnings on 2026-10-29 before open"
+          },
+          {
+            "symbol": "MRK",
+            "reason": "Upcoming earnings on 2026-10-29 before open"
+          },
+          {
+            "symbol": "BMY",
+            "reason": "Upcoming earnings on 2026-10-29 before open"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "MOH",
+            "reason": "No catalysts or earnings in next 30 days"
+          },
+          {
+            "symbol": "ARGX",
+            "reason": "No catalysts or earnings in next 30 days"
+          },
+          {
+            "symbol": "REGN",
+            "reason": "No catalysts or earnings in next 30 days"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-23T16:18-04:00",
+          "action": "removed",
+          "symbol": "MOH",
+          "reason": "No catalysts or earnings in next 30 days",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-23T16:18-04:00",
+          "action": "removed",
+          "symbol": "ARGX",
+          "reason": "No catalysts or earnings in next 30 days",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-23T16:18-04:00",
+          "action": "remove_rejected",
+          "symbol": "REGN",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    }
+  },
   "lessons": {
     "defense": [
-      "2026-10-21: Only take positions on news with an importance score of 4 or higher that directly impacts core defense programs or major contract wins, avoiding peripheral commercial PR.",
-      "2026-10-21: Do not buy intraday dips on large-cap defense contractors without confirmed volume and price stabilization above intraday VWAP.",
       "2026-10-22: Require a minimum conviction of 4 and verify price is above VWAP before entering, especially in risk\u2011off markets",
       "2026-10-22: Avoid entering long positions immediately after earnings if the stock trades below VWAP or shows overbought RSI",
-      "2026-10-22: Implement a partial\u2011scale\u2011out (e.g., 50% at 1R) to lock in gains and reduce exposure to late\u2011day reversals"
+      "2026-10-22: Implement a partial\u2011scale\u2011out (e.g., 50% at 1R) to lock in gains and reduce exposure to late\u2011day reversals",
+      "2026-10-23: Do not enter momentum longs in the first 15 minutes of the open if the stock's 5-minute RSI is above 75, as opening whipsaws frequently hit stops.",
+      "2026-10-23: Do not re-enter a ticker more than twice in a single session to avoid churn, wash-trade rejections, and depleting the daily trade limit."
     ],
     "space": [
-      "2026-10-21: Set stops based on recent volatility rather than fixed percentages",
-      "2026-10-21: Limit position size on symbols that have moved >8% intraday",
       "2026-10-22: Avoid buying immediately after a 10%+ jump on earnings day; wait at least 30 minutes for trend confirmation.",
       "2026-10-22: For short entries, require price to stay below VWAP and both m15 and m60 to remain negative; exit if either crosses above.",
-      "2026-10-22: Set stops that account for a stock\u2019s recent volatility (e.g., use ATR\u2011based stops for high\u2011rvol stocks like FLY)."
+      "2026-10-22: Set stops that account for a stock\u2019s recent volatility (e.g., use ATR\u2011based stops for high\u2011rvol stocks like FLY).",
+      "2026-10-23: Avoid entering morning short trades on multi-day downtrends without waiting for confirmed VWAP rejection and negative intraday momentum across m15 and m60.",
+      "2026-10-23: Widen initial stops slightly for high-priced or lower-liquidity stocks like TDG during the first 15 minutes to avoid getting prematurely stopped out on normal open spread."
     ],
     "entertainment": [
-      "2026-10-22: Never enter a long trade without a protective stop below the opening range; the IMAX long loss proved this.",
       "2026-10-22: Avoid shorting high\u2011volatility earnings\u2011gap stocks unless you can set a tight stop; the SPOT short loss was a clear example.",
-      "2026-10-22: Only take trades with conviction >=4 in a risk\u2011off environment; the blocked SONY and NFLX buys highlighted this rule."
+      "2026-10-22: Only take trades with conviction >=4 in a risk\u2011off environment; the blocked SONY and NFLX buys highlighted this rule.",
+      "2026-10-23: Never re-enter a stock on the same day if it has already broken down below its opening range and VWAP.",
+      "2026-10-23: Do not execute fallback trades with conviction below 4 just to satisfy cash allocation targets.",
+      "2026-10-23: Require relative volume (rvol) of at least 1.0 before entering momentum trades in weak market regimes."
     ],
     "tech": [
       "2026-10-22: Avoid long momentum breakouts in a risk\u2011off market unless VWAP and trend are firmly above; exit earlier if momentum turns negative.",
       "2026-10-22: For shorts, use tighter stops or a counter\u2011news filter to avoid being held while the market rallies.",
-      "2026-10-22: Implement a volatility filter (ATR > X%) before taking new positions to reduce whipsaw losses."
+      "2026-10-22: Implement a volatility filter (ATR > X%) before taking new positions to reduce whipsaw losses.",
+      "2026-10-23: Never open short positions on stocks with extreme oversold RSI levels (< 25) due to high bounce risk.",
+      "2026-10-23: Avoid taking opposing long and short trades on the same stock within the same intraday session."
     ],
     "consumer": [
-      "2026-10-22: Do not hold overnight longs if the stock breaks below VWAP and the opening range with negative momentum; exit immediately.",
       "2026-10-22: Avoid long breakouts on stocks with concurrent negative news catalysts (e.g., legal settlements) even if technicals look strong.",
-      "2026-10-22: In risk-off regimes, prioritize shorting high-volume breakdowns over chasing low-volume breakouts."
+      "2026-10-22: In risk-off regimes, prioritize shorting high-volume breakdowns over chasing low-volume breakouts.",
+      "2026-10-23: Require multi\u2011timeframe confirmation before taking momentum trades in a risk\u2011off market",
+      "2026-10-23: Avoid entering positions when overall sector sentiment is negative, even if the individual stock looks strong",
+      "2026-10-23: Set stops based on volatility (ATR) rather than fixed dollar amounts to reduce being stopped out on normal swings"
     ],
     "financials": [
-      "2026-10-22: Never open a long position without a predefined stop loss, even on high\u2011conviction ideas.",
       "2026-10-22: Validate trailing\u2011stop parameters before sending the order to avoid premature exits.",
-      "2026-10-22: Avoid long entries on overbought symbols in a risk\u2011off regime unless a strong catalyst justifies it."
+      "2026-10-22: Avoid long entries on overbought symbols in a risk\u2011off regime unless a strong catalyst justifies it.",
+      "2026-10-23: Avoid opening\u2011range breakout entries when relative volume is high but price is already losing momentum; require VWAP confirmation before entry.",
+      "2026-10-23: Tighten stop distances on low\u2011volume or flat\u2011trend stocks and use tighter trailing stops for mean\u2011reversion plays.",
+      "2026-10-23: Do not re\u2011enter the same ticker after an early manager\u2011sell unless a new catalyst emerges."
     ],
     "healthcare": [
-      "2026-10-22: In a risk\u2011off market, avoid buying on earnings even if the data is positive unless intraday momentum (m15 > 0.5%) and rvol > 1.5 are confirmed.",
       "2026-10-22: Only enter a long when the price is above VWAP and shows a clear breakout with strong volume; avoid buying near the stop or in low\u2011volatility conditions.",
-      "2026-10-22: Tighten stop placement (e.g., 1\u20131.5% below entry) to reduce whipsaw losses in choppy markets."
+      "2026-10-22: Tighten stop placement (e.g., 1\u20131.5% below entry) to reduce whipsaw losses in choppy markets.",
+      "2026-10-23: Confirm a clear uptrend (price above VWAP and positive momentum) before buying news catalysts;",
+      "2026-10-23: Use an ATR\u2011based stop (\u22652% of ATR) instead of a fixed dollar stop to avoid premature stop\u2011outs on volatile moves;",
+      "2026-10-23: Hold a position until it recovers above VWAP for at least 15 minutes before exiting on a VWAP dip."
     ]
   },
   "research": {
@@ -4353,7 +4686,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-23T16:02-04:00",
+    "time": "2026-10-23T17:19-04:00",
     "earnings": [
       {
         "date": "2026-10-23",
@@ -4543,39 +4876,39 @@
     "economy": []
   },
   "scorecard": {
-    "updated": "2026-10-23T15:22-04:00",
+    "updated": "2026-10-23T16:19-04:00",
     "days": 30,
     "overall": {
-      "trades": 172,
-      "win_rate": 0.355,
-      "avg_return": -0.0046,
-      "total_pnl": -1210.73,
-      "profit_factor": 0.39,
+      "trades": 204,
+      "win_rate": 0.373,
+      "avg_return": -0.0036,
+      "total_pnl": -1122.81,
+      "profit_factor": 0.46,
       "enough_data": true
     },
     "by_setup": {
       "momentum": {
-        "trades": 46,
-        "win_rate": 0.326,
-        "avg_return": -0.004,
-        "total_pnl": -254.92,
-        "profit_factor": 0.36,
+        "trades": 57,
+        "win_rate": 0.316,
+        "avg_return": -0.0037,
+        "total_pnl": -287.87,
+        "profit_factor": 0.35,
         "enough_data": true
       },
       "news catalyst": {
-        "trades": 42,
-        "win_rate": 0.333,
-        "avg_return": -0.005,
-        "total_pnl": -201.48,
-        "profit_factor": 0.33,
+        "trades": 47,
+        "win_rate": 0.383,
+        "avg_return": -0.0043,
+        "total_pnl": -182.64,
+        "profit_factor": 0.39,
         "enough_data": true
       },
       "opening range breakout": {
-        "trades": 32,
-        "win_rate": 0.469,
-        "avg_return": -0.0001,
-        "total_pnl": 36.74,
-        "profit_factor": 1.35,
+        "trades": 41,
+        "win_rate": 0.512,
+        "avg_return": 0.0025,
+        "total_pnl": 177.27,
+        "profit_factor": 2.47,
         "enough_data": true
       },
       "untagged": {
@@ -4587,20 +4920,28 @@
         "enough_data": true
       },
       "other": {
-        "trades": 10,
-        "win_rate": 0.2,
+        "trades": 11,
+        "win_rate": 0.182,
         "avg_return": -0.0048,
-        "total_pnl": -37.8,
-        "profit_factor": 0.29,
+        "total_pnl": -40.58,
+        "profit_factor": 0.28,
         "enough_data": true
       },
       "VWAP bounce": {
-        "trades": 4,
-        "win_rate": 0.25,
-        "avg_return": -0.0012,
-        "total_pnl": -11.92,
-        "profit_factor": 0.26,
-        "enough_data": false
+        "trades": 7,
+        "win_rate": 0.286,
+        "avg_return": -0.0028,
+        "total_pnl": -35.96,
+        "profit_factor": 0.18,
+        "enough_data": true
+      },
+      "pullback in uptrend": {
+        "trades": 5,
+        "win_rate": 0.2,
+        "avg_return": -0.0053,
+        "total_pnl": -22.33,
+        "profit_factor": 0.0,
+        "enough_data": true
       },
       "earnings gap": {
         "trades": 3,
@@ -4625,33 +4966,25 @@
         "total_pnl": -16.53,
         "profit_factor": 0.25,
         "enough_data": false
-      },
-      "pullback in uptrend": {
-        "trades": 2,
-        "win_rate": 0.0,
-        "avg_return": -0.0076,
-        "total_pnl": -10.65,
-        "profit_factor": 0.0,
-        "enough_data": false
       }
     },
     "by_team": {
       "consumer": {
         "overall": {
-          "trades": 14,
-          "win_rate": 0.357,
-          "avg_return": -0.0061,
-          "total_pnl": -148.98,
-          "profit_factor": 0.24,
+          "trades": 19,
+          "win_rate": 0.316,
+          "avg_return": -0.006,
+          "total_pnl": -189.21,
+          "profit_factor": 0.22,
           "enough_data": true
         },
         "by_setup": {
           "momentum": {
-            "trades": 5,
-            "win_rate": 0.2,
-            "avg_return": -0.0066,
-            "total_pnl": -43.37,
-            "profit_factor": 0.2,
+            "trades": 6,
+            "win_rate": 0.167,
+            "avg_return": -0.007,
+            "total_pnl": -53.79,
+            "profit_factor": 0.17,
             "enough_data": true
           },
           "opening range breakout": {
@@ -4670,6 +5003,14 @@
             "profit_factor": 2.44,
             "enough_data": false
           },
+          "VWAP bounce": {
+            "trades": 3,
+            "win_rate": 0.333,
+            "avg_return": -0.0049,
+            "total_pnl": -24.04,
+            "profit_factor": 0.14,
+            "enough_data": false
+          },
           "untagged": {
             "trades": 1,
             "win_rate": 0.0,
@@ -4685,16 +5026,24 @@
             "total_pnl": -22.03,
             "profit_factor": 0.0,
             "enough_data": false
+          },
+          "pullback in uptrend": {
+            "trades": 1,
+            "win_rate": 0.0,
+            "avg_return": -0.0049,
+            "total_pnl": -5.77,
+            "profit_factor": 0.0,
+            "enough_data": false
           }
         },
         "by_experiment": {
           "VWAP Reclaim": {
-            "trades": 4,
-            "win_rate": 0.0,
-            "avg_return": -0.0103,
-            "total_pnl": -56.14,
-            "profit_factor": 0.0,
-            "enough_data": false
+            "trades": 7,
+            "win_rate": 0.143,
+            "avg_return": -0.0084,
+            "total_pnl": -78.93,
+            "profit_factor": 0.05,
+            "enough_data": true
           },
           "Testing the efficacy of high-conviction opening range breakouts in a risk-off market vs. shorting high-volume breakdowns": {
             "trades": 3,
@@ -4720,6 +5069,14 @@
             "profit_factor": null,
             "enough_data": false
           },
+          "Test a 'VWAP Reclaim' strategy: only enter longs if price reclaims VWAP with increasing volume after a dip, rather than ": {
+            "trades": 2,
+            "win_rate": 0.0,
+            "avg_return": -0.0063,
+            "total_pnl": -20.1,
+            "profit_factor": 0.0,
+            "enough_data": false
+          },
           "Testing intraday rotation out of weak breakdowns into relative strength holds above VWAP during risk-off sessions.": {
             "trades": 1,
             "win_rate": 0.0,
@@ -4728,11 +5085,11 @@
             "profit_factor": 0.0,
             "enough_data": false
           },
-          "Test a 'VWAP Reclaim' strategy: only enter longs if price reclaims VWAP with increasing volume after a dip, rather than ": {
+          "Implement a strict 'news filter' that blocks long entries on any stock with negative sentiment news in the last 24 hours": {
             "trades": 1,
             "win_rate": 0.0,
-            "avg_return": -0.0077,
-            "total_pnl": -14.33,
+            "avg_return": -0.0062,
+            "total_pnl": -11.67,
             "profit_factor": 0.0,
             "enough_data": false
           }
@@ -4740,28 +5097,28 @@
       },
       "defense": {
         "overall": {
-          "trades": 28,
-          "win_rate": 0.536,
-          "avg_return": 0.0021,
-          "total_pnl": 171.65,
-          "profit_factor": 1.76,
+          "trades": 32,
+          "win_rate": 0.562,
+          "avg_return": 0.0029,
+          "total_pnl": 288.4,
+          "profit_factor": 2.2,
           "enough_data": true
         },
         "by_setup": {
           "news catalyst": {
-            "trades": 10,
-            "win_rate": 0.4,
-            "avg_return": -0.0039,
-            "total_pnl": -57.07,
-            "profit_factor": 0.42,
+            "trades": 11,
+            "win_rate": 0.455,
+            "avg_return": -0.0031,
+            "total_pnl": -44.45,
+            "profit_factor": 0.55,
             "enough_data": true
           },
           "opening range breakout": {
-            "trades": 7,
-            "win_rate": 0.714,
-            "avg_return": 0.0039,
-            "total_pnl": 74.29,
-            "profit_factor": 3.89,
+            "trades": 10,
+            "win_rate": 0.7,
+            "avg_return": 0.0058,
+            "total_pnl": 178.42,
+            "profit_factor": 5.6,
             "enough_data": true
           },
           "untagged": {
@@ -4807,11 +5164,19 @@
             "enough_data": true
           },
           "Testing the 50% scale-out rule at 1R for all new trades to lock in gains and reduce exposure.": {
+            "trades": 4,
+            "win_rate": 0.25,
+            "avg_return": 0.0035,
+            "total_pnl": 61.48,
+            "profit_factor": 3.07,
+            "enough_data": false
+          },
+          "Expanding the 50% scale-out rule to all bracket trades with a 1R target": {
             "trades": 2,
-            "win_rate": 0.0,
-            "avg_return": -0.003,
-            "total_pnl": -16.66,
-            "profit_factor": 0.0,
+            "win_rate": 1.0,
+            "avg_return": 0.0077,
+            "total_pnl": 38.61,
+            "profit_factor": null,
             "enough_data": false
           },
           "Implement an automatic 50% scale-out at 1R on contract-driven momentum plays like LDOS to lock in intraday gains against": {
@@ -4842,20 +5207,20 @@
       },
       "entertainment": {
         "overall": {
-          "trades": 20,
-          "win_rate": 0.25,
-          "avg_return": -0.0059,
-          "total_pnl": -131.98,
+          "trades": 25,
+          "win_rate": 0.28,
+          "avg_return": -0.0054,
+          "total_pnl": -153.7,
           "profit_factor": 0.12,
           "enough_data": true
         },
         "by_setup": {
           "momentum": {
-            "trades": 7,
-            "win_rate": 0.0,
-            "avg_return": -0.0095,
-            "total_pnl": -54.2,
-            "profit_factor": 0.0,
+            "trades": 10,
+            "win_rate": 0.1,
+            "avg_return": -0.0079,
+            "total_pnl": -70.01,
+            "profit_factor": 0.06,
             "enough_data": true
           },
           "news catalyst": {
@@ -4890,6 +5255,14 @@
             "profit_factor": 2.28,
             "enough_data": false
           },
+          "pullback in uptrend": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "avg_return": -0.0032,
+            "total_pnl": -5.91,
+            "profit_factor": 0.01,
+            "enough_data": false
+          },
           "untagged": {
             "trades": 1,
             "win_rate": 0.0,
@@ -4909,19 +5282,27 @@
             "enough_data": true
           },
           "Introduce a VWAP-bias filter: go long only if price is above VWAP with positive 15-minute momentum, short only if below ": {
-            "trades": 6,
-            "win_rate": 0.333,
-            "avg_return": -0.0059,
-            "total_pnl": -32.66,
-            "profit_factor": 0.04,
+            "trades": 7,
+            "win_rate": 0.286,
+            "avg_return": -0.007,
+            "total_pnl": -50.17,
+            "profit_factor": 0.02,
             "enough_data": true
           },
           "Testing VWAP-bias filter: only taking longs with positive 15m momentum and tight 2% stops; SPOT is marginally below VWAP": {
-            "trades": 2,
-            "win_rate": 0.0,
-            "avg_return": -0.0123,
-            "total_pnl": -16.2,
-            "profit_factor": 0.0,
+            "trades": 3,
+            "win_rate": 0.333,
+            "avg_return": -0.0067,
+            "total_pnl": -12.01,
+            "profit_factor": 0.26,
+            "enough_data": false
+          },
+          "Testing VWAP-bias filter: only taking longs if price is above VWAP with positive 15m momentum, and shorts if below with ": {
+            "trades": 3,
+            "win_rate": 0.333,
+            "avg_return": -0.0031,
+            "total_pnl": -8.4,
+            "profit_factor": 0.01,
             "enough_data": false
           },
           "VWAP-bias filter: go long only if price is above VWAP with positive 15-minute momentum. Today, this filter was applied f": {
@@ -4936,20 +5317,20 @@
       },
       "financials": {
         "overall": {
-          "trades": 20,
+          "trades": 24,
           "win_rate": 0.5,
-          "avg_return": 0.0004,
-          "total_pnl": 40.97,
-          "profit_factor": 1.89,
+          "avg_return": 0.0002,
+          "total_pnl": 37.31,
+          "profit_factor": 1.71,
           "enough_data": true
         },
         "by_setup": {
           "momentum": {
-            "trades": 6,
-            "win_rate": 0.5,
-            "avg_return": 0.0001,
-            "total_pnl": 15.55,
-            "profit_factor": 1.82,
+            "trades": 8,
+            "win_rate": 0.375,
+            "avg_return": -0.0003,
+            "total_pnl": 9.02,
+            "profit_factor": 1.35,
             "enough_data": true
           },
           "untagged": {
@@ -4960,20 +5341,20 @@
             "profit_factor": 4.43,
             "enough_data": true
           },
+          "news catalyst": {
+            "trades": 5,
+            "win_rate": 0.8,
+            "avg_return": 0.0005,
+            "total_pnl": 5.5,
+            "profit_factor": 3.89,
+            "enough_data": true
+          },
           "opening range breakout": {
             "trades": 4,
             "win_rate": 0.25,
             "avg_return": -0.0021,
             "total_pnl": -10.0,
             "profit_factor": 0.19,
-            "enough_data": false
-          },
-          "news catalyst": {
-            "trades": 3,
-            "win_rate": 0.667,
-            "avg_return": 0.0003,
-            "total_pnl": 2.63,
-            "profit_factor": 2.38,
             "enough_data": false
           },
           "mean reversion": {
@@ -4995,12 +5376,12 @@
         },
         "by_experiment": {
           "Adding a rule to filter long entries by RSI < 70 and positive volume momentum during risk-off periods.": {
-            "trades": 4,
-            "win_rate": 0.75,
-            "avg_return": 0.0007,
-            "total_pnl": 5.06,
-            "profit_factor": 2.31,
-            "enough_data": false
+            "trades": 5,
+            "win_rate": 0.8,
+            "avg_return": 0.0009,
+            "total_pnl": 7.31,
+            "profit_factor": 2.9,
+            "enough_data": true
           },
           "Testing a news-catalyst-driven opening range breakout in a risk-off market regime.": {
             "trades": 2,
@@ -5016,6 +5397,14 @@
             "avg_return": -0.0047,
             "total_pnl": -11.31,
             "profit_factor": 0.0,
+            "enough_data": false
+          },
+          "Testing news-catalyst and oversold mean-reversion longs in a risk-off regime after cutting breakdown longs BLK and CME.": {
+            "trades": 2,
+            "win_rate": 1.0,
+            "avg_return": 0.0029,
+            "total_pnl": 10.53,
+            "profit_factor": null,
             "enough_data": false
           },
           "Testing short momentum breakdown in risk-off tape after closing weak AXP.": {
@@ -5042,14 +5431,6 @@
             "profit_factor": 0.0,
             "enough_data": false
           },
-          "Testing news-catalyst and oversold mean-reversion longs in a risk-off regime after cutting breakdown longs BLK and CME.": {
-            "trades": 1,
-            "win_rate": 1.0,
-            "avg_return": 0.0055,
-            "total_pnl": 9.91,
-            "profit_factor": null,
-            "enough_data": false
-          },
           "Expand short-momentum breakdowns as the primary risk-off play, focusing on high-volume breakdowns on bad news.": {
             "trades": 1,
             "win_rate": 0.0,
@@ -5062,28 +5443,28 @@
       },
       "healthcare": {
         "overall": {
-          "trades": 31,
-          "win_rate": 0.355,
-          "avg_return": -0.0026,
-          "total_pnl": -109.05,
+          "trades": 36,
+          "win_rate": 0.333,
+          "avg_return": -0.0023,
+          "total_pnl": -112.92,
           "profit_factor": 0.49,
           "enough_data": true
         },
         "by_setup": {
           "news catalyst": {
-            "trades": 13,
-            "win_rate": 0.308,
-            "avg_return": -0.0034,
-            "total_pnl": -40.8,
+            "trades": 14,
+            "win_rate": 0.286,
+            "avg_return": -0.0032,
+            "total_pnl": -41.45,
             "profit_factor": 0.39,
             "enough_data": true
           },
           "momentum": {
-            "trades": 8,
-            "win_rate": 0.375,
-            "avg_return": -0.0032,
-            "total_pnl": -40.06,
-            "profit_factor": 0.15,
+            "trades": 11,
+            "win_rate": 0.364,
+            "avg_return": -0.0023,
+            "total_pnl": -41.22,
+            "profit_factor": 0.24,
             "enough_data": true
           },
           "untagged": {
@@ -5095,12 +5476,12 @@
             "enough_data": true
           },
           "opening range breakout": {
-            "trades": 4,
-            "win_rate": 0.5,
-            "avg_return": 0.0011,
-            "total_pnl": 3.59,
-            "profit_factor": 1.59,
-            "enough_data": false
+            "trades": 5,
+            "win_rate": 0.4,
+            "avg_return": 0.0005,
+            "total_pnl": 1.53,
+            "profit_factor": 1.19,
+            "enough_data": true
           },
           "VWAP bounce": {
             "trades": 1,
@@ -5128,6 +5509,14 @@
             "profit_factor": 9.33,
             "enough_data": false
           },
+          "Testing the executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR\u2011based stops of ": {
+            "trades": 4,
+            "win_rate": 0.25,
+            "avg_return": -0.0003,
+            "total_pnl": -1.81,
+            "profit_factor": 0.77,
+            "enough_data": false
+          },
           "risk-off breakdown shorting": {
             "trades": 2,
             "win_rate": 0.0,
@@ -5142,6 +5531,14 @@
             "avg_return": 0.0035,
             "total_pnl": 5.48,
             "profit_factor": 3.5,
+            "enough_data": false
+          },
+          "executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops of at least 2%": {
+            "trades": 2,
+            "win_rate": 0.0,
+            "avg_return": -0.0037,
+            "total_pnl": -7.95,
+            "profit_factor": 0.0,
             "enough_data": false
           },
           "Testing opening range breakout continuation in healthcare during a risk-off tape, prioritizing news-confirmed momentum.": {
@@ -5159,35 +5556,27 @@
             "total_pnl": 8.39,
             "profit_factor": null,
             "enough_data": false
-          },
-          "short momentum breakdowns in a risk-off healthcare tape": {
-            "trades": 1,
-            "win_rate": 0.0,
-            "avg_return": -0.0222,
-            "total_pnl": -35.38,
-            "profit_factor": 0.0,
-            "enough_data": false
-          },
-          "Testing intraday momentum shorting in a risk-off healthcare tape by rotating out of a fading long into a breakdown short": {
-            "trades": 1,
-            "win_rate": 1.0,
-            "avg_return": 0.0061,
-            "total_pnl": 4.13,
-            "profit_factor": null,
-            "enough_data": false
           }
         }
       },
       "space": {
         "overall": {
-          "trades": 26,
-          "win_rate": 0.154,
-          "avg_return": -0.0128,
-          "total_pnl": -576.73,
-          "profit_factor": 0.09,
+          "trades": 31,
+          "win_rate": 0.226,
+          "avg_return": -0.0085,
+          "total_pnl": -545.96,
+          "profit_factor": 0.14,
           "enough_data": true
         },
         "by_setup": {
+          "opening range breakout": {
+            "trades": 7,
+            "win_rate": 0.571,
+            "avg_return": 0.0096,
+            "total_pnl": 33.29,
+            "profit_factor": 3.55,
+            "enough_data": true
+          },
           "untagged": {
             "trades": 6,
             "win_rate": 0.0,
@@ -5204,6 +5593,14 @@
             "profit_factor": 0.73,
             "enough_data": true
           },
+          "other": {
+            "trades": 6,
+            "win_rate": 0.167,
+            "avg_return": -0.0038,
+            "total_pnl": -22.98,
+            "profit_factor": 0.1,
+            "enough_data": true
+          },
           "news catalyst": {
             "trades": 5,
             "win_rate": 0.0,
@@ -5211,22 +5608,6 @@
             "total_pnl": -54.54,
             "profit_factor": 0.0,
             "enough_data": true
-          },
-          "other": {
-            "trades": 5,
-            "win_rate": 0.2,
-            "avg_return": -0.0036,
-            "total_pnl": -20.2,
-            "profit_factor": 0.12,
-            "enough_data": true
-          },
-          "opening range breakout": {
-            "trades": 3,
-            "win_rate": 0.333,
-            "avg_return": -0.002,
-            "total_pnl": -0.26,
-            "profit_factor": 0.98,
-            "enough_data": false
           },
           "pullback in uptrend": {
             "trades": 1,
@@ -5239,11 +5620,11 @@
         },
         "by_experiment": {
           "Add a momentum filter for short entries: require m15 < -0.5% and m60 < -0.5% before taking the trade.": {
-            "trades": 8,
-            "win_rate": 0.0,
-            "avg_return": -0.0121,
-            "total_pnl": -47.14,
-            "profit_factor": 0.0,
+            "trades": 11,
+            "win_rate": 0.182,
+            "avg_return": -0.0034,
+            "total_pnl": -20.05,
+            "profit_factor": 0.6,
             "enough_data": true
           },
           "volume-spike filter for entries following earnings or contract announcements": {
@@ -5261,33 +5642,41 @@
             "total_pnl": -5.0,
             "profit_factor": 0.35,
             "enough_data": false
+          },
+          "Implement a 30-minute wait rule after earnings or contract announcements before entering long positions. Applied today b": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "avg_return": 0.0044,
+            "total_pnl": 3.68,
+            "profit_factor": 3.65,
+            "enough_data": false
           }
         }
       },
       "tech": {
         "overall": {
-          "trades": 33,
-          "win_rate": 0.333,
-          "avg_return": -0.0071,
-          "total_pnl": -456.61,
-          "profit_factor": 0.12,
+          "trades": 37,
+          "win_rate": 0.378,
+          "avg_return": -0.0061,
+          "total_pnl": -446.73,
+          "profit_factor": 0.14,
           "enough_data": true
         },
         "by_setup": {
           "momentum": {
-            "trades": 9,
-            "win_rate": 0.444,
-            "avg_return": -0.0018,
-            "total_pnl": -44.44,
-            "profit_factor": 0.36,
+            "trades": 11,
+            "win_rate": 0.455,
+            "avg_return": -0.0016,
+            "total_pnl": -43.47,
+            "profit_factor": 0.41,
             "enough_data": true
           },
           "opening range breakout": {
-            "trades": 8,
-            "win_rate": 0.5,
-            "avg_return": -0.0007,
-            "total_pnl": -9.3,
-            "profit_factor": 0.32,
+            "trades": 9,
+            "win_rate": 0.556,
+            "avg_return": -0.0002,
+            "total_pnl": -4.39,
+            "profit_factor": 0.68,
             "enough_data": true
           },
           "untagged": {
@@ -5299,11 +5688,11 @@
             "enough_data": true
           },
           "news catalyst": {
-            "trades": 3,
-            "win_rate": 0.0,
-            "avg_return": -0.0127,
-            "total_pnl": -44.78,
-            "profit_factor": 0.0,
+            "trades": 4,
+            "win_rate": 0.25,
+            "avg_return": -0.0082,
+            "total_pnl": -40.78,
+            "profit_factor": 0.09,
             "enough_data": false
           },
           "other": {
@@ -5340,20 +5729,20 @@
           }
         },
         "by_experiment": {
+          "Test a momentum-reversal exit: close position if 5-min momentum turns negative even if price still above stop.": {
+            "trades": 5,
+            "win_rate": 0.2,
+            "avg_return": -0.0069,
+            "total_pnl": -30.49,
+            "profit_factor": 0.12,
+            "enough_data": true
+          },
           "shorting breakdowns in risk-off regime": {
             "trades": 4,
             "win_rate": 0.25,
             "avg_return": -0.0052,
             "total_pnl": -39.54,
             "profit_factor": 0.01,
-            "enough_data": false
-          },
-          "Test a momentum-reversal exit: close position if 5-min momentum turns negative even if price still above stop.": {
-            "trades": 3,
-            "win_rate": 0.0,
-            "avg_return": -0.0114,
-            "total_pnl": -29.68,
-            "profit_factor": 0.0,
             "enough_data": false
           },
           "Testing risk-off news-catalyst and failed-momentum rotation; only taking high-conviction setups after closing stalled or": {
@@ -5380,6 +5769,14 @@
             "profit_factor": 0.39,
             "enough_data": false
           },
+          "Testing VIX-based risk-off rule: skip new trades when VIX > 20 or market breadth negative; also momentum-reversal exit i": {
+            "trades": 2,
+            "win_rate": 1.0,
+            "avg_return": 0.0044,
+            "total_pnl": 10.69,
+            "profit_factor": null,
+            "enough_data": false
+          },
           "Testing continuation shorts after opening-range breakdowns in a risk-off tape, using momentum and news/confirmed weaknes": {
             "trades": 1,
             "win_rate": 1.0,
@@ -5401,26 +5798,26 @@
         "enough_data": true
       },
       "end_of_day": {
-        "trades": 21,
-        "win_rate": 0.619,
-        "avg_return": 0.0058,
-        "total_pnl": 276.47,
-        "profit_factor": 11.27,
+        "trades": 49,
+        "win_rate": 0.51,
+        "avg_return": 0.0033,
+        "total_pnl": 282.57,
+        "profit_factor": 3.39,
         "enough_data": true
       },
       "trailing_stop": {
-        "trades": 19,
-        "win_rate": 0.947,
-        "avg_return": 0.006,
-        "total_pnl": 165.71,
-        "profit_factor": 58.54,
+        "trades": 22,
+        "win_rate": 0.955,
+        "avg_return": 0.0066,
+        "total_pnl": 265.04,
+        "profit_factor": 93.03,
         "enough_data": true
       },
       "stop_loss": {
-        "trades": 13,
+        "trades": 14,
         "win_rate": 0.0,
-        "avg_return": -0.0233,
-        "total_pnl": -562.24,
+        "avg_return": -0.0226,
+        "total_pnl": -579.75,
         "profit_factor": 0.0,
         "enough_data": true
       }
@@ -5615,6 +6012,15 @@
     ],
     "space": [
       {
+        "symbol": "BA",
+        "sentiment": 0.2,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Allegiant Air exercised six Boeing 737-8 options for delivery in 2028, a routine order that adds modest future revenue but has limited near-term impact.",
+        "source": "benzinga",
+        "seen_at": "2026-10-23T17:04-04:00"
+      },
+      {
         "symbol": "SPCX",
         "sentiment": 0.6,
         "importance": 3,
@@ -5676,15 +6082,6 @@
         "summary": "SpaceX is reportedly exploring leases for 80,000 cell sites, which could open a new revenue stream.",
         "source": "benzinga",
         "seen_at": "2026-10-23T00:40-04:00"
-      },
-      {
-        "symbol": "SPCX",
-        "sentiment": -0.2,
-        "importance": 2,
-        "unconfirmed_rumor": true,
-        "summary": "Trump claims Starlink restored in Ukraine but Kyiv reports limited speeds, creating uncertainty.",
-        "source": "benzinga",
-        "seen_at": "2026-10-22T22:25-04:00"
       }
     ],
     "entertainment": [
@@ -5837,6 +6234,24 @@
     ],
     "consumer": [
       {
+        "symbol": "DECK",
+        "sentiment": -0.2,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Telsey Advisory Group lowered its price target on Deckers Outdoor to $90 while maintaining a Market Perform rating.",
+        "source": "benzinga",
+        "seen_at": "2026-10-23T17:19-04:00"
+      },
+      {
+        "symbol": "LKQ",
+        "sentiment": -0.2,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Barrington Research downgraded LKQ to Market Perform, a minor negative signal from a single analyst.",
+        "source": "benzinga",
+        "seen_at": "2026-10-23T16:34-04:00"
+      },
+      {
         "symbol": "TSLA",
         "sentiment": 0,
         "importance": 2,
@@ -5889,27 +6304,18 @@
         "summary": "Phillip Securities raised its price target for Tesla to $230, indicating a more bullish outlook.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-23T06:45-04:00"
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": 0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "AWS launched the AWS Interconnect service to simplify enterprise connectivity to the cloud, a positive product development.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-23T06:45-04:00"
-      },
-      {
-        "symbol": "ABNB",
-        "sentiment": 0.0,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Benzinga published an industry comparison of Airbnb versus hotel and restaurant peers, offering no new material for the stock.",
-        "source": "Benzinga",
-        "seen_at": "2026-10-23T06:00-04:00"
       }
     ],
     "financials": [
+      {
+        "symbol": "GS",
+        "sentiment": -0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Goldman Sachs' prime brokerage division reported significant losses for hedge fund clients due to market volatility, indicating heightened risk in their trading book.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-23T16:34-04:00"
+      },
       {
         "symbol": "SCHW",
         "sentiment": -0.6,
@@ -5972,18 +6378,27 @@
         "summary": "Goldman Sachs raised its price target for CME Group to $271 from $254, indicating a more bullish outlook.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-23T06:45-04:00"
-      },
-      {
-        "symbol": "JPM",
-        "sentiment": -0.6,
-        "importance": 3,
-        "unconfirmed_rumor": true,
-        "summary": "Politicians warned that rogue AI could access bank accounts, raising concerns for the bank.",
-        "source": "benzinga",
-        "seen_at": "2026-10-23T06:00-04:00"
       }
     ],
     "healthcare": [
+      {
+        "symbol": "MRK",
+        "sentiment": 1.0,
+        "importance": 5,
+        "unconfirmed_rumor": false,
+        "summary": "Moderna and Merck report positive Phase 3 trial results for cancer vaccine.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-23T16:34-04:00"
+      },
+      {
+        "symbol": "ABBV",
+        "sentiment": 1.0,
+        "importance": 5,
+        "unconfirmed_rumor": false,
+        "summary": "AbbVie receives FDA approval for new treatment for inflammatory bowel disease.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-23T16:34-04:00"
+      },
       {
         "symbol": "MRNA",
         "sentiment": 0.2,
@@ -6037,24 +6452,6 @@
         "summary": "Johnson & Johnson's orthopedics unit merger talks with Smith & Nephew collapsed over leadership disagreements, removing a potential growth opportunity.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-23T06:45-04:00"
-      },
-      {
-        "symbol": "BMY",
-        "sentiment": 0.6,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "BMY joins BioNTech and Gilead in a clinical trial of the bispecific immunomodulator pumitamig, potentially expanding its oncology pipeline.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-22T22:25-04:00"
-      },
-      {
-        "symbol": "ABT",
-        "sentiment": -0.6,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "A peer\u2011reviewed study found a competitor's LockeT device safer and more effective than Abbott's Perclose closure device.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-22T19:05-04:00"
       }
     ]
   },
@@ -7838,13 +8235,21 @@
         {
           "date": "2026-10-22",
           "lesson": "Implement a partial\u2011scale\u2011out (e.g., 50% at 1R) to lock in gains and reduce exposure to late\u2011day reversals"
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Do not enter momentum longs in the first 15 minutes of the open if the stock's 5-minute RSI is above 75, as opening whipsaws frequently hit stops."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Do not re-enter a ticker more than twice in a single session to avoid churn, wash-trade rejections, and depleting the daily trade limit."
         }
       ],
       "ideas": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "strategy_ideas": [
-          "Expand the 50% scale\u2011out rule to all bracket trades with a 1R target",
-          "Add a filter to skip entries when RSI>80 or when price is below VWAP within 30\u202fminutes of earnings release"
+          "Enforce a 30-minute cooldown period before re-entering any symbol exited due to stalled momentum.",
+          "Make the 50% scale-out at 1R standard across all opening range breakout setups to guarantee profits during choppy sessions."
         ]
       },
       "reviews": [
@@ -7919,6 +8324,49 @@
               "by": "evening review"
             }
           ]
+        },
+        {
+          "date": "2026-10-23",
+          "what_went_well": "The 50% scale-out at 1R worked exceptionally well on AVAV (+91.18), and high-conviction catalyst leaders like LMT and CACI generated solid gains when allowed to run.",
+          "what_went_wrong": "Aggressive entries at the opening bell in overextended stocks like SAIC (RSI 77) and LDOS resulted in immediate stop-outs, while excessive intra-day churning exhausted the daily trade quota and caused order rejections.",
+          "lessons": [
+            "Do not enter momentum longs in the first 15 minutes of the open if the stock's 5-minute RSI is above 75, as opening whipsaws frequently hit stops.",
+            "Do not re-enter a ticker more than twice in a single session to avoid churn, wash-trade rejections, and depleting the daily trade limit."
+          ],
+          "strategy_ideas": [
+            "Enforce a 30-minute cooldown period before re-entering any symbol exited due to stalled momentum.",
+            "Make the 50% scale-out at 1R standard across all opening range breakout setups to guarantee profits during choppy sessions."
+          ],
+          "watchlist_changes": {
+            "add": [
+              {
+                "symbol": "GD",
+                "reason": "Major prime defense contractor with steady contract flow and high liquidity to replace low-activity small-caps."
+              }
+            ],
+            "remove": [
+              {
+                "symbol": "MRCY",
+                "reason": "Low relative volume and lack of near-term defense contract or earnings catalysts."
+              }
+            ]
+          },
+          "watchlist": [
+            {
+              "time": "2026-10-23T16:16-04:00",
+              "action": "removed",
+              "symbol": "MRCY",
+              "reason": "Low relative volume and lack of near-term defense contract or earnings catalysts.",
+              "by": "evening review"
+            },
+            {
+              "time": "2026-10-23T16:16-04:00",
+              "action": "added",
+              "symbol": "GD",
+              "reason": "Major prime defense contractor with steady contract flow and high liquidity to replace low-activity small-caps.",
+              "by": "evening review"
+            }
+          ]
         }
       ],
       "pnl_days": [
@@ -7948,8 +8396,8 @@
           "CACI",
           "SAIC",
           "HEI",
-          "MRCY",
-          "HII"
+          "HII",
+          "GD"
         ],
         "seed": [
           "LMT",
@@ -7997,6 +8445,20 @@
             "action": "added",
             "symbol": "HII",
             "reason": "Dividend raise and moderate importance, adds defensive exposure",
+            "by": "evening review"
+          },
+          {
+            "time": "2026-10-23T16:16-04:00",
+            "action": "removed",
+            "symbol": "MRCY",
+            "reason": "Low relative volume and lack of near-term defense contract or earnings catalysts.",
+            "by": "evening review"
+          },
+          {
+            "time": "2026-10-23T16:16-04:00",
+            "action": "added",
+            "symbol": "GD",
+            "reason": "Major prime defense contractor with steady contract flow and high liquidity to replace low-activity small-caps.",
             "by": "evening review"
           }
         ],
@@ -8062,7 +8524,7 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-23T13:34-04:00"
+        "updated": "2026-10-23T16:16-04:00"
       },
       "research": {
         "time": "2026-10-23T14:13-04:00",
@@ -10562,13 +11024,21 @@
         {
           "date": "2026-10-22",
           "lesson": "Set stops that account for a stock\u2019s recent volatility (e.g., use ATR\u2011based stops for high\u2011rvol stocks like FLY)."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Avoid entering morning short trades on multi-day downtrends without waiting for confirmed VWAP rejection and negative intraday momentum across m15 and m60."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Widen initial stops slightly for high-priced or lower-liquidity stocks like TDG during the first 15 minutes to avoid getting prematurely stopped out on normal open spread."
         }
       ],
       "ideas": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "strategy_ideas": [
-          "Implement a 30\u2011minute wait rule after earnings or contract announcements before entering long positions.",
-          "Add a momentum filter for short entries: require m15 < -0.5% and m60 < -0.5% before taking the trade."
+          "Test requiring a minimum 15-minute wait post-open before taking short setups to allow initial range expansion and VWAP levels to stabilize.",
+          "Automate trailing stops to activate immediately after taking partial profits on ORB long winners to lock in gains."
         ]
       },
       "reviews": [
@@ -10635,6 +11105,24 @@
               "reason": "list would drop below 15 stocks"
             }
           ]
+        },
+        {
+          "date": "2026-10-23",
+          "what_went_well": "Long trades in RKLB, RDW, and BA capitalized on opening range breakouts with strong momentum, yielding solid profits and partial target hits.",
+          "what_went_wrong": "Early short positions across ASTS, BKSY, BA, and RKLB all lost money as opening momentum reversed quickly, and TDG long stopped out immediately due to a tight stop in early market volatility.",
+          "lessons": [
+            "Avoid entering morning short trades on multi-day downtrends without waiting for confirmed VWAP rejection and negative intraday momentum across m15 and m60.",
+            "Widen initial stops slightly for high-priced or lower-liquidity stocks like TDG during the first 15 minutes to avoid getting prematurely stopped out on normal open spread."
+          ],
+          "strategy_ideas": [
+            "Test requiring a minimum 15-minute wait post-open before taking short setups to allow initial range expansion and VWAP levels to stabilize.",
+            "Automate trailing stops to activate immediately after taking partial profits on ORB long winners to lock in gains."
+          ],
+          "watchlist_changes": {
+            "add": [],
+            "remove": []
+          },
+          "watchlist": []
         }
       ],
       "pnl_days": [
@@ -10771,7 +11259,7 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-23T13:49-04:00"
+        "updated": "2026-10-23T16:16-04:00"
       },
       "research": {
         "time": "2026-10-23T14:13-04:00",
@@ -10901,6 +11389,15 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "BA",
+            "sentiment": 0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Allegiant Air exercised six Boeing 737-8 options for delivery in 2028, a routine order that adds modest future revenue but has limited near-term impact.",
+            "source": "benzinga",
+            "seen_at": "2026-10-23T17:04-04:00"
+          },
           {
             "symbol": "SPCX",
             "sentiment": 0.6,
@@ -11044,24 +11541,6 @@
             "summary": "SpaceX purchased $151M and $480M of Tesla Megapack products for its operations.",
             "source": "benzinga",
             "seen_at": "2026-10-22T16:50-04:00"
-          },
-          {
-            "symbol": "SPCX",
-            "sentiment": 0.6,
-            "importance": 3,
-            "unconfirmed_rumor": true,
-            "summary": "Analyst suggests a Tesla\u2011SpaceX merger could unlock major synergies, boosting SPCX prospects.",
-            "source": "benzinga",
-            "seen_at": "2026-10-22T08:53-04:00"
-          },
-          {
-            "symbol": "BKSY",
-            "sentiment": 0.8,
-            "importance": 4,
-            "unconfirmed_rumor": false,
-            "summary": "BlackSky secures a seven\u2011figure Gen\u20113 Assured contract with an undisclosed defense partner.",
-            "source": "benzinga",
-            "seen_at": "2026-10-22T08:53-04:00"
           }
         ],
         "technicals": {
@@ -12616,13 +13095,25 @@
         {
           "date": "2026-10-22",
           "lesson": "Only take trades with conviction >=4 in a risk\u2011off environment; the blocked SONY and NFLX buys highlighted this rule."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Never re-enter a stock on the same day if it has already broken down below its opening range and VWAP."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Do not execute fallback trades with conviction below 4 just to satisfy cash allocation targets."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Require relative volume (rvol) of at least 1.0 before entering momentum trades in weak market regimes."
         }
       ],
       "ideas": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "strategy_ideas": [
-          "Add a tighter trailing\u2011stop rule for earnings\u2011gap entries (e.g., max 1% adverse move before exit).",
-          "Introduce a VWAP\u2011bias filter: go long only if price is above VWAP with positive 15\u2011minute momentum, short only if below VWAP with negative momentum."
+          "Implement a mandatory 30-minute cooling-off period and VWAP reclaim check before re-entering any stock sold earlier in the day.",
+          "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries."
         ]
       },
       "reviews": [
@@ -12686,6 +13177,37 @@
               "time": "2026-10-22T16:16-04:00",
               "action": "remove_rejected",
               "symbol": "NFLX",
+              "reason": "list would drop below 15 stocks"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "what_went_well": "We successfully captured small gains on IMAX and SPOT using trailing stops and disciplined exit execution. We also cut several underperforming positions early to protect capital rather than letting them hit full stops.",
+          "what_went_wrong": "We repeatedly forced low-conviction trades (such as LYV, BAM, and FOXA) to satisfy capital deployment rules despite opening range breakdowns. Re-entering FOXA after an earlier breakdown and buying TTWO on weak relative volume led to unnecessary losses.",
+          "lessons": [
+            "Never re-enter a stock on the same day if it has already broken down below its opening range and VWAP.",
+            "Do not execute fallback trades with conviction below 4 just to satisfy cash allocation targets.",
+            "Require relative volume (rvol) of at least 1.0 before entering momentum trades in weak market regimes."
+          ],
+          "strategy_ideas": [
+            "Implement a mandatory 30-minute cooling-off period and VWAP reclaim check before re-entering any stock sold earlier in the day.",
+            "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries."
+          ],
+          "watchlist_changes": {
+            "add": [],
+            "remove": [
+              {
+                "symbol": "WBD",
+                "reason": "Asset is inactive on the trading platform, causing order rejection errors."
+              }
+            ]
+          },
+          "watchlist": [
+            {
+              "time": "2026-10-23T16:16-04:00",
+              "action": "remove_rejected",
+              "symbol": "WBD",
               "reason": "list would drop below 15 stocks"
             }
           ]
@@ -12874,9 +13396,15 @@
             "action": "remove_rejected",
             "symbol": "EA",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-23T16:16-04:00",
+            "action": "remove_rejected",
+            "symbol": "WBD",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-23T14:13-04:00"
+        "updated": "2026-10-23T16:16-04:00"
       },
       "research": {
         "time": "2026-10-23T14:13-04:00",
@@ -15199,13 +15727,20 @@
         {
           "date": "2026-10-22",
           "lesson": "Implement a volatility filter (ATR > X%) before taking new positions to reduce whipsaw losses."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Never open short positions on stocks with extreme oversold RSI levels (< 25) due to high bounce risk."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Avoid taking opposing long and short trades on the same stock within the same intraday session."
         }
       ],
       "ideas": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "strategy_ideas": [
-          "Add a VIX\u2011based risk\u2011off rule: skip new trades when VIX > 20 or market breadth negative.",
-          "Test a momentum\u2011reversal exit: close position if 5\u2011min momentum turns negative even if price still above stop."
+          "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms."
         ]
       },
       "reviews": [
@@ -15275,6 +15810,48 @@
               "by": "evening review"
             }
           ]
+        },
+        {
+          "date": "2026-10-23",
+          "what_went_well": "Long momentum setups on high-conviction relative strength leaders like PANW, MSFT, and NOW performed well and protected portfolio capital.",
+          "what_went_wrong": "We shorted deeply oversold stocks (AMAT with RSI 5.1, MU with RSI 24.2) expecting downtrend continuation, only to get caught in sharp counter-trend bounces.",
+          "lessons": [
+            "Never open short positions on stocks with extreme oversold RSI levels (< 25) due to high bounce risk.",
+            "Avoid taking opposing long and short trades on the same stock within the same intraday session."
+          ],
+          "strategy_ideas": [
+            "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms."
+          ],
+          "watchlist_changes": {
+            "add": [
+              {
+                "symbol": "IBM",
+                "reason": "Multiple price target increases (Stifel to $260, Susquehanna to $256) providing positive momentum catalyst."
+              }
+            ],
+            "remove": [
+              {
+                "symbol": "ON",
+                "reason": "Weak price action and failed VWAP bounce setups showing low institutional volume."
+              }
+            ]
+          },
+          "watchlist": [
+            {
+              "time": "2026-10-23T16:16-04:00",
+              "action": "removed",
+              "symbol": "ON",
+              "reason": "Weak price action and failed VWAP bounce setups showing low institutional volume.",
+              "by": "evening review"
+            },
+            {
+              "time": "2026-10-23T16:16-04:00",
+              "action": "added",
+              "symbol": "IBM",
+              "reason": "Multiple price target increases (Stifel to $260, Susquehanna to $256) providing positive momentum catalyst.",
+              "by": "evening review"
+            }
+          ]
         }
       ],
       "pnl_days": [
@@ -15305,7 +15882,7 @@
           "MU",
           "PANW",
           "ANET",
-          "ON"
+          "IBM"
         ],
         "seed": [
           "AAPL",
@@ -15376,6 +15953,20 @@
             "symbol": "QCOM",
             "reason": "No catalysts or news",
             "by": "evening review"
+          },
+          {
+            "time": "2026-10-23T16:16-04:00",
+            "action": "removed",
+            "symbol": "ON",
+            "reason": "Weak price action and failed VWAP bounce setups showing low institutional volume.",
+            "by": "evening review"
+          },
+          {
+            "time": "2026-10-23T16:16-04:00",
+            "action": "added",
+            "symbol": "IBM",
+            "reason": "Multiple price target increases (Stifel to $260, Susquehanna to $256) providing positive momentum catalyst.",
+            "by": "evening review"
           }
         ],
         "rejected": [
@@ -15404,7 +15995,7 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-23T12:58-04:00"
+        "updated": "2026-10-23T16:16-04:00"
       },
       "research": {
         "time": "2026-10-23T14:13-04:00",
@@ -15727,42 +16318,6 @@
             "summary": "Advanced Micro Devices shares decline as chip supply chain issues persist.",
             "source": "benzinga",
             "seen_at": "2026-10-22T16:20-04:00"
-          },
-          {
-            "symbol": "IBM",
-            "sentiment": 0.6,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Stifel maintains a Buy rating on IBM and raises its price target to $260.",
-            "source": "benzinga",
-            "seen_at": "2026-10-22T08:58-04:00"
-          },
-          {
-            "symbol": "IBM",
-            "sentiment": 0.2,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Susquehanna keeps a neutral rating on IBM but lifts its price target to $256, indicating modest optimism.",
-            "source": "Benzinga",
-            "seen_at": "2026-10-22T08:38-04:00"
-          },
-          {
-            "symbol": "TXN",
-            "sentiment": -0.2,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Mizuho maintained its Neutral rating on Texas Instruments while lowering its price target to $290.",
-            "source": "benzinga",
-            "seen_at": "2026-10-22T08:23-04:00"
-          },
-          {
-            "symbol": "NVDA",
-            "sentiment": 0.3,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Rockwell Automation announced the expansion of its FactoryTalk Conductor platform utilizing Nvidia's Nemotron models.",
-            "source": "benzinga",
-            "seen_at": "2026-10-22T08:23-04:00"
           }
         ],
         "technicals": {
@@ -17177,13 +17732,25 @@
         {
           "date": "2026-10-22",
           "lesson": "In risk-off regimes, prioritize shorting high-volume breakdowns over chasing low-volume breakouts."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Require multi\u2011timeframe confirmation before taking momentum trades in a risk\u2011off market"
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Avoid entering positions when overall sector sentiment is negative, even if the individual stock looks strong"
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Set stops based on volatility (ATR) rather than fixed dollar amounts to reduce being stopped out on normal swings"
         }
       ],
       "ideas": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "strategy_ideas": [
-          "Implement a strict 'news filter' that blocks long entries on any stock with negative sentiment news in the last 24 hours.",
-          "Test a 'VWAP Reclaim' strategy: only enter longs if price reclaims VWAP with increasing volume after a dip, rather than buying the initial breakout."
+          "Implement a market\u2011regime filter that disables new entries when the S&P 500 is below its 50\u2011day moving average",
+          "Test a trend\u2011following approach with ATR\u2011based stops and profit targets instead of fixed VWAP reclaim entries"
         ]
       },
       "reviews": [
@@ -17251,6 +17818,58 @@
               "symbol": "TJX",
               "reason": "No upcoming earnings or news catalysts in the next 48 hours.",
               "by": "evening review"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "what_went_well": "The AMZN long yielded a modest profit, showing the VWAP bounce can work when momentum stays positive.",
+          "what_went_wrong": "Most trades lost due to entering on weak momentum in a risk\u2011off environment, premature exits after manager\u2011sell signals, and a short TSLA that reversed after breaching VWAP.",
+          "lessons": [
+            "Require multi\u2011timeframe confirmation before taking momentum trades in a risk\u2011off market",
+            "Avoid entering positions when overall sector sentiment is negative, even if the individual stock looks strong",
+            "Set stops based on volatility (ATR) rather than fixed dollar amounts to reduce being stopped out on normal swings"
+          ],
+          "strategy_ideas": [
+            "Implement a market\u2011regime filter that disables new entries when the S&P 500 is below its 50\u2011day moving average",
+            "Test a trend\u2011following approach with ATR\u2011based stops and profit targets instead of fixed VWAP reclaim entries"
+          ],
+          "watchlist_changes": {
+            "add": [
+              {
+                "symbol": "LKQ",
+                "reason": "Earnings before open on Oct 29, potential catalyst"
+              },
+              {
+                "symbol": "CMG",
+                "reason": "Earnings after close on Oct 28, strong growth outlook"
+              },
+              {
+                "symbol": "RCL",
+                "reason": "Upcoming earnings on Oct 27, cruise demand catalyst"
+              }
+            ],
+            "remove": [
+              {
+                "symbol": "ORLY",
+                "reason": "Repeated stop\u2011losses and weak momentum"
+              },
+              {
+                "symbol": "BKNG",
+                "reason": "Failed long thesis, poor sector rotation"
+              },
+              {
+                "symbol": "DPZ",
+                "reason": "Consistently underperformed and no near\u2011term catalyst"
+              }
+            ]
+          },
+          "watchlist": [
+            {
+              "time": "2026-10-23T16:16-04:00",
+              "action": "remove_rejected",
+              "symbol": "BKNG",
+              "reason": "list would drop below 15 stocks"
             }
           ]
         }
@@ -17386,9 +18005,15 @@
             "action": "remove_rejected",
             "symbol": "F",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-23T16:16-04:00",
+            "action": "remove_rejected",
+            "symbol": "BKNG",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-23T12:54-04:00"
+        "updated": "2026-10-23T16:16-04:00"
       },
       "research": {
         "time": "2026-10-23T14:13-04:00",
@@ -17463,6 +18088,24 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "DECK",
+            "sentiment": -0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Telsey Advisory Group lowered its price target on Deckers Outdoor to $90 while maintaining a Market Perform rating.",
+            "source": "benzinga",
+            "seen_at": "2026-10-23T17:19-04:00"
+          },
+          {
+            "symbol": "LKQ",
+            "sentiment": -0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Barrington Research downgraded LKQ to Market Perform, a minor negative signal from a single analyst.",
+            "source": "benzinga",
+            "seen_at": "2026-10-23T16:34-04:00"
+          },
           {
             "symbol": "TSLA",
             "sentiment": 0,
@@ -17597,24 +18240,6 @@
             "summary": "Royal Caribbean confirmed 110 cruise calls to Antigua for the 2027\u20112028 season, indicating future revenue growth.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-22T16:35-04:00"
-          },
-          {
-            "symbol": "TSLA",
-            "sentiment": -0.2,
-            "importance": 1,
-            "unconfirmed_rumor": false,
-            "summary": "GLJ Research reiterated its Sell rating on Tesla while maintaining an outlier $24.86 price target.",
-            "source": "benzinga",
-            "seen_at": "2026-10-22T08:38-04:00"
-          },
-          {
-            "symbol": "TSLA",
-            "sentiment": 0.4,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Mizuho maintained an Outperform rating on Tesla and raised its price target to $460.",
-            "source": "benzinga",
-            "seen_at": "2026-10-22T08:24-04:00"
           }
         ],
         "technicals": {
@@ -19075,13 +19700,25 @@
         {
           "date": "2026-10-22",
           "lesson": "Avoid long entries on overbought symbols in a risk\u2011off regime unless a strong catalyst justifies it."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Avoid opening\u2011range breakout entries when relative volume is high but price is already losing momentum; require VWAP confirmation before entry."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Tighten stop distances on low\u2011volume or flat\u2011trend stocks and use tighter trailing stops for mean\u2011reversion plays."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Do not re\u2011enter the same ticker after an early manager\u2011sell unless a new catalyst emerges."
         }
       ],
       "ideas": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "strategy_ideas": [
-          "Add a rule to filter long entries by RSI\u202f<\u202f70 and positive volume momentum during risk\u2011off periods.",
-          "Expand short\u2011momentum breakdowns as the primary risk\u2011off play, focusing on high\u2011volume breakdowns like HOOD and similar tickers."
+          "Add a VWAP\u2011above\u2011price filter for all breakout entries to ensure the trade aligns with the intraday trend.",
+          "Implement dynamic profit targets (e.g., 1.5\u00d7 risk) with trailing stops that tighten after a 0.5% move in our favor for mean\u2011reversion longs."
         ]
       },
       "reviews": [
@@ -19147,6 +19784,70 @@
               "time": "2026-10-22T16:18-04:00",
               "action": "remove_rejected",
               "symbol": "GS",
+              "reason": "list would drop below 15 stocks"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "what_went_well": "Long positions in GS, JPM, MS, COF and HOOD generated modest gains, showing our news\u2011catalyst and mean\u2011reversion filters can work on the right setups.",
+          "what_went_wrong": "Several losing trades (C, both BLK entries, CME, and the AXP short) were entered on weak or flat momentum and exited after the price drifted against us, highlighting overly aggressive opening\u2011range breakouts and insufficient stop discipline.",
+          "lessons": [
+            "Avoid opening\u2011range breakout entries when relative volume is high but price is already losing momentum; require VWAP confirmation before entry.",
+            "Tighten stop distances on low\u2011volume or flat\u2011trend stocks and use tighter trailing stops for mean\u2011reversion plays.",
+            "Do not re\u2011enter the same ticker after an early manager\u2011sell unless a new catalyst emerges."
+          ],
+          "strategy_ideas": [
+            "Add a VWAP\u2011above\u2011price filter for all breakout entries to ensure the trade aligns with the intraday trend.",
+            "Implement dynamic profit targets (e.g., 1.5\u00d7 risk) with trailing stops that tighten after a 0.5% move in our favor for mean\u2011reversion longs."
+          ],
+          "watchlist_changes": {
+            "add": [
+              {
+                "symbol": "V",
+                "reason": "Earnings on 2026-10-27 after close \u2013 high\u2011impact catalyst for financials"
+              },
+              {
+                "symbol": "SPGI",
+                "reason": "Earnings on 2026-10-27 before open \u2013 strong sector relevance"
+              },
+              {
+                "symbol": "MA",
+                "reason": "Earnings on 2026-10-29 before open \u2013 potential volatility"
+              }
+            ],
+            "remove": [
+              {
+                "symbol": "C",
+                "reason": "Flat momentum, low volume, and recent loss"
+              },
+              {
+                "symbol": "BLK",
+                "reason": "Multiple losing entries, breakout setup not reliable in risk\u2011off tape"
+              },
+              {
+                "symbol": "AXP",
+                "reason": "Short position underperformed and added to portfolio drag"
+              }
+            ]
+          },
+          "watchlist": [
+            {
+              "time": "2026-10-23T16:17-04:00",
+              "action": "remove_rejected",
+              "symbol": "C",
+              "reason": "list would drop below 15 stocks"
+            },
+            {
+              "time": "2026-10-23T16:17-04:00",
+              "action": "remove_rejected",
+              "symbol": "BLK",
+              "reason": "list would drop below 15 stocks"
+            },
+            {
+              "time": "2026-10-23T16:17-04:00",
+              "action": "remove_rejected",
+              "symbol": "AXP",
               "reason": "list would drop below 15 stocks"
             }
           ]
@@ -19236,9 +19937,27 @@
             "action": "remove_rejected",
             "symbol": "GS",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-23T16:17-04:00",
+            "action": "remove_rejected",
+            "symbol": "C",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-23T16:17-04:00",
+            "action": "remove_rejected",
+            "symbol": "BLK",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-23T16:17-04:00",
+            "action": "remove_rejected",
+            "symbol": "AXP",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-23T12:49-04:00"
+        "updated": "2026-10-23T16:17-04:00"
       },
       "research": {
         "time": "2026-10-23T14:14-04:00",
@@ -19296,6 +20015,15 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "GS",
+            "sentiment": -0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Goldman Sachs' prime brokerage division reported significant losses for hedge fund clients due to market volatility, indicating heightened risk in their trading book.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-23T16:34-04:00"
+          },
           {
             "symbol": "SCHW",
             "sentiment": -0.6,
@@ -19511,15 +20239,6 @@
             "summary": "JPMorgan Chase announced a $10\u202fmillion low\u2011cost loan to support small\u2011business financing in Atlanta.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-22T16:35-04:00"
-          },
-          {
-            "symbol": "V",
-            "sentiment": 0.2,
-            "importance": 3,
-            "unconfirmed_rumor": true,
-            "summary": "Visa is reportedly in talks to acquire crypto custody and infrastructure firm Fireblocks for approximately $2.5 billion.",
-            "source": "benzinga",
-            "seen_at": "2026-10-22T08:40-04:00"
           }
         ],
         "technicals": {
@@ -21920,12 +22639,25 @@
         {
           "date": "2026-10-22",
           "lesson": "Tighten stop placement (e.g., 1\u20131.5% below entry) to reduce whipsaw losses in choppy markets."
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Confirm a clear uptrend (price above VWAP and positive momentum) before buying news catalysts;"
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Use an ATR\u2011based stop (\u22652% of ATR) instead of a fixed dollar stop to avoid premature stop\u2011outs on volatile moves;"
+        },
+        {
+          "date": "2026-10-23",
+          "lesson": "Hold a position until it recovers above VWAP for at least 15 minutes before exiting on a VWAP dip."
         }
       ],
       "ideas": {
-        "date": "2026-10-22",
+        "date": "2026-10-23",
         "strategy_ideas": [
-          "Add an earnings\u2011plus\u2011momentum filter: buy only if post\u2011earnings price breaks above VWAP with rvol > 1.5 and m15 > 0.5%.\nAdd a risk\u2011off filter that blocks buys when VIX > 20 or major indices fall >1% to avoid chasing weak momentum."
+          "Implement ATR\u2011based dynamic stops for all news\u2011catalyst trades;",
+          "Add a rule to keep a position until it has moved at least 1% above VWAP before considering an exit."
         ]
       },
       "reviews": [
@@ -21992,6 +22724,72 @@
               "reason": "list would drop below 15 stocks"
             }
           ]
+        },
+        {
+          "date": "2026-10-23",
+          "what_went_well": "ABT and UNH trades closed with modest gains, confirming that our VWAP\u2011based exit criteria can capture small upside when price remains near support.",
+          "what_went_wrong": "Several long positions were exited below VWAP or hit stop loss (BMY, MRK, JNJ, ABT, AMGN) because the initial entry did not confirm a bullish trend or the stop was too tight for the stock\u2019s volatility. The risk\u2011off filter also prevented us from adjusting position sizing to the actual volatility of the news catalyst.",
+          "lessons": [
+            "Confirm a clear uptrend (price above VWAP and positive momentum) before buying news catalysts;",
+            "Use an ATR\u2011based stop (\u22652% of ATR) instead of a fixed dollar stop to avoid premature stop\u2011outs on volatile moves;",
+            "Hold a position until it recovers above VWAP for at least 15 minutes before exiting on a VWAP dip."
+          ],
+          "strategy_ideas": [
+            "Implement ATR\u2011based dynamic stops for all news\u2011catalyst trades;",
+            "Add a rule to keep a position until it has moved at least 1% above VWAP before considering an exit."
+          ],
+          "watchlist_changes": {
+            "add": [
+              {
+                "symbol": "LLY",
+                "reason": "Upcoming earnings on 2026-10-29 before open"
+              },
+              {
+                "symbol": "MRK",
+                "reason": "Upcoming earnings on 2026-10-29 before open"
+              },
+              {
+                "symbol": "BMY",
+                "reason": "Upcoming earnings on 2026-10-29 before open"
+              }
+            ],
+            "remove": [
+              {
+                "symbol": "MOH",
+                "reason": "No catalysts or earnings in next 30 days"
+              },
+              {
+                "symbol": "ARGX",
+                "reason": "No catalysts or earnings in next 30 days"
+              },
+              {
+                "symbol": "REGN",
+                "reason": "No catalysts or earnings in next 30 days"
+              }
+            ]
+          },
+          "watchlist": [
+            {
+              "time": "2026-10-23T16:18-04:00",
+              "action": "removed",
+              "symbol": "MOH",
+              "reason": "No catalysts or earnings in next 30 days",
+              "by": "evening review"
+            },
+            {
+              "time": "2026-10-23T16:18-04:00",
+              "action": "removed",
+              "symbol": "ARGX",
+              "reason": "No catalysts or earnings in next 30 days",
+              "by": "evening review"
+            },
+            {
+              "time": "2026-10-23T16:18-04:00",
+              "action": "remove_rejected",
+              "symbol": "REGN",
+              "reason": "list would drop below 15 stocks"
+            }
+          ]
         }
       ],
       "pnl_days": [
@@ -22027,9 +22825,7 @@
           "REGN",
           "MDT",
           "DHR",
-          "MRNA",
-          "ARGX",
-          "MOH"
+          "MRNA"
         ],
         "seed": [
           "LLY",
@@ -22100,6 +22896,20 @@
             "symbol": "MOH",
             "reason": "Morgan Stanley raises price target, healthcare insurer",
             "by": "manager"
+          },
+          {
+            "time": "2026-10-23T16:18-04:00",
+            "action": "removed",
+            "symbol": "MOH",
+            "reason": "No catalysts or earnings in next 30 days",
+            "by": "evening review"
+          },
+          {
+            "time": "2026-10-23T16:18-04:00",
+            "action": "removed",
+            "symbol": "ARGX",
+            "reason": "No catalysts or earnings in next 30 days",
+            "by": "evening review"
           }
         ],
         "rejected": [
@@ -22114,9 +22924,15 @@
             "action": "remove_rejected",
             "symbol": "DHR",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-23T16:18-04:00",
+            "action": "remove_rejected",
+            "symbol": "REGN",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-23T13:52-04:00"
+        "updated": "2026-10-23T16:18-04:00"
       },
       "research": {
         "time": "2026-10-23T14:17-04:00",
@@ -22274,6 +23090,24 @@
         },
         "overnight": [
           {
+            "symbol": "MRK",
+            "sentiment": 1.0,
+            "importance": 5,
+            "unconfirmed_rumor": false,
+            "summary": "Moderna and Merck report positive Phase 3 trial results for cancer vaccine.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-23T16:34-04:00"
+          },
+          {
+            "symbol": "ABBV",
+            "sentiment": 1.0,
+            "importance": 5,
+            "unconfirmed_rumor": false,
+            "summary": "AbbVie receives FDA approval for new treatment for inflammatory bowel disease.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-23T16:34-04:00"
+          },
+          {
             "symbol": "MRNA",
             "sentiment": 0.2,
             "importance": 2,
@@ -22373,15 +23207,6 @@
             "source": "benzinga",
             "time": "2026-10-22T14:25:31Z",
             "seen_at": "2026-10-22T16:20-04:00"
-          },
-          {
-            "symbol": "UNH",
-            "sentiment": 0.8,
-            "importance": 4,
-            "unconfirmed_rumor": false,
-            "summary": "Mizuho upgrades UnitedHealth to Outperform and raises its price target to $500.",
-            "source": "benzinga",
-            "seen_at": "2026-10-22T08:27-04:00"
           }
         ],
         "technicals": {
@@ -22595,6 +23420,24 @@
         "min_conviction_to_buy": 4,
         "cash_reserve_pct": 0.15
       }
+    },
+    {
+      "date": "2026-10-23",
+      "decision": "Paused Space team due to persistent losses and low win rate. Tightened risk limits (lower max position size, higher conviction threshold, lower trade cap) to reduce churn and forced low-quality entries. Reallocated capital from Space to Defense and Financials to strengthen the portfolio's core.",
+      "allocations": {
+        "defense": 0.3063,
+        "space": 0.125,
+        "entertainment": 0.0438,
+        "tech": 0.1313,
+        "consumer": 0.0875,
+        "financials": 0.175,
+        "healthcare": 0.1313
+      },
+      "risk_overrides": {
+        "max_position_pct": 0.15,
+        "max_trades_per_team_per_day": 15,
+        "min_conviction_to_buy": 4
+      }
     }
   ],
   "reports_index": [
@@ -22603,6 +23446,12 @@
       "headline": "Down 0.75% vs market down 0.86%; defense led gains",
       "day_change_pct": -0.0075,
       "equity": 99304.07
+    },
+    {
+      "date": "2026-10-23",
+      "headline": "Down 0.09% vs market, defense still leading gains",
+      "day_change_pct": -0.0009,
+      "equity": 99215.57
     }
   ],
   "blocked_recent": [
