@@ -388,5 +388,44 @@
       "BUY PANW x2 (~$722.82) [deploy]",
       "BUY MSFT x1 (~$521.03) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:30",
+    "trigger": "scheduled look",
+    "market_view": "The market is sliding with SPY down -0.6% and only 19% of stocks up, so risk-off caution applies and longs should be smaller and pickier. Our watchlist shows AMD breaking out above its opening range with volume while PANW and MSFT hold above VWAP; meanwhile CRM, ADBE, and INTU are breaking down. Existing shorts in AMAT and AVGO are not working as those stocks hold up, so cutting them and rotating into the strongest intraday breakout makes sense.",
+    "experiment": "Test a momentum-reversal exit: close a position if 5-minute momentum turns negative even if price is still above the stop.",
+    "decisions": [
+      {
+        "symbol": "AMAT",
+        "action": "COVER",
+        "conviction": 4,
+        "reason": "Short is down 1.0% with RSI at 5.1 (extremely oversold); bounce risk in a risk-off tape and the 381.46 stop is close to current 378.48. Cut the loss and redeploy.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "AVGO",
+        "action": "COVER",
+        "conviction": 3,
+        "reason": "Short is flat to slightly negative with no follow-through below VWAP; risk-off shorts are not working here, so cut the small loss.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "AMD",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "AMD broke out above its opening range (508.59-517.04), trades above VWAP +0.6%, has rvol 1.64, and is up 1.9% on the day; RSI 23.6 suggests an oversold bounce in a weak tape.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "COVER AMAT",
+      "COVER AVGO",
+      "BUY AMD x1 (~$518.03)",
+      "BUY NVDA x4 (~$851.42) [deploy]"
+    ]
   }
 ]

@@ -316,5 +316,43 @@
       "BUY HEI x9 (~$2656.98)",
       "BUY PLTR x14 (~$2731.19) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:30",
+    "trigger": "must invest $8,449 more (75% rule)",
+    "market_view": "The market is sliding with SPY down -0.6% and VIXY up +4.7%; only 19% of watched stocks are up, so caution is warranted and longs should be small and selective. Defense is mixed: LMT and CACI show opening-range breakouts above VWAP with volume, while BAH and RTX are weak. I will cut the stalled PLTR long and redeploy into the clearest breakout setups (CACI, SAIC) to move closer to the 75% invested minimum.",
+    "experiment": "Expand the 50% scale-out rule to all bracket trades with a 1R target",
+    "decisions": [
+      {
+        "symbol": "PLTR",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "Intraday momentum stalled, trend down, below entry price despite positive analyst commentary; redeploy capital to stronger breakout setups in a risk-off market.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "CACI",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Stifel upgraded to Buy with $925 price target; price broke above OR high 616.13, trades above VWAP (+0.9%) with rvol 2.08; RSI 51.8 is neutral.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "SAIC",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Executive order to add; price broke above OR high 142.78, trades above VWAP (+0.6%), trend up; RSI 77.2 is elevated but under the 80 skip filter.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL PLTR",
+      "BUY CACI x4 (~$2478.08)",
+      "BUY SAIC x19 (~$2717.76)"
+    ]
   }
 ]

@@ -506,5 +506,52 @@
       "BUY ISRG x2 (~$899.54) [deploy]",
       "BUY BMY x15 (~$921.38) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:30",
+    "trigger": "big news on ['JNJ']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "UNH",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strongest relative strength in the sector (day -0.7% vs SPY -0.6%, but holding above VWAP with positive 15m momentum). RSI is overbought (80), but in a risk-off day, holding strength is a key signal. News is mixed (White River Health exit), but price action is leading. Fits the 'price above VWAP' rule.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "ABT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Positive catalysts from Wells Fargo PT raise and Oncodetect data. Price is near VWAP (-0.5%) and showing a slight bounce (+0.4% look). While below OR, the news flow supports a dip-buy or stabilization play. Meets min conviction 4.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.025
+      },
+      {
+        "symbol": "BMY",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is underwater (-0.05%) and trading below VWAP (-1.1%) with a confirmed Opening Range Breakdown. Trend is down. Market mood is caution. Cut the loser to free up capital for stronger setups like UNH/ABT.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "MRNA",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is flat/slightly up but price is breaking down (look -0.4%, m15 -0.4%) and news is negative (ESMO data leak). RSI is neutral but momentum is fading. Better to take the small win/flat exit and redeploy into stronger momentum names.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "SELL BMY",
+      "SELL MRNA",
+      "BUY UNH x2 (~$844.09)",
+      "BUY ABT x9 (~$919.62)"
+    ]
   }
 ]
