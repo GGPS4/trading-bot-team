@@ -4613,7 +4613,7 @@
     "entry_price": 200.78,
     "entry_time": "2026-10-23T14:16:40.220402593Z",
     "high": 202.045,
-    "low": 199.905,
+    "low": 199.66,
     "stop_order_id": "76fb438f-b95e-4f76-99ad-b5c9f128249c",
     "stop_sent": 196.66,
     "stop_qty_sent": 9
@@ -5236,7 +5236,7 @@
     "qty_open": 58.0,
     "dollars": 472.12,
     "est_price": 8.14,
-    "stop_price": 8.19,
+    "stop_price": 8.22,
     "first_stop": 7.98,
     "take_profit_price": 8.38,
     "risk_dollars": 9.44,
@@ -5248,10 +5248,10 @@
     "status": "open",
     "entry_price": 8.11,
     "entry_time": "2026-10-23T14:46:33.040931825Z",
-    "high": 8.255,
+    "high": 8.29,
     "low": 8.07,
-    "stop_order_id": "2bf862a0-46e8-42fd-8ae7-a91d90d7bbd6",
-    "stop_sent": 8.19,
+    "stop_order_id": "cec1ec06-0478-46af-968f-b4bbd7f2e6ca",
+    "stop_sent": 8.22,
     "stop_qty_sent": 58,
     "trail_active": true
   },
@@ -5313,7 +5313,7 @@
     "setup": "momentum",
     "experiment": "VWAP-bias filter: go long only if price is above VWAP with positive 15-minute momentum. Today, this filter was applied for DIS and BAM buys, which are the only stocks meeting the criteria. This aligns",
     "order_id": "d1fc7771-ff6a-4ae0-b598-11594f29ca0c",
-    "status": "open",
+    "status": "closed",
     "entry_price": 47.2,
     "entry_time": "2026-10-23T14:53:19.671855676Z",
     "high": 47.46,
@@ -5323,7 +5323,11 @@
     "stop_qty_sent": 20,
     "exit_order_id": "59355171-9c1b-43a8-84b4-c0376e85b74b",
     "exit_reason": "manager_sell",
-    "exit_note": "Stalled momentum long, inside opening range, flat P&L, low volume; cut failed setup."
+    "exit_note": "Stalled momentum long, inside opening range, flat P&L, low volume; cut failed setup.",
+    "exit_price": 47.09,
+    "exit_time": "2026-10-23T16:58:21.797300462Z",
+    "pnl": -3.14,
+    "pnl_pct": -0.0033
   },
   {
     "id": "defense-PLTR-202610231057-236a",
@@ -5942,7 +5946,7 @@
     "setup": "news catalyst",
     "experiment": "Testing high-conviction news catalyst entries with price above VWAP and ATR-based stops of at least 2%, as per executive orders.",
     "order_id": "3c9ca6e1-9eac-494d-a19f-356caab5996d",
-    "status": "open",
+    "status": "closed",
     "entry_price": 144.83,
     "entry_time": "2026-10-23T15:36:45.839564181Z",
     "high": 145.095,
@@ -5952,7 +5956,11 @@
     "stop_qty_sent": 6,
     "exit_order_id": "add020e8-0769-404d-8a97-a2f3460234d0",
     "exit_reason": "manager_sell",
-    "exit_note": "Closing losing long; stop was -1.9% vs ATR-based minimum 2%, and price lacked above-VWAP breakout confirmation."
+    "exit_note": "Closing losing long; stop was -1.9% vs ATR-based minimum 2%, and price lacked above-VWAP breakout confirmation.",
+    "exit_price": 144.61,
+    "exit_time": "2026-10-23T16:58:19.019300469Z",
+    "pnl": -2.19,
+    "pnl_pct": -0.0025
   },
   {
     "id": "healthcare-MRNA-202610231136-1b96",
@@ -6192,7 +6200,7 @@
     "status": "open",
     "entry_price": 144.63,
     "entry_time": "2026-10-23T15:53:24.762057666Z",
-    "high": 145.31,
+    "high": 145.39,
     "low": 144.07,
     "stop_order_id": "eaca77d0-c6a8-4df2-86fe-5376a1f57341",
     "stop_sent": 141.91,
@@ -6260,7 +6268,7 @@
     "entry_price": 313.295,
     "entry_time": "2026-10-23T15:53:24.859372555Z",
     "high": 313.8,
-    "low": 312.72,
+    "low": 311.44,
     "stop_order_id": "fbb11cf6-2c30-430c-9f76-c94ac48de33c",
     "stop_sent": 319.47,
     "stop_qty_sent": 8
@@ -6320,7 +6328,7 @@
     "entry_price": 809.09,
     "entry_time": "2026-10-23T16:04:00.594813341Z",
     "high": 809.595,
-    "low": 807.84,
+    "low": 806.06,
     "stop_order_id": "4f55a47d-3a9b-48d8-aced-24f3f565d209",
     "stop_sent": 792.34,
     "stop_qty_sent": 1
@@ -6350,7 +6358,7 @@
     "entry_price": 26.081945,
     "entry_time": "2026-10-23T16:06:44.120032967Z",
     "high": 26.135,
-    "low": 26.08,
+    "low": 26.075,
     "stop_order_id": "428a95c6-45d9-48d0-a327-233619df09d1",
     "stop_sent": 25.56,
     "stop_qty_sent": 36
@@ -6380,7 +6388,7 @@
     "entry_price": 67.17,
     "entry_time": "2026-10-23T16:06:44.069261908Z",
     "high": 67.45,
-    "low": 67.13,
+    "low": 67.02,
     "stop_order_id": "a4961a9d-b1cd-442f-968f-1b46be98ec8d",
     "stop_sent": 65.8,
     "stop_qty_sent": 14
@@ -6410,7 +6418,7 @@
     "entry_price": 159.11,
     "entry_time": "2026-10-23T16:06:41.363466302Z",
     "high": 159.38,
-    "low": 159.02,
+    "low": 159.005,
     "stop_order_id": "813164dc-8281-4cba-9a83-388312d020c1",
     "stop_sent": 155.83,
     "stop_qty_sent": 5
@@ -6440,7 +6448,7 @@
     "entry_price": 890.06,
     "entry_time": "2026-10-23T16:06:42.158635529Z",
     "high": 890.06,
-    "low": 884.6,
+    "low": 884.31,
     "stop_order_id": "c335e892-bac6-4c0c-b85c-3c8a91ebbe9e",
     "stop_sent": 877.63,
     "stop_qty_sent": 1
@@ -6500,7 +6508,7 @@
     "entry_price": 285.3,
     "entry_time": "2026-10-23T16:06:41.829778484Z",
     "high": 285.76,
-    "low": 283.95,
+    "low": 282.9,
     "stop_order_id": "9e4b2204-8ec9-4ad1-907f-86aa202a6d38",
     "stop_sent": 280.89,
     "stop_qty_sent": 3
@@ -6526,7 +6534,7 @@
     "setup": "mean reversion",
     "experiment": "Test a momentum-reversal exit: close position if 5-min momentum turns negative even if price still above stop.",
     "order_id": "cbdb6cb5-fbbe-4cf6-b074-1645fb825ee2",
-    "status": "open",
+    "status": "closed",
     "entry_price": 383.66,
     "entry_time": "2026-10-23T16:06:43.258902071Z",
     "high": 383.66,
@@ -6536,7 +6544,11 @@
     "stop_qty_sent": 2,
     "exit_order_id": "d42e7b5c-1148-495a-9eba-2348685cb256",
     "exit_reason": "manager_sell",
-    "exit_note": "Weak follow-through after mean reversion long; price near stop, below VWAP, no fresh catalyst, and longer trend negative."
+    "exit_note": "Weak follow-through after mean reversion long; price near stop, below VWAP, no fresh catalyst, and longer trend negative.",
+    "exit_price": 380.36,
+    "exit_time": "2026-10-23T16:58:19.781403026Z",
+    "pnl": -7.36,
+    "pnl_pct": -0.0096
   },
   {
     "id": "tech-ON-202610231206-f747",
@@ -6559,7 +6571,7 @@
     "setup": "VWAP bounce",
     "experiment": "Test a momentum-reversal exit: close position if 5-min momentum turns negative even if price still above stop.",
     "order_id": "13e02ac8-b990-4960-89fd-bf1f7d0e666a",
-    "status": "open",
+    "status": "closed",
     "entry_price": 72.72,
     "entry_time": "2026-10-23T16:06:43.693500194Z",
     "high": 72.72,
@@ -6569,7 +6581,11 @@
     "stop_qty_sent": 13,
     "exit_order_id": "9a5acac5-5c84-4baa-a9c8-badd0c472d2b",
     "exit_reason": "manager_sell",
-    "exit_note": "Failed VWAP bounce; below VWAP, momentum negative, and stop proximity makes it vulnerable."
+    "exit_note": "Failed VWAP bounce; below VWAP, momentum negative, and stop proximity makes it vulnerable.",
+    "exit_price": 72.13,
+    "exit_time": "2026-10-23T16:58:18.96445652Z",
+    "pnl": -8.61,
+    "pnl_pct": -0.0091
   },
   {
     "id": "healthcare-MRNA-202610231219-0051",
@@ -6592,7 +6608,7 @@
     "setup": "news catalyst",
     "experiment": "Testing risk-off filter that blocks buys when VIX > 20 or major indices fall >1%; only trading high-conviction news catalysts",
     "order_id": "3e615d20-6e64-4d37-bf84-0440af1422d5",
-    "status": "open",
+    "status": "closed",
     "entry_price": 205.79,
     "entry_time": "2026-10-23T16:19:01.6306119Z",
     "high": 206.63,
@@ -6602,7 +6618,11 @@
     "stop_qty_sent": 4,
     "exit_order_id": "72c70893-70c0-46dd-9834-9bf8835b8049",
     "exit_reason": "manager_sell",
-    "exit_note": "Closing long with fading momentum after OR breakout; m15 -1.2%, price still above VWAP but losing -1.09%."
+    "exit_note": "Closing long with fading momentum after OR breakout; m15 -1.2%, price still above VWAP but losing -1.09%.",
+    "exit_price": 204.6,
+    "exit_time": "2026-10-23T16:58:19.679043058Z",
+    "pnl": -5.58,
+    "pnl_pct": -0.0068
   },
   {
     "id": "defense-LMT-202610231229-1b79",
@@ -6659,7 +6679,7 @@
     "entry_price": 252.3,
     "entry_time": "2026-10-23T16:29:05.352149203Z",
     "high": 252.76,
-    "low": 252.28,
+    "low": 251.79,
     "stop_order_id": "e44ffa3a-d898-4a91-8d4d-4f2faac2a5b6",
     "stop_sent": 248.23,
     "stop_qty_sent": 11
@@ -6688,8 +6708,8 @@
     "status": "open",
     "entry_price": 120.93,
     "entry_time": "2026-10-23T16:54:00.694953412Z",
-    "high": 120.93,
-    "low": 120.745,
+    "high": 121.15,
+    "low": 120.7,
     "stop_order_id": "bca80f71-9888-4cc5-8e41-e840fe5ddff8",
     "stop_sent": 118.74,
     "stop_qty_sent": 31
@@ -6719,7 +6739,7 @@
     "entry_price": 639.09,
     "entry_time": "2026-10-23T16:54:01.302999381Z",
     "high": 639.09,
-    "low": 637.24,
+    "low": 635.5,
     "stop_order_id": "7798b034-40ec-4300-a183-4b8b3edc36f6",
     "stop_sent": 628.62,
     "stop_qty_sent": 5
@@ -6749,7 +6769,7 @@
     "entry_price": 11.62,
     "entry_time": "2026-10-23T16:54:01.835234092Z",
     "high": 11.62,
-    "low": 11.61,
+    "low": 11.59,
     "stop_order_id": "57d18bf0-e74b-4a71-836a-a7dd47c27a72",
     "stop_sent": 11.41,
     "stop_qty_sent": 163
@@ -6762,8 +6782,8 @@
     "symbol": "TTWO",
     "side": "long",
     "kind": "shares",
-    "qty": 6,
-    "qty_open": 6,
+    "qty": 6.0,
+    "qty_open": 6.0,
     "dollars": 1244.34,
     "est_price": 207.39,
     "stop_price": 204.28,
@@ -6775,8 +6795,14 @@
     "setup": "momentum",
     "experiment": "Introduce a VWAP-bias filter: go long only if price is above VWAP with positive 15-minute momentum, short only if below VWAP with negative momentum.",
     "order_id": "ae538fe5-aeea-4293-b129-20503c7eb676",
-    "status": "submitted",
-    "entry_price": null
+    "status": "open",
+    "entry_price": 206.86,
+    "entry_time": "2026-10-23T16:58:18.869528132Z",
+    "high": 206.925,
+    "low": 206.58,
+    "stop_order_id": "d9633415-4736-4a89-8950-509abfa36b45",
+    "stop_sent": 204.28,
+    "stop_qty_sent": 6
   },
   {
     "id": "tech-PANW-202610231258-38af",
@@ -6786,8 +6812,8 @@
     "symbol": "PANW",
     "side": "long",
     "kind": "shares",
-    "qty": 3,
-    "qty_open": 3,
+    "qty": 3.0,
+    "qty_open": 3.0,
     "dollars": 1130.95,
     "est_price": 376.985,
     "stop_price": 369.45,
@@ -6799,8 +6825,14 @@
     "setup": "opening range breakout",
     "experiment": "Testing VIX-based risk-off rule: skip new trades when VIX > 20 or market breadth negative; also momentum-reversal exit if 5-min momentum turns negative even if price is above stop.",
     "order_id": "6d5b761f-cb0f-43c6-ac63-83aec038bb7b",
-    "status": "submitted",
-    "entry_price": null
+    "status": "open",
+    "entry_price": 378.81,
+    "entry_time": "2026-10-23T16:58:19.801126366Z",
+    "high": 378.99,
+    "low": 376.7,
+    "stop_order_id": "b48f5019-7417-4b2d-b5ba-c157f7d33ce7",
+    "stop_sent": 369.45,
+    "stop_qty_sent": 3
   },
   {
     "id": "tech-NOW-202610231258-6cce",
@@ -6810,8 +6842,8 @@
     "symbol": "NOW",
     "side": "long",
     "kind": "shares",
-    "qty": 8,
-    "qty_open": 8,
+    "qty": 8.0,
+    "qty_open": 8.0,
     "dollars": 1258.4,
     "est_price": 157.3,
     "stop_price": 154.15,
@@ -6823,8 +6855,14 @@
     "setup": "momentum",
     "experiment": "Testing VIX-based risk-off rule: skip new trades when VIX > 20 or market breadth negative; also momentum-reversal exit if 5-min momentum turns negative even if price is above stop.",
     "order_id": "13c61b7a-cb5f-4636-8d65-fe86aef382d5",
-    "status": "submitted",
-    "entry_price": null
+    "status": "open",
+    "entry_price": 157.57,
+    "entry_time": "2026-10-23T16:58:19.690775588Z",
+    "high": 157.7,
+    "low": 157.39,
+    "stop_order_id": "47eef4a7-9701-477b-8771-dc13f410d5fd",
+    "stop_sent": 154.15,
+    "stop_qty_sent": 8
   },
   {
     "id": "healthcare-ABBV-202610231258-7c93",
@@ -6834,8 +6872,8 @@
     "symbol": "ABBV",
     "side": "long",
     "kind": "shares",
-    "qty": 4,
-    "qty_open": 4,
+    "qty": 4.0,
+    "qty_open": 4.0,
     "dollars": 1142.28,
     "est_price": 285.57,
     "stop_price": 279.86,
@@ -6847,8 +6885,14 @@
     "setup": "opening range breakout",
     "experiment": "executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops of at least 2%",
     "order_id": "e3f178dc-3e14-4c2a-b9a5-0aaef82e3a4f",
-    "status": "submitted",
-    "entry_price": null
+    "status": "open",
+    "entry_price": 285.75,
+    "entry_time": "2026-10-23T16:58:21.110413324Z",
+    "high": 285.975,
+    "low": 285.67,
+    "stop_order_id": "8e4faf74-7036-45c5-a5d4-59f4dcb1dd8e",
+    "stop_sent": 279.86,
+    "stop_qty_sent": 4
   },
   {
     "id": "healthcare-VRTX-202610231258-61e6",
@@ -6858,8 +6902,8 @@
     "symbol": "VRTX",
     "side": "long",
     "kind": "shares",
-    "qty": 2,
-    "qty_open": 2,
+    "qty": 2.0,
+    "qty_open": 2.0,
     "dollars": 1053.92,
     "est_price": 526.96,
     "stop_price": 516.42,
@@ -6871,7 +6915,13 @@
     "setup": "momentum",
     "experiment": "executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops of at least 2%",
     "order_id": "ec259468-bd56-4c9c-8984-2b439e7aaf5c",
-    "status": "submitted",
-    "entry_price": null
+    "status": "open",
+    "entry_price": 527.1,
+    "entry_time": "2026-10-23T16:58:20.77379697Z",
+    "high": 527.1,
+    "low": 526.4,
+    "stop_order_id": "211ccc96-9027-4cb1-80ed-d4ad50277f64",
+    "stop_sent": 516.42,
+    "stop_qty_sent": 2
   }
 ]
