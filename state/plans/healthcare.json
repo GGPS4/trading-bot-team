@@ -1,33 +1,50 @@
 {
   "date": "2026-10-23",
-  "time": "10:09",
-  "trigger": "price moves in ['MRNA']",
+  "time": "10:29",
+  "trigger": "must invest $2,881 more (75% rule)",
   "decisions": [
     {
-      "action": "BUY",
-      "symbol": "ISRG",
-      "side": "long",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Strong opening range breakout above $452.16 with high relative volume (2.37) and positive 15m momentum. Price is above VWAP. Meets executive criteria for confirmed catalyst and price above VWAP."
+      "symbol": "ABT",
+      "action": "SELL",
+      "reason": "Price has broken below the opening range and is trading below VWAP with negative 15m momentum. The Wells Fargo upgrade is not enough to overcome the intraday breakdown in a risk-off market. Cutting the loss to redeploy capital into stronger setups."
     },
     {
-      "action": "BUY",
-      "symbol": "MRNA",
-      "side": "long",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Strong intraday momentum with +2.1% move since last check and price significantly above VWAP (+3.8%). High relative volume (3.28) supports the move. Meets executive criteria for price above VWAP."
+      "symbol": "AMGN",
+      "action": "SELL",
+      "reason": "Stock is trading below the opening range and VWAP with very low relative volume (0.33), indicating a lack of interest. The Oppenheimer upgrade is not driving price action. Closing to free up capital for higher conviction setups."
     }
   ],
   "ranked_ideas": [
-    "TMO",
-    "ABBV",
-    "DHR",
-    "UNH",
-    "LLY"
+    {
+      "symbol": "MRNA",
+      "setup": "VWAP bounce",
+      "conviction": 5,
+      "reason": "Trading significantly above VWAP (+1.8%) with high relative volume (2.64) despite a negative gap. This suggests strong intraday accumulation and a potential reversal play. The ESMO data leak news is being absorbed, and price is holding firm."
+    },
+    {
+      "symbol": "ISRG",
+      "setup": "momentum",
+      "conviction": 4,
+      "reason": "Strongest relative volume on the list (2.77) and trading above the open. Although it has pulled back slightly from the high, the volume suggests institutional interest. A stabilization above the opening range low could offer a momentum entry."
+    },
+    {
+      "symbol": "MRK",
+      "setup": "news catalyst",
+      "conviction": 4,
+      "reason": "FDA approval for pembrolizumab is a major catalyst. While currently below VWAP, the relative volume is elevated (1.58). Watching for a bounce back above VWAP to confirm the news is being priced in positively."
+    },
+    {
+      "symbol": "JNJ",
+      "setup": "news catalyst",
+      "conviction": 3,
+      "reason": "UK regulator approval for oral psoriasis treatment is positive. Price is near the opening range low. If it bounces off the support at 262.62, it could be a good entry, but currently lacks the momentum of MRNA or ISRG."
+    },
+    {
+      "symbol": "BMY",
+      "setup": "news catalyst",
+      "conviction": 3,
+      "reason": "Strong Phase 3 data and Tempus AI deal. However, the stock is in a clear downtrend (breakdown) and trading well below VWAP. Only consider if a strong bounce occurs, but currently too weak for a long entry in a risk-off market."
+    }
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

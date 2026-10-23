@@ -329,5 +329,36 @@
       "BUY LYV blocked: conviction None is below the minimum 2",
       "BUY TTWO blocked: conviction None is below the minimum 2"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "10:29",
+    "trigger": "must invest $3,627 more (75% rule)",
+    "market_view": "The market is sliding with SPY down 0.6%, VIXY up 4.7%, and only 19% of watched stocks advancing\u2014clear risk-off conditions. Most entertainment names are breaking down below their opening ranges with weak volume, though SPOT shows relative strength with 1.98 rvol and positive 15m momentum backed by analyst price-target hikes. Longs must be smaller and pickier per the caution regime.",
+    "experiment": "Testing VWAP-bias filter: only taking longs with positive 15m momentum and tight 2% stops; SPOT is marginally below VWAP but has the strongest volume/momentum in the group.",
+    "decisions": [
+      {
+        "symbol": "FOXA",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": "Failing long: OR breakdown, below VWAP (-0.9%), trend down, price 67.115 approaching stop at 66.89. Exit to preserve capital in risk-off market.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "SPOT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Best available setup: highest rvol (1.98), positive 15m momentum (+0.8%), multiple analyst PT hikes to $650+, near OR breakout at 593.59. Deploying required capital into strongest relative name.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.035
+      }
+    ],
+    "results": [
+      "SELL FOXA",
+      "BUY SPOT x1 (~$584.75)",
+      "BUY IMAX x17 (~$903.72) [deploy]",
+      "BUY LYV x5 (~$873.85) [deploy]"
+    ]
   }
 ]
