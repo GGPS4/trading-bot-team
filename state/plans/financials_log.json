@@ -257,5 +257,52 @@
       "BUY MS x10 (~$1839.3)",
       "BUY C x15 (~$1837.8)"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "09:47",
+    "trigger": "price moves in ['AXP']",
+    "market_view": "The market is sliding in risk-off mode with SPY down 0.6% and only 14% of stocks up. Most financials are red or flat, with CME and ICE showing the only intraday strength near opening-range highs. Nearly every candidate is overbought (RSI >70) except current holdings and a few weak names, making new long entries dangerous without a clear breakout.",
+    "experiment": "Rotate out of low-volume longs into opening-range breakout setups in a risk-off regime with tight stops.",
+    "decisions": [
+      {
+        "symbol": "COF",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Exit low-volume long (rvol 0.42) that is down -0.4% in a sliding market; rotate capital to stronger OR breakout setups.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "MS",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Exit flat low-volume long (rvol 0.88) with no momentum; redeploy into stocks trading at opening-range highs above VWAP.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "BLK",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Price at OR high (1130), above VWAP +0.3%, rvol 2.4, with overnight positive sentiment; best non-overbought breakout setup available.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "CME",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Only stock with clear intraday momentum (+0.5%, open +1.1%), trading at OR high above VWAP; Goldman PT raise adds catalyst despite high RSI.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL COF",
+      "SELL MS",
+      "BUY BLK x1 (~$1131.6)",
+      "BUY CME x6 (~$1831.86)"
+    ]
   }
 ]

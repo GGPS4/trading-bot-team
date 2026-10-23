@@ -1,52 +1,42 @@
 {
   "date": "2026-10-23",
-  "time": "09:44",
-  "trigger": "price moves in ['RTX', 'KTOS', 'AVAV', 'PLTR', 'BAH', 'HEI', 'HII']",
+  "time": "09:54",
+  "trigger": "price moves in ['MRCY']",
   "decisions": [
     {
-      "symbol": "SAIC",
-      "action": "SELL",
-      "reason": "Position is down -1.87% and price is below the opening range and VWAP. Market mood is caution/risk-off. Executive rules require price > VWAP for new buys, and this position is failing its momentum setup. Stop loss is too close to current price (140.64 vs 142.78), indicating high risk of immediate stop-out or further downside. Closing to redeploy capital into stronger setups.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
-    }
-  ],
-  "ranked_ideas": [
-    {
       "symbol": "LMT",
+      "action": "BUY",
+      "conviction": 5,
       "setup": "news catalyst",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "reason": "Strong news catalyst: Barclays raised PT to $560, Goldman to $498, and CEO comments on record backlog/wartime production. Price is above VWAP (+0.4%) and near the top of the opening range (588.29 vs 588.86 high). RSI is high (82.4) but momentum is supported by clear fundamental news. Fits 'high-conviction' and 'price > VWAP' criteria."
+      "reason": "Barclays PT raise to $560 and CEO comments on record backlog due to geopolitical threats. Trading above VWAP with strong relative volume (1.75) and positive 15m momentum despite weak market. Meets President's criteria: Conviction >= 4, Price > VWAP."
     },
     {
       "symbol": "CACI",
+      "action": "BUY",
+      "conviction": 4,
       "setup": "news catalyst",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "reason": "Stifel upgraded to Buy and raised PT to $925. Price is above VWAP (+0.1%) and within the opening range. RSI is neutral (51.8), offering room for upside. Strong analyst confidence provides a clear catalyst for intraday momentum."
+      "reason": "Stifel upgrade to Buy with PT raise to $925. Trading above VWAP (+0.6%) with positive momentum (m15 +0.9%) and high relative volume (1.7). Meets President's criteria: Conviction >= 4, Price > VWAP."
     },
     {
-      "symbol": "BAH",
-      "setup": "earnings gap",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Reported earnings before the open with raised FY2027 EPS guidance. Price is below VWAP (-2.0%) and down -4.0% on the day, which violates the 'price > VWAP' rule for immediate entry. However, it is the highest conviction news play. Ranked 3rd because it needs to stabilize/reclaim VWAP before entry, or is a candidate for a mean-reversion bounce if it stabilizes. Given the strict 'price > VWAP' order, this is a lower priority for *immediate* buy compared to LMT/CACI, but remains a top watchlist item for a potential bounce."
-    },
-    {
-      "symbol": "NOC",
-      "setup": "pullback in uptrend",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Strong 5d/20d uptrend, but currently below VWAP (-0.1%) and down -1.5%. RSI is overbought (78.4). Not a strong buy right now due to price < VWAP. Ranked 4th as a potential play if it reclaims VWAP."
-    },
-    {
-      "symbol": "LHX",
+      "symbol": "KTOS",
+      "action": "BUY",
+      "conviction": 4,
       "setup": "momentum",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "reason": "Already held. Price is above VWAP (+0.4%) and up +0.47%. Dividend news is positive. Holding is the correct action. Ranked 5th as a 'hold' candidate, not a new buy."
+      "reason": "Strong intraday reversal with +1.6% move since last check and +1.2% 15m momentum. Trading above VWAP (+0.9%). RSI is low (29.7) suggesting potential for a bounce, but we are trading the current momentum. Meets President's criteria: Conviction >= 4, Price > VWAP."
     }
+  ],
+  "ranked_ideas": [
+    "AVAV",
+    "HEI",
+    "PLTR",
+    "LDOS",
+    "HII"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

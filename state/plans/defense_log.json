@@ -230,5 +230,43 @@
     "results": [
       "SELL SAIC failed: DELETE /v2/positions/SAIC -> 404: {\"code\":40410000,\"message\":\"position not found: SAIC\"}"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "time": "09:54",
+    "trigger": "price moves in ['MRCY']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "LMT",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Barclays PT raise to $560 and CEO comments on record backlog due to geopolitical threats. Trading above VWAP with strong relative volume (1.75) and positive 15m momentum despite weak market. Meets President's criteria: Conviction >= 4, Price > VWAP.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "CACI",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Stifel upgrade to Buy with PT raise to $925. Trading above VWAP (+0.6%) with positive momentum (m15 +0.9%) and high relative volume (1.7). Meets President's criteria: Conviction >= 4, Price > VWAP.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "KTOS",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strong intraday reversal with +1.6% move since last check and +1.2% 15m momentum. Trading above VWAP (+0.9%). RSI is low (29.7) suggesting potential for a bounce, but we are trading the current momentum. Meets President's criteria: Conviction >= 4, Price > VWAP.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY LMT x4 (~$2351.44)",
+      "BUY CACI x4 (~$2460.32)",
+      "BUY KTOS x76 (~$2825.3)"
+    ]
   }
 ]
