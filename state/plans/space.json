@@ -1,103 +1,21 @@
 {
   "date": "2026-10-23",
-  "time": "12:04",
+  "time": "12:44",
   "trigger": "scheduled look",
-  "market_view": "Market is sliding with a caution mood; SPY down 0.1%, VIXY up 1.0%, and only 30% of watched stocks are positive. Space and aerospace names are mixed, with defense stocks showing relative strength on news of record backlogs and rising munitions demand. High-volume moves in SPCX on mixed SpaceX rumors, while ASTS faces legal pressure, creating a choppy tape where select catalysts matter more than broad sector bets.",
+  "market_view": "Market mood is cautious with SPY -0.3%, VIXY +2.3%, and only 27% of watched stocks up. The space/aerospace sector shows divergence with HWM down 3.8% and BA holding gains. Executives 24-hour pause on new long entries forces focus on shorts and portfolio rebalancing while maintaining the 75% invested minimum. Long entries are on hold; short opportunities in weak names are the priority.",
   "decisions": [
     {
-      "symbol": "BA",
-      "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Defense sector, strong OR breakout, trading above VWAP, and positive news on record backlog and munitions demand provide a clear catalyst."
-    },
-    {
-      "symbol": "GE",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Defense/aerospace, OR breakout, above VWAP, and news of joining the NATICA consortium for air traffic services supports a continuation move."
-    },
-    {
-      "symbol": "RDW",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Space, OR breakout, above VWAP, with positive momentum. Adding to meet the 75% minimum invested rule despite the Space curtailment directive."
-    },
-    {
-      "symbol": "RKLB",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Space, OR breakout, above VWAP, and recent successful Electron launch provide a catalyst, though Neutron delays cap the conviction."
-    },
-    {
-      "symbol": "SPCX",
-      "action": "BUY",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Space, OR breakout, above VWAP, with high relative volume (2.44) on unconfirmed cell-site rumors, but mixed news on debt and revenue per user warrants a wider stop and lower conviction."
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "LUNR",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Strong upward momentum (m15 +1.3%, m60 +1.9%), OR breakout, and trading above VWAP with trend up."
-    },
-    {
-      "symbol": "FLY",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout, above VWAP, and trend up, though relatively low volume (rvol 0.44) requires quick profit-taking."
-    },
-    {
-      "symbol": "PL",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout, above VWAP, with decent intraday momentum and a stable trend."
-    },
-    {
-      "symbol": "TDG",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "mean reversion",
-      "reason": "High relative volume (4.26) after a 3.9% drop suggests a potential bounce, but price is below VWAP and momentum is mixed, so only a tactical play."
-    },
-    {
       "symbol": "HWM",
-      "direction": "short",
-      "conviction": 3,
+      "action": "SHORT",
+      "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "VWAP bounce short",
-      "reason": "Down 3.6% and below VWAP on defense sector weakness; wait for a bounce into VWAP to short, but m15 is positive so confirmation is needed."
+      "setup": "momentum",
+      "reason": "HWM down 3.8% on day, price 0.4% below VWAP, m15 -0.5% and m60 -0.8% both negative, rvol 1.87 above average, trend down. Short after 30-min VWAP confirmation per executive orders. Caution mode favors shorts in risk-off environment."
     }
   ],
-  "experiment": "Testing the momentum filter for short entries (require m15 < -0.5% and m60 < -0.5% before shorting). No watchlist stock currently meets both criteria, so no short trades were taken today. Instead, the focus is on adding to existing long positions to satisfy the 75% minimum invested rule while respecting the 24-hour pause on new long entries.",
+  "ranked_ideas": [],
+  "experiment": "Testing short momentum filter criteria from strategy ideas (m15 < -0.5% and m60 < -0.5%) versus lesson guidance (m15 < 0 and m60 < 0). HWM's m15 -0.5% is borderline under the stricter filter; using lesson criteria (both negative) for entry.",
   "watchlist_changes": {
     "add": [],
     "remove": []
