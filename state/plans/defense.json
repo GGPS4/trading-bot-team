@@ -1,76 +1,38 @@
 {
   "date": "2026-10-26",
-  "time": "10:13",
+  "time": "10:35",
   "trigger": "scheduled look",
-  "market_view": "Market is calm and slightly higher, with SPY +0.5%, QQQ +0.4%, VIXY -2.4%, and 66% of watched stocks up. Defense names are mildly upbeat, led by CACI's Navy contract and LMT upgrades, while GD is breaking above its opening range. No clear risk-off signal, so we are focusing on high-quality defense momentum.",
-  "decisions": [
+  "orders": [
     {
-      "symbol": "PLTR",
-      "action": "SELL",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "other",
-      "reason": "PLTR failed to hold above VWAP and stalled, with no valid stop in place; exiting to redeploy into the GD breakout."
+      "symbol": "CACI",
+      "side": "buy",
+      "qty": 0.102,
+      "price": 668.35,
+      "setup": "add to breakout"
+    },
+    {
+      "symbol": "LMT",
+      "side": "buy",
+      "qty": 1.559,
+      "price": 621.64,
+      "setup": "add to breakout"
+    },
+    {
+      "symbol": "NOC",
+      "side": "buy",
+      "qty": 2.274,
+      "price": 560.57,
+      "setup": "add to breakout"
     },
     {
       "symbol": "GD",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "GD broke above the opening range high at $354.24, held above VWAP, and showed positive momentum; aligns with executive focus on high-liquidity primes."
+      "side": "buy",
+      "qty": 0.479,
+      "price": 355.07,
+      "setup": "add to breakout"
     }
   ],
-  "ranked_ideas": [
-    {
-      "symbol": "BAH",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "TD Cowen upgrade and strong day move, but overbought."
-    },
-    {
-      "symbol": "HEI",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above VWAP, but low relative volume."
-    },
-    {
-      "symbol": "LDOS",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Strong 5-day trend, but overbought."
-    },
-    {
-      "symbol": "SAIC",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Positive PR award, but no direct financial impact and overbought."
-    },
-    {
-      "symbol": "KTOS",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "mean reversion",
-      "reason": "Oversold bounce setup, but weak underlying trend."
-    }
-  ],
-  "experiment": "Make the 50% scale-out at 1R standard across all opening range breakout setups to guarantee profits during choppy sessions.",
+  "ranked_ideas": [],
   "watchlist_changes": {
     "add": [],
     "remove": []

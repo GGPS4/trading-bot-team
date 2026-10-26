@@ -1080,5 +1080,34 @@
       "WATCHLIST remove rejected UNH",
       "WATCHLIST remove rejected MDT"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "10:48",
+    "trigger": "price moves in ['MRNA']",
+    "market_view": "Market is calm and slightly higher, with SPY +0.8%, QQQ +1.0%, VIXY -3.1, and 65% of watched stocks up. Healthcare names are mixed but momentum has faded below VWAP. News catalysts are driving intraday moves, but setups are inconsistent; maintaining defensive bias and quality over quantity.",
+    "experiment": "ATR-based dynamic stops for news catalyst trades",
+    "decisions": [
+      {
+        "symbol": "MRNA",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Loser from failed bullish gap; below VWAP, m15 -2.7%, rvol 2.51, trend down. Closing to free slot and avoid further volatility before close.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "ABT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "OR breakout above 104.28 with price 104.86, above VWAP, m15 +0.2%, m60 +0.9%, rvol 1.07; Abbott Oncodetect news. High-quality but borderline volume.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL MRNA",
+      "BUY ABT x16 (~$1677.76)"
+    ]
   }
 ]

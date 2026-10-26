@@ -1,62 +1,42 @@
 {
   "date": "2026-10-26",
-  "time": "10:33",
-  "trigger": "must invest $3,377 more (75% rule)",
+  "time": "10:48",
+  "trigger": "must invest $2,650 more (75% rule)",
   "decisions": [
     {
       "symbol": "TSLA",
-      "action": "SELL",
-      "reason": "Position is up ~1% and trailing stop is active. President's order to reduce trade frequency and avoid premature exits unless trend is clearly broken. However, TSLA is fading momentum (m15 +0.3% but trend down) and has already hit the initial 1-2% gain threshold. Taking profit on half or closing to redeploy capital into higher conviction setups (like RCL or CMG) aligns with the 'quality over quantity' mandate. Given the 31.6% win rate warning, locking in gains on a volatile name like TSLA after a big gap-up is prudent.",
-      "qty": 1.0
-    },
-    {
-      "symbol": "LKQ",
-      "action": "SELL",
-      "reason": "Position is down ~0.8% and has broken down below the opening range (OR breakdown) with high relative volume (rvol 1.85) and negative momentum (m15 -0.8%). The stop is at 17.00, close to current price 17.16. The 50-day MA filter is below, and RSI is oversold (22.2), but the intraday trend is clearly broken. Cutting this loss to free up capital for stronger setups is necessary to meet the 75% invested mandate with higher quality trades.",
-      "qty": 67.0
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "RCL",
-      "setup": "opening range breakout",
-      "conviction": 4,
+      "action": "BUY",
+      "setup": "news catalyst",
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "reason": "RCL is breaking out above its opening range high (282.81) with a positive day move (+2.5%) and above VWAP. It has a strong 20-day trend (+13.9%) and is above the 50-day MA. Earnings are tomorrow, so today's move is likely driven by momentum and sector strength. This is a high-conviction breakout setup."
-    },
-    {
-      "symbol": "CMG",
-      "setup": "mean reversion",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "reason": "CMG is up +3.5% on the day with high relative volume (rvol 1.74) and is above VWAP. RSI is oversold (28.2), suggesting a strong bounce. The news about Smoked Brisket returning is a minor positive catalyst. This fits the 'high-conviction defensive or mean-reversion' criteria for a market below the 50-day MA (though CMG is below 50d, the intraday momentum is strong)."
-    },
-    {
-      "symbol": "DECK",
-      "setup": "opening range breakout",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "reason": "DECK is breaking out above its opening range high (80.5) with above-average volume (rvol 1.46) and is well above VWAP (+1.5%). The 20-day trend is positive (+3.0%). This is a clean intraday breakout setup."
+      "conviction": 5,
+      "reasoning": "Strong news catalyst: Barclays upgrade to Overweight with $450 PT and FSD approval in Latvia. Stock is up 6% with high relative volume (3.33) and trading above VWAP. Fits the 'quality over quantity' mandate as a high-conviction momentum play."
     },
     {
       "symbol": "GM",
+      "action": "BUY",
       "setup": "opening range breakout",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "reason": "GM is breaking out above its opening range high (76.69) with positive momentum (m15 +0.4%) and is above VWAP. The news about Trump boosting the auto industry in Michigan is a positive sentiment catalyst. RSI is low (38.6), indicating room for a bounce."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "conviction": 4,
+      "reasoning": "Clear opening range breakout (OR 76.05-76.69, current 77.06) with positive 15m momentum and above VWAP. RSI is low (38.6) suggesting room for a mean-reversion bounce within the uptrend. Meets minimum conviction threshold."
     },
     {
-      "symbol": "AMZN",
-      "setup": "news catalyst",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "reason": "AMZN has a strong news catalyst (Verizon $2B AI deal) and is trading above VWAP. However, it is already held, so this is not a new buy. If we need to add more, AMZN is a solid hold, but we are already invested. This is listed as a 'next best' if we need to rotate, but since we are holding it, it's not a new decision."
+      "symbol": "DECK",
+      "action": "BUY",
+      "setup": "opening range breakout",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "conviction": 4,
+      "reasoning": "Opening range breakout (OR 78.73-80.5, current 80.75) with strong 60m momentum (+2.5%) and above VWAP. Despite a slight price target cut, the technical setup is strong for an intraday move."
     }
+  ],
+  "ranked_ideas": [
+    "CMG",
+    "RCL",
+    "AMZN",
+    "MAR",
+    "MCD"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
