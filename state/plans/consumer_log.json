@@ -810,5 +810,81 @@
       "WATCHLIST removed GM",
       "WATCHLIST added AZO"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "14:03",
+    "trigger": "scheduled look",
+    "market_view": "Market is calm and slightly higher, with SPY +0.8% and QQQ +1.4%, VIX down, and 59% of watched stocks up. Intraday bias is mild bullish but confirmation is selective; we are focusing on opening-range breakouts with volume and avoiding weak VWAP breakdowns.",
+    "experiment": "Testing trend-following approach with ATR-based stops and profit targets instead of fixed VWAP reclaim entries",
+    "decisions": [
+      {
+        "symbol": "LKQ",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "Failed VWAP bounce with negative momentum and high selling volume (rvol 2.24); price below VWAP/OR and trend down despite conflicting LKQ news. Thesis broken, close long.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "RCL",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "OR breakout above 282.81 with price 283.84, VWAP +0.4, m15/m60 positive, day +2.6%, 20d +17%, but rvol 0.72 modest. News 15yr return strong; earnings tomorrow before open.",
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 0.06
+      }
+    ],
+    "results": [
+      "SELL LKQ",
+      "BUY RCL blocked: conviction 3 is below the minimum 4",
+      "SHORT DG x4 (~$509.0) [deploy]",
+      "WATCHLIST remove rejected MCD"
+    ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "14:09",
+    "trigger": "big news on ['DG']",
+    "market_view": "Market is calm and slightly higher, with SPY +0.8% and QQQ +1.4%. TSLA is the standout intraday setup, breaking above its opening range with above-average volume. Consumer discretionary is mixed, with LKQ and DG under pressure. We are near the close and must respect the 75% invested mandate while focusing on high-conviction setups.",
+    "experiment": "Test a trend-following approach with ATR-based stops and profit targets instead of fixed VWAP reclaim entries.",
+    "decisions": [
+      {
+        "symbol": "LULU",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Momentum failed to follow through; stayed below VWAP/OR and gave back, -0.2% on the day.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "MAR",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Stalled in a tight range and failed to build; -0.47% on the day.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "LKQ",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "Breakdown below opening range/VWAP with rvol 2.25 and negative news; high short interest.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      }
+    ],
+    "results": [
+      "SELL LULU",
+      "SELL MAR",
+      "SHORT LKQ blocked: conviction 3 is below the minimum 4",
+      "BUY RCL x2 (~$566.9) [deploy]",
+      "SHORT BKNG blocked: team used all of today's trades",
+      "SHORT HD blocked: team used all of today's trades",
+      "SHORT DECK blocked: team used all of today's trades",
+      "BUY MCD blocked: team used all of today's trades",
+      "WATCHLIST removed F",
+      "WATCHLIST added DEO"
+    ]
   }
 ]
