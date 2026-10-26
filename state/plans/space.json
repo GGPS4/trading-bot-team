@@ -1,54 +1,54 @@
 {
   "date": "2026-10-26",
-  "time": "09:48",
-  "trigger": "price moves in ['FLY']",
-  "market_view": "Broader indices are moderately positive with SPY and QQQ up 0.4% and VIXY retreating 2.1%, signaling a calm market regime. However, our team is currently paused by executive directive due to recent performance and we are already at the maximum allowed 5 open positions. We are honoring the pause and holding existing positions while trailing stops and price targets manage open risk.",
+  "time": "09:50",
+  "trigger": "big news on ['SPCX']",
+  "market_view": "The broader market is calm to rising with SPY up 0.4% and VIXY down 2.5%, but Aerospace & Space stocks present mixed intraday momentum. Per executive instructions, trading is currently paused for Team 2 to prevent capital erosion while overhauling strategy. Existing positions are monitored under standard stop and target management.",
   "decisions": [],
   "ranked_ideas": [
     {
       "symbol": "HWM",
       "direction": "long",
-      "conviction": 2,
+      "conviction": 4,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "Severely oversold with RSI 14.1 after a 5-day drop, currently trading above VWAP (+0.2%) on solid relative volume."
-    },
-    {
-      "symbol": "VSAT",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "take_profit_pct": 0.035,
       "setup": "momentum",
-      "reason": "Showing relative intraday strength up +2.5% on the day and +1.6% off the open, holding above VWAP."
+      "reason": "Trading +1.3% on the day, above VWAP (+0.7%) with heavy relative volume (1.67 rvol) and strong intraday uptrend."
     },
     {
       "symbol": "TDG",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
+      "conviction": 4,
+      "stop_loss_pct": 0.012,
       "take_profit_pct": 0.03,
-      "setup": "VWAP bounce",
-      "reason": "High relative volume at 4.52x normal, maintaining support right at VWAP with low intraday volatility."
+      "setup": "opening range breakout",
+      "reason": "Pushing near session highs above VWAP (+0.5%) backed by high relative volume of 3.41."
     },
     {
-      "symbol": "PL",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "mean reversion",
-      "reason": "Oversold daily RSI of 26.8 stabilizing near the opening range low with steady 1.0 rvol."
-    },
-    {
-      "symbol": "LUNR",
+      "symbol": "FLY",
       "direction": "short",
-      "conviction": 2,
+      "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "Intraday weakness down -2.0% and trading -1.4% below VWAP near the lows of its opening range."
+      "reason": "Down 1.0% on the day, 1.3% below VWAP with severe m15 momentum (-3.2%) and 1.66 rvol."
+    },
+    {
+      "symbol": "VSAT",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Strongest relative gapper (+2.7% day, +1.8% open) trading above VWAP."
+    },
+    {
+      "symbol": "RDW",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Weak intraday performance down 1.8% on the day and trading below VWAP with -1.3% m15 momentum."
     }
   ],
   "experiment": "Test requiring a minimum 15-minute wait post-open before taking short setups to allow initial range expansion and VWAP levels to stabilize.",

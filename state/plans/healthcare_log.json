@@ -948,5 +948,64 @@
       "BUY BMY x28 (~$1733.2)",
       "BUY LLY x1 (~$1285.08)"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "09:50",
+    "trigger": "price moves in ['MRNA']",
+    "market_view": "Healthcare stocks show strong selective momentum led by high-impact news catalysts in MRNA, JNJ, and AMGN. With broader market indices calm (SPY +0.4%, VIXY -2.5%), we focus on high-conviction momentum plays trading above VWAP and their 50-day moving averages while rotating out of stalled setups.",
+    "experiment": "Testing ATR-based dynamic stops (2.5%) on high-conviction news catalyst entries above VWAP and the 50-day moving average filter.",
+    "decisions": [
+      {
+        "symbol": "ISRG",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "ISRG broke down below VWAP (-0.4%) with negative 15m momentum (-0.4%); exiting to free capital and a position slot for a stronger catalyst.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "MRNA",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Piper Sandler price target hike to $230 driving heavy volume (rvol 3.33), strong momentum (m15 +4.0%), trading +3.7% above VWAP and above 50-day MA filter.",
+        "stop_loss_pct": 0.025,
+        "take_profit_pct": 0.05
+      }
+    ],
+    "results": [
+      "SELL ISRG",
+      "BUY MRNA x8 (~$1562.0)"
+    ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "09:59",
+    "trigger": "price moves in ['MRNA']",
+    "market_view": "Market is calm and slightly higher, with SPY +0.5% and QQQ +0.6%. Healthcare names are mixed but selective intraday momentum is emerging. News catalysts drove moves earlier, but the scorecard shows news catalyst setups have struggled, so the focus is shifting to momentum.",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "BMY",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Stalled long with weak volume (rvol 0.47) and mixed news; exit to free slot and redeploy capital.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "ISRG",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Above VWAP, m15 +0.3%, rvol 1.76, trend up; high-conviction intraday momentum setup.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL BMY",
+      "BUY ISRG x3 (~$1363.92)",
+      "WATCHLIST remove rejected MDT"
+    ]
   }
 ]

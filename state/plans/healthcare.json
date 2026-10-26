@@ -1,105 +1,83 @@
 {
   "date": "2026-10-26",
-  "time": "09:48",
-  "trigger": "price moves in ['JNJ']",
-  "market_view": "The broader market is firm with SPY and QQQ up +0.4% and VIX dropping -2.1%, establishing a stable risk-on backdrop. Healthcare is presenting high-conviction setups backed by major Phase 3 clinical trial wins in JNJ, AMGN, and BMY, as well as high-volume momentum breakouts in ISRG and LLY. We are deploying capital into these high-conviction setups using ATR-based stops to satisfy our 75% investment mandate safely.",
+  "time": "09:59",
+  "trigger": "price moves in ['MRNA']",
+  "market_view": "Market is calm and slightly higher, with SPY +0.5% and QQQ +0.6%. Healthcare names are mixed but selective intraday momentum is emerging. News catalysts drove moves earlier, but the scorecard shows news catalyst setups have struggled, so the focus is shifting to momentum.",
   "decisions": [
     {
-      "symbol": "JNJ",
-      "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.035,
-      "setup": "news catalyst",
-      "reason": "Strong Phase 3 PROTEUS data showed a 62% reduction in recurrence/death in prostate cancer. Stock is up +2.7% overall and +0.8% above VWAP on solid volume."
+      "symbol": "BMY",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Stalled long with weak volume (rvol 0.47) and mixed news; exit to free slot and redeploy capital."
     },
     {
       "symbol": "ISRG",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.012,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Trading at high of opening range ($455.62), +0.5% above VWAP with elevated relative volume of 1.79 and strong 20-day momentum."
-    },
-    {
-      "symbol": "AMGN",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.035,
-      "setup": "news catalyst",
-      "reason": "Phase 3 DeLLphi-305 study showed a 58% reduction in death risk in SCLC; strong positive catalyst with solid relative volume (1.13)."
-    },
-    {
-      "symbol": "BMY",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Positive Phase 3 interim trial results doubled median progression-free survival in EGFR-mutated NSCLC. Trading above VWAP with positive intraday move."
-    },
-    {
-      "symbol": "LLY",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.018,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Encouraging Phase 1/2 clinical trial data with 79% ORR in ovarian cancer. High relative volume (1.9) with ATR-adjusted stop to manage volatility."
+      "setup": "momentum",
+      "reason": "Above VWAP, m15 +0.3%, rvol 1.76, trend up; high-conviction intraday momentum setup."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "ABBV",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "Up +1.1% on the day, trading above VWAP (+0.1%) with consistent 20d momentum."
-    },
-    {
       "symbol": "TMO",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "Up +0.6% on the day with steady relative volume of 1.36 above 50-day average."
-    },
-    {
-      "symbol": "REGN",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Secured $270M BARDA government contract extension for Ebola treatment Inmazeb through 2031."
+      "reason": "Defensive healthcare strength, day +0.9, above VWAP, rvol 1.23, but momentum mixed."
     },
     {
       "symbol": "DHR",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "Price target upgraded to $220 by Rothschild & Co Redburn; positive daily trend."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Uptrend intact, m15 +0.3, day +0.7, rvol 1.11."
     },
     {
-      "symbol": "ABT",
+      "symbol": "ABBV",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Launched Oncodetect MRD test for cancer monitoring with steady intraday price."
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Strong 20d trend, but overbought and weak intraday momentum."
+    },
+    {
+      "symbol": "UNH",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion",
+      "reason": "Trend down, but bounced; not high conviction."
+    },
+    {
+      "symbol": "MRK",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Mild bounce attempt, day -0.3, m15 +0.2, rvol 1.42, trend flat."
     }
   ],
-  "experiment": "Testing executive strategy: prioritize high-conviction news catalysts above VWAP with dynamic ATR-based stops.",
+  "experiment": "",
   "watchlist_changes": {
     "add": [],
-    "remove": []
+    "remove": [
+      {
+        "symbol": "MDT",
+        "reason": "Quiet, no intraday catalyst, low volume (rvol 0.22)."
+      }
+    ]
   }
 }
