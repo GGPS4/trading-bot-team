@@ -1,35 +1,118 @@
 {
   "date": "2026-10-26",
-  "time": "10:50",
-  "trigger": "big news on ['MSFT']",
-  "orders": [],
-  "watchlist_add": [],
-  "watchlist_remove": [],
-  "ranked_ideas": [
+  "time": "11:05",
+  "trigger": "must invest $2,574 more (75% rule)",
+  "market_view": "Market is calm and slightly higher, with SPY +1.0% and QQQ +1.5%, VIXY -3.5%, and 64% of watched stocks up. Intraday focus remains on opening-range breakouts and momentum above VWAP, with MSFT and PANW as strength names. NVDA and AVGO pulled back from oversold conditions but stay below the 50-day average, so we are respecting the regime filter and quality-over-quantity shift.",
+  "decisions": [
+    {
+      "symbol": "NVDA",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Long NVDA is below 50-day average and RSI is oversold; regime filter and quality-over-quantity tilt warrant closing the weak long."
+    },
+    {
+      "symbol": "AVGO",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "AVGO is below 50-day average and oversold; no longer a high-conviction hold in the current defensive/quality tape."
+    },
     {
       "symbol": "PANW",
-      "setup": "opening range breakout",
-      "importance": 3
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "pullback in uptrend",
+      "reason": "PANW is a relative strength leader, above VWAP, and near the upper end of the opening range; president highlighted MSFT and PANW, but m15 was soft, fitting pullback entry."
     },
+    {
+      "symbol": "TXN",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "TXN cleared the opening range, holds above VWAP and trend up, with m15 momentum positive; low rvol but valid OR breakout."
+    },
+    {
+      "symbol": "MU",
+      "action": "BUY",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "MU showed a pre-market gap and strong AI demand news, with intraday momentum above VWAP and OR context; below 50-day/oversold limits conviction."
+    }
+  ],
+  "ranked_ideas": [
     {
       "symbol": "AMD",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "momentum",
-      "importance": 3
+      "reason": "AI partnership and momentum, but oversold and below 50-day, so tactical only."
     },
     {
-      "symbol": "INTU",
-      "setup": "news catalyst",
-      "importance": 3
-    },
-    {
-      "symbol": "NOW",
-      "setup": "momentum",
-      "importance": 3
+      "symbol": "AMAT",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above VWAP and trend up, but oversold and below 50-day."
     },
     {
       "symbol": "ANET",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "importance": 3
+      "reason": "OR breakout above VWAP and trend up, but low rvol."
+    },
+    {
+      "symbol": "IBM",
+      "direction": "long",
+      "conviction": 1,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Relative strength over 5 days, but overbought RSI, so low conviction."
+    },
+    {
+      "symbol": "CRM",
+      "direction": "long",
+      "conviction": 1,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Mixed tone but not a high-conviction day trade."
     }
-  ]
+  ],
+  "experiment": "",
+  "watchlist_changes": {
+    "add": [],
+    "remove": [
+      {
+        "symbol": "CRM",
+        "reason": "No fresh catalyst and weak relative performance in IT sector."
+      },
+      {
+        "symbol": "ADBE",
+        "reason": "Down day and no intraday breakout setup."
+      },
+      {
+        "symbol": "INTU",
+        "reason": "Down day and prior overbought condition."
+      }
+    ]
+  }
 }

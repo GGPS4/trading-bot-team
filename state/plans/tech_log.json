@@ -844,5 +844,67 @@
       "BUY NOW blocked: conviction None is below the minimum 2",
       "BUY ANET blocked: conviction None is below the minimum 2"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "11:05",
+    "trigger": "must invest $2,574 more (75% rule)",
+    "market_view": "Market is calm and slightly higher, with SPY +1.0% and QQQ +1.5%, VIXY -3.5%, and 64% of watched stocks up. Intraday focus remains on opening-range breakouts and momentum above VWAP, with MSFT and PANW as strength names. NVDA and AVGO pulled back from oversold conditions but stay below the 50-day average, so we are respecting the regime filter and quality-over-quantity shift.",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "NVDA",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Long NVDA is below 50-day average and RSI is oversold; regime filter and quality-over-quantity tilt warrant closing the weak long.",
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "AVGO",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "AVGO is below 50-day average and oversold; no longer a high-conviction hold in the current defensive/quality tape.",
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "PANW",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "PANW is a relative strength leader, above VWAP, and near the upper end of the opening range; president highlighted MSFT and PANW, but m15 was soft, fitting pullback entry.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "TXN",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "TXN cleared the opening range, holds above VWAP and trend up, with m15 momentum positive; low rvol but valid OR breakout.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "MU",
+        "action": "BUY",
+        "conviction": 2,
+        "reason": "MU showed a pre-market gap and strong AI demand news, with intraday momentum above VWAP and OR context; below 50-day/oversold limits conviction.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL NVDA",
+      "SELL AVGO",
+      "BUY PANW blocked: conviction 3 is below the minimum 4",
+      "BUY TXN blocked: conviction 3 is below the minimum 4",
+      "BUY MU blocked: conviction 2 is below the minimum 4",
+      "BUY AMD x3 (~$1585.8) [deploy]",
+      "BUY AMAT x4 (~$1554.4) [deploy]",
+      "BUY ANET x9 (~$1602.45) [deploy]",
+      "WATCHLIST remove rejected CRM",
+      "WATCHLIST remove rejected ADBE",
+      "WATCHLIST remove rejected INTU"
+    ]
   }
 ]
