@@ -1,118 +1,40 @@
 {
   "date": "2026-10-26",
-  "time": "11:05",
-  "trigger": "must invest $2,574 more (75% rule)",
-  "market_view": "Market is calm and slightly higher, with SPY +1.0% and QQQ +1.5%, VIXY -3.5%, and 64% of watched stocks up. Intraday focus remains on opening-range breakouts and momentum above VWAP, with MSFT and PANW as strength names. NVDA and AVGO pulled back from oversold conditions but stay below the 50-day average, so we are respecting the regime filter and quality-over-quantity shift.",
+  "time": "11:32",
+  "trigger": "scheduled look",
   "decisions": [
     {
       "symbol": "NVDA",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Long NVDA is below 50-day average and RSI is oversold; regime filter and quality-over-quantity tilt warrant closing the weak long."
-    },
-    {
-      "symbol": "AVGO",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "AVGO is below 50-day average and oversold; no longer a high-conviction hold in the current defensive/quality tape."
-    },
-    {
-      "symbol": "PANW",
       "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "PANW is a relative strength leader, above VWAP, and near the upper end of the opening range; president highlighted MSFT and PANW, but m15 was soft, fitting pullback entry."
-    },
-    {
-      "symbol": "TXN",
-      "action": "BUY",
-      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "TXN cleared the opening range, holds above VWAP and trend up, with m15 momentum positive; low rvol but valid OR breakout."
-    },
-    {
-      "symbol": "MU",
-      "action": "BUY",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "MU showed a pre-market gap and strong AI demand news, with intraday momentum above VWAP and OR context; below 50-day/oversold limits conviction."
+      "conviction": 5,
+      "reason": "Strong opening range breakout with high relative volume (1.64) and positive news catalysts (Meta equity interest, Honeywell/Dell partnership). Trading above VWAP. Fits the 'quality over quantity' mandate as a high-conviction momentum play."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "AMD",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "AI partnership and momentum, but oversold and below 50-day, so tactical only."
+      "symbol": "AVGO",
+      "reason": "Opening range breakout, trading above VWAP, strong 60m momentum. Good relative strength leader."
     },
     {
-      "symbol": "AMAT",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above VWAP and trend up, but oversold and below 50-day."
+      "symbol": "TXN",
+      "reason": "Opening range breakout, above VWAP, positive 15m momentum. Solid technical setup."
     },
     {
-      "symbol": "ANET",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above VWAP and trend up, but low rvol."
+      "symbol": "MU",
+      "reason": "Opening range breakout, above VWAP, high relative volume (1.45). AI demand narrative."
+    },
+    {
+      "symbol": "PANW",
+      "reason": "Relative strength leader per executive order. Trading near VWAP with stable momentum."
     },
     {
       "symbol": "IBM",
-      "direction": "long",
-      "conviction": 1,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Relative strength over 5 days, but overbought RSI, so low conviction."
-    },
-    {
-      "symbol": "CRM",
-      "direction": "long",
-      "conviction": 1,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Mixed tone but not a high-conviction day trade."
+      "reason": "Strong uptrend, above 50d MA. However, RSI is overbought (86.8), so lower conviction for new entry."
     }
   ],
-  "experiment": "",
-  "watchlist_changes": {
-    "add": [],
-    "remove": [
-      {
-        "symbol": "CRM",
-        "reason": "No fresh catalyst and weak relative performance in IT sector."
-      },
-      {
-        "symbol": "ADBE",
-        "reason": "Down day and no intraday breakout setup."
-      },
-      {
-        "symbol": "INTU",
-        "reason": "Down day and prior overbought condition."
-      }
-    ]
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

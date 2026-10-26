@@ -1,28 +1,23 @@
 {
   "date": "2026-10-26",
-  "time": "11:15",
-  "trigger": "must invest $3,498 more (75% rule)",
-  "strategy_overhaul": {
-    "focus": "liquidity_and_entry_timing",
-    "key_points": [
-      "Reduce max position size to 5% of budget per trade to improve liquidity",
-      "Implement ATR-based stop losses with 1.5 ATR distance",
-      "Only enter trades on clear opening-range breakouts or VWAP bounces with volume >1.5x average",
-      "Require 50-day moving average above price for long entries; for shorts allow mean-reversion below MA",
-      "Limit daily trades to 3 and max open positions to 3",
-      "Increase conviction threshold to 5 for new entries",
-      "Use tighter stop loss 0.5% to 1% and target 2% to 3% with half position scaling out",
-      "Avoid trading in last 30 minutes; close all positions 15 minutes before market close"
-    ],
-    "implementation_steps": [
-      "Review and adjust risk parameters in trading engine",
-      "Backtest ATR stop loss and entry filters on past 6 months data",
-      "Train team on new entry criteria and real-time liquidity monitoring",
-      "Set up alerts for VWAP bounce and OR breakout with rvol >1.5",
-      "Monitor execution slippage and adjust position sizing accordingly"
-    ]
-  },
+  "time": "11:32",
+  "trigger": "must invest $3,487 more (75% rule)",
   "orders": [],
-  "watchlist_updates": [],
-  "position_updates": []
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  },
+  "strategy_overhaul": {
+    "focus": "liquidity and entry timing",
+    "actions": [
+      "Implement tighter ATR-based stop\u2011losses (e.g., 1.5\u202fATR) to reduce premature exits.",
+      "Reduce max position size to 10% of budget to improve liquidity.",
+      "Prioritize stocks with average daily volume >\u202f1\u202fM and tight bid\u2011ask spreads.",
+      "Use VWAP and opening\u2011range breakout filters; require confirmation on 5\u2011minute chart before entry.",
+      "Introduce a pre\u2011trade liquidity check: minimum $50k notional and <0.5% market impact.",
+      "Shift to a 2\u2011trade\u2011per\u2011day limit to focus on high\u2011conviction setups.",
+      "Maintain 75% capital deployment only after high\u2011conviction entries are identified."
+    ],
+    "timeline": "Re\u2011evaluate after next trading day; resume trading when win rate >5% and PnL positive."
+  }
 }

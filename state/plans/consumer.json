@@ -1,43 +1,78 @@
 {
   "date": "2026-10-26",
-  "time": "10:48",
-  "trigger": "must invest $2,650 more (75% rule)",
+  "time": "11:32",
+  "trigger": "scheduled look",
+  "market_view": "The market is calm and slightly higher, with SPY +0.9% and QQQ +1.5%, while most watched stocks are up and VIXY fell. The tape shows selective strength, led by TSLA breaking its opening range on high volume and bullish analyst news, while AMZN and CMG remain below VWAP/trend context. I am managing risk by exiting RCL and trying to buy a mean-reversion setup in LKQ.",
   "decisions": [
     {
-      "symbol": "TSLA",
+      "symbol": "RCL",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "RCL failed the opening-range breakout and is now -0.32% on the day; earnings are scheduled tomorrow before the open, so I am exiting to avoid event risk and redeploy capital."
+    },
+    {
+      "symbol": "LKQ",
       "action": "BUY",
-      "setup": "news catalyst",
-      "stop_loss_pct": 0.02,
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "conviction": 5,
-      "reasoning": "Strong news catalyst: Barclays upgrade to Overweight with $450 PT and FSD approval in Latvia. Stock is up 6% with high relative volume (3.33) and trading above VWAP. Fits the 'quality over quantity' mandate as a high-conviction momentum play."
-    },
-    {
-      "symbol": "GM",
-      "action": "BUY",
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "conviction": 4,
-      "reasoning": "Clear opening range breakout (OR 76.05-76.69, current 77.06) with positive 15m momentum and above VWAP. RSI is low (38.6) suggesting room for a mean-reversion bounce within the uptrend. Meets minimum conviction threshold."
-    },
-    {
-      "symbol": "DECK",
-      "action": "BUY",
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "conviction": 4,
-      "reasoning": "Opening range breakout (OR 78.73-80.5, current 80.75) with strong 60m momentum (+2.5%) and above VWAP. Despite a slight price target cut, the technical setup is strong for an intraday move."
+      "setup": "mean reversion",
+      "reason": "LKQ is oversold (RSI 22.2) and bounced +5.1% off the low with rvol 2.29, positive m15/m60 and VWAP +0.1; mean-reversion long off the breakdown low with tight stop."
     }
   ],
   "ranked_ideas": [
-    "CMG",
-    "RCL",
-    "AMZN",
-    "MAR",
-    "MCD"
+    {
+      "symbol": "LULU",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Day +3.2 but below VWAP and rvol 1.25; needs stronger momentum."
+    },
+    {
+      "symbol": "DECK",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout and uptrend, but PT cut news limits conviction."
+    },
+    {
+      "symbol": "F",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Day +0.9 with rvol 1.05; earnings after close."
+    },
+    {
+      "symbol": "GM",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news",
+      "reason": "Trump auto post but trend down; low conviction."
+    },
+    {
+      "symbol": "MCD",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news",
+      "reason": "Regional promo only; weak rvol."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Implement a market-regime filter that disables new entries when the S&P 500 is below its 50-day moving average",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }
