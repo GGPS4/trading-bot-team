@@ -1,56 +1,78 @@
 {
   "date": "2026-10-26",
-  "time": "13:05",
-  "trigger": "scheduled look",
+  "time": "13:24",
+  "trigger": "must invest $9,536 more (75% rule)",
+  "market_view": "The market is calm and slightly higher, with SPY +0.9%, QQQ +1.5%, VIXY -2.7%, and 61% of watched stocks up. Defense names are showing selective strength on high-impact contract wins and analyst upgrades, though some are overbought. We are focusing on high-conviction defense long setups within the 75% invested mandate.",
   "decisions": [
     {
       "symbol": "LMT",
-      "action": "SELL",
-      "reason": "Position is scaled out and trailing. Price $628.15 is above the first target of $622.79. RSI is 84.2 (overbought). Executing full exit to lock in gains and free up capital for higher-conviction setups as per 'quality over quantity' directive."
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above 611.91-618.24 with Jefferies/Morgan Stanley/JPM upgrades, price above VWAP, rvol 1.38, news importance 4; RSI overbought but intraday momentum."
     },
     {
-      "symbol": "BAH",
-      "action": "SELL",
-      "reason": "Position is near breakeven (-0.01%) with fading momentum (m15 0.0%, m60 -0.5%). RSI is 80.3 (overbought). The stock has already made its big move (+7.2% day). Closing to avoid holding a stalled position and to redeploy capital into CACI which has a fresh, high-conviction news catalyst."
+      "symbol": "CACI",
+      "action": "BUY",
+      "conviction": 5,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Navy $281M contract and Jefferies upgrade, OR breakout, above VWAP, news importance 4."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "CACI",
-      "setup": "news catalyst",
+      "symbol": "BAH",
+      "direction": "long",
+      "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "reason": "Strong news catalyst: $281M Navy contract + Jefferies upgrade to Buy with $725 PT. Stock is +5.6% today, trading above VWAP, and has high relative volume (1.12). High conviction (5/5) based on news importance. Fits the 'high-conviction defensive' mandate."
+      "setup": "news catalyst",
+      "reason": "TD Cowen upgrade to Buy and +7.3% day, OR breakout, but small-cap overextension risk."
     },
     {
       "symbol": "KTOS",
-      "setup": "mean reversion",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "reason": "RSI 35.0 (oversold) and 20d change -15.2% suggests a potential bounce. Stock is +3.8% today, breaking out of the opening range, and trading above VWAP. Market is risk-on, supporting a mean-reversion long on a beaten-down name."
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Oversold OR breakout, but 50-day regime filter below."
+    },
+    {
+      "symbol": "LDOS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "CNBC Halftime mention, but below VWAP and overbought."
     },
     {
       "symbol": "HEI",
-      "setup": "opening range breakout",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "reason": "Breaking out of the opening range (298.9-299.76) at $308.32. Trading above VWAP (+0.9%). RSI 45.3 is neutral, not overbought. Good technical setup for intraday momentum."
+      "setup": "opening range breakout",
+      "reason": "OR breakout, but below 50-day average."
     },
     {
-      "symbol": "HII",
-      "setup": "opening range breakout",
+      "symbol": "SAIC",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "reason": "Breaking out of the opening range (277.69-279.04) at $280.35. Trading above VWAP (+0.4%). Trend is up. Lower volume (0.29) is a risk, but the breakout is clean."
-    },
-    {
-      "symbol": "LHX",
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "reason": "Breaking out of the opening range (254.55-257.23) at $257.43. Trading above VWAP (+0.2%). RSI 69.5 is approaching overbought but not there yet. Earnings are in 3 days, so some volatility is expected."
+      "setup": "news catalyst",
+      "reason": "PR award, but RSI overbought and OR breakout weak."
     }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Make the 50% scale-out at 1R standard across all opening range breakout setups to guarantee profits during choppy sessions.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

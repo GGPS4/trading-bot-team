@@ -651,5 +651,38 @@
       "SHORT NFLX x9 (~$570.78)",
       "WATCHLIST remove rejected FOXA"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "13:24",
+    "trigger": "must invest $1,135 more (75% rule)",
+    "market_view": "Market is calm and slightly higher, but entertainment group names are mostly breaking down below their opening ranges and VWAP. News flow is quiet. Our NFLX short fits the bearish internal subscriber data, while the long momentum setups in BAM, ROKU, and SONY have failed. No new high-conviction long setups are apparent, so we should avoid forcing positions.",
+    "experiment": "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries.",
+    "decisions": [
+      {
+        "symbol": "BAM",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Long momentum setup failed with breakdown below opening range and VWAP; close weak position.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "ROKU",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Long momentum setup failed with breakdown below opening range and VWAP and low relative volume; close weak position.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      }
+    ],
+    "results": [
+      "SELL BAM",
+      "SELL ROKU",
+      "BUY WBD failed: POST /v2/orders -> 422: {\"code\":40010001,\"message\":\"asset WBD is not active\"}",
+      "BUY TTWO x3 (~$609.24) [deploy]",
+      "BUY SPOT x1 (~$568.23) [deploy]",
+      "BUY LYV x3 (~$515.73) [deploy]"
+    ]
   }
 ]

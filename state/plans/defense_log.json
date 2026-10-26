@@ -890,5 +890,34 @@
       "BUY HII blocked: conviction None is below the minimum 2",
       "BUY LHX blocked: conviction None is below the minimum 2"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "13:24",
+    "trigger": "must invest $9,536 more (75% rule)",
+    "market_view": "The market is calm and slightly higher, with SPY +0.9%, QQQ +1.5%, VIXY -2.7%, and 61% of watched stocks up. Defense names are showing selective strength on high-impact contract wins and analyst upgrades, though some are overbought. We are focusing on high-conviction defense long setups within the 75% invested mandate.",
+    "experiment": "Make the 50% scale-out at 1R standard across all opening range breakout setups to guarantee profits during choppy sessions.",
+    "decisions": [
+      {
+        "symbol": "LMT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "OR breakout above 611.91-618.24 with Jefferies/Morgan Stanley/JPM upgrades, price above VWAP, rvol 1.38, news importance 4; RSI overbought but intraday momentum.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "CACI",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Navy $281M contract and Jefferies upgrade, OR breakout, above VWAP, news importance 4.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY CACI x6 (~$4018.77)",
+      "BUY LMT x6 (~$3770.04)"
+    ]
   }
 ]
