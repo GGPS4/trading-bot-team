@@ -1,32 +1,88 @@
 {
   "date": "2026-10-26",
-  "time": "12:48",
+  "time": "13:25",
   "trigger": "scheduled look",
+  "market_view": "Market is calm and slightly higher, with SPY +0.9% and QQQ +1.5%, while VIXY fell 2.7%. TSLA broke its opening range on high volume and FSD approval in Latvia, and LKQ received a Barclays upgrade. Stifel price target cuts on LOW and HD added downside pressure. No new high-conviction setups emerged outside current holdings, so the team stays defensive and focuses on mean-reversion or high-quality momentum.",
   "decisions": [
     {
-      "symbol": "RCL",
-      "side": "long",
-      "setup": "momentum",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Strong intraday momentum (+2.3%) above VWAP with positive news flow (15-year outperformance). Earnings are tomorrow, so capturing today's strength is a valid day-trade setup. Needs to be deployed to meet the 75% invested mandate."
+      "symbol": "CMG",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "mean reversion",
+      "reason": "Losing -0.8% and trading below VWAP; the news catalyst faded, so exit to avoid stop."
     },
     {
       "symbol": "LULU",
-      "side": "long",
-      "setup": "VWAP bounce",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Trading above VWAP with a +2.9% daily gain. RSI is neutral (59.4) and 50d is below, suggesting a potential mean-reversion or momentum continuation play. Volume is decent (rvol 1.06). Adding to meet investment minimums."
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "Day +2.9% with intraday rebound attempt, below VWAP but showing momentum; best available new setup without earnings overhang."
     }
   ],
   "ranked_ideas": [
-    "RCL",
-    "LULU",
-    "CMG",
-    "AMZN",
-    "TSLA"
+    {
+      "symbol": "BKNG",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakdown",
+      "reason": "Break below opening range, day -2.5%, but low relative volume."
+    },
+    {
+      "symbol": "HD",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakdown",
+      "reason": "Stifel PT cut to 322, breakdown, low rvol."
+    },
+    {
+      "symbol": "LOW",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Stifel PT cut to 195, weak sentiment and price action."
+    },
+    {
+      "symbol": "DECK",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Barclays PT cut to 100, downside pressure remains."
+    },
+    {
+      "symbol": "GM",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Trump auto industry post provides headline support, but volume is weak."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Test a trend-following approach with ATR-based stops and profit targets instead of fixed VWAP reclaim entries",
+  "watchlist_changes": {
+    "add": [
+      {
+        "symbol": "DG",
+        "reason": "FTC and state lawsuit news, relevant consumer discretionary name."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "ABNB",
+        "reason": "No fresh catalyst, weak price action, low volume."
+      }
+    ]
+  }
 }
