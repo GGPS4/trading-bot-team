@@ -1,78 +1,88 @@
 {
   "date": "2026-10-26",
-  "time": "12:18",
+  "time": "12:43",
   "trigger": "scheduled look",
-  "market_view": "Market is calm and slightly higher, with SPY +0.7% and QQQ +1.2%. Healthcare is cautiously positive on Merck's strong Phase 3 data, but most stocks lack a clean follow-through above VWAP. Watching for news-driven momentum and risk control.",
+  "market_view": "Market is calm and slightly higher, but healthcare names are mostly lower and below VWAP. No new material news today. With close approaching, focus on high-quality setups; current losers are below VWAP and in failed setups. No high-conviction new long at this hour.",
   "decisions": [
     {
-      "symbol": "MRNA",
+      "symbol": "TMO",
       "action": "SELL",
       "conviction": 3,
       "stop_loss_pct": 0.0,
       "take_profit_pct": 0.0,
-      "setup": "news catalyst",
-      "reason": "Failed Moderna news catalyst; below VWAP, m15 negative, loss -1.23%, stalled. Cut loss and redeploy."
+      "setup": "other",
+      "reason": "Long failed opening range breakout, now below VWAP and in downtrend; stop not hit but thesis broken."
     },
     {
-      "symbol": "MRK",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
-      "setup": "news catalyst",
-      "reason": "Merck Phase 3 endometrial cancer success, FDA priority review, bullish sentiment; large-cap high-conviction news. Enter with ATR-based stop despite intraday breakdown."
+      "symbol": "ISRG",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "momentum",
+      "reason": "Long in downtrend, below VWAP, momentum failed; stop not hit but exit to redeploy."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "LLY",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
-      "setup": "momentum",
-      "reason": "High rvol 1.64 and positive m15/m60, but inside range; watch for breakout."
-    },
-    {
       "symbol": "AMGN",
       "direction": "long",
       "conviction": 4,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "reason": "Imdeltra survival benefit, but breakdown below OR/VWAP; high risk, high reward."
+      "reason": "High-importance Imdeltra survival data, but below VWAP and OR breakdown limits entry."
     },
     {
       "symbol": "BMY",
       "direction": "long",
       "conviction": 4,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "reason": "Positive Phase 3 interim, but Piper PT cut and breakdown; wait for bounce."
-    },
-    {
-      "symbol": "REGN",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
-      "setup": "news catalyst",
-      "reason": "Ebola contract extension, but weak intraday; not high conviction yet."
+      "reason": "High-importance Phase 3 oncology data, but intraday breakdown and low rvol."
     },
     {
       "symbol": "DHR",
       "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Bullish PT raise but weak upside participation and below VWAP."
+    },
+    {
+      "symbol": "MRNA",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "reason": "Rothschild PT raise, but weak momentum; low conviction."
+      "reason": "Bullish PT raise but stock in downtrend and below VWAP."
+    },
+    {
+      "symbol": "REGN",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Bullish contract news but weak day performance and below VWAP."
     }
   ],
-  "experiment": "ATR-based dynamic stops for news-catalyst trades; add rule to keep position until moved at least 1% above VWAP before considering exit.",
+  "experiment": "executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops",
   "watchlist_changes": {
-    "add": [],
-    "remove": []
+    "add": [
+      {
+        "symbol": "CORT",
+        "reason": "Favorable survival and response data in ovarian cancer study"
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "MDT",
+        "reason": "No fresh catalyst and very low day-trading volume"
+      }
+    ]
   }
 }

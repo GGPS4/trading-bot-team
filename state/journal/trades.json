@@ -7677,7 +7677,7 @@
     "setup": "news catalyst",
     "experiment": "Test requiring a minimum 15-minute wait post-open before taking short setups to allow initial range expansion and VWAP levels to stabilize.",
     "order_id": "1fd2ac73-32ef-4f9c-8a31-6a7ce408134e",
-    "status": "open",
+    "status": "closed",
     "entry_price": 188.21,
     "entry_time": "2026-10-26T13:35:00.323656335Z",
     "high": 189.11,
@@ -7687,7 +7687,11 @@
     "stop_qty_sent": 8,
     "exit_order_id": "df068b83-38b2-46b9-b31e-c0d2084edbf6",
     "exit_reason": "manager_sell",
-    "exit_note": "Strategy overhaul required. President ordered trading paused. Closing all positions to stop capital erosion and prepare for strategy review."
+    "exit_note": "Strategy overhaul required. President ordered trading paused. Closing all positions to stop capital erosion and prepare for strategy review.",
+    "exit_price": 188.84,
+    "exit_time": "2026-10-26T16:30:22.441613888Z",
+    "pnl": -6.55,
+    "pnl_pct": -0.0044
   },
   {
     "id": "space-GE-202610260934-1a03",
@@ -7820,7 +7824,7 @@
     "entry_price": 26.131,
     "entry_time": "2026-10-26T13:34:53.916409465Z",
     "high": 26.205,
-    "low": 25.97,
+    "low": 25.96,
     "stop_warned": true,
     "stop_order_id": "2badc197-e094-4c0d-b57f-223b1a405f32",
     "stop_sent": 25.69,
@@ -8093,7 +8097,7 @@
     "entry_price": 396.3,
     "entry_time": "2026-10-26T13:39:01.655722658Z",
     "high": 398.235,
-    "low": 395.01,
+    "low": 394.595,
     "stop_order_id": "436d7214-e716-4871-a987-1c2369228808",
     "stop_sent": 374.26,
     "stop_qty_sent": 1
@@ -8356,7 +8360,7 @@
     "qty_open": 21.0,
     "dollars": 4075.89,
     "est_price": 194.09,
-    "stop_price": 191.18,
+    "stop_price": 194.91,
     "first_stop": 191.18,
     "take_profit_price": 199.91,
     "risk_dollars": 61.14,
@@ -8368,11 +8372,12 @@
     "status": "open",
     "entry_price": 194.51,
     "entry_time": "2026-10-26T13:48:07.688062883Z",
-    "high": 196.39,
+    "high": 196.48,
     "low": 192.79,
-    "stop_order_id": "59e0fbd0-9a77-4c4c-8606-0adbf6871ff7",
-    "stop_sent": 191.18,
-    "stop_qty_sent": 21
+    "stop_order_id": "d94950d9-7ce7-4c0c-bcf3-0cb4b96b070d",
+    "stop_sent": 194.91,
+    "stop_qty_sent": 21,
+    "trail_active": true
   },
   {
     "id": "healthcare-JNJ-202610260948-7f4c",
@@ -8967,10 +8972,13 @@
     "entry_price": 683.68,
     "entry_time": "2026-10-26T14:33:09.721040147Z",
     "high": 684.7,
-    "low": 676.88,
+    "low": 675.96,
     "stop_order_id": "e783983d-f348-4d95-b036-c31040001da7",
     "stop_sent": 650.01,
-    "stop_qty_sent": 1
+    "stop_qty_sent": 1,
+    "exit_order_id": "8a4723d2-f34b-43bc-a40c-a3228fa76e67",
+    "exit_reason": "manager_sell",
+    "exit_note": "Long failed opening range breakout, now below VWAP and in downtrend; stop not hit but thesis broken."
   },
   {
     "id": "consumer-TSLA-202610261048-e642",
@@ -9210,7 +9218,7 @@
     "entry_price": 105.01,
     "entry_time": "2026-10-26T14:48:48.648114707Z",
     "high": 105.01,
-    "low": 104.47,
+    "low": 104.41,
     "stop_order_id": "81eddf41-59aa-44d8-93cc-9780999f8469",
     "stop_sent": 103.29,
     "stop_qty_sent": 16
@@ -9277,10 +9285,13 @@
     "entry_price": 455.37,
     "entry_time": "2026-10-26T15:04:01.408922333Z",
     "high": 455.555,
-    "low": 451.27,
+    "low": 449.98,
     "stop_order_id": "4fb80da3-bf00-44c5-9b40-ca022a7b6608",
     "stop_sent": 446.68,
-    "stop_qty_sent": 3
+    "stop_qty_sent": 3,
+    "exit_order_id": "73f0def5-160f-4328-b8dd-b7ab317842f1",
+    "exit_reason": "manager_sell",
+    "exit_note": "Long in downtrend, below VWAP, momentum failed; stop not hit but exit to redeploy."
   },
   {
     "id": "tech-AMD-202610261105-e3da",
@@ -9333,7 +9344,7 @@
     "setup": "opening range breakout",
     "experiment": "",
     "order_id": "9aa2f25a-6f2a-451d-958c-0c75b2cf2c89",
-    "status": "open",
+    "status": "closed",
     "entry_price": 388.94,
     "entry_time": "2026-10-26T15:05:15.931124688Z",
     "high": 392.86,
@@ -9341,7 +9352,12 @@
     "stop_order_id": "fa553000-d13d-4569-b23d-ebefc74c93e3",
     "stop_sent": 389.72,
     "stop_qty_sent": 4,
-    "trail_active": true
+    "trail_active": true,
+    "exit_price": 389.54,
+    "exit_reason": "trailing_stop",
+    "exit_time": "2026-10-26T16:33:46.720499945Z",
+    "pnl": 0.84,
+    "pnl_pct": 0.0005
   },
   {
     "id": "tech-ANET-202610261105-1aea",
@@ -9428,7 +9444,7 @@
     "entry_price": 84.9,
     "entry_time": "2026-10-26T15:28:35.137091767Z",
     "high": 84.9,
-    "low": 84.1,
+    "low": 83.76,
     "stop_order_id": "54d68e8b-e757-4227-978d-9a4362d045d0",
     "stop_sent": 82.88,
     "stop_qty_sent": 48
@@ -9494,7 +9510,7 @@
     "status": "open",
     "entry_price": 17.35,
     "entry_time": "2026-10-26T15:58:26.555914249Z",
-    "high": 17.53,
+    "high": 17.535,
     "low": 17.335,
     "stop_order_id": "891d269e-116f-422b-8655-417d804e5ffb",
     "stop_sent": 17.39,
@@ -9526,7 +9542,7 @@
     "entry_price": 63.42,
     "entry_time": "2026-10-26T16:18:40.32194855Z",
     "high": 63.44,
-    "low": 63.25,
+    "low": 63.17,
     "stop_order_id": "ceafff92-04e6-4ea9-86bc-ef040a60f05f",
     "stop_sent": 65.32,
     "stop_qty_sent": 9
@@ -9556,7 +9572,7 @@
     "entry_price": 141.96,
     "entry_time": "2026-10-26T16:18:41.990837593Z",
     "high": 141.96,
-    "low": 141.68,
+    "low": 140.935,
     "stop_order_id": "39ec767b-cd95-4ecb-b340-9b105c9d1828",
     "stop_sent": 136.96,
     "stop_qty_sent": 11
@@ -9585,8 +9601,8 @@
     "status": "open",
     "entry_price": 896.62,
     "entry_time": "2026-10-26T16:23:33.454876584Z",
-    "high": 896.62,
-    "low": 896.32,
+    "high": 896.83,
+    "low": 894.86,
     "stop_order_id": "5b771453-b0c9-4d82-a2dd-8f5133758791",
     "stop_sent": 883.26,
     "stop_qty_sent": 2
@@ -9615,7 +9631,7 @@
     "status": "open",
     "entry_price": 160.22,
     "entry_time": "2026-10-26T16:23:34.279262536Z",
-    "high": 160.22,
+    "high": 160.54,
     "low": 160.13,
     "stop_order_id": "3d17e6a8-d3b9-46cf-b497-4dacb5c831b5",
     "stop_sent": 162.58,
@@ -9646,7 +9662,7 @@
     "entry_price": 160.3,
     "entry_time": "2026-10-26T16:23:33.360147995Z",
     "high": 160.45,
-    "low": 159.675,
+    "low": 158.725,
     "stop_order_id": "a0a0b551-532e-41f0-bc74-8f00627e8015",
     "stop_sent": 162.75,
     "stop_qty_sent": 14
@@ -9675,8 +9691,8 @@
     "status": "open",
     "entry_price": 93.1144,
     "entry_time": "2026-10-26T16:23:33.714010683Z",
-    "high": 93.18,
-    "low": 92.87,
+    "high": 93.36,
+    "low": 92.645,
     "stop_order_id": "66b69b84-1252-43c8-8aaf-71608900a3d9",
     "stop_sent": 94.5,
     "stop_qty_sent": 25
@@ -9706,7 +9722,7 @@
     "entry_price": 403.725,
     "entry_time": "2026-10-26T16:23:33.476143611Z",
     "high": 403.775,
-    "low": 403.44,
+    "low": 403.36,
     "stop_order_id": "9b8b24ba-1218-45d2-a643-5a3c8ee52cbf",
     "stop_sent": 409.78,
     "stop_qty_sent": 2
@@ -9736,7 +9752,7 @@
     "entry_price": 215.79,
     "entry_time": "2026-10-26T16:25:10.59176281Z",
     "high": 215.79,
-    "low": 215.68,
+    "low": 215.335,
     "stop_order_id": "81df27ea-bc11-434b-bd86-cca5668e7589",
     "stop_sent": 212.52,
     "stop_qty_sent": 8
