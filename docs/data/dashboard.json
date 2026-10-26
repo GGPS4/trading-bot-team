@@ -1,9 +1,11 @@
 {
-  "updated": "2026-10-26T08:02-04:00",
+  "updated": "2026-10-26T08:17-04:00",
   "date": "2026-10-26",
   "mode": "paper",
   "health": {
-    "issues": []
+    "issues": [
+      "1 problem(s) in the last hour, latest: economic calendar (nextweek) unavailable: 404 Client Error: Not Found for url: https://nfs.faireconomy.media/ff_calendar_nextweek.json"
+    ]
   },
   "paused": false,
   "rules": {
@@ -19,13 +21,13 @@
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 760.1
+    "price": 763.09
   },
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 7,
     "return_since_start": -0.0079,
-    "benchmark_since_start": -0.0137,
+    "benchmark_since_start": -0.0098,
     "max_drawdown": 0.0079
   },
   "go_live": {
@@ -38,7 +40,7 @@
       {
         "rule": "Beating SPY since the start",
         "ok": true,
-        "value": "-0.8% vs -1.4%"
+        "value": "-0.8% vs -1.0%"
       },
       {
         "rule": "Worst drop under 15%",
@@ -1591,7 +1593,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-26T08:02-04:00",
+    "time": "2026-10-26T08:17-04:00",
     "earnings": [
       {
         "date": "2026-10-27",
@@ -2873,13 +2875,38 @@
     "all_ok": true
   },
   "premarket": {
-    "time": "2026-10-26T08:01-04:00",
+    "time": "2026-10-26T08:16-04:00",
     "date": "2026-10-26",
     "watched": [],
-    "outside": []
+    "outside": [
+      {
+        "symbol": "NU",
+        "gap": -0.2517,
+        "price": 11.34,
+        "headline": "MercadoLibre, Banco Bradesco, Ita\u00fa Unibanco And Other Big Stocks Moving Lower In Monday\u2019s Pre-Market Session"
+      }
+    ]
   },
   "overnight": {
     "defense": [
+      {
+        "symbol": "NOC",
+        "sentiment": 0.2,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Jefferies raised Northrop Grumman's price target to $585, indicating modest optimism.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-26T08:16-04:00"
+      },
+      {
+        "symbol": "PLTR",
+        "sentiment": 0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Deutsche Bank increased Palantir's price target to $225, showing a positive outlook.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-26T08:16-04:00"
+      },
       {
         "symbol": "LMT",
         "sentiment": 0.0,
@@ -2933,15 +2960,6 @@
         "summary": "JPMorgan increased Northrop Grumman's price target to $605 from $600, reflecting modest upside expectations.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-26T06:46-04:00"
-      },
-      {
-        "symbol": "LMT",
-        "sentiment": 0.9,
-        "importance": 5,
-        "unconfirmed_rumor": false,
-        "summary": "Morgan Stanley upgraded Lockheed Martin to Overweight and raised its price target to $835.",
-        "source": "Benzinga",
-        "seen_at": "2026-10-26T06:01-04:00"
       }
     ],
     "space": [
@@ -3040,6 +3058,42 @@
     ],
     "tech": [
       {
+        "symbol": "NVDA",
+        "sentiment": -0.4,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Analysts' warnings on Asian AI stocks put pressure on Nvidia, suggesting short\u2011term downside.",
+        "source": "benzinga",
+        "seen_at": "2026-10-26T08:17-04:00"
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": 0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Honeywell's new AI platform leverages Nvidia technology, highlighting demand for Nvidia's chips.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-26T08:17-04:00"
+      },
+      {
+        "symbol": "AMAT",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "AllianceBernstein reaffirmed a Buy rating and raised Applied Materials' price target to $700.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-26T08:17-04:00"
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": 0.2,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Broadcom signaled interest in buying up to $5\u202fbn of Meta shares, indicating excess cash deployment.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-26T08:17-04:00"
+      },
+      {
         "symbol": "MU",
         "sentiment": 0.3,
         "importance": 3,
@@ -3074,45 +3128,27 @@
         "summary": "Broadcom is part of Seagate\u2019s high\u2011capacity storage rollout with Microsoft, indicating growth in storage solutions.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-26T07:46-04:00"
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": 0.1,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "AMD indicated interest in purchasing up to $5B of Meta shares",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T07:31-04:00"
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": 0.1,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Nvidia indicated interest in purchasing up to $5B of Meta shares",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T07:31-04:00"
-      },
-      {
-        "symbol": "AVGO",
-        "sentiment": 0.1,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Broadcom indicated interest in purchasing up to $5B of Meta shares (AVGO also mentioned)",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T07:31-04:00"
-      },
-      {
-        "symbol": "NOW",
-        "sentiment": 0.7,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Cantor Fitzgerald maintains overweight on ServiceNow and raises price target to $201",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T07:31-04:00"
       }
     ],
     "consumer": [
+      {
+        "symbol": "MAR",
+        "sentiment": 0.7,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "BMO Capital raised its price target for Marriott International to $420, indicating a more favorable valuation outlook.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-26T08:17-04:00"
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": 0.8,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "Tesla secured regulatory approval for its Full Self\u2011Driving assisted driving system in Latvia, opening a new market for the technology.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-26T08:17-04:00"
+      },
       {
         "symbol": "LKQ",
         "sentiment": 0.8,
@@ -3166,27 +3202,36 @@
         "summary": "Baird keeps an Outperform rating on LKQ but cuts its price target to $23, indicating modest downside.",
         "source": "benzinga",
         "seen_at": "2026-10-26T06:47-04:00"
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": 0.8,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Barclays upgrades Tesla to Overweight with a $450 price target, signaling strong upside potential.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T06:47-04:00"
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": 0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Tesla expands its Austin robotaxi service to the Circuit of the Americas and extends hours to 1\u202fa.m., boosting utilization prospects.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T06:47-04:00"
       }
     ],
     "financials": [
+      {
+        "symbol": "ICE",
+        "sentiment": -0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Public companies are objecting to the OKXICE tokenized share platform, posing regulatory and reputational risk for Intercontinental Exchange.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-26T08:17-04:00"
+      },
+      {
+        "symbol": "C",
+        "sentiment": 0.2,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Citigroup acted as financial advisor on a $500\u202fmillion sale, generating advisory fees and showcasing its deal\u2011making capability.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-26T08:17-04:00"
+      },
+      {
+        "symbol": "GS",
+        "sentiment": -0.1,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Goldman Sachs cut its Kospi index forecast by 25%, reflecting a more cautious outlook that may slightly dampen sentiment.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-26T08:17-04:00"
+      },
       {
         "symbol": "COIN",
         "sentiment": -0.8,
@@ -3231,36 +3276,18 @@
         "summary": "Dimon warns AI banking agents pose security risks and could siphon deposits, potentially hurting MS profits.",
         "source": "benzinga",
         "seen_at": "2026-10-26T07:32-04:00"
-      },
-      {
-        "symbol": "C",
-        "sentiment": 0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Citigroup acted as financial advisor to EQT in its acquisition of Range, indicating continued advisory business.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T06:47-04:00"
-      },
-      {
-        "symbol": "AXP",
-        "sentiment": 0.4,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "JPMorgan raised its price target for American Express to $365 from $360, a modest upgrade.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T06:47-04:00"
-      },
-      {
-        "symbol": "AXP",
-        "sentiment": -0.3,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Broad market decline and extreme fear weigh on American Express as the Dow tumbles over 1%.",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T02:56-04:00"
       }
     ],
     "healthcare": [
+      {
+        "symbol": "REGN",
+        "sentiment": 0.8,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "Regeneron secured a $270\u202fmillion U.S. government contract extension for its Ebola treatment Inmazeb through 2031.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-26T08:17-04:00"
+      },
       {
         "symbol": "BMY",
         "sentiment": -0.2,
@@ -3321,15 +3348,6 @@
         "importance": 4,
         "unconfirmed_rumor": false,
         "summary": "Microbiotica presented encouraging Phase 1b data for MB097 combined with Keytruda in advanced melanoma patients.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T06:47-04:00"
-      },
-      {
-        "symbol": "AMGN",
-        "sentiment": 0.6,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Jefferies increased its price target for Amgen from $410 to $428, indicating a positive outlook.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-26T06:47-04:00"
       }
@@ -5502,6 +5520,24 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "NOC",
+            "sentiment": 0.2,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Jefferies raised Northrop Grumman's price target to $585, indicating modest optimism.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-26T08:16-04:00"
+          },
+          {
+            "symbol": "PLTR",
+            "sentiment": 0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Deutsche Bank increased Palantir's price target to $225, showing a positive outlook.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-26T08:16-04:00"
+          },
           {
             "symbol": "LMT",
             "sentiment": 0.0,
@@ -12795,6 +12831,42 @@
         },
         "overnight": [
           {
+            "symbol": "NVDA",
+            "sentiment": -0.4,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Analysts' warnings on Asian AI stocks put pressure on Nvidia, suggesting short\u2011term downside.",
+            "source": "benzinga",
+            "seen_at": "2026-10-26T08:17-04:00"
+          },
+          {
+            "symbol": "NVDA",
+            "sentiment": 0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Honeywell's new AI platform leverages Nvidia technology, highlighting demand for Nvidia's chips.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-26T08:17-04:00"
+          },
+          {
+            "symbol": "AMAT",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "AllianceBernstein reaffirmed a Buy rating and raised Applied Materials' price target to $700.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-26T08:17-04:00"
+          },
+          {
+            "symbol": "AVGO",
+            "sentiment": 0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Broadcom signaled interest in buying up to $5\u202fbn of Meta shares, indicating excess cash deployment.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-26T08:17-04:00"
+          },
+          {
             "symbol": "MU",
             "sentiment": 0.3,
             "importance": 3,
@@ -14753,6 +14825,24 @@
         },
         "overnight": [
           {
+            "symbol": "MAR",
+            "sentiment": 0.7,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "BMO Capital raised its price target for Marriott International to $420, indicating a more favorable valuation outlook.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-26T08:17-04:00"
+          },
+          {
+            "symbol": "TSLA",
+            "sentiment": 0.8,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Tesla secured regulatory approval for its Full Self\u2011Driving assisted driving system in Latvia, opening a new market for the technology.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-26T08:17-04:00"
+          },
+          {
             "symbol": "LKQ",
             "sentiment": 0.8,
             "importance": 4,
@@ -16634,6 +16724,33 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "ICE",
+            "sentiment": -0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Public companies are objecting to the OKXICE tokenized share platform, posing regulatory and reputational risk for Intercontinental Exchange.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-26T08:17-04:00"
+          },
+          {
+            "symbol": "C",
+            "sentiment": 0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Citigroup acted as financial advisor on a $500\u202fmillion sale, generating advisory fees and showcasing its deal\u2011making capability.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-26T08:17-04:00"
+          },
+          {
+            "symbol": "GS",
+            "sentiment": -0.1,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Goldman Sachs cut its Kospi index forecast by 25%, reflecting a more cautious outlook that may slightly dampen sentiment.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-26T08:17-04:00"
+          },
           {
             "symbol": "COIN",
             "sentiment": -0.8,
@@ -19591,6 +19708,15 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "REGN",
+            "sentiment": 0.8,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Regeneron secured a $270\u202fmillion U.S. government contract extension for its Ebola treatment Inmazeb through 2031.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-26T08:17-04:00"
+          },
           {
             "symbol": "BMY",
             "sentiment": -0.2,
