@@ -11,10 +11,10 @@
     "C",
     "COF",
     "SPGI",
-    "CME",
     "ICE",
     "HOOD",
-    "COIN"
+    "COIN",
+    "FLG"
   ],
   "seed": [
     "JPM",
@@ -57,6 +57,20 @@
       "symbol": "BAC",
       "reason": "Low conviction and risk\u2011off environment",
       "by": "evening review"
+    },
+    {
+      "time": "2026-10-26T12:23-04:00",
+      "action": "removed",
+      "symbol": "CME",
+      "reason": "No intraday setup; overbought and quiet relative to recent momentum.",
+      "by": "manager"
+    },
+    {
+      "time": "2026-10-26T12:23-04:00",
+      "action": "added",
+      "symbol": "FLG",
+      "reason": "RBC Capital coverage and price target change in financial sector; in news, belongs on watchlist.",
+      "by": "manager"
     }
   ],
   "rejected": [
@@ -83,7 +97,13 @@
       "action": "remove_rejected",
       "symbol": "AXP",
       "reason": "list would drop below 15 stocks"
+    },
+    {
+      "time": "2026-10-26T12:23-04:00",
+      "action": "remove_rejected",
+      "symbol": "SPGI",
+      "reason": "list would drop below 15 stocks"
     }
   ],
-  "updated": "2026-10-26T10:48-04:00"
+  "updated": "2026-10-26T12:23-04:00"
 }

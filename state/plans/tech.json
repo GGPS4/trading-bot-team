@@ -1,40 +1,53 @@
 {
   "date": "2026-10-26",
-  "time": "12:10",
-  "trigger": "must invest $2,396 more (75% rule)",
-  "decisions": [
-    {
-      "symbol": "TXN",
-      "action": "BUY",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Strong opening range breakout above VWAP with positive 15m momentum. Above 50-day MA and RSI 40.7 (not overbought). Fits the 'quality over quantity' mandate as a high-conviction long."
-    },
-    {
-      "symbol": "AVGO",
-      "action": "BUY",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Opening range breakout with price above VWAP. RSI 28.7 is near the oversold floor, providing a mean-reversion safety net. Positive news flow regarding Meta AI investment adds catalyst."
-    }
-  ],
+  "time": "12:25",
+  "trigger": "big news on ['MSFT']",
+  "decisions": [],
   "ranked_ideas": [
     {
       "symbol": "NVDA",
+      "side": "long",
       "setup": "momentum",
-      "reason": "High relative volume (1.68) and positive day change. RSI 21.7 is very low, suggesting potential for a sharp bounce if it holds support. Strong news catalysts (Meta investment)."
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Strong intraday momentum (+2.2%) with high relative volume (1.57) and positive news flow regarding Meta investment. Trading above VWAP. RSI is low (21.7) suggesting room for a mean-reversion bounce or continued momentum play within the day."
     },
     {
-      "symbol": "MU",
-      "setup": "news catalyst",
-      "reason": "Gapped up on strong AI demand news. RSI 28.5 is low. Watch for continuation of the gap-up move."
+      "symbol": "AVGO",
+      "side": "long",
+      "setup": "opening range breakout",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Clear opening range breakout (+2.6% day) with positive news catalyst (Meta investment rumor, Seagate partnership). Trading above VWAP. RSI is low (28.7), indicating potential for a strong intraday move higher."
+    },
+    {
+      "symbol": "TXN",
+      "side": "long",
+      "setup": "opening range breakout",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Opening range breakout (+2.3% day) and trading above VWAP. However, relative volume is low (0.69), so conviction is lower. Good for a quick scalp if momentum picks up."
     },
     {
       "symbol": "PANW",
-      "setup": "pullback in uptrend",
-      "reason": "Executive highlighted PANW as a relative strength leader. Currently consolidating near VWAP. RSI 42.9 is neutral. Good candidate for a dip-buy if it stabilizes."
+      "side": "long",
+      "setup": "momentum",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Executive order to focus on relative strength leaders. PANW is +2.4% on the day, above VWAP, and has a healthy 5-day trend. RSI is neutral (42.9), allowing for upside."
+    },
+    {
+      "symbol": "MU",
+      "side": "long",
+      "setup": "news catalyst",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "reason": "Gapped up +2.5% pre-market on AI demand news. Currently +3.4% on the day. RSI is low (28.5), suggesting the move is fresh. Watch for volume confirmation."
     }
   ],
   "watchlist_adds": [],

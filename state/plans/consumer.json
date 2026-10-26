@@ -1,78 +1,55 @@
 {
   "date": "2026-10-26",
-  "time": "11:58",
+  "time": "12:23",
   "trigger": "scheduled look",
-  "market_view": "Market is calm and slightly higher, with SPY +0.8%, QQQ +1.3%, VIXY -2.6%, and 61% of watched stocks up. No warning signs, regime normal. LULU has broken below VWAP and the opening range with negative momentum, while LKQ is oversold and bouncing off the low with high volume. We are deploying capital into a high-conviction mean-reversion bounce after closing the weak LULU long.",
-  "decisions": [
-    {
-      "symbol": "LULU",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "momentum",
-      "reason": "LULU broke below VWAP and opening range with negative momentum, trend down, look -0.6, vwap -0.8, m15 +0.0, m60 +0.2, rvol 1.26, trend down; lesson says exit immediately on VWAP/OR breakdown."
-    },
-    {
-      "symbol": "LKQ",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "LKQ oversold at RSI 22.2, bounced off low with rvol 2.38, Barclays upgrade to Overweight, but Baird PT cut; stop below recent low, target prior high."
-    }
-  ],
+  "decisions": [],
   "ranked_ideas": [
     {
-      "symbol": "BKNG",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.05,
-      "setup": "other",
-      "reason": "Breakdown below opening range and VWAP on weak tape; market calm but stock showing downside pressure."
+      "symbol": "RCL",
+      "side": "long",
+      "setup": "opening range breakout",
+      "conviction": 5,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Strong opening range breakout above $282.81 with positive momentum (m15 +0.1%, m60 +0.1%) and trading above VWAP. Earnings are tomorrow, so today's move is likely driven by sector strength and technicals. High conviction for intraday momentum."
+    },
+    {
+      "symbol": "LULU",
+      "side": "long",
+      "setup": "momentum",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Up 2.9% on the day with positive 15m momentum. Trading near VWAP. RSI is 59.4, not overbought. Good candidate for continuation if it holds above the opening range high."
     },
     {
       "symbol": "DECK",
-      "direction": "short",
+      "side": "long",
+      "setup": "pullback in uptrend",
       "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.05,
-      "setup": "news catalyst",
-      "reason": "Barclays maintained overweight but cut price target to $100, indicating modest downside pressure."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "reason": "Trading above VWAP with a slight uptrend. RSI is 52.1, neutral. The 5-day trend is down, but today's action is positive. Lower conviction due to mixed signals."
     },
     {
-      "symbol": "RCL",
-      "direction": "long",
+      "symbol": "MCD",
+      "side": "long",
+      "setup": "momentum",
       "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.05,
-      "setup": "momentum",
-      "reason": "Royal Caribbean 15-year return outperformed, but intraday momentum mixed; lower priority."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Up 0.8% on the day, trading near VWAP. RSI is 73.9, which is overbought, so caution is needed. Low conviction due to overbought condition."
     },
     {
-      "symbol": "F",
-      "direction": "long",
+      "symbol": "HD",
+      "side": "long",
+      "setup": "other",
       "conviction": 2,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.05,
-      "setup": "momentum",
-      "reason": "Modest bounce with rvol 1.03, but trend down and conviction low."
-    },
-    {
-      "symbol": "GM",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.05,
-      "setup": "momentum",
-      "reason": "Weak trend and low volume, not a high-conviction long."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "reason": "RSI is 78.2, very overbought. Trading flat. Low conviction due to overbought condition and lack of momentum."
     }
   ],
-  "experiment": "Testing trend-following approach with ATR-based stops and profit targets instead of fixed VWAP reclaim entries",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }
