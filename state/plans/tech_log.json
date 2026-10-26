@@ -1058,5 +1058,37 @@
       "BUY AVGO x2 (~$661.15) [deploy]",
       "WATCHLIST remove rejected IBM"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "13:59",
+    "trigger": "big news on ['MSFT']",
+    "market_view": "Market is calm and slightly higher into the close, with SPY +0.6%, QQQ +1.2%, VIXY -1.7%, and 60% of watchlist higher. Normal regime with no warning signs, though we hold five intraday positions and must deploy cash to meet the 75% minimum. Momentum and OR breakouts remain, but several long names are stretched or oversold.",
+    "experiment": "Implement an RSI floor filter (>30) for short trades to block shorting into climax bottoms.",
+    "decisions": [
+      {
+        "symbol": "AVGO",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Closing weak OR breakout into oversold/trend-down context; flat pnl and tight stop risk, freeing slot for better deploy.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "AMAT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "OR breakout above 385, Bernstein PT raise to $700, day +3.6, above VWAP; oversold/50d below so high risk, conviction strong due to catalyst.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL AVGO",
+      "BUY AMAT x4 (~$1568.28)",
+      "WATCHLIST remove rejected AAPL",
+      "WATCHLIST remove rejected CRM",
+      "WATCHLIST remove rejected ADBE"
+    ]
   }
 ]
