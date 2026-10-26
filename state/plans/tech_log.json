@@ -745,5 +745,46 @@
       "BUY AVGO x4 (~$1309.2)",
       "BUY MU x1 (~$904.71)"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "10:00",
+    "trigger": "must invest $3,456 more (75% rule)",
+    "market_view": "The market is calm and slightly higher, with SPY +0.5%, QQQ +0.6%, VIXY -2.7%, and 56% of watched stocks up. Tech news catalysts are driving some names, but intraday trends are mixed. Existing momentum longs are holding, though MU shows weakness. No high-conviction new setups are forcing aggressive deployment, but AAPL offers a news-catalyst entry and PANW aligns with the executive's relative-strength focus.",
+    "experiment": "Momentum-reversal exit: close position if 5-minute momentum turns negative even if price is still above the stop.",
+    "decisions": [
+      {
+        "symbol": "MU",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "MU is -1.0% on the day, RSI 28.5 oversold, 50-day below, trend down; stalled long from 09:42, exit before close.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "AAPL",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Apple unveiled redesigned iPad mini with OLED, A20 Pro, and Apple Intelligence; news sentiment 0.7, importance 4, rvol 1.8, above VWAP, m15 positive. High-impact catalyst but watch momentum.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "PANW",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Executive focus on relative strength leaders like MSFT and PANW; PANW is a 5-day relative strength leader, but intraday below VWAP and trend down, so caution.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL MU",
+      "BUY AAPL x5 (~$1715.65)",
+      "BUY PANW x4 (~$1532.48)",
+      "WATCHLIST remove rejected CRM",
+      "WATCHLIST remove rejected ADBE",
+      "WATCHLIST remove rejected TXN"
+    ]
   }
 ]

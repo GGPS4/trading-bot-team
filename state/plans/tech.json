@@ -1,17 +1,26 @@
 {
   "date": "2026-10-26",
-  "time": "09:42",
-  "trigger": "price moves in ['PANW']",
-  "market_view": "The market is calm and slightly higher at 09:40 ET, with SPY +0.5%, QQQ +0.7%, VIXY -2.2%, and 61.0% of watched stocks up. The tone is normal/rising, so normal long setups are allowed, but we remain selective and risk-driven. I favor relative strength leaders and high-conviction momentum with news support.",
+  "time": "10:00",
+  "trigger": "must invest $3,456 more (75% rule)",
+  "market_view": "The market is calm and slightly higher, with SPY +0.5%, QQQ +0.6%, VIXY -2.7%, and 56% of watched stocks up. Tech news catalysts are driving some names, but intraday trends are mixed. Existing momentum longs are holding, though MU shows weakness. No high-conviction new setups are forcing aggressive deployment, but AAPL offers a news-catalyst entry and PANW aligns with the executive's relative-strength focus.",
   "decisions": [
     {
-      "symbol": "MSFT",
+      "symbol": "MU",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "momentum",
+      "reason": "MU is -1.0% on the day, RSI 28.5 oversold, 50-day below, trend down; stalled long from 09:42, exit before close."
+    },
+    {
+      "symbol": "AAPL",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.025,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "reason": "Scotiabank raised PT to 625 with Outperform/sentiment 0.8 and importance 4; MSFT is a relative strength leader per executive orders, above 50-day, RSI neutral, and market is calm."
+      "reason": "Apple unveiled redesigned iPad mini with OLED, A20 Pro, and Apple Intelligence; news sentiment 0.7, importance 4, rvol 1.8, above VWAP, m15 positive. High-impact catalyst but watch momentum."
     },
     {
       "symbol": "PANW",
@@ -19,41 +28,73 @@
       "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Executive team orders focus on relative strength leaders like MSFT and PANW; PANW shows rvol 3.34, day +2.3%, above VWAP, and strong relative strength."
-    },
-    {
-      "symbol": "NVDA",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "NVDA is above VWAP with rvol 2.45 and day +2.1%; news includes partnership expansion and analyst target hike, though RSI is oversold and 50-day is below, so risk is elevated."
-    },
-    {
-      "symbol": "AVGO",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "AVGO is above VWAP with rvol 2.17 and day +1.7%; news around Meta AI spending/Broadcom components; RSI oversold and 50-day below, but intraday momentum strong."
-    },
-    {
-      "symbol": "MU",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "MU gapped +2.5% premarket, rose on AI demand, rvol 2.37, above VWAP, day +3.1%; RSI oversold and 50-day below, but strong intraday setup."
+      "setup": "pullback in uptrend",
+      "reason": "Executive focus on relative strength leaders like MSFT and PANW; PANW is a 5-day relative strength leader, but intraday below VWAP and trend down, so caution."
     }
   ],
-  "ranked_ideas": [],
-  "experiment": "Implement an RSI floor filter (>30) for short trades to block shorting into climax bottoms.",
+  "ranked_ideas": [
+    {
+      "symbol": "INTU",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Oppenheimer PT raise to 406, but trend down and below VWAP; not high conviction for long."
+    },
+    {
+      "symbol": "AMAT",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Gap/momentum but RSI 4.9 oversold and 50-day below; risky."
+    },
+    {
+      "symbol": "ANET",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Day +1.2 but rvol 0.53 low, no strong volume; weak follow-through."
+    },
+    {
+      "symbol": "IBM",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "RSI 86.8 overbought, trend up but extended; not ideal long."
+    },
+    {
+      "symbol": "CRM",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Day -0.8; weak."
+    }
+  ],
+  "experiment": "Momentum-reversal exit: close position if 5-minute momentum turns negative even if price is still above the stop.",
   "watchlist_changes": {
     "add": [],
-    "remove": []
+    "remove": [
+      {
+        "symbol": "CRM",
+        "reason": "No fresh catalyst and price trend down"
+      },
+      {
+        "symbol": "ADBE",
+        "reason": "Weak trend and no relative strength"
+      },
+      {
+        "symbol": "TXN",
+        "reason": "Low volume and no clear setup"
+      }
+    ]
   }
 }
