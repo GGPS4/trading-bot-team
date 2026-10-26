@@ -1040,5 +1040,45 @@
       "WATCHLIST remove rejected ABT",
       "WATCHLIST remove rejected REGN"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "10:33",
+    "trigger": "must invest $2,853 more (75% rule)",
+    "market_view": "Market is calm and slightly higher, with SPY +0.7%, QQQ +0.8%, VIXY -2.7%, and 70% of watchlist stocks up. Healthcare is mixed but catalysts are concentrated in biotech. Intraday price action is choppy, so VWAP and ATR-based stops are key. The best high-conviction setup is MRNA above VWAP on Piper Sandler news.",
+    "experiment": "ATR-based dynamic stops for news-catalyst trades and keep position until moved at least 1% above VWAP before considering exit.",
+    "decisions": [
+      {
+        "symbol": "ISRG",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Long exposure is losing and momentum has turned negative: price below VWAP, m15 -0.6%, trend down, rvol 2.41 but failed upside. Close weak momentum before close.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "MRNA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Piper Sandler raised PT to 230 and reaffirmed overweight; stock is above VWAP, rvol 2.75, gapped up at open. High-conviction catalyst with ATR-based stop. Expect intraday trade.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "TMO",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "TMO broke above opening range high at 683.09 and holds above VWAP, m15 +0.4%, trend up. OR breakout setup, though volume moderate. Use ATR-based stop.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      }
+    ],
+    "results": [
+      "SELL ISRG",
+      "BUY MRNA x4 (~$802.66)",
+      "BUY TMO x1 (~$684.22)",
+      "WATCHLIST remove rejected UNH",
+      "WATCHLIST remove rejected MDT"
+    ]
   }
 ]

@@ -1,47 +1,38 @@
 {
   "date": "2026-10-26",
-  "time": "10:13",
-  "trigger": "must invest $3,115 more (75% rule)",
-  "market_view": "Market is calm and slightly higher, with SPY +0.5%, QQQ +0.4%, VIXY -2.4%, and 66% of watch stocks up. Healthcare is selective; MRNA shows strong momentum after Piper Sandler PT raise, while LLY failed below VWAP. No clear risk-off signal, so long bias remains but selective.",
+  "time": "10:33",
+  "trigger": "must invest $2,853 more (75% rule)",
+  "market_view": "Market is calm and slightly higher, with SPY +0.7%, QQQ +0.8%, VIXY -2.7%, and 70% of watchlist stocks up. Healthcare is mixed but catalysts are concentrated in biotech. Intraday price action is choppy, so VWAP and ATR-based stops are key. The best high-conviction setup is MRNA above VWAP on Piper Sandler news.",
   "decisions": [
+    {
+      "symbol": "ISRG",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "Long exposure is losing and momentum has turned negative: price below VWAP, m15 -0.6%, trend down, rvol 2.41 but failed upside. Close weak momentum before close."
+    },
     {
       "symbol": "MRNA",
       "action": "BUY",
       "conviction": 4,
       "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Piper Sandler PT raise to $230, price above VWAP, m15 +0.5%, rvol 3.45, trend up; high-conviction momentum setup."
+      "take_profit_pct": 0.1,
+      "setup": "news catalyst",
+      "reason": "Piper Sandler raised PT to 230 and reaffirmed overweight; stock is above VWAP, rvol 2.75, gapped up at open. High-conviction catalyst with ATR-based stop. Expect intraday trade."
     },
     {
-      "symbol": "LLY",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "other",
-      "reason": "LLY below VWAP, m15 -0.2%, loss -0.27%, no high-conviction long; quality over quantity, close weak position."
+      "symbol": "TMO",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "opening range breakout",
+      "reason": "TMO broke above opening range high at 683.09 and holds above VWAP, m15 +0.4%, trend up. OR breakout setup, though volume moderate. Use ATR-based stop."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "VRTX",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "breakdown",
-      "reason": "Breakdown below opening range with high rvol 2.52; m15 -0.6%, VWAP -1.1%."
-    },
-    {
-      "symbol": "MRK",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "breakdown",
-      "reason": "Breakdown below opening range, day -0.7%, but earnings tomorrow."
-    },
     {
       "symbol": "BMY",
       "direction": "long",
@@ -49,16 +40,7 @@
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "news catalyst",
-      "reason": "Positive Phase 3 interim for izalontamab, but Piper PT cut and mixed price action."
-    },
-    {
-      "symbol": "TMO",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Trend up, day +1.1%, but low rvol 1.02."
+      "reason": "Phase 3 positive interim but Piper PT cut; high impact but setup mixed."
     },
     {
       "symbol": "DHR",
@@ -67,24 +49,56 @@
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Trend up, day +1.0%, but low rvol 0.96."
+      "reason": "PT raise but intraday weak; only if reversal confirms."
+    },
+    {
+      "symbol": "REGN",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Government contract extension but stock flat; low conviction."
+    },
+    {
+      "symbol": "MRK",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Breakdown below opening range and below VWAP; short bias, but earnings risk tomorrow."
+    },
+    {
+      "symbol": "LLY",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "No clear catalyst; wait for setup."
     }
   ],
-  "experiment": "ATR-based dynamic stops for news-catalyst trades; add rule to keep a position until it has moved at least 1% above VWAP before considering an exit.",
+  "experiment": "ATR-based dynamic stops for news-catalyst trades and keep position until moved at least 1% above VWAP before considering exit.",
   "watchlist_changes": {
-    "add": [],
+    "add": [
+      {
+        "symbol": "MRNA",
+        "reason": "Piper Sandler PT raise and high volume/above VWAP; strong catalyst."
+      },
+      {
+        "symbol": "TMO",
+        "reason": "Opening range breakout with trend up, though volume moderate."
+      }
+    ],
     "remove": [
       {
+        "symbol": "UNH",
+        "reason": "Quiet, no new catalyst, below VWAP, weak momentum."
+      },
+      {
         "symbol": "MDT",
-        "reason": "Quiet, low rvol 0.25."
-      },
-      {
-        "symbol": "ABT",
-        "reason": "Low rvol and no clear catalyst."
-      },
-      {
-        "symbol": "REGN",
-        "reason": "Low rvol and no clear catalyst."
+        "reason": "Very low activity and no catalyst; no longer deserves watchlist spot."
       }
     ]
   }
