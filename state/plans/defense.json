@@ -1,50 +1,87 @@
 {
   "date": "2026-10-26",
-  "time": "11:04",
+  "time": "11:28",
   "trigger": "scheduled look",
-  "decisions": [],
-  "ranked_ideas": [
+  "market_view": "Market is calm and slightly rising, with SPY +1.0%, QQQ +1.5%, VIXY -3.6, and 65% of watched stocks up. The defense sector is mixed, but BAH broke its opening range after a TD Cowen upgrade, while LMT remains strong. With the mood normal, I favor high-conviction intraday setups.",
+  "decisions": [
+    {
+      "symbol": "CACI",
+      "action": "SELL",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "Stalled below the opening range high and VWAP, with look -0.7% and m15 -0.3, fading momentum; exit the long before the stop."
+    },
     {
       "symbol": "BAH",
-      "side": "long",
-      "setup": "news catalyst",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "TD Cowen upgraded BAH to Buy with a $95 target; BAH showed an opening range breakout, day +7.9%, rvol 1.21, and upside momentum."
+    }
+  ],
+  "ranked_ideas": [
+    {
+      "symbol": "LDOS",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.035,
-      "reason": "TD Cowen upgrade to Buy with $95 target and strong intraday momentum (day +7.2%, above VWAP). High liquidity prime fits executive mandate. Needs to fill 75% investment mandate."
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout with day +3.4%, but low rvol; watch for follow-through."
     },
     {
       "symbol": "SAIC",
-      "side": "long",
-      "setup": "momentum",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "reason": "Opening range breakout with strong 5-day momentum (+9.5%). RSI is high (77.6) but trend is up. Fits high-liquidity criteria."
+      "setup": "opening range breakout",
+      "reason": "OR breakout with rvol 1.3, but RSI overbought; momentum long only."
+    },
+    {
+      "symbol": "KTOS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout, RSI oversold, but 50-day regime below; high risk/reward setup."
+    },
+    {
+      "symbol": "AVAV",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout, RSI oversold, but 50-day regime below; tactical long."
     },
     {
       "symbol": "HEI",
-      "side": "long",
-      "setup": "pullback in uptrend",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "reason": "Trading above VWAP with positive 60m momentum (+2.0%). RSI 45.3 suggests room for upside before overbought. Good candidate for mean reversion/continuation."
-    },
-    {
-      "symbol": "HII",
-      "side": "long",
       "setup": "opening range breakout",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Broke above opening range, trading above VWAP. Positive 60m momentum. Lower volatility than primes, good for tight stops."
-    },
-    {
-      "symbol": "LHX",
-      "side": "long",
-      "setup": "VWAP bounce",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Trading slightly above VWAP with stable momentum. Earnings coming soon (Oct 29), so limited upside but safe for short-term hold if needed."
+      "reason": "OR breakout with rvol 1.12, but 50-day regime below; momentum long."
     }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Enforce a 30-minute cooldown period before re-entering any symbol exited due to stalled momentum.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": [
+      {
+        "symbol": "HII",
+        "reason": "Low relative volume and no fresh catalyst; setup not high quality."
+      },
+      {
+        "symbol": "TXT",
+        "reason": "Very low relative volume and pre-earnings risk; avoid holding into earnings."
+      }
+    ]
+  }
 }

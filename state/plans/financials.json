@@ -1,14 +1,44 @@
 {
   "date": "2026-10-26",
-  "time": "11:15",
-  "trigger": "scheduled look",
+  "time": "11:28",
+  "trigger": "big news on ['AXP']",
   "decisions": [],
   "ranked_ideas": [
-    "JPM",
-    "SPGI",
-    "C",
-    "AXP",
-    "COF"
+    {
+      "symbol": "C",
+      "setup": "mean reversion",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "conviction": 4
+    },
+    {
+      "symbol": "SPGI",
+      "setup": "other",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "conviction": 4
+    },
+    {
+      "symbol": "AXP",
+      "setup": "news catalyst",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "conviction": 3
+    },
+    {
+      "symbol": "JPM",
+      "setup": "other",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "conviction": 3
+    },
+    {
+      "symbol": "SCHW",
+      "setup": "other",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "conviction": 2
+    }
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
