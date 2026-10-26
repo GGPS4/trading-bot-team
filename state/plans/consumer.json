@@ -1,76 +1,76 @@
 {
   "date": "2026-10-26",
-  "time": "11:32",
+  "time": "11:58",
   "trigger": "scheduled look",
-  "market_view": "The market is calm and slightly higher, with SPY +0.9% and QQQ +1.5%, while most watched stocks are up and VIXY fell. The tape shows selective strength, led by TSLA breaking its opening range on high volume and bullish analyst news, while AMZN and CMG remain below VWAP/trend context. I am managing risk by exiting RCL and trying to buy a mean-reversion setup in LKQ.",
+  "market_view": "Market is calm and slightly higher, with SPY +0.8%, QQQ +1.3%, VIXY -2.6%, and 61% of watched stocks up. No warning signs, regime normal. LULU has broken below VWAP and the opening range with negative momentum, while LKQ is oversold and bouncing off the low with high volume. We are deploying capital into a high-conviction mean-reversion bounce after closing the weak LULU long.",
   "decisions": [
     {
-      "symbol": "RCL",
+      "symbol": "LULU",
       "action": "SELL",
       "conviction": 3,
       "stop_loss_pct": 0.0,
       "take_profit_pct": 0.0,
-      "setup": "other",
-      "reason": "RCL failed the opening-range breakout and is now -0.32% on the day; earnings are scheduled tomorrow before the open, so I am exiting to avoid event risk and redeploy capital."
+      "setup": "momentum",
+      "reason": "LULU broke below VWAP and opening range with negative momentum, trend down, look -0.6, vwap -0.8, m15 +0.0, m60 +0.2, rvol 1.26, trend down; lesson says exit immediately on VWAP/OR breakdown."
     },
     {
       "symbol": "LKQ",
       "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
       "setup": "mean reversion",
-      "reason": "LKQ is oversold (RSI 22.2) and bounced +5.1% off the low with rvol 2.29, positive m15/m60 and VWAP +0.1; mean-reversion long off the breakdown low with tight stop."
+      "reason": "LKQ oversold at RSI 22.2, bounced off low with rvol 2.38, Barclays upgrade to Overweight, but Baird PT cut; stop below recent low, target prior high."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "LULU",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Day +3.2 but below VWAP and rvol 1.25; needs stronger momentum."
+      "symbol": "BKNG",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
+      "setup": "other",
+      "reason": "Breakdown below opening range and VWAP on weak tape; market calm but stock showing downside pressure."
     },
     {
       "symbol": "DECK",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
+      "setup": "news catalyst",
+      "reason": "Barclays maintained overweight but cut price target to $100, indicating modest downside pressure."
+    },
+    {
+      "symbol": "RCL",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout and uptrend, but PT cut news limits conviction."
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
+      "setup": "momentum",
+      "reason": "Royal Caribbean 15-year return outperformed, but intraday momentum mixed; lower priority."
     },
     {
       "symbol": "F",
       "direction": "long",
       "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
       "setup": "momentum",
-      "reason": "Day +0.9 with rvol 1.05; earnings after close."
+      "reason": "Modest bounce with rvol 1.03, but trend down and conviction low."
     },
     {
       "symbol": "GM",
       "direction": "long",
       "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news",
-      "reason": "Trump auto post but trend down; low conviction."
-    },
-    {
-      "symbol": "MCD",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news",
-      "reason": "Regional promo only; weak rvol."
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
+      "setup": "momentum",
+      "reason": "Weak trend and low volume, not a high-conviction long."
     }
   ],
-  "experiment": "Implement a market-regime filter that disables new entries when the S&P 500 is below its 50-day moving average",
+  "experiment": "Testing trend-following approach with ATR-based stops and profit targets instead of fixed VWAP reclaim entries",
   "watchlist_changes": {
     "add": [],
     "remove": []
