@@ -1,13 +1,69 @@
 {
   "date": "2026-10-26",
-  "time": "13:33",
-  "trigger": "must invest $8,739 more (75% rule)",
-  "market_view": "The market is calm and slightly higher, with SPY +0.8% and QQQ +1.3%. Healthcare names are mostly trading below VWAP and mixed, so no clean high-conviction long or short setup is present at 1:30 PM ET. I am staying out and letting the executive order strategy filter for price above VWAP with ATR-based stops.",
+  "time": "13:43",
+  "trigger": "big news on ['MRK']",
+  "market_view": "The market is calm and slightly higher, with SPY +0.7%, QQQ +1.2%, and VIXY -2.3%. Healthcare sentiment is cautiously optimistic after Merck and Corcept news, but several stocks show breakdowns below VWAP and the opening range. No clean high-conviction long setups are above VWAP with strong volume, and the executive's high-conviction catalyst filter is not met.",
   "decisions": [],
-  "ranked_ideas": [],
-  "experiment": "Testing executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops.",
+  "ranked_ideas": [
+    {
+      "symbol": "TMO",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Defensive long above VWAP with positive m15/m60 and uptrend, though rvol is modest."
+    },
+    {
+      "symbol": "LLY",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Above/at VWAP with rvol 1.5 and prior uptrend, but intraday momentum is mixed."
+    },
+    {
+      "symbol": "UNH",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Breakdown below opening range and VWAP, negative momentum, executive flagged UNH for ATR stops."
+    },
+    {
+      "symbol": "ISRG",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Overbought and below VWAP/OR breakdown, high rvol, but trend up; potential short-term weakness."
+    },
+    {
+      "symbol": "VRTX",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Opening range breakdown and below VWAP with high rvol, but mixed momentum."
+    }
+  ],
+  "experiment": "executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops",
   "watchlist_changes": {
-    "add": [],
-    "remove": []
+    "add": [
+      {
+        "symbol": "MRK",
+        "reason": "Positive Phase 3 Keytruda endometrial cancer data, urgent high-importance catalyst, though price is below VWAP."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "MRNA",
+        "reason": "Trend down and no confirmed catalyst above VWAP; lacks high-conviction setup."
+      }
+    ]
   }
 }

@@ -1,46 +1,83 @@
 {
   "date": "2026-10-26",
-  "time": "13:12",
-  "trigger": "must invest $2,217 more (75% rule)",
+  "time": "13:43",
+  "trigger": "scheduled look",
+  "market_view": "The market is calm and slightly higher, with SPY +0.7%, QQQ +1.2%, VIXY -2.3%, and 60% of watched stocks up. Selectivity is returning, but our existing long momentum names are stalling; NVDA gave back its opening-range breakout momentum on negative AI safety news, while AMD surged on Q3 results. We need high-conviction setups to deploy the remaining cash toward the 75% invested minimum.",
   "decisions": [
     {
-      "symbol": "TXN",
+      "symbol": "NVDA",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "momentum",
+      "reason": "NVDA failed to hold the OR breakout high and m15 momentum turned negative; negative AI safety analyst warning added pressure. Close the weak long."
+    },
+    {
+      "symbol": "MU",
       "action": "BUY",
-      "side": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
       "setup": "opening range breakout",
-      "conviction": 5,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Strong opening range breakout above VWAP with positive 15m momentum. Trading above 50-day MA with RSI 40.7 (not overbought). Meets executive order for high-conviction long setup in a rising market."
-    },
-    {
-      "symbol": "AMAT",
-      "action": "BUY",
-      "side": "long",
-      "setup": "news catalyst",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Strong gap up and OR breakout. Positive news catalyst (AllianceBernstein price target raise to $700). RSI is very low (4.9) suggesting potential for a strong mean-reversion/momentum play off the lows, but currently breaking out. Exec order allows high-conviction setups."
-    },
-    {
-      "symbol": "PANW",
-      "action": "BUY",
-      "side": "long",
-      "setup": "pullback in uptrend",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "reason": "Executive explicitly highlighted PANW as a relative strength leader for long setups. Trading above 50-day MA, RSI 42.9 (neutral). Holding near highs with stable momentum."
+      "reason": "MU is a premarket gapper with OR breakout above 908.28, trading above VWAP; AI memory demand supports momentum, but watch Taiwan strike risk."
     }
   ],
   "ranked_ideas": [
-    "MU",
-    "AVGO",
-    "AAPL",
-    "CRM",
-    "IBM"
+    {
+      "symbol": "AVGO",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "opening range breakout",
+      "reason": "OR breakout and above VWAP, AI infrastructure demand, but RSI oversold and rvol low."
+    },
+    {
+      "symbol": "AMAT",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "opening range breakout",
+      "reason": "OR breakout, Bernstein PT raise, AI chip momentum, but RSI oversold and trend down."
+    },
+    {
+      "symbol": "PANW",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "Relative strength leader, above VWAP, but weak rvol and no clean OR breakout."
+    },
+    {
+      "symbol": "AAPL",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "mean reversion",
+      "reason": "iPhone Duo inventory/wait-time news hit sentiment, but trend and VWAP weak; high-risk bounce only."
+    },
+    {
+      "symbol": "IBM",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "No fresh catalyst, overbought RSI, quiet; lower priority."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": [
+      {
+        "symbol": "IBM",
+        "reason": "No fresh catalyst and quiet price/volume action; lower priority after strong relative-strength days."
+      }
+    ]
+  }
 }
