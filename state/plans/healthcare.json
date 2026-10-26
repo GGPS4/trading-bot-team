@@ -1,87 +1,82 @@
 {
   "date": "2026-10-26",
-  "time": "12:43",
-  "trigger": "scheduled look",
-  "market_view": "Market is calm and slightly higher, but healthcare names are mostly lower and below VWAP. No new material news today. With close approaching, focus on high-quality setups; current losers are below VWAP and in failed setups. No high-conviction new long at this hour.",
+  "time": "12:48",
+  "trigger": "big news on ['CORT']",
+  "market_view": "Broad market is calm to slightly higher, but healthcare names are mostly weak and below VWAP. Opening-range breakdowns and pullbacks dominate, with no clean high-conviction long setups above VWAP right now. Current positions are losing intraday.",
   "decisions": [
     {
-      "symbol": "TMO",
+      "symbol": "ABT",
       "action": "SELL",
       "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "other",
-      "reason": "Long failed opening range breakout, now below VWAP and in downtrend; stop not hit but thesis broken."
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "opening range breakout",
+      "reason": "Failed opening-range breakout; price is below VWAP and in a daily downtrend. Intraday momentum and m60 are negative, so the long is structurally weak."
     },
     {
-      "symbol": "ISRG",
+      "symbol": "MRK",
       "action": "SELL",
       "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "momentum",
-      "reason": "Long in downtrend, below VWAP, momentum failed; stop not hit but exit to redeploy."
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "news catalyst",
+      "reason": "Positive Phase 3 news but stock rejected at VWAP and broke below opening range. Intraday momentum and m60 are negative, so the news-driven long is stalling."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "AMGN",
+      "symbol": "CORT",
       "direction": "long",
       "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
       "setup": "news catalyst",
-      "reason": "High-importance Imdeltra survival data, but below VWAP and OR breakdown limits entry."
-    },
-    {
-      "symbol": "BMY",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "High-importance Phase 3 oncology data, but intraday breakdown and low rvol."
-    },
-    {
-      "symbol": "DHR",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Bullish PT raise but weak upside participation and below VWAP."
+      "reason": "Positive Phase 2 BELLA data with high sentiment; oversold RSI, but below VWAP intraday."
     },
     {
       "symbol": "MRNA",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Bullish PT raise but stock in downtrend and below VWAP."
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "Breakdown below VWAP and opening range despite positive PT; high rvol and negative momentum."
     },
     {
-      "symbol": "REGN",
+      "symbol": "VRTX",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Bullish contract news but weak day performance and below VWAP."
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "Bounce with high rvol, but still below VWAP and in lower range."
+    },
+    {
+      "symbol": "ISRG",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "Opening-range breakdown, below VWAP, high rvol, negative momentum."
+    },
+    {
+      "symbol": "TMO",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "Defensive strength but below VWAP and flat momentum; lower priority."
     }
   ],
-  "experiment": "executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops",
+  "experiment": "Testing the executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops, while managing the current losers.",
   "watchlist_changes": {
-    "add": [
-      {
-        "symbol": "CORT",
-        "reason": "Favorable survival and response data in ovarian cancer study"
-      }
-    ],
+    "add": [],
     "remove": [
       {
-        "symbol": "MDT",
-        "reason": "No fresh catalyst and very low day-trading volume"
+        "symbol": "UNH",
+        "reason": "Weak opening-range breakdown and low relative volume, no clear reversal setup."
       }
     ]
   }

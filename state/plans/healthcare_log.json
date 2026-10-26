@@ -1282,5 +1282,40 @@
       "WATCHLIST removed MDT",
       "WATCHLIST added CORT"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "12:48",
+    "trigger": "big news on ['CORT']",
+    "market_view": "Broad market is calm to slightly higher, but healthcare names are mostly weak and below VWAP. Opening-range breakdowns and pullbacks dominate, with no clean high-conviction long setups above VWAP right now. Current positions are losing intraday.",
+    "experiment": "Testing the executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops, while managing the current losers.",
+    "decisions": [
+      {
+        "symbol": "ABT",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Failed opening-range breakout; price is below VWAP and in a daily downtrend. Intraday momentum and m60 are negative, so the long is structurally weak.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "MRK",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Positive Phase 3 news but stock rejected at VWAP and broke below opening range. Intraday momentum and m60 are negative, so the news-driven long is stalling.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      }
+    ],
+    "results": [
+      "SELL ABT",
+      "SELL MRK",
+      "BUY CORT blocked: team used all of today's trades",
+      "SHORT MRNA blocked: team used all of today's trades",
+      "BUY VRTX blocked: team used all of today's trades",
+      "SHORT ISRG blocked: team used all of today's trades",
+      "BUY TMO blocked: team used all of today's trades",
+      "WATCHLIST remove rejected UNH"
+    ]
   }
 ]
