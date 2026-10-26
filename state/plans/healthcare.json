@@ -1,83 +1,56 @@
 {
   "date": "2026-10-26",
-  "time": "12:48",
-  "trigger": "big news on ['CORT']",
-  "market_view": "Broad market is calm to slightly higher, but healthcare names are mostly weak and below VWAP. Opening-range breakdowns and pullbacks dominate, with no clean high-conviction long setups above VWAP right now. Current positions are losing intraday.",
+  "time": "13:00",
+  "trigger": "must invest $8,739 more (75% rule)",
   "decisions": [
     {
-      "symbol": "ABT",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "opening range breakout",
-      "reason": "Failed opening-range breakout; price is below VWAP and in a daily downtrend. Intraday momentum and m60 are negative, so the long is structurally weak."
+      "action": "BUY",
+      "symbol": "CORT",
+      "setup": "mean reversion",
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.04,
+      "reason": "RSI 20.2 (oversold) with +1.8% day move and rvol 2.15. Positive Phase 2 data provides a fundamental floor. Buying the bounce from the opening range breakdown with a tight stop to capture intraday mean reversion."
     },
     {
-      "symbol": "MRK",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
+      "action": "BUY",
+      "symbol": "MRNA",
       "setup": "news catalyst",
-      "reason": "Positive Phase 3 news but stock rejected at VWAP and broke below opening range. Intraday momentum and m60 are negative, so the news-driven long is stalling."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "reason": "Piper Sandler raised PT to $230 (from $167). Stock is +4.4% off the open with rvol 1.51. Trading above VWAP (-0.5% is close enough given the gap). Momentum setup on strong news catalyst."
+    },
+    {
+      "action": "BUY",
+      "symbol": "BMY",
+      "setup": "news catalyst",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "reason": "Positive interim Phase 3 results for izalontamab brengitecan (doubled PFS). Stock is -0.4% day but has strong fundamental catalyst. Low price ($61) allows for precise stop placement. Looking for intraday reaction to the data release."
+    },
+    {
+      "action": "BUY",
+      "symbol": "REGN",
+      "setup": "news catalyst",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "reason": "Secured $270M government contract extension. Stock is -0.6% day but showing +0.3% momentum in the last 15 mins (m15 +0.4%). Trading below VWAP but the news provides a catalyst for a bounce. High conviction on the contract news."
+    },
+    {
+      "action": "BUY",
+      "symbol": "AMGN",
+      "setup": "momentum",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Imdelltra + Imfinzi survival benefit news. Stock is +0.5% day, m60 +0.3%. Trading below VWAP (-0.8%) but breaking out of the opening range low (444.5) towards the mid-range. Strong momentum setup on positive data."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "CORT",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "news catalyst",
-      "reason": "Positive Phase 2 BELLA data with high sentiment; oversold RSI, but below VWAP intraday."
-    },
-    {
-      "symbol": "MRNA",
-      "direction": "short",
-      "conviction": 4,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "momentum",
-      "reason": "Breakdown below VWAP and opening range despite positive PT; high rvol and negative momentum."
-    },
-    {
-      "symbol": "VRTX",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "momentum",
-      "reason": "Bounce with high rvol, but still below VWAP and in lower range."
-    },
-    {
-      "symbol": "ISRG",
-      "direction": "short",
-      "conviction": 4,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "momentum",
-      "reason": "Opening-range breakdown, below VWAP, high rvol, negative momentum."
-    },
-    {
-      "symbol": "TMO",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "momentum",
-      "reason": "Defensive strength but below VWAP and flat momentum; lower priority."
-    }
+    "LLY",
+    "TMO",
+    "DHR",
+    "ABT",
+    "VRTX"
   ],
-  "experiment": "Testing the executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops, while managing the current losers.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": [
-      {
-        "symbol": "UNH",
-        "reason": "Weak opening-range breakdown and low relative volume, no clear reversal setup."
-      }
-    ]
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

@@ -856,5 +856,39 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-26",
+    "time": "13:05",
+    "trigger": "scheduled look",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "LMT",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is scaled out and trailing. Price $628.15 is above the first target of $622.79. RSI is 84.2 (overbought). Executing full exit to lock in gains and free up capital for higher-conviction setups as per 'quality over quantity' directive.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "BAH",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is near breakeven (-0.01%) with fading momentum (m15 0.0%, m60 -0.5%). RSI is 80.3 (overbought). The stock has already made its big move (+7.2% day). Closing to avoid holding a stalled position and to redeploy capital into CACI which has a fresh, high-conviction news catalyst.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "SELL LMT",
+      "SELL BAH",
+      "BUY CACI blocked: conviction None is below the minimum 2",
+      "BUY KTOS blocked: conviction None is below the minimum 2",
+      "BUY HEI blocked: conviction None is below the minimum 2",
+      "BUY HII blocked: conviction None is below the minimum 2",
+      "BUY LHX blocked: conviction None is below the minimum 2"
+    ]
   }
 ]
