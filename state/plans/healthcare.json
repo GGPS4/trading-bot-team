@@ -1,26 +1,35 @@
 {
   "date": "2026-10-26",
-  "time": "10:48",
-  "trigger": "price moves in ['MRNA']",
-  "market_view": "Market is calm and slightly higher, with SPY +0.8%, QQQ +1.0%, VIXY -3.1, and 65% of watched stocks up. Healthcare names are mixed but momentum has faded below VWAP. News catalysts are driving intraday moves, but setups are inconsistent; maintaining defensive bias and quality over quantity.",
+  "time": "11:04",
+  "trigger": "must invest $3,517 more (75% rule)",
+  "market_view": "The market is calm and slightly higher, with SPY +1.0% and QQQ +1.5%. Healthcare is mixed, but Moderna received a bullish Piper Sandler upgrade and shows strong volume and intraday momentum. I am focusing on high-conviction setups with ATR-based stops while respecting the quality-over-quantity mandate.",
   "decisions": [
     {
-      "symbol": "MRNA",
+      "symbol": "AMGN",
       "action": "SELL",
       "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
       "setup": "news catalyst",
-      "reason": "Loser from failed bullish gap; below VWAP, m15 -2.7%, rvol 2.51, trend down. Closing to free slot and avoid further volatility before close."
+      "reason": "Amgen's high-impact DeLLphi data failed to reclaim VWAP and the stock broke the opening range; current loss -1.27% justifies closing to redeploy capital."
     },
     {
-      "symbol": "ABT",
+      "symbol": "MRNA",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.015,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Piper Sandler PT raise to $230, rvol 2.27, m15 +0.7, price above VWAP; high-conviction bullish momentum."
+    },
+    {
+      "symbol": "ISRG",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above 104.28 with price 104.86, above VWAP, m15 +0.2%, m60 +0.9%, rvol 1.07; Abbott Oncodetect news. High-quality but borderline volume."
+      "setup": "momentum",
+      "reason": "Strong rvol 1.81, m15 +0.3, above VWAP, intraday momentum; momentum setup with volume confirmation."
     }
   ],
   "ranked_ideas": [
@@ -29,50 +38,55 @@
       "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Above VWAP, m15 +0.3%, m60 +0.8%, overnight PT raise; but low rvol."
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above VWAP with bullish analyst PT raise, but low rvol; lower conviction."
     },
     {
       "symbol": "MRK",
       "direction": "short",
       "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "OR breakdown, m15 -0.5%, m60 -1.1%, rvol 1.22; weak momentum."
-    },
-    {
-      "symbol": "REGN",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Intraday breakdown but low rvol; news positive but price weak."
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Breakdown below OR/VWAP on bad sentiment, but earnings tomorrow; avoid new shorts near event."
     },
     {
       "symbol": "BMY",
       "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "mean reversion",
-      "reason": "Mixed news, Piper PT cut, Phase 3 positive; not clean."
-    },
-    {
-      "symbol": "ISRG",
-      "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "rvol 2.02, m15 +0.1%, but below VWAP; overbought."
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Mixed news and breakdown, but high event risk; not high conviction."
+    },
+    {
+      "symbol": "JNJ",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Below VWAP and weak momentum, but low conviction."
+    },
+    {
+      "symbol": "LLY",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "earnings gap",
+      "reason": "Earnings tomorrow before open, high volatility; no intraday edge."
     }
   ],
-  "experiment": "ATR-based dynamic stops for news catalyst trades",
+  "experiment": "Testing ATR-based dynamic stops for news-catalyst trades while maintaining high-conviction momentum entries above VWAP.",
   "watchlist_changes": {
     "add": [],
-    "remove": []
+    "remove": [
+      {
+        "symbol": "MDT",
+        "reason": "Quiet trading, no fresh catalyst, below VWAP, low volume; no longer deserves watchlist spot."
+      }
+    ]
   }
 }

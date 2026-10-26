@@ -1109,5 +1109,44 @@
       "SELL MRNA",
       "BUY ABT x16 (~$1677.76)"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "11:04",
+    "trigger": "must invest $3,517 more (75% rule)",
+    "market_view": "The market is calm and slightly higher, with SPY +1.0% and QQQ +1.5%. Healthcare is mixed, but Moderna received a bullish Piper Sandler upgrade and shows strong volume and intraday momentum. I am focusing on high-conviction setups with ATR-based stops while respecting the quality-over-quantity mandate.",
+    "experiment": "Testing ATR-based dynamic stops for news-catalyst trades while maintaining high-conviction momentum entries above VWAP.",
+    "decisions": [
+      {
+        "symbol": "AMGN",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Amgen's high-impact DeLLphi data failed to reclaim VWAP and the stock broke the opening range; current loss -1.27% justifies closing to redeploy capital.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "MRNA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Piper Sandler PT raise to $230, rvol 2.27, m15 +0.7, price above VWAP; high-conviction bullish momentum.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ISRG",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strong rvol 1.81, m15 +0.3, above VWAP, intraday momentum; momentum setup with volume confirmation.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL AMGN",
+      "BUY MRNA x8 (~$1571.2)",
+      "BUY ISRG x3 (~$1367.38)",
+      "WATCHLIST remove rejected MDT"
+    ]
   }
 ]
