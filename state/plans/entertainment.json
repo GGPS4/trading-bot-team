@@ -1,91 +1,64 @@
 {
   "date": "2026-10-26",
-  "time": "09:34",
-  "trigger": "first look this run",
-  "market_view": "At the market open, broad indices SPY and QQQ are edging higher (+0.3% and +0.4%) while VIXY declines -1.7%, though general market breadth remains cautious. Aligning with executive mandates, we prioritize high-quality names trading above their 50-day moving averages and insist on high-conviction setups to satisfy our capital deployment targets.",
+  "time": "09:42",
+  "trigger": "price moves in ['SPOT']",
+  "market_view": "The broader market is experiencing a mild risk-on session with SPY and QQQ up +0.4% and VIXY down -2.1%. However, entertainment stocks show divergent individual momentum, requiring selective high-quality setups over forced capital deployment.",
   "decisions": [
     {
-      "symbol": "DIS",
-      "action": "BUY",
+      "symbol": "WMG",
+      "action": "SELL",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "High-liquidity focal stock trading above its 50-day moving average with positive market open momentum."
-    },
-    {
-      "symbol": "SONY",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Strong recent performance (+4.9% 5d, +10.8% 20d) and trading safely above its 50-day moving average."
-    },
-    {
-      "symbol": "WBD",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Above 50-day moving average with solid 20-day gain of +9.6% and strong early session strength."
-    },
-    {
-      "symbol": "FOXA",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "Defensive quality name trading above 50-day moving average with steady upward trend."
+      "reason": "Selling stalled position trading below VWAP with extremely weak relative volume (rvol 0.34) and negative intraday PnL."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "ROKU",
+      "symbol": "BAM",
       "direction": "long",
-      "conviction": 4,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Trading above 50-day moving average with positive opening movement."
+      "setup": "pullback in uptrend",
+      "reason": "Showing positive intraday relative strength (+0.5% day, +0.4% open) and trading firmly above VWAP."
     },
     {
-      "symbol": "WMG",
+      "symbol": "TTWO",
       "direction": "long",
-      "conviction": 4,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Solid 20-day trend above 50-day moving average filter."
-    },
-    {
-      "symbol": "IMAX",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Above 50-day moving average with +4.9% 5-day momentum."
+      "reason": "Trading above VWAP with steady volume expansion (1.11 rvol)."
     },
     {
       "symbol": "NFLX",
       "direction": "short",
-      "conviction": 4,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "news catalyst",
-      "reason": "Below 50-day moving average facing negative subscriber engagement news; RSI at 45.6 (> 30)."
+      "reason": "High relative volume (1.65 rvol) breakdown below VWAP following negative subscriber engagement report."
     },
     {
-      "symbol": "CMCSA",
+      "symbol": "SPOT",
       "direction": "short",
-      "conviction": 4,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Below 50-day moving average and showing relative weakness (-1.5% day change)."
+      "setup": "news catalyst",
+      "reason": "Elevated volume breakdown (2.95 rvol) below VWAP following Phillip Securities downgrade."
+    },
+    {
+      "symbol": "IMAX",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Holding VWAP level flat on the open with positive multi-day momentum."
     }
   ],
   "experiment": "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries.",

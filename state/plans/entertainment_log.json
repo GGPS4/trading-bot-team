@@ -531,5 +531,26 @@
       "BUY ROKU x3 (~$475.74) [deploy]",
       "BUY WMG x16 (~$493.44) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "09:42",
+    "trigger": "price moves in ['SPOT']",
+    "market_view": "The broader market is experiencing a mild risk-on session with SPY and QQQ up +0.4% and VIXY down -2.1%. However, entertainment stocks show divergent individual momentum, requiring selective high-quality setups over forced capital deployment.",
+    "experiment": "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries.",
+    "decisions": [
+      {
+        "symbol": "WMG",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "Selling stalled position trading below VWAP with extremely weak relative volume (rvol 0.34) and negative intraday PnL.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL WMG",
+      "BUY BAM x14 (~$659.54) [deploy]"
+    ]
   }
 ]

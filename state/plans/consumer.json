@@ -1,79 +1,105 @@
 {
-  "date": "2026-10-23",
-  "time": "12:54",
-  "trigger": "scheduled look",
-  "market_view": "Caution regime with market sliding; SPY -0.2%, QQQ +0.4%, VIXY +2.0%, only 30% of watched stocks up. Risk-off, longs sized 25% smaller. Existing longs are mostly under pressure; BKNG broke below opening range and VWAP with high volume, confirming weakness. AMZN holding above VWAP but low volume; TSLA holding above VWAP but momentum rolling; ABNB and MAR okay. No high-conviction long setups with clear catalyst; news flow mixed/negative for discretionary names. Prefer shorting high-volume breakdowns over chasing.",
+  "date": "2026-10-26",
+  "time": "09:39",
+  "trigger": "first look this run",
+  "market_view": "Caution tape holds with weak breadth; only a small fraction of watched stocks are higher. The market is below the 50-day regime filter, so new entries should be high-conviction defensive or mean-reversion setups. News catalysts in discretionary offer some offset, but we remain selective.",
   "decisions": [
     {
-      "symbol": "BKNG",
-      "action": "SELL",
+      "symbol": "TSLA",
+      "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.025,
-      "take_profit_pct": 0.03,
-      "setup": "sector rotation",
-      "reason": "Breakdown below opening range and VWAP with rvol 1.5; risk-off short setup favored by scorecard; long thesis failed, exit."
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "news catalyst",
+      "reason": "Pre-market gap +2.5% on Latvia FSD approval; Barclays PT $450 and Turo FSD expand FSD exposure. High-conviction news catalyst with multi-source confirmation."
+    },
+    {
+      "symbol": "AMZN",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "news catalyst",
+      "reason": "AWS- Verizon $2B AI infrastructure deal; significant cloud win. AWS revenue prospects boosted, high-conviction catalyst."
+    },
+    {
+      "symbol": "CMG",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "mean reversion",
+      "reason": "Chipotle brings back Smoked Brisket; RSI 28 oversold. Mean-reversion bounce in risk-off tape fits defensive entry criteria."
+    },
+    {
+      "symbol": "LKQ",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "mean reversion",
+      "reason": "Barclays Overweight on LKQ; RSI 22 oversold; mixed Baird note. Mean-reversion setup in weak long-term trend."
+    },
+    {
+      "symbol": "MAR",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "news catalyst",
+      "reason": "BMO Capital raised Marriott PT to $420; optimistic valuation. News catalyst but watch overbought RSI; still high-conviction catalyst."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "F",
+      "symbol": "RCL",
       "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "VWAP bounce",
-      "reason": "Above VWAP, m15/m60 positive, look +0.7, no negative news; low rvol but bounce attempt."
+      "setup": "earnings gap",
+      "reason": "Earnings tomorrow before open; defensive cruise exposure; high beta to risk-off."
+    },
+    {
+      "symbol": "MCD",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Modest Philippines promo; RSI overbought; limited long-term edge."
+    },
+    {
+      "symbol": "HD",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "5d/20d strong; RSI overbought; momentum chase late."
     },
     {
       "symbol": "DECK",
       "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "High rvol 3.59, above VWAP, m15/m60 positive, look +1.2; negative news caps conviction."
-    },
-    {
-      "symbol": "GM",
-      "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Above VWAP, m15/m60 positive, look +0.9; negative GM news."
+      "setup": "pullback in uptrend",
+      "reason": "5d decline but 20d positive; bounce setup in weak tape."
     },
     {
-      "symbol": "RCL",
+      "symbol": "LULU",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "pullback in uptrend",
-      "reason": "20d +14.6, above 50d, but weak intraday; mean reversion potential."
-    },
-    {
-      "symbol": "CMG",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "mean reversion",
-      "reason": "RSI 28.2 oversold, but Mizuho PT cut."
+      "reason": "20d negative but RSI neutral; bounce potential in risk-off."
     }
   ],
-  "experiment": "Implement a strict 'news filter' that blocks long entries on any stock with negative sentiment news in the last 24 hours.",
+  "experiment": "Testing high-conviction news catalyst entries with ATR-based stops in a risk-off regime while respecting the 50-day moving average filter; validating mean-reversion entries in oversold discretionary names.",
   "watchlist_changes": {
-    "add": [
-      {
-        "symbol": "LKQ",
-        "reason": "Consumer discretionary auto aftermarket name in headlines due to Europe slump hits earnings; fits sector watchlist."
-      }
-    ],
-    "remove": [
-      {
-        "symbol": "ORLY",
-        "reason": "Quiet, no fresh catalyst, breakdown low rvol; no longer best setup."
-      }
-    ]
+    "add": [],
+    "remove": []
   }
 }
