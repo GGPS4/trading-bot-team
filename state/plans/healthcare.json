@@ -1,26 +1,78 @@
 {
   "date": "2026-10-26",
-  "time": "11:40",
-  "trigger": "big news on ['MRK']",
+  "time": "12:18",
+  "trigger": "scheduled look",
+  "market_view": "Market is calm and slightly higher, with SPY +0.7% and QQQ +1.2%. Healthcare is cautiously positive on Merck's strong Phase 3 data, but most stocks lack a clean follow-through above VWAP. Watching for news-driven momentum and risk control.",
   "decisions": [
+    {
+      "symbol": "MRNA",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "news catalyst",
+      "reason": "Failed Moderna news catalyst; below VWAP, m15 negative, loss -1.23%, stalled. Cut loss and redeploy."
+    },
     {
       "symbol": "MRK",
       "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "conviction": 5,
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
       "setup": "news catalyst",
-      "reason": "Strong Phase 3 trial data for endometrial cancer with FDA priority review and Barclays price target raise to $180. Stock is showing relative strength (m15 +0.4%) despite the broader market dip, and volume is elevated (rvol 1.26). High conviction entry."
+      "reason": "Merck Phase 3 endometrial cancer success, FDA priority review, bullish sentiment; large-cap high-conviction news. Enter with ATR-based stop despite intraday breakdown."
     }
   ],
   "ranked_ideas": [
-    "MRK",
-    "MRNA",
-    "ABT",
-    "ISRG",
-    "TMO"
+    {
+      "symbol": "LLY",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "momentum",
+      "reason": "High rvol 1.64 and positive m15/m60, but inside range; watch for breakout."
+    },
+    {
+      "symbol": "AMGN",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "news catalyst",
+      "reason": "Imdeltra survival benefit, but breakdown below OR/VWAP; high risk, high reward."
+    },
+    {
+      "symbol": "BMY",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "news catalyst",
+      "reason": "Positive Phase 3 interim, but Piper PT cut and breakdown; wait for bounce."
+    },
+    {
+      "symbol": "REGN",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "news catalyst",
+      "reason": "Ebola contract extension, but weak intraday; not high conviction yet."
+    },
+    {
+      "symbol": "DHR",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "news catalyst",
+      "reason": "Rothschild PT raise, but weak momentum; low conviction."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "ATR-based dynamic stops for news-catalyst trades; add rule to keep position until moved at least 1% above VWAP before considering exit.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

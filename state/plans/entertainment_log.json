@@ -621,5 +621,35 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-26",
+    "time": "12:18",
+    "trigger": "scheduled look",
+    "market_view": "Market is calm and slightly higher, but the entertainment group is mostly lower and broke below the opening range or VWAP. No clean high-conviction long setups are visible; the only actionable setup is a short in NFLX on high-importance but unconfirmed subscriber data.",
+    "experiment": "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries.",
+    "decisions": [
+      {
+        "symbol": "NFLX",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "NFLX broke below opening range and VWAP on high-importance unconfirmed subscriber data; RSI 45.6 > 30 and rvol 1.46 expansion support short; high-liquidity name favored by exec.",
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "FOXA",
+        "action": "SELL",
+        "conviction": 1,
+        "reason": "Long setup failed as price broke below opening range and VWAP; close weak position.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      }
+    ],
+    "results": [
+      "SELL FOXA",
+      "SHORT NFLX x9 (~$570.78)",
+      "WATCHLIST remove rejected FOXA"
+    ]
   }
 ]

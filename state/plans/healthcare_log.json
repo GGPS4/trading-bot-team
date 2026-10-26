@@ -1217,5 +1217,34 @@
     "results": [
       "BUY MRK blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "12:18",
+    "trigger": "scheduled look",
+    "market_view": "Market is calm and slightly higher, with SPY +0.7% and QQQ +1.2%. Healthcare is cautiously positive on Merck's strong Phase 3 data, but most stocks lack a clean follow-through above VWAP. Watching for news-driven momentum and risk control.",
+    "experiment": "ATR-based dynamic stops for news-catalyst trades; add rule to keep position until moved at least 1% above VWAP before considering exit.",
+    "decisions": [
+      {
+        "symbol": "MRNA",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Failed Moderna news catalyst; below VWAP, m15 negative, loss -1.23%, stalled. Cut loss and redeploy.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "MRK",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Merck Phase 3 endometrial cancer success, FDA priority review, bullish sentiment; large-cap high-conviction news. Enter with ATR-based stop despite intraday breakdown.",
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 0.06
+      }
+    ],
+    "results": [
+      "SELL MRNA",
+      "BUY MRK x11 (~$1553.14)"
+    ]
   }
 ]
