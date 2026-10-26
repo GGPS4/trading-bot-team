@@ -1,73 +1,73 @@
 {
   "date": "2026-10-26",
-  "time": "09:48",
-  "trigger": "price moves in ['LDOS', 'KTOS', 'AVAV']",
-  "market_view": "Broader market is mildly positive with SPY up 0.4% and VIXY dropping 2.1%, presenting a supportive backdrop for defense names. High-liquidity defense primes and government IT contractors are showing solid intraday strength, led by contract wins and analyst upgrades. We deploy capital into top-performing primes breaking out above their opening ranges while honoring ATR risk management.",
+  "time": "10:13",
+  "trigger": "scheduled look",
+  "market_view": "Market is calm and slightly higher, with SPY +0.5%, QQQ +0.4%, VIXY -2.4%, and 66% of watched stocks up. Defense names are mildly upbeat, led by CACI's Navy contract and LMT upgrades, while GD is breaking above its opening range. No clear risk-off signal, so we are focusing on high-quality defense momentum.",
   "decisions": [
     {
-      "symbol": "CACI",
-      "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.018,
-      "take_profit_pct": 0.036,
-      "setup": "opening range breakout",
-      "reason": "CACI secured a $281M U.S. Navy contract win and received a Jefferies upgrade to Buy with a $725 target; price is up +4.5% breaking above its opening range high at $661.99 on positive VWAP."
+      "symbol": "PLTR",
+      "action": "SELL",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "other",
+      "reason": "PLTR failed to hold above VWAP and stalled, with no valid stop in place; exiting to redeploy into the GD breakout."
     },
     {
-      "symbol": "RTX",
+      "symbol": "GD",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.015,
+      "stop_loss_pct": 0.01,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Executing executive directive to focus on high-liquidity prime defense anchors; RTX is up +1.6% on the day, +1.0% off the open, pushing above its opening range high of $194.17 with solid relative volume."
+      "reason": "GD broke above the opening range high at $354.24, held above VWAP, and showed positive momentum; aligns with executive focus on high-liquidity primes."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "GD",
+      "symbol": "BAH",
       "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "TD Cowen upgrade and strong day move, but overbought."
+    },
+    {
+      "symbol": "HEI",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "Core prime contractor trading at the high of its opening range ($354.21) above VWAP, adhering to prime liquidity mandate."
+      "reason": "OR breakout above VWAP, but low relative volume."
+    },
+    {
+      "symbol": "LDOS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Strong 5-day trend, but overbought."
     },
     {
       "symbol": "SAIC",
       "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.018,
-      "take_profit_pct": 0.035,
-      "setup": "momentum",
-      "reason": "Up +2.3% day and +1.2% off open, sustaining momentum above VWAP with defense IT strength."
-    },
-    {
-      "symbol": "BAH",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.018,
-      "take_profit_pct": 0.035,
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "reason": "Up +4.6% on TD Cowen upgrade to Buy with $95 price target, consolidating tightly near morning highs."
+      "reason": "Positive PR award, but no direct financial impact and overbought."
     },
     {
-      "symbol": "LHX",
+      "symbol": "KTOS",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "Consistent gainer (+1.0% day, +0.7% open) trading above VWAP ahead of earnings later this week."
-    },
-    {
-      "symbol": "HII",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "mean reversion",
-      "reason": "Stable shipbuilder prime holding flat above its opening price and VWAP."
+      "reason": "Oversold bounce setup, but weak underlying trend."
     }
   ],
   "experiment": "Make the 50% scale-out at 1R standard across all opening range breakout setups to guarantee profits during choppy sessions.",

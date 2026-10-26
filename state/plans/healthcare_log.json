@@ -1007,5 +1007,38 @@
       "BUY ISRG x3 (~$1363.92)",
       "WATCHLIST remove rejected MDT"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "10:13",
+    "trigger": "must invest $3,115 more (75% rule)",
+    "market_view": "Market is calm and slightly higher, with SPY +0.5%, QQQ +0.4%, VIXY -2.4%, and 66% of watch stocks up. Healthcare is selective; MRNA shows strong momentum after Piper Sandler PT raise, while LLY failed below VWAP. No clear risk-off signal, so long bias remains but selective.",
+    "experiment": "ATR-based dynamic stops for news-catalyst trades; add rule to keep a position until it has moved at least 1% above VWAP before considering an exit.",
+    "decisions": [
+      {
+        "symbol": "MRNA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Piper Sandler PT raise to $230, price above VWAP, m15 +0.5%, rvol 3.45, trend up; high-conviction momentum setup.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "LLY",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "LLY below VWAP, m15 -0.2%, loss -0.27%, no high-conviction long; quality over quantity, close weak position.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      }
+    ],
+    "results": [
+      "SELL LLY",
+      "BUY MRNA x4 (~$804.12)",
+      "SHORT VRTX x3 (~$1551.46) [deploy]",
+      "WATCHLIST remove rejected MDT",
+      "WATCHLIST remove rejected ABT",
+      "WATCHLIST remove rejected REGN"
+    ]
   }
 ]

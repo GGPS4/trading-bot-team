@@ -1,82 +1,90 @@
 {
   "date": "2026-10-26",
-  "time": "09:59",
-  "trigger": "price moves in ['MRNA']",
-  "market_view": "Market is calm and slightly higher, with SPY +0.5% and QQQ +0.6%. Healthcare names are mixed but selective intraday momentum is emerging. News catalysts drove moves earlier, but the scorecard shows news catalyst setups have struggled, so the focus is shifting to momentum.",
+  "time": "10:13",
+  "trigger": "must invest $3,115 more (75% rule)",
+  "market_view": "Market is calm and slightly higher, with SPY +0.5%, QQQ +0.4%, VIXY -2.4%, and 66% of watch stocks up. Healthcare is selective; MRNA shows strong momentum after Piper Sandler PT raise, while LLY failed below VWAP. No clear risk-off signal, so long bias remains but selective.",
   "decisions": [
     {
-      "symbol": "BMY",
+      "symbol": "MRNA",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Piper Sandler PT raise to $230, price above VWAP, m15 +0.5%, rvol 3.45, trend up; high-conviction momentum setup."
+    },
+    {
+      "symbol": "LLY",
       "action": "SELL",
       "conviction": 3,
       "stop_loss_pct": 0.0,
       "take_profit_pct": 0.0,
       "setup": "other",
-      "reason": "Stalled long with weak volume (rvol 0.47) and mixed news; exit to free slot and redeploy capital."
-    },
-    {
-      "symbol": "ISRG",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Above VWAP, m15 +0.3%, rvol 1.76, trend up; high-conviction intraday momentum setup."
+      "reason": "LLY below VWAP, m15 -0.2%, loss -0.27%, no high-conviction long; quality over quantity, close weak position."
     }
   ],
   "ranked_ideas": [
     {
+      "symbol": "VRTX",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "breakdown",
+      "reason": "Breakdown below opening range with high rvol 2.52; m15 -0.6%, VWAP -1.1%."
+    },
+    {
+      "symbol": "MRK",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "breakdown",
+      "reason": "Breakdown below opening range, day -0.7%, but earnings tomorrow."
+    },
+    {
+      "symbol": "BMY",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Positive Phase 3 interim for izalontamab, but Piper PT cut and mixed price action."
+    },
+    {
       "symbol": "TMO",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Defensive healthcare strength, day +0.9, above VWAP, rvol 1.23, but momentum mixed."
+      "reason": "Trend up, day +1.1%, but low rvol 1.02."
     },
     {
       "symbol": "DHR",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Uptrend intact, m15 +0.3, day +0.7, rvol 1.11."
-    },
-    {
-      "symbol": "ABBV",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Strong 20d trend, but overbought and weak intraday momentum."
-    },
-    {
-      "symbol": "UNH",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "mean reversion",
-      "reason": "Trend down, but bounced; not high conviction."
-    },
-    {
-      "symbol": "MRK",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Mild bounce attempt, day -0.3, m15 +0.2, rvol 1.42, trend flat."
+      "reason": "Trend up, day +1.0%, but low rvol 0.96."
     }
   ],
-  "experiment": "",
+  "experiment": "ATR-based dynamic stops for news-catalyst trades; add rule to keep a position until it has moved at least 1% above VWAP before considering an exit.",
   "watchlist_changes": {
     "add": [],
     "remove": [
       {
         "symbol": "MDT",
-        "reason": "Quiet, no intraday catalyst, low volume (rvol 0.22)."
+        "reason": "Quiet, low rvol 0.25."
+      },
+      {
+        "symbol": "ABT",
+        "reason": "Low rvol and no clear catalyst."
+      },
+      {
+        "symbol": "REGN",
+        "reason": "Low rvol and no clear catalyst."
       }
     ]
   }
