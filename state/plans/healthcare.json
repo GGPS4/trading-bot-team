@@ -1,56 +1,105 @@
 {
   "date": "2026-10-26",
-  "time": "09:39",
-  "trigger": "first look this run",
+  "time": "09:48",
+  "trigger": "price moves in ['JNJ']",
+  "market_view": "The broader market is firm with SPY and QQQ up +0.4% and VIX dropping -2.1%, establishing a stable risk-on backdrop. Healthcare is presenting high-conviction setups backed by major Phase 3 clinical trial wins in JNJ, AMGN, and BMY, as well as high-volume momentum breakouts in ISRG and LLY. We are deploying capital into these high-conviction setups using ATR-based stops to satisfy our 75% investment mandate safely.",
   "decisions": [
     {
-      "action": "BUY",
-      "symbol": "BMY",
-      "setup": "news catalyst",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Strong Phase 3 interim results for izalontamab brengitecan doubling PFS in EGFR-mutated NSCLC is a high-conviction catalyst. Stock is below 50d MA, fitting the defensive/mean-reversion mandate in a risk-off market. ATR-based stop protects against volatility."
-    },
-    {
-      "action": "BUY",
-      "symbol": "AMGN",
-      "setup": "news catalyst",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Phase 3 DeLLphi-305 data showing 58% reduction in death risk for IMDELLTRA + IMFINZI is a major positive catalyst. RSI is high (69.4) but momentum is strong; trading above 50d MA. High conviction news play."
-    },
-    {
-      "action": "BUY",
       "symbol": "JNJ",
-      "setup": "news catalyst",
+      "action": "BUY",
+      "conviction": 5,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Strong Phase 3 PROTEUS data showing 62% reduction in disease recurrence/death risk. Defensive healthcare name, below 50d MA, suitable for risk-off environment. High importance news catalyst."
+      "take_profit_pct": 0.035,
+      "setup": "news catalyst",
+      "reason": "Strong Phase 3 PROTEUS data showed a 62% reduction in recurrence/death in prostate cancer. Stock is up +2.7% overall and +0.8% above VWAP on solid volume."
     },
     {
+      "symbol": "ISRG",
       "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.012,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Trading at high of opening range ($455.62), +0.5% above VWAP with elevated relative volume of 1.79 and strong 20-day momentum."
+    },
+    {
+      "symbol": "AMGN",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.035,
+      "setup": "news catalyst",
+      "reason": "Phase 3 DeLLphi-305 study showed a 58% reduction in death risk in SCLC; strong positive catalyst with solid relative volume (1.13)."
+    },
+    {
+      "symbol": "BMY",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Positive Phase 3 interim trial results doubled median progression-free survival in EGFR-mutated NSCLC. Trading above VWAP with positive intraday move."
+    },
+    {
       "symbol": "LLY",
-      "setup": "news catalyst",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Positive Phase 1/2 data for sofe-m and olomorasib. Strong 20d trend (+7.6%). Above 50d MA. High conviction momentum/news hybrid."
-    },
-    {
       "action": "BUY",
-      "symbol": "REGN",
+      "conviction": 4,
+      "stop_loss_pct": 0.018,
+      "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Secured $270M government contract extension for Inmazeb through 2031. Solid fundamental catalyst. Above 50d MA. RSI 73.8 is high, so tight stop is critical."
+      "reason": "Encouraging Phase 1/2 clinical trial data with 79% ORR in ovarian cancer. High relative volume (1.9) with ATR-adjusted stop to manage volatility."
     }
   ],
   "ranked_ideas": [
-    "BMY",
-    "AMGN",
-    "JNJ",
-    "LLY",
-    "REGN"
+    {
+      "symbol": "ABBV",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "pullback in uptrend",
+      "reason": "Up +1.1% on the day, trading above VWAP (+0.1%) with consistent 20d momentum."
+    },
+    {
+      "symbol": "TMO",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Up +0.6% on the day with steady relative volume of 1.36 above 50-day average."
+    },
+    {
+      "symbol": "REGN",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Secured $270M BARDA government contract extension for Ebola treatment Inmazeb through 2031."
+    },
+    {
+      "symbol": "DHR",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "pullback in uptrend",
+      "reason": "Price target upgraded to $220 by Rothschild & Co Redburn; positive daily trend."
+    },
+    {
+      "symbol": "ABT",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Launched Oncodetect MRD test for cancer monitoring with steady intraday price."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Testing executive strategy: prioritize high-conviction news catalysts above VWAP with dynamic ATR-based stops.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

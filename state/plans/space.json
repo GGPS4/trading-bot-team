@@ -1,15 +1,59 @@
 {
   "date": "2026-10-26",
-  "time": "09:42",
-  "trigger": "price moves in ['ASTS', 'BKSY']",
+  "time": "09:48",
+  "trigger": "price moves in ['FLY']",
+  "market_view": "Broader indices are moderately positive with SPY and QQQ up 0.4% and VIXY retreating 2.1%, signaling a calm market regime. However, our team is currently paused by executive directive due to recent performance and we are already at the maximum allowed 5 open positions. We are honoring the pause and holding existing positions while trailing stops and price targets manage open risk.",
   "decisions": [],
   "ranked_ideas": [
-    "VSAT",
-    "HWM",
-    "RDW",
-    "PL",
-    "FLY"
+    {
+      "symbol": "HWM",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Severely oversold with RSI 14.1 after a 5-day drop, currently trading above VWAP (+0.2%) on solid relative volume."
+    },
+    {
+      "symbol": "VSAT",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Showing relative intraday strength up +2.5% on the day and +1.6% off the open, holding above VWAP."
+    },
+    {
+      "symbol": "TDG",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "VWAP bounce",
+      "reason": "High relative volume at 4.52x normal, maintaining support right at VWAP with low intraday volatility."
+    },
+    {
+      "symbol": "PL",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion",
+      "reason": "Oversold daily RSI of 26.8 stabilizing near the opening range low with steady 1.0 rvol."
+    },
+    {
+      "symbol": "LUNR",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Intraday weakness down -2.0% and trading -1.4% below VWAP near the lows of its opening range."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Test requiring a minimum 15-minute wait post-open before taking short setups to allow initial range expansion and VWAP levels to stabilize.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

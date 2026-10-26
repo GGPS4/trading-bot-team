@@ -892,5 +892,61 @@
       "WATCHLIST added ARGX",
       "WATCHLIST added MOH"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "time": "09:48",
+    "trigger": "price moves in ['JNJ']",
+    "market_view": "The broader market is firm with SPY and QQQ up +0.4% and VIX dropping -2.1%, establishing a stable risk-on backdrop. Healthcare is presenting high-conviction setups backed by major Phase 3 clinical trial wins in JNJ, AMGN, and BMY, as well as high-volume momentum breakouts in ISRG and LLY. We are deploying capital into these high-conviction setups using ATR-based stops to satisfy our 75% investment mandate safely.",
+    "experiment": "Testing executive strategy: prioritize high-conviction news catalysts above VWAP with dynamic ATR-based stops.",
+    "decisions": [
+      {
+        "symbol": "JNJ",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Strong Phase 3 PROTEUS data showed a 62% reduction in recurrence/death in prostate cancer. Stock is up +2.7% overall and +0.8% above VWAP on solid volume.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "ISRG",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Trading at high of opening range ($455.62), +0.5% above VWAP with elevated relative volume of 1.79 and strong 20-day momentum.",
+        "stop_loss_pct": 0.012,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "AMGN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Phase 3 DeLLphi-305 study showed a 58% reduction in death risk in SCLC; strong positive catalyst with solid relative volume (1.13).",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "BMY",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Positive Phase 3 interim trial results doubled median progression-free survival in EGFR-mutated NSCLC. Trading above VWAP with positive intraday move.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "LLY",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Encouraging Phase 1/2 clinical trial data with 79% ORR in ovarian cancer. High relative volume (1.9) with ATR-adjusted stop to manage volatility.",
+        "stop_loss_pct": 0.018,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY JNJ x6 (~$1625.16)",
+      "BUY ISRG x3 (~$1366.88)",
+      "BUY AMGN x3 (~$1336.92)",
+      "BUY BMY x28 (~$1733.2)",
+      "BUY LLY x1 (~$1285.08)"
+    ]
   }
 ]
