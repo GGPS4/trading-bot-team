@@ -276,6 +276,15 @@
   "news": {
     "findings": [
       {
+        "symbol": "HOOD",
+        "sentiment": 0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Robinhood partners with Ripple to expand RLUSD use for institutional settlement and treasury operations.",
+        "source": "benzinga",
+        "time": "11:00"
+      },
+      {
         "symbol": "V",
         "sentiment": 0.0,
         "importance": 3,
@@ -516,19 +525,11 @@
         "unconfirmed_rumor": true,
         "summary": "Citigroup is reportedly near a $10B loan deal for Saudi Aramco.",
         "source": "fiscal.ai"
-      },
-      {
-        "symbol": "C",
-        "sentiment": 0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Citi reports record investment\u2011banking activity in the ASEAN region.",
-        "source": "fiscal.ai"
       }
     ],
     "urgent": [],
-    "overall": "Investors are awaiting earnings for Visa and Mastercard, with prediction markets focusing on stablecoins and blockchain. No major news yet to move the broader financial services sector.",
-    "items_read": 55
+    "overall": "The mood for the group is mildly positive, driven by Robinhood\u2019s partnership with Ripple. No other significant news has emerged to shift sentiment for the remaining Financial Services stocks.",
+    "items_read": 56
   },
   "social": {
     "findings": [],
@@ -709,139 +710,315 @@
   },
   "intraday": {
     "JPM": {
-      "price": 336.17,
-      "change_today": 0.0064,
-      "from_open": -0.0031,
+      "price": 336.42,
+      "change_today": 0.0071,
+      "from_open": -0.0024,
       "day_high": 337.29,
       "day_low": 334.54,
-      "since_last_look": 0.0025
+      "since_last_look": 0.0017,
+      "vwap": 335.81,
+      "vs_vwap": 0.0018,
+      "opening_range": [
+        334.54,
+        337.29
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0017,
+      "momentum_60m": 0.0056,
+      "rel_volume": 0.63,
+      "trend_5m": "flat"
     },
     "GS": {
-      "price": 911.39,
-      "change_today": 0.0202,
-      "from_open": -0.0008,
+      "price": 911.13,
+      "change_today": 0.0199,
+      "from_open": -0.001,
       "day_high": 915.425,
       "day_low": 906.98,
-      "since_last_look": 0.0012
+      "since_last_look": 0.0017,
+      "vwap": 910.14,
+      "vs_vwap": 0.0011,
+      "opening_range": [
+        906.98,
+        915.42
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0016,
+      "momentum_60m": 0.0041,
+      "rel_volume": 1.22,
+      "trend_5m": "flat"
     },
     "MS": {
-      "price": 186.8,
-      "change_today": 0.0179,
-      "from_open": 0.0022,
+      "price": 186.42,
+      "change_today": 0.0159,
+      "from_open": 0.0002,
       "day_high": 188.96,
       "day_low": 185.815,
-      "since_last_look": 0.0039
+      "since_last_look": 0.0001,
+      "vwap": 186.69,
+      "vs_vwap": -0.0014,
+      "opening_range": [
+        186.04,
+        188.96
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0001,
+      "momentum_60m": 0.0016,
+      "rel_volume": 1.22,
+      "trend_5m": "flat"
     },
     "V": {
-      "price": 399.44,
-      "change_today": -0.0121,
-      "from_open": -0.0073,
+      "price": 400.56,
+      "change_today": -0.0093,
+      "from_open": -0.0045,
       "day_high": 403.33,
       "day_low": 398.76,
-      "since_last_look": -0.0001
+      "since_last_look": 0.0008,
+      "vwap": 401.23,
+      "vs_vwap": -0.0017,
+      "opening_range": [
+        400.66,
+        403.33
+      ],
+      "breakout_up": false,
+      "breakdown": true,
+      "momentum_15m": 0.0008,
+      "momentum_60m": -0.0018,
+      "rel_volume": 1.11,
+      "trend_5m": "up"
     },
     "MA": {
-      "price": 607.26,
-      "change_today": -0.0108,
-      "from_open": -0.0063,
+      "price": 608.85,
+      "change_today": -0.0082,
+      "from_open": -0.0037,
       "day_high": 612.98,
       "day_low": 605.84,
-      "since_last_look": 0.0005
+      "since_last_look": 0.0009,
+      "vwap": 609.34,
+      "vs_vwap": -0.0008,
+      "opening_range": [
+        607.19,
+        612.98
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0009,
+      "momentum_60m": -0.0023,
+      "rel_volume": 2.06,
+      "trend_5m": "up"
     },
     "AXP": {
-      "price": 313.37,
-      "change_today": -0.0057,
-      "from_open": -0.0129,
+      "price": 313.82,
+      "change_today": -0.0043,
+      "from_open": -0.0115,
       "day_high": 317.48,
       "day_low": 312.66,
-      "since_last_look": 0.0005
+      "since_last_look": 0.0027,
+      "vwap": 313.91,
+      "vs_vwap": -0.0003,
+      "opening_range": [
+        312.96,
+        317.48
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0027,
+      "momentum_60m": 0.0015,
+      "rel_volume": 0.74,
+      "trend_5m": "flat"
     },
     "BLK": {
-      "price": 1133.04,
-      "change_today": 0.0046,
-      "from_open": -0.0034,
+      "price": 1134.33,
+      "change_today": 0.0058,
+      "from_open": -0.0023,
       "day_high": 1136.93,
       "day_low": 1125.58,
-      "since_last_look": 0.0004
+      "since_last_look": 0.0018,
+      "vwap": 1130.86,
+      "vs_vwap": 0.0031,
+      "opening_range": [
+        1126.8,
+        1136.93
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0018,
+      "momentum_60m": 0.003,
+      "rel_volume": 1.58,
+      "trend_5m": "flat"
     },
     "SCHW": {
-      "price": 89.62,
-      "change_today": -0.0013,
-      "from_open": -0.0045,
+      "price": 89.5,
+      "change_today": -0.0028,
+      "from_open": -0.0059,
       "day_high": 90.52,
-      "day_low": 89.54,
-      "since_last_look": 0.0003
+      "day_low": 89.36,
+      "since_last_look": 0.0004,
+      "vwap": 89.79,
+      "vs_vwap": -0.0033,
+      "opening_range": [
+        89.64,
+        90.52
+      ],
+      "breakout_up": false,
+      "breakdown": true,
+      "momentum_15m": 0.0004,
+      "momentum_60m": -0.0025,
+      "rel_volume": 0.57,
+      "trend_5m": "flat"
     },
     "C": {
-      "price": 122.86,
-      "change_today": 0.0149,
-      "from_open": 0.0018,
+      "price": 122.67,
+      "change_today": 0.0133,
+      "from_open": 0.0002,
       "day_high": 123.3,
       "day_low": 122.3,
-      "since_last_look": 0.0021
+      "since_last_look": 0.0005,
+      "vwap": 122.72,
+      "vs_vwap": -0.0004,
+      "opening_range": [
+        122.3,
+        123.3
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0005,
+      "momentum_60m": 0.0028,
+      "rel_volume": 0.37,
+      "trend_5m": "flat"
     },
     "COF": {
-      "price": 202.5,
-      "change_today": 0.0007,
-      "from_open": -0.0068,
+      "price": 202.7,
+      "change_today": 0.0017,
+      "from_open": -0.0058,
       "day_high": 204.175,
       "day_low": 201.62,
-      "since_last_look": 0.0007
+      "since_last_look": 0.0023,
+      "vwap": 202.49,
+      "vs_vwap": 0.001,
+      "opening_range": [
+        201.62,
+        204.18
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.001,
+      "momentum_60m": 0.0024,
+      "rel_volume": 0.48,
+      "trend_5m": "flat"
     },
     "SPGI": {
-      "price": 451.73,
-      "change_today": 0.0032,
-      "from_open": -0.0414,
+      "price": 452.59,
+      "change_today": 0.0051,
+      "from_open": -0.0396,
       "day_high": 473.01,
       "day_low": 450.45,
-      "since_last_look": -0.0033
+      "since_last_look": 0.0019,
+      "vwap": 456.18,
+      "vs_vwap": -0.0079,
+      "opening_range": [
+        453.3,
+        473.01
+      ],
+      "breakout_up": false,
+      "breakdown": true,
+      "momentum_15m": -0.0001,
+      "momentum_60m": -0.0025,
+      "rel_volume": 3.05,
+      "trend_5m": "flat"
     },
     "ICE": {
-      "price": 158.5,
-      "change_today": -0.0094,
-      "from_open": -0.008,
+      "price": 158.51,
+      "change_today": -0.0093,
+      "from_open": -0.0079,
       "day_high": 159.77,
       "day_low": 157.745,
-      "since_last_look": -0.0015
+      "since_last_look": 0.0009,
+      "vwap": 158.68,
+      "vs_vwap": -0.0011,
+      "opening_range": [
+        157.75,
+        159.77
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0013,
+      "momentum_60m": 0.0015,
+      "rel_volume": 0.82,
+      "trend_5m": "flat"
     },
     "HOOD": {
-      "price": 95.83,
-      "change_today": 0.032,
-      "from_open": 0.0055,
+      "price": 96.17,
+      "change_today": 0.0356,
+      "from_open": 0.009,
       "day_high": 96.5,
       "day_low": 94.095,
-      "since_last_look": 0.008
+      "since_last_look": 0.0049,
+      "vwap": 95.43,
+      "vs_vwap": 0.0077,
+      "opening_range": [
+        94.09,
+        96.5
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0055,
+      "momentum_60m": 0.0116,
+      "rel_volume": 1.48,
+      "trend_5m": "up"
     },
     "COIN": {
-      "price": 159.03,
-      "change_today": -0.0035,
-      "from_open": -0.0104,
+      "price": 159.45,
+      "change_today": -0.0008,
+      "from_open": -0.0078,
       "day_high": 161.66,
       "day_low": 157.98,
-      "since_last_look": 0.005
+      "since_last_look": -0.0007,
+      "vwap": 159.52,
+      "vs_vwap": -0.0005,
+      "opening_range": [
+        158.66,
+        161.66
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0007,
+      "momentum_60m": 0.0021,
+      "rel_volume": 0.52,
+      "trend_5m": "up"
     },
     "SOFI": {
-      "price": 16.37,
-      "change_today": 0.1321,
-      "from_open": 0.0244,
-      "day_high": 16.39,
+      "price": 16.46,
+      "change_today": 0.1383,
+      "from_open": 0.03,
+      "day_high": 16.55,
       "day_low": 15.675,
-      "since_last_look": 0.0052
+      "since_last_look": 0.0,
+      "vwap": 16.07,
+      "vs_vwap": 0.0246,
+      "opening_range": [
+        15.68,
+        16.28
+      ],
+      "breakout_up": true,
+      "breakdown": false,
+      "momentum_15m": 0.0018,
+      "momentum_60m": 0.017,
+      "rel_volume": 5.47,
+      "trend_5m": "flat"
     }
   },
   "discovery": {
     "top_gainers": [
       {
         "symbol": "MSGR",
-        "chg": 1257.85
+        "chg": 1271.87
       },
       {
-        "symbol": "DAICW",
-        "chg": 79.25
-      },
-      {
-        "symbol": "AIOK",
-        "chg": 75.27
+        "symbol": "BRAI",
+        "chg": 68.5
       },
       {
         "symbol": "XBPEW",
@@ -852,50 +1029,54 @@
         "chg": 63.04
       },
       {
+        "symbol": "AIOK",
+        "chg": 60.92
+      },
+      {
         "symbol": "RMSGW",
         "chg": 57.24
       },
       {
         "symbol": "OPENZ",
-        "chg": 53.58
+        "chg": 44.9
       },
       {
-        "symbol": "BRAI",
-        "chg": 50
+        "symbol": "BGLWW",
+        "chg": 42.14
       }
     ],
     "top_losers": [
+      {
+        "symbol": "BFRIW",
+        "chg": -50
+      },
       {
         "symbol": "SDAWW",
         "chg": -44.67
       },
       {
+        "symbol": "PBMWW",
+        "chg": -40
+      },
+      {
         "symbol": "DVLT",
-        "chg": -42.32
+        "chg": -38.25
       },
       {
         "symbol": "PECEW",
         "chg": -38.07
       },
       {
+        "symbol": "BDMD",
+        "chg": -36.99
+      },
+      {
         "symbol": "SPRC",
-        "chg": -37.98
+        "chg": -36.73
       },
       {
-        "symbol": "MACIW",
-        "chg": -33.33
-      },
-      {
-        "symbol": "AMPGZ",
-        "chg": -32.43
-      },
-      {
-        "symbol": "ARTV",
-        "chg": -32.31
-      },
-      {
-        "symbol": "LCFYW",
-        "chg": -32.13
+        "symbol": "PSQH.WS",
+        "chg": -35.62
       }
     ],
     "most_active": [
@@ -904,23 +1085,23 @@
       "NEXR",
       "DVLT",
       "SOFI",
+      "WFF",
       "SHFS",
       "SNTI",
-      "WFF",
       "SOXL",
       "EWZ"
     ],
     "headlines": [
-      "AVGO,BAC,BX: 'Biggest Constraint Is Capital': Broadcom CEO Scrambles to Seal $63 Billion Anthropic Deal",
-      "IMO: Here\u2019s How Much You Would Have Made Owning Imperial Oil Stock In The Last 5 Years",
-      "HIG: The Hartford Insurance Gr Q3 2026 Earnings Call Transcript",
-      "XNCR: RBC Capital Maintains Outperform on Xencor, Raises Price Target to $43",
-      "AMKR: B. Riley Securities Maintains Neutral on Amkor Technology, Lowers Price Target to $41",
-      "NE: Noble Corp Q3 2026 Earnings Call Transcript",
-      "PII: Polaris Q3 2026 Earnings Call Transcript",
-      "BRAI,CLS,CTOS: Pentair, JetBlue Airways, Hawkins And Other Big Stocks Moving Higher On Tuesday",
-      "ALM: B. Riley Securities Maintains Buy on Almonty Indus, Lowers Price Target to $20",
-      "ARTV: Wedbush Downgrades Artiva Biotherapeutics to Neutral, Lowers Price Target to $4"
+      "NWFL: Norwood Financial Q3 2026 Earnings Call Transcript",
+      "AGYS: These Analysts Boost Their Forecasts On Agilysys After Upbeat Q3 Results",
+      "BA: Boeing CEO Says Expecting It'll Take Us Into Next Year To Get Fully Stable At 47/ Month 73",
+      "MA,V: Visa Earnings Prediction Market Preview: What Will Ryan McInerney Say?",
+      "META: 'Meta\u2019s $25 Billion Stock Sale Ended Five Times Oversubscribed' - Bloomberg",
+      "SPY: Dallas Fed Services Revenues For October 4.4 Vs -0.9 Prior",
+      "SPY: Texas Services Sector Outlook For October 4.0 Vs -1.8 Prior",
+      "JBLU: JetBlue CEO Says There Is Disconnect In The Bond Market And Earnings",
+      "CMS: CMS Energy Sees Data Center Growth Continuing In Michigan After Elections",
+      "AMZN,UPS: UPS Is Making More Money by Shipping Less for Amazon. Can It Keep It Up?"
     ],
     "note": "stocks other teams already watch were left out"
   },
@@ -940,6 +1121,11 @@
         "symbol": "HOOD",
         "date": "2026-10-27",
         "when": "after the close"
+      },
+      {
+        "symbol": "SOFI",
+        "date": "2026-10-27",
+        "when": "before the open"
       }
     ],
     "earnings_coming": [
@@ -1004,13 +1190,13 @@
     "note": "Stocks that reported before the open often gap on heavy volume. New buys pause around high-impact releases."
   },
   "scorecard": {
-    "overall": "36 trades, 44% won, avg -0.03%, PF 1.08",
+    "overall": "38 trades, 45% won, avg -0.04%, PF 1.01",
     "by_setup": {
       "opening range breakout": "11 trades, 9% won, avg -0.26%, PF 0.04",
-      "momentum": "10 trades, 40% won, avg -0.02%, PF 1.44",
+      "momentum": "11 trades, 36% won, avg -0.10%, PF 0.89",
       "news catalyst": "6 trades, 83% won, avg +0.06%, PF 4.85",
       "untagged": "5 trades, 60% won, avg +0.22%, PF 4.43",
-      "mean reversion": "1 trades, 100% won, avg +0.55%, PF None",
+      "mean reversion": "2 trades, 100% won, avg +0.53%, PF None",
       "pullback in uptrend": "1 trades, 0% won, avg -0.26%, PF 0.0",
       "VWAP bounce": "1 trades, 100% won, avg +0.17%, PF None",
       "earnings gap": "1 trades, 100% won, avg +0.09%, PF None"
@@ -1024,12 +1210,12 @@
     "note": "Under 5 trades is too few to judge. Favor setups with PF (profit factor) above 1.2."
   },
   "mood": {
-    "time": "2026-10-27T10:25-04:00",
+    "time": "2026-10-27T10:55-04:00",
     "regime": "normal",
-    "spy": 0.0009,
-    "qqq": 0.004,
-    "fear_vixy": -0.004,
-    "breadth": 0.42,
+    "spy": 0.004,
+    "qqq": 0.0087,
+    "fear_vixy": -0.0108,
+    "breadth": 0.48,
     "why": "no warning signs",
     "note": "Market is calm or rising. Trade your best setups as usual."
   },

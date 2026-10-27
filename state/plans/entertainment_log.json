@@ -790,5 +790,38 @@
       "BUY WMG x22 (~$664.84)",
       "WATCHLIST remove rejected FOXA"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "11:00",
+    "trigger": "scheduled look",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "CMCSA",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is below VWAP and stalling with negative momentum (m15 -0.1%, m60 -0.2%). Executive order prioritizes capital preservation and high-conviction VWAP bounces; this setup is failing. Closing to free up capital for higher conviction setups.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "BAM",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is underwater (-0.65%) and volume is extremely low (rvol 0.22), indicating a lack of intraday interest. The news catalyst (Naver AI financing) is not driving price action today. Closing to redeploy capital into stronger momentum plays.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "SELL CMCSA",
+      "SELL BAM",
+      "BUY SPOT blocked: conviction None is below the minimum 2",
+      "BUY IMAX blocked: conviction None is below the minimum 2",
+      "BUY TKO blocked: conviction None is below the minimum 2",
+      "BUY NFLX blocked: conviction None is below the minimum 2"
+    ]
   }
 ]
