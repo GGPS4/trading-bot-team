@@ -1,18 +1,36 @@
 {
   "date": "2026-10-27",
-  "time": "13:08",
-  "trigger": "must invest $775 more (75% rule)",
-  "market_view": "SPY is +0.5% and QQQ +1.2% in a calm, slightly risk-on session, but the president has ordered a mandatory 3-day strategy pause: no new positions unless forced to meet the 75% investment floor, and then only on extreme pullbacks with VWAP confirmation. Our four longs (GE, IRDM, SATS, TDG) are flat to slightly positive and sitting inside their stops, so no exits are triggered. None of the unheld watchlist stocks show a qualifying pullback to VWAP; most breakouts are already extended 7-12% intraday, which conflicts with our post-gap/earnings lesson and the pause.",
+  "time": "13:19",
+  "trigger": "market-moving post: BREAKING NEWS: Consumer Confidence is up 7.5%, an extremely big rise. President ",
+  "market_view": "The market is calm and mildly risk-on (SPY +0.6%, QQQ +1.3%), but the team is under a mandatory 3-day strategy pause. Several watchlist names are extended after large intraday gains (RKLB +9.4%, LUNR +11.3%, FLY +10%, LPTH +12.2%), while BA breaks down on heavy volume with negative FAA/737 news. No extreme pullback to VWAP with confirmation exists, so no new entries are justified today.",
   "decisions": [],
   "ranked_ideas": [
     {
       "symbol": "SPCX",
       "direction": "long",
-      "conviction": 2,
+      "conviction": 3,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "Deutsche Bank price-target lift and OR breakout, but price is already up 2.3% with fading m60 momentum and a downtrend; not an extreme VWAP pullback, so blocked by the pause."
+      "reason": "OR breakout above VWAP with Deutsche Bank price target lift to $250 and rvol 1.45; only +2.3% so least extended of the breakout names, but still requires a pullback to VWAP under pause rules."
+    },
+    {
+      "symbol": "BA",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "other",
+      "reason": "Breakdown below opening range on rvol 6.24 with negative FAA certification and 737 production news, but m15/m60 not negative enough for high-conviction short under pause."
+    },
+    {
+      "symbol": "HWM",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakdown",
+      "reason": "Trading below VWAP and opening range with weak momentum, but rvol only 0.78 and m15/m60 above -0.5% threshold."
     },
     {
       "symbol": "RKLB",
@@ -21,7 +39,7 @@
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "Strong OR breakout with rvol 2.14, but up 9.3% intraday and extended; violates the >8% intraday mover filter until a 0.5% pullback occurs."
+      "reason": "OR breakout with rvol 2.1 and vwap +3.5%, but +9.4% intraday is extended and violates the >8% position-size lesson."
     },
     {
       "symbol": "LUNR",
@@ -30,28 +48,10 @@
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "OR breakout but up 11% intraday and extended; no VWAP pullback confirmation, so paused."
-    },
-    {
-      "symbol": "ASTS",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout but up 8.8% with low rvol 1.04; extended and not a pullback setup."
-    },
-    {
-      "symbol": "FLY",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout with rvol 1.72 but up 9.6% intraday; extended and blocked by the intraday-mover filter."
+      "reason": "OR breakout above VWAP, but +11.3% intraday is extended and rvol only 1.26; wait for pullback."
     }
   ],
-  "experiment": "Introduce a filter that blocks entries on symbols that have moved >8% intraday until a pull-back of at least 0.5% occurs",
+  "experiment": "Mandatory strategy pause: no new positions for 3 days; only extreme pullbacks with VWAP confirmation if forced to meet 75% investment.",
   "watchlist_changes": {
     "add": [],
     "remove": []
