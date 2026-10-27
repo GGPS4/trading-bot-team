@@ -1,49 +1,31 @@
 {
   "date": "2026-10-27",
-  "time": "10:55",
-  "trigger": "must invest $6,041 more (75% rule)",
+  "time": "11:07",
+  "trigger": "must invest $6,048 more (75% rule)",
   "decisions": [
     {
       "symbol": "SOFI",
       "action": "BUY",
-      "side": "long",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "SOFI reported strong Q3 earnings with record revenue and raised guidance, driving a +13.7% gap up. It has broken out above the opening range (15.68-16.28) and is trading above VWAP with high relative volume (5.27). Although 15m momentum is slightly negative, the 60m momentum is strong (+2.6%) and the news catalyst is high conviction (importance 5). This is the best available setup to meet the 75% investment mandate with a clear intraday driver."
+    },
+    {
+      "symbol": "SPGI",
+      "action": "BUY",
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
       "setup": "earnings gap",
-      "reason": "Strong earnings beat with record revenue and raised guidance. Stock is up 13.8% on 5.47x relative volume, breaking out of the opening range and trading well above VWAP. High conviction setup for intraday momentum."
-    },
-    {
-      "symbol": "HOOD",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "setup": "momentum",
-      "reason": "Up 3.6% on strong volume (1.48x rvol) and positive momentum (m60 +1.2%). Trading above VWAP and near the top of the opening range. Positive news flow regarding RLUSD adoption supports the move."
-    },
-    {
-      "symbol": "BLK",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.02,
-      "setup": "sector rotation",
-      "reason": "Relative strength leader in the financials sector, trading above VWAP with 1.58x relative volume. Stable uptrend with positive 15m and 60m momentum. Fits the 'high-conviction' requirement for stability."
+      "reason": "SPGI beat Q3 expectations and announced a strategic review of Capital IQ. It is trading above its 50-day average with high relative volume (2.86) and positive 60m momentum (+0.7%). The stock is currently below its opening range high but showing recovery (+0.3% look). This provides a second high-conviction entry to reach the required capital deployment level."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "MA",
-      "reason": "Trading above VWAP with 2.06x relative volume. Strong 20d trend (+8.6%) and RSI 73.4 suggests momentum, though overbought. Watch for a pullback to VWAP or a breakout above the opening range high."
-    },
-    {
-      "symbol": "GS",
-      "reason": "Already held, but if adding more, it is a relative strength leader (+2.0% day) with stable momentum. However, position size is already set."
-    },
-    {
-      "symbol": "JPM",
-      "reason": "Already held. Stable, but low relative volume (0.63) suggests limited intraday upside potential compared to SOFI/HOOD."
-    }
+    "HOOD",
+    "MA",
+    "BLK",
+    "V",
+    "AXP"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

@@ -1238,5 +1238,35 @@
     "results": [
       "BUY AVGO blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "11:07",
+    "trigger": "big news on ['AMD']",
+    "market_view": "Market is calm and slightly higher, with SPY +0.5% and QQQ +1.0%. Tech showed relative strength, but the executive posture stays defensive. AMD is the clear urgent catalyst after a $1B Meta partnership, while NVDA faces negative credit-risk headlines. Existing longs are mostly holding, but risk is being managed.",
+    "experiment": "Implement an RSI floor filter (>30) for short trades to block shorting into climax bottoms.",
+    "decisions": [
+      {
+        "symbol": "NVDA",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Close the losing/invalidated NVDA long on credit-risk news and preserve capital; stop not triggered but thesis damaged.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      },
+      {
+        "symbol": "AMD",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Urgent $1B Meta/Helios partnership; AMD day +4.0%, rvol 1.67, strong news momentum; high conviction relative-strength setup.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL NVDA",
+      "BUY AMD x6 (~$3317.28)",
+      "WATCHLIST remove rejected PANW"
+    ]
   }
 ]
