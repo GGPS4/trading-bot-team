@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-27T16:04-04:00",
+  "updated": "2026-10-27T16:13-04:00",
   "date": "2026-10-27",
   "mode": "paper",
   "health": {
     "issues": [
-      "60 problem(s) in the last hour, latest: Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {\"error\":{\"message\":\"Please reduce the length of the m"
+      "54 problem(s) in the last hour, latest: healthcare: review failed: healthcare manager review: no AI provider could answer (gemini: gemini failed)"
     ]
   },
   "paused": false,
@@ -2542,23 +2542,7 @@
       "reason": "CACI secured a $145M Navy contract and $281M EW contract; sentiment 0.8, importance 4; defense relative strength leader, day -0.9% so not chasing."
     }
   ],
-  "report": {
-    "headline": "Down 0.23% while SPY fell 0.70%; Tech outperformed, Defense and Space lagged",
-    "summary": "The account closed at $98,981.02, down $231.08 (-0.23%) for the day, significantly outperforming the SPY benchmark which declined by 0.70%. This marks the third consecutive day of losses, with the total return since start now at -1.02% versus the benchmark's -0.70%. The Information Technology team was the only sector to generate positive realized P&L today (+$63.27), driven by a strong exit on MSFT and gains in NVDA-related names, while Defense (-$83.87) and Space (-$120.20) were the primary drag on performance. Despite the market weakness, the account's max drawdown has widened slightly to 1.02%, indicating that the recent losses are eroding the buffer against further downside. The high volume of blocked trades (129 total) across all teams suggests that risk filters are heavily constraining capital deployment in the current volatile environment.",
-    "best_trade": "The long position in MSFT (Tech) was the day's standout, exiting with a +$25.02 gain (+1.59%) after a successful end-of-day close, validating the 'relative strength leader' thesis despite the broader market weakness.",
-    "worst_trade": "The long position in PANW (Tech) resulted in the largest single-day loss of -$36.22 (-2.32%) when it hit its stop loss, highlighting the risk of entering high-volatility tech names in a choppy tape where relative strength can reverse quickly.",
-    "rule_issues": [
-      "129 orders were blocked today across all teams, with Healthcare (40) and Tech (36) having the highest rejection rates, indicating that the '75% invested rule' or volatility filters are preventing the teams from deploying their full budget.",
-      "The Defense team had 8 blocked orders despite having the largest budget ($27,116.39) and zero invested capital, suggesting a mismatch between the team's aggressive entry signals and the current risk parameters."
-    ],
-    "concerns": [
-      "The Space & Aerospace team has a win rate of only 22% and has lost $666.16 all-time, yet continues to generate significant losses daily (e.g., -$120.20 today), raising questions about the viability of this strategy in the current regime.",
-      "The account is nearly 100% cash ($95,833.78 cash vs $3,147.24 invested), which is a defensive posture but may be missing out on potential rebounds given the high number of blocked entries.",
-      "The 'blocked_today' count is disproportionately high compared to 'trades_today', suggesting that the trading algorithms are generating many signals that are being rejected by risk controls, which may indicate a need to recalibrate entry criteria."
-    ],
-    "patterns": "Over the last 7 trading days, the account has underperformed the SPY benchmark by 0.32% (account -1.02% vs SPY -0.70%). The pattern shows a consistent underperformance in Defense and Space sectors, while Tech has shown more volatility with mixed results. The high frequency of blocked trades suggests that the system is overly cautious or that market conditions are not aligning with the predefined entry rules, leading to a 'wait-and-see' posture that has resulted in a slow bleed of equity relative to the market.",
-    "date": "2026-10-26"
-  },
+  "report": null,
   "president": {
     "updated": "2026-10-26T16:25-04:00",
     "strategy_notes": "We are in a defensive posture due to underperformance versus SPY and high churn rates; all teams must prioritize capital preservation over aggressive entry. The 75% minimum investment rule is mandatory, but entries must be high-conviction only to avoid the 'blocked trade' churn seen today. Focus on relative strength leaders in Tech and Defense, while strictly limiting exposure in underperforming sectors. We will tighten risk parameters to reduce noise and force higher quality trades.",
@@ -2593,194 +2577,32 @@
   },
   "executives": {
     "sector": {
-      "summary": "The portfolio experienced a net loss today, driven primarily by significant underperformance in the Healthcare sector. While the Technology team posted a positive realized P&L, it was not enough to offset the heavy losses from Consumer Discretionary, Financial Services, and Healthcare. High trade volumes across all teams suggest active management, but the overall win rates remain below 50%, indicating a need for stricter entry criteria.",
+      "summary": "Today, our teams had mixed results with the healthcare sector leading the way with a positive realized PnL of 48.55, while the tech and financials sectors experienced losses. Our teams performed well, with no major issues needing President's attention.",
       "team_notes": {
-        "tech": "Technology delivered a positive realized P&L of $63.27 today, though it still carries a negative all-time realized P&L of -$383.46.",
-        "consumer": "Consumer Discretionary realized a loss of $37.30 today and has the second-lowest win rate at 32.4%.",
-        "financials": "Financial Services realized a loss of $29.61 today but remains the only team with a positive all-time realized P&L of $7.70.",
-        "healthcare": "Healthcare suffered the largest daily loss of $104.16 and has the lowest win rate at 29.4%, requiring immediate strategic review."
+        "tech": "The tech team had a higher number of blocked trades (19) than successful trades (6), resulting in a loss for the day. The healthcare team had a successful trading day with 5 closed trades and 19 blocked trades.",
+        "financials": "The financials team experienced a loss today due to 12 closed trades and 19 blocked trades. The team needs to be more cautious with their trading strategy."
       },
       "escalations": [
-        "Healthcare team win rate has dropped to 29.4% with a realized loss of $217.08; recommend President authorize a mandatory strategy pause or budget reduction for this sector until performance improves.",
-        "Consumer Discretionary win rate is 32.4%; recommend President review if this team should continue with current capital allocation or if funds should be reallocated to higher-performing sectors."
+        "Healthcare team blocking trades for financials team"
       ],
-      "coordination": "No overlapping companies detected between teams.",
+      "coordination": "No overlapping companies or teams stepping on each other's trades today.",
       "title": "Executive of Sector Teams"
     },
     "special": {
-      "summary": "All three special teams posted net realized losses today, totaling -$230.81, driven primarily by high-frequency trading in choppy market conditions. Team 2 (Space) and Team 3 (Entertainment) are showing concerning all-time win rates below 30%, indicating systemic strategy flaws rather than just a bad day. Team 1 (Defense) remains the most stable with a 52% win rate, though it also suffered from over-trading mid-cap names.",
+      "summary": "Team 1's defense sector experienced a slight loss today, while Team 2's space & aerospace sector showed a positive return. Team 3 in the entertainment sector had a negative performance.",
       "team_notes": {
-        "defense": "Solid performance on prime anchors but lost money by chasing overextended mid-cap IT stocks; needs to enforce stricter entry filters on high-momentum days.",
-        "space": "Severe underperformance with a 22% win rate; the manager must immediately implement ATR-based stops and VWAP confirmation to stop bleeding capital on news entries.",
-        "entertainment": "Consistent losses from low-conviction momentum trades; the manager should halt trading on setups with conviction <4 and focus on defensive VWAP bounces."
+        "Team 1": "Team 1's defense sector experienced a loss of -115.35 today.",
+        "Team 2": "Team 2's space & aerospace sector showed a positive return of 20.64 today.",
+        "Team 3": "Team 3 in the entertainment sector had a negative performance of -38.46 today."
       },
       "escalations": [
-        "Team 2 (Space) and Team 3 (Entertainment) have all-time win rates below 30% and negative realized PnL; recommend the President mandate a strategy review or temporary reduction in trade frequency for these teams to prevent further capital erosion.",
-        "Multiple teams are reporting 'blocked' trades due to internal rules (Defense: 8, Entertainment: 5); please clarify if these blocks are due to budget constraints or risk limits, as this may indicate misaligned budget allocation or overly restrictive risk parameters."
+        "No escalations today"
       ],
-      "coordination": "No overlapping companies between teams were identified today, so no coordination issues regarding shared tickers.",
+      "coordination": "No coordination issues reported today.",
       "title": "Executive of Special Teams"
     }
   },
-  "reviews": {
-    "defense": {
-      "what_went_well": "Prime defense anchors like LMT, RTX, NOC, and GD held upside momentum cleanly, generating consistent gains from solid analyst upgrades and technical breakouts.",
-      "what_went_wrong": "We repeatedly chased overextended mid-cap defense IT stocks (BAH, CACI) up >5-7% on the day, leading to multiple entries in chop that caused repeated small losses.",
-      "lessons": [
-        "Do not open new long positions on stocks already up >5% intraday unless backed by high relative volume and a tight 15-minute consolidation base.",
-        "Cap total entries on any single ticker to a maximum of two trades per session to prevent churn and over-trading losses during market chop."
-      ],
-      "strategy_ideas": [
-        "Prioritize prime defense contractors (LMT, RTX, GD, NOC) for opening range breakouts when sector-wide analyst target upgrades occur.",
-        "Enforce a strict 30-minute VWAP hold rule before taking afternoon news catalyst entries."
-      ],
-      "watchlist_changes": {
-        "add": [],
-        "remove": []
-      },
-      "watchlist": []
-    },
-    "space": {
-      "what_went_well": "SPCX long generated a modest profit and RKLB early trade captured a small gain, showing our ORB setup can work when volatility is low.",
-      "what_went_wrong": "Most trades hit stops \u2013 ASTS, GE, HWM, VSAT, PL, RKLB and the second ASTS loss were stopped out due to tight static stops and entering on news without VWAP confirmation; the short BA was closed by manager after a rule breach, also losing money.",
-      "lessons": [
-        "Use volatility\u2011adjusted (ATR) stops instead of fixed price stops for high\u2011rvol stocks",
-        "Require VWAP confirmation after a news catalyst before entering long positions",
-        "Apply the 15\u2011minute wait rule to both long and short entries to avoid early range\u2011expansion stops"
-      ],
-      "strategy_ideas": [
-        "Test partial profit taking with automated trailing stops once price moves 1\u20112% in our favor",
-        "Introduce a filter that blocks entries on symbols that have moved >8% intraday until a pull\u2011back of at least 0.5% occurs"
-      ],
-      "watchlist_changes": {
-        "add": [
-          {
-            "symbol": "LUNR",
-            "reason": "Upcoming lunar mission launch scheduled next week"
-          },
-          {
-            "symbol": "RDW",
-            "reason": "Redwire announced a new NASA contract"
-          },
-          {
-            "symbol": "IRDM",
-            "reason": "Iridium to launch a large satellite batch this month"
-          }
-        ],
-        "remove": [
-          {
-            "symbol": "ASTS",
-            "reason": "Recent stop\u2011losses and no near\u2011term catalyst"
-          },
-          {
-            "symbol": "PL",
-            "reason": "Flat performance, no news catalyst"
-          },
-          {
-            "symbol": "RKLB",
-            "reason": "Repeated stop\u2011losses and lack of upcoming events"
-          }
-        ]
-      },
-      "watchlist": [
-        {
-          "time": "2026-10-26T16:15-04:00",
-          "action": "remove_rejected",
-          "symbol": "ASTS",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-26T16:15-04:00",
-          "action": "remove_rejected",
-          "symbol": "PL",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-26T16:15-04:00",
-          "action": "remove_rejected",
-          "symbol": "RKLB",
-          "reason": "list would drop below 15 stocks"
-        }
-      ]
-    },
-    "entertainment": {
-      "what_went_well": "We successfully exited several weak momentum trades early (WMG, ROKU, BAM, CMCSA) limiting larger losses, and the SPOT long with a trailing stop and TTWO gave modest gains.",
-      "what_went_wrong": "Most losses came from entering momentum trades without confirming volume expansion, causing stops to be hit on DIS, FOXA, SONY and the NFLX short lacked a tight stop, leading to a net loss of ~\u201127 points.",
-      "lessons": [
-        "Require a minimum 15\u2011minute relative volume >1.2 before any momentum entry",
-        "Place stops at least 0.2% below the opening range or VWAP, not just a fixed dollar amount",
-        "Only take trades with conviction >=4; lower\u2011conviction setups should be skipped"
-      ],
-      "strategy_ideas": [
-        "Test a VWAP\u2011bounce strategy with tighter stops (0.2% below VWAP) on defensive names like CMCSA and DIS",
-        "Add a pre\u2011entry filter that mandates a positive 15\u2011minute volume expansion and rvol >1.2 before entering any long or short momentum trade"
-      ],
-      "watchlist_changes": {
-        "add": [
-          {
-            "symbol": "AMC",
-            "reason": "Upcoming earnings Oct 31 and potential box\u2011office boost from new releases"
-          },
-          {
-            "symbol": "MGM",
-            "reason": "Recent earnings beat and new casino opening driving media exposure"
-          },
-          {
-            "symbol": "EA",
-            "reason": "New game launch this week expected to lift subscriber and revenue metrics"
-          }
-        ],
-        "remove": [
-          {
-            "symbol": "WBD",
-            "reason": "Asset not active on broker platform"
-          },
-          {
-            "symbol": "FOXA",
-            "reason": "No near\u2011term catalyst and recent stop\u2011loss hit"
-          },
-          {
-            "symbol": "CMCSA",
-            "reason": "Repeated VWAP failures and limited upside in current regime"
-          }
-        ]
-      },
-      "watchlist": [
-        {
-          "time": "2026-10-26T16:16-04:00",
-          "action": "add_rejected",
-          "symbol": "AMC",
-          "reason": "price 2.91 is under $5 (too risky / thin)"
-        },
-        {
-          "time": "2026-10-26T16:16-04:00",
-          "action": "removed",
-          "symbol": "WBD",
-          "reason": "Asset not active on broker platform",
-          "by": "evening review"
-        },
-        {
-          "time": "2026-10-26T16:16-04:00",
-          "action": "remove_rejected",
-          "symbol": "FOXA",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-26T16:16-04:00",
-          "action": "remove_rejected",
-          "symbol": "CMCSA",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-26T16:16-04:00",
-          "action": "added",
-          "symbol": "MGM",
-          "reason": "Recent earnings beat and new casino opening driving media exposure",
-          "by": "evening review"
-        }
-      ]
-    }
-  },
+  "reviews": {},
   "lessons": {
     "defense": [
       "2026-10-22: Implement a partial\u2011scale\u2011out (e.g., 50% at 1R) to lock in gains and reduce exposure to late\u2011day reversals",
@@ -2834,391 +2656,522 @@
   },
   "research": {
     "defense": {
-      "news": "No significant findings or urgent updates for the team's defense stocks at this time.",
+      "news": "After reviewing the news and SEC filings, no urgent findings for Team 1: Defense stocks. The team should continue monitoring government defense contracts, changes to the defense budget, and world events affecting military spending.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "BAH",
+          "symbol": "TXT",
           "sentiment": 0.6,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Analysts upgraded Booz Allen Hamilton, raising price targets to $86-$95 and moving to Buy at TD Cowen.",
-          "source": "benzinga/fiscal.ai"
-        },
-        {
-          "symbol": "NOC",
-          "sentiment": 0.5,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "JP Morgan and Jefferies lifted Northrop Grumman price targets modestly, keeping neutral stance.",
-          "source": "benzinga/fiscal.ai"
+          "summary": "Textron's Bell subsidiary received a purchase order from HALO-Flight for a Bell 407GXi helicopter.",
+          "source": "fiscal.ai"
         },
         {
           "symbol": "LMT",
           "sentiment": 0.7,
           "importance": 4,
           "unconfirmed_rumor": false,
-          "summary": "Lockheed Martin received upgrades from JP Morgan, Jefferies and Morgan Stanley, with price targets up to $835.",
-          "source": "benzinga/fiscal.ai"
+          "summary": "Lockheed Martin plans to build a PAC-3 missile maintenance site in Poland.",
+          "source": "benzinga"
         },
         {
-          "symbol": "KTOS",
-          "sentiment": 0,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Kratos Defense announced its Q3 2026 earnings call scheduled for Nov 5.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "PLTR",
+          "symbol": "AVAV",
           "sentiment": 0.5,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Deutsche Bank raised Palantir price target to $225, maintaining a Buy rating.",
+          "summary": "ARK Invest increased its stake in AeroVironment, buying about 59,171 shares for $7.3\u202fmillion.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "KTOS",
+          "sentiment": 0.5,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "ARK Investment Management increased its stake in Kratos Defense & Security Solutions, purchasing 63,612 shares.",
           "source": "fiscal.ai"
         },
         {
           "symbol": "CACI",
-          "sentiment": 0.9,
+          "sentiment": 0.8,
           "importance": 5,
           "unconfirmed_rumor": false,
-          "summary": "CACI secured a five\u2011year, $281\u202fmillion U.S. Navy task order for electromagnetic warfare and was upgraded to Buy by Jefferies.",
-          "source": "fiscal.ai/benzinga"
+          "summary": "CACI won a four\u2011year, up to $145\u202fmillion U.S. Navy task order for maritime technology and autonomous platforms.",
+          "source": "fiscal.ai"
         },
         {
-          "symbol": "SAIC",
-          "sentiment": 0.3,
+          "symbol": "LMT",
+          "sentiment": 0.5,
           "importance": 2,
           "unconfirmed_rumor": false,
-          "summary": "SAIC was named a 2027 Corporate Citizenship Award honoree by the Conference Board.",
+          "summary": "Lockheed Martin Canada signed a CAD\u202f$10\u202fmillion contract with Contextere to develop the iMAPLE AI platform.",
           "source": "fiscal.ai"
+        },
+        {
+          "symbol": "LMT",
+          "sentiment": 0.6,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Morgan Stanley upgraded Lockheed Martin, citing its 10\u2011year F\u201135 deal as risk\u2011reducing and forecasting over 30% upside.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "LDOS",
+          "sentiment": 0.7,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Leidos secured a $95\u202fmillion contract, highlighted in CNBC\u2019s Final Trades.",
+          "source": "benzinga"
         }
       ]
     },
     "space": {
-      "news": "The financial performance of Boeing, Visa, and S&P Global has been positive, indicating strong growth in their respective sectors. These reports may influence the stocks of the team's companies, especially BA, V, and SPGI.",
+      "news": "Space\u2011focused stocks are mixed; Intuitive Machines shows a positive momentum while Boeing faces supply chain challenges that could weigh on its aerospace operations.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "BA",
-          "sentiment": 0.9,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Boeing reports positive earnings, showing strong performance in commercial aerospace and defense sectors.",
-          "source": "benzinga",
-          "time": "15:35"
-        },
-        {
-          "symbol": "V",
+          "symbol": "LUNR",
           "sentiment": 0.8,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Visa reports positive earnings, indicating continued growth in payments sector.",
+          "summary": "Intuitive Machines stock surges on Tuesday as small\u2011cap space equities rebound from a month\u2011long selloff.",
           "source": "benzinga",
-          "time": "15:35"
-        },
-        {
-          "symbol": "SPGI",
-          "sentiment": 0.7,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "S&P Global reports positive earnings, showing strong performance in index services and ratings sectors.",
-          "source": "benzinga",
-          "time": "15:35"
+          "time": "14:14"
         },
         {
           "symbol": "BA",
-          "sentiment": -0.5,
-          "importance": 3,
+          "sentiment": 0.2,
+          "importance": 2,
           "unconfirmed_rumor": false,
-          "summary": "Boeing Q3 earnings preview; stock down 26% from 52-week highs.",
+          "summary": "Boeing received about $420M in refunds related to prior tariff assessments.",
           "source": "benzinga",
-          "time": "14:35"
+          "time": "14:14"
         },
         {
           "symbol": "BA",
-          "sentiment": -0.5,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Boeing Q3 earnings preview; stock down 26% from 52-week highs.",
-          "source": "benzinga",
-          "time": "14:35"
-        },
-        {
-          "symbol": "BA",
-          "sentiment": 0.8,
+          "sentiment": -0.6,
           "importance": 4,
           "unconfirmed_rumor": false,
-          "summary": "Boeing won a $930.77M US Navy contract to upgrade F/A-18E/F Super Hornet fleet.",
-          "source": "fiscal.ai"
+          "summary": "Boeing reports supplier shortages disrupting factory operations, delaying KC\u201146A and 777 programs, with abnormal costs expected into 2027.",
+          "source": "benzinga",
+          "time": "14:14"
+        },
+        {
+          "symbol": "BA",
+          "sentiment": 0.3,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Boeing reported receiving about $420\u202fmillion in tariff refunds for the nine months ended Sept.\u202f30.",
+          "source": "benzinga"
         },
         {
           "symbol": "BA",
           "sentiment": -0.7,
-          "importance": 4,
+          "importance": 5,
           "unconfirmed_rumor": false,
-          "summary": "Boeing's 777 freighter production paused due to a supplier dispute.",
-          "source": "fiscal.ai"
+          "summary": "Supplier shortages are disrupting Boeing's KC\u201146A tanker and 777 freighter programs and will push the first 777\u20118 delivery to after 2030.",
+          "source": "benzinga"
         },
         {
-          "symbol": "SPCX",
-          "sentiment": 0.6,
+          "symbol": "BA",
+          "sentiment": -0.6,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Boeing CEO confirmed the company still lacks FAA approval to complete 777X flight\u2011test certification.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "BA",
+          "sentiment": -0.5,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Boeing CFO warned that 737 production rates will not return to 2018 levels until at least 2029.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "BA",
+          "sentiment": 0.4,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "SpaceX plans a Falcon 9 launch of the USSF-432 mission on Nov 1.",
+          "summary": "Boeing announced the rollout of the first 737\u201110 from its new Everett production line.",
           "source": "benzinga"
         }
       ]
     },
     "entertainment": {
-      "news": "No new developments or significant news found for the Entertainment team's stocks within the last 2 hours.",
+      "news": "The provided news and SEC filings from the last 2 hours show no significant findings affecting the stocks within our Entertainment team's focus. We will continue monitoring for any updates that may impact the stocks: DIS, NFLX, SPOT, WMG, LYV, ROKU, IMAX, SONY, FOXA, CMCSA, and TKO.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "NFLX",
-          "sentiment": -0.5,
+          "symbol": "CMCSA",
+          "sentiment": 0.2,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Netflix shares are down 2.1% following reports of declining user engagement and concerns about future growth and pricing power.",
+          "summary": "Comcast expands multi\u2011gigabit internet services to Franklin, NH.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "ROKU",
+          "sentiment": 0.1,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "Bowling TV launches on The Roku Channel.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "TKO",
+          "sentiment": -0.3,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Deutsche Bank adjusts TKO rating to Neutral and Goldman Sachs lowers price target to $215.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "TTWO",
+          "sentiment": -0.2,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "BofA lowers Take\u2011Two price target to $330 while maintaining Buy.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "DIS",
+          "sentiment": 0.3,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Disney+ adds Channel 4 content in UK and Ireland.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "SONY",
+          "sentiment": 0.1,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "Sony Music subsidiary releases live rendition of \"Shine\" by Nino Paid.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "BAM",
+          "sentiment": 0.2,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Brookfield signs agreements to acquire minority interest in La Trobe Financial and invest up to $9B in Naver AI.",
           "source": "fiscal.ai"
         }
       ]
     },
     "tech": {
-      "news": "No recent significant news or SEC filings found for the Information Technology sector or the team's selected stocks. We will continue monitoring for updates.",
+      "news": "No significant news or SEC filings found for the Information Technology sector stocks within the last 2 hours. The team should monitor Microsoft, Fortinet, Alphabet, and ADP for potential post-earnings swings in the coming days based on recent options market signals.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "MSFT",
-          "sentiment": 0.5,
-          "importance": 4,
+          "symbol": "SOXL",
+          "sentiment": 0.0,
+          "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Microsoft is offering buyouts to approximately 60,000 employees, signaling significant cost-cutting or restructuring efforts alongside strong analyst upgrades.",
-          "source": "benzinga"
+          "summary": "SOXL news: AI Financing Deluge; Semiconductors reflect the AI trade, and SOXL is the momo crowd's",
+          "source": "benzinga",
+          "time": "14:49"
+        },
+        {
+          "symbol": "AMD",
+          "sentiment": 0.8,
+          "importance": 5,
+          "unconfirmed_rumor": false,
+          "summary": "AMD announced a strategic expansion with Meta, deploying Helios rackscale solutions and committing a $1 billion investment in Meta's equity offering.",
+          "source": "fiscal.ai / benzinga"
         },
         {
           "symbol": "NVDA",
-          "sentiment": 0.8,
+          "sentiment": 0.6,
           "importance": 4,
           "unconfirmed_rumor": false,
-          "summary": "NVIDIA has expressed interest in purchasing up to $5 billion of Meta Platforms' $35 billion equity offering, deepening its financial tie to a major AI customer.",
-          "source": "fiscal.ai"
+          "summary": "NVIDIA and Oracle announced the general availability of Vera Rubin NVL72 systems on Oracle Cloud Infrastructure, alongside a multi-year collaboration to expand superclusters.",
+          "source": "fiscal.ai / benzinga"
         },
         {
-          "symbol": "MU",
-          "sentiment": -0.7,
+          "symbol": "NVDA",
+          "sentiment": -0.4,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Reports indicate NVIDIA's credit risk has tripled in 2026, surpassing Meta's, due to exposure to customer financing issues at CoreWeave.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "AVGO",
+          "sentiment": 0.7,
           "importance": 5,
           "unconfirmed_rumor": false,
-          "summary": "Micron's Taiwan union rejected a bonus plan with a 99.8% vote, raising the risk of a strike that could disrupt AI memory-chip supply.",
+          "summary": "Broadcom CEO Hock Tan intervened to secure a $63 billion AI financing deal with Anthropic, and an analyst upgraded the stock with a $400 price target.",
           "source": "benzinga"
+        },
+        {
+          "symbol": "INTC",
+          "sentiment": 0.3,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Intel announced a multiyear collaboration with Oracle to expand Xeon-based computing on OCI and a partnership with SAP for autonomous robot integration.",
+          "source": "benzinga / fiscal.ai"
         },
         {
           "symbol": "AAPL",
-          "sentiment": -0.3,
+          "sentiment": 0.4,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Apple's new iPhone Duo is facing 79-day wait times and early reports of screen cracking, though analysts maintain Buy ratings citing a multi-year upgrade cycle.",
-          "source": "benzinga"
-        },
-        {
-          "symbol": "TXN",
-          "sentiment": 0.0,
-          "importance": 2,
-          "unconfirmed_rumor": false,
-          "summary": "Texas Instruments announced an offering of multiple series of debt notes, a routine capital structure activity.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "INTU",
-          "sentiment": 0.4,
-          "importance": 2,
-          "unconfirmed_rumor": false,
-          "summary": "Oppenheimer raised its price target on Intuit to $406, maintaining an Outperform rating.",
-          "source": "fiscal.ai"
+          "summary": "Apple refreshed its iMac and 14-inch MacBook Pro with M6 and N1 chips, while iPhone 18 Pro sales show a 29% spike in China ahead of earnings.",
+          "source": "fiscal.ai / benzinga"
         },
         {
           "symbol": "NOW",
-          "sentiment": 0.4,
-          "importance": 2,
+          "sentiment": 0.5,
+          "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Morgan Stanley reiterated a Buy rating on ServiceNow with a $180 price target.",
-          "source": "fiscal.ai"
+          "summary": "ServiceNow expanded its partnership with Google Cloud to integrate Action Fabric with Gemini Enterprise for agentic AI capabilities.",
+          "source": "fiscal.ai / benzinga"
         }
       ]
     },
     "consumer": {
-      "news": "No significant news or SEC filings found for the Consumer Discretionary team's selected stocks within the last 2 hours. Please check back later for updates.",
+      "news": "No significant news or SEC filings found for the Consumer Discretionary team's stocks in the last 2 hours.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "DG",
-          "sentiment": 0.0,
-          "importance": 3,
+          "symbol": "WHR",
+          "sentiment": -0.9,
+          "importance": 5,
           "unconfirmed_rumor": false,
-          "summary": "Dollar General Corp (NYSE:DG) shares are slipping after the company's earnings beat expectations.",
-          "source": "benzinga",
-          "time": "14:17"
+          "summary": "Whirlpool reported a Q3 adjusted EBIT miss of 40% and slashed its full-year 2026 guidance, prompting BofA to reiterate an Underperform rating with a $25 price target.",
+          "source": "benzinga"
         },
         {
-          "symbol": "DEO",
-          "sentiment": 0.0,
-          "importance": 3,
+          "symbol": "RCL",
+          "sentiment": 0.8,
+          "importance": 5,
           "unconfirmed_rumor": false,
-          "summary": "Deckers Brands Corporation (NYSE:DEO) earnings beat expectations, but revenue missed",
-          "source": "benzinga",
-          "time": "14:17"
+          "summary": "Royal Caribbean beat Q3 EPS estimates at $6.57, raised its full-year 2026 adjusted EPS guidance to $17.85-$17.95, and announced a strategic expansion deal with Sandals.",
+          "source": "benzinga"
         },
         {
-          "symbol": "LULU",
-          "sentiment": 0.0,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Lululemon (NASDAQ:LULU) shares drop after Q4 guidance disappoints",
-          "source": "benzinga",
-          "time": "14:17"
-        },
-        {
-          "symbol": "BABA",
-          "sentiment": 0.0,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Alibaba Group Holding Ltd (NYSE:BABA) shares up after Q3 results beat expectations",
-          "source": "benzinga",
-          "time": "14:17"
-        },
-        {
-          "symbol": "DEO",
-          "sentiment": 0.0,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Deckers Brands Corporation (NASDAQ:DEO) shares up after Q3 results beat expectations",
-          "source": "benzinga",
-          "time": "14:17"
-        },
-        {
-          "symbol": "DEO",
-          "sentiment": 0.0,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Deckers Brands Corporation (NASDAQ:DEO) shares up after Q3 results beat expectations",
-          "source": "benzinga",
-          "time": "14:17"
-        },
-        {
-          "symbol": "LKQ",
-          "sentiment": -0.6,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Roth Capital downgrades LKQ to Neutral and cuts price target to $18",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "LKQ",
+          "symbol": "TSLA",
           "sentiment": 0.6,
           "importance": 4,
           "unconfirmed_rumor": false,
-          "summary": "Barclays upgrades LKQ to Overweight with a $25 price target",
-          "source": "benzinga"
+          "summary": "Daiwa Securities raised its price target for Tesla to $390 from $345, while ARK Invest continues to project long-term valuations between $4,400 and $5,000 by 2031.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "AMZN",
+          "sentiment": 0.4,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Amazon Business launched new AI-powered procurement capabilities and is set to host its 'Reshape 2026' conference, signaling continued investment in enterprise AI solutions.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "BKNG",
+          "sentiment": -0.3,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "Baird lowered its price target for Booking Holdings to $223 from $230, reflecting slight caution in the travel sector.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "MAR",
+          "sentiment": 0.0,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "Marriott opened its first EDITION hotel in Africa in Cape Town, while technical analysts flag the stock as overbought with an RSI of 79.5.",
+          "source": "fiscal.ai"
         }
       ]
     },
     "financials": {
-      "news": "After reviewing the latest news and SEC filings, we found no significant findings or urgent matters affecting the stocks within the Financial Services sector. However, we will continue monitoring for any updates on the team's listed companies.",
+      "news": "The financial services sector news includes Morgan Stanley revealing BlackRock's stake in TeamViewer SE and BlackRock filing for a 5.35% stake in the same company.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "BLK",
+          "symbol": "AXP",
           "sentiment": 0.0,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "BlackRock filed major shareholder notifications for ArcelorMittal and DSV A/S.",
-          "source": "fiscal.ai",
-          "time": "15:05"
-        },
-        {
-          "symbol": "MA",
-          "sentiment": 0.5,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Mastercard partners with Beast Industries for creator-focused financial tools.",
-          "source": "fiscal.ai",
-          "time": "15:05"
-        },
-        {
-          "symbol": "BLK",
-          "sentiment": 0.0,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "BlackRock files major shareholder notifications for ArcelorMittal and DSV A/S.",
-          "source": "fiscal.ai",
-          "time": "15:05"
-        },
-        {
-          "symbol": "VISA",
-          "sentiment": 0.8,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Visa shares increased after earnings report and analyst upgrades.",
-          "source": "Benzinga",
-          "time": "14:35"
-        },
-        {
-          "symbol": "FLG",
-          "sentiment": -0.8,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Flagstar Financial missed Q3 profit estimates, prompting multiple analysts (RBC, JPM, TD Cowen, Truist, Barclays, BofA) to lower price targets.",
-          "source": "Benzinga/Fiscal.ai"
+          "summary": "Morgan Stanley Family Office filing reveals BlackRock's 5.35% stake in TeamViewer SE.",
+          "source": "benzinga",
+          "time": "15:06"
         },
         {
           "symbol": "COIN",
-          "sentiment": -0.6,
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Coinbase and Ripple increase political donations to swing elections",
+          "source": "benzinga",
+          "time": "15:06"
+        },
+        {
+          "symbol": "BLK",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "BlackRock Inc. files for 5.35% stake in TeamViewer SE.",
+          "source": "benzinga",
+          "time": "15:06"
+        },
+        {
+          "symbol": "GS",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Morgan Stanley reveals BlackRock's 5.35% stake in TeamViewer SE.",
+          "source": "benzinga",
+          "time": "15:06"
+        },
+        {
+          "symbol": "COIN",
+          "sentiment": 0.7,
           "importance": 4,
           "unconfirmed_rumor": false,
-          "summary": "Bernstein cut its price target on Coinbase from $330 to $250 citing stalled trading, while JPMorgan raised its target to $189.",
-          "source": "Benzinga/Fiscal.ai"
+          "summary": "Bitcoin rally above $80k and strong ETF inflows boost crypto market outlook, supporting Coinbase",
+          "source": "benzinga",
+          "time": "14:19"
         },
         {
-          "symbol": "AXP",
-          "sentiment": 0.2,
-          "importance": 3,
+          "symbol": "HOOD",
+          "sentiment": 0.7,
+          "importance": 4,
           "unconfirmed_rumor": false,
-          "summary": "American Express beat Q3 EPS estimates but missed on sales, leading to mixed analyst reactions with JPMorgan raising its target and Barclays lowering it.",
-          "source": "Benzinga"
+          "summary": "Bitcoin rally above $80k and strong ETF inflows boost crypto market outlook, supporting Robinhood",
+          "source": "benzinga",
+          "time": "14:19"
         },
         {
-          "symbol": "V",
-          "sentiment": 0.4,
+          "symbol": "HOOD",
+          "sentiment": 0.8,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Robinhood announced a strategic partnership with Ripple to integrate the RLUSD stablecoin across its retail and institutional platforms.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "HOOD",
+          "sentiment": 0.6,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Susquehanna raised its price target on Visa to $480 from $427, maintaining a Positive rating.",
-          "source": "Benzinga/Fiscal.ai"
+          "summary": "IXS migrated its token to the Robinhood Chain, expanding on\u2011chain asset offerings.",
+          "source": "fiscal.ai"
         }
       ]
     },
     "healthcare": {
-      "news": "News researcher failed: healthcare news researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {\"error\":{\"message\":\"Please reduce the length of the messages or completion.\",\"type\":\"invalid_request_error\",\"param\":\"messages\",\"code\":\"context_length_exceeded\"}}\n)",
+      "news": "The healthcare sector is seeing a mix of strong fundamental catalysts, such as Merck's positive Phase 3 data and Intuitive Surgical's bullish price target hike, offset by valuation-driven downgrades for Moderna and Abbott. Investor sentiment remains cautious with the Fear & Greed index in the 'Fear' zone, but specific company news is driving differentiated moves within the group.",
       "social": "Reddit blocked this run.",
-      "findings": []
-    },
-    "political_and_social_media": {
-      "overall": "The market is largely unchanged as the recent post concerns a state-level cultural regulation with no clear impact on the listed sectors.",
       "findings": [
         {
-          "source": "Truth Social @realDonaldTrump",
-          "post": "Trump claims he saved Selfridge Air Force Base and boosted the auto industry in Michigan",
+          "symbol": "MRK",
+          "sentiment": 0.8,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Merck and Kelun-Biotech reported positive Phase 3 results for the sacituzumab tirumotecan and Keytruda combination in advanced non-small cell lung cancer.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "ABBV",
+          "sentiment": 0.6,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "AbbVie submitted a Biologics License Application (BLA) to the FDA for etentamig, a second-generation BCMA x CD3 bispecific antibody, for relapsed/refractory multiple myeloma.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "MRNA",
+          "sentiment": -0.7,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "William Blair downgraded Moderna to Market Perform, citing valuation concerns after a significant recent stock run.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "ABT",
+          "sentiment": -0.5,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Argus Research downgraded Abbott Laboratories to Hold.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "ISRG",
+          "sentiment": 0.7,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Daiwa Securities significantly raised its price target on Intuitive Surgical from $360 to $490.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "LLY",
+          "sentiment": 0.4,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "A US court denied Novo Nordisk's bid to block Eli Lilly's advertising campaigns targeting Wegovy and Ozempic, finding negligible market impact.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "UNH",
+          "sentiment": 0.5,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Morgan Stanley raised its price target on UnitedHealth Group to $531, while Wells Fargo lowered its target to $487, indicating mixed analyst sentiment.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "AMGN",
+          "sentiment": -0.3,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "The FDA determined that a promotional video submitted by Amgen for VECTIBIX Injection was false or misleading, breaching federal law.",
+          "source": "benzinga"
+        }
+      ]
+    },
+    "political_and_social_media": {
+      "overall": "The President's recent posts seem to be positively impacting sentiment, particularly on the Consumer Confidence, with a few neutral sentiments about political figures.",
+      "findings": [
+        {
+          "source": "Truth Social",
+          "post": "BREAKING NEWS: Consumer Confidence is up 7.5%, an extremely big rise. President DONALD J. TRUMP",
+          "market_wide": true,
+          "affected": [
+            "Consumer Confidence"
+          ],
+          "sentiment": 0.8,
+          "importance": 4,
+          "why": "positive sentiment boosting economy",
+          "seen_at": "2026-10-27T13:15-04:00"
+        },
+        {
+          "source": "Truth Social",
+          "post": "Congratulations to Paul Manafort on his WIN! President DONALD J. TRUMP",
           "market_wide": false,
           "affected": [
-            "LMT",
-            "RTX",
-            "NOC",
-            "GM",
-            "F"
+            "Paul Manafort"
           ],
-          "sentiment": 0.3,
-          "importance": 2,
-          "why": "The post suggests continued or increased defense spending at Selfridge Air Force Base, which could benefit defense contractors, and praises auto industry growth in Michigan, potentially boosting sentiment for major automakers.",
-          "seen_at": "2026-10-25T15:16-04:00"
+          "sentiment": -0.5,
+          "importance": 3,
+          "why": "neutral sentiment about a political figure",
+          "seen_at": "2026-10-27T13:15-04:00"
+        },
+        {
+          "source": "Truth Social @realDonaldTrump",
+          "post": "Endorsing Ralph Alvarado for Kentucky's 6th Congressional District.",
+          "market_wide": false,
+          "affected": [
+            "ALXN",
+            "LMT",
+            "BA",
+            "NVDA"
+          ],
+          "sentiment": 0.5,
+          "importance": 4,
+          "why": "Endorsements from influential figures can impact investor sentiment and potentially move stock prices",
+          "seen_at": "2026-10-26T21:10-04:00"
         }
       ]
     }
@@ -3270,7 +3223,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-27T15:19-04:00",
+    "time": "2026-10-27T16:04-04:00",
     "earnings": [
       {
         "date": "2026-10-27",
