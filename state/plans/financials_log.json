@@ -991,5 +991,35 @@
       "SELL BLK",
       "BUY MS x14 (~$2625.7)"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "13:22",
+    "trigger": "market-moving post: BREAKING NEWS: Consumer Confidence is up 7.5%, an extremely big rise. President ",
+    "market_view": "Market is calm and slightly higher, with SPY +0.6%, QQQ +1.3%, VIXY -0.9 and 49% of watchlist stocks up. A surprise Consumer Confidence surge (7.5%) is boosting sentiment. SOFI is up ~14.7% on a strong Q3 beat and raised guidance, while HOOD is digesting Ripple/Earnings news. With the executive in a defensive posture, I am focusing on high-conviction relative-strength long setups above VWAP with tight risk.",
+    "experiment": "VWAP-above-price filter for breakout entries",
+    "decisions": [
+      {
+        "symbol": "HOOD",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Momentum stalled: m15 -0.4%, m60 -0.2%, rvol 1.09, trend flat, and PnL slightly negative; stop at 94.69 not hit but risk/reward is not compelling for a hold.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "BLK",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "BlackRock joined Envestnet institutional adoption programs; stock is above VWAP, trend up, rvol 1.17, and showing relative strength. High-conviction news catalyst long.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL HOOD",
+      "BUY BLK x2 (~$2273.42)",
+      "WATCHLIST remove rejected SCHW"
+    ]
   }
 ]
