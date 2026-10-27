@@ -1067,5 +1067,34 @@
     "results": [
       "BUY CACI blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "11:36",
+    "trigger": "scheduled look",
+    "market_view": "SPY and QQQ are modestly higher with a calm market mood; defense names are mixed with contract news driving idiosyncratic moves. LMT and GD held are small winners, while NOC is breaking down on low volume despite a price-target raise. With the 75% investment minimum and max five positions, rotating the weakest holding into a stronger opening-range breakout is the best use of capital.",
+    "experiment": "Test rotating out of OR breakdowns into OR breakouts with contract news to improve win rate and reduce churn.",
+    "decisions": [
+      {
+        "symbol": "NOC",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": "OR breakdown below the opening range, flat trend, rvol only 0.39, and price below entry despite Bernstein PT upgrade; exit for capital preservation and rotate into a stronger setup.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "CACI",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "OR breakout above 660.97 with two Navy contract wins ($145M maritime/autonomous and $281M electromagnetic warfare), m15 +0.8%, above VWAP, and day -0.5% so not chasing a >5% mover.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.035
+      }
+    ],
+    "results": [
+      "SELL NOC",
+      "BUY CACI x5 (~$3311.35)"
+    ]
   }
 ]

@@ -1,24 +1,78 @@
 {
   "date": "2026-10-27",
-  "time": "11:11",
+  "time": "11:36",
   "trigger": "scheduled look",
+  "market_view": "SPY and QQQ are modestly higher with a calm market mood; defense names are mixed with contract news driving idiosyncratic moves. LMT and GD held are small winners, while NOC is breaking down on low volume despite a price-target raise. With the 75% investment minimum and max five positions, rotating the weakest holding into a stronger opening-range breakout is the best use of capital.",
   "decisions": [
+    {
+      "symbol": "NOC",
+      "action": "SELL",
+      "conviction": 5,
+      "stop_loss_pct": 0,
+      "take_profit_pct": 0,
+      "setup": "other",
+      "reason": "OR breakdown below the opening range, flat trend, rvol only 0.39, and price below entry despite Bernstein PT upgrade; exit for capital preservation and rotate into a stronger setup."
+    },
     {
       "symbol": "CACI",
       "action": "BUY",
-      "stop_loss_pct": 0.015,
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.035,
-      "setup": "news catalyst",
-      "reason": "Strong news catalyst with two major Navy contracts ($145M and $281M) and high RSI (73.3) indicating momentum. Currently trading below VWAP, offering a better entry point than chasing the high. Fits the 'high-conviction' mandate due to concrete contract wins."
+      "setup": "opening range breakout",
+      "reason": "OR breakout above 660.97 with two Navy contract wins ($145M maritime/autonomous and $281M electromagnetic warfare), m15 +0.8%, above VWAP, and day -0.5% so not chasing a >5% mover."
     }
   ],
   "ranked_ideas": [
-    "BAH",
-    "KTOS",
-    "AVAV",
-    "HII",
-    "SAIC"
+    {
+      "symbol": "HII",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.035,
+      "setup": "opening range breakout",
+      "reason": "OR breakout, above VWAP +0.8%, m60 +1.3%, trend up, RSI 66.6; watch earnings tomorrow."
+    },
+    {
+      "symbol": "RTX",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "Prime anchor per executive orders, but flat intraday with rvol 0.66 and m15 -0.1%; wait for volume confirmation."
+    },
+    {
+      "symbol": "KTOS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout with ARK buying and trend up, RSI 35.5 not overbought, but rvol 0.82 is below ideal."
+    },
+    {
+      "symbol": "AVAV",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.035,
+      "setup": "news catalyst",
+      "reason": "ARK Invest bought ~$7.3M shares, vwap +0.9%, RSI 27.1 oversold bounce candidate, but needs volume stabilization."
+    },
+    {
+      "symbol": "SAIC",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Strongest m15 momentum (+1.8%) and OR breakout, but RSI 84.4 is overbought (>80 filter) so skip for now."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Test rotating out of OR breakdowns into OR breakouts with contract news to improve win rate and reduce churn.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

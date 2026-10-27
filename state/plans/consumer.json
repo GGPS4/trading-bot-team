@@ -1,56 +1,77 @@
 {
   "date": "2026-10-27",
-  "time": "11:16",
-  "trigger": "scheduled look",
+  "time": "11:36",
+  "trigger": "must invest $1,662 more (75% rule)",
   "decisions": [
     {
-      "symbol": "MAR",
-      "action": "COVER",
-      "reason": "Stop loss hit at 390.21. Price is at 387.76. Exiting to protect capital and free up margin. The short thesis (overbought RSI, high valuation) is invalidated by the strong post-earnings momentum and high volume (rvol 2.18).",
-      "stop_loss_pct": 0,
-      "take_profit_pct": 0
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "RCL",
-      "setup": "earnings gap",
-      "conviction": 5,
-      "reason": "Strong earnings beat and guidance raise. Trading above VWAP with high relative volume (3.64). Clear momentum play for the rest of the day.",
+      "symbol": "TSLA",
+      "action": "HOLD",
+      "reason": "Strong momentum setup with +3.4% day move, OR breakout, and rvol 1.54. Holding to let the trade run toward the first target of 414.44.",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03
     },
     {
+      "symbol": "RCL",
+      "action": "HOLD",
+      "reason": "Earnings gap play with high volume (rvol 3.36). Price is consolidating near the high; holding for potential continuation or stop-out.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03
+    },
+    {
+      "symbol": "DG",
+      "action": "HOLD",
+      "reason": "Opening range breakout setup. Price is stable above VWAP. Holding to see if it extends or hits the stop.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03
+    },
+    {
+      "symbol": "CMG",
+      "action": "HOLD",
+      "reason": "Short position is slightly underwater but within stop range. Mean reversion setup; waiting for breakdown or stop-out.",
+      "stop_loss_pct": 0.012,
+      "take_profit_pct": 0.03
+    }
+  ],
+  "ranked_ideas": [
+    {
       "symbol": "AMZN",
       "setup": "opening range breakout",
       "conviction": 4,
-      "reason": "Broke above the opening range high. Positive sentiment from UBS price target hike and AI news. Trading above VWAP.",
+      "reason": "Breakout above OR high (251.27) with positive daily trend. RSI 44 offers room to run. UBS price target raise provides fundamental support. Needs rvol confirmation but strong structure.",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.025
     },
     {
       "symbol": "LULU",
-      "setup": "momentum",
-      "conviction": 3,
-      "reason": "Trading above VWAP with positive 15m momentum. RSI is healthy (63). Good relative strength in a calm market.",
+      "setup": "opening range breakout",
+      "conviction": 4,
+      "reason": "Breakout above OR high (103.76) with positive momentum (m60 +1.0%). RSI 63 is healthy, not overbought. Strong 5-day trend (+5.3%).",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.025
+    },
+    {
+      "symbol": "MAR",
+      "setup": "momentum",
+      "conviction": 3,
+      "reason": "High volume (rvol 1.97) and strong 60-min momentum (+1.4%). However, RSI is overbought (74.1) and news notes it is overbought. High risk, but high reward if it holds VWAP.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03
     },
     {
       "symbol": "DEO",
       "setup": "opening range breakout",
       "conviction": 3,
-      "reason": "Broke above opening range. Trading above VWAP. Defensive consumer stock with steady uptrend.",
+      "reason": "Breakout above OR high (93.09). RSI 74.6 is high, but 20-day trend is strong (+9.5%). Lower conviction due to overbought conditions.",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.02
     },
     {
-      "symbol": "TSLA",
-      "setup": "momentum",
-      "conviction": 2,
-      "reason": "Already holding a long position. If the current position is closed or if we need to add, this is the next best momentum play, but we are already exposed.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03
+      "symbol": "HD",
+      "setup": "opening range breakout",
+      "conviction": 3,
+      "reason": "Breakout above OR high (319.12). RSI 75.8 is overbought. Low volume (rvol 0.65) suggests weak conviction in the breakout. Lower priority.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.02
     }
   ],
   "watchlist_adds": [],
