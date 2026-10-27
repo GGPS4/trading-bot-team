@@ -1,11 +1,9 @@
 {
-  "updated": "2026-10-27T07:36-04:00",
+  "updated": "2026-10-27T08:06-04:00",
   "date": "2026-10-27",
   "mode": "paper",
   "health": {
-    "issues": [
-      "1 problem(s) in the last hour, latest: LLM: groq openai/gpt-oss-120b hit its per-minute limit: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m5eapq7ve"
-    ]
+    "issues": []
   },
   "paused": false,
   "rules": {
@@ -14,20 +12,20 @@
     "strategy": "day_trading"
   },
   "account": {
-    "equity": 99028.34,
+    "equity": 99022.44,
     "cash": 95830.96,
-    "day_change": 51.86,
+    "day_change": 45.96,
     "day_change_pct": 0.0005
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 765.225
+    "price": 767.47
   },
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 8,
-    "return_since_start": -0.0097,
-    "benchmark_since_start": -0.007,
+    "return_since_start": -0.0098,
+    "benchmark_since_start": -0.0041,
     "max_drawdown": 0.0101
   },
   "go_live": {
@@ -40,7 +38,7 @@
       {
         "rule": "Beating SPY since the start",
         "ok": false,
-        "value": "-1.0% vs -0.7%"
+        "value": "-1.0% vs -0.4%"
       },
       {
         "rule": "Worst drop under 15%",
@@ -174,8 +172,8 @@
         "IBM"
       ],
       "budget": 22268.03,
-      "invested": 3197.38,
-      "unrealized_pnl": 24.05,
+      "invested": 3191.48,
+      "unrealized_pnl": 18.15,
       "realized_today": 0,
       "trades_today": 0,
       "blocked_today": 0,
@@ -296,10 +294,10 @@
       "team": "tech",
       "qty": 4.0,
       "entry": 392.99,
-      "price": 392.77,
-      "value": 1571.08,
-      "pnl": -0.88,
-      "pnl_pct": -0.0006,
+      "price": 392.87,
+      "value": 1571.48,
+      "pnl": -0.48,
+      "pnl_pct": -0.0003,
       "stop": 384.23,
       "target": 403.83,
       "reason": "OR breakout above 385, Bernstein PT raise to $700, day +3.6, above VWAP; oversold/50d below so high risk, conviction strong due to catalyst.",
@@ -314,10 +312,10 @@
       "team": "tech",
       "qty": 9.0,
       "entry": 177.93,
-      "price": 180.7,
-      "value": 1626.3,
-      "pnl": 24.93,
-      "pnl_pct": 0.0156,
+      "price": 180.0,
+      "value": 1620.0,
+      "pnl": 18.63,
+      "pnl_pct": 0.0116,
       "stop": 175.38,
       "target": 183.39,
       "reason": "[75% invested rule] OR breakout above VWAP and trend up, but low rvol.",
@@ -1327,7 +1325,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-27T07:36-04:00",
+    "time": "2026-10-27T08:06-04:00",
     "earnings": [
       {
         "date": "2026-10-27",
@@ -2785,55 +2783,29 @@
     "all_ok": true
   },
   "premarket": {
-    "time": "2026-10-26T08:49-04:00",
-    "date": "2026-10-26",
-    "watched": [
-      {
-        "symbol": "MU",
-        "team": "tech",
-        "gap": 0.0253,
-        "price": 899.58,
-        "prev_close": 877.385,
-        "headline": "What's Going On With Micron Technology Stock Monday?"
-      },
-      {
-        "symbol": "TSLA",
-        "team": "consumer",
-        "gap": 0.0245,
-        "price": 381.26,
-        "prev_close": 372.15,
-        "headline": "Tesla Receives Authorization for Assisted Driving System in Latvia"
-      }
-    ],
+    "time": "2026-10-27T08:05-04:00",
+    "date": "2026-10-27",
+    "watched": [],
     "outside": [
       {
-        "symbol": "EWZS",
-        "gap": -0.3491,
-        "price": 10.89,
-        "headline": "Brazilian Stocks Set For Record Single-Day Crash After Lula Upset"
-      },
-      {
-        "symbol": "PAGS",
-        "gap": -0.3196,
-        "price": 7.78,
-        "headline": "Brazilian Stocks Set For Record Single-Day Crash After Lula Upset"
-      },
-      {
-        "symbol": "EWZ",
-        "gap": -0.2771,
-        "price": 30.79,
-        "headline": "Brazilian Stocks Set For Record Single-Day Crash After Lula Upset"
-      },
-      {
-        "symbol": "NU",
-        "gap": -0.2583,
-        "price": 11.24,
-        "headline": "Brazilian Stocks Set For Record Single-Day Crash After Lula Upset"
+        "symbol": "WHR",
+        "gap": -0.0794,
+        "price": 24.34,
+        "headline": "Whirlpool Posts Downbeat Q3 Results, Joins HSBC, Hilton Hotels And Other Big Stocks Moving Lower In Tuesday\u2019s Pre-Market Session"
       }
     ]
   },
   "overnight": {
     "defense": [
+      {
+        "symbol": "NOC",
+        "sentiment": 0.7,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Bernstein raised its price target for Northrop Grumman to $590 from $556.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T08:05-04:00"
+      },
       {
         "symbol": "NOC",
         "sentiment": 0.2,
@@ -2896,18 +2868,54 @@
         "summary": "Lockheed Martin was featured on CNBC\u2019s Final Trades segment, with shares moving mixed.",
         "source": "benzinga",
         "seen_at": "2026-10-26T08:01-04:00"
-      },
-      {
-        "symbol": "BAH",
-        "sentiment": 0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Analyst coverage notes BAH\u2019s 3.01% dividend yield among high\u2011yield industrials.",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T07:46-04:00"
       }
     ],
     "space": [
+      {
+        "symbol": "SPCX",
+        "sentiment": 0.7,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Deutsche Bank raised its price target for SpaceX to $250 and kept a Buy rating.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T08:06-04:00"
+      },
+      {
+        "symbol": "SPCX",
+        "sentiment": 0.4,
+        "importance": 2,
+        "unconfirmed_rumor": true,
+        "summary": "Elon Musk said SpaceX aims to launch a mobile wireless service within the next two to three years.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T08:06-04:00"
+      },
+      {
+        "symbol": "BA",
+        "sentiment": -0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Boeing reported Q3 2026 revenue of $24.2\u202fB but a GAAP loss of $0.26 per share.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T08:06-04:00"
+      },
+      {
+        "symbol": "HWM",
+        "sentiment": 0.5,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Analyst John Godyn maintained a bullish rating on Howmet Aerospace with a $329 price target.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T08:06-04:00"
+      },
+      {
+        "symbol": "BA",
+        "sentiment": 0.6,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "Boeing posted 300 net orders in Q3, with the 777X certification on track for a 2027 delivery and stable production rates for the 787 and 737 families.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:50-04:00"
+      },
       {
         "symbol": "BA",
         "sentiment": 0.2,
@@ -2934,51 +2942,6 @@
         "summary": "Cathie Wood predicts SpaceX could boost economic growth, but it's speculative and not tied to concrete contracts or launches",
         "source": "benzinga",
         "seen_at": "2026-10-27T06:05-04:00"
-      },
-      {
-        "symbol": "SPCX",
-        "sentiment": 0.1,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Anthropic\u2019s IPO filing notes SPCX among companies with over $500B AI compute commitments.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T04:35-04:00"
-      },
-      {
-        "symbol": "BA",
-        "sentiment": 0.0,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Boeing appears in a market\u2011watch article ahead of its earnings report, but no new launch, mission, or contract details are disclosed.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T03:00-04:00"
-      },
-      {
-        "symbol": "BA",
-        "sentiment": 0.2,
-        "importance": 1,
-        "unconfirmed_rumor": false,
-        "summary": "Broad market optimism gives Boeing a slight positive tilt.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T02:15-04:00"
-      },
-      {
-        "symbol": "SPCX",
-        "sentiment": 0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Verizon shows openness to Starlink collaboration, hinting at potential revenue upside for SpaceX.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T02:15-04:00"
-      },
-      {
-        "symbol": "SPCX",
-        "sentiment": 0.6,
-        "importance": 2,
-        "unconfirmed_rumor": true,
-        "summary": "ARK analyst predicts SpaceX could enable intercontinental electric aviation, boosting future growth prospects.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T00:45-04:00"
       }
     ],
     "entertainment": [
@@ -3057,6 +3020,15 @@
     ],
     "tech": [
       {
+        "symbol": "MSFT",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Microsoft adds MT Newswires real-time financial news feed to Copilot, boosting data capabilities",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T08:06-04:00"
+      },
+      {
         "symbol": "AAPL",
         "sentiment": 0.8,
         "importance": 4,
@@ -3118,18 +3090,27 @@
         "summary": "Mark Cuban warned Apple is being treated like a meme stock, raising bubble concerns",
         "source": "benzinga",
         "seen_at": "2026-10-27T05:21-04:00"
-      },
-      {
-        "symbol": "MU",
-        "sentiment": -0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Mark Cuban warned Micron is being treated like a meme stock, raising bubble concerns",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T05:21-04:00"
       }
     ],
     "consumer": [
+      {
+        "symbol": "RCL",
+        "sentiment": 0.8,
+        "importance": 5,
+        "unconfirmed_rumor": false,
+        "summary": "Q3 2026 EPS of $6.57 beat expectations and full-year guidance was raised",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T08:06-04:00"
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Daiwa raised its price target to $390 from $345",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T08:06-04:00"
+      },
       {
         "symbol": "RCL",
         "sentiment": -0.4,
@@ -3183,27 +3164,36 @@
         "summary": "Investor Ross Gerber publicly questioned Tesla's pace on its Cybercab rollout, casting a slight negative spotlight on the company.",
         "source": "benzinga",
         "seen_at": "2026-10-27T04:36-04:00"
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": 0.7,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Tesla has begun manufacturing its Optimus humanoid robot, a milestone that could open a new revenue stream.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T22:30-04:00"
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": 0.6,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Amazon Business adds Business Prime perks for SMBs through new partnerships with QuickBooks, CrowdStrike and Gusto.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T22:30-04:00"
       }
     ],
     "financials": [
+      {
+        "symbol": "SPGI",
+        "sentiment": 0.5,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "Q3 2026 earnings beat expectations and a strategic review of Capital IQ was announced.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T08:06-04:00"
+      },
+      {
+        "symbol": "ICE",
+        "sentiment": 0.1,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Record open interest in TTF options signals heightened market activity.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T08:06-04:00"
+      },
+      {
+        "symbol": "SPGI",
+        "sentiment": -0.2,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "S&P Global trimmed FY2026 GAAP EPS guidance modestly while raising its sales outlook, keeping estimates above consensus.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:51-04:00"
+      },
       {
         "symbol": "MS",
         "sentiment": 0.3,
@@ -3248,36 +3238,27 @@
         "summary": "S&P Global is evaluating alternatives for Capital IQ and related data operations.",
         "source": "benzinga",
         "seen_at": "2026-10-27T07:36-04:00"
-      },
-      {
-        "symbol": "FLG",
-        "sentiment": 0.2,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Cantor Fitzgerald maintains overweight rating on Flagstar Bank with a $16 price target.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T07:36-04:00"
-      },
-      {
-        "symbol": "COF",
-        "sentiment": 0.7,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Evercore ISI raised its price target for Capital One to $230, up from $220, indicating a bullish outlook.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-27T06:51-04:00"
-      },
-      {
-        "symbol": "AXP",
-        "sentiment": 0.7,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Evercore ISI increased its price target for American Express to $330 from $320, suggesting improved expectations.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-27T06:51-04:00"
       }
     ],
     "healthcare": [
+      {
+        "symbol": "JNJ",
+        "sentiment": 0.2,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Johnson & Johnson announced it will host an Enterprise Business Review for investors on Dec 8, 2026.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T08:06-04:00"
+      },
+      {
+        "symbol": "JNJ",
+        "sentiment": 0.0,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Johnson & Johnson announced a routine Enterprise Business Review scheduled for Dec.\u202f8, which is a standard corporate update with no immediate impact on earnings.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:51-04:00"
+      },
       {
         "symbol": "ISRG",
         "sentiment": 0.7,
@@ -3331,24 +3312,6 @@
         "summary": "Merck partners with Hong Kong Science and Technology Parks to foster innovation and technology development.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-27T04:36-04:00"
-      },
-      {
-        "symbol": "AMGN",
-        "sentiment": 0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Amgen appointed David W. Gibbs, former CEO of Yum! Brands, to its Board of Directors, a standard corporate governance update with limited immediate financial impact.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T19:10-04:00"
-      },
-      {
-        "symbol": "ISRG",
-        "sentiment": -0.1,
-        "importance": 1,
-        "unconfirmed_rumor": false,
-        "summary": "An Intuitive Surgical insider executed a stock sale, which is a routine transaction with no significant signal for the broader market.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T19:10-04:00"
       }
     ]
   },
@@ -6265,6 +6228,15 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "NOC",
+            "sentiment": 0.7,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Bernstein raised its price target for Northrop Grumman to $590 from $556.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T08:05-04:00"
+          },
           {
             "symbol": "NOC",
             "sentiment": 0.2,
@@ -9635,6 +9607,51 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "SPCX",
+            "sentiment": 0.7,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Deutsche Bank raised its price target for SpaceX to $250 and kept a Buy rating.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T08:06-04:00"
+          },
+          {
+            "symbol": "SPCX",
+            "sentiment": 0.4,
+            "importance": 2,
+            "unconfirmed_rumor": true,
+            "summary": "Elon Musk said SpaceX aims to launch a mobile wireless service within the next two to three years.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T08:06-04:00"
+          },
+          {
+            "symbol": "BA",
+            "sentiment": -0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Boeing reported Q3 2026 revenue of $24.2\u202fB but a GAAP loss of $0.26 per share.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T08:06-04:00"
+          },
+          {
+            "symbol": "HWM",
+            "sentiment": 0.5,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Analyst John Godyn maintained a bullish rating on Howmet Aerospace with a $329 price target.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T08:06-04:00"
+          },
+          {
+            "symbol": "BA",
+            "sentiment": 0.6,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Boeing posted 300 net orders in Q3, with the 777X certification on track for a 2027 delivery and stable production rates for the 787 and 737 families.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:50-04:00"
+          },
           {
             "symbol": "BA",
             "sentiment": 0.2,
@@ -16045,6 +16062,15 @@
         },
         "overnight": [
           {
+            "symbol": "MSFT",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Microsoft adds MT Newswires real-time financial news feed to Copilot, boosting data capabilities",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T08:06-04:00"
+          },
+          {
             "symbol": "AAPL",
             "sentiment": 0.8,
             "importance": 4,
@@ -16302,15 +16328,6 @@
             "importance": 3,
             "unconfirmed_rumor": false,
             "summary": "AllianceBernstein reaffirmed a Buy rating and raised Applied Materials' price target to $700.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T08:17-04:00"
-          },
-          {
-            "symbol": "AVGO",
-            "sentiment": 0.2,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Broadcom signaled interest in buying up to $5\u202fbn of Meta shares, indicating excess cash deployment.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-26T08:17-04:00"
           }
@@ -19118,6 +19135,24 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "RCL",
+            "sentiment": 0.8,
+            "importance": 5,
+            "unconfirmed_rumor": false,
+            "summary": "Q3 2026 EPS of $6.57 beat expectations and full-year guidance was raised",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T08:06-04:00"
+          },
+          {
+            "symbol": "TSLA",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Daiwa raised its price target to $390 from $345",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T08:06-04:00"
+          },
           {
             "symbol": "RCL",
             "sentiment": -0.4,
@@ -21934,6 +21969,33 @@
         },
         "overnight": [
           {
+            "symbol": "SPGI",
+            "sentiment": 0.5,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Q3 2026 earnings beat expectations and a strategic review of Capital IQ was announced.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T08:06-04:00"
+          },
+          {
+            "symbol": "ICE",
+            "sentiment": 0.1,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Record open interest in TTF options signals heightened market activity.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T08:06-04:00"
+          },
+          {
+            "symbol": "SPGI",
+            "sentiment": -0.2,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "S&P Global trimmed FY2026 GAAP EPS guidance modestly while raising its sales outlook, keeping estimates above consensus.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:51-04:00"
+          },
+          {
             "symbol": "MS",
             "sentiment": 0.3,
             "importance": 3,
@@ -22175,33 +22237,6 @@
             "summary": "Citigroup acted as financial advisor to EQT in its acquisition of Range, indicating continued advisory business.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-26T06:47-04:00"
-          },
-          {
-            "symbol": "AXP",
-            "sentiment": 0.4,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "JPMorgan raised its price target for American Express to $365 from $360, a modest upgrade.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T06:47-04:00"
-          },
-          {
-            "symbol": "AXP",
-            "sentiment": -0.3,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Broad market decline and extreme fear weigh on American Express as the Dow tumbles over 1%.",
-            "source": "benzinga",
-            "seen_at": "2026-10-26T02:56-04:00"
-          },
-          {
-            "symbol": "V",
-            "sentiment": -0.3,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Broad market decline and extreme fear weigh on Visa as the Dow tumbles over 1%.",
-            "source": "benzinga",
-            "seen_at": "2026-10-26T02:56-04:00"
           }
         ],
         "technicals": {
@@ -26022,6 +26057,24 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "JNJ",
+            "sentiment": 0.2,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Johnson & Johnson announced it will host an Enterprise Business Review for investors on Dec 8, 2026.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T08:06-04:00"
+          },
+          {
+            "symbol": "JNJ",
+            "sentiment": 0.0,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Johnson & Johnson announced a routine Enterprise Business Review scheduled for Dec.\u202f8, which is a standard corporate update with no immediate impact on earnings.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:51-04:00"
+          },
           {
             "symbol": "ISRG",
             "sentiment": 0.7,
