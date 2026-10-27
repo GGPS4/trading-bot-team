@@ -12592,10 +12592,13 @@
     "entry_price": 301.9,
     "entry_time": "2026-10-27T15:16:34.958820156Z",
     "high": 304.68,
-    "low": 298.94,
+    "low": 297.765,
     "stop_order_id": "7fd46aa3-ff35-4d2b-92a9-bf786fc29c25",
     "stop_sent": 297.25,
-    "stop_qty_sent": 4
+    "stop_qty_sent": 4,
+    "exit_order_id": "a9a9e866-f12e-4cdd-8bed-10c436e1c207",
+    "exit_reason": "manager_sell",
+    "exit_note": "Position is down 1.2% and approaching the stop at 297.25. Momentum is negative (m60 -1.7%) and price is below VWAP. The earnings gap is fading. Exiting to preserve capital and free up budget for stronger setups."
   },
   {
     "id": "tech-ANET-202610271133-b25b",
@@ -12903,10 +12906,13 @@
     "entry_price": 52.17,
     "entry_time": "2026-10-27T16:06:56.170451824Z",
     "high": 52.18,
-    "low": 51.995,
+    "low": 51.97,
     "stop_order_id": "6b6b3741-0012-4eb1-ba17-ce195d9af58d",
     "stop_sent": 51.3,
-    "stop_qty_sent": 12
+    "stop_qty_sent": 12,
+    "exit_order_id": "56b7703b-0bf0-49e8-92cd-c89d6fa496b7",
+    "exit_reason": "manager_sell",
+    "exit_note": "Price has fallen below VWAP (-0.5%) on weak relative volume (0.18) and negative 60m momentum (-0.7%), invalidating the breakout thesis."
   },
   {
     "id": "defense-KTOS-202610271213-2789",
@@ -12994,7 +13000,7 @@
     "entry_price": 17.06,
     "entry_time": "2026-10-27T16:26:27.998638102Z",
     "high": 17.1,
-    "low": 16.945,
+    "low": 16.935,
     "stop_order_id": "a830161f-1e6c-4a6a-93c4-05c3d98254ea",
     "stop_sent": 17.91,
     "stop_qty_sent": 41
@@ -13362,5 +13368,29 @@
     "stop_order_id": "1d256f92-44fd-405f-ae95-fcb3ce7dce85",
     "stop_sent": 1113.98,
     "stop_qty_sent": 2
+  },
+  {
+    "id": "entertainment-SONY-202610271418-bf46",
+    "date": "2026-10-27",
+    "time": "14:18",
+    "team": "entertainment",
+    "symbol": "SONY",
+    "side": "long",
+    "kind": "shares",
+    "qty": 26,
+    "qty_open": 26,
+    "dollars": 665.47,
+    "est_price": 25.595,
+    "stop_price": 25.21,
+    "first_stop": 25.21,
+    "take_profit_price": 26.36,
+    "risk_dollars": 9.98,
+    "conviction": 4,
+    "reason": "Trading above VWAP (+0.1%) with stable 15m/60m momentum (+0.1%) and strong 20-day trend (+9.5%), meeting executive focus on defensive quality names.",
+    "setup": "VWAP bounce",
+    "experiment": "Test a VWAP-bounce strategy with tighter stops (0.2% below VWAP) on defensive names like CMCSA and DIS",
+    "order_id": "476d4f73-354b-4240-9028-3d620dbdb829",
+    "status": "submitted",
+    "entry_price": null
   }
 ]

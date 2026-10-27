@@ -1,67 +1,76 @@
 {
   "date": "2026-10-27",
-  "time": "13:19",
-  "trigger": "market-moving post: BREAKING NEWS: Consumer Confidence is up 7.5%, an extremely big rise. President ",
-  "market_view": "Market is calm and slightly higher, with SPY +0.6% and QQQ +1.3%, while VIXY fell and about half of watched stocks were up. The only notable catalyst was a big rise in Consumer Confidence. Team 3's entertainment names are mostly mixed, with several breakdowns below the opening range/VWAP, so the defensive posture remains in place.",
+  "time": "14:18",
+  "trigger": "first look this run",
+  "market_view": "Broad markets remain firm with SPY +0.5% and QQQ +1.2% in a low-volatility environment. Entertainment names are mixed, requiring selective positioning in high-conviction defensive names above VWAP while trimming non-performing setups below VWAP to maintain our mandatory 75% invested threshold.",
   "decisions": [
     {
-      "symbol": "SPOT",
+      "symbol": "IMAX",
+      "action": "SELL",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Price has fallen below VWAP (-0.5%) on weak relative volume (0.18) and negative 60m momentum (-0.7%), invalidating the breakout thesis."
+    },
+    {
+      "symbol": "SONY",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "momentum",
-      "reason": "Consumer Confidence rose 7.5% with strong positive sentiment; SPOT is showing positive 15m/60m momentum above VWAP with rvol 1.18 and m15/m60 up, attempting a bounce after a selloff."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "VWAP bounce",
+      "reason": "Trading above VWAP (+0.1%) with stable 15m/60m momentum (+0.1%) and strong 20-day trend (+9.5%), meeting executive focus on defensive quality names."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "TKO",
-      "direction": "short",
+      "symbol": "SPOT",
+      "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Breakdown below opening range/VWAP, trend down, and Goldman PT cut; intraday momentum bearish."
+      "setup": "pullback in uptrend",
+      "reason": "Trading above VWAP (+0.2%) with strong 5d (+6.0%) and 20d (+13.0%) relative strength and near-1.0 rvol."
     },
     {
       "symbol": "CMCSA",
-      "direction": "short",
+      "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Breakdown below opening range/VWAP with weak m15/m60 momentum; defensive name but intraday selloff."
+      "setup": "VWAP bounce",
+      "reason": "Defensive telecom name holding near key intraday levels, supported by positive network expansion news."
     },
     {
-      "symbol": "NFLX",
-      "direction": "short",
+      "symbol": "ROKU",
+      "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Breakdown below opening range/VWAP and weak 60m momentum; oversold on longer timeframe but intraday bearish."
+      "setup": "VWAP bounce",
+      "reason": "Holding above 50-day moving average with positive content launch catalyst on Roku Channel."
     },
     {
-      "symbol": "MGM",
-      "direction": "short",
+      "symbol": "TKO",
+      "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Breakdown below opening range/VWAP and weak momentum; earnings risk adds to selloff pressure."
+      "setup": "mean reversion",
+      "reason": "Outperforming group today (+0.4% day change) with positive 15m momentum (+0.1%)."
     },
     {
-      "symbol": "FOXA",
-      "direction": "short",
+      "symbol": "EA",
+      "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Breakdown below opening range/VWAP and weak momentum; prior strength fading."
+      "setup": "pullback in uptrend",
+      "reason": "Flat on the day (+0.0%) demonstrating resilience relative to sector pullback."
     }
   ],
-  "experiment": "Add a pre-entry filter that mandates a positive 15-minute volume expansion and rvol >1.2 before entering any long or short momentum trade",
+  "experiment": "Test a VWAP-bounce strategy with tighter stops (0.2% below VWAP) on defensive names like CMCSA and DIS",
   "watchlist_changes": {
     "add": [],
     "remove": []
