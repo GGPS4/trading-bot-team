@@ -1,78 +1,79 @@
 {
   "date": "2026-10-27",
-  "time": "12:13",
-  "trigger": "big news on ['LMT']",
-  "market_view": "The defense sector is intraday weak despite positive news; SPY is up +0.7% but most defense names are below VWAP with low relative volume and breakdowns in LMT, RTX, NOC, and CACI. PLTR is the only relative strength leader in the book. With the 75% investment rule mandatory and no high-conviction longs beyond the current book, I am rotating out of a failed CACI breakout into KTOS, which is the only clean opening-range breakout with institutional flow and not extended beyond the 5% entry limit.",
+  "time": "12:48",
+  "trigger": "scheduled look",
+  "market_view": "Market is calm but FOMC at 2:00 PM ET is a high-impact event; defense stocks are mixed. LMT and GD are overbought, KTOS showed an opening-range breakout, and CACI has a high-importance Navy contract. I favor capital preservation ahead of FOMC and will only take high-conviction names.",
   "decisions": [
     {
       "symbol": "CACI",
-      "action": "SELL",
-      "conviction": 4,
-      "stop_loss_pct": 0,
-      "take_profit_pct": 0,
-      "setup": "other",
-      "reason": "CACI is below VWAP (-0.2%), showing an opening-range breakdown, trending down, and rvol is only 0.27 despite two Navy contract wins; the intraday setup has failed, so cutting for capital preservation."
-    },
-    {
-      "symbol": "KTOS",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.025,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "KTOS broke above its opening range (40.44-41.09) on ARK Invest buying (~63,612 shares); up +3.2% intraday but under the 5% chase limit, RSI 35.5 is not overbought, and it shows relative strength while sector peers break down."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "CACI secured a $145M Navy contract and $281M EW contract; sentiment 0.8, importance 4; defense relative strength leader, day -0.9% so not chasing."
     }
   ],
   "ranked_ideas": [
+    {
+      "symbol": "HII",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "OR breakout with uptrend, but low rvol; defense."
+    },
     {
       "symbol": "AVAV",
       "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "Above VWAP (+1.1%), trending up, ARK Invest bought ~$7.3M, and RSI 27.1 is oversold; a bounce candidate if volume confirms."
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "ARK bought AVAV, day +1.4%, but rvol 0.97; defense tech."
     },
     {
-      "symbol": "HII",
-      "direction": "long",
+      "symbol": "RTX",
+      "direction": "short",
       "conviction": 2,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Broke above opening range (278.7-280.33) and trending up, but rvol is only 0.61 so conviction is low."
+      "take_profit_pct": 0.04,
+      "setup": "other",
+      "reason": "OR breakdown, prime anchor weakness; m15 positive but below VWAP."
+    },
+    {
+      "symbol": "NOC",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "other",
+      "reason": "OR breakdown, Bernstein PT 590 but price weakness."
     },
     {
       "symbol": "BAH",
-      "direction": "long",
+      "direction": "short",
       "conviction": 2,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "VWAP bounce",
-      "reason": "Above VWAP (+0.4%) with a slight uptrend, but quiet volume (rvol 0.49) and no fresh catalyst."
-    },
-    {
-      "symbol": "TXT",
-      "direction": "long",
-      "conviction": 1,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "other",
-      "reason": "Flat intraday, no catalyst, rvol 0.21; only a fallback if nothing else sets up."
-    },
-    {
-      "symbol": "HEI",
-      "direction": "long",
-      "conviction": 1,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "other",
-      "reason": "Opening-range breakdown intraday conflicts with the uptrend; weak volume (rvol 0.25) makes it a low-conviction fallback."
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion",
+      "reason": "Overbought RSI 86.9, day -0.6%; defense."
     }
   ],
-  "experiment": "Enforcing intraday VWAP hold rule: cutting CACI for trading below VWAP with an opening-range breakdown; only adding KTOS because it holds above VWAP, broke its opening range, and has ARK institutional buying.",
+  "experiment": "Enforce a strict 30-minute VWAP hold rule before taking afternoon news catalyst entries.",
   "watchlist_changes": {
-    "add": [],
-    "remove": []
+    "add": [
+      {
+        "symbol": "LPTH",
+        "reason": "Pre-market gap +8.5% with defense order news; strong outside-gapper in defense field."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "PLTR",
+        "reason": "Not a big defense prime; relative strength in tech/autonomous AI, not core defense focus."
+      }
+    ]
   }
 }
