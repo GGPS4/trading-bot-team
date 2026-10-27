@@ -1,48 +1,23 @@
 {
   "date": "2026-10-27",
-  "time": "10:20",
-  "trigger": "big news on ['AVGO']",
+  "time": "10:48",
+  "trigger": "scheduled look",
   "decisions": [
     {
       "symbol": "AVGO",
-      "action": "SELL",
-      "reason": "Opening range breakdown with heavy volume (rvol 3.11) and negative 15m momentum. Capital preservation mandate from President requires exiting weak positions. News catalyst (Anthropic deal) has faded into the breakdown.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
-    },
-    {
-      "symbol": "AMD",
-      "action": "SELL",
-      "reason": "Stalled momentum below VWAP with negative 15m trend. RSI is low (25.5) but intraday structure is weak. Rotating capital to stronger relative strength leaders per President's directive.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
+      "action": "BUY",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Strong news catalyst with analyst upgrades to $400 target and Anthropic partnership. Stock is up 2.7% on high volume (rvol 2.48). Although currently below VWAP, the momentum and news flow support a long entry. High conviction (4/5) based on multiple positive news items."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "AAPL",
-      "setup": "pullback in uptrend",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "conviction": 4,
-      "reason": "Trading above VWAP, trend up, supported by Goldman price target hike to $390. Strong relative strength in a flat market. Best available setup for capital deployment."
-    },
-    {
-      "symbol": "TXN",
-      "setup": "momentum",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "conviction": 4,
-      "reason": "Positive 5d and 20d momentum, trading near VWAP with upward trend. Defensive tech name fits President's capital preservation strategy."
-    },
-    {
-      "symbol": "ANET",
-      "setup": "mean reversion",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "conviction": 3,
-      "reason": "RSI 26.5 (oversold) with strong +2.5% day move. Potential bounce from oversold condition. Lower conviction due to low volume (rvol 0.45)."
-    }
+    "ANET",
+    "AMD",
+    "MU",
+    "PANW",
+    "CRM"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
