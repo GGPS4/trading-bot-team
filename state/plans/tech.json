@@ -1,95 +1,59 @@
 {
   "date": "2026-10-27",
-  "time": "13:00",
-  "trigger": "must invest $3,583 more (75% rule)",
-  "market_view": "Market is calm and slightly higher, with SPY +0.5% and QQQ +1.2%. AI infrastructure optimism is driving semiconductor headlines, but intraday momentum is mixed and we are into the final hours before close. I am staying selective and risk-managed.",
-  "decisions": [
-    {
-      "symbol": "AAPL",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.011,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above 345.09 on overnight Goldman PT $390 raise; AAPL is a relative strength leader with high RS data, but watch for soft momentum."
-    }
-  ],
+  "time": "13:08",
+  "trigger": "big news on ['AMD']",
+  "market_view": "SPY and QQQ are modestly higher in a normal regime, but intraday momentum is mixed across tech. Several watchlist stocks gapped into opening-range breakouts, yet many are now fading or trading flat with weak relative volume. With MSFT and NOW earnings tomorrow and the FOMC decision Wednesday, we will hold current positions and avoid forcing new entries without conviction-4 setups.",
+  "decisions": [],
   "ranked_ideas": [
     {
-      "symbol": "MU",
+      "symbol": "SOXL",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Anthropic AI infrastructure news, OR breakout, but trend down; high news."
+      "setup": "momentum",
+      "reason": "High relative volume (2.58) and opening-range breakout with m15 +1.0%, though extended +10.4% day makes it a chase risk."
     },
     {
       "symbol": "NVDA",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
       "setup": "news catalyst",
-      "reason": "AI compute ambition and Oracle/Counterpoint, but intraday momentum soft; high news."
+      "reason": "Multiple AI infrastructure catalysts (Meta investment, Anthropic compute rumor) and president focus, but intraday price action is flat inside the opening range."
+    },
+    {
+      "symbol": "MSFT",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "President focus on MSFT, but price action is weak (vwap -0.1%, rvol 0.81) and earnings are tomorrow after the close."
     },
     {
       "symbol": "PANW",
       "direction": "long",
       "conviction": 2,
-      "stop_loss_pct": 0.015,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout, but executive advised caution on high-vol; lower conviction."
+      "reason": "Trading above opening range but m15 is -0.2%; president orders to avoid unless a clear consolidation base forms."
     },
     {
-      "symbol": "ANET",
+      "symbol": "INTC",
       "direction": "long",
       "conviction": 2,
-      "stop_loss_pct": 0.015,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Strong day but weak follow-through; lower conviction."
-    },
-    {
-      "symbol": "AMAT",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout but low rvol and trend down; weak."
+      "setup": "mean reversion",
+      "reason": "RSI 29.3 is oversold and price is near the top of the opening range, but there is no clear catalyst and trend is flat."
     }
   ],
-  "experiment": "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms.",
+  "experiment": "",
   "watchlist_changes": {
-    "add": [
-      {
-        "symbol": "WFF",
-        "reason": "AI infrastructure and active trading, belongs to tech field."
-      },
-      {
-        "symbol": "SOXL",
-        "reason": "Semiconductor momentum and active, AI-related."
-      },
-      {
-        "symbol": "INTC",
-        "reason": "Active most stock, tech sector."
-      }
-    ],
-    "remove": [
-      {
-        "symbol": "CRM",
-        "reason": "Breaking down below opening range, weak momentum."
-      },
-      {
-        "symbol": "ADBE",
-        "reason": "Breaking down, high-beta software weakness."
-      },
-      {
-        "symbol": "INTU",
-        "reason": "Breaking down, deteriorating setup."
-      }
-    ]
+    "add": [],
+    "remove": []
   }
 }
