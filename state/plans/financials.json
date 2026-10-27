@@ -1,66 +1,88 @@
 {
   "date": "2026-10-27",
-  "time": "09:39",
+  "time": "09:48",
   "trigger": "price moves in ['SPGI']",
+  "market_view": "Broad market indices SPY (+0.4%) and QQQ (+0.8%) show calm upward momentum with low VIXY (-0.9%). Financial sector performance is mixed, with strong stability in major banks like GS and HOOD leading intraday momentum while lagging names pull back.",
   "decisions": [
     {
-      "symbol": "SPGI",
-      "action": "BUY",
-      "side": "long",
+      "symbol": "ICE",
+      "action": "SELL",
+      "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "earnings gap",
-      "conviction": 5,
-      "reason": "Strong earnings beat and strategic review news driving high volume (rvol 7.0) and +3.1% move. High conviction setup for intraday momentum."
+      "setup": "momentum",
+      "reason": "Intraday momentum failed with price dropping -1.23% below VWAP (-0.5% vs VWAP, -1.1% on last look). Selling to preserve capital and open a slot for higher conviction setups."
     },
     {
       "symbol": "GS",
       "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.012,
-      "take_profit_pct": 0.025,
-      "setup": "momentum",
       "conviction": 4,
-      "reason": "Relative strength leader with +1.8% move and high volume (rvol 1.76). Aligns with executive order to focus on GS for stability."
-    },
-    {
-      "symbol": "HOOD",
-      "action": "HOLD",
-      "side": "long",
-      "reason": "Position is flat (-0.03%). Holding for potential bounce or stop-out. RSI is low (27.6) but volume is high (5.4). Waiting for clearer direction."
-    },
-    {
-      "symbol": "C",
-      "action": "HOLD",
-      "side": "long",
-      "reason": "Position is flat (-0.11%). Holding to see if momentum continues or if it hits the stop at 120.20."
-    },
-    {
-      "symbol": "ICE",
-      "action": "HOLD",
-      "side": "long",
-      "reason": "Position is slightly down (-0.32%). Holding to see if it reclaims VWAP or hits stop."
-    },
-    {
-      "symbol": "JPM",
-      "action": "HOLD",
-      "side": "long",
-      "reason": "Position is slightly down (-0.19%). Holding for stability as per executive order."
-    },
-    {
-      "symbol": "MS",
-      "action": "HOLD",
-      "side": "long",
-      "reason": "Position is slightly down (-0.16%). Holding for news catalyst follow-through."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "sector rotation",
+      "reason": "Aligns with executive directive for stability. GS is up +2.1% on the day, trading above VWAP with steady +0.3% recent look momentum and solid rvol (1.29)."
     }
   ],
   "ranked_ideas": [
-    "V",
-    "MA",
-    "AXP",
-    "BLK",
-    "COF"
+    {
+      "symbol": "BLK",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "sector rotation",
+      "reason": "Trading above VWAP with heavy relative volume (2.5x) and a solid multi-week structure."
+    },
+    {
+      "symbol": "COIN",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion",
+      "reason": "Low RSI (34.7) holding above VWAP with positive +0.3% intraday momentum."
+    },
+    {
+      "symbol": "SCHW",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Oversold RSI (28.2) consolidating at VWAP with early signs of stabilization."
+    },
+    {
+      "symbol": "MA",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "pullback in uptrend",
+      "reason": "Strong 20d uptrend (+8.0%) with exceptionally high volume (3.79 rvol) absorbing consolidation."
+    },
+    {
+      "symbol": "V",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "pullback in uptrend",
+      "reason": "Leading 20d gain (+9.9%) with heavy trading volume (2.05 rvol) ahead of earnings today."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Add a VWAP-above-price filter for all breakout entries to ensure the trade aligns with the intraday trend.",
+  "watchlist_changes": {
+    "add": [
+      {
+        "symbol": "SOFI",
+        "reason": "High relative volume and among most active stocks in fintech today."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "FLG",
+        "reason": "Persistent relative weakness (-15.3% 20d) and down -0.9% from open with low interest."
+      }
+    ]
+  }
 }

@@ -820,5 +820,36 @@
       "BUY SPGI blocked: team already has the maximum number of positions",
       "BUY GS blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "09:48",
+    "trigger": "price moves in ['SPGI']",
+    "market_view": "Broad market indices SPY (+0.4%) and QQQ (+0.8%) show calm upward momentum with low VIXY (-0.9%). Financial sector performance is mixed, with strong stability in major banks like GS and HOOD leading intraday momentum while lagging names pull back.",
+    "experiment": "Add a VWAP-above-price filter for all breakout entries to ensure the trade aligns with the intraday trend.",
+    "decisions": [
+      {
+        "symbol": "ICE",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "Intraday momentum failed with price dropping -1.23% below VWAP (-0.5% vs VWAP, -1.1% on last look). Selling to preserve capital and open a slot for higher conviction setups.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "GS",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Aligns with executive directive for stability. GS is up +2.1% on the day, trading above VWAP with steady +0.3% recent look momentum and solid rvol (1.29).",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL ICE",
+      "BUY GS x2 (~$1823.28)",
+      "WATCHLIST removed FLG",
+      "WATCHLIST added SOFI"
+    ]
   }
 ]
