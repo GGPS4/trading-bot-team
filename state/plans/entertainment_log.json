@@ -835,5 +835,36 @@
       "BUY TKO x3 (~$519.66) [deploy]",
       "BUY CMCSA x30 (~$659.4) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "12:06",
+    "trigger": "scheduled look",
+    "market_view": "Market is calm and rising with SPY +0.7% and QQQ +1.4%, but entertainment stocks are largely weak: most are below VWAP, at or near opening-range lows, and trading on poor volume (rvol mostly under 1). No new long setup meets the conviction >= 4 threshold with volume confirmation. Two existing VWAP-bounce longs (CMCSA, DIS) are failing and should be exited to preserve capital under the defensive posture.",
+    "experiment": "Add a pre-entry filter that mandates a positive 15-minute volume expansion and rvol >1.2 before entering any long or short momentum trade",
+    "decisions": [
+      {
+        "symbol": "CMCSA",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "VWAP bounce setup failed; price at opening-range low, below VWAP, trend down, rvol 0.55. Exit to preserve capital rather than risk the stop.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "DIS",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "VWAP bounce setup failed; price at opening-range low, below VWAP, trend down, rvol 0.88. No bounce materializing; exit under defensive capital-preservation rules.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      }
+    ],
+    "results": [
+      "SELL CMCSA",
+      "SELL DIS",
+      "BUY BAM x14 (~$659.26) [deploy]",
+      "BUY IMAX x12 (~$628.2) [deploy]"
+    ]
   }
 ]

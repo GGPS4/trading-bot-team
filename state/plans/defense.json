@@ -1,23 +1,78 @@
 {
   "date": "2026-10-27",
-  "time": "12:03",
-  "trigger": "scheduled look",
+  "time": "12:13",
+  "trigger": "big news on ['LMT']",
+  "market_view": "The defense sector is intraday weak despite positive news; SPY is up +0.7% but most defense names are below VWAP with low relative volume and breakdowns in LMT, RTX, NOC, and CACI. PLTR is the only relative strength leader in the book. With the 75% investment rule mandatory and no high-conviction longs beyond the current book, I am rotating out of a failed CACI breakout into KTOS, which is the only clean opening-range breakout with institutional flow and not extended beyond the 5% entry limit.",
   "decisions": [
+    {
+      "symbol": "CACI",
+      "action": "SELL",
+      "conviction": 4,
+      "stop_loss_pct": 0,
+      "take_profit_pct": 0,
+      "setup": "other",
+      "reason": "CACI is below VWAP (-0.2%), showing an opening-range breakdown, trending down, and rvol is only 0.27 despite two Navy contract wins; the intraday setup has failed, so cutting for capital preservation."
+    },
     {
       "symbol": "KTOS",
       "action": "BUY",
-      "stop_loss_pct": 0.02,
+      "conviction": 4,
+      "stop_loss_pct": 0.025,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Strong intraday momentum (+2.7% day) with a clear opening range breakout and positive news catalyst (ARK Invest purchase). Trading above VWAP with rising 60m momentum. Fits the high-conviction requirement for a new entry."
+      "reason": "KTOS broke above its opening range (40.44-41.09) on ARK Invest buying (~63,612 shares); up +3.2% intraday but under the 5% chase limit, RSI 35.5 is not overbought, and it shows relative strength while sector peers break down."
     }
   ],
   "ranked_ideas": [
-    "AVAV",
-    "SAIC",
-    "HII",
-    "BAH"
+    {
+      "symbol": "AVAV",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "pullback in uptrend",
+      "reason": "Above VWAP (+1.1%), trending up, ARK Invest bought ~$7.3M, and RSI 27.1 is oversold; a bounce candidate if volume confirms."
+    },
+    {
+      "symbol": "HII",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Broke above opening range (278.7-280.33) and trending up, but rvol is only 0.61 so conviction is low."
+    },
+    {
+      "symbol": "BAH",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "VWAP bounce",
+      "reason": "Above VWAP (+0.4%) with a slight uptrend, but quiet volume (rvol 0.49) and no fresh catalyst."
+    },
+    {
+      "symbol": "TXT",
+      "direction": "long",
+      "conviction": 1,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "Flat intraday, no catalyst, rvol 0.21; only a fallback if nothing else sets up."
+    },
+    {
+      "symbol": "HEI",
+      "direction": "long",
+      "conviction": 1,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "Opening-range breakdown intraday conflicts with the uptrend; weak volume (rvol 0.25) makes it a low-conviction fallback."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Enforcing intraday VWAP hold rule: cutting CACI for trading below VWAP with an opening-range breakdown; only adding KTOS because it holds above VWAP, broke its opening range, and has ARK institutional buying.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

@@ -1116,5 +1116,34 @@
     "results": [
       "BUY KTOS blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "12:13",
+    "trigger": "big news on ['LMT']",
+    "market_view": "The defense sector is intraday weak despite positive news; SPY is up +0.7% but most defense names are below VWAP with low relative volume and breakdowns in LMT, RTX, NOC, and CACI. PLTR is the only relative strength leader in the book. With the 75% investment rule mandatory and no high-conviction longs beyond the current book, I am rotating out of a failed CACI breakout into KTOS, which is the only clean opening-range breakout with institutional flow and not extended beyond the 5% entry limit.",
+    "experiment": "Enforcing intraday VWAP hold rule: cutting CACI for trading below VWAP with an opening-range breakdown; only adding KTOS because it holds above VWAP, broke its opening range, and has ARK institutional buying.",
+    "decisions": [
+      {
+        "symbol": "CACI",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "CACI is below VWAP (-0.2%), showing an opening-range breakdown, trending down, and rvol is only 0.27 despite two Navy contract wins; the intraday setup has failed, so cutting for capital preservation.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "KTOS",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "KTOS broke above its opening range (40.44-41.09) on ARK Invest buying (~63,612 shares); up +3.2% intraday but under the 5% chase limit, RSI 35.5 is not overbought, and it shows relative strength while sector peers break down.",
+        "stop_loss_pct": 0.025,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL CACI",
+      "BUY KTOS x80 (~$3337.2)"
+    ]
   }
 ]
