@@ -1,551 +1,119 @@
-[2026-10-27 14:13:16 ET] financials: researching (morning)
-[2026-10-27 14:13:17 ET] LLM: all providers busy, financials news researcher waits 18s
-[2026-10-27 14:13:37 ET] LLM: all providers busy, financials news researcher waits 40s
-[2026-10-27 14:14:24 ET] LLM: financials news researcher answered (groq openai/gpt-oss-120b)
-[2026-10-27 14:14:24 ET] healthcare: researching (morning)
-[2026-10-27 14:14:30 ET] LLM: healthcare news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-27 14:14:33 ET] Market mood: normal (no warning signs)
-[2026-10-27 14:14:38 ET] defense: manager takes a look (first look this run)
-[2026-10-27 14:14:38 ET] entertainment: manager takes a look (first look this run)
-[2026-10-27 14:14:38 ET] LLM: all providers busy, defense manager waits 29s
-[2026-10-27 14:14:38 ET] LLM: all providers busy, entertainment manager waits 29s
-[2026-10-27 14:14:39 ET] LLM: space news researcher answered (groq openai/gpt-oss-20b)
-[2026-10-27 14:14:39 ET] space: manager takes a look (first look this run)
-[2026-10-27 14:14:39 ET] LLM: all providers busy, space manager waits 28s
-[2026-10-27 14:15:07 ET] LLM: gemini gemini-3.1-pro-preview hit its daily limit: {
+[2026-10-27 16:15:26 ET] LLM: providers ready: gemini, groq, openrouter
+[2026-10-27 16:15:26 ET] mode=paper capital=$99,035.40 teams=['defense', 'space', 'entertainment', 'tech', 'consumer', 'financials', 'healthcare']
+[2026-10-27 16:15:28 ET] LLM: gemini gemini-3.1-pro-preview hit its daily limit: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-27 14:15:07 ET] LLM: gemini gemini-3.1-pro-preview-customtools hit its daily limit: {
+[2026-10-27 16:15:28 ET] LLM: gemini gemini-3.1-pro-preview-customtools hit its daily limit: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-27 14:15:08 ET] LLM: gemini gemini-3.8-flash hit its daily limit: {
+[2026-10-27 16:18:28 ET] LLM: gemini gemini-3.7-flash hit its daily limit: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-27 14:15:10 ET] LLM: gemini gemini-3.6-flash hit its daily limit: {
+[2026-10-27 16:18:31 ET] LLM: gemini gemini-3.5-flash hit its daily limit: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-27 14:15:10 ET] LLM: all providers busy, space manager waits 28s
-[2026-10-27 14:15:11 ET] LLM: all providers busy, defense manager waits 26s
-[2026-10-27 14:15:35 ET] LLM: entertainment manager answered (gemini gemini-3.6-flash)
-[2026-10-27 14:15:35 ET] LLM: all providers busy, tech news researcher waits 5s
-[2026-10-27 14:15:39 ET] LLM: space manager answered (groq openai/gpt-oss-20b)
-[2026-10-27 14:15:39 ET] consumer: manager takes a look (first look this run)
-[2026-10-27 14:15:39 ET] LLM: groq openai/gpt-oss-20b hit its daily limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per d
-[2026-10-27 14:15:40 ET] LLM: tech news researcher answered (groq allam-2-7b)
-[2026-10-27 14:15:40 ET] tech: manager takes a look (first look this run)
-[2026-10-27 14:15:41 ET] LLM: groq qwen/qwen3.8-27b hit its daily limit: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per day
-[2026-10-27 14:15:41 ET] LLM: all providers busy, tech manager waits 60s
-[2026-10-27 14:15:42 ET] LLM: consumer manager answered (groq qwen/qwen3.8-27b)
-[2026-10-27 14:15:42 ET] financials: manager takes a look (first look this run)
-[2026-10-27 14:15:42 ET] LLM: all providers busy, financials manager waits 59s
-[2026-10-27 14:15:45 ET] LLM: all providers busy, defense manager waits 56s
-[2026-10-27 14:16:41 ET] LLM: all providers busy, financials manager waits 5s
-[2026-10-27 14:16:41 ET] LLM: all providers busy, tech manager waits 5s
-[2026-10-27 14:16:41 ET] healthcare: manager takes a look (first look this run)
-[2026-10-27 14:16:42 ET] LLM: all providers busy, healthcare manager waits 34s
-[2026-10-27 14:16:46 ET] LLM: all providers busy, financials manager waits 29s
-[2026-10-27 14:16:46 ET] LLM: all providers busy, tech manager waits 29s
-[2026-10-27 14:17:15 ET] LLM: all providers busy, healthcare manager waits 56s
-[2026-10-27 14:18:12 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 14:18:17 ET] defense: skipped this check: defense manager: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
+[2026-10-27 16:18:31 ET] LLM: groq models -> ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b', 'allam-2-7b']
+[2026-10-27 16:18:36 ET] LLM: defense manager review answered (groq openai/gpt-oss-120b)
+[2026-10-27 16:18:36 ET] defense: watchlist add_rejected BA - already watched by the space team
+[2026-10-27 16:18:36 ET] defense: watchlist remove_rejected AVAV - list would drop below 15 stocks
+[2026-10-27 16:18:36 ET] defense: watchlist remove_rejected LDOS - list would drop below 15 stocks
+[2026-10-27 16:18:36 ET] defense: watchlist remove_rejected PLTR - list would drop below 15 stocks
+[2026-10-27 16:18:36 ET] LLM: groq openai/gpt-oss-120b hit its per-minute limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per 
+[2026-10-27 16:18:40 ET] LLM: groq qwen/qwen3.8-27b hit its per-minute limit: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on input tokens pe
+[2026-10-27 16:18:40 ET] LLM: all providers busy, space manager review waits 60s
+[2026-10-27 16:19:43 ET] LLM: space manager review answered (groq openai/gpt-oss-120b)
+[2026-10-27 16:19:43 ET] space: watchlist add_rejected MAXR - not tradable at the broker
+[2026-10-27 16:19:43 ET] space: watchlist add_rejected AVAV - already watched by the defense team
+[2026-10-27 16:19:43 ET] space: watchlist add_rejected LMT - already watched by the defense team
+[2026-10-27 16:19:43 ET] space: watchlist remove_rejected LPTH - list would drop below 15 stocks
+[2026-10-27 16:19:43 ET] space: watchlist remove_rejected TDG - list would drop below 15 stocks
+[2026-10-27 16:19:43 ET] space: watchlist remove_rejected SATS - list would drop below 15 stocks
+[2026-10-27 16:19:43 ET] LLM: groq openai/gpt-oss-120b hit its daily limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per 
+[2026-10-27 16:19:45 ET] LLM: entertainment manager review answered (groq openai/gpt-oss-20b)
+[2026-10-27 16:19:45 ET] entertainment: watchlist remove_rejected WMG - list would drop below 15 stocks
+[2026-10-27 16:19:45 ET] entertainment: watchlist remove_rejected LYV - list would drop below 15 stocks
+[2026-10-27 16:19:45 ET] entertainment: watchlist remove_rejected TKO - list would drop below 15 stocks
+[2026-10-27 16:19:45 ET] LLM: groq openai/gpt-oss-20b hit its per-minute limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per m
+[2026-10-27 16:19:46 ET] LLM: all providers busy, tech manager review waits 16s
+[2026-10-27 16:20:15 ET] LLM: tech manager review answered (gemini gemini-3.6-flash)
+[2026-10-27 16:20:16 ET] tech: watchlist removed SOXL - Leveraged ETF lacks stock-specific news catalysts compared to single-stock IT fo
+[2026-10-27 16:20:16 ET] tech: watchlist added IBM - New AI-agent security platform catalyst at TechXchange 2026.
+[2026-10-27 16:20:16 ET] LLM: gemini gemini-3.8-flash hit its daily limit: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
+[2026-10-27 16:20:26 ET] LLM: consumer manager review answered (gemini gemini-3.6-flash)
+[2026-10-27 16:20:26 ET] consumer: watchlist remove_rejected DEO - list would drop below 15 stocks
+[2026-10-27 16:20:26 ET] LLM: gemini gemini-3.6-flash hit its daily limit: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
+[2026-10-27 16:20:26 ET] LLM: all providers busy, financials manager review waits 19s
+[2026-10-27 16:20:46 ET] LLM: groq openai/gpt-oss-20b hit its daily limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per d
+[2026-10-27 16:20:46 ET] LLM: all providers busy, financials manager review waits 60s
+[2026-10-27 16:21:46 ET] LLM: all providers busy, financials manager review waits 10s
+[2026-10-27 16:21:56 ET] financials: review failed: financials manager review: no AI provider could answer (groq: every model is at its per-minute limit)
+[2026-10-27 16:21:56 ET] LLM: all providers busy, healthcare manager review waits 50s
+[2026-10-27 16:22:46 ET] LLM: all providers busy, healthcare manager review waits 40s
+[2026-10-27 16:23:26 ET] LLM: all providers busy, healthcare manager review waits 20s
+[2026-10-27 16:23:46 ET] healthcare: review failed: healthcare manager review: no AI provider could answer (gemini: gemini failed)
+[2026-10-27 16:23:48 ET] LLM: Executive of Sector Teams answered (groq allam-2-7b)
+[2026-10-27 16:23:48 ET] LLM: all providers busy, Executive of Special Teams waits 60s
+[2026-10-27 16:24:49 ET] LLM: Executive of Special Teams answered (groq qwen/qwen3.8-27b)
+[2026-10-27 16:24:49 ET] LLM: all providers busy, reporter waits 7s
+[2026-10-27 16:24:56 ET] LLM: all providers busy, reporter waits 53s
+[2026-10-27 16:25:51 ET] LLM: reporter answered (groq qwen/qwen3.8-27b)
+[2026-10-27 16:25:52 ET] LLM: all providers busy, president waits 35s
+[2026-10-27 16:26:26 ET] LLM: all providers busy, president waits 25s
+[2026-10-27 16:26:54 ET] LLM: president answered (groq qwen/qwen3.8-27b)
+[2026-10-27 16:26:54 ET] Evening done. AI calls this run: 9
+[2026-10-27 16:26:54 ET] Auto: after-hours research for 320 minutes
+[2026-10-27 16:26:54 ET] After-hours watch for 320 minutes
+[2026-10-27 16:26:54 ET] LLM: groq qwen/qwen3.8-27b hit its daily limit: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per day
+[2026-10-27 16:26:54 ET] LLM: all providers busy, political/social researcher waits 62s
+[2026-10-27 16:27:56 ET] LLM: all providers busy, political/social researcher waits 28s
+[2026-10-27 16:28:24 ET] LLM: all providers busy, political/social researcher waits 62s
+[2026-10-27 16:29:26 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
 )
-[2026-10-27 14:18:17 ET] space: no trades
-[2026-10-27 14:18:18 ET] entertainment: SELL IMAX - Price has fallen below VWAP (-0.5%) on weak relative volume (0.18) and negative 
-[2026-10-27 14:18:18 ET] entertainment: BUY SONY x26 stop 25.21 first target 26.36
-[2026-10-27 14:18:18 ET] entertainment: ['SELL IMAX', 'BUY SONY x26 (~$665.47)']
-[2026-10-27 14:18:18 ET] tech: skipped this check: tech manager: no AI provider could answer ()
-[2026-10-27 14:18:18 ET] consumer: SELL RCL - Position is down 1.2% and approaching the stop at 297.25. Momentum is negative (
-[2026-10-27 14:18:18 ET] consumer: ['SELL RCL', 'BUY WHR blocked: conviction None is below the minimum 4', 'BUY MAR blocked: conviction None is below the minimum 2', 'BUY HD blocked: conviction None is below the minimum 2', 'BUY LOW blocked: conviction None is below the minimum 2', 'BUY BKNG blocked: conviction None is below the minimum 2']
-[2026-10-27 14:18:18 ET] financials: skipped this check: financials manager: no AI provider could answer ()
-[2026-10-27 14:18:18 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:18:20 ET] Saved progress to GitHub (dashboard updated).
-[2026-10-27 14:19:33 ET] journal: updated 3 trade(s)
-[2026-10-27 14:19:35 ET] tech: manager takes a look (must invest $3,541 more (75% rule))
-[2026-10-27 14:19:36 ET] LLM: all providers busy, tech manager waits 6s
-[2026-10-27 14:19:37 ET] LLM: financials news researcher answered (groq openai/gpt-oss-120b)
-[2026-10-27 14:19:37 ET] financials: manager takes a look (big news on ['COIN', 'HOOD'])
-[2026-10-27 14:19:37 ET] LLM: all providers busy, financials manager waits 5s
-[2026-10-27 14:19:42 ET] LLM: all providers busy, tech manager waits 54s
-[2026-10-27 14:19:42 ET] LLM: all providers busy, financials manager waits 53s
-[2026-10-27 14:20:39 ET] LLM: tech manager answered (groq openai/gpt-oss-120b)
-[2026-10-27 14:20:42 ET] LLM: financials manager answered (groq openai/gpt-oss-120b)
-[2026-10-27 14:20:42 ET] tech: skipped this check: 'str' object has no attribute 'get'
-[2026-10-27 14:20:42 ET] financials: no trades
-[2026-10-27 14:24:35 ET] defense: manager takes a look (scheduled look)
-[2026-10-27 14:24:35 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 14:24:35 ET] LLM: groq openai/gpt-oss-120b hit its daily limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per 
-[2026-10-27 14:24:35 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 14:24:35 ET] LLM: tech news researcher answered (groq allam-2-7b)
-[2026-10-27 14:25:45 ET] LLM: all providers busy, healthcare manager waits 20s
-[2026-10-27 14:26:05 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 14:26:10 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 14:26:10 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:29:34 ET] space: manager takes a look (must invest $771 more (75% rule))
-[2026-10-27 14:29:34 ET] defense: manager takes a look (scheduled look)
-[2026-10-27 14:29:35 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 14:29:35 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 14:29:35 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 14:29:35 ET] LLM: consumer news researcher answered (groq allam-2-7b)
-[2026-10-27 14:29:35 ET] consumer: manager takes a look (must invest $2,187 more (75% rule))
-[2026-10-27 14:29:35 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 14:30:45 ET] LLM: all providers busy, defense manager waits 20s
-[2026-10-27 14:30:45 ET] LLM: all providers busy, healthcare manager waits 20s
-[2026-10-27 14:30:45 ET] LLM: all providers busy, consumer manager waits 19s
-[2026-10-27 14:31:04 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 14:31:04 ET] LLM: all providers busy, defense manager waits 5s
-[2026-10-27 14:31:04 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 14:31:09 ET] defense: skipped this check: defense manager: no AI provider could answer ()
-[2026-10-27 14:31:09 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 14:31:09 ET] consumer: skipped this check: consumer manager: no AI provider could answer ()
-[2026-10-27 14:31:09 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:34:33 ET] journal: updated 1 trade(s)
-[2026-10-27 14:34:35 ET] space: manager takes a look (must invest $771 more (75% rule))
-[2026-10-27 14:34:35 ET] defense: manager takes a look (scheduled look)
-[2026-10-27 14:34:35 ET] tech: manager takes a look (must invest $3,547 more (75% rule))
-[2026-10-27 14:34:36 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 14:34:36 ET] consumer: manager takes a look (must invest $2,183 more (75% rule))
-[2026-10-27 14:34:36 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 14:34:36 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 14:35:46 ET] LLM: all providers busy, defense manager waits 20s
-[2026-10-27 14:35:46 ET] LLM: all providers busy, tech manager waits 20s
-[2026-10-27 14:35:46 ET] LLM: all providers busy, consumer manager waits 20s
-[2026-10-27 14:36:05 ET] LLM: all providers busy, tech manager waits 5s
-[2026-10-27 14:36:05 ET] LLM: all providers busy, defense manager waits 5s
-[2026-10-27 14:36:05 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 14:36:10 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 14:36:11 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 14:37:21 ET] LLM: all providers busy, healthcare manager waits 15s
-[2026-10-27 14:37:35 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 14:37:41 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:37:41 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 14:37:41 ET] tech: skipped this check: tech manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:37:41 ET] consumer: skipped this check: consumer manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:37:41 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:37:43 ET] Saved progress to GitHub (dashboard updated).
-[2026-10-27 14:39:35 ET] defense: manager takes a look (must invest $3,792 more (75% rule))
-[2026-10-27 14:39:35 ET] space: manager takes a look (must invest $772 more (75% rule))
-[2026-10-27 14:39:35 ET] tech: manager takes a look (must invest $3,548 more (75% rule))
-[2026-10-27 14:39:35 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 14:39:35 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 14:39:35 ET] consumer: manager takes a look (must invest $2,181 more (75% rule))
-[2026-10-27 14:39:35 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 14:40:45 ET] LLM: all providers busy, tech manager waits 20s
-[2026-10-27 14:40:45 ET] LLM: all providers busy, defense manager waits 20s
-[2026-10-27 14:40:45 ET] LLM: all providers busy, consumer manager waits 20s
-[2026-10-27 14:41:05 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 14:41:05 ET] LLM: all providers busy, tech manager waits 5s
-[2026-10-27 14:41:05 ET] LLM: all providers busy, defense manager waits 5s
-[2026-10-27 14:41:10 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 14:41:10 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 14:42:20 ET] LLM: all providers busy, healthcare manager waits 15s
-[2026-10-27 14:42:35 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 14:42:40 ET] defense: skipped this check: defense manager: no AI provider could answer ()
-[2026-10-27 14:42:40 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 14:42:40 ET] tech: skipped this check: tech manager: no AI provider could answer ()
-[2026-10-27 14:42:40 ET] consumer: skipped this check: consumer manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:42:40 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:44:36 ET] defense: manager takes a look (must invest $3,778 more (75% rule))
-[2026-10-27 14:44:36 ET] space: manager takes a look (must invest $772 more (75% rule))
-[2026-10-27 14:44:36 ET] tech: manager takes a look (must invest $3,543 more (75% rule))
-[2026-10-27 14:44:36 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 14:44:36 ET] LLM: all providers busy, consumer news researcher waits 70s
-[2026-10-27 14:44:36 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 14:45:46 ET] LLM: all providers busy, defense manager waits 20s
-[2026-10-27 14:45:46 ET] LLM: all providers busy, consumer news researcher waits 20s
-[2026-10-27 14:45:46 ET] LLM: all providers busy, tech manager waits 20s
-[2026-10-27 14:46:06 ET] LLM: all providers busy, consumer news researcher waits 5s
-[2026-10-27 14:46:06 ET] LLM: all providers busy, tech manager waits 5s
-[2026-10-27 14:46:06 ET] LLM: all providers busy, defense manager waits 5s
-[2026-10-27 14:46:11 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 14:46:11 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 14:47:21 ET] LLM: all providers busy, healthcare manager waits 15s
-[2026-10-27 14:47:36 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 14:47:41 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:47:41 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 14:47:41 ET] tech: skipped this check: tech manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:47:41 ET] consumer: skipped this check: consumer news researcher: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:47:41 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:49:35 ET] space: manager takes a look (must invest $773 more (75% rule))
-[2026-10-27 14:49:35 ET] defense: manager takes a look (must invest $3,775 more (75% rule))
-[2026-10-27 14:49:35 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 14:49:35 ET] consumer: manager takes a look (must invest $2,174 more (75% rule))
-[2026-10-27 14:49:35 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 14:49:36 ET] LLM: tech news researcher answered (groq allam-2-7b)
-[2026-10-27 14:49:36 ET] tech: manager takes a look (big news on ['SOXL'])
-[2026-10-27 14:49:36 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 14:50:45 ET] LLM: all providers busy, defense manager waits 20s
-[2026-10-27 14:50:45 ET] LLM: all providers busy, consumer manager waits 20s
-[2026-10-27 14:50:46 ET] LLM: all providers busy, tech manager waits 19s
-[2026-10-27 14:51:05 ET] LLM: all providers busy, tech manager waits 5s
-[2026-10-27 14:51:05 ET] LLM: all providers busy, defense manager waits 5s
-[2026-10-27 14:51:05 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 14:51:10 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 14:51:11 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 14:52:21 ET] LLM: all providers busy, healthcare manager waits 15s
-[2026-10-27 14:52:35 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 14:52:41 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:52:41 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 14:52:41 ET] tech: skipped this check: tech manager: no AI provider could answer ()
-[2026-10-27 14:52:41 ET] consumer: skipped this check: consumer manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:52:41 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:54:36 ET] defense: manager takes a look (must invest $3,774 more (75% rule))
-[2026-10-27 14:54:36 ET] space: manager takes a look (must invest $773 more (75% rule))
-[2026-10-27 14:54:36 ET] tech: manager takes a look (must invest $3,546 more (75% rule))
-[2026-10-27 14:54:36 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 14:54:36 ET] LLM: all providers busy, space manager waits 70s
-[2026-10-27 14:54:36 ET] LLM: all providers busy, consumer news researcher waits 70s
-[2026-10-27 14:55:46 ET] LLM: all providers busy, tech manager waits 20s
-[2026-10-27 14:55:46 ET] LLM: all providers busy, space manager waits 20s
-[2026-10-27 14:55:46 ET] LLM: all providers busy, consumer news researcher waits 20s
-[2026-10-27 14:56:06 ET] LLM: all providers busy, tech manager waits 5s
-[2026-10-27 14:56:06 ET] LLM: all providers busy, space manager waits 5s
-[2026-10-27 14:56:06 ET] LLM: all providers busy, consumer news researcher waits 5s
-[2026-10-27 14:56:11 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 14:56:11 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 14:57:21 ET] LLM: all providers busy, healthcare manager waits 15s
-[2026-10-27 14:57:36 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 14:57:41 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 14:57:41 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:57:41 ET] tech: skipped this check: tech manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:57:41 ET] consumer: skipped this check: consumer news researcher: no AI provider could answer ()
-[2026-10-27 14:57:41 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 14:57:43 ET] Saved progress to GitHub (dashboard updated).
-[2026-10-27 14:59:35 ET] space: manager takes a look (must invest $773 more (75% rule))
-[2026-10-27 14:59:35 ET] defense: manager takes a look (must invest $3,778 more (75% rule))
-[2026-10-27 14:59:35 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 14:59:35 ET] consumer: manager takes a look (must invest $2,172 more (75% rule))
-[2026-10-27 14:59:35 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 14:59:36 ET] LLM: tech news researcher answered (groq allam-2-7b)
-[2026-10-27 14:59:36 ET] tech: manager takes a look (must invest $3,541 more (75% rule))
-[2026-10-27 14:59:36 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 15:00:45 ET] LLM: all providers busy, defense manager waits 20s
-[2026-10-27 15:00:45 ET] LLM: all providers busy, consumer manager waits 20s
-[2026-10-27 15:00:46 ET] LLM: all providers busy, tech manager waits 20s
-[2026-10-27 15:01:05 ET] LLM: all providers busy, tech manager waits 5s
-[2026-10-27 15:01:05 ET] LLM: all providers busy, defense manager waits 5s
-[2026-10-27 15:01:05 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 15:01:10 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 15:01:10 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 15:02:20 ET] LLM: all providers busy, healthcare manager waits 15s
-[2026-10-27 15:02:35 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 15:02:40 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:02:40 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:02:40 ET] tech: skipped this check: tech manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:02:40 ET] consumer: skipped this check: consumer manager: no AI provider could answer ()
-[2026-10-27 15:02:40 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:04:36 ET] space: manager takes a look (must invest $773 more (75% rule))
-[2026-10-27 15:04:36 ET] entertainment: manager takes a look (scheduled look)
-[2026-10-27 15:04:36 ET] defense: manager takes a look (must invest $3,768 more (75% rule))
-[2026-10-27 15:04:36 ET] LLM: all providers busy, space manager waits 70s
-[2026-10-27 15:04:36 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 15:04:36 ET] LLM: all providers busy, tech news researcher waits 70s
-[2026-10-27 15:05:46 ET] LLM: all providers busy, space manager waits 20s
-[2026-10-27 15:05:46 ET] LLM: all providers busy, defense manager waits 20s
-[2026-10-27 15:05:46 ET] LLM: all providers busy, tech news researcher waits 20s
-[2026-10-27 15:06:06 ET] LLM: all providers busy, tech news researcher waits 5s
-[2026-10-27 15:06:06 ET] LLM: all providers busy, space manager waits 5s
-[2026-10-27 15:06:06 ET] LLM: all providers busy, defense manager waits 5s
-[2026-10-27 15:06:11 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 15:06:11 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 15:06:11 ET] LLM: consumer news researcher answered (groq allam-2-7b)
-[2026-10-27 15:06:11 ET] consumer: manager takes a look (scheduled look)
-[2026-10-27 15:06:11 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 15:06:11 ET] LLM: financials news researcher answered (groq allam-2-7b)
-[2026-10-27 15:06:11 ET] financials: manager takes a look (scheduled look)
-[2026-10-27 15:06:12 ET] LLM: all providers busy, financials manager waits 70s
-[2026-10-27 15:07:21 ET] LLM: all providers busy, healthcare manager waits 15s
-[2026-10-27 15:07:21 ET] LLM: all providers busy, consumer manager waits 14s
-[2026-10-27 15:07:22 ET] LLM: all providers busy, financials manager waits 14s
-[2026-10-27 15:07:36 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 15:07:36 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 15:07:36 ET] LLM: all providers busy, financials manager waits 5s
-[2026-10-27 15:07:41 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:07:41 ET] space: skipped this check: space manager: no AI provider could answer ()
-[2026-10-27 15:07:41 ET] entertainment: skipped this check: entertainment manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:07:41 ET] tech: skipped this check: tech news researcher: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:07:41 ET] consumer: skipped this check: consumer manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:07:41 ET] financials: skipped this check: financials manager: no AI provider could answer ()
-[2026-10-27 15:07:41 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:09:35 ET] defense: manager takes a look (must invest $3,764 more (75% rule))
-[2026-10-27 15:09:35 ET] space: manager takes a look (must invest $773 more (75% rule))
-[2026-10-27 15:09:35 ET] tech: manager takes a look (must invest $3,540 more (75% rule))
-[2026-10-27 15:09:35 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 15:09:35 ET] LLM: all providers busy, space manager waits 70s
-[2026-10-27 15:09:36 ET] consumer: manager takes a look (must invest $2,171 more (75% rule))
-[2026-10-27 15:09:36 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 15:10:45 ET] LLM: all providers busy, tech manager waits 20s
-[2026-10-27 15:10:45 ET] LLM: all providers busy, space manager waits 20s
-[2026-10-27 15:10:46 ET] LLM: all providers busy, consumer manager waits 20s
-[2026-10-27 15:11:05 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 15:11:05 ET] LLM: all providers busy, tech manager waits 5s
-[2026-10-27 15:11:05 ET] LLM: all providers busy, space manager waits 5s
-[2026-10-27 15:11:10 ET] financials: manager takes a look (scheduled look)
-[2026-10-27 15:11:10 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 15:11:11 ET] LLM: all providers busy, financials manager waits 70s
-[2026-10-27 15:11:11 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 15:12:21 ET] LLM: all providers busy, financials manager waits 15s
-[2026-10-27 15:12:21 ET] LLM: all providers busy, healthcare manager waits 15s
-[2026-10-27 15:12:35 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 15:12:35 ET] LLM: all providers busy, financials manager waits 5s
-[2026-10-27 15:12:41 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:12:41 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:12:41 ET] tech: skipped this check: tech manager: no AI provider could answer ()
-[2026-10-27 15:12:41 ET] consumer: skipped this check: consumer manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:12:41 ET] financials: skipped this check: financials manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:12:41 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:14:34 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
+[2026-10-27 16:29:27 ET] LLM: all providers busy, tech news researcher waits 27s
+[2026-10-27 16:29:55 ET] LLM: tech news researcher answered (groq allam-2-7b)
+[2026-10-27 16:29:55 ET] tech: after hours, 2 new article(s), 0 filing(s), 0 finding(s)
+[2026-10-27 16:29:56 ET] LLM: financials news researcher answered (groq allam-2-7b)
+[2026-10-27 16:29:56 ET] financials: after hours, 4 new article(s), 0 filing(s), 2 finding(s)
+[2026-10-27 16:29:56 ET] LLM: healthcare news researcher answered (groq allam-2-7b)
+[2026-10-27 16:29:56 ET] healthcare: after hours, 1 new article(s), 0 filing(s), 0 finding(s)
+[2026-10-27 16:41:54 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
 ; gemini: gemini failed)
-[2026-10-27 15:14:35 ET] space: manager takes a look (must invest $774 more (75% rule))
-[2026-10-27 15:14:35 ET] defense: manager takes a look (must invest $3,761 more (75% rule))
-[2026-10-27 15:14:35 ET] tech: manager takes a look (must invest $3,568 more (75% rule))
-[2026-10-27 15:14:35 ET] LLM: all providers busy, space manager waits 70s
-[2026-10-27 15:14:36 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 15:14:36 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 15:15:45 ET] LLM: all providers busy, space manager waits 18s
-[2026-10-27 15:15:46 ET] LLM: all providers busy, defense manager waits 18s
-[2026-10-27 15:15:46 ET] LLM: all providers busy, tech manager waits 18s
-[2026-10-27 15:16:04 ET] LLM: all providers busy, space manager waits 70s
-[2026-10-27 15:16:04 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 15:16:04 ET] consumer: manager takes a look (scheduled look)
-[2026-10-27 15:16:04 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 15:17:14 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 15:17:14 ET] LLM: all providers busy, consumer manager waits 20s
-[2026-10-27 15:17:14 ET] LLM: all providers busy, healthcare manager waits 20s
-[2026-10-27 15:17:34 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 15:17:34 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 15:17:39 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 15:18:31 ET] defense: skipped this check: defense manager: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:18:31 ET] space: skipped this check: space manager: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:18:31 ET] tech: skipped this check: tech manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:18:31 ET] consumer: skipped this check: consumer manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:18:33 ET] Saved progress to GitHub (dashboard updated).
-[2026-10-27 15:19:34 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
+[2026-10-27 16:41:55 ET] LLM: all providers busy, defense news researcher waits 70s
+[2026-10-27 16:43:05 ET] LLM: all providers busy, defense news researcher waits 20s
+[2026-10-27 16:43:25 ET] LLM: defense news researcher answered (groq allam-2-7b)
+[2026-10-27 16:43:25 ET] defense: after hours, 1 new article(s), 0 filing(s), 2 finding(s)
+[2026-10-27 16:43:26 ET] LLM: entertainment news researcher answered (groq allam-2-7b)
+[2026-10-27 16:43:26 ET] entertainment: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
+[2026-10-27 16:43:27 ET] LLM: tech news researcher answered (groq allam-2-7b)
+[2026-10-27 16:43:27 ET] tech: after hours, 2 new article(s), 0 filing(s), 2 finding(s)
+[2026-10-27 16:43:27 ET] LLM: groq allam-2-7b hit its per-minute limit: {"error":{"message":"Rate limit reached for model `allam-2-7b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per minute (T
+[2026-10-27 16:43:27 ET] LLM: all providers busy, consumer news researcher waits 60s
+[2026-10-27 16:44:27 ET] LLM: consumer news researcher answered (groq allam-2-7b)
+[2026-10-27 16:44:27 ET] consumer: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
+[2026-10-27 16:44:28 ET] LLM: financials news researcher answered (groq allam-2-7b)
+[2026-10-27 16:44:28 ET] financials: after hours, 8 new article(s), 0 filing(s), 3 finding(s)
+[2026-10-27 16:44:29 ET] LLM: healthcare news researcher answered (groq allam-2-7b)
+[2026-10-27 16:44:29 ET] healthcare: after hours, 2 new article(s), 0 filing(s), 2 finding(s)
+[2026-10-27 16:56:54 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
 ; gemini: gemini failed)
-[2026-10-27 15:19:35 ET] defense: manager takes a look (must invest $3,792 more (75% rule))
-[2026-10-27 15:19:36 ET] space: manager takes a look (must invest $773 more (75% rule))
-[2026-10-27 15:19:36 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 15:19:36 ET] LLM: all providers busy, space manager waits 70s
-[2026-10-27 15:19:36 ET] tech: manager takes a look (must invest $3,558 more (75% rule))
-[2026-10-27 15:19:36 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 15:20:46 ET] LLM: all providers busy, defense manager waits 19s
-[2026-10-27 15:20:46 ET] LLM: all providers busy, space manager waits 19s
-[2026-10-27 15:20:46 ET] LLM: all providers busy, tech manager waits 19s
-[2026-10-27 15:21:04 ET] LLM: all providers busy, space manager waits 70s
-[2026-10-27 15:21:04 ET] consumer: manager takes a look (scheduled look)
-[2026-10-27 15:21:04 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 15:22:14 ET] LLM: all providers busy, consumer manager waits 20s
-[2026-10-27 15:22:34 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 15:22:39 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:22:39 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:22:39 ET] space: skipped this check: space manager: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:22:39 ET] tech: skipped this check: tech manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:22:39 ET] consumer: skipped this check: consumer manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:24:33 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
+[2026-10-27 16:56:55 ET] LLM: all providers busy, consumer news researcher waits 70s
+[2026-10-27 16:58:05 ET] LLM: all providers busy, consumer news researcher waits 19s
+[2026-10-27 16:58:25 ET] LLM: consumer news researcher answered (groq allam-2-7b)
+[2026-10-27 16:58:25 ET] consumer: after hours, 2 new article(s), 0 filing(s), 0 finding(s)
+[2026-10-27 16:58:25 ET] LLM: financials news researcher answered (groq allam-2-7b)
+[2026-10-27 16:58:25 ET] financials: after hours, 1 new article(s), 0 filing(s), 0 finding(s)
+[2026-10-27 17:11:54 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
 ; gemini: gemini failed)
-[2026-10-27 15:24:35 ET] defense: manager takes a look (must invest $3,781 more (75% rule))
-[2026-10-27 15:24:35 ET] space: manager takes a look (must invest $773 more (75% rule))
-[2026-10-27 15:24:35 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 15:24:35 ET] LLM: all providers busy, space manager waits 70s
-[2026-10-27 15:24:35 ET] tech: manager takes a look (must invest $3,554 more (75% rule))
-[2026-10-27 15:24:35 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 15:25:45 ET] LLM: all providers busy, defense manager waits 19s
-[2026-10-27 15:25:45 ET] LLM: all providers busy, space manager waits 19s
-[2026-10-27 15:25:45 ET] LLM: all providers busy, tech manager waits 18s
-[2026-10-27 15:26:03 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 15:26:03 ET] consumer: manager takes a look (scheduled look)
-[2026-10-27 15:26:04 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 15:26:04 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 15:26:04 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 15:27:14 ET] LLM: all providers busy, consumer manager waits 20s
-[2026-10-27 15:27:14 ET] LLM: all providers busy, healthcare manager waits 20s
-[2026-10-27 15:27:33 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 15:27:33 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 15:27:38 ET] defense: skipped this check: defense manager: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:27:38 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:27:38 ET] tech: skipped this check: tech manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:27:38 ET] consumer: skipped this check: consumer manager: no AI provider could answer ()
-[2026-10-27 15:27:38 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:29:34 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
+[2026-10-27 17:26:55 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
 ; gemini: gemini failed)
-[2026-10-27 15:29:35 ET] defense: manager takes a look (must invest $3,782 more (75% rule))
-[2026-10-27 15:29:35 ET] space: manager takes a look (must invest $773 more (75% rule))
-[2026-10-27 15:29:35 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 15:29:35 ET] LLM: all providers busy, space manager waits 70s
-[2026-10-27 15:29:35 ET] tech: manager takes a look (must invest $3,555 more (75% rule))
-[2026-10-27 15:29:35 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 15:30:45 ET] LLM: all providers busy, defense manager waits 18s
-[2026-10-27 15:30:45 ET] LLM: all providers busy, space manager waits 18s
-[2026-10-27 15:30:46 ET] LLM: all providers busy, tech manager waits 18s
-[2026-10-27 15:31:04 ET] consumer: manager takes a look (scheduled look)
-[2026-10-27 15:31:04 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 15:31:04 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 15:31:04 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 15:31:04 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 15:32:14 ET] LLM: all providers busy, consumer manager waits 20s
-[2026-10-27 15:32:14 ET] LLM: all providers busy, healthcare manager waits 20s
-[2026-10-27 15:32:34 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 15:32:34 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 15:32:39 ET] defense: skipped this check: defense manager: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:32:39 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:32:39 ET] tech: skipped this check: tech manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:32:39 ET] consumer: skipped this check: consumer manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:32:39 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:34:33 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-; gemini: gemini failed)
-[2026-10-27 15:34:35 ET] LLM: all providers busy, defense news researcher waits 70s
-[2026-10-27 15:34:35 ET] LLM: all providers busy, consumer news researcher waits 70s
-[2026-10-27 15:34:35 ET] LLM: all providers busy, tech news researcher waits 70s
-[2026-10-27 15:35:45 ET] LLM: all providers busy, defense news researcher waits 19s
-[2026-10-27 15:35:45 ET] LLM: all providers busy, consumer news researcher waits 18s
-[2026-10-27 15:35:45 ET] LLM: all providers busy, tech news researcher waits 18s
-[2026-10-27 15:36:03 ET] LLM: defense news researcher answered (groq allam-2-7b)
-[2026-10-27 15:36:03 ET] defense: manager takes a look (scheduled look)
-[2026-10-27 15:36:04 ET] LLM: tech news researcher answered (groq allam-2-7b)
-[2026-10-27 15:36:04 ET] tech: manager takes a look (scheduled look)
-[2026-10-27 15:36:04 ET] LLM: consumer news researcher answered (groq allam-2-7b)
-[2026-10-27 15:36:04 ET] consumer: manager takes a look (scheduled look)
-[2026-10-27 15:36:04 ET] LLM: all providers busy, tech manager waits 70s
-[2026-10-27 15:36:04 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 15:36:04 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 15:36:04 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 15:37:14 ET] LLM: all providers busy, tech manager waits 20s
-[2026-10-27 15:37:14 ET] LLM: all providers busy, consumer manager waits 20s
-[2026-10-27 15:37:14 ET] LLM: all providers busy, healthcare manager waits 20s
-[2026-10-27 15:37:34 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 15:37:34 ET] LLM: all providers busy, tech manager waits 5s
-[2026-10-27 15:37:34 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 15:37:39 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:37:39 ET] tech: skipped this check: tech manager: no AI provider could answer ()
-[2026-10-27 15:37:39 ET] consumer: skipped this check: consumer manager: no AI provider could answer ()
-[2026-10-27 15:37:39 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:37:41 ET] Saved progress to GitHub (dashboard updated).
-[2026-10-27 15:39:34 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-; gemini: gemini failed)
-[2026-10-27 15:39:36 ET] entertainment: manager takes a look (scheduled look)
-[2026-10-27 15:39:36 ET] space: manager takes a look (scheduled look)
-[2026-10-27 15:39:36 ET] LLM: all providers busy, defense news researcher waits 70s
-[2026-10-27 15:39:36 ET] LLM: all providers busy, entertainment manager waits 70s
-[2026-10-27 15:39:36 ET] LLM: all providers busy, space manager waits 70s
-[2026-10-27 15:40:46 ET] LLM: all providers busy, defense news researcher waits 17s
-[2026-10-27 15:40:46 ET] LLM: all providers busy, entertainment manager waits 17s
-[2026-10-27 15:40:47 ET] LLM: all providers busy, space manager waits 17s
-[2026-10-27 15:41:04 ET] LLM: all providers busy, space manager waits 70s
-[2026-10-27 15:41:04 ET] LLM: all providers busy, tech news researcher waits 70s
-[2026-10-27 15:41:04 ET] LLM: defense news researcher answered (groq allam-2-7b)
-[2026-10-27 15:41:04 ET] defense: manager takes a look (scheduled look)
-[2026-10-27 15:41:05 ET] LLM: all providers busy, defense manager waits 70s
-[2026-10-27 15:42:14 ET] consumer: manager takes a look (scheduled look)
-[2026-10-27 15:42:14 ET] LLM: all providers busy, tech news researcher waits 20s
-[2026-10-27 15:42:14 ET] LLM: all providers busy, consumer manager waits 20s
-[2026-10-27 15:42:15 ET] LLM: all providers busy, defense manager waits 19s
-[2026-10-27 15:42:34 ET] LLM: all providers busy, consumer manager waits 5s
-[2026-10-27 15:42:34 ET] LLM: all providers busy, tech news researcher waits 5s
-[2026-10-27 15:42:34 ET] LLM: all providers busy, defense manager waits 5s
-[2026-10-27 15:42:39 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 15:42:39 ET] financials: manager takes a look (scheduled look)
-[2026-10-27 15:42:39 ET] LLM: all providers busy, consumer manager waits 70s
-[2026-10-27 15:42:39 ET] LLM: all providers busy, healthcare manager waits 70s
-[2026-10-27 15:42:39 ET] LLM: all providers busy, financials manager waits 70s
-[2026-10-27 15:43:31 ET] defense: skipped this check: defense manager: no AI provider could answer ()
-[2026-10-27 15:43:31 ET] space: skipped this check: space manager: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:43:31 ET] entertainment: skipped this check: entertainment manager: no AI provider could answer (gemini: gemini failed; groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:43:31 ET] tech: skipped this check: tech news researcher: no AI provider could answer ()
-[2026-10-27 15:43:49 ET] LLM: all providers busy, healthcare manager waits 15s
-[2026-10-27 15:43:49 ET] LLM: all providers busy, financials manager waits 15s
-[2026-10-27 15:44:04 ET] LLM: all providers busy, healthcare manager waits 5s
-[2026-10-27 15:44:04 ET] LLM: all providers busy, financials manager waits 5s
-[2026-10-27 15:44:33 ET] LLM: all providers busy, political/social researcher waits 61s
-[2026-10-27 15:45:34 ET] LLM: all providers busy, political/social researcher waits 29s
-[2026-10-27 15:46:04 ET] LLM: all providers busy, political/social researcher waits 61s
-[2026-10-27 15:47:04 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:47:06 ET] space: manager takes a look (scheduled look)
-[2026-10-27 15:47:06 ET] defense: manager takes a look (scheduled look)
-[2026-10-27 15:47:06 ET] LLM: all providers busy, space manager waits 28s
-[2026-10-27 15:47:06 ET] LLM: all providers busy, entertainment news researcher waits 28s
-[2026-10-27 15:47:06 ET] LLM: all providers busy, defense manager waits 28s
-[2026-10-27 15:47:34 ET] LLM: all providers busy, defense manager waits 62s
-[2026-10-27 15:47:34 ET] LLM: all providers busy, space manager waits 62s
-[2026-10-27 15:47:34 ET] LLM: entertainment news researcher answered (groq allam-2-7b)
-[2026-10-27 15:47:34 ET] tech: manager takes a look (scheduled look)
-[2026-10-27 15:47:34 ET] LLM: all providers busy, tech manager waits 62s
-[2026-10-27 15:48:31 ET] consumer: skipped this check: consumer manager: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:48:31 ET] financials: skipped this check: financials manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:48:31 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:48:36 ET] LLM: all providers busy, tech manager waits 28s
-[2026-10-27 15:48:36 ET] LLM: all providers busy, space manager waits 28s
-[2026-10-27 15:48:36 ET] LLM: all providers busy, defense manager waits 28s
-[2026-10-27 15:49:04 ET] LLM: all providers busy, tech manager waits 62s
-[2026-10-27 15:49:34 ET] LLM: all providers busy, political/social researcher waits 32s
-[2026-10-27 15:50:06 ET] LLM: all providers busy, political/social researcher waits 28s
-[2026-10-27 15:50:34 ET] LLM: all providers busy, political/social researcher waits 62s
-[2026-10-27 15:51:36 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:51:38 ET] financials: manager takes a look (scheduled look)
-[2026-10-27 15:51:38 ET] entertainment: manager takes a look (scheduled look)
-[2026-10-27 15:51:38 ET] consumer: manager takes a look (scheduled look)
-[2026-10-27 15:51:38 ET] LLM: all providers busy, financials manager waits 25s
-[2026-10-27 15:51:38 ET] LLM: all providers busy, entertainment manager waits 25s
-[2026-10-27 15:51:38 ET] LLM: all providers busy, consumer manager waits 25s
-[2026-10-27 15:52:04 ET] LLM: all providers busy, financials manager waits 64s
-[2026-10-27 15:52:04 ET] LLM: all providers busy, entertainment manager waits 64s
-[2026-10-27 15:52:04 ET] LLM: all providers busy, consumer manager waits 64s
-[2026-10-27 15:53:08 ET] LLM: all providers busy, consumer manager waits 26s
-[2026-10-27 15:53:08 ET] LLM: all providers busy, entertainment manager waits 26s
-[2026-10-27 15:53:08 ET] LLM: all providers busy, financials manager waits 26s
-[2026-10-27 15:53:31 ET] defense: skipped this check: defense manager: no AI provider could answer ()
-[2026-10-27 15:53:31 ET] space: skipped this check: space manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:53:31 ET] tech: skipped this check: tech manager: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:53:33 ET] Saved progress to GitHub (dashboard updated).
-[2026-10-27 15:53:34 ET] healthcare: manager takes a look (scheduled look)
-[2026-10-27 15:53:34 ET] LLM: all providers busy, healthcare manager waits 64s
-[2026-10-27 15:54:34 ET] journal: updated 1 trade(s)
-[2026-10-27 15:54:38 ET] LLM: all providers busy, healthcare manager waits 26s
-[2026-10-27 15:54:39 ET] Closed all positions before the bell.
-[2026-10-27 15:54:39 ET] LLM: all providers busy, political/social researcher waits 25s
-[2026-10-27 15:55:04 ET] LLM: all providers busy, political/social researcher waits 64s
-[2026-10-27 15:55:04 ET] LLM: all providers busy, healthcare manager waits 64s
-[2026-10-27 15:56:08 ET] LLM: all providers busy, political/social researcher waits 26s
-[2026-10-27 15:56:34 ET] Market watch failed: political/social researcher: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:56:35 ET] LLM: defense news researcher answered (groq allam-2-7b)
-[2026-10-27 15:56:35 ET] entertainment: skipped this check: entertainment manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:56:35 ET] consumer: skipped this check: consumer manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:56:35 ET] financials: skipped this check: financials manager: no AI provider could answer (gemini: gemini failed)
-[2026-10-27 15:56:35 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-)
-[2026-10-27 15:59:33 ET] journal: updated 30 trade(s)
-[2026-10-27 15:59:34 ET] End-of-day check: all team positions are closed.
-[2026-10-27 15:59:34 ET] Market watch failed: political/social researcher: no AI provider could answer (groq: groq allam-2-7b: 400 {"error":{"message":"Please reduce the length of the messages or completion.","type":"invalid_request_error","param":"messages","code":"context_length_exceeded"}}
-; gemini: gemini failed)
+[2026-10-27 17:26:57 ET] economic calendar (nextweek) unavailable: 404 Client Error: Not Found for url: https://nfs.faireconomy.media/ff_calendar_nextweek.json

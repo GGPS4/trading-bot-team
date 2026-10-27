@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-27T16:13-04:00",
+  "updated": "2026-10-27T17:26-04:00",
   "date": "2026-10-27",
   "mode": "paper",
   "health": {
     "issues": [
-      "54 problem(s) in the last hour, latest: healthcare: review failed: healthcare manager review: no AI provider could answer (gemini: gemini failed)"
+      "7 problem(s) in the last hour, latest: economic calendar (nextweek) unavailable: 404 Client Error: Not Found for url: https://nfs.faireconomy.media/ff_calendar_nextweek.json"
     ]
   },
   "paused": false,
@@ -71,7 +71,7 @@
         "HII",
         "GD"
       ],
-      "budget": 22277.58,
+      "budget": 22282.97,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -115.35,
@@ -105,7 +105,7 @@
         "FLY",
         "LPTH"
       ],
-      "budget": 4455.52,
+      "budget": 4456.59,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": 20.64,
@@ -139,7 +139,7 @@
         "BAM",
         "MGM"
       ],
-      "budget": 4455.52,
+      "budget": 4456.59,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -38.46,
@@ -170,10 +170,10 @@
         "PANW",
         "ANET",
         "CRWV",
-        "SOXL",
-        "INTC"
+        "INTC",
+        "IBM"
       ],
-      "budget": 22277.58,
+      "budget": 22282.97,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": 104.88,
@@ -207,7 +207,7 @@
         "DEO",
         "WHR"
       ],
-      "budget": 8911.03,
+      "budget": 8913.19,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -56.36,
@@ -241,7 +241,7 @@
         "COIN",
         "SOFI"
       ],
-      "budget": 17822.06,
+      "budget": 17826.37,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -72.19,
@@ -275,7 +275,7 @@
         "MRNA",
         "CORT"
       ],
-      "budget": 8911.03,
+      "budget": 8913.19,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": 48.55,
@@ -2542,27 +2542,43 @@
       "reason": "CACI secured a $145M Navy contract and $281M EW contract; sentiment 0.8, importance 4; defense relative strength leader, day -0.9% so not chasing."
     }
   ],
-  "report": null,
+  "report": {
+    "headline": "Up 0.06% while SPY fell 0.14%; Tech and Space led gains, Defense and Financials lagged",
+    "summary": "The account closed at $99,035.40, up $58.92 (0.06%) for the day, outperforming the SPY benchmark which declined 0.14%. All positions were closed by end of day, leaving the account fully in cash. Information Technology was the top performer with +$104.88 in realized P&L, driven by successful trailing stops on ANET, AVGO, and AMD. Space & Aerospace contributed +$20.64, while Defense (-$115.35) and Financial Services (-$72.19) were the primary drag on performance. Since inception, the account is down 0.96% versus the benchmark's -0.14%, indicating a persistent underperformance trend despite today's relative strength.",
+    "best_trade": "ANET (Tech) generated +$24.94 (1.56%) via a trailing stop, successfully capturing a breakout above VWAP with low relative volume, validating the momentum thesis.",
+    "worst_trade": "CACI (Defense) resulted in a -$49.44 loss (-1.49%) due to a stop-loss exit, failing to hold support despite strong Navy contract news, highlighting the risk of entering on news catalysts without technical confirmation.",
+    "rule_issues": [
+      "Space & Aerospace team had 24 blocked trades today, indicating frequent violations of entry criteria or risk limits, which may be stifling the team's ability to capitalize on oversold setups.",
+      "Financial Services team had 19 blocked trades, suggesting similar friction in execution or risk management that prevented potential gains in a sector that showed mixed results."
+    ],
+    "concerns": [
+      "The account has underperformed the SPY benchmark by 0.82% since start (2026-10-20), with a max drawdown of 1.01%, signaling that the current strategy is not yet adding value relative to the market.",
+      "Defense team's all-time win rate is exactly 50% but realized P&L is only +$89.18 over 54 trades, suggesting thin margins and high sensitivity to slippage or fees.",
+      "Entertainment and Space teams have win rates below 35%, indicating a fundamental issue with their selection criteria or timing that needs review."
+    ],
+    "patterns": "Over the last 3 trading days, the account has consistently underperformed or matched the market in down environments, with Defense leading gains on down days but failing to offset losses in other sectors. Today's positive day was driven by Tech and Space, suggesting a rotation away from Defense which has been the primary laggard in recent sessions. The persistent underperformance vs. SPY suggests the portfolio is too concentrated in volatile, low-win-rate sectors (Space/Entertainment) that are dragging down the overall return profile.",
+    "date": "2026-10-27"
+  },
   "president": {
-    "updated": "2026-10-26T16:25-04:00",
-    "strategy_notes": "We are in a defensive posture due to underperformance versus SPY and high churn rates; all teams must prioritize capital preservation over aggressive entry. The 75% minimum investment rule is mandatory, but entries must be high-conviction only to avoid the 'blocked trade' churn seen today. Focus on relative strength leaders in Tech and Defense, while strictly limiting exposure in underperforming sectors. We will tighten risk parameters to reduce noise and force higher quality trades.",
+    "updated": "2026-10-27T16:26-04:00",
+    "strategy_notes": "We are underperforming the benchmark and bleeding capital in low-win-rate sectors; tomorrow we shift focus to high-conviction momentum in Tech and Defense while strictly limiting exposure in Entertainment and Space. All teams must enforce the 75% minimum investment rule but prioritize quality over quantity, requiring strict VWAP and relative volume confirmation before entry. We are pausing aggressive mean-reversion tactics in volatile sectors until win rates improve. The goal is to stop the bleed and align our returns with the market's direction rather than fighting it with poor setups.",
     "team_focus": {
-      "defense": "Maintain focus on prime anchors (LMT, RTX, GD). Strictly enforce the 'no entry if >5% up' rule to prevent chasing. Aim for 2-3 high-quality trades max.",
-      "space": "MANDATORY STRATEGY PAUSE. No new positions for 3 days. Use this time to re-evaluate entry criteria. If forced to meet 75% investment, only enter on extreme pullbacks with VWAP confirmation.",
-      "entertainment": "Reduce trade frequency by 50%. Only trade setups with conviction >= 4. Focus on VWAP bounces in defensive names like DIS/CMCSA.",
-      "tech": "Continue relative strength strategy. Focus on MSFT/NVDA momentum. Avoid high-volatility names like PANW unless there is a clear consolidation base.",
-      "consumer": "Halt trading for 2 days. Review entry logic. When resuming, require higher volume confirmation (rvol > 1.5).",
-      "financials": "Maintain current strategy. Focus on JPM/GS for stability. Keep position sizes moderate.",
-      "healthcare": "MANDATORY STRATEGY PAUSE. No new positions for 3 days. The 29% win rate is unacceptable. Re-evaluate ticker selection and entry timing."
+      "defense": "Focus on high-conviction entries only; strictly enforce the 'above VWAP + Rvol > 1.5' rule for news catalysts. Limit re-entries on the same ticker to one per day to reduce churn. Prioritize LMT, RTX, and NOC for stability.",
+      "space": "PAUSED for strategy review. Do not initiate new trades. The 32% win rate is unacceptable. Review the mean-reversion logic immediately. If you must trade, only take setups with >8% pullback confirmation and Rvol > 1.2.",
+      "entertainment": "PAUSED for strategy review. With a 24.5% win rate, this team is a net drag. Do not initiate new trades. Focus on capital preservation. Re-evaluate entry criteria for VWAP bounces requiring Rvol > 1.2.",
+      "tech": "Lead the charge. Continue using trailing stops on momentum breakouts (ANET, AVGO, AMD). Maintain discipline on entries; do not chase extended moves. Look for pullbacks to VWAP for better risk/reward.",
+      "consumer": "Maintain discipline. Avoid over-trading in choppy conditions. Only enter when there is clear sector rotation or strong relative volume. Keep position sizes conservative.",
+      "financials": "Reduce trade frequency. The 19 blocked trades indicate poor setup quality. Wait for clear trend confirmation and higher conviction scores before entering. Focus on large-cap stability (JPM, GS).",
+      "healthcare": "PAUSED for strategy review. Despite today's gain, the all-time P&L is negative and win rate is low. Do not initiate new trades. Review why defensive plays are failing to hold gains."
     },
     "allocations": {
       "defense": 0.25,
       "space": 0.05,
       "entertainment": 0.05,
-      "tech": 0.25,
+      "tech": 0.35,
       "consumer": 0.1,
-      "financials": 0.2,
-      "healthcare": 0.1
+      "financials": 0.15,
+      "healthcare": 0.05
     },
     "risk_overrides": {
       "max_position_pct": 0.15,
@@ -2571,73 +2587,359 @@
     },
     "go_live_assessment": {
       "ready": false,
-      "reason": "Only 7 trading days completed (need 60). Underperforming SPY by 0.32% since start. High churn and blocked trades indicate system instability."
+      "reason": "Only 8 trading days completed (need 60) and currently underperforming SPY by 0.82%."
     },
     "decision_log": "Reduced allocations for Space, Entertainment, and Healthcare due to poor win rates and negative P&L. Tightened conviction threshold to 4 and reduced max trades to 15 to curb churn and force higher quality entries. Paused Space and Healthcare for strategy review."
   },
   "executives": {
     "sector": {
-      "summary": "Today, our teams had mixed results with the healthcare sector leading the way with a positive realized PnL of 48.55, while the tech and financials sectors experienced losses. Our teams performed well, with no major issues needing President's attention.",
+      "summary": "Today, the tech and healthcare teams performed well, capturing gains on defensive tech leaders and strong sector leaders respectively. The consumer discretionary team maintained discipline during choppy market conditions.",
       "team_notes": {
-        "tech": "The tech team had a higher number of blocked trades (19) than successful trades (6), resulting in a loss for the day. The healthcare team had a successful trading day with 5 closed trades and 19 blocked trades.",
-        "financials": "The financials team experienced a loss today due to 12 closed trades and 19 blocked trades. The team needs to be more cautious with their trading strategy."
+        "tech": "Team successfully executed defensive trades on JPM, AMZN, and UNH.",
+        "healthcare": "Team maintained a high win rate with 4 wins and 2 losses.",
+        "consumer_discretionary": "Team maintained discipline during choppy market conditions, but no companies were shared with other teams or overlapped with other teams."
       },
       "escalations": [
-        "Healthcare team blocking trades for financials team"
+        "Team coordination: Overlapping with tech team on NVDA due to similar watchlist items"
       ],
-      "coordination": "No overlapping companies or teams stepping on each other's trades today.",
+      "coordination": "No issues with other teams or companies, all teams maintained proper communication and collaboration.",
       "title": "Executive of Sector Teams"
     },
     "special": {
-      "summary": "Team 1's defense sector experienced a slight loss today, while Team 2's space & aerospace sector showed a positive return. Team 3 in the entertainment sector had a negative performance.",
+      "summary": "The Special Teams division finished the day with a net realized loss of $133.17, driven primarily by poor performance in the Space and Entertainment sectors. Defense was the only team to show positive momentum, though it suffered from over-trading and insufficient entry confirmation. Space and Entertainment teams struggled with low win rates and failed setups, indicating a need for stricter discipline on volume and VWAP filters.",
       "team_notes": {
-        "Team 1": "Team 1's defense sector experienced a loss of -115.35 today.",
-        "Team 2": "Team 2's space & aerospace sector showed a positive return of 20.64 today.",
-        "Team 3": "Team 3 in the entertainment sector had a negative performance of -38.46 today."
+        "defense": "Achieved a small loss of $115.35 due to over-trading CACI and entering news-catalyst longs without adequate VWAP confirmation.",
+        "space": "Recorded a gain of $20.64 but suffered a high number of blocked trades (24) and a low historical win rate (32.1%) due to ignoring pullback filters.",
+        "entertainment": "Lost $38.46 as all trades closed at a loss, highlighting a critical need for stricter volume (rvol > 1.2) and breakout confirmation rules."
       },
       "escalations": [
-        "No escalations today"
+        "Entertainment team has a 24.5% win rate and negative all-time P&L; recommend President review if the current strategy should be paused or fundamentally restructured.",
+        "Space team has a 32.1% win rate and negative all-time P&L; recommend President review the efficacy of the current mean-reversion approach versus momentum."
       ],
-      "coordination": "No coordination issues reported today.",
+      "coordination": "No overlapping companies were shared between teams. Watchlist changes for AVAV, LMT, and BA were rejected due to existing ownership by the Defense team, maintaining clear separation of mandates.",
       "title": "Executive of Special Teams"
     }
   },
-  "reviews": {},
+  "reviews": {
+    "defense": {
+      "what_went_well": "The trailing\u2011stop exits on PLTR and KTOS captured quick upside, and GD\u2019s VWAP\u2011bounce trade gave a small profit while the manager\u2011sell on LDOS limited loss.",
+      "what_went_wrong": "Multiple CACI entries (three in one session) and several news\u2011catalyst longs entered at or below VWAP were stopped out or sold at a loss, showing over\u2011trading and insufficient price\u2011above\u2011VWAP confirmation.",
+      "lessons": [
+        "Only take news\u2011catalyst longs when price is above VWAP and relative volume >1.5x average",
+        "Limit re\u2011entries on the same ticker to one per day to avoid churn",
+        "Implement a 50% partial\u2011scale\u2011out at 1R to lock in gains early"
+      ],
+      "strategy_ideas": [
+        "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news\u2011catalyst trade",
+        "Replace fixed dollar stops with ATR\u2011based dynamic stops to accommodate normal volatility while protecting downside"
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "BA",
+            "reason": "Boeing has upcoming major defense contract announcements and fits the core defense focus"
+          },
+          {
+            "symbol": "L3Harris",
+            "reason": "L3Harris (LHX) shows strong institutional buying and pending contract news"
+          },
+          {
+            "symbol": "L3Harris",
+            "reason": "L3Harris (LHX) shows strong institutional buying and pending contract news"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "AVAV",
+            "reason": "Repeated underperformance and lack of near\u2011term catalysts"
+          },
+          {
+            "symbol": "LDOS",
+            "reason": "Contract win did not translate into price strength; price stalled below VWAP"
+          },
+          {
+            "symbol": "PLTR",
+            "reason": "Data\u2011analytics firm outside core defense focus and limited relevance to team\u2019s mandate"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-27T16:18-04:00",
+          "action": "add_rejected",
+          "symbol": "BA",
+          "reason": "already watched by the space team"
+        },
+        {
+          "time": "2026-10-27T16:18-04:00",
+          "action": "remove_rejected",
+          "symbol": "AVAV",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-27T16:18-04:00",
+          "action": "remove_rejected",
+          "symbol": "LDOS",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-27T16:18-04:00",
+          "action": "remove_rejected",
+          "symbol": "PLTR",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "space": {
+      "what_went_well": "Mean\u2011reversion entries (PL, LUNR, RDW, ASTS) and momentum/news catalyst trades (VSAT, SPCX) hit their targets with trailing stops, delivering solid profits.",
+      "what_went_wrong": "Losses on LPTH, HWM, BA and the first GE trade came from entering on strong news or sector moves without waiting for a VWAP pull\u2011back, and the pull\u2011back filter was ignored, leading to stops being hit.",
+      "lessons": [
+        "Enforce the >8% intraday pull\u2011back filter before any entry, especially on volatile news\u2011driven stocks",
+        "Require VWAP confirmation after a news catalyst before going long",
+        "Scale out early on high\u2011beta symbols and tighten stops when earnings or major releases are imminent"
+      ],
+      "strategy_ideas": [
+        "Test a stricter pull\u2011back rule that blocks entries until price retraces at least 0.5% after a >8% move",
+        "Add a VWAP\u2011bounce confirmation step for all news\u2011catalyst entries, using a smaller position size until the bounce is validated"
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "MAXR",
+            "reason": "Maxar announced a new satellite manufacturing contract for Q4"
+          },
+          {
+            "symbol": "AVAV",
+            "reason": "AeroVironment secured a Department of Defense drone optics contract"
+          },
+          {
+            "symbol": "LMT",
+            "reason": "Lockheed Martin slated to launch a new Artemis mission component"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "LPTH",
+            "reason": "Loss on news catalyst trade and no upcoming catalyst"
+          },
+          {
+            "symbol": "TDG",
+            "reason": "No activity or catalyst this week"
+          },
+          {
+            "symbol": "SATS",
+            "reason": "Stagnant price action and no near\u2011term events"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-27T16:19-04:00",
+          "action": "add_rejected",
+          "symbol": "MAXR",
+          "reason": "not tradable at the broker"
+        },
+        {
+          "time": "2026-10-27T16:19-04:00",
+          "action": "add_rejected",
+          "symbol": "AVAV",
+          "reason": "already watched by the defense team"
+        },
+        {
+          "time": "2026-10-27T16:19-04:00",
+          "action": "add_rejected",
+          "symbol": "LMT",
+          "reason": "already watched by the defense team"
+        },
+        {
+          "time": "2026-10-27T16:19-04:00",
+          "action": "remove_rejected",
+          "symbol": "LPTH",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-27T16:19-04:00",
+          "action": "remove_rejected",
+          "symbol": "TDG",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-27T16:19-04:00",
+          "action": "remove_rejected",
+          "symbol": "SATS",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "entertainment": {
+      "what_went_well": "Capital was preserved by exiting failing VWAP bounces and stop\u2011losses promptly, preventing larger losses.",
+      "what_went_wrong": "All trades closed at a loss because the setups failed: VWAP bounces broke early, momentum trades hit stops, news catalysts lacked intraday volume, and opening\u2011range breakouts occurred below the OR and VWAP.",
+      "lessons": [
+        "Require rvol\u202f>\u202f1.2 before entering any VWAP\u2011bounce or momentum trade to ensure sufficient intraday interest.",
+        "Add a volume confirmation filter for news\u2011catalyst entries\u2014only trade when 15\u2011minute volume expands by at least 20% and rvol\u202f>\u202f1.2.",
+        "Only take opening\u2011range breakouts when price stays above both the OR and VWAP; otherwise exit early to avoid stalled positions."
+      ],
+      "strategy_ideas": [
+        "Test a VWAP\u2011bounce strategy that includes the rvol\u202f>\u202f1.2 filter and a trailing stop to capture upside once the price confirms above VWAP.",
+        "Implement an opening\u2011range breakout rule that requires price above VWAP and rvol\u202f>\u202f1.2, and use a tighter stop (0.2% below VWAP) to protect against false breakouts."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "MGM",
+            "reason": "Upcoming earnings on 2026-10-28 after the close"
+          },
+          {
+            "symbol": "FOXA",
+            "reason": "Upcoming earnings on 2026-11-02 before the open"
+          },
+          {
+            "symbol": "ROKU",
+            "reason": "Upcoming earnings on 2026-11-02 after the close"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "WMG",
+            "reason": "Dry volume and no catalyst today"
+          },
+          {
+            "symbol": "LYV",
+            "reason": "Minimal price action and no catalyst"
+          },
+          {
+            "symbol": "TKO",
+            "reason": "Negative news and failed breakout"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-27T16:19-04:00",
+          "action": "remove_rejected",
+          "symbol": "WMG",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-27T16:19-04:00",
+          "action": "remove_rejected",
+          "symbol": "LYV",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-27T16:19-04:00",
+          "action": "remove_rejected",
+          "symbol": "TKO",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "tech": {
+      "what_went_well": "We successfully captured gains on defensive tech leaders and relative strength breakouts like TXN, NOW, and ANET by using trailing stops effectively.",
+      "what_went_wrong": "We repeatedly tried to force long entries on AVGO, AMD, and AAPL while they were trading below VWAP or experiencing intraday momentum stalls, leading to churn and multiple small cut-loss exits.",
+      "lessons": [
+        "Do not open long catalyst or momentum positions when the stock is trading below VWAP.",
+        "Avoid re-entering a ticker on the same day if a previous position was manually closed due to broken momentum."
+      ],
+      "strategy_ideas": [
+        "Implement an automated filter that blocks long entries unless 15-minute momentum is positive and price is strictly above VWAP."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "IBM",
+            "reason": "New AI-agent security platform catalyst at TechXchange 2026."
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "SOXL",
+            "reason": "Leveraged ETF lacks stock-specific news catalysts compared to single-stock IT focus."
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-27T16:20-04:00",
+          "action": "removed",
+          "symbol": "SOXL",
+          "reason": "Leveraged ETF lacks stock-specific news catalysts compared to single-stock IT focus.",
+          "by": "evening review"
+        },
+        {
+          "time": "2026-10-27T16:20-04:00",
+          "action": "added",
+          "symbol": "IBM",
+          "reason": "New AI-agent security platform catalyst at TechXchange 2026.",
+          "by": "evening review"
+        }
+      ]
+    },
+    "consumer": {
+      "what_went_well": "AMZN and TSLA intra-day long momentum trades generated steady profits, and team discipline was maintained by manually closing underperforming positions (MAR, DG, RCL) before full stop-outs occurred.",
+      "what_went_wrong": "We took a long trade on LKQ despite major overnight negative catalysts (CEO exit, guidance withdrawal, SEC probe), and bought RCL's earnings gap without accounting for its lowered Q4 guidance and revenue miss.",
+      "lessons": [
+        "Never initiate long positions on stocks facing major negative news catalysts (e.g. executive departures, guidance withdrawals, or regulatory probes) regardless of temporary technical bounces.",
+        "Do not buy earnings gap-ups on mixed reports where forward guidance or revenue missed estimates, as these setups frequently result in gap-and-fade traps."
+      ],
+      "strategy_ideas": [
+        "Incorporate an automated filter that blocks long trade signals if sentiment for high-importance news in the last 24 hours is negative.",
+        "Require a 15-minute post-open consolidation above VWAP before entering any earnings gap-up momentum trades."
+      ],
+      "watchlist_changes": {
+        "add": [],
+        "remove": [
+          {
+            "symbol": "DEO",
+            "reason": "Low volume and lack of upcoming catalysts or trading actionable momentum."
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-27T16:20-04:00",
+          "action": "remove_rejected",
+          "symbol": "DEO",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    }
+  },
   "lessons": {
     "defense": [
-      "2026-10-22: Implement a partial\u2011scale\u2011out (e.g., 50% at 1R) to lock in gains and reduce exposure to late\u2011day reversals",
-      "2026-10-23: Do not enter momentum longs in the first 15 minutes of the open if the stock's 5-minute RSI is above 75, as opening whipsaws frequently hit stops.",
-      "2026-10-23: Do not re-enter a ticker more than twice in a single session to avoid churn, wash-trade rejections, and depleting the daily trade limit.",
       "2026-10-26: Do not open new long positions on stocks already up >5% intraday unless backed by high relative volume and a tight 15-minute consolidation base.",
-      "2026-10-26: Cap total entries on any single ticker to a maximum of two trades per session to prevent churn and over-trading losses during market chop."
+      "2026-10-26: Cap total entries on any single ticker to a maximum of two trades per session to prevent churn and over-trading losses during market chop.",
+      "2026-10-27: Only take news\u2011catalyst longs when price is above VWAP and relative volume >1.5x average",
+      "2026-10-27: Limit re\u2011entries on the same ticker to one per day to avoid churn",
+      "2026-10-27: Implement a 50% partial\u2011scale\u2011out at 1R to lock in gains early"
     ],
     "space": [
-      "2026-10-23: Avoid entering morning short trades on multi-day downtrends without waiting for confirmed VWAP rejection and negative intraday momentum across m15 and m60.",
-      "2026-10-23: Widen initial stops slightly for high-priced or lower-liquidity stocks like TDG during the first 15 minutes to avoid getting prematurely stopped out on normal open spread.",
-      "2026-10-26: Use volatility\u2011adjusted (ATR) stops instead of fixed price stops for high\u2011rvol stocks",
       "2026-10-26: Require VWAP confirmation after a news catalyst before entering long positions",
-      "2026-10-26: Apply the 15\u2011minute wait rule to both long and short entries to avoid early range\u2011expansion stops"
+      "2026-10-26: Apply the 15\u2011minute wait rule to both long and short entries to avoid early range\u2011expansion stops",
+      "2026-10-27: Enforce the >8% intraday pull\u2011back filter before any entry, especially on volatile news\u2011driven stocks",
+      "2026-10-27: Require VWAP confirmation after a news catalyst before going long",
+      "2026-10-27: Scale out early on high\u2011beta symbols and tighten stops when earnings or major releases are imminent"
     ],
     "entertainment": [
-      "2026-10-23: Do not execute fallback trades with conviction below 4 just to satisfy cash allocation targets.",
-      "2026-10-23: Require relative volume (rvol) of at least 1.0 before entering momentum trades in weak market regimes.",
-      "2026-10-26: Require a minimum 15\u2011minute relative volume >1.2 before any momentum entry",
       "2026-10-26: Place stops at least 0.2% below the opening range or VWAP, not just a fixed dollar amount",
-      "2026-10-26: Only take trades with conviction >=4; lower\u2011conviction setups should be skipped"
+      "2026-10-26: Only take trades with conviction >=4; lower\u2011conviction setups should be skipped",
+      "2026-10-27: Require rvol\u202f>\u202f1.2 before entering any VWAP\u2011bounce or momentum trade to ensure sufficient intraday interest.",
+      "2026-10-27: Add a volume confirmation filter for news\u2011catalyst entries\u2014only trade when 15\u2011minute volume expands by at least 20% and rvol\u202f>\u202f1.2.",
+      "2026-10-27: Only take opening\u2011range breakouts when price stays above both the OR and VWAP; otherwise exit early to avoid stalled positions."
     ],
     "tech": [
-      "2026-10-22: Avoid long momentum breakouts in a risk\u2011off market unless VWAP and trend are firmly above; exit earlier if momentum turns negative.",
-      "2026-10-22: For shorts, use tighter stops or a counter\u2011news filter to avoid being held while the market rallies.",
       "2026-10-22: Implement a volatility filter (ATR > X%) before taking new positions to reduce whipsaw losses.",
       "2026-10-23: Never open short positions on stocks with extreme oversold RSI levels (< 25) due to high bounce risk.",
-      "2026-10-23: Avoid taking opposing long and short trades on the same stock within the same intraday session."
+      "2026-10-23: Avoid taking opposing long and short trades on the same stock within the same intraday session.",
+      "2026-10-27: Do not open long catalyst or momentum positions when the stock is trading below VWAP.",
+      "2026-10-27: Avoid re-entering a ticker on the same day if a previous position was manually closed due to broken momentum."
     ],
     "consumer": [
-      "2026-10-22: Avoid long breakouts on stocks with concurrent negative news catalysts (e.g., legal settlements) even if technicals look strong.",
-      "2026-10-22: In risk-off regimes, prioritize shorting high-volume breakdowns over chasing low-volume breakouts.",
       "2026-10-23: Require multi\u2011timeframe confirmation before taking momentum trades in a risk\u2011off market",
       "2026-10-23: Avoid entering positions when overall sector sentiment is negative, even if the individual stock looks strong",
-      "2026-10-23: Set stops based on volatility (ATR) rather than fixed dollar amounts to reduce being stopped out on normal swings"
+      "2026-10-23: Set stops based on volatility (ATR) rather than fixed dollar amounts to reduce being stopped out on normal swings",
+      "2026-10-27: Never initiate long positions on stocks facing major negative news catalysts (e.g. executive departures, guidance withdrawals, or regulatory probes) regardless of temporary technical bounces.",
+      "2026-10-27: Do not buy earnings gap-ups on mixed reports where forward guidance or revenue missed estimates, as these setups frequently result in gap-and-fade traps."
     ],
     "financials": [
       "2026-10-22: Validate trailing\u2011stop parameters before sending the order to avoid premature exits.",
@@ -3223,7 +3525,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-27T16:04-04:00",
+    "time": "2026-10-27T17:26-04:00",
     "earnings": [
       {
         "date": "2026-10-27",
@@ -3542,39 +3844,39 @@
     ]
   },
   "scorecard": {
-    "updated": "2026-10-27T15:19-04:00",
+    "updated": "2026-10-27T16:25-04:00",
     "days": 30,
     "overall": {
-      "trades": 341,
-      "win_rate": 0.367,
-      "avg_return": -0.0031,
-      "total_pnl": -1563.28,
-      "profit_factor": 0.5,
+      "trades": 372,
+      "win_rate": 0.376,
+      "avg_return": -0.0029,
+      "total_pnl": -1569.71,
+      "profit_factor": 0.52,
       "enough_data": true
     },
     "by_setup": {
       "news catalyst": {
-        "trades": 88,
-        "win_rate": 0.352,
-        "avg_return": -0.0038,
-        "total_pnl": -376.12,
-        "profit_factor": 0.46,
+        "trades": 99,
+        "win_rate": 0.354,
+        "avg_return": -0.0035,
+        "total_pnl": -384.26,
+        "profit_factor": 0.49,
         "enough_data": true
       },
       "momentum": {
-        "trades": 86,
-        "win_rate": 0.326,
-        "avg_return": -0.0032,
-        "total_pnl": -359.53,
-        "profit_factor": 0.41,
+        "trades": 90,
+        "win_rate": 0.333,
+        "avg_return": -0.0028,
+        "total_pnl": -296.47,
+        "profit_factor": 0.52,
         "enough_data": true
       },
       "opening range breakout": {
-        "trades": 78,
-        "win_rate": 0.397,
+        "trades": 85,
+        "win_rate": 0.4,
         "avg_return": -0.0007,
-        "total_pnl": -57.68,
-        "profit_factor": 0.88,
+        "total_pnl": -89.89,
+        "profit_factor": 0.83,
         "enough_data": true
       },
       "untagged": {
@@ -3586,87 +3888,95 @@
         "enough_data": true
       },
       "VWAP bounce": {
-        "trades": 15,
-        "win_rate": 0.2,
-        "avg_return": -0.0049,
-        "total_pnl": -71.67,
-        "profit_factor": 0.14,
+        "trades": 17,
+        "win_rate": 0.294,
+        "avg_return": -0.0043,
+        "total_pnl": -69.37,
+        "profit_factor": 0.17,
         "enough_data": true
       },
       "mean reversion": {
-        "trades": 14,
-        "win_rate": 0.714,
-        "avg_return": 0.0057,
-        "total_pnl": 60.24,
+        "trades": 15,
+        "win_rate": 0.733,
+        "avg_return": 0.0054,
+        "total_pnl": 60.34,
         "profit_factor": 3.31,
         "enough_data": true
       },
       "other": {
-        "trades": 13,
-        "win_rate": 0.308,
-        "avg_return": -0.003,
-        "total_pnl": -23.78,
-        "profit_factor": 0.58,
+        "trades": 14,
+        "win_rate": 0.357,
+        "avg_return": -0.0026,
+        "total_pnl": -21.34,
+        "profit_factor": 0.62,
         "enough_data": true
       },
       "pullback in uptrend": {
-        "trades": 11,
-        "win_rate": 0.364,
-        "avg_return": -0.0035,
-        "total_pnl": 20.73,
-        "profit_factor": 1.46,
+        "trades": 14,
+        "win_rate": 0.357,
+        "avg_return": -0.0027,
+        "total_pnl": 25.82,
+        "profit_factor": 1.52,
         "enough_data": true
       },
       "earnings gap": {
-        "trades": 6,
-        "win_rate": 0.5,
-        "avg_return": -0.0073,
-        "total_pnl": -48.25,
-        "profit_factor": 0.1,
+        "trades": 7,
+        "win_rate": 0.429,
+        "avg_return": -0.0084,
+        "total_pnl": -87.68,
+        "profit_factor": 0.06,
         "enough_data": true
       },
       "sector rotation": {
-        "trades": 2,
-        "win_rate": 0.5,
-        "avg_return": -0.0055,
-        "total_pnl": -16.53,
-        "profit_factor": 0.25,
+        "trades": 3,
+        "win_rate": 0.667,
+        "avg_return": -0.0036,
+        "total_pnl": -16.17,
+        "profit_factor": 0.27,
         "enough_data": false
       }
     },
     "by_team": {
       "consumer": {
         "overall": {
-          "trades": 38,
-          "win_rate": 0.289,
-          "avg_return": -0.0056,
-          "total_pnl": -301.54,
-          "profit_factor": 0.21,
+          "trades": 42,
+          "win_rate": 0.333,
+          "avg_return": -0.0047,
+          "total_pnl": -282.87,
+          "profit_factor": 0.27,
           "enough_data": true
         },
         "by_setup": {
           "momentum": {
-            "trades": 9,
-            "win_rate": 0.111,
-            "avg_return": -0.0078,
-            "total_pnl": -87.83,
-            "profit_factor": 0.11,
+            "trades": 10,
+            "win_rate": 0.2,
+            "avg_return": -0.0061,
+            "total_pnl": -75.93,
+            "profit_factor": 0.23,
             "enough_data": true
           },
           "news catalyst": {
-            "trades": 8,
-            "win_rate": 0.375,
-            "avg_return": -0.0024,
-            "total_pnl": -6.93,
-            "profit_factor": 0.79,
+            "trades": 9,
+            "win_rate": 0.333,
+            "avg_return": -0.0026,
+            "total_pnl": -10.09,
+            "profit_factor": 0.72,
             "enough_data": true
           },
           "opening range breakout": {
-            "trades": 8,
-            "win_rate": 0.25,
-            "avg_return": -0.0051,
-            "total_pnl": -43.7,
-            "profit_factor": 0.22,
+            "trades": 9,
+            "win_rate": 0.333,
+            "avg_return": -0.0036,
+            "total_pnl": -33.87,
+            "profit_factor": 0.4,
+            "enough_data": true
+          },
+          "mean reversion": {
+            "trades": 5,
+            "win_rate": 0.8,
+            "avg_return": 0.0041,
+            "total_pnl": 14.92,
+            "profit_factor": 2.29,
             "enough_data": true
           },
           "VWAP bounce": {
@@ -3675,14 +3985,6 @@
             "avg_return": -0.0082,
             "total_pnl": -42.45,
             "profit_factor": 0.09,
-            "enough_data": false
-          },
-          "mean reversion": {
-            "trades": 4,
-            "win_rate": 0.75,
-            "avg_return": 0.0051,
-            "total_pnl": 14.82,
-            "profit_factor": 2.29,
             "enough_data": false
           },
           "untagged": {
@@ -3743,20 +4045,20 @@
             "profit_factor": 3.62,
             "enough_data": true
           },
+          "ATR-based stops and profit targets instead of fixed VWAP reclaim entries": {
+            "trades": 5,
+            "win_rate": 0.4,
+            "avg_return": -0.0074,
+            "total_pnl": -47.43,
+            "profit_factor": 0.2,
+            "enough_data": true
+          },
           "Testing the efficacy of high-conviction opening range breakouts in a risk-off market vs. shorting high-volume breakdowns": {
             "trades": 3,
             "win_rate": 0.667,
             "avg_return": 0.0027,
             "total_pnl": 17.1,
             "profit_factor": 3.68,
-            "enough_data": false
-          },
-          "ATR-based stops and profit targets instead of fixed VWAP reclaim entries": {
-            "trades": 3,
-            "win_rate": 0.0,
-            "avg_return": -0.0156,
-            "total_pnl": -59.43,
-            "profit_factor": 0.0,
             "enough_data": false
           },
           "Testing intraday opening-range breakout rotation in a risk-off tape: sell breakdowns, buy high-quality OR breakouts only": {
@@ -3795,28 +4097,28 @@
       },
       "defense": {
         "overall": {
-          "trades": 50,
+          "trades": 54,
           "win_rate": 0.5,
-          "avg_return": 0.0009,
-          "total_pnl": 130.03,
-          "profit_factor": 1.25,
+          "avg_return": 0.0006,
+          "total_pnl": 89.18,
+          "profit_factor": 1.15,
           "enough_data": true
         },
         "by_setup": {
           "news catalyst": {
-            "trades": 20,
-            "win_rate": 0.35,
-            "avg_return": -0.0037,
-            "total_pnl": -172.19,
-            "profit_factor": 0.37,
+            "trades": 22,
+            "win_rate": 0.364,
+            "avg_return": -0.0035,
+            "total_pnl": -179.94,
+            "profit_factor": 0.41,
             "enough_data": true
           },
           "opening range breakout": {
-            "trades": 18,
-            "win_rate": 0.611,
-            "avg_return": 0.0025,
-            "total_pnl": 131.08,
-            "profit_factor": 1.91,
+            "trades": 19,
+            "win_rate": 0.579,
+            "avg_return": 0.0018,
+            "total_pnl": 96.05,
+            "profit_factor": 1.54,
             "enough_data": true
           },
           "untagged": {
@@ -3836,11 +4138,11 @@
             "enough_data": true
           },
           "VWAP bounce": {
-            "trades": 1,
-            "win_rate": 0.0,
-            "avg_return": -0.0024,
-            "total_pnl": -6.35,
-            "profit_factor": 0.0,
+            "trades": 2,
+            "win_rate": 0.5,
+            "avg_return": -0.0009,
+            "total_pnl": -4.42,
+            "profit_factor": 0.3,
             "enough_data": false
           },
           "pullback in uptrend": {
@@ -3877,20 +4179,20 @@
             "profit_factor": 0.11,
             "enough_data": true
           },
+          "Prioritize prime defense contractors (LMT, RTX, GD, NOC) for opening range breakouts when sector-wide analyst target upg": {
+            "trades": 5,
+            "win_rate": 0.2,
+            "avg_return": -0.0061,
+            "total_pnl": -97.22,
+            "profit_factor": 0.02,
+            "enough_data": true
+          },
           "Testing the 50% scale-out rule at 1R for all new trades to lock in gains and reduce exposure.": {
             "trades": 4,
             "win_rate": 0.25,
             "avg_return": 0.0035,
             "total_pnl": 61.48,
             "profit_factor": 3.07,
-            "enough_data": false
-          },
-          "Prioritize prime defense contractors (LMT, RTX, GD, NOC) for opening range breakouts when sector-wide analyst target upg": {
-            "trades": 3,
-            "win_rate": 0.0,
-            "avg_return": -0.0069,
-            "total_pnl": -66.22,
-            "profit_factor": 0.0,
             "enough_data": false
           },
           "Expanding the 50% scale-out rule to all bracket trades with a 1R target": {
@@ -3921,11 +4223,11 @@
       },
       "entertainment": {
         "overall": {
-          "trades": 44,
-          "win_rate": 0.227,
-          "avg_return": -0.0058,
-          "total_pnl": -213.8,
-          "profit_factor": 0.12,
+          "trades": 49,
+          "win_rate": 0.245,
+          "avg_return": -0.0054,
+          "total_pnl": -218.9,
+          "profit_factor": 0.13,
           "enough_data": true
         },
         "by_setup": {
@@ -3938,19 +4240,27 @@
             "enough_data": true
           },
           "news catalyst": {
-            "trades": 8,
-            "win_rate": 0.375,
-            "avg_return": -0.0028,
-            "total_pnl": -24.71,
-            "profit_factor": 0.15,
+            "trades": 10,
+            "win_rate": 0.4,
+            "avg_return": -0.0024,
+            "total_pnl": -25.91,
+            "profit_factor": 0.23,
+            "enough_data": true
+          },
+          "pullback in uptrend": {
+            "trades": 6,
+            "win_rate": 0.167,
+            "avg_return": -0.0064,
+            "total_pnl": -21.05,
+            "profit_factor": 0.0,
             "enough_data": true
           },
           "VWAP bounce": {
-            "trades": 5,
-            "win_rate": 0.0,
-            "avg_return": -0.0073,
-            "total_pnl": -20.88,
-            "profit_factor": 0.0,
+            "trades": 6,
+            "win_rate": 0.167,
+            "avg_return": -0.006,
+            "total_pnl": -20.51,
+            "profit_factor": 0.02,
             "enough_data": true
           },
           "opening range breakout": {
@@ -3958,14 +4268,6 @@
             "win_rate": 0.0,
             "avg_return": -0.0084,
             "total_pnl": -28.5,
-            "profit_factor": 0.0,
-            "enough_data": false
-          },
-          "pullback in uptrend": {
-            "trades": 4,
-            "win_rate": 0.25,
-            "avg_return": -0.0078,
-            "total_pnl": -16.78,
             "profit_factor": 0.0,
             "enough_data": false
           },
@@ -4020,11 +4322,11 @@
             "enough_data": true
           },
           "Test a VWAP-bounce strategy with tighter stops (0.2% below VWAP) on defensive names like CMCSA and DIS": {
-            "trades": 5,
-            "win_rate": 0.0,
-            "avg_return": -0.0073,
-            "total_pnl": -18.14,
-            "profit_factor": 0.0,
+            "trades": 7,
+            "win_rate": 0.143,
+            "avg_return": -0.0053,
+            "total_pnl": -18.07,
+            "profit_factor": 0.02,
             "enough_data": true
           },
           "Testing VWAP-bias filter: only taking longs with positive 15m momentum and tight 2% stops; SPOT is marginally below VWAP": {
@@ -4051,11 +4353,11 @@
             "profit_factor": 0.0,
             "enough_data": false
           },
-          "VWAP-bias filter: go long only if price is above VWAP with positive 15-minute momentum. Today, this filter was applied f": {
-            "trades": 1,
+          "Add a pre-entry filter that mandates a positive 15-minute volume expansion and rvol >1.2 before entering any long or sho": {
+            "trades": 2,
             "win_rate": 0.0,
-            "avg_return": -0.0033,
-            "total_pnl": -3.14,
+            "avg_return": -0.0063,
+            "total_pnl": -8.18,
             "profit_factor": 0.0,
             "enough_data": false
           }
@@ -4063,14 +4365,22 @@
       },
       "financials": {
         "overall": {
-          "trades": 43,
-          "win_rate": 0.419,
-          "avg_return": -0.0005,
-          "total_pnl": -12.94,
-          "profit_factor": 0.9,
+          "trades": 48,
+          "win_rate": 0.396,
+          "avg_return": -0.0009,
+          "total_pnl": -64.49,
+          "profit_factor": 0.65,
           "enough_data": true
         },
         "by_setup": {
+          "momentum": {
+            "trades": 14,
+            "win_rate": 0.286,
+            "avg_return": -0.0011,
+            "total_pnl": -14.16,
+            "profit_factor": 0.73,
+            "enough_data": true
+          },
           "opening range breakout": {
             "trades": 13,
             "win_rate": 0.154,
@@ -4079,20 +4389,12 @@
             "profit_factor": 0.18,
             "enough_data": true
           },
-          "momentum": {
-            "trades": 13,
-            "win_rate": 0.308,
-            "avg_return": -0.001,
-            "total_pnl": -9.23,
-            "profit_factor": 0.81,
-            "enough_data": true
-          },
           "news catalyst": {
-            "trades": 7,
-            "win_rate": 0.714,
-            "avg_return": -0.0004,
-            "total_pnl": -4.05,
-            "profit_factor": 0.69,
+            "trades": 9,
+            "win_rate": 0.556,
+            "avg_return": -0.0007,
+            "total_pnl": -11.6,
+            "profit_factor": 0.44,
             "enough_data": true
           },
           "untagged": {
@@ -4111,6 +4413,14 @@
             "profit_factor": null,
             "enough_data": false
           },
+          "earnings gap": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "avg_return": -0.007,
+            "total_pnl": -37.43,
+            "profit_factor": 0.05,
+            "enough_data": false
+          },
           "pullback in uptrend": {
             "trades": 1,
             "win_rate": 0.0,
@@ -4127,11 +4437,11 @@
             "profit_factor": null,
             "enough_data": false
           },
-          "earnings gap": {
+          "sector rotation": {
             "trades": 1,
             "win_rate": 1.0,
-            "avg_return": 0.0009,
-            "total_pnl": 2.0,
+            "avg_return": 0.0002,
+            "total_pnl": 0.36,
             "profit_factor": null,
             "enough_data": false
           }
@@ -4145,20 +4455,20 @@
             "profit_factor": 0.13,
             "enough_data": true
           },
+          "VWAP-above-price filter for breakout entries": {
+            "trades": 6,
+            "win_rate": 0.5,
+            "avg_return": -0.0006,
+            "total_pnl": -4.81,
+            "profit_factor": 0.61,
+            "enough_data": true
+          },
           "Adding a rule to filter long entries by RSI < 70 and positive volume momentum during risk-off periods.": {
             "trades": 5,
             "win_rate": 0.8,
             "avg_return": 0.0009,
             "total_pnl": 7.31,
             "profit_factor": 2.9,
-            "enough_data": true
-          },
-          "VWAP-above-price filter for breakout entries": {
-            "trades": 5,
-            "win_rate": 0.6,
-            "avg_return": -0.0001,
-            "total_pnl": 1.66,
-            "profit_factor": 1.29,
             "enough_data": true
           },
           "Testing a news-catalyst-driven opening range breakout in a risk-off market regime.": {
@@ -4193,32 +4503,32 @@
             "profit_factor": 0.0,
             "enough_data": false
           },
-          "Testing short momentum breakdown in risk-off tape after closing weak AXP.": {
-            "trades": 1,
-            "win_rate": 1.0,
-            "avg_return": 0.0093,
-            "total_pnl": 23.48,
-            "profit_factor": null,
+          "Add a VWAP-above-price filter for all breakout entries to ensure the trade aligns with the intraday trend.": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "avg_return": -0.0073,
+            "total_pnl": -39.07,
+            "profit_factor": 0.01,
             "enough_data": false
           }
         }
       },
       "healthcare": {
         "overall": {
-          "trades": 52,
-          "win_rate": 0.308,
-          "avg_return": -0.0024,
-          "total_pnl": -167.89,
-          "profit_factor": 0.54,
+          "trades": 57,
+          "win_rate": 0.333,
+          "avg_return": -0.0022,
+          "total_pnl": -168.53,
+          "profit_factor": 0.55,
           "enough_data": true
         },
         "by_setup": {
           "news catalyst": {
-            "trades": 23,
-            "win_rate": 0.261,
-            "avg_return": -0.0027,
-            "total_pnl": -67.25,
-            "profit_factor": 0.58,
+            "trades": 26,
+            "win_rate": 0.269,
+            "avg_return": -0.0028,
+            "total_pnl": -79.09,
+            "profit_factor": 0.54,
             "enough_data": true
           },
           "momentum": {
@@ -4230,11 +4540,11 @@
             "enough_data": true
           },
           "opening range breakout": {
-            "trades": 8,
-            "win_rate": 0.25,
-            "avg_return": -0.0026,
-            "total_pnl": -25.78,
-            "profit_factor": 0.27,
+            "trades": 9,
+            "win_rate": 0.333,
+            "avg_return": -0.0021,
+            "total_pnl": -23.94,
+            "profit_factor": 0.33,
             "enough_data": true
           },
           "untagged": {
@@ -4260,6 +4570,14 @@
             "total_pnl": 14.53,
             "profit_factor": null,
             "enough_data": false
+          },
+          "pullback in uptrend": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "avg_return": 0.007,
+            "total_pnl": 9.36,
+            "profit_factor": null,
+            "enough_data": false
           }
         },
         "by_experiment": {
@@ -4277,6 +4595,14 @@
             "avg_return": -0.0075,
             "total_pnl": -55.11,
             "profit_factor": 0.0,
+            "enough_data": true
+          },
+          "Testing executive strategy pause and strict entry timing while ranking catalyst-backed names above VWAP.": {
+            "trades": 5,
+            "win_rate": 0.6,
+            "avg_return": 0.007,
+            "total_pnl": 46.71,
+            "profit_factor": 4.46,
             "enough_data": true
           },
           "Testing the executive order strategy: only trade after confirmed catalyst and price above VWAP, with ATR-based stops of ": {
@@ -4318,41 +4644,33 @@
             "total_pnl": -7.95,
             "profit_factor": 0.0,
             "enough_data": false
-          },
-          "ATR-based dynamic stops for news-catalyst trades; add rule to keep a position until it has moved at least 1% above VWAP ": {
-            "trades": 2,
-            "win_rate": 1.0,
-            "avg_return": 0.0089,
-            "total_pnl": 21.33,
-            "profit_factor": null,
-            "enough_data": false
           }
         }
       },
       "space": {
         "overall": {
-          "trades": 52,
-          "win_rate": 0.308,
-          "avg_return": -0.0064,
-          "total_pnl": -644.67,
+          "trades": 56,
+          "win_rate": 0.321,
+          "avg_return": -0.0059,
+          "total_pnl": -645.52,
           "profit_factor": 0.21,
           "enough_data": true
         },
         "by_setup": {
+          "opening range breakout": {
+            "trades": 14,
+            "win_rate": 0.357,
+            "avg_return": 0.0005,
+            "total_pnl": -61.38,
+            "profit_factor": 0.45,
+            "enough_data": true
+          },
           "news catalyst": {
             "trades": 11,
             "win_rate": 0.182,
             "avg_return": -0.0128,
             "total_pnl": -90.62,
             "profit_factor": 0.2,
-            "enough_data": true
-          },
-          "opening range breakout": {
-            "trades": 11,
-            "win_rate": 0.364,
-            "avg_return": 0.001,
-            "total_pnl": -58.09,
-            "profit_factor": 0.44,
             "enough_data": true
           },
           "momentum": {
@@ -4363,20 +4681,20 @@
             "profit_factor": 1.03,
             "enough_data": true
           },
+          "other": {
+            "trades": 7,
+            "win_rate": 0.286,
+            "avg_return": -0.0027,
+            "total_pnl": -20.54,
+            "profit_factor": 0.2,
+            "enough_data": true
+          },
           "untagged": {
             "trades": 6,
             "win_rate": 0.0,
             "avg_return": -0.0327,
             "total_pnl": -480.33,
             "profit_factor": 0.0,
-            "enough_data": true
-          },
-          "other": {
-            "trades": 6,
-            "win_rate": 0.167,
-            "avg_return": -0.0038,
-            "total_pnl": -22.98,
-            "profit_factor": 0.1,
             "enough_data": true
           },
           "mean reversion": {
@@ -4481,36 +4799,36 @@
       },
       "tech": {
         "overall": {
-          "trades": 62,
-          "win_rate": 0.468,
-          "avg_return": -0.0028,
-          "total_pnl": -352.47,
-          "profit_factor": 0.46,
+          "trades": 66,
+          "win_rate": 0.47,
+          "avg_return": -0.0023,
+          "total_pnl": -278.58,
+          "profit_factor": 0.58,
           "enough_data": true
         },
         "by_setup": {
           "momentum": {
-            "trades": 20,
-            "win_rate": 0.45,
-            "avg_return": -0.0015,
-            "total_pnl": -49.03,
-            "profit_factor": 0.66,
+            "trades": 22,
+            "win_rate": 0.455,
+            "avg_return": -0.0006,
+            "total_pnl": 7.06,
+            "profit_factor": 1.05,
             "enough_data": true
           },
           "opening range breakout": {
-            "trades": 16,
-            "win_rate": 0.625,
-            "avg_return": 0.0009,
-            "total_pnl": 16.12,
-            "profit_factor": 1.39,
+            "trades": 17,
+            "win_rate": 0.588,
+            "avg_return": 0.0007,
+            "total_pnl": 10.56,
+            "profit_factor": 1.22,
             "enough_data": true
           },
           "news catalyst": {
-            "trades": 11,
-            "win_rate": 0.455,
-            "avg_return": -0.001,
-            "total_pnl": -10.37,
-            "profit_factor": 0.86,
+            "trades": 12,
+            "win_rate": 0.5,
+            "avg_return": -0.0003,
+            "total_pnl": 12.99,
+            "profit_factor": 1.17,
             "enough_data": true
           },
           "untagged": {
@@ -4564,11 +4882,19 @@
         },
         "by_experiment": {
           "Implement an RSI floor filter (>30) for short trades to block shorting into climax bottoms.": {
-            "trades": 7,
-            "win_rate": 0.429,
-            "avg_return": -0.0026,
-            "total_pnl": -27.58,
-            "profit_factor": 0.67,
+            "trades": 8,
+            "win_rate": 0.5,
+            "avg_return": -0.0014,
+            "total_pnl": -4.22,
+            "profit_factor": 0.95,
+            "enough_data": true
+          },
+          "Test a momentum-reversal exit: close position if 5-min momentum turns negative even if price still above stop.": {
+            "trades": 6,
+            "win_rate": 0.167,
+            "avg_return": -0.0059,
+            "total_pnl": -33.75,
+            "profit_factor": 0.11,
             "enough_data": true
           },
           "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms.": {
@@ -4577,14 +4903,6 @@
             "avg_return": 0.0016,
             "total_pnl": 15.19,
             "profit_factor": 1.78,
-            "enough_data": true
-          },
-          "Test a momentum-reversal exit: close position if 5-min momentum turns negative even if price still above stop.": {
-            "trades": 5,
-            "win_rate": 0.2,
-            "avg_return": -0.0069,
-            "total_pnl": -30.49,
-            "profit_factor": 0.12,
             "enough_data": true
           },
           "shorting breakdowns in risk-off regime": {
@@ -4640,19 +4958,19 @@
         "enough_data": true
       },
       "end_of_day": {
-        "trades": 72,
-        "win_rate": 0.5,
-        "avg_return": 0.0017,
-        "total_pnl": 256.4,
-        "profit_factor": 2.06,
+        "trades": 102,
+        "win_rate": 0.49,
+        "avg_return": 0.0011,
+        "total_pnl": 226.61,
+        "profit_factor": 1.56,
         "enough_data": true
       },
       "trailing_stop": {
-        "trades": 54,
-        "win_rate": 0.963,
+        "trades": 55,
+        "win_rate": 0.964,
         "avg_return": 0.0082,
-        "total_pnl": 608.3,
-        "profit_factor": 211.48,
+        "total_pnl": 631.66,
+        "profit_factor": 219.57,
         "enough_data": true
       },
       "stop_loss": {
@@ -4776,6 +5094,24 @@
   "overnight": {
     "defense": [
       {
+        "symbol": "LMT",
+        "sentiment": 0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Lockheed Martin awarded a $694 million contract for hypersonic weapon development by the U.S. Air Force.",
+        "source": "fiscal.ai, 2026-10-27T20:32:04Z",
+        "seen_at": "2026-10-27T16:43-04:00"
+      },
+      {
+        "symbol": "LMT",
+        "sentiment": 0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Lockheed Martin secures $694 million contract for hypersonic weapon project.",
+        "source": "reuters, 2026-10-27T20:32:04Z",
+        "seen_at": "2026-10-27T16:43-04:00"
+      },
+      {
         "symbol": "NOC",
         "sentiment": 0.6,
         "importance": 3,
@@ -4828,24 +5164,6 @@
         "summary": "GD secured a $135.9M Army contract modification for Stryker retrofit kits.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-26T22:30-04:00"
-      },
-      {
-        "symbol": "CACI",
-        "sentiment": 0.8,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "CACI won a five\u2011year $281\u202fmillion U.S. Navy contract for electromagnetic warfare capabilities.",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T08:22-04:00"
-      },
-      {
-        "symbol": "NOC",
-        "sentiment": 0.2,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Jefferies raised Northrop Grumman's price target to $585, indicating modest optimism.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T08:16-04:00"
       }
     ],
     "space": [
@@ -4924,6 +5242,15 @@
     ],
     "entertainment": [
       {
+        "symbol": "DIS",
+        "sentiment": 0.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Disney announces 2027 Teachers Sweepstakes",
+        "source": "fiscal.ai, 2026-10-27T20:31:43Z",
+        "seen_at": "2026-10-27T16:43-04:00"
+      },
+      {
         "symbol": "TTWO",
         "sentiment": -0.2,
         "importance": 3,
@@ -4985,18 +5312,27 @@
         "summary": "Comcast completed a local high-speed internet expansion project in Tulare County.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-26T16:40-04:00"
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": 0.0,
-        "importance": 1,
-        "unconfirmed_rumor": false,
-        "summary": "Netflix is participating in the Texas Book Festival with a panel and an early screening of 'Guarding Stars'.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T16:40-04:00"
       }
     ],
     "tech": [
+      {
+        "symbol": "MSFT",
+        "sentiment": 1.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Microsoft expands collaboration with Dayforce across HR, finance, operations; Dayforce Build and Dayforce Marketplace to be available next year.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T16:43-04:00"
+      },
+      {
+        "symbol": "INTC",
+        "sentiment": 0.8,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Intel and Oracle announce multiyear partnership for AI on Oracle Cloud; Intel Xeon-based computing for enterprise and AI workloads.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T16:43-04:00"
+      },
       {
         "symbol": "MSFT",
         "sentiment": 0.6,
@@ -5050,27 +5386,18 @@
         "summary": "Analysts have revised Microsoft Q1 forecasts ahead of its earnings call, expecting $4.72 EPS and $90.69\u202fB revenue.",
         "source": "benzinga",
         "seen_at": "2026-10-27T06:51-04:00"
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": -0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Bill Gates warned that AI\u2011powered robots could replace many human jobs, raising concerns about future labor markets.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T06:06-04:00"
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": -0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Mark Cuban warned Apple is being treated like a meme stock, raising bubble concerns",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T05:21-04:00"
       }
     ],
     "consumer": [
+      {
+        "symbol": "TSLA",
+        "sentiment": 0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Analysts adjust Tesla price targets on October 27, 2026",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T16:44-04:00"
+      },
       {
         "symbol": "RCL",
         "sentiment": 0.8,
@@ -5133,18 +5460,54 @@
         "summary": "Zoox is close to securing a deal to deploy 150 robotaxis in Santa Monica, indicating a modest growth opportunity for Amazon's autonomous\u2011vehicle unit.",
         "source": "benzinga",
         "seen_at": "2026-10-27T04:36-04:00"
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": -0.3,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Investor Ross Gerber publicly questioned Tesla's pace on its Cybercab rollout, casting a slight negative spotlight on the company.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T04:36-04:00"
       }
     ],
     "financials": [
+      {
+        "symbol": "V",
+        "sentiment": 1.0,
+        "importance": 5,
+        "unconfirmed_rumor": false,
+        "summary": "Visa reports strong Q4 earnings, beating market expectations.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T16:44-04:00"
+      },
+      {
+        "symbol": "GS",
+        "sentiment": 0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Goldman Sachs' Q4 earnings beat estimates.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T16:44-04:00"
+      },
+      {
+        "symbol": "HOOD",
+        "sentiment": 0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Robinhood Q3 results show growth in revenue, user base.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T16:44-04:00"
+      },
+      {
+        "symbol": "AXP",
+        "sentiment": 1.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Visa Q4 Adj. EPS $3.48 Beats $3.44 Estimate, Sales $12.139B Beat $12.084B Estimate",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T16:29-04:00"
+      },
+      {
+        "symbol": "HOOD",
+        "sentiment": 1.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Robinhood Markets Q3 Adj. EPS $0.60 Beats $0.56 Estimate, Sales $1.424B Beat $1.422B Estimate",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T16:29-04:00"
+      },
       {
         "symbol": "COIN",
         "sentiment": -0.7,
@@ -5171,54 +5534,27 @@
         "summary": "Record open interest in TTF options signals heightened market activity.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-27T08:06-04:00"
-      },
-      {
-        "symbol": "SPGI",
-        "sentiment": -0.2,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "S&P Global trimmed FY2026 GAAP EPS guidance modestly while raising its sales outlook, keeping estimates above consensus.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T07:51-04:00"
-      },
-      {
-        "symbol": "MS",
-        "sentiment": 0.3,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Morgan Stanley named lead joint bookrunning manager for Meta's stock offerings, indicating strong deal flow.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-27T07:36-04:00"
-      },
-      {
-        "symbol": "SPGI",
-        "sentiment": -0.1,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "S&P Global lowered FY2026 GAAP EPS guidance but raised sales outlook.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T07:36-04:00"
-      },
-      {
-        "symbol": "SPGI",
-        "sentiment": 0.3,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "S&P Global increased FY2026 adjusted EPS guidance and expects sales above estimates.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T07:36-04:00"
-      },
-      {
-        "symbol": "SPGI",
-        "sentiment": 0.4,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "S&P Global reported Q3 adjusted EPS and sales beats, surpassing analyst expectations.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T07:36-04:00"
       }
     ],
     "healthcare": [
+      {
+        "symbol": "VRTX",
+        "sentiment": 0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Vertex Pharmaceuticals receives positive ratings and price target updates from analysts.",
+        "source": "fiscal.ai, 2026-10-27T20:31:54Z",
+        "seen_at": "2026-10-27T16:44-04:00"
+      },
+      {
+        "symbol": "AMGN",
+        "sentiment": 0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Amgen presents new clinical data at ACR Convergence 2026.",
+        "source": "fiscal.ai, 2026-10-27T20:31:52Z",
+        "seen_at": "2026-10-27T16:44-04:00"
+      },
       {
         "symbol": "ABT",
         "sentiment": -0.5,
@@ -5271,24 +5607,6 @@
         "unconfirmed_rumor": false,
         "summary": "Daiwa Securities raised its price target for Intuitive Surgical to $490, indicating a more optimistic valuation outlook.",
         "source": "fiscal.ai",
-        "seen_at": "2026-10-27T07:36-04:00"
-      },
-      {
-        "symbol": "UNH",
-        "sentiment": 0.6,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Morgan Stanley kept an overweight stance on UnitedHealth Group and lifted its price target to $531.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T07:36-04:00"
-      },
-      {
-        "symbol": "LLY",
-        "sentiment": 0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "A judge ruled that Eli\u202fLilly\u2019s weight\u2011loss drug ads have negligible impact on sales, rejecting Novo Nordisk\u2019s attempt to block them.",
-        "source": "benzinga",
         "seen_at": "2026-10-27T07:36-04:00"
       }
     ]
@@ -8353,13 +8671,25 @@
         {
           "date": "2026-10-26",
           "lesson": "Cap total entries on any single ticker to a maximum of two trades per session to prevent churn and over-trading losses during market chop."
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Only take news\u2011catalyst longs when price is above VWAP and relative volume >1.5x average"
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Limit re\u2011entries on the same ticker to one per day to avoid churn"
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Implement a 50% partial\u2011scale\u2011out at 1R to lock in gains early"
         }
       ],
       "ideas": {
-        "date": "2026-10-26",
+        "date": "2026-10-27",
         "strategy_ideas": [
-          "Prioritize prime defense contractors (LMT, RTX, GD, NOC) for opening range breakouts when sector-wide analyst target upgrades occur.",
-          "Enforce a strict 30-minute VWAP hold rule before taking afternoon news catalyst entries."
+          "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news\u2011catalyst trade",
+          "Replace fixed dollar stops with ATR\u2011based dynamic stops to accommodate normal volatility while protecting downside"
         ]
       },
       "reviews": [
@@ -8495,6 +8825,76 @@
             "remove": []
           },
           "watchlist": []
+        },
+        {
+          "date": "2026-10-27",
+          "what_went_well": "The trailing\u2011stop exits on PLTR and KTOS captured quick upside, and GD\u2019s VWAP\u2011bounce trade gave a small profit while the manager\u2011sell on LDOS limited loss.",
+          "what_went_wrong": "Multiple CACI entries (three in one session) and several news\u2011catalyst longs entered at or below VWAP were stopped out or sold at a loss, showing over\u2011trading and insufficient price\u2011above\u2011VWAP confirmation.",
+          "lessons": [
+            "Only take news\u2011catalyst longs when price is above VWAP and relative volume >1.5x average",
+            "Limit re\u2011entries on the same ticker to one per day to avoid churn",
+            "Implement a 50% partial\u2011scale\u2011out at 1R to lock in gains early"
+          ],
+          "strategy_ideas": [
+            "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news\u2011catalyst trade",
+            "Replace fixed dollar stops with ATR\u2011based dynamic stops to accommodate normal volatility while protecting downside"
+          ],
+          "watchlist_changes": {
+            "add": [
+              {
+                "symbol": "BA",
+                "reason": "Boeing has upcoming major defense contract announcements and fits the core defense focus"
+              },
+              {
+                "symbol": "L3Harris",
+                "reason": "L3Harris (LHX) shows strong institutional buying and pending contract news"
+              },
+              {
+                "symbol": "L3Harris",
+                "reason": "L3Harris (LHX) shows strong institutional buying and pending contract news"
+              }
+            ],
+            "remove": [
+              {
+                "symbol": "AVAV",
+                "reason": "Repeated underperformance and lack of near\u2011term catalysts"
+              },
+              {
+                "symbol": "LDOS",
+                "reason": "Contract win did not translate into price strength; price stalled below VWAP"
+              },
+              {
+                "symbol": "PLTR",
+                "reason": "Data\u2011analytics firm outside core defense focus and limited relevance to team\u2019s mandate"
+              }
+            ]
+          },
+          "watchlist": [
+            {
+              "time": "2026-10-27T16:18-04:00",
+              "action": "add_rejected",
+              "symbol": "BA",
+              "reason": "already watched by the space team"
+            },
+            {
+              "time": "2026-10-27T16:18-04:00",
+              "action": "remove_rejected",
+              "symbol": "AVAV",
+              "reason": "list would drop below 15 stocks"
+            },
+            {
+              "time": "2026-10-27T16:18-04:00",
+              "action": "remove_rejected",
+              "symbol": "LDOS",
+              "reason": "list would drop below 15 stocks"
+            },
+            {
+              "time": "2026-10-27T16:18-04:00",
+              "action": "remove_rejected",
+              "symbol": "PLTR",
+              "reason": "list would drop below 15 stocks"
+            }
+          ]
         }
       ],
       "pnl_days": [
@@ -8702,9 +9102,33 @@
             "action": "remove_rejected",
             "symbol": "HII",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-27T16:18-04:00",
+            "action": "add_rejected",
+            "symbol": "BA",
+            "reason": "already watched by the space team"
+          },
+          {
+            "time": "2026-10-27T16:18-04:00",
+            "action": "remove_rejected",
+            "symbol": "AVAV",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-27T16:18-04:00",
+            "action": "remove_rejected",
+            "symbol": "LDOS",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-27T16:18-04:00",
+            "action": "remove_rejected",
+            "symbol": "PLTR",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-27T13:22-04:00"
+        "updated": "2026-10-27T16:18-04:00"
       },
       "research": {
         "time": "2026-10-27T14:11-04:00",
@@ -8803,6 +9227,24 @@
         },
         "overnight": [
           {
+            "symbol": "LMT",
+            "sentiment": 0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Lockheed Martin awarded a $694 million contract for hypersonic weapon development by the U.S. Air Force.",
+            "source": "fiscal.ai, 2026-10-27T20:32:04Z",
+            "seen_at": "2026-10-27T16:43-04:00"
+          },
+          {
+            "symbol": "LMT",
+            "sentiment": 0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Lockheed Martin secures $694 million contract for hypersonic weapon project.",
+            "source": "reuters, 2026-10-27T20:32:04Z",
+            "seen_at": "2026-10-27T16:43-04:00"
+          },
+          {
             "symbol": "NOC",
             "sentiment": 0.6,
             "importance": 3,
@@ -8855,33 +9297,6 @@
             "summary": "GD secured a $135.9M Army contract modification for Stryker retrofit kits.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-26T22:30-04:00"
-          },
-          {
-            "symbol": "CACI",
-            "sentiment": 0.8,
-            "importance": 4,
-            "unconfirmed_rumor": false,
-            "summary": "CACI won a five\u2011year $281\u202fmillion U.S. Navy contract for electromagnetic warfare capabilities.",
-            "source": "benzinga",
-            "seen_at": "2026-10-26T08:22-04:00"
-          },
-          {
-            "symbol": "NOC",
-            "sentiment": 0.2,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Jefferies raised Northrop Grumman's price target to $585, indicating modest optimism.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T08:16-04:00"
-          },
-          {
-            "symbol": "PLTR",
-            "sentiment": 0.3,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Deutsche Bank increased Palantir's price target to $225, showing a positive outlook.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T08:16-04:00"
           }
         ],
         "technicals": {
@@ -12446,13 +12861,25 @@
         {
           "date": "2026-10-26",
           "lesson": "Apply the 15\u2011minute wait rule to both long and short entries to avoid early range\u2011expansion stops"
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Enforce the >8% intraday pull\u2011back filter before any entry, especially on volatile news\u2011driven stocks"
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Require VWAP confirmation after a news catalyst before going long"
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Scale out early on high\u2011beta symbols and tighten stops when earnings or major releases are imminent"
         }
       ],
       "ideas": {
-        "date": "2026-10-26",
+        "date": "2026-10-27",
         "strategy_ideas": [
-          "Test partial profit taking with automated trailing stops once price moves 1\u20112% in our favor",
-          "Introduce a filter that blocks entries on symbols that have moved >8% intraday until a pull\u2011back of at least 0.5% occurs"
+          "Test a stricter pull\u2011back rule that blocks entries until price retraces at least 0.5% after a >8% move",
+          "Add a VWAP\u2011bounce confirmation step for all news\u2011catalyst entries, using a smaller position size until the bounce is validated"
         ]
       },
       "reviews": [
@@ -12598,6 +13025,88 @@
               "time": "2026-10-26T16:15-04:00",
               "action": "remove_rejected",
               "symbol": "RKLB",
+              "reason": "list would drop below 15 stocks"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "what_went_well": "Mean\u2011reversion entries (PL, LUNR, RDW, ASTS) and momentum/news catalyst trades (VSAT, SPCX) hit their targets with trailing stops, delivering solid profits.",
+          "what_went_wrong": "Losses on LPTH, HWM, BA and the first GE trade came from entering on strong news or sector moves without waiting for a VWAP pull\u2011back, and the pull\u2011back filter was ignored, leading to stops being hit.",
+          "lessons": [
+            "Enforce the >8% intraday pull\u2011back filter before any entry, especially on volatile news\u2011driven stocks",
+            "Require VWAP confirmation after a news catalyst before going long",
+            "Scale out early on high\u2011beta symbols and tighten stops when earnings or major releases are imminent"
+          ],
+          "strategy_ideas": [
+            "Test a stricter pull\u2011back rule that blocks entries until price retraces at least 0.5% after a >8% move",
+            "Add a VWAP\u2011bounce confirmation step for all news\u2011catalyst entries, using a smaller position size until the bounce is validated"
+          ],
+          "watchlist_changes": {
+            "add": [
+              {
+                "symbol": "MAXR",
+                "reason": "Maxar announced a new satellite manufacturing contract for Q4"
+              },
+              {
+                "symbol": "AVAV",
+                "reason": "AeroVironment secured a Department of Defense drone optics contract"
+              },
+              {
+                "symbol": "LMT",
+                "reason": "Lockheed Martin slated to launch a new Artemis mission component"
+              }
+            ],
+            "remove": [
+              {
+                "symbol": "LPTH",
+                "reason": "Loss on news catalyst trade and no upcoming catalyst"
+              },
+              {
+                "symbol": "TDG",
+                "reason": "No activity or catalyst this week"
+              },
+              {
+                "symbol": "SATS",
+                "reason": "Stagnant price action and no near\u2011term events"
+              }
+            ]
+          },
+          "watchlist": [
+            {
+              "time": "2026-10-27T16:19-04:00",
+              "action": "add_rejected",
+              "symbol": "MAXR",
+              "reason": "not tradable at the broker"
+            },
+            {
+              "time": "2026-10-27T16:19-04:00",
+              "action": "add_rejected",
+              "symbol": "AVAV",
+              "reason": "already watched by the defense team"
+            },
+            {
+              "time": "2026-10-27T16:19-04:00",
+              "action": "add_rejected",
+              "symbol": "LMT",
+              "reason": "already watched by the defense team"
+            },
+            {
+              "time": "2026-10-27T16:19-04:00",
+              "action": "remove_rejected",
+              "symbol": "LPTH",
+              "reason": "list would drop below 15 stocks"
+            },
+            {
+              "time": "2026-10-27T16:19-04:00",
+              "action": "remove_rejected",
+              "symbol": "TDG",
+              "reason": "list would drop below 15 stocks"
+            },
+            {
+              "time": "2026-10-27T16:19-04:00",
+              "action": "remove_rejected",
+              "symbol": "SATS",
               "reason": "list would drop below 15 stocks"
             }
           ]
@@ -12790,9 +13299,45 @@
             "action": "remove_rejected",
             "symbol": "RKLB",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-27T16:19-04:00",
+            "action": "add_rejected",
+            "symbol": "MAXR",
+            "reason": "not tradable at the broker"
+          },
+          {
+            "time": "2026-10-27T16:19-04:00",
+            "action": "add_rejected",
+            "symbol": "AVAV",
+            "reason": "already watched by the defense team"
+          },
+          {
+            "time": "2026-10-27T16:19-04:00",
+            "action": "add_rejected",
+            "symbol": "LMT",
+            "reason": "already watched by the defense team"
+          },
+          {
+            "time": "2026-10-27T16:19-04:00",
+            "action": "remove_rejected",
+            "symbol": "LPTH",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-27T16:19-04:00",
+            "action": "remove_rejected",
+            "symbol": "TDG",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-27T16:19-04:00",
+            "action": "remove_rejected",
+            "symbol": "SATS",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-27T13:19-04:00"
+        "updated": "2026-10-27T16:19-04:00"
       },
       "research": {
         "time": "2026-10-27T14:11-04:00",
@@ -15847,13 +16392,25 @@
         {
           "date": "2026-10-26",
           "lesson": "Only take trades with conviction >=4; lower\u2011conviction setups should be skipped"
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Require rvol\u202f>\u202f1.2 before entering any VWAP\u2011bounce or momentum trade to ensure sufficient intraday interest."
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Add a volume confirmation filter for news\u2011catalyst entries\u2014only trade when 15\u2011minute volume expands by at least 20% and rvol\u202f>\u202f1.2."
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Only take opening\u2011range breakouts when price stays above both the OR and VWAP; otherwise exit early to avoid stalled positions."
         }
       ],
       "ideas": {
-        "date": "2026-10-26",
+        "date": "2026-10-27",
         "strategy_ideas": [
-          "Test a VWAP\u2011bounce strategy with tighter stops (0.2% below VWAP) on defensive names like CMCSA and DIS",
-          "Add a pre\u2011entry filter that mandates a positive 15\u2011minute volume expansion and rvol >1.2 before entering any long or short momentum trade"
+          "Test a VWAP\u2011bounce strategy that includes the rvol\u202f>\u202f1.2 filter and a trailing stop to capture upside once the price confirms above VWAP.",
+          "Implement an opening\u2011range breakout rule that requires price above VWAP and rvol\u202f>\u202f1.2, and use a tighter stop (0.2% below VWAP) to protect against false breakouts."
         ]
       },
       "reviews": [
@@ -16029,6 +16586,70 @@
               "by": "evening review"
             }
           ]
+        },
+        {
+          "date": "2026-10-27",
+          "what_went_well": "Capital was preserved by exiting failing VWAP bounces and stop\u2011losses promptly, preventing larger losses.",
+          "what_went_wrong": "All trades closed at a loss because the setups failed: VWAP bounces broke early, momentum trades hit stops, news catalysts lacked intraday volume, and opening\u2011range breakouts occurred below the OR and VWAP.",
+          "lessons": [
+            "Require rvol\u202f>\u202f1.2 before entering any VWAP\u2011bounce or momentum trade to ensure sufficient intraday interest.",
+            "Add a volume confirmation filter for news\u2011catalyst entries\u2014only trade when 15\u2011minute volume expands by at least 20% and rvol\u202f>\u202f1.2.",
+            "Only take opening\u2011range breakouts when price stays above both the OR and VWAP; otherwise exit early to avoid stalled positions."
+          ],
+          "strategy_ideas": [
+            "Test a VWAP\u2011bounce strategy that includes the rvol\u202f>\u202f1.2 filter and a trailing stop to capture upside once the price confirms above VWAP.",
+            "Implement an opening\u2011range breakout rule that requires price above VWAP and rvol\u202f>\u202f1.2, and use a tighter stop (0.2% below VWAP) to protect against false breakouts."
+          ],
+          "watchlist_changes": {
+            "add": [
+              {
+                "symbol": "MGM",
+                "reason": "Upcoming earnings on 2026-10-28 after the close"
+              },
+              {
+                "symbol": "FOXA",
+                "reason": "Upcoming earnings on 2026-11-02 before the open"
+              },
+              {
+                "symbol": "ROKU",
+                "reason": "Upcoming earnings on 2026-11-02 after the close"
+              }
+            ],
+            "remove": [
+              {
+                "symbol": "WMG",
+                "reason": "Dry volume and no catalyst today"
+              },
+              {
+                "symbol": "LYV",
+                "reason": "Minimal price action and no catalyst"
+              },
+              {
+                "symbol": "TKO",
+                "reason": "Negative news and failed breakout"
+              }
+            ]
+          },
+          "watchlist": [
+            {
+              "time": "2026-10-27T16:19-04:00",
+              "action": "remove_rejected",
+              "symbol": "WMG",
+              "reason": "list would drop below 15 stocks"
+            },
+            {
+              "time": "2026-10-27T16:19-04:00",
+              "action": "remove_rejected",
+              "symbol": "LYV",
+              "reason": "list would drop below 15 stocks"
+            },
+            {
+              "time": "2026-10-27T16:19-04:00",
+              "action": "remove_rejected",
+              "symbol": "TKO",
+              "reason": "list would drop below 15 stocks"
+            }
+          ]
         }
       ],
       "pnl_days": [
@@ -16119,24 +16740,6 @@
           }
         ],
         "rejected": [
-          {
-            "time": "2026-10-21T22:11-04:00",
-            "action": "remove_rejected",
-            "symbol": "TTWO",
-            "reason": "list would drop below 15 stocks"
-          },
-          {
-            "time": "2026-10-22T09:30-04:00",
-            "action": "remove_rejected",
-            "symbol": "WBD",
-            "reason": "list would drop below 15 stocks"
-          },
-          {
-            "time": "2026-10-22T09:30-04:00",
-            "action": "remove_rejected",
-            "symbol": "EA",
-            "reason": "list would drop below 15 stocks"
-          },
           {
             "time": "2026-10-22T10:52-04:00",
             "action": "remove_rejected",
@@ -16298,9 +16901,27 @@
             "action": "remove_rejected",
             "symbol": "EA",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-27T16:19-04:00",
+            "action": "remove_rejected",
+            "symbol": "WMG",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-27T16:19-04:00",
+            "action": "remove_rejected",
+            "symbol": "LYV",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-27T16:19-04:00",
+            "action": "remove_rejected",
+            "symbol": "TKO",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-27T14:18-04:00"
+        "updated": "2026-10-27T16:19-04:00"
       },
       "research": {
         "time": "2026-10-27T14:11-04:00",
@@ -16374,6 +16995,15 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "DIS",
+            "sentiment": 0.0,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Disney announces 2027 Teachers Sweepstakes",
+            "source": "fiscal.ai, 2026-10-27T20:31:43Z",
+            "seen_at": "2026-10-27T16:43-04:00"
+          },
           {
             "symbol": "TTWO",
             "sentiment": -0.2,
@@ -20363,12 +20993,20 @@
         {
           "date": "2026-10-23",
           "lesson": "Avoid taking opposing long and short trades on the same stock within the same intraday session."
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Do not open long catalyst or momentum positions when the stock is trading below VWAP."
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Avoid re-entering a ticker on the same day if a previous position was manually closed due to broken momentum."
         }
       ],
       "ideas": {
-        "date": "2026-10-23",
+        "date": "2026-10-27",
         "strategy_ideas": [
-          "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms."
+          "Implement an automated filter that blocks long entries unless 15-minute momentum is positive and price is strictly above VWAP."
         ]
       },
       "reviews": [
@@ -20480,6 +21118,48 @@
               "by": "evening review"
             }
           ]
+        },
+        {
+          "date": "2026-10-27",
+          "what_went_well": "We successfully captured gains on defensive tech leaders and relative strength breakouts like TXN, NOW, and ANET by using trailing stops effectively.",
+          "what_went_wrong": "We repeatedly tried to force long entries on AVGO, AMD, and AAPL while they were trading below VWAP or experiencing intraday momentum stalls, leading to churn and multiple small cut-loss exits.",
+          "lessons": [
+            "Do not open long catalyst or momentum positions when the stock is trading below VWAP.",
+            "Avoid re-entering a ticker on the same day if a previous position was manually closed due to broken momentum."
+          ],
+          "strategy_ideas": [
+            "Implement an automated filter that blocks long entries unless 15-minute momentum is positive and price is strictly above VWAP."
+          ],
+          "watchlist_changes": {
+            "add": [
+              {
+                "symbol": "IBM",
+                "reason": "New AI-agent security platform catalyst at TechXchange 2026."
+              }
+            ],
+            "remove": [
+              {
+                "symbol": "SOXL",
+                "reason": "Leveraged ETF lacks stock-specific news catalysts compared to single-stock IT focus."
+              }
+            ]
+          },
+          "watchlist": [
+            {
+              "time": "2026-10-27T16:20-04:00",
+              "action": "removed",
+              "symbol": "SOXL",
+              "reason": "Leveraged ETF lacks stock-specific news catalysts compared to single-stock IT focus.",
+              "by": "evening review"
+            },
+            {
+              "time": "2026-10-27T16:20-04:00",
+              "action": "added",
+              "symbol": "IBM",
+              "reason": "New AI-agent security platform catalyst at TechXchange 2026.",
+              "by": "evening review"
+            }
+          ]
         }
       ],
       "pnl_days": [
@@ -20519,8 +21199,8 @@
           "PANW",
           "ANET",
           "CRWV",
-          "SOXL",
-          "INTC"
+          "INTC",
+          "IBM"
         ],
         "seed": [
           "AAPL",
@@ -20647,6 +21327,20 @@
             "symbol": "INTC",
             "reason": "Active most stock, tech sector.",
             "by": "manager"
+          },
+          {
+            "time": "2026-10-27T16:20-04:00",
+            "action": "removed",
+            "symbol": "SOXL",
+            "reason": "Leveraged ETF lacks stock-specific news catalysts compared to single-stock IT focus.",
+            "by": "evening review"
+          },
+          {
+            "time": "2026-10-27T16:20-04:00",
+            "action": "added",
+            "symbol": "IBM",
+            "reason": "New AI-agent security platform catalyst at TechXchange 2026.",
+            "by": "evening review"
           }
         ],
         "rejected": [
@@ -20759,7 +21453,7 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-27T13:19-04:00"
+        "updated": "2026-10-27T16:20-04:00"
       },
       "research": {
         "time": "2026-10-27T14:11-04:00",
@@ -20858,6 +21552,24 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "MSFT",
+            "sentiment": 1.0,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Microsoft expands collaboration with Dayforce across HR, finance, operations; Dayforce Build and Dayforce Marketplace to be available next year.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T16:43-04:00"
+          },
+          {
+            "symbol": "INTC",
+            "sentiment": 0.8,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Intel and Oracle announce multiyear partnership for AI on Oracle Cloud; Intel Xeon-based computing for enterprise and AI workloads.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T16:43-04:00"
+          },
           {
             "symbol": "MSFT",
             "sentiment": 0.6,
@@ -21100,33 +21812,6 @@
             "summary": "Applied Materials is increasing its investment in BE Semiconductor Industries to approximately 20% of outstanding common stock.",
             "source": "benzinga",
             "seen_at": "2026-10-26T16:40-04:00"
-          },
-          {
-            "symbol": "NVDA",
-            "sentiment": -0.4,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Analysts' warnings on Asian AI stocks put pressure on Nvidia, suggesting short\u2011term downside.",
-            "source": "benzinga",
-            "seen_at": "2026-10-26T08:17-04:00"
-          },
-          {
-            "symbol": "NVDA",
-            "sentiment": 0.5,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Honeywell's new AI platform leverages Nvidia technology, highlighting demand for Nvidia's chips.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T08:17-04:00"
-          },
-          {
-            "symbol": "AMAT",
-            "sentiment": 0.6,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "AllianceBernstein reaffirmed a Buy rating and raised Applied Materials' price target to $700.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T08:17-04:00"
           }
         ],
         "technicals": {
@@ -23895,13 +24580,21 @@
         {
           "date": "2026-10-23",
           "lesson": "Set stops based on volatility (ATR) rather than fixed dollar amounts to reduce being stopped out on normal swings"
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Never initiate long positions on stocks facing major negative news catalysts (e.g. executive departures, guidance withdrawals, or regulatory probes) regardless of temporary technical bounces."
+        },
+        {
+          "date": "2026-10-27",
+          "lesson": "Do not buy earnings gap-ups on mixed reports where forward guidance or revenue missed estimates, as these setups frequently result in gap-and-fade traps."
         }
       ],
       "ideas": {
-        "date": "2026-10-23",
+        "date": "2026-10-27",
         "strategy_ideas": [
-          "Implement a market\u2011regime filter that disables new entries when the S&P 500 is below its 50\u2011day moving average",
-          "Test a trend\u2011following approach with ATR\u2011based stops and profit targets instead of fixed VWAP reclaim entries"
+          "Incorporate an automated filter that blocks long trade signals if sentiment for high-importance news in the last 24 hours is negative.",
+          "Require a 15-minute post-open consolidation above VWAP before entering any earnings gap-up momentum trades."
         ]
       },
       "reviews": [
@@ -24020,6 +24713,36 @@
               "time": "2026-10-23T16:16-04:00",
               "action": "remove_rejected",
               "symbol": "BKNG",
+              "reason": "list would drop below 15 stocks"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "what_went_well": "AMZN and TSLA intra-day long momentum trades generated steady profits, and team discipline was maintained by manually closing underperforming positions (MAR, DG, RCL) before full stop-outs occurred.",
+          "what_went_wrong": "We took a long trade on LKQ despite major overnight negative catalysts (CEO exit, guidance withdrawal, SEC probe), and bought RCL's earnings gap without accounting for its lowered Q4 guidance and revenue miss.",
+          "lessons": [
+            "Never initiate long positions on stocks facing major negative news catalysts (e.g. executive departures, guidance withdrawals, or regulatory probes) regardless of temporary technical bounces.",
+            "Do not buy earnings gap-ups on mixed reports where forward guidance or revenue missed estimates, as these setups frequently result in gap-and-fade traps."
+          ],
+          "strategy_ideas": [
+            "Incorporate an automated filter that blocks long trade signals if sentiment for high-importance news in the last 24 hours is negative.",
+            "Require a 15-minute post-open consolidation above VWAP before entering any earnings gap-up momentum trades."
+          ],
+          "watchlist_changes": {
+            "add": [],
+            "remove": [
+              {
+                "symbol": "DEO",
+                "reason": "Low volume and lack of upcoming catalysts or trading actionable momentum."
+              }
+            ]
+          },
+          "watchlist": [
+            {
+              "time": "2026-10-27T16:20-04:00",
+              "action": "remove_rejected",
+              "symbol": "DEO",
               "reason": "list would drop below 15 stocks"
             }
           ]
@@ -24234,9 +24957,15 @@
             "action": "remove_rejected",
             "symbol": "MCD",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-27T16:20-04:00",
+            "action": "remove_rejected",
+            "symbol": "DEO",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-27T13:22-04:00"
+        "updated": "2026-10-27T16:20-04:00"
       },
       "research": {
         "time": "2026-10-27T14:12-04:00",
@@ -24302,6 +25031,15 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "TSLA",
+            "sentiment": 0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Analysts adjust Tesla price targets on October 27, 2026",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T16:44-04:00"
+          },
           {
             "symbol": "RCL",
             "sentiment": 0.8,
@@ -24436,24 +25174,6 @@
             "summary": "Franchisees are reporting quality and sizing issues with new hand-breaded chicken items, though this is an anecdotal report rather than a confirmed corporate statement.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-26T16:40-04:00"
-          },
-          {
-            "symbol": "MAR",
-            "sentiment": 0.7,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "BMO Capital raised its price target for Marriott International to $420, indicating a more favorable valuation outlook.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T08:17-04:00"
-          },
-          {
-            "symbol": "TSLA",
-            "sentiment": 0.8,
-            "importance": 4,
-            "unconfirmed_rumor": false,
-            "summary": "Tesla secured regulatory approval for its Full Self\u2011Driving assisted driving system in Latvia, opening a new market for the technology.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T08:17-04:00"
           }
         ],
         "technicals": {
@@ -27997,6 +28717,51 @@
         },
         "overnight": [
           {
+            "symbol": "V",
+            "sentiment": 1.0,
+            "importance": 5,
+            "unconfirmed_rumor": false,
+            "summary": "Visa reports strong Q4 earnings, beating market expectations.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T16:44-04:00"
+          },
+          {
+            "symbol": "GS",
+            "sentiment": 0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Goldman Sachs' Q4 earnings beat estimates.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T16:44-04:00"
+          },
+          {
+            "symbol": "HOOD",
+            "sentiment": 0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Robinhood Q3 results show growth in revenue, user base.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T16:44-04:00"
+          },
+          {
+            "symbol": "AXP",
+            "sentiment": 1.0,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Visa Q4 Adj. EPS $3.48 Beats $3.44 Estimate, Sales $12.139B Beat $12.084B Estimate",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T16:29-04:00"
+          },
+          {
+            "symbol": "HOOD",
+            "sentiment": 1.0,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Robinhood Markets Q3 Adj. EPS $0.60 Beats $0.56 Estimate, Sales $1.424B Beat $1.422B Estimate",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T16:29-04:00"
+          },
+          {
             "symbol": "COIN",
             "sentiment": -0.7,
             "importance": 3,
@@ -28193,33 +28958,6 @@
             "summary": "Goldman Sachs is expanding its wealth management advisory teams in Asia to capture demand from new millionaires.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-26T17:40-04:00"
-          },
-          {
-            "symbol": "ICE",
-            "sentiment": -0.3,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Public companies are objecting to the OKXICE tokenized share platform, posing regulatory and reputational risk for Intercontinental Exchange.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T08:17-04:00"
-          },
-          {
-            "symbol": "C",
-            "sentiment": 0.2,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Citigroup acted as financial advisor on a $500\u202fmillion sale, generating advisory fees and showcasing its deal\u2011making capability.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T08:17-04:00"
-          },
-          {
-            "symbol": "GS",
-            "sentiment": -0.1,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Goldman Sachs cut its Kospi index forecast by 25%, reflecting a more cautious outlook that may slightly dampen sentiment.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T08:17-04:00"
           }
         ],
         "technicals": {
@@ -32407,6 +33145,24 @@
         },
         "overnight": [
           {
+            "symbol": "VRTX",
+            "sentiment": 0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Vertex Pharmaceuticals receives positive ratings and price target updates from analysts.",
+            "source": "fiscal.ai, 2026-10-27T20:31:54Z",
+            "seen_at": "2026-10-27T16:44-04:00"
+          },
+          {
+            "symbol": "AMGN",
+            "sentiment": 0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Amgen presents new clinical data at ACR Convergence 2026.",
+            "source": "fiscal.ai, 2026-10-27T20:31:52Z",
+            "seen_at": "2026-10-27T16:44-04:00"
+          },
+          {
             "symbol": "ABT",
             "sentiment": -0.5,
             "importance": 3,
@@ -32531,15 +33287,6 @@
             "summary": "An insider sold approximately $9.08 million worth of Intuitive Surgical shares, a routine transaction that typically signals mild negative sentiment but lacks immediate price-moving impact.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-26T16:40-04:00"
-          },
-          {
-            "symbol": "REGN",
-            "sentiment": 0.8,
-            "importance": 4,
-            "unconfirmed_rumor": false,
-            "summary": "Regeneron secured a $270\u202fmillion U.S. government contract extension for its Ebola treatment Inmazeb through 2031.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T08:17-04:00"
           }
         ],
         "technicals": {
@@ -32767,6 +33514,24 @@
         "max_trades_per_team_per_day": 15,
         "min_conviction_to_buy": 4
       }
+    },
+    {
+      "date": "2026-10-27",
+      "decision": "Reduced allocations for Space, Entertainment, and Healthcare due to poor win rates and negative P&L. Tightened conviction threshold to 4 and reduced max trades to 15 to curb churn and force higher quality entries. Paused Space and Healthcare for strategy review.",
+      "allocations": {
+        "defense": 0.25,
+        "space": 0.05,
+        "entertainment": 0.05,
+        "tech": 0.35,
+        "consumer": 0.1,
+        "financials": 0.15,
+        "healthcare": 0.05
+      },
+      "risk_overrides": {
+        "max_position_pct": 0.15,
+        "max_trades_per_team_per_day": 15,
+        "min_conviction_to_buy": 4
+      }
     }
   ],
   "reports_index": [
@@ -32787,6 +33552,12 @@
       "headline": "Down 0.23% while SPY fell 0.70%; Tech outperformed, Defense and Space lagged",
       "day_change_pct": -0.0023,
       "equity": 98981.02
+    },
+    {
+      "date": "2026-10-27",
+      "headline": "Up 0.06% while SPY fell 0.14%; Tech and Space led gains, Defense and Financials lagged",
+      "day_change_pct": 0.0006,
+      "equity": 99035.4
     }
   ],
   "blocked_recent": [
