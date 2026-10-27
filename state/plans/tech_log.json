@@ -1157,5 +1157,35 @@
       "SELL AMAT",
       "BUY MSFT x6 (~$3197.58)"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "10:12",
+    "trigger": "must invest $11,161 more (75% rule)",
+    "market_view": "Market is calm and slightly bid with SPY +0.1% and QQQ +0.4%; volume is concentrated in AVGO and AMD on news while most other tech names are choppy near the open. We are 25% invested and must deploy roughly $11.2k to reach the 75% floor, but the president's defensive posture means only high-conviction entries will be taken. Existing MSFT and NVDA positions are within stops and will be held unless momentum deteriorates.",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "NOW",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Above VWAP (+0.1%), intraday trend up, m15 +0.3%, rvol 2.69; relative strength leader with earnings tomorrow after close, so no overnight gap risk.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "AMD",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Meta partnership and $1B Meta equity investment (sentiment 0.9, importance 5); day +3.2% on rvol 2.44; RSI 25.5 suggests bounce potential from oversold levels.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY NOW x21 (~$3249.75)",
+      "BUY AMD x6 (~$3288.87)",
+      "BUY AVGO x9 (~$3053.43) [deploy]"
+    ]
   }
 ]

@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-27T09:55-04:00",
+  "updated": "2026-10-27T10:12-04:00",
   "date": "2026-10-27",
   "mode": "paper",
   "health": {
     "issues": [
-      "8 problem(s) in the last hour, latest: tech: skipped this check: 'str' object has no attribute 'get'"
+      "11 problem(s) in the last hour, latest: financials: skipped this check: 'str' object has no attribute 'get'"
     ]
   },
   "paused": false,
@@ -14,20 +14,20 @@
     "strategy": "day_trading"
   },
   "account": {
-    "equity": 99069.14,
-    "cash": 60158.99,
-    "day_change": 92.66,
-    "day_change_pct": 0.0009
+    "equity": 99008.3,
+    "cash": 56867.15,
+    "day_change": 31.82,
+    "day_change_pct": 0.0003
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 766.12
+    "price": 765.88
   },
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 8,
-    "return_since_start": -0.0093,
-    "benchmark_since_start": -0.0059,
+    "return_since_start": -0.0099,
+    "benchmark_since_start": -0.0062,
     "max_drawdown": 0.0101
   },
   "go_live": {
@@ -40,7 +40,7 @@
       {
         "rule": "Beating SPY since the start",
         "ok": false,
-        "value": "-0.9% vs -0.6%"
+        "value": "-1.0% vs -0.6%"
       },
       {
         "rule": "Worst drop under 15%",
@@ -72,8 +72,8 @@
         "GD"
       ],
       "budget": 22284.75,
-      "invested": 15709.7,
-      "unrealized_pnl": 17.64,
+      "invested": 15641.92,
+      "unrealized_pnl": -50.14,
       "realized_today": 0,
       "trades_today": 5,
       "blocked_today": 0,
@@ -106,8 +106,8 @@
         "LPTH"
       ],
       "budget": 4456.95,
-      "invested": 2949.83,
-      "unrealized_pnl": 2.88,
+      "invested": 2936.65,
+      "unrealized_pnl": -10.29,
       "realized_today": 21.17,
       "trades_today": 11,
       "blocked_today": 0,
@@ -140,8 +140,8 @@
         "MGM"
       ],
       "budget": 4456.95,
-      "invested": 2384.76,
-      "unrealized_pnl": -11.02,
+      "invested": 2388.5,
+      "unrealized_pnl": -7.28,
       "realized_today": -4.86,
       "trades_today": 6,
       "blocked_today": 0,
@@ -174,10 +174,10 @@
         "IBM"
       ],
       "budget": 22284.75,
-      "invested": 5551.92,
-      "unrealized_pnl": -39.8,
+      "invested": 9489.26,
+      "unrealized_pnl": -41.7,
       "realized_today": 41.91,
-      "trades_today": 4,
+      "trades_today": 7,
       "blocked_today": 3,
       "all_time": {
         "closed_trades": 53,
@@ -242,11 +242,11 @@
         "SOFI"
       ],
       "budget": 17827.8,
-      "invested": 7310.64,
-      "unrealized_pnl": -25.54,
+      "invested": 7336.96,
+      "unrealized_pnl": 0.78,
       "realized_today": -6.15,
       "trades_today": 6,
-      "blocked_today": 2,
+      "blocked_today": 5,
       "all_time": {
         "closed_trades": 38,
         "wins": 17,
@@ -276,8 +276,8 @@
         "CORT"
       ],
       "budget": 8913.9,
-      "invested": 5004.33,
-      "unrealized_pnl": 4.07,
+      "invested": 4994.48,
+      "unrealized_pnl": -5.78,
       "realized_today": 49.19,
       "trades_today": 5,
       "blocked_today": 0,
@@ -296,10 +296,10 @@
       "team": "healthcare",
       "qty": 4.0,
       "entry": 286.0,
-      "price": 285.62,
-      "value": 1142.48,
-      "pnl": -1.52,
-      "pnl_pct": -0.0013,
+      "price": 285.47,
+      "value": 1141.88,
+      "pnl": -2.12,
+      "pnl_pct": -0.0019,
       "stop": 280.44,
       "target": 293.25,
       "reason": "[75% invested rule] Above VWAP (+0.3%) with positive momentum after submitting FDA BLA for etentamig.",
@@ -310,14 +310,50 @@
       "setup": "news catalyst"
     },
     {
+      "symbol": "AMD",
+      "team": "tech",
+      "qty": 6.0,
+      "entry": 548.64,
+      "price": 548.38,
+      "value": 3290.28,
+      "pnl": -1.56,
+      "pnl_pct": -0.0005,
+      "stop": 537.18,
+      "target": 570.07,
+      "reason": "Meta partnership and $1B Meta equity investment (sentiment 0.9, importance 5); day +3.2% on rvol 2.44; RSI 25.5 suggests bounce potential from oversold levels.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 537.18,
+      "setup": "news catalyst"
+    },
+    {
+      "symbol": "AVGO",
+      "team": "tech",
+      "qty": 1.0,
+      "entry": 338.62,
+      "price": 338.61,
+      "value": 338.61,
+      "pnl": -0.01,
+      "pnl_pct": -0.0,
+      "stop": 332.48,
+      "target": 352.84,
+      "reason": "[75% invested rule] Analyst upgrade to $400 and Cramer endorsement; high rvol 3.44 but price below VWAP, awaiting bounce confirmation.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 332.48,
+      "setup": "news catalyst"
+    },
+    {
       "symbol": "BA",
       "team": "space",
       "qty": 3.0,
       "entry": 186.5,
-      "price": 185.78,
-      "value": 557.33,
-      "pnl": -2.17,
-      "pnl_pct": -0.0039,
+      "price": 185.3,
+      "value": 555.9,
+      "pnl": -3.6,
+      "pnl_pct": -0.0064,
       "stop": 182.94,
       "target": 191.3,
       "reason": "Strong intraday recovery from open (+1.5%), sitting at VWAP with heavy rvol (3.01x) and solid Q3 order backlog support.",
@@ -332,10 +368,10 @@
       "team": "entertainment",
       "qty": 10.0,
       "entry": 47.52,
-      "price": 46.98,
-      "value": 469.8,
-      "pnl": -5.4,
-      "pnl_pct": -0.0114,
+      "price": 47.19,
+      "value": 471.9,
+      "pnl": -3.3,
+      "pnl_pct": -0.0069,
       "stop": 46.63,
       "target": 49.0,
       "reason": "Strong major news catalyst including up to $9B Naver AI financing agreement and LXP Trust acquisition approval, up +1.4% daily.",
@@ -350,10 +386,10 @@
       "team": "financials",
       "qty": 16.0,
       "entry": 122.68,
-      "price": 122.36,
-      "value": 1957.76,
-      "pnl": -5.14,
-      "pnl_pct": -0.0026,
+      "price": 123.05,
+      "value": 1968.8,
+      "pnl": 5.9,
+      "pnl_pct": 0.003,
       "stop": 120.2,
       "target": 127.56,
       "reason": "Relative strength: Up 1.3% today, RSI 35.6 (recovering from oversold). Citigroup showing strength in a cautious market. Moderate size to respect risk parameters.",
@@ -368,10 +404,10 @@
       "team": "defense",
       "qty": 5.0,
       "entry": 663.48,
-      "price": 664.02,
-      "value": 3320.1,
-      "pnl": 2.7,
-      "pnl_pct": 0.0008,
+      "price": 661.13,
+      "value": 3305.65,
+      "pnl": -11.75,
+      "pnl_pct": -0.0035,
       "stop": 655.68,
       "target": 688.97,
       "reason": "Secured major Navy contract wins ($145M and $281M, Importance 4) with strong 5d/20d momentum.",
@@ -386,10 +422,10 @@
       "team": "entertainment",
       "qty": 22.0,
       "entry": 22.11,
-      "price": 21.96,
-      "value": 483.12,
-      "pnl": -3.36,
-      "pnl_pct": -0.0069,
+      "price": 22.04,
+      "value": 484.88,
+      "pnl": -1.6,
+      "pnl_pct": -0.0033,
       "stop": 21.67,
       "target": 22.66,
       "reason": "Defensive name highlighted by executive orders, supported by positive network expansion news and strong relative day move (+1.8%).",
@@ -404,10 +440,10 @@
       "team": "entertainment",
       "qty": 4.0,
       "entry": 110.28,
-      "price": 109.8,
-      "value": 439.2,
-      "pnl": -1.92,
-      "pnl_pct": -0.0043,
+      "price": 109.84,
+      "value": 439.38,
+      "pnl": -1.74,
+      "pnl_pct": -0.0039,
       "stop": 108.75,
       "target": 113.72,
       "reason": "Executive defensive pick with positive catalyst regarding UK Disney+ expansion and steady upward daily movement (+1.3%).",
@@ -422,10 +458,10 @@
       "team": "entertainment",
       "qty": 10.0,
       "entry": 64.81,
-      "price": 64.91,
-      "value": 649.05,
-      "pnl": 0.95,
-      "pnl_pct": 0.0015,
+      "price": 64.8,
+      "value": 648.0,
+      "pnl": -0.1,
+      "pnl_pct": -0.0001,
       "stop": 63.92,
       "target": 66.84,
       "reason": "FOXA is a defensive media name trading flat at VWAP (+0.0%) with low intraday volatility, matching executive orders to prioritize capital preservation and defensive VWAP bounces.",
@@ -440,10 +476,10 @@
       "team": "defense",
       "qty": 9.0,
       "entry": 354.99,
-      "price": 356.27,
-      "value": 3206.43,
-      "pnl": 11.52,
-      "pnl_pct": 0.0036,
+      "price": 355.0,
+      "value": 3195.0,
+      "pnl": 0.09,
+      "pnl_pct": 0.0,
       "stop": 350.56,
       "target": 366.58,
       "reason": "[75% invested rule] Prime anchor contractor holding above VWAP following $135.9M Army contract modification.",
@@ -458,10 +494,10 @@
       "team": "space",
       "qty": 2.0,
       "entry": 292.14,
-      "price": 292.69,
-      "value": 585.38,
-      "pnl": 1.09,
-      "pnl_pct": 0.0019,
+      "price": 291.46,
+      "value": 582.92,
+      "pnl": -1.37,
+      "pnl_pct": -0.0023,
       "stop": 287.31,
       "target": 300.44,
       "reason": "Trading above VWAP (+0.5%) with strong m15 momentum (+0.9%), heavy relative volume (4.59x), and an uptrend.",
@@ -476,10 +512,10 @@
       "team": "financials",
       "qty": 2.0,
       "entry": 911.24,
-      "price": 908.14,
-      "value": 1816.28,
-      "pnl": -6.2,
-      "pnl_pct": -0.0034,
+      "price": 911.78,
+      "value": 1823.56,
+      "pnl": 1.08,
+      "pnl_pct": 0.0006,
       "stop": 897.97,
       "target": 938.99,
       "reason": "Aligns with executive directive for stability. GS is up +2.1% on the day, trading above VWAP with steady +0.3% recent look momentum and solid rvol (1.29).",
@@ -494,10 +530,10 @@
       "team": "space",
       "qty": 3.0,
       "entry": 195.36,
-      "price": 195.42,
-      "value": 586.26,
-      "pnl": 0.18,
-      "pnl_pct": 0.0003,
+      "price": 194.25,
+      "value": 582.76,
+      "pnl": -3.31,
+      "pnl_pct": -0.0057,
       "stop": 191.89,
       "target": 200.65,
       "reason": "Trading above VWAP (+0.4%) with solid m15 momentum (+0.8%) and positive bullish analyst coverage ahead of earnings.",
@@ -513,8 +549,8 @@
       "qty": 5.0,
       "entry": 266.53,
       "price": 267.04,
-      "value": 1335.2,
-      "pnl": 2.55,
+      "value": 1335.17,
+      "pnl": 2.52,
       "pnl_pct": 0.0019,
       "stop": 262.33,
       "target": 274.31,
@@ -530,10 +566,10 @@
       "team": "financials",
       "qty": 5.0,
       "entry": 336.16,
-      "price": 334.79,
-      "value": 1673.95,
-      "pnl": -6.85,
-      "pnl_pct": -0.0041,
+      "price": 336.18,
+      "value": 1680.9,
+      "pnl": 0.1,
+      "pnl_pct": 0.0001,
       "stop": 332.16,
       "target": 347.34,
       "reason": "Strong news catalyst: JPMorgan near $10B Aramco facility and APAC growth targets. Stable large-cap fits defensive mandate. RSI 53.8 is neutral, not overbought. Positive sentiment from news researcher.",
@@ -548,10 +584,10 @@
       "team": "defense",
       "qty": 23.0,
       "entry": 139.6,
-      "price": 139.29,
-      "value": 3203.67,
-      "pnl": -7.13,
-      "pnl_pct": -0.0022,
+      "price": 138.62,
+      "value": 3188.26,
+      "pnl": -22.54,
+      "pnl_pct": -0.007,
       "stop": 137.22,
       "target": 143.49,
       "reason": "Secured $95M Defense contract win (Importance 4) supporting recent multi-week uptrend.",
@@ -566,10 +602,10 @@
       "team": "healthcare",
       "qty": 1.0,
       "entry": 1291.0,
-      "price": 1293.74,
-      "value": 1293.74,
-      "pnl": 2.74,
-      "pnl_pct": 0.0021,
+      "price": 1282.98,
+      "value": 1282.98,
+      "pnl": -8.02,
+      "pnl_pct": -0.0062,
       "stop": 1267.9,
       "target": 1325.82,
       "reason": "[75% invested rule] Trading +0.5% above VWAP with +0.9% open gain and strong volume (rvol 1.23) following favorable court ruling on advertising.",
@@ -584,10 +620,10 @@
       "team": "defense",
       "qty": 5.0,
       "entry": 629.83,
-      "price": 631.73,
-      "value": 3158.65,
-      "pnl": 9.5,
-      "pnl_pct": 0.003,
+      "price": 627.92,
+      "value": 3139.6,
+      "pnl": -9.55,
+      "pnl_pct": -0.003,
       "stop": 621.53,
       "target": 649.92,
       "reason": "Upgraded by Morgan Stanley following 10-year F-35 deal (Importance 5). Price is above VWAP with strong volume (rvol 3.1).",
@@ -602,10 +638,10 @@
       "team": "entertainment",
       "qty": 2.0,
       "entry": 172.44,
-      "price": 171.79,
-      "value": 343.59,
-      "pnl": -1.29,
-      "pnl_pct": -0.0037,
+      "price": 172.17,
+      "value": 344.34,
+      "pnl": -0.54,
+      "pnl_pct": -0.0016,
       "stop": 170.08,
       "target": 177.85,
       "reason": "Stable RSI (52.5) with consistent positive 5-day performance (+1.1%) offering reliable defensive exposure.",
@@ -620,10 +656,10 @@
       "team": "financials",
       "qty": 10.0,
       "entry": 187.0,
-      "price": 186.26,
-      "value": 1862.65,
-      "pnl": -7.35,
-      "pnl_pct": -0.0039,
+      "price": 186.37,
+      "value": 1863.7,
+      "pnl": -6.3,
+      "pnl_pct": -0.0034,
       "stop": 183.59,
       "target": 191.98,
       "reason": "Momentum and news: Up 1.6% today, named lead bookrunner for Meta offering. RSI 40.4 offers room to run without being overbought. Strong deal flow catalyst.",
@@ -638,10 +674,10 @@
       "team": "tech",
       "qty": 6.0,
       "entry": 532.17,
-      "price": 528.88,
-      "value": 3173.28,
-      "pnl": -19.74,
-      "pnl_pct": -0.0062,
+      "price": 529.27,
+      "value": 3175.62,
+      "pnl": -17.4,
+      "pnl_pct": -0.0054,
       "stop": 524.94,
       "target": 548.92,
       "reason": "Explicit executive focus stock demonstrating relative strength (look +0.3%, rvol 1.76) trading cleanly above VWAP ahead of earnings catalyst.",
@@ -656,10 +692,10 @@
       "team": "defense",
       "qty": 5.0,
       "entry": 563.96,
-      "price": 564.17,
-      "value": 2820.85,
-      "pnl": 1.05,
-      "pnl_pct": 0.0004,
+      "price": 562.68,
+      "value": 2813.41,
+      "pnl": -6.39,
+      "pnl_pct": -0.0023,
       "stop": 556.4,
       "target": 581.82,
       "reason": "[75% invested rule] Bernstein price target upgrade to $590; prime defense anchor trading near open.",
@@ -670,14 +706,32 @@
       "setup": "news catalyst"
     },
     {
+      "symbol": "NOW",
+      "team": "tech",
+      "qty": 2.0,
+      "entry": 154.39,
+      "price": 154.32,
+      "value": 308.64,
+      "pnl": -0.14,
+      "pnl_pct": -0.0004,
+      "stop": 151.66,
+      "target": 160.94,
+      "reason": "Above VWAP (+0.1%), intraday trend up, m15 +0.3%, rvol 2.69; relative strength leader with earnings tomorrow after close, so no overnight gap risk.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 151.66,
+      "setup": "momentum"
+    },
+    {
       "symbol": "NVDA",
       "team": "tech",
       "qty": 11.0,
       "entry": 218.06,
-      "price": 216.24,
-      "value": 2378.64,
-      "pnl": -20.06,
-      "pnl_pct": -0.0084,
+      "price": 216.01,
+      "value": 2376.11,
+      "pnl": -22.59,
+      "pnl_pct": -0.0094,
       "stop": 214.66,
       "target": 225.56,
       "reason": "Announced $3B equity investment in Meta to expand AI Muse infrastructure, matching executive priority on NVDA momentum.",
@@ -692,10 +746,10 @@
       "team": "space",
       "qty": 4.0,
       "entry": 148.3,
-      "price": 149.02,
-      "value": 596.08,
-      "pnl": 2.88,
-      "pnl_pct": 0.0049,
+      "price": 147.84,
+      "value": 591.37,
+      "pnl": -1.83,
+      "pnl_pct": -0.0031,
       "stop": 146.33,
       "target": 153.01,
       "reason": "Deutsche Bank raised price target to $250; trading above VWAP (+0.2%) with rvol of 2.49.",
@@ -710,10 +764,10 @@
       "team": "healthcare",
       "qty": 3.0,
       "entry": 410.87,
-      "price": 410.97,
-      "value": 1232.91,
-      "pnl": 0.3,
-      "pnl_pct": 0.0002,
+      "price": 411.49,
+      "value": 1234.45,
+      "pnl": 1.84,
+      "pnl_pct": 0.0015,
       "stop": 404.94,
       "target": 423.44,
       "reason": "[75% invested rule] Above VWAP with strong rvol (1.46) following price target increase to $531 by Morgan Stanley.",
@@ -728,10 +782,10 @@
       "team": "space",
       "qty": 9.0,
       "entry": 69.32,
-      "price": 69.42,
-      "value": 624.78,
-      "pnl": 0.9,
-      "pnl_pct": 0.0014,
+      "price": 69.3,
+      "value": 623.7,
+      "pnl": -0.18,
+      "pnl_pct": -0.0003,
       "stop": 67.99,
       "target": 71.5,
       "reason": "Strong 15m momentum (+1.1%), trading above VWAP (+0.3%) with rvol of 2.73 and positive daily trend.",
@@ -1444,6 +1498,60 @@
       "reason": "FOXA is a defensive media name trading flat at VWAP (+0.0%) with low intraday volatility, matching executive orders to prioritize capital preservation and defensive VWAP bounces.",
       "stop_price": 63.92,
       "take_profit_price": 66.84
+    },
+    {
+      "time": "10:12",
+      "team": "tech",
+      "symbol": "NOW",
+      "qty": 21,
+      "est_price": 154.75,
+      "entry_price": null,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "submitted",
+      "conviction": 4,
+      "reason": "Above VWAP (+0.1%), intraday trend up, m15 +0.3%, rvol 2.69; relative strength leader with earnings tomorrow after close, so no overnight gap risk.",
+      "stop_price": 151.66,
+      "take_profit_price": 160.94
+    },
+    {
+      "time": "10:12",
+      "team": "tech",
+      "symbol": "AMD",
+      "qty": 6,
+      "est_price": 548.145,
+      "entry_price": null,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "submitted",
+      "conviction": 4,
+      "reason": "Meta partnership and $1B Meta equity investment (sentiment 0.9, importance 5); day +3.2% on rvol 2.44; RSI 25.5 suggests bounce potential from oversold levels.",
+      "stop_price": 537.18,
+      "take_profit_price": 570.07
+    },
+    {
+      "time": "10:12",
+      "team": "tech",
+      "symbol": "AVGO",
+      "qty": 9,
+      "est_price": 339.27,
+      "entry_price": null,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "submitted",
+      "conviction": 3,
+      "reason": "[75% invested rule] Analyst upgrade to $400 and Cramer endorsement; high rvol 3.44 but price below VWAP, awaiting bounce confirmation.",
+      "stop_price": 332.48,
+      "take_profit_price": 352.84
     }
   ],
   "blocked_today": [
@@ -1484,6 +1592,30 @@
       "time": "09:55",
       "team": "tech",
       "symbol": "TXN",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:12",
+      "team": "financials",
+      "symbol": "SOFI",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:12",
+      "team": "financials",
+      "symbol": "HOOD",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:12",
+      "team": "financials",
+      "symbol": "BLK",
       "action": "BUY",
       "reason": "conviction None is below the minimum 4"
     }
@@ -3871,12 +4003,12 @@
     }
   },
   "mood": {
-    "time": "2026-10-27T09:55-04:00",
+    "time": "2026-10-27T10:10-04:00",
     "regime": "normal",
-    "spy": 0.0012,
-    "qqq": 0.0041,
-    "fear_vixy": -0.0057,
-    "breadth": 0.44,
+    "spy": 0.001,
+    "qqq": 0.0037,
+    "fear_vixy": -0.0046,
+    "breadth": 0.4,
     "why": "no warning signs",
     "note": "Market is calm or rising. Trade your best setups as usual."
   },
@@ -7153,6 +7285,15 @@
             "BUY GD x9 (~$3203.1) [deploy]",
             "BUY NOC x5 (~$2824.35) [deploy]"
           ]
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:06",
+          "trigger": "scheduled look",
+          "market_view": "The market is calm with SPY slightly positive and defense names mostly flat or slightly down. Many large-cap stocks show extended RSI readings above 70 and weak relative volume, so breakouts lack follow-through. With the team already at the five-position maximum and no setup meeting the conviction 4 threshold, holding current positions and preserving capital is the correct play.",
+          "experiment": "",
+          "decisions": [],
+          "results": []
         }
       ],
       "lessons": [
@@ -7513,7 +7654,7 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-27T09:41-04:00"
+        "updated": "2026-10-27T10:06-04:00"
       },
       "research": {
         "time": "2026-10-27T08:47-04:00",
@@ -16468,6 +16609,87 @@
           "reason": "Explicit executive focus stock demonstrating relative strength (look +0.3%, rvol 1.76) trading cleanly above VWAP ahead of earnings catalyst.",
           "stop_price": 524.94,
           "take_profit_price": 548.92
+        },
+        {
+          "id": "tech-NOW-202610271012-e039",
+          "date": "2026-10-27",
+          "time": "10:12",
+          "symbol": "NOW",
+          "kind": "shares",
+          "qty": 21,
+          "dollars": 3249.75,
+          "est_price": 154.75,
+          "setup": "momentum",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 151.66,
+          "entry_price": null,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "submitted",
+          "conviction": 4,
+          "reason": "Above VWAP (+0.1%), intraday trend up, m15 +0.3%, rvol 2.69; relative strength leader with earnings tomorrow after close, so no overnight gap risk.",
+          "stop_price": 151.66,
+          "take_profit_price": 160.94
+        },
+        {
+          "id": "tech-AMD-202610271012-3d0a",
+          "date": "2026-10-27",
+          "time": "10:12",
+          "symbol": "AMD",
+          "kind": "shares",
+          "qty": 6,
+          "dollars": 3288.87,
+          "est_price": 548.145,
+          "setup": "news catalyst",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 537.18,
+          "entry_price": null,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "submitted",
+          "conviction": 4,
+          "reason": "Meta partnership and $1B Meta equity investment (sentiment 0.9, importance 5); day +3.2% on rvol 2.44; RSI 25.5 suggests bounce potential from oversold levels.",
+          "stop_price": 537.18,
+          "take_profit_price": 570.07
+        },
+        {
+          "id": "tech-AVGO-202610271012-fccd",
+          "date": "2026-10-27",
+          "time": "10:12",
+          "symbol": "AVGO",
+          "kind": "shares",
+          "qty": 9,
+          "dollars": 3053.43,
+          "est_price": 339.27,
+          "setup": "news catalyst",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 332.48,
+          "entry_price": null,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "submitted",
+          "conviction": 3,
+          "reason": "[75% invested rule] Analyst upgrade to $400 and Cramer endorsement; high rvol 3.44 but price below VWAP, awaiting bounce confirmation.",
+          "stop_price": 332.48,
+          "take_profit_price": 352.84
         }
       ],
       "blocked": [
@@ -18111,6 +18333,36 @@
             "SELL AMAT",
             "BUY MSFT x6 (~$3197.58)"
           ]
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:12",
+          "trigger": "must invest $11,161 more (75% rule)",
+          "market_view": "Market is calm and slightly bid with SPY +0.1% and QQQ +0.4%; volume is concentrated in AVGO and AMD on news while most other tech names are choppy near the open. We are 25% invested and must deploy roughly $11.2k to reach the 75% floor, but the president's defensive posture means only high-conviction entries will be taken. Existing MSFT and NVDA positions are within stops and will be held unless momentum deteriorates.",
+          "experiment": "",
+          "decisions": [
+            {
+              "symbol": "NOW",
+              "action": "BUY",
+              "conviction": 4,
+              "reason": "Above VWAP (+0.1%), intraday trend up, m15 +0.3%, rvol 2.69; relative strength leader with earnings tomorrow after close, so no overnight gap risk.",
+              "stop_loss_pct": 0.02,
+              "take_profit_pct": 0.04
+            },
+            {
+              "symbol": "AMD",
+              "action": "BUY",
+              "conviction": 4,
+              "reason": "Meta partnership and $1B Meta equity investment (sentiment 0.9, importance 5); day +3.2% on rvol 2.44; RSI 25.5 suggests bounce potential from oversold levels.",
+              "stop_loss_pct": 0.02,
+              "take_profit_pct": 0.04
+            }
+          ],
+          "results": [
+            "BUY NOW x21 (~$3249.75)",
+            "BUY AMD x6 (~$3288.87)",
+            "BUY AVGO x9 (~$3053.43) [deploy]"
+          ]
         }
       ],
       "lessons": [
@@ -18463,12 +18715,30 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-27T09:41-04:00"
+        "updated": "2026-10-27T10:12-04:00"
       },
       "research": {
         "time": "2026-10-27T08:47-04:00",
         "news": {
           "findings": [
+            {
+              "symbol": "AVGO",
+              "sentiment": 0.7,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Jim Cramer praised Broadcom's Anthropic partnership as excellent, boosting sentiment.",
+              "source": "benzinga",
+              "time": "10:05"
+            },
+            {
+              "symbol": "NVDA",
+              "sentiment": -0.3,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Cramer warned the press may hector Nvidia over similar deals, creating slight negative pressure.",
+              "source": "benzinga",
+              "time": "10:05"
+            },
             {
               "symbol": "ADBE",
               "sentiment": -0.2,
@@ -18616,8 +18886,8 @@
             }
           ],
           "urgent": [],
-          "overall": "Market sentiment is mildly bearish due to Burry\u2019s commentary, but company-specific updates for AAPL, NVDA, and ADBE are positive or neutral, suggesting limited immediate price impact.",
-          "items_read": 62
+          "overall": "Broadcom receives a strong endorsement that could lift its stock, while Nvidia may see modest headwinds from potential media criticism, leaving the IT sector sentiment mixed but slightly positive for Broadcom.",
+          "items_read": 63
         },
         "social": {
           "findings": [],
@@ -21674,8 +21944,8 @@
             }
           ],
           "urgent": [],
-          "overall": "The UPS comment is largely neutral for Amazon, offering slight reassurance but little market\u2011moving news for the consumer discretionary group.",
-          "items_read": 51
+          "overall": "No material news affecting the Consumer Discretionary tickers in the last two hours; sentiment remains neutral.",
+          "items_read": 52
         },
         "social": {
           "findings": [],
@@ -23555,6 +23825,30 @@
           "symbol": "GS",
           "action": "BUY",
           "reason": "team already has the maximum number of positions"
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:12",
+          "team": "financials",
+          "symbol": "SOFI",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 4"
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:12",
+          "team": "financials",
+          "symbol": "HOOD",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 4"
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:12",
+          "team": "financials",
+          "symbol": "BLK",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 4"
         }
       ],
       "plans": [
@@ -24751,6 +25045,15 @@
           "findings": [
             {
               "symbol": "SOFI",
+              "sentiment": 0.8,
+              "importance": 5,
+              "unconfirmed_rumor": false,
+              "summary": "SoFi beat Q3 expectations, posted record revenue and raised its 2026\u20112027 guidance, sending the stock up over 9%.",
+              "source": "benzinga",
+              "time": "10:10"
+            },
+            {
+              "symbol": "SOFI",
               "sentiment": -0.2,
               "importance": 3,
               "unconfirmed_rumor": false,
@@ -24987,19 +25290,13 @@
               "unconfirmed_rumor": false,
               "summary": "Mizuho cuts Circle\u2019s target to $43, citing AI\u2011driven risk to USDC holders.",
               "source": "benzinga"
-            },
-            {
-              "symbol": "COIN",
-              "sentiment": -0.7,
-              "importance": 5,
-              "unconfirmed_rumor": false,
-              "summary": "Bernstein slashes Coinbase price target to $250 as trading stalls.",
-              "source": "benzinga"
             }
           ],
-          "urgent": [],
-          "overall": "SoFi\u2019s impressive member surge is offset by weakening revenue per product, creating a cautious tone for the stock. No other listed financial\u2011services names showed new material news.",
-          "items_read": 52
+          "urgent": [
+            "SOFI"
+          ],
+          "overall": "SoFi delivered a strong Q3 beat, boosting its outlook and sending the stock up over 9%. No material news emerged for the rest of the financial services names, leaving their short\u2011term sentiment largely unchanged.",
+          "items_read": 53
         },
         "social": {
           "findings": [],
@@ -28860,6 +29157,15 @@
           "experiment": "Testing executive strategy pause while managing current positions with tight stop discipline and monitoring relative strength leaders.",
           "decisions": [],
           "results": []
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:00",
+          "trigger": "price moves in ['MRNA']",
+          "market_view": "",
+          "experiment": "",
+          "decisions": [],
+          "results": []
         }
       ],
       "lessons": [
@@ -29263,7 +29569,7 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-27T09:50-04:00"
+        "updated": "2026-10-27T10:00-04:00"
       },
       "research": {
         "time": "2026-10-27T08:53-04:00",
@@ -29913,30 +30219,6 @@
     }
   ],
   "blocked_recent": [
-    {
-      "date": "2026-10-23",
-      "time": "12:49",
-      "team": "financials",
-      "symbol": "COF",
-      "action": "BUY",
-      "reason": "already holding this stock"
-    },
-    {
-      "date": "2026-10-23",
-      "time": "12:49",
-      "team": "financials",
-      "symbol": "CME",
-      "action": "BUY",
-      "reason": "already holding this stock"
-    },
-    {
-      "date": "2026-10-23",
-      "time": "12:49",
-      "team": "financials",
-      "symbol": "AXP",
-      "action": "SHORT",
-      "reason": "already holding this stock"
-    },
     {
       "date": "2026-10-23",
       "time": "12:58",
@@ -31110,6 +31392,30 @@
       "time": "09:55",
       "team": "tech",
       "symbol": "TXN",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:12",
+      "team": "financials",
+      "symbol": "SOFI",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:12",
+      "team": "financials",
+      "symbol": "HOOD",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:12",
+      "team": "financials",
+      "symbol": "BLK",
       "action": "BUY",
       "reason": "conviction None is below the minimum 4"
     }
