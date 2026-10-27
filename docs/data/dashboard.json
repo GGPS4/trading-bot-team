@@ -1,9 +1,11 @@
 {
-  "updated": "2026-10-27T06:06-04:00",
+  "updated": "2026-10-27T07:36-04:00",
   "date": "2026-10-27",
   "mode": "paper",
   "health": {
-    "issues": []
+    "issues": [
+      "1 problem(s) in the last hour, latest: LLM: groq openai/gpt-oss-120b hit its per-minute limit: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m5eapq7ve"
+    ]
   },
   "paused": false,
   "rules": {
@@ -12,10 +14,10 @@
     "strategy": "day_trading"
   },
   "account": {
-    "equity": 99001.72,
+    "equity": 99028.34,
     "cash": 95830.96,
-    "day_change": 25.24,
-    "day_change_pct": 0.0003
+    "day_change": 51.86,
+    "day_change_pct": 0.0005
   },
   "benchmark": {
     "symbol": "SPY",
@@ -24,7 +26,7 @@
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 8,
-    "return_since_start": -0.01,
+    "return_since_start": -0.0097,
     "benchmark_since_start": -0.007,
     "max_drawdown": 0.0101
   },
@@ -172,8 +174,8 @@
         "IBM"
       ],
       "budget": 22268.03,
-      "invested": 3170.76,
-      "unrealized_pnl": -2.57,
+      "invested": 3197.38,
+      "unrealized_pnl": 24.05,
       "realized_today": 0,
       "trades_today": 0,
       "blocked_today": 0,
@@ -294,10 +296,10 @@
       "team": "tech",
       "qty": 4.0,
       "entry": 392.99,
-      "price": 389.94,
-      "value": 1559.76,
-      "pnl": -12.2,
-      "pnl_pct": -0.0078,
+      "price": 392.77,
+      "value": 1571.08,
+      "pnl": -0.88,
+      "pnl_pct": -0.0006,
       "stop": 384.23,
       "target": 403.83,
       "reason": "OR breakout above 385, Bernstein PT raise to $700, day +3.6, above VWAP; oversold/50d below so high risk, conviction strong due to catalyst.",
@@ -312,10 +314,10 @@
       "team": "tech",
       "qty": 9.0,
       "entry": 177.93,
-      "price": 179.0,
-      "value": 1611.0,
-      "pnl": 9.63,
-      "pnl_pct": 0.006,
+      "price": 180.7,
+      "value": 1626.3,
+      "pnl": 24.93,
+      "pnl_pct": 0.0156,
       "stop": 175.38,
       "target": 183.39,
       "reason": "[75% invested rule] OR breakout above VWAP and trend up, but low rvol.",
@@ -1325,7 +1327,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-27T06:06-04:00",
+    "time": "2026-10-27T07:36-04:00",
     "earnings": [
       {
         "date": "2026-10-27",
@@ -2833,6 +2835,24 @@
   "overnight": {
     "defense": [
       {
+        "symbol": "NOC",
+        "sentiment": 0.2,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Northrop Grumman announced a partnership with Operation Homefront's November campaign to support military families.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T06:50-04:00"
+      },
+      {
+        "symbol": "PLTR",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Rosenblatt Securities raised Palantir's price target from $225 to $260, indicating stronger expectations.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T06:50-04:00"
+      },
+      {
         "symbol": "GD",
         "sentiment": 0.6,
         "importance": 3,
@@ -2885,27 +2905,27 @@
         "summary": "Analyst coverage notes BAH\u2019s 3.01% dividend yield among high\u2011yield industrials.",
         "source": "benzinga",
         "seen_at": "2026-10-26T07:46-04:00"
-      },
-      {
-        "symbol": "BAH",
-        "sentiment": 0.6,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "TD Cowen upgrades Booz Allen Hamilton to Buy with a $95 price target.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T07:46-04:00"
-      },
-      {
-        "symbol": "LMT",
-        "sentiment": 0.7,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Jefferies raises Lockheed Martin\u2019s price target to $615 from $595.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T07:46-04:00"
       }
     ],
     "space": [
+      {
+        "symbol": "BA",
+        "sentiment": 0.2,
+        "importance": 5,
+        "unconfirmed_rumor": false,
+        "summary": "Boeing reported a $745B Q3 backlog and beat sales estimates, though adjusted EPS missed expectations.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:35-04:00"
+      },
+      {
+        "symbol": "SPCX",
+        "sentiment": -0.3,
+        "importance": 2,
+        "unconfirmed_rumor": true,
+        "summary": "Analyst warns a proposed Tesla\u2011SpaceX merger could hurt SpaceX shareholders and create political risk",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
       {
         "symbol": "SPCX",
         "sentiment": 0.2,
@@ -2959,27 +2979,36 @@
         "summary": "ARK analyst predicts SpaceX could enable intercontinental electric aviation, boosting future growth prospects.",
         "source": "benzinga",
         "seen_at": "2026-10-27T00:45-04:00"
-      },
-      {
-        "symbol": "BA",
-        "sentiment": -0.2,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Boeing received a $16.7\u202fmillion U.S. Navy contract to manage the shutdown of F/A-18E/F Super Hornet and EA-18G Growler production lines, indicating a pause in those programs.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T22:30-04:00"
-      },
-      {
-        "symbol": "SPCX",
-        "sentiment": 0.0,
-        "importance": 2,
-        "unconfirmed_rumor": true,
-        "summary": "Barclays suggests a potential SpaceX-Tesla merger could accelerate AI and autonomous driving initiatives, but no official announcement or filing exists.",
-        "source": "Benzinga",
-        "seen_at": "2026-10-26T16:55-04:00"
       }
     ],
     "entertainment": [
+      {
+        "symbol": "TKO",
+        "sentiment": -0.2,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Goldman Sachs lowered its price target for TKO Group to $215 from $220.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T07:36-04:00"
+      },
+      {
+        "symbol": "BAM",
+        "sentiment": 0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Brookfield signs agreement to acquire an indirect minority interest in La Trobe Financial, seen as a modestly positive strategic move.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
+      {
+        "symbol": "BAM",
+        "sentiment": 0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Brookfield to invest up to $9\u202fbillion in Naver's AI infrastructure, viewed as a positive growth initiative.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
       {
         "symbol": "DIS",
         "sentiment": 0.3,
@@ -3024,18 +3053,54 @@
         "summary": "Brookfield Asset Management opened a new office in Doha, Qatar to expand its Gulf presence.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-26T06:46-04:00"
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": -0.6,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Internal data shows Netflix subscribers are spending less time on the platform and opening the app less frequently.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-25T21:06-04:00"
       }
     ],
     "tech": [
+      {
+        "symbol": "AAPL",
+        "sentiment": 0.8,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "Goldman Sachs raised Apple\u2019s price target to $390, indicating a bullish outlook.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T07:36-04:00"
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": 0.7,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "Broadcom\u2019s stock climbed after Anthropic announced a $63\u202fbillion AI partnership, boosting sentiment.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:36-04:00"
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": 0.7,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "NVIDIA announced a $3\u202fbillion equity investment in Meta to expand their AI Muse partnership, signaling strong confidence in its AI hardware roadmap.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": -0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Apple launched a replacement program for iPhone Duo units with display defects, indicating a product quality issue but a proactive fix.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": 0.2,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Analysts have revised Microsoft Q1 forecasts ahead of its earnings call, expecting $4.72 EPS and $90.69\u202fB revenue.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
       {
         "symbol": "MSFT",
         "sentiment": -0.2,
@@ -3062,54 +3127,45 @@
         "summary": "Mark Cuban warned Micron is being treated like a meme stock, raising bubble concerns",
         "source": "benzinga",
         "seen_at": "2026-10-27T05:21-04:00"
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": -0.4,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Senator Warren warned that big AI investments and rising debt could trigger a financial crisis, casting regulatory risk over Microsoft.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T04:36-04:00"
-      },
-      {
-        "symbol": "MU",
-        "sentiment": 0.6,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Elon Musk's comment on robot memory demand could boost Micron's outlook, per analyst.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T03:00-04:00"
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": 0.6,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "NVIDIA will invest $3B in Meta\u2019s equity offering and expand their Muse model collaboration for inference and training.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T02:15-04:00"
-      },
-      {
-        "symbol": "TXN",
-        "sentiment": 0.2,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Texas Instruments priced $2.0B of notes to fund its Silicon Laboratories acquisition.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T02:15-04:00"
-      },
-      {
-        "symbol": "IBM",
-        "sentiment": 0.3,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "IBM unveiled AI\u2011agent security features with HashiCorp Vault and Watsonx Orchestrate at TechXchange 2026.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T02:15-04:00"
       }
     ],
     "consumer": [
+      {
+        "symbol": "RCL",
+        "sentiment": -0.4,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Q4 adjusted EPS guidance lowered to $3.48-$3.58, below the $3.66 estimate.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
+      {
+        "symbol": "RCL",
+        "sentiment": 0.1,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Q3 adjusted EPS $6.57 beat the $6.38 estimate, but sales $5.591B missed the $5.607B estimate.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
+      {
+        "symbol": "RCL",
+        "sentiment": 0.2,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "FY2026 EPS guidance raised to $17.85-$17.95, slightly above estimate; sales guidance $19.549B just below estimate.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
+      {
+        "symbol": "BKNG",
+        "sentiment": -0.3,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Baird cut Booking Holdings price target to $223 from $230.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
       {
         "symbol": "AMZN",
         "sentiment": 0.2,
@@ -3145,119 +3201,128 @@
         "summary": "Amazon Business adds Business Prime perks for SMBs through new partnerships with QuickBooks, CrowdStrike and Gusto.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-26T22:30-04:00"
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": 0.1,
-        "importance": 1,
-        "unconfirmed_rumor": false,
-        "summary": "Amazon Business announced it will host its annual 'Reshape 2026' conference in Nashville, focusing on procurement and AI, which is a standard marketing event with no immediate financial impact.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T19:10-04:00"
-      },
-      {
-        "symbol": "LKQ",
-        "sentiment": -0.9,
-        "importance": 5,
-        "unconfirmed_rumor": false,
-        "summary": "LKQ announced the immediate departure of its CEO, withdrew full-year guidance, and is facing a securities investigation following weak preliminary Q3 results.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T18:10-04:00"
-      },
-      {
-        "symbol": "CMG",
-        "sentiment": 0.0,
-        "importance": 1,
-        "unconfirmed_rumor": false,
-        "summary": "Chipotle announced a standard Veterans Day promotional deal for November 11, 2026.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T18:10-04:00"
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": -0.4,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Tesla has canceled Cybertruck plans in two countries, signaling continued underperformance and limited international demand for the vehicle.",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T16:55-04:00"
       }
     ],
     "financials": [
       {
-        "symbol": "V",
-        "sentiment": 0,
-        "importance": 1,
-        "unconfirmed_rumor": false,
-        "summary": "Futures mixed as Fed starts meeting; no specific Visa news",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T06:06-04:00"
-      },
-      {
-        "symbol": "COIN",
-        "sentiment": 0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Coinbase CEO reiterated Bitcoin's fixed 21\u202fmillion supply, emphasizing its scarcity.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T02:15-04:00"
-      },
-      {
-        "symbol": "C",
-        "sentiment": 0.4,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Citi is participating in a $63 billion financing structure with Broadcom to support AI compute infrastructure development.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T19:10-04:00"
-      },
-      {
         "symbol": "MS",
-        "sentiment": 0.4,
+        "sentiment": 0.3,
         "importance": 3,
         "unconfirmed_rumor": false,
-        "summary": "Morgan Stanley is joining a $63 billion financing structure alongside major institutions to fund AI compute capacity.",
+        "summary": "Morgan Stanley named lead joint bookrunning manager for Meta's stock offerings, indicating strong deal flow.",
         "source": "fiscal.ai",
-        "seen_at": "2026-10-26T19:10-04:00"
+        "seen_at": "2026-10-27T07:36-04:00"
       },
       {
-        "symbol": "JPM",
-        "sentiment": 0.0,
-        "importance": 1,
+        "symbol": "SPGI",
+        "sentiment": -0.1,
+        "importance": 4,
         "unconfirmed_rumor": false,
-        "summary": "JPMorgan disclosed a routine change in its voting rights and financial instrument position in Vonovia SE.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T19:10-04:00"
+        "summary": "S&P Global lowered FY2026 GAAP EPS guidance but raised sales outlook.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:36-04:00"
       },
       {
-        "symbol": "BLK",
-        "sentiment": 0.0,
-        "importance": 1,
+        "symbol": "SPGI",
+        "sentiment": 0.3,
+        "importance": 4,
         "unconfirmed_rumor": false,
-        "summary": "BlackRock Canada announced standard October cash distributions for its iShares Premium Money Market ETF.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T19:10-04:00"
+        "summary": "S&P Global increased FY2026 adjusted EPS guidance and expects sales above estimates.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:36-04:00"
       },
       {
-        "symbol": "GS",
-        "sentiment": 0.2,
+        "symbol": "SPGI",
+        "sentiment": 0.4,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "S&P Global reported Q3 adjusted EPS and sales beats, surpassing analyst expectations.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:36-04:00"
+      },
+      {
+        "symbol": "SPGI",
+        "sentiment": 0,
         "importance": 2,
         "unconfirmed_rumor": false,
-        "summary": "Goldman Sachs is expanding its wealth management advisory teams in Asia to capture demand from new millionaires.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T17:40-04:00"
+        "summary": "S&P Global is evaluating alternatives for Capital IQ and related data operations.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:36-04:00"
       },
       {
-        "symbol": "ICE",
-        "sentiment": -0.3,
+        "symbol": "FLG",
+        "sentiment": 0.2,
         "importance": 3,
         "unconfirmed_rumor": false,
-        "summary": "Public companies are objecting to the OKXICE tokenized share platform, posing regulatory and reputational risk for Intercontinental Exchange.",
+        "summary": "Cantor Fitzgerald maintains overweight rating on Flagstar Bank with a $16 price target.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:36-04:00"
+      },
+      {
+        "symbol": "COF",
+        "sentiment": 0.7,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Evercore ISI raised its price target for Capital One to $230, up from $220, indicating a bullish outlook.",
         "source": "fiscal.ai",
-        "seen_at": "2026-10-26T08:17-04:00"
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
+      {
+        "symbol": "AXP",
+        "sentiment": 0.7,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Evercore ISI increased its price target for American Express to $330 from $320, suggesting improved expectations.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T06:51-04:00"
       }
     ],
     "healthcare": [
+      {
+        "symbol": "ISRG",
+        "sentiment": 0.7,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Daiwa Securities raised its price target for Intuitive Surgical to $490, indicating a more optimistic valuation outlook.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T07:36-04:00"
+      },
+      {
+        "symbol": "UNH",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Morgan Stanley kept an overweight stance on UnitedHealth Group and lifted its price target to $531.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:36-04:00"
+      },
+      {
+        "symbol": "LLY",
+        "sentiment": 0.2,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "A judge ruled that Eli\u202fLilly\u2019s weight\u2011loss drug ads have negligible impact on sales, rejecting Novo Nordisk\u2019s attempt to block them.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T07:36-04:00"
+      },
+      {
+        "symbol": "UNH",
+        "sentiment": 0.2,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Morgan Stanley raised UnitedHealth's price target to $531.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
+      {
+        "symbol": "LLY",
+        "sentiment": 0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Court denied Novo Nordisk's request to block Eli Lilly's ads for Wegovy and Ozempic.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-27T06:51-04:00"
+      },
       {
         "symbol": "MRK",
         "sentiment": 0.4,
@@ -3284,51 +3349,6 @@
         "summary": "An Intuitive Surgical insider executed a stock sale, which is a routine transaction with no significant signal for the broader market.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-26T19:10-04:00"
-      },
-      {
-        "symbol": "ISRG",
-        "sentiment": -0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "An insider sold approximately $9.08 million worth of Intuitive Surgical shares, a routine transaction that typically signals mild negative sentiment but lacks immediate price-moving impact.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T16:40-04:00"
-      },
-      {
-        "symbol": "REGN",
-        "sentiment": 0.8,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Regeneron secured a $270\u202fmillion U.S. government contract extension for its Ebola treatment Inmazeb through 2031.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T08:17-04:00"
-      },
-      {
-        "symbol": "BMY",
-        "sentiment": -0.2,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Piper Sandler keeps BMY overweight but cuts its price target to $78",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T08:02-04:00"
-      },
-      {
-        "symbol": "DHR",
-        "sentiment": 0.7,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Rothschild & Co Redburn raised its price target for Danaher to $220 from $205, indicating a bullish outlook.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T07:47-04:00"
-      },
-      {
-        "symbol": "REGN",
-        "sentiment": 0.7,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Regeneron secured an extended BARDA agreement to supply Inmazeb through 2031, earning about $270\u202fmillion in payments.",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T07:32-04:00"
       }
     ]
   },
@@ -6245,6 +6265,24 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "NOC",
+            "sentiment": 0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Northrop Grumman announced a partnership with Operation Homefront's November campaign to support military families.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:50-04:00"
+          },
+          {
+            "symbol": "PLTR",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Rosenblatt Securities raised Palantir's price target from $225 to $260, indicating stronger expectations.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:50-04:00"
+          },
           {
             "symbol": "GD",
             "sentiment": 0.6,
@@ -9598,6 +9636,24 @@
         },
         "overnight": [
           {
+            "symbol": "BA",
+            "sentiment": 0.2,
+            "importance": 5,
+            "unconfirmed_rumor": false,
+            "summary": "Boeing reported a $745B Q3 backlog and beat sales estimates, though adjusted EPS missed expectations.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:35-04:00"
+          },
+          {
+            "symbol": "SPCX",
+            "sentiment": -0.3,
+            "importance": 2,
+            "unconfirmed_rumor": true,
+            "summary": "Analyst warns a proposed Tesla\u2011SpaceX merger could hurt SpaceX shareholders and create political risk",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
             "symbol": "SPCX",
             "sentiment": 0.2,
             "importance": 2,
@@ -9776,15 +9832,6 @@
             "summary": "SpaceX reportedly closed $40\u202fB of debt for GPU purchases, a de\u2011leveraging move but not material to the current quarter.",
             "source": "benzinga",
             "seen_at": "2026-10-26T02:11-04:00"
-          },
-          {
-            "symbol": "SPCX",
-            "sentiment": 0.5,
-            "importance": 4,
-            "unconfirmed_rumor": false,
-            "summary": "SpaceX secured $40\u202fbillion in GPU financing to boost its AI capabilities, which is viewed as a positive growth catalyst.",
-            "source": "benzinga",
-            "seen_at": "2026-10-26T00:41-04:00"
           }
         ],
         "technicals": {
@@ -12371,6 +12418,33 @@
         },
         "overnight": [
           {
+            "symbol": "TKO",
+            "sentiment": -0.2,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Goldman Sachs lowered its price target for TKO Group to $215 from $220.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "BAM",
+            "sentiment": 0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Brookfield signs agreement to acquire an indirect minority interest in La Trobe Financial, seen as a modestly positive strategic move.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
+            "symbol": "BAM",
+            "sentiment": 0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Brookfield to invest up to $9\u202fbillion in Naver's AI infrastructure, viewed as a positive growth initiative.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
             "symbol": "DIS",
             "sentiment": 0.3,
             "importance": 3,
@@ -12414,15 +12488,6 @@
             "summary": "Brookfield Asset Management opened a new office in Doha, Qatar to expand its Gulf presence.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-26T06:46-04:00"
-          },
-          {
-            "symbol": "NFLX",
-            "sentiment": -0.6,
-            "importance": 4,
-            "unconfirmed_rumor": false,
-            "summary": "Internal data shows Netflix subscribers are spending less time on the platform and opening the app less frequently.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-25T21:06-04:00"
           }
         ],
         "technicals": {
@@ -15980,6 +16045,51 @@
         },
         "overnight": [
           {
+            "symbol": "AAPL",
+            "sentiment": 0.8,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Goldman Sachs raised Apple\u2019s price target to $390, indicating a bullish outlook.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "AVGO",
+            "sentiment": 0.7,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Broadcom\u2019s stock climbed after Anthropic announced a $63\u202fbillion AI partnership, boosting sentiment.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "NVDA",
+            "sentiment": 0.7,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "NVIDIA announced a $3\u202fbillion equity investment in Meta to expand their AI Muse partnership, signaling strong confidence in its AI hardware roadmap.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
+            "symbol": "AAPL",
+            "sentiment": -0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Apple launched a replacement program for iPhone Duo units with display defects, indicating a product quality issue but a proactive fix.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
+            "symbol": "MSFT",
+            "sentiment": 0.2,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Analysts have revised Microsoft Q1 forecasts ahead of its earnings call, expecting $4.72 EPS and $90.69\u202fB revenue.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
             "symbol": "MSFT",
             "sentiment": -0.2,
             "importance": 2,
@@ -16203,51 +16313,6 @@
             "summary": "Broadcom signaled interest in buying up to $5\u202fbn of Meta shares, indicating excess cash deployment.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-26T08:17-04:00"
-          },
-          {
-            "symbol": "MU",
-            "sentiment": 0.3,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Micron shares rose about 1% premarket on strong AI demand despite warnings of a memory\u2011chip cycle peak.",
-            "source": "benzinga",
-            "seen_at": "2026-10-26T08:01-04:00"
-          },
-          {
-            "symbol": "AMD",
-            "sentiment": 0.3,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "AMD plans to invest up to $5\u202fbillion in Meta\u2019s share offering, signaling strong cash position.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T07:46-04:00"
-          },
-          {
-            "symbol": "AMD",
-            "sentiment": 0.4,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "AMD partners with Fermilab\u2019s Genesis Mission to accelerate AI\u2011focused chip design.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T07:46-04:00"
-          },
-          {
-            "symbol": "AVGO",
-            "sentiment": 0.2,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Broadcom is part of Seagate\u2019s high\u2011capacity storage rollout with Microsoft, indicating growth in storage solutions.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T07:46-04:00"
-          },
-          {
-            "symbol": "AMD",
-            "sentiment": 0.1,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "AMD indicated interest in purchasing up to $5B of Meta shares",
-            "source": "benzinga",
-            "seen_at": "2026-10-26T07:31-04:00"
           }
         ],
         "technicals": {
@@ -19054,6 +19119,42 @@
         },
         "overnight": [
           {
+            "symbol": "RCL",
+            "sentiment": -0.4,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Q4 adjusted EPS guidance lowered to $3.48-$3.58, below the $3.66 estimate.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
+            "symbol": "RCL",
+            "sentiment": 0.1,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Q3 adjusted EPS $6.57 beat the $6.38 estimate, but sales $5.591B missed the $5.607B estimate.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
+            "symbol": "RCL",
+            "sentiment": 0.2,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "FY2026 EPS guidance raised to $17.85-$17.95, slightly above estimate; sales guidance $19.549B just below estimate.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
+            "symbol": "BKNG",
+            "sentiment": -0.3,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Baird cut Booking Holdings price target to $223 from $230.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
             "symbol": "AMZN",
             "sentiment": 0.2,
             "importance": 3,
@@ -21832,6 +21933,105 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "MS",
+            "sentiment": 0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Morgan Stanley named lead joint bookrunning manager for Meta's stock offerings, indicating strong deal flow.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "SPGI",
+            "sentiment": -0.1,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "S&P Global lowered FY2026 GAAP EPS guidance but raised sales outlook.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "SPGI",
+            "sentiment": 0.3,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "S&P Global increased FY2026 adjusted EPS guidance and expects sales above estimates.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "SPGI",
+            "sentiment": 0.4,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "S&P Global reported Q3 adjusted EPS and sales beats, surpassing analyst expectations.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "SPGI",
+            "sentiment": 0,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "S&P Global is evaluating alternatives for Capital IQ and related data operations.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "FLG",
+            "sentiment": 0.2,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Cantor Fitzgerald maintains overweight rating on Flagstar Bank with a $16 price target.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "COF",
+            "sentiment": 0.7,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Evercore ISI raised its price target for Capital One to $230, up from $220, indicating a bullish outlook.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
+            "symbol": "AXP",
+            "sentiment": 0.7,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Evercore ISI increased its price target for American Express to $330 from $320, suggesting improved expectations.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
+            "symbol": "JPM",
+            "sentiment": 0.4,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "JPMorgan Asset Management aims to grow its Asia\u2011Pacific assets to $600\u202fbn by 2030, reflecting strong regional demand.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
+            "symbol": "JPM",
+            "sentiment": 0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "JPMorgan Chase disclosed a higher stake in Yellow Cake PLC, now at 5.90%, signaling continued interest in uranium exposure.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
+            "symbol": "C",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Citigroup is among banks close to finalising a $10\u202fbn loan facility for Saudi Aramco, potentially boosting fee income.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
           {
             "symbol": "V",
             "sentiment": 0,
@@ -25822,6 +26022,51 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "ISRG",
+            "sentiment": 0.7,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Daiwa Securities raised its price target for Intuitive Surgical to $490, indicating a more optimistic valuation outlook.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "UNH",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Morgan Stanley kept an overweight stance on UnitedHealth Group and lifted its price target to $531.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "LLY",
+            "sentiment": 0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "A judge ruled that Eli\u202fLilly\u2019s weight\u2011loss drug ads have negligible impact on sales, rejecting Novo Nordisk\u2019s attempt to block them.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T07:36-04:00"
+          },
+          {
+            "symbol": "UNH",
+            "sentiment": 0.2,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Morgan Stanley raised UnitedHealth's price target to $531.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
+          {
+            "symbol": "LLY",
+            "sentiment": 0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Court denied Novo Nordisk's request to block Eli Lilly's ads for Wegovy and Ozempic.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-27T06:51-04:00"
+          },
           {
             "symbol": "MRK",
             "sentiment": 0.4,
