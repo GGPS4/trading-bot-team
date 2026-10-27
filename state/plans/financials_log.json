@@ -751,5 +751,74 @@
       "BUY ICE x12 (~$1920)",
       "BUY C x16 (~$1962.4)"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "09:39",
+    "trigger": "price moves in ['SPGI']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "SPGI",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Strong earnings beat and strategic review news driving high volume (rvol 7.0) and +3.1% move. High conviction setup for intraday momentum.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "GS",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Relative strength leader with +1.8% move and high volume (rvol 1.76). Aligns with executive order to focus on GS for stability.",
+        "stop_loss_pct": 0.012,
+        "take_profit_pct": 0.025
+      },
+      {
+        "symbol": "HOOD",
+        "action": "HOLD",
+        "conviction": null,
+        "reason": "Position is flat (-0.03%). Holding for potential bounce or stop-out. RSI is low (27.6) but volume is high (5.4). Waiting for clearer direction.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "C",
+        "action": "HOLD",
+        "conviction": null,
+        "reason": "Position is flat (-0.11%). Holding to see if momentum continues or if it hits the stop at 120.20.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "ICE",
+        "action": "HOLD",
+        "conviction": null,
+        "reason": "Position is slightly down (-0.32%). Holding to see if it reclaims VWAP or hits stop.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "JPM",
+        "action": "HOLD",
+        "conviction": null,
+        "reason": "Position is slightly down (-0.19%). Holding for stability as per executive order.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "MS",
+        "action": "HOLD",
+        "conviction": null,
+        "reason": "Position is slightly down (-0.16%). Holding for news catalyst follow-through.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "BUY SPGI blocked: team already has the maximum number of positions",
+      "BUY GS blocked: team already has the maximum number of positions"
+    ]
   }
 ]

@@ -1128,5 +1128,34 @@
       "BUY AMD x4 (~$2159.44)",
       "BUY NVDA x11 (~$2397.23)"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "09:41",
+    "trigger": "price moves in ['AMD']",
+    "market_view": "The broader market remains risk-on with SPY up 0.4% and QQQ leading up 0.8%, supported by strong momentum in major AI and semiconductor names. We are rotating out of lagging names like AMAT into relative strength leaders like MSFT to meet our executive mandate and 75% minimum budget allocation. Tight stops and strict execution rules are applied to preserve capital while capturing intraday momentum.",
+    "experiment": "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms.",
+    "decisions": [
+      {
+        "symbol": "AMAT",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "AMAT is failing intraday momentum (down 0.9% on last look, trading below entry price) with sub-1.0 relative volume (0.82). Closing to redeploy capital into higher-conviction setups.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "MSFT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Explicit executive focus stock demonstrating relative strength (look +0.3%, rvol 1.76) trading cleanly above VWAP ahead of earnings catalyst.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL AMAT",
+      "BUY MSFT x6 (~$3197.58)"
+    ]
   }
 ]

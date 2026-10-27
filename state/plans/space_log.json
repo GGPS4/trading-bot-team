@@ -997,5 +997,43 @@
       "WATCHLIST removed BKSY",
       "WATCHLIST added LPTH"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "09:39",
+    "trigger": "big news on ['LPTH']",
+    "market_view": "The broader market is calm to bullish with SPY +0.3% and QQQ +0.6%, while VIXY drops 0.5%. Aerospace stocks show intraday momentum in select names like RKLB, FLY, and LPTH following defense news catalysts. Respecting executive orders for a mandatory strategy pause, we maintain strict selectivity and monitor current open positions.",
+    "experiment": "Require VWAP confirmation and minimum 15-minute post-open wait before taking new setups.",
+    "decisions": [],
+    "results": []
+  },
+  {
+    "date": "2026-10-27",
+    "time": "09:41",
+    "trigger": "price moves in ['RKLB', 'LUNR', 'ASTS', 'FLY', 'LPTH']",
+    "market_view": "Broader market is supportive with SPY +0.4% and QQQ +0.8% while VIXY declines. Space and aerospace stock momentum is concentrated in high-volume catalyst movers like LPTH, RKLB, and SPCX, while legacy names like GE lag below VWAP.",
+    "experiment": "Introduce a filter that blocks entries on symbols that have moved >8% intraday until a pull-back of at least 0.5% occurs",
+    "decisions": [
+      {
+        "symbol": "GE",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "GE has stalled below VWAP (-0.1%) with flat momentum; closing this stagnant trade to rotate capital into higher conviction setups.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "LPTH",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "LightPath secured a major defense contract for over 50,000 drone optical assemblies; price is holding strongly above VWAP (+2.2%) with +3.6% momentum on this look.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL GE",
+      "BUY LPTH x82 (~$663.38)"
+    ]
   }
 ]

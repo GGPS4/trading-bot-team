@@ -1,49 +1,85 @@
 {
   "date": "2026-10-27",
-  "time": "09:34",
-  "trigger": "first look this run",
-  "orders": [
+  "time": "09:41",
+  "trigger": "big news on ['CACI']",
+  "market_view": "The overall market is calm to rising with SPY +0.3% and QQQ +0.6%, creating a supportive risk-on backdrop. Prime defense stocks are showing strong early volume and news catalysts, specifically upgrades and contract wins. We focus on high-conviction entries above VWAP to comply with executive orders and preserve capital.",
+  "decisions": [
     {
       "symbol": "LMT",
       "action": "BUY",
-      "shares": 5,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst"
-    },
-    {
-      "symbol": "LDOS",
-      "action": "BUY",
-      "shares": 23,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst"
+      "conviction": 5,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Upgraded by Morgan Stanley following 10-year F-35 deal (Importance 5). Price is above VWAP with strong volume (rvol 3.1)."
     },
     {
       "symbol": "CACI",
       "action": "BUY",
-      "shares": 5,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst"
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.035,
+      "setup": "news catalyst",
+      "reason": "Secured major Navy contract wins ($145M and $281M, Importance 4) with strong 5d/20d momentum."
     },
     {
-      "symbol": "GD",
+      "symbol": "LDOS",
       "action": "BUY",
-      "shares": 9,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst"
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Secured $95M Defense contract win (Importance 4) supporting recent multi-week uptrend."
+    }
+  ],
+  "ranked_ideas": [
+    {
+      "symbol": "GD",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "VWAP bounce",
+      "reason": "Prime anchor contractor holding above VWAP following $135.9M Army contract modification."
+    },
+    {
+      "symbol": "NOC",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Bernstein price target upgrade to $590; prime defense anchor trading near open."
     },
     {
       "symbol": "RTX",
-      "action": "BUY",
-      "shares": 16,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst"
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "VWAP bounce",
+      "reason": "Prime anchor contractor maintaining steady trend with low downside volatility."
+    },
+    {
+      "symbol": "AVAV",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "ARK Invest buying ~$7.3M shares shows institutional accumulation off oversold levels."
+    },
+    {
+      "symbol": "KTOS",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "ARK Investment buying ~$2.5M shares, potential bounce candidate."
     }
   ],
+  "experiment": "Prioritize prime defense contractors (LMT, RTX, GD, NOC) for opening range breakouts when sector-wide analyst target upgrades occur.",
   "watchlist_changes": {
     "add": [],
     "remove": []

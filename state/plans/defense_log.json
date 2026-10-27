@@ -958,5 +958,45 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-27",
+    "time": "09:41",
+    "trigger": "big news on ['CACI']",
+    "market_view": "The overall market is calm to rising with SPY +0.3% and QQQ +0.6%, creating a supportive risk-on backdrop. Prime defense stocks are showing strong early volume and news catalysts, specifically upgrades and contract wins. We focus on high-conviction entries above VWAP to comply with executive orders and preserve capital.",
+    "experiment": "Prioritize prime defense contractors (LMT, RTX, GD, NOC) for opening range breakouts when sector-wide analyst target upgrades occur.",
+    "decisions": [
+      {
+        "symbol": "LMT",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Upgraded by Morgan Stanley following 10-year F-35 deal (Importance 5). Price is above VWAP with strong volume (rvol 3.1).",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "CACI",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Secured major Navy contract wins ($145M and $281M, Importance 4) with strong 5d/20d momentum.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "LDOS",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Secured $95M Defense contract win (Importance 4) supporting recent multi-week uptrend.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY LMT x5 (~$3154.95)",
+      "BUY CACI x5 (~$3328.35)",
+      "BUY LDOS x23 (~$3204.13)",
+      "BUY GD x9 (~$3203.1) [deploy]",
+      "BUY NOC x5 (~$2824.35) [deploy]"
+    ]
   }
 ]
