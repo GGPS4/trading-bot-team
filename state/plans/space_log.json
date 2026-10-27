@@ -1035,5 +1035,61 @@
       "SELL GE",
       "BUY LPTH x82 (~$663.38)"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "09:50",
+    "trigger": "price moves in ['RDW', 'FLY']",
+    "market_view": "Broad market indices are mildly positive with SPY +0.1% and QQQ +0.4% while VIXY declines -0.9%. Sector momentum is favoring defense and aerospace leaders showing relative strength above VWAP with elevated relative volume, such as GE, VSAT, and SPCX.",
+    "experiment": "Require VWAP confirmation after a news catalyst before entering long positions",
+    "decisions": [
+      {
+        "symbol": "GE",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Trading above VWAP (+0.5%) with strong m15 momentum (+0.9%), heavy relative volume (4.59x), and an uptrend.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "VSAT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strong 15m momentum (+1.1%), trading above VWAP (+0.3%) with rvol of 2.73 and positive daily trend.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "SPCX",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Deutsche Bank raised price target to $250; trading above VWAP (+0.2%) with rvol of 2.49.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "HWM",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Trading above VWAP (+0.4%) with solid m15 momentum (+0.8%) and positive bullish analyst coverage ahead of earnings.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "BA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strong intraday recovery from open (+1.5%), sitting at VWAP with heavy rvol (3.01x) and solid Q3 order backlog support.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY GE x2 (~$583.38)",
+      "BUY VSAT x9 (~$621.76)",
+      "BUY SPCX x4 (~$594.22)",
+      "BUY HWM x3 (~$584.43)",
+      "BUY BA x3 (~$557.19)"
+    ]
   }
 ]

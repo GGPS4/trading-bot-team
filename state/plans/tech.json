@@ -1,78 +1,40 @@
 {
   "date": "2026-10-27",
-  "time": "09:41",
-  "trigger": "price moves in ['AMD']",
-  "market_view": "The broader market remains risk-on with SPY up 0.4% and QQQ leading up 0.8%, supported by strong momentum in major AI and semiconductor names. We are rotating out of lagging names like AMAT into relative strength leaders like MSFT to meet our executive mandate and 75% minimum budget allocation. Tight stops and strict execution rules are applied to preserve capital while capturing intraday momentum.",
+  "time": "09:55",
+  "trigger": "must invest $11,161 more (75% rule)",
   "decisions": [
     {
-      "symbol": "AMAT",
-      "action": "SELL",
-      "conviction": 4,
+      "action": "BUY",
+      "symbol": "AVGO",
+      "setup": "news catalyst",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "AMAT is failing intraday momentum (down 0.9% on last look, trading below entry price) with sub-1.0 relative volume (0.82). Closing to redeploy capital into higher-conviction setups."
+      "reason": "Strong news catalyst with multiple upgrades to $400 target and +3.8% day gain on 3.8x relative volume. Trading near VWAP with flat trend, offering a high-conviction entry for relative strength."
     },
     {
-      "symbol": "MSFT",
       "action": "BUY",
-      "conviction": 4,
+      "symbol": "AMD",
+      "setup": "news catalyst",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
+      "reason": "Major strategic partnership with Meta and $1B investment. +3.2% day gain on 2.98x relative volume. Trading at VWAP, providing a solid entry point for momentum continuation."
+    },
+    {
+      "action": "BUY",
+      "symbol": "TXN",
       "setup": "momentum",
-      "reason": "Explicit executive focus stock demonstrating relative strength (look +0.3%, rvol 1.76) trading cleanly above VWAP ahead of earnings catalyst."
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.02,
+      "reason": "Consistent uptrend with +1.8% day gain, trading above VWAP and opening range. Strong 5-day momentum (+8.0%) and neutral RSI (50.5) suggest room for further intraday gains."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "MSFT",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Executive priority name showing steady momentum above VWAP with above-average volume."
-    },
-    {
-      "symbol": "MU",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.035,
-      "setup": "momentum",
-      "reason": "Up +2.1% on the session, trading +0.7% above VWAP with strong relative volume (rvol 2.67)."
-    },
-    {
-      "symbol": "IBM",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.012,
-      "take_profit_pct": 0.025,
-      "setup": "momentum",
-      "reason": "Strong multi-day trend (+7.2% 5d), positive intraday momentum (+0.6% look) and rvol 2.41 above VWAP."
-    },
-    {
-      "symbol": "TXN",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.012,
-      "take_profit_pct": 0.025,
-      "setup": "pullback in uptrend",
-      "reason": "Up 1.2% today and maintaining gains above VWAP with solid 5d uptrend structure."
-    },
-    {
-      "symbol": "AAPL",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.012,
-      "take_profit_pct": 0.025,
-      "setup": "news catalyst",
-      "reason": "Positive hardware refresh news and price target increase to $390 providing underlying support."
-    }
+    "MU",
+    "ANET",
+    "IBM",
+    "AAPL",
+    "CRM"
   ],
-  "experiment": "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }
