@@ -1,56 +1,78 @@
 {
   "date": "2026-10-27",
-  "time": "11:33",
-  "trigger": "must invest $6,054 more (75% rule)",
+  "time": "12:03",
+  "trigger": "scheduled look",
+  "market_view": "Financials are mixed but broadly calm with SPY up 0.7% and QQQ up 1.5%. HOOD and SOFI lead momentum on earnings/news, while BLK shows a clean opening-range breakout above VWAP. C and JPM are flat with low relative volume and offer little intraday edge.",
   "decisions": [
     {
-      "symbol": "MS",
+      "symbol": "C",
       "action": "SELL",
-      "reason": "Opening range breakdown with price below VWAP and flat momentum. The initial thesis of news catalyst has failed intraday. Cutting the loss to free up capital for higher-conviction setups."
+      "conviction": 3,
+      "stop_loss_pct": 0,
+      "take_profit_pct": 0,
+      "setup": "momentum",
+      "reason": "Stalled for 2.5 hours with flat price, low rvol (0.39), and no follow-through on momentum setup; redeploy capital into higher-conviction breakout."
+    },
+    {
+      "symbol": "BLK",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Clean breakout above today's opening range high (1136.93) at 1138.69, trading above VWAP (+0.5%), rvol 1.44, trend up, m60 +0.5%. BlackRock Envestnet partnership news adds catalyst. RSI 67.3 is not overbought."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "SOFI",
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.035,
-      "conviction": 5,
-      "reason": "Strong earnings beat and guidance raise. Trading well above VWAP with high relative volume (4.68) and holding above the opening range high. Clear momentum leader in the fintech space."
-    },
-    {
-      "symbol": "HOOD",
-      "setup": "momentum",
+      "symbol": "MS",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "conviction": 4,
-      "reason": "Up 3.5% on the day with positive news regarding Ripple partnership. Trading above VWAP with steady 15m momentum. Good relative strength play."
+      "setup": "news catalyst",
+      "reason": "Trend up, +1.9% day, above VWAP, named lead bookrunner for Meta offering; rvol 0.95 slightly light."
     },
     {
-      "symbol": "BLK",
-      "setup": "sector rotation",
+      "symbol": "COF",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "conviction": 4,
-      "reason": "Positive news flow (Envestnet partnership). Trading above VWAP with relative volume > 1.5. Strong uptrend trend and RSI near overbought but not yet extended, suggesting continued strength in asset management."
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Breakout above OR high (204.18) at 204.22, above VWAP (+0.7%), m15 +0.4%, m60 +0.8%, but rvol only 0.48."
     },
     {
-      "symbol": "COIN",
-      "setup": "VWAP bounce",
+      "symbol": "AXP",
+      "direction": "long",
+      "conviction": 2,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "conviction": 3,
-      "reason": "Trading above VWAP with positive 15m momentum. Although RSI is low (38), the intraday structure is improving. Potential for a bounce given the crypto sentiment, but lower conviction due to overnight negative news on Circle."
+      "setup": "pullback in uptrend",
+      "reason": "Trend up and above VWAP, but weak rvol (0.62) and minimal intraday momentum."
     },
     {
-      "symbol": "MA",
-      "setup": "pullback in uptrend",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.02,
-      "conviction": 3,
-      "reason": "High relative volume (1.73) and trading above VWAP. RSI is overbought (73), so entry is cautious, but the trend is up. Watching for a slight pullback or continued strength above VWAP."
+      "symbol": "V",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Flat ahead of after-close earnings; RSI 74.1 overbought, no intraday edge."
+    },
+    {
+      "symbol": "ICE",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "breakdown",
+      "reason": "Weak relative to market, down 1.2%, below VWAP (-0.4%), flat trend; only a marginal short in a risk-on session."
     }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "VWAP-above-price filter for all breakout entries",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }
