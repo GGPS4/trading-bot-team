@@ -1,120 +1,18 @@
-[2026-10-26 16:10:58 ET] LLM: providers ready: gemini, groq, openrouter
-[2026-10-26 16:10:58 ET] mode=paper capital=$98,979.38 teams=['defense', 'space', 'entertainment', 'tech', 'consumer', 'financials', 'healthcare']
-[2026-10-26 16:11:00 ET] LLM: gemini gemini-3.1-pro-preview hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-26 16:11:00 ET] LLM: gemini gemini-3.1-pro-preview-customtools hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-26 16:11:10 ET] LLM: defense manager review answered (gemini gemini-3.6-flash)
-[2026-10-26 16:14:10 ET] LLM: gemini gemini-3.7-flash hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-26 16:15:02 ET] LLM: groq models -> ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b', 'allam-2-7b']
-[2026-10-26 16:15:05 ET] LLM: space manager review answered (groq openai/gpt-oss-120b)
-[2026-10-26 16:15:05 ET] space: watchlist remove_rejected ASTS - list would drop below 15 stocks
-[2026-10-26 16:15:05 ET] space: watchlist remove_rejected PL - list would drop below 15 stocks
-[2026-10-26 16:15:05 ET] space: watchlist remove_rejected RKLB - list would drop below 15 stocks
-[2026-10-26 16:15:05 ET] LLM: groq openai/gpt-oss-120b hit its per-minute limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per 
-[2026-10-26 16:15:09 ET] LLM: groq qwen/qwen3.8-27b hit its per-minute limit: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on input tokens pe
-[2026-10-26 16:15:09 ET] LLM: all providers busy, entertainment manager review waits 60s
-[2026-10-26 16:16:12 ET] LLM: entertainment manager review answered (groq openai/gpt-oss-120b)
-[2026-10-26 16:16:12 ET] entertainment: watchlist add_rejected AMC - price 2.91 is under $5 (too risky / thin)
-[2026-10-26 16:16:12 ET] entertainment: watchlist removed WBD - Asset not active on broker platform
-[2026-10-26 16:16:12 ET] entertainment: watchlist remove_rejected FOXA - list would drop below 15 stocks
-[2026-10-26 16:16:12 ET] entertainment: watchlist remove_rejected CMCSA - list would drop below 15 stocks
-[2026-10-26 16:16:12 ET] entertainment: watchlist added MGM - Recent earnings beat and new casino opening driving media exposure
-[2026-10-26 16:16:12 ET] LLM: groq openai/gpt-oss-120b hit its daily limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per 
-[2026-10-26 16:16:15 ET] LLM: all providers busy, tech manager review waits 16s
-[2026-10-26 16:16:42 ET] LLM: gemini gemini-3.6-flash hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-26 16:16:42 ET] LLM: gemini gemini-3.5-flash hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-26 16:16:42 ET] LLM: all providers busy, tech manager review waits 33s
-[2026-10-26 16:17:18 ET] LLM: all providers busy, tech manager review waits 54s
-[2026-10-26 16:18:12 ET] tech: review failed: tech manager review: no AI provider could answer (groq: every model is at its per-minute limit)
-[2026-10-26 16:18:12 ET] LLM: gemini gemini-3.8-flash hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-26 16:18:12 ET] LLM: all providers busy, consumer manager review waits 6s
-[2026-10-26 16:18:19 ET] LLM: groq openai/gpt-oss-20b hit its daily limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per d
-[2026-10-26 16:18:19 ET] LLM: all providers busy, consumer manager review waits 60s
-[2026-10-26 16:19:19 ET] LLM: all providers busy, consumer manager review waits 23s
-[2026-10-26 16:19:42 ET] consumer: review failed: consumer manager review: no AI provider could answer (groq: every model is at its per-minute limit)
-[2026-10-26 16:19:42 ET] LLM: all providers busy, financials manager review waits 37s
-[2026-10-26 16:20:19 ET] LLM: all providers busy, financials manager review waits 53s
-[2026-10-26 16:21:12 ET] LLM: all providers busy, financials manager review waits 7s
-[2026-10-26 16:21:19 ET] financials: review failed: financials manager review: no AI provider could answer (gemini: gemini failed)
-[2026-10-26 16:21:19 ET] LLM: all providers busy, healthcare manager review waits 60s
-[2026-10-26 16:22:20 ET] LLM: all providers busy, healthcare manager review waits 23s
-[2026-10-26 16:22:42 ET] LLM: all providers busy, healthcare manager review waits 37s
-[2026-10-26 16:23:20 ET] healthcare: review failed: healthcare manager review: no AI provider could answer (gemini: gemini failed)
-[2026-10-26 16:23:21 ET] LLM: Executive of Sector Teams answered (groq qwen/qwen3.8-27b)
-[2026-10-26 16:23:22 ET] LLM: Executive of Special Teams answered (groq qwen/qwen3.8-27b)
-[2026-10-26 16:23:22 ET] LLM: all providers busy, reporter waits 50s
-[2026-10-26 16:24:12 ET] LLM: all providers busy, reporter waits 10s
-[2026-10-26 16:24:25 ET] LLM: reporter answered (groq qwen/qwen3.8-27b)
-[2026-10-26 16:24:25 ET] LLM: all providers busy, president waits 60s
-[2026-10-26 16:25:27 ET] LLM: president answered (groq qwen/qwen3.8-27b)
-[2026-10-26 16:25:27 ET] Evening done. AI calls this run: 7
-[2026-10-26 16:25:27 ET] Auto: after-hours research for 320 minutes
-[2026-10-26 16:25:27 ET] After-hours watch for 320 minutes
-[2026-10-26 16:25:28 ET] LLM: space news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 16:25:28 ET] space: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
-[2026-10-26 16:25:29 ET] LLM: entertainment news researcher answered (groq allam-2-7b)
-[2026-10-26 16:25:29 ET] entertainment: after hours, 2 new article(s), 0 filing(s), 0 finding(s)
-[2026-10-26 16:25:30 ET] LLM: healthcare news researcher answered (groq allam-2-7b)
-[2026-10-26 16:25:30 ET] healthcare: after hours, 1 new article(s), 0 filing(s), 0 finding(s)
-[2026-10-26 16:40:29 ET] LLM: entertainment news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 16:40:29 ET] entertainment: after hours, 3 new article(s), 0 filing(s), 3 finding(s)
-[2026-10-26 16:40:30 ET] LLM: tech news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 16:40:30 ET] tech: after hours, 3 new article(s), 0 filing(s), 3 finding(s)
-[2026-10-26 16:40:31 ET] LLM: consumer news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 16:40:31 ET] consumer: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
-[2026-10-26 16:40:32 ET] LLM: healthcare news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 16:40:32 ET] healthcare: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
-[2026-10-26 16:55:29 ET] LLM: space news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 16:55:29 ET] space: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
-[2026-10-26 16:55:30 ET] LLM: consumer news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 16:55:30 ET] consumer: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
-[2026-10-26 17:10:29 ET] LLM: political/social researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 17:10:29 ET] Market watch: 2 new post(s), 0 market-relevant
-[2026-10-26 17:10:30 ET] LLM: consumer news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 17:10:30 ET] consumer: after hours, 2 new article(s), 0 filing(s), 0 finding(s)
-[2026-10-26 17:25:31 ET] Saved progress to GitHub (dashboard updated).
-[2026-10-26 17:40:29 ET] LLM: tech news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 17:40:29 ET] tech: after hours, 4 new article(s), 0 filing(s), 2 finding(s)
-[2026-10-26 17:40:30 ET] LLM: financials news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 17:40:30 ET] financials: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
-[2026-10-26 18:10:29 ET] LLM: consumer news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 18:10:29 ET] consumer: after hours, 2 new article(s), 0 filing(s), 2 finding(s)
-[2026-10-26 18:25:28 ET] LLM: tech news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 18:25:28 ET] tech: after hours, 1 new article(s), 0 filing(s), 0 finding(s)
-[2026-10-26 18:40:31 ET] Saved progress to GitHub (dashboard updated).
-[2026-10-26 19:10:28 ET] LLM: political/social researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 19:10:28 ET] Market watch: 21 new post(s), 0 market-relevant
-[2026-10-26 19:10:29 ET] LLM: tech news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 19:10:29 ET] tech: after hours, 2 new article(s), 0 filing(s), 1 finding(s)
-[2026-10-26 19:10:30 ET] LLM: consumer news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 19:10:30 ET] consumer: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
-[2026-10-26 19:10:31 ET] LLM: financials news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 19:10:31 ET] financials: after hours, 4 new article(s), 0 filing(s), 4 finding(s)
-[2026-10-26 19:10:32 ET] LLM: healthcare news researcher answered (groq qwen/qwen3.8-27b)
-[2026-10-26 19:10:32 ET] healthcare: after hours, 3 new article(s), 0 filing(s), 2 finding(s)
-[2026-10-26 19:55:33 ET] Saved progress to GitHub (dashboard updated).
-[2026-10-26 20:10:29 ET] LLM: consumer news researcher answered (groq allam-2-7b)
-[2026-10-26 20:10:29 ET] consumer: after hours, 1 new article(s), 0 filing(s), 0 finding(s)
-[2026-10-26 20:10:30 ET] LLM: healthcare news researcher answered (groq allam-2-7b)
-[2026-10-26 20:10:30 ET] healthcare: after hours, 1 new article(s), 0 filing(s), 0 finding(s)
-[2026-10-26 21:10:28 ET] LLM: political/social researcher answered (groq allam-2-7b)
-[2026-10-26 21:10:28 ET] Market watch: 2 new post(s), 1 market-relevant
-[2026-10-26 21:10:30 ET] economic calendar (nextweek) unavailable: 404 Client Error: Not Found for url: https://nfs.faireconomy.media/ff_calendar_nextweek.json
-[2026-10-26 21:10:32 ET] Saved progress to GitHub (dashboard updated).
+[2026-10-26 21:45:40 ET] LLM: providers ready: gemini, groq, openrouter
+[2026-10-26 21:45:41 ET] mode=paper capital=$99,003.56 teams=['defense', 'space', 'entertainment', 'tech', 'consumer', 'financials', 'healthcare']
+[2026-10-26 21:45:41 ET] Today's evening report is already done.
+[2026-10-26 21:45:41 ET] Auto: after-hours research for 320 minutes
+[2026-10-26 21:45:41 ET] After-hours watch for 320 minutes
+[2026-10-26 21:45:42 ET] LLM: groq models -> ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'allam-2-7b', 'qwen/qwen3.8-27b']
+[2026-10-26 21:45:44 ET] LLM: tech news researcher answered (groq openai/gpt-oss-120b)
+[2026-10-26 21:45:44 ET] tech: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
+[2026-10-26 22:30:43 ET] LLM: defense news researcher answered (groq openai/gpt-oss-120b)
+[2026-10-26 22:30:43 ET] defense: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
+[2026-10-26 22:30:44 ET] LLM: space news researcher answered (groq openai/gpt-oss-120b)
+[2026-10-26 22:30:44 ET] space: after hours, 1 new article(s), 0 filing(s), 1 finding(s)
+[2026-10-26 22:30:47 ET] LLM: tech news researcher answered (groq openai/gpt-oss-120b)
+[2026-10-26 22:30:47 ET] tech: after hours, 5 new article(s), 0 filing(s), 5 finding(s)
+[2026-10-26 22:30:49 ET] LLM: consumer news researcher answered (groq openai/gpt-oss-120b)
+[2026-10-26 22:30:49 ET] consumer: after hours, 2 new article(s), 0 filing(s), 2 finding(s)
+[2026-10-26 23:15:42 ET] LLM: political/social researcher answered (groq openai/gpt-oss-120b)
+[2026-10-26 23:15:42 ET] Market watch: 2 new post(s), 0 market-relevant
