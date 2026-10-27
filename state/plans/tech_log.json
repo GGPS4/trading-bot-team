@@ -1358,5 +1358,34 @@
       "SELL AVGO",
       "BUY CRWV x56 (~$3328.36)"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "12:44",
+    "trigger": "scheduled look",
+    "market_view": "Market is calm and rising with SPY +0.6% and QQQ +1.3%; intraday relative strength is concentrated in names like AVGO and AMD while several watchlist stocks are breaking down. Current holdings are mostly in profit with trailing stops, but AAPL has stalled with flat momentum and low relative volume. Under the defensive posture, rotate out of the stalled AAPL position into the high-conviction AVGO momentum setup rather than adding new risk.",
+    "experiment": "Test a momentum-reversal exit: close position if 5-min momentum turns negative even if price still above stop.",
+    "decisions": [
+      {
+        "symbol": "AAPL",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Position stalled after 2+ hours with flat trend, m15 +0.1%, m60 -0.3%, and rvol 1.06; redeploy capital into a stronger relative-strength setup per defensive capital-preservation rules.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "AVGO",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Relative strength leader in Tech: day +4.2%, trending up, above VWAP +0.6%, rvol 1.76, m60 +0.7%; overnight news of Anthropic $63B AI partnership supports sentiment; high-conviction entry aligned with focus on tech leaders.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL AAPL",
+      "BUY AVGO x9 (~$3088.22)"
+    ]
   }
 ]
