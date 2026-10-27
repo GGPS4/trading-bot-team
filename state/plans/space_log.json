@@ -939,5 +939,63 @@
     "results": [
       "WATCHLIST remove rejected IRDM"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "09:34",
+    "trigger": "first look this run",
+    "market_view": "The market opens with broad indices up slightly while Boeing's Q3 loss creates sector caution. Extreme oversold conditions across space equities offer mean-reversion setups on early intraday green moves, allowing us to comply with the 75% deployment mandate safely.",
+    "experiment": "Introduce a filter that blocks entries on symbols that have moved >8% intraday until a pull-back of at least 0.5% occurs",
+    "decisions": [
+      {
+        "symbol": "PL",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Extremely oversold daily RSI of 18.8 exhibiting positive intraday momentum (+1.3%) at the market open.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "LUNR",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Daily RSI oversold at 15.0 with +1.1% early gain off the open.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "RDW",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Oversold RSI of 21.5 bouncing +1.1% in morning trading.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "GE",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Defense/Aerospace relative strength leader up +0.9% at the open following sector mandate.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ASTS",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Oversold daily RSI of 15.0 with early green momentum (+0.9%).",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY PL x35 (~$488.07)",
+      "BUY LUNR x47 (~$497.02)",
+      "BUY RDW x59 (~$496.78)",
+      "BUY GE x1 (~$290.9)",
+      "BUY ASTS x12 (~$477.84)",
+      "WATCHLIST removed BKSY",
+      "WATCHLIST added LPTH"
+    ]
   }
 ]

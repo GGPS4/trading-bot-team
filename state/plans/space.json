@@ -1,63 +1,114 @@
 {
-  "date": "2026-10-26",
-  "time": "14:09",
-  "trigger": "big news on ['BA']",
-  "market_view": "Market is calm and slightly higher, with SPY +0.8% and QQQ +1.4%, VIXY -2.3%, and 59% of watchlist stocks up. Space-related names are mostly below their 50-day average and momentum is mixed, so no clean high-conviction new setup is obvious. With the executive trading pause and recent scorecard weakness, I am not forcing new entries.",
-  "decisions": [],
-  "ranked_ideas": [
+  "date": "2026-10-27",
+  "time": "09:34",
+  "trigger": "first look this run",
+  "market_view": "The market opens with broad indices up slightly while Boeing's Q3 loss creates sector caution. Extreme oversold conditions across space equities offer mean-reversion setups on early intraday green moves, allowing us to comply with the 75% deployment mandate safely.",
+  "decisions": [
     {
-      "symbol": "SPCX",
-      "direction": "long",
+      "symbol": "PL",
+      "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above 147.71 with rvol 1.57 and above VWAP; space momentum."
-    },
-    {
-      "symbol": "BA",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.05,
-      "setup": "news catalyst",
-      "reason": "US Navy contract but overnight freighter halt and mixed sentiment; low rvol."
-    },
-    {
-      "symbol": "TDG",
-      "direction": "long",
-      "conviction": 3,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "ORB and rvol 1.2; in-field."
+      "setup": "mean reversion",
+      "reason": "Extremely oversold daily RSI of 18.8 exhibiting positive intraday momentum (+1.3%) at the market open."
+    },
+    {
+      "symbol": "LUNR",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion",
+      "reason": "Daily RSI oversold at 15.0 with +1.1% early gain off the open."
+    },
+    {
+      "symbol": "RDW",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion",
+      "reason": "Oversold RSI of 21.5 bouncing +1.1% in morning trading."
+    },
+    {
+      "symbol": "GE",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "VWAP bounce",
+      "reason": "Defense/Aerospace relative strength leader up +0.9% at the open following sector mandate."
+    },
+    {
+      "symbol": "ASTS",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion",
+      "reason": "Oversold daily RSI of 15.0 with early green momentum (+0.9%)."
+    }
+  ],
+  "ranked_ideas": [
+    {
+      "symbol": "RKLB",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion",
+      "reason": "Oversold daily RSI 17.9 trading up +0.6% at open."
     },
     {
       "symbol": "FLY",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "m15 +0.8%, rvol 1.16, above VWAP."
+      "reason": "Up +0.9% at open carrying strong 5d momentum."
     },
     {
-      "symbol": "BKSY",
+      "symbol": "SPCX",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "ORB, rvol 0.88."
+      "setup": "news catalyst",
+      "reason": "Deutsche Bank raised price target to $250 with Buy rating."
+    },
+    {
+      "symbol": "HWM",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion",
+      "reason": "Aerospace supplier holding flat after oversold pullback."
+    },
+    {
+      "symbol": "VSAT",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Strong 5d gain (+10.2%) holding steady."
     }
   ],
-  "experiment": "",
+  "experiment": "Introduce a filter that blocks entries on symbols that have moved >8% intraday until a pull-back of at least 0.5% occurs",
   "watchlist_changes": {
-    "add": [],
+    "add": [
+      {
+        "symbol": "LPTH",
+        "reason": "Gapping up +8.5% on new defense optics order announcement."
+      }
+    ],
     "remove": [
       {
-        "symbol": "IRDM",
-        "reason": "No volume/rvol support; quiet relative to watchlist."
+        "symbol": "BKSY",
+        "reason": "Stalled price action without immediate intraday catalyst or volume."
       }
     ]
   }

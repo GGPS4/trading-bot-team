@@ -10,11 +10,11 @@
     "GE",
     "HWM",
     "TDG",
-    "BKSY",
     "IRDM",
     "VSAT",
     "SATS",
-    "FLY"
+    "FLY",
+    "LPTH"
   ],
   "seed": [
     "SPCX",
@@ -33,7 +33,22 @@
     "SATS",
     "FLY"
   ],
-  "log": [],
+  "log": [
+    {
+      "time": "2026-10-27T09:34-04:00",
+      "action": "removed",
+      "symbol": "BKSY",
+      "reason": "Stalled price action without immediate intraday catalyst or volume.",
+      "by": "manager"
+    },
+    {
+      "time": "2026-10-27T09:34-04:00",
+      "action": "added",
+      "symbol": "LPTH",
+      "reason": "Gapping up +8.5% on new defense optics order announcement.",
+      "by": "manager"
+    }
+  ],
   "rejected": [
     {
       "time": "2026-10-21T22:10-04:00",
@@ -150,5 +165,5 @@
       "reason": "list would drop below 15 stocks"
     }
   ],
-  "updated": "2026-10-26T16:15-04:00"
+  "updated": "2026-10-27T09:34-04:00"
 }

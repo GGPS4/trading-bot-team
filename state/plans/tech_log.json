@@ -1090,5 +1090,43 @@
       "WATCHLIST remove rejected CRM",
       "WATCHLIST remove rejected ADBE"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "09:34",
+    "trigger": "first look this run",
+    "market_view": "The broader market is showing cautious momentum with SPY up +0.3% and QQQ up +0.4%, though breadth remains selective. Tech is driving upside, led by high-impact AI catalysts in AVGO, AMD, and NVDA. To meet our executive mandate of 75% minimum invested capital safely, we deploy capital into high-conviction relative strength leaders with strong catalysts.",
+    "experiment": "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms.",
+    "decisions": [
+      {
+        "symbol": "AVGO",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Upgraded to Buy with $400 PT alongside a massive $63B AI accelerator financing announcement for Anthropic; strong day-trading catalyst up +2.9%.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "AMD",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Announced major strategic AI infrastructure partnership with Meta and a $1B equity investment; trading up +1.6%.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "NVDA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Announced $3B equity investment in Meta to expand AI Muse infrastructure, matching executive priority on NVDA momentum.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      }
+    ],
+    "results": [
+      "BUY AVGO x7 (~$2372.86)",
+      "BUY AMD x4 (~$2159.44)",
+      "BUY NVDA x11 (~$2397.23)"
+    ]
   }
 ]
