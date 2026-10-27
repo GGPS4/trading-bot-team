@@ -4,9 +4,7 @@
     "MSFT",
     "NVDA",
     "AVGO",
-    "CRM",
     "AMD",
-    "ADBE",
     "INTU",
     "TXN",
     "NOW",
@@ -14,7 +12,9 @@
     "MU",
     "PANW",
     "ANET",
-    "CRWV"
+    "CRWV",
+    "SOXL",
+    "INTC"
   ],
   "seed": [
     "AAPL",
@@ -112,6 +112,34 @@
       "action": "added",
       "symbol": "CRWV",
       "reason": "Pre-market gapper +4.5% with Jim Cramer positive AI/cloud commentary; tech sector news.",
+      "by": "manager"
+    },
+    {
+      "time": "2026-10-27T13:00-04:00",
+      "action": "removed",
+      "symbol": "CRM",
+      "reason": "Breaking down below opening range, weak momentum.",
+      "by": "manager"
+    },
+    {
+      "time": "2026-10-27T13:00-04:00",
+      "action": "removed",
+      "symbol": "ADBE",
+      "reason": "Breaking down, high-beta software weakness.",
+      "by": "manager"
+    },
+    {
+      "time": "2026-10-27T13:00-04:00",
+      "action": "added",
+      "symbol": "SOXL",
+      "reason": "Semiconductor momentum and active, AI-related.",
+      "by": "manager"
+    },
+    {
+      "time": "2026-10-27T13:00-04:00",
+      "action": "added",
+      "symbol": "INTC",
+      "reason": "Active most stock, tech sector.",
       "by": "manager"
     }
   ],
@@ -211,7 +239,19 @@
       "action": "remove_rejected",
       "symbol": "CRM",
       "reason": "list would drop below 15 stocks"
+    },
+    {
+      "time": "2026-10-27T13:00-04:00",
+      "action": "add_rejected",
+      "symbol": "WFF",
+      "reason": "price 0.063 is under $5 (too risky / thin)"
+    },
+    {
+      "time": "2026-10-27T13:00-04:00",
+      "action": "remove_rejected",
+      "symbol": "INTU",
+      "reason": "list would drop below 15 stocks"
     }
   ],
-  "updated": "2026-10-27T12:44-04:00"
+  "updated": "2026-10-27T13:00-04:00"
 }

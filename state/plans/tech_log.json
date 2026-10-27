@@ -1387,5 +1387,31 @@
       "SELL AAPL",
       "BUY AVGO x9 (~$3088.22)"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "time": "13:00",
+    "trigger": "must invest $3,583 more (75% rule)",
+    "market_view": "Market is calm and slightly higher, with SPY +0.5% and QQQ +1.2%. AI infrastructure optimism is driving semiconductor headlines, but intraday momentum is mixed and we are into the final hours before close. I am staying selective and risk-managed.",
+    "experiment": "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms.",
+    "decisions": [
+      {
+        "symbol": "AAPL",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "OR breakout above 345.09 on overnight Goldman PT $390 raise; AAPL is a relative strength leader with high RS data, but watch for soft momentum.",
+        "stop_loss_pct": 0.011,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY AAPL x9 (~$3116.92)",
+      "WATCHLIST add rejected WFF",
+      "WATCHLIST removed CRM",
+      "WATCHLIST removed ADBE",
+      "WATCHLIST remove rejected INTU",
+      "WATCHLIST added SOXL",
+      "WATCHLIST added INTC"
+    ]
   }
 ]
