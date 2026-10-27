@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-27T10:20-04:00",
+  "updated": "2026-10-27T10:32-04:00",
   "date": "2026-10-27",
   "mode": "paper",
   "health": {
     "issues": [
-      "12 problem(s) in the last hour, latest: LLM: groq openai/gpt-oss-120b hit its daily limit: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m5eapq7ve5qb5j"
+      "11 problem(s) in the last hour, latest: financials: skipped this check: 'str' object has no attribute 'get'"
     ]
   },
   "paused": false,
@@ -14,21 +14,21 @@
     "strategy": "day_trading"
   },
   "account": {
-    "equity": 98986.57,
-    "cash": 50744.07,
-    "day_change": 10.09,
-    "day_change_pct": 0.0001
+    "equity": 98978.72,
+    "cash": 51216.64,
+    "day_change": 2.24,
+    "day_change_pct": 0.0
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 765.505
+    "price": 766.97
   },
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 8,
-    "return_since_start": -0.0101,
-    "benchmark_since_start": -0.0067,
-    "max_drawdown": 0.0101
+    "return_since_start": -0.0102,
+    "benchmark_since_start": -0.0047,
+    "max_drawdown": 0.0102
   },
   "go_live": {
     "items": [
@@ -40,7 +40,7 @@
       {
         "rule": "Beating SPY since the start",
         "ok": false,
-        "value": "-1.0% vs -0.7%"
+        "value": "-1.0% vs -0.5%"
       },
       {
         "rule": "Worst drop under 15%",
@@ -72,11 +72,11 @@
         "GD"
       ],
       "budget": 22284.75,
-      "invested": 15652.67,
-      "unrealized_pnl": -39.39,
+      "invested": 15586.44,
+      "unrealized_pnl": -105.62,
       "realized_today": 0,
       "trades_today": 5,
-      "blocked_today": 0,
+      "blocked_today": 1,
       "all_time": {
         "closed_trades": 44,
         "wins": 23,
@@ -106,17 +106,17 @@
         "LPTH"
       ],
       "budget": 4456.95,
-      "invested": 2939.2,
-      "unrealized_pnl": -7.75,
-      "realized_today": 21.17,
+      "invested": 2398.86,
+      "unrealized_pnl": 11.41,
+      "realized_today": 9.58,
       "trades_today": 11,
       "blocked_today": 0,
       "all_time": {
-        "closed_trades": 47,
+        "closed_trades": 48,
         "wins": 13,
-        "losses": 34,
-        "win_rate": 0.277,
-        "realized_pnl": -644.99
+        "losses": 35,
+        "win_rate": 0.271,
+        "realized_pnl": -656.58
       }
     },
     "entertainment": {
@@ -140,10 +140,10 @@
         "MGM"
       ],
       "budget": 4456.95,
-      "invested": 2382.07,
-      "unrealized_pnl": -13.71,
+      "invested": 2190.8,
+      "unrealized_pnl": -11.98,
       "realized_today": -4.86,
-      "trades_today": 6,
+      "trades_today": 7,
       "blocked_today": 0,
       "all_time": {
         "closed_trades": 37,
@@ -174,17 +174,17 @@
         "IBM"
       ],
       "budget": 22284.75,
-      "invested": 14951.06,
-      "unrealized_pnl": -39.7,
-      "realized_today": 41.91,
+      "invested": 15256.92,
+      "unrealized_pnl": 0.65,
+      "realized_today": 18.23,
       "trades_today": 9,
       "blocked_today": 3,
       "all_time": {
-        "closed_trades": 53,
+        "closed_trades": 55,
         "wins": 26,
-        "losses": 27,
-        "win_rate": 0.491,
-        "realized_pnl": -341.55
+        "losses": 29,
+        "win_rate": 0.473,
+        "realized_pnl": -365.23
       }
     },
     "consumer": {
@@ -242,11 +242,11 @@
         "SOFI"
       ],
       "budget": 17827.8,
-      "invested": 7325.12,
-      "unrealized_pnl": -11.06,
+      "invested": 7325.81,
+      "unrealized_pnl": -10.37,
       "realized_today": -6.15,
       "trades_today": 6,
-      "blocked_today": 5,
+      "blocked_today": 8,
       "all_time": {
         "closed_trades": 38,
         "wins": 17,
@@ -276,10 +276,10 @@
         "CORT"
       ],
       "budget": 8913.9,
-      "invested": 4992.31,
-      "unrealized_pnl": -7.95,
+      "invested": 5352.46,
+      "unrealized_pnl": 2.49,
       "realized_today": 49.19,
-      "trades_today": 5,
+      "trades_today": 6,
       "blocked_today": 0,
       "all_time": {
         "closed_trades": 52,
@@ -296,10 +296,10 @@
       "team": "tech",
       "qty": 9.0,
       "entry": 344.4,
-      "price": 344.39,
-      "value": 3099.51,
-      "pnl": -0.09,
-      "pnl_pct": -0.0,
+      "price": 345.13,
+      "value": 3106.17,
+      "pnl": 6.57,
+      "pnl_pct": 0.0021,
       "stop": 339.18,
       "target": 354.68,
       "reason": "[75% invested rule] Trading above VWAP, trend up, supported by Goldman price target hike to $390. Strong relative strength in a flat market. Best available setup for capital deployment.",
@@ -314,10 +314,10 @@
       "team": "healthcare",
       "qty": 4.0,
       "entry": 286.0,
-      "price": 285.38,
-      "value": 1141.52,
-      "pnl": -2.48,
-      "pnl_pct": -0.0022,
+      "price": 285.87,
+      "value": 1143.48,
+      "pnl": -0.52,
+      "pnl_pct": -0.0004,
       "stop": 280.44,
       "target": 293.25,
       "reason": "[75% invested rule] Above VWAP (+0.3%) with positive momentum after submitting FDA BLA for etentamig.",
@@ -328,50 +328,14 @@
       "setup": "news catalyst"
     },
     {
-      "symbol": "AVGO",
-      "team": "tech",
-      "qty": 1.0,
-      "entry": 338.62,
-      "price": 337.19,
-      "value": 337.19,
-      "pnl": -1.43,
-      "pnl_pct": -0.0042,
-      "stop": 332.48,
-      "target": 352.84,
-      "reason": "[75% invested rule] Analyst upgrade to $400 and Cramer endorsement; high rvol 3.44 but price below VWAP, awaiting bounce confirmation.",
-      "side": "long",
-      "trailing": false,
-      "scaled": false,
-      "first_stop": 332.48,
-      "setup": "news catalyst"
-    },
-    {
-      "symbol": "BA",
-      "team": "space",
-      "qty": 3.0,
-      "entry": 186.5,
-      "price": 184.09,
-      "value": 552.27,
-      "pnl": -7.23,
-      "pnl_pct": -0.0129,
-      "stop": 182.94,
-      "target": 191.3,
-      "reason": "Strong intraday recovery from open (+1.5%), sitting at VWAP with heavy rvol (3.01x) and solid Q3 order backlog support.",
-      "side": "long",
-      "trailing": false,
-      "scaled": false,
-      "first_stop": 182.94,
-      "setup": "earnings gap"
-    },
-    {
       "symbol": "BAM",
       "team": "entertainment",
       "qty": 10.0,
       "entry": 47.52,
-      "price": 47.16,
-      "value": 471.6,
-      "pnl": -3.6,
-      "pnl_pct": -0.0076,
+      "price": 47.08,
+      "value": 470.8,
+      "pnl": -4.4,
+      "pnl_pct": -0.0093,
       "stop": 46.63,
       "target": 49.0,
       "reason": "Strong major news catalyst including up to $9B Naver AI financing agreement and LXP Trust acquisition approval, up +1.4% daily.",
@@ -386,10 +350,10 @@
       "team": "financials",
       "qty": 16.0,
       "entry": 122.68,
-      "price": 122.69,
-      "value": 1963.04,
-      "pnl": 0.14,
-      "pnl_pct": 0.0001,
+      "price": 122.65,
+      "value": 1962.4,
+      "pnl": -0.5,
+      "pnl_pct": -0.0003,
       "stop": 120.2,
       "target": 127.56,
       "reason": "Relative strength: Up 1.3% today, RSI 35.6 (recovering from oversold). Citigroup showing strength in a cautious market. Moderate size to respect risk parameters.",
@@ -404,10 +368,10 @@
       "team": "defense",
       "qty": 5.0,
       "entry": 663.48,
-      "price": 659.96,
-      "value": 3299.8,
-      "pnl": -17.6,
-      "pnl_pct": -0.0053,
+      "price": 657.21,
+      "value": 3286.05,
+      "pnl": -31.35,
+      "pnl_pct": -0.0095,
       "stop": 655.68,
       "target": 688.97,
       "reason": "Secured major Navy contract wins ($145M and $281M, Importance 4) with strong 5d/20d momentum.",
@@ -436,14 +400,32 @@
       "setup": "VWAP bounce"
     },
     {
+      "symbol": "CORT",
+      "team": "healthcare",
+      "qty": 4.0,
+      "entry": 87.43,
+      "price": 87.28,
+      "value": 349.12,
+      "pnl": -0.6,
+      "pnl_pct": -0.0017,
+      "stop": 85.08,
+      "target": 89.22,
+      "reason": "[75% invested rule] Broke above opening range (85.44-85.78) at $86.62 with an uptrend, but rvol is only 0.41 so volume confirmation is weak.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 85.08,
+      "setup": "opening range breakout"
+    },
+    {
       "symbol": "DIS",
       "team": "entertainment",
       "qty": 4.0,
       "entry": 110.28,
-      "price": 109.61,
-      "value": 438.44,
-      "pnl": -2.68,
-      "pnl_pct": -0.0061,
+      "price": 109.65,
+      "value": 438.6,
+      "pnl": -2.52,
+      "pnl_pct": -0.0057,
       "stop": 108.75,
       "target": 113.72,
       "reason": "Executive defensive pick with positive catalyst regarding UK Disney+ expansion and steady upward daily movement (+1.3%).",
@@ -454,32 +436,14 @@
       "setup": "VWAP bounce"
     },
     {
-      "symbol": "FOXA",
-      "team": "entertainment",
-      "qty": 10.0,
-      "entry": 64.81,
-      "price": 64.58,
-      "value": 645.8,
-      "pnl": -2.3,
-      "pnl_pct": -0.0036,
-      "stop": 63.92,
-      "target": 66.84,
-      "reason": "FOXA is a defensive media name trading flat at VWAP (+0.0%) with low intraday volatility, matching executive orders to prioritize capital preservation and defensive VWAP bounces.",
-      "side": "long",
-      "trailing": false,
-      "scaled": false,
-      "first_stop": 63.92,
-      "setup": "VWAP bounce"
-    },
-    {
       "symbol": "GD",
       "team": "defense",
       "qty": 9.0,
       "entry": 354.99,
-      "price": 355.55,
-      "value": 3199.95,
-      "pnl": 5.04,
-      "pnl_pct": 0.0016,
+      "price": 354.75,
+      "value": 3192.75,
+      "pnl": -2.16,
+      "pnl_pct": -0.0007,
       "stop": 350.56,
       "target": 366.58,
       "reason": "[75% invested rule] Prime anchor contractor holding above VWAP following $135.9M Army contract modification.",
@@ -494,10 +458,10 @@
       "team": "space",
       "qty": 2.0,
       "entry": 292.14,
-      "price": 293.11,
-      "value": 586.22,
-      "pnl": 1.93,
-      "pnl_pct": 0.0033,
+      "price": 294.82,
+      "value": 589.64,
+      "pnl": 5.35,
+      "pnl_pct": 0.0092,
       "stop": 287.31,
       "target": 300.44,
       "reason": "Trading above VWAP (+0.5%) with strong m15 momentum (+0.9%), heavy relative volume (4.59x), and an uptrend.",
@@ -512,10 +476,10 @@
       "team": "financials",
       "qty": 2.0,
       "entry": 911.24,
-      "price": 910.19,
-      "value": 1820.38,
-      "pnl": -2.1,
-      "pnl_pct": -0.0011,
+      "price": 909.98,
+      "value": 1819.96,
+      "pnl": -2.52,
+      "pnl_pct": -0.0014,
       "stop": 897.97,
       "target": 938.99,
       "reason": "Aligns with executive directive for stability. GS is up +2.1% on the day, trading above VWAP with steady +0.3% recent look momentum and solid rvol (1.29).",
@@ -530,10 +494,10 @@
       "team": "space",
       "qty": 3.0,
       "entry": 195.36,
-      "price": 194.16,
-      "value": 582.5,
-      "pnl": -3.58,
-      "pnl_pct": -0.0061,
+      "price": 194.76,
+      "value": 584.28,
+      "pnl": -1.8,
+      "pnl_pct": -0.0031,
       "stop": 191.89,
       "target": 200.65,
       "reason": "Trading above VWAP (+0.4%) with solid m15 momentum (+0.8%) and positive bullish analyst coverage ahead of earnings.",
@@ -548,10 +512,10 @@
       "team": "healthcare",
       "qty": 5.0,
       "entry": 266.53,
-      "price": 267.0,
-      "value": 1335.0,
-      "pnl": 2.35,
-      "pnl_pct": 0.0018,
+      "price": 267.38,
+      "value": 1336.92,
+      "pnl": 4.28,
+      "pnl_pct": 0.0032,
       "stop": 262.33,
       "target": 274.31,
       "reason": "[75% invested rule] Holding above VWAP (+0.3%) with steady 5d momentum (+4.9%) ahead of corporate events.",
@@ -566,10 +530,10 @@
       "team": "financials",
       "qty": 5.0,
       "entry": 336.16,
-      "price": 335.93,
-      "value": 1679.65,
-      "pnl": -1.15,
-      "pnl_pct": -0.0007,
+      "price": 335.8,
+      "value": 1679.0,
+      "pnl": -1.8,
+      "pnl_pct": -0.0011,
       "stop": 332.16,
       "target": 347.34,
       "reason": "Strong news catalyst: JPMorgan near $10B Aramco facility and APAC growth targets. Stable large-cap fits defensive mandate. RSI 53.8 is neutral, not overbought. Positive sentiment from news researcher.",
@@ -584,10 +548,10 @@
       "team": "defense",
       "qty": 23.0,
       "entry": 139.6,
-      "price": 138.53,
-      "value": 3186.07,
-      "pnl": -24.73,
-      "pnl_pct": -0.0077,
+      "price": 137.98,
+      "value": 3173.54,
+      "pnl": -37.26,
+      "pnl_pct": -0.0116,
       "stop": 137.22,
       "target": 143.49,
       "reason": "Secured $95M Defense contract win (Importance 4) supporting recent multi-week uptrend.",
@@ -602,10 +566,10 @@
       "team": "healthcare",
       "qty": 1.0,
       "entry": 1291.0,
-      "price": 1282.49,
-      "value": 1282.49,
-      "pnl": -8.51,
-      "pnl_pct": -0.0066,
+      "price": 1286.85,
+      "value": 1286.85,
+      "pnl": -4.15,
+      "pnl_pct": -0.0032,
       "stop": 1267.9,
       "target": 1325.82,
       "reason": "[75% invested rule] Trading +0.5% above VWAP with +0.9% open gain and strong volume (rvol 1.23) following favorable court ruling on advertising.",
@@ -620,10 +584,10 @@
       "team": "defense",
       "qty": 5.0,
       "entry": 629.83,
-      "price": 630.83,
-      "value": 3154.15,
-      "pnl": 5.0,
-      "pnl_pct": 0.0016,
+      "price": 626.62,
+      "value": 3133.1,
+      "pnl": -16.05,
+      "pnl_pct": -0.0051,
       "stop": 621.53,
       "target": 649.92,
       "reason": "Upgraded by Morgan Stanley following 10-year F-35 deal (Importance 5). Price is above VWAP with strong volume (rvol 3.1).",
@@ -638,10 +602,10 @@
       "team": "entertainment",
       "qty": 2.0,
       "entry": 172.44,
-      "price": 171.83,
-      "value": 343.66,
-      "pnl": -1.22,
-      "pnl_pct": -0.0035,
+      "price": 172.01,
+      "value": 344.03,
+      "pnl": -0.85,
+      "pnl_pct": -0.0025,
       "stop": 170.08,
       "target": 177.85,
       "reason": "Stable RSI (52.5) with consistent positive 5-day performance (+1.1%) offering reliable defensive exposure.",
@@ -656,10 +620,10 @@
       "team": "financials",
       "qty": 10.0,
       "entry": 187.0,
-      "price": 186.21,
-      "value": 1862.05,
-      "pnl": -7.95,
-      "pnl_pct": -0.0043,
+      "price": 186.44,
+      "value": 1864.45,
+      "pnl": -5.55,
+      "pnl_pct": -0.003,
       "stop": 183.59,
       "target": 191.98,
       "reason": "Momentum and news: Up 1.6% today, named lead bookrunner for Meta offering. RSI 40.4 offers room to run without being overbought. Strong deal flow catalyst.",
@@ -674,10 +638,10 @@
       "team": "tech",
       "qty": 6.0,
       "entry": 532.17,
-      "price": 529.47,
-      "value": 3176.82,
-      "pnl": -16.2,
-      "pnl_pct": -0.0051,
+      "price": 530.87,
+      "value": 3185.23,
+      "pnl": -7.79,
+      "pnl_pct": -0.0024,
       "stop": 524.94,
       "target": 548.92,
       "reason": "Explicit executive focus stock demonstrating relative strength (look +0.3%, rvol 1.76) trading cleanly above VWAP ahead of earnings catalyst.",
@@ -692,10 +656,10 @@
       "team": "defense",
       "qty": 5.0,
       "entry": 563.96,
-      "price": 562.54,
-      "value": 2812.7,
-      "pnl": -7.1,
-      "pnl_pct": -0.0025,
+      "price": 560.2,
+      "value": 2801.0,
+      "pnl": -18.8,
+      "pnl_pct": -0.0067,
       "stop": 556.4,
       "target": 581.82,
       "reason": "[75% invested rule] Bernstein price target upgrade to $590; prime defense anchor trading near open.",
@@ -710,10 +674,10 @@
       "team": "tech",
       "qty": 21.0,
       "entry": 154.39,
-      "price": 154.3,
-      "value": 3240.3,
-      "pnl": -1.89,
-      "pnl_pct": -0.0006,
+      "price": 154.05,
+      "value": 3235.05,
+      "pnl": -7.14,
+      "pnl_pct": -0.0022,
       "stop": 151.66,
       "target": 160.94,
       "reason": "Above VWAP (+0.1%), intraday trend up, m15 +0.3%, rvol 2.69; relative strength leader with earnings tomorrow after close, so no overnight gap risk.",
@@ -728,10 +692,10 @@
       "team": "tech",
       "qty": 11.0,
       "entry": 218.06,
-      "price": 216.25,
-      "value": 2378.75,
-      "pnl": -19.95,
-      "pnl_pct": -0.0083,
+      "price": 217.19,
+      "value": 2389.14,
+      "pnl": -9.55,
+      "pnl_pct": -0.004,
       "stop": 214.66,
       "target": 225.56,
       "reason": "Announced $3B equity investment in Meta to expand AI Muse infrastructure, matching executive priority on NVDA momentum.",
@@ -746,10 +710,10 @@
       "team": "space",
       "qty": 4.0,
       "entry": 148.3,
-      "price": 148.29,
-      "value": 593.16,
-      "pnl": -0.04,
-      "pnl_pct": -0.0001,
+      "price": 149.54,
+      "value": 598.18,
+      "pnl": 4.98,
+      "pnl_pct": 0.0084,
       "stop": 146.33,
       "target": 153.01,
       "reason": "Deutsche Bank raised price target to $250; trading above VWAP (+0.2%) with rvol of 2.49.",
@@ -762,12 +726,12 @@
     {
       "symbol": "TXN",
       "team": "tech",
-      "qty": 9.0,
+      "qty": 11.0,
       "entry": 302.07,
-      "price": 302.06,
-      "value": 2718.49,
-      "pnl": -0.14,
-      "pnl_pct": -0.0001,
+      "price": 303.76,
+      "value": 3341.33,
+      "pnl": 18.56,
+      "pnl_pct": 0.0056,
       "stop": 297.12,
       "target": 310.69,
       "reason": "[75% invested rule] Positive 5d and 20d momentum, trading near VWAP with upward trend. Defensive tech name fits President's capital preservation strategy.",
@@ -782,10 +746,10 @@
       "team": "healthcare",
       "qty": 3.0,
       "entry": 410.87,
-      "price": 411.1,
-      "value": 1233.3,
-      "pnl": 0.69,
-      "pnl_pct": 0.0006,
+      "price": 412.03,
+      "value": 1236.09,
+      "pnl": 3.48,
+      "pnl_pct": 0.0028,
       "stop": 404.94,
       "target": 423.44,
       "reason": "[75% invested rule] Above VWAP with strong rvol (1.46) following price target increase to $531 by Morgan Stanley.",
@@ -800,10 +764,10 @@
       "team": "space",
       "qty": 9.0,
       "entry": 69.32,
-      "price": 69.45,
-      "value": 625.05,
-      "pnl": 1.17,
-      "pnl_pct": 0.0019,
+      "price": 69.64,
+      "value": 626.76,
+      "pnl": 2.88,
+      "pnl_pct": 0.0046,
       "stop": 67.99,
       "target": 71.5,
       "reason": "Strong 15m momentum (+1.1%), trading above VWAP (+0.3%) with rvol of 2.73 and positive daily trend.",
@@ -812,6 +776,24 @@
       "scaled": false,
       "first_stop": 67.99,
       "setup": "momentum"
+    },
+    {
+      "symbol": "WMG",
+      "team": "entertainment",
+      "qty": 15.0,
+      "entry": 30.34,
+      "price": 30.32,
+      "value": 454.8,
+      "pnl": -0.3,
+      "pnl_pct": -0.0007,
+      "stop": 30.01,
+      "target": 31.43,
+      "reason": "WMG is a music entertainment play holding above VWAP in an uptrend, but volume is dry; initiating with high conviction due portfolio minimum and defensive posture.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 30.01,
+      "setup": "pullback in uptrend"
     }
   ],
   "trades_today": [
@@ -1489,11 +1471,11 @@
       "est_price": 185.73,
       "entry_price": 186.5,
       "side": "long",
-      "exit_price": null,
-      "exit_reason": null,
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "exit_price": 182.82,
+      "exit_reason": "stop_loss",
+      "pnl": -11.59,
+      "pnl_pct": -0.0207,
+      "status": "closed",
       "conviction": 4,
       "reason": "Strong intraday recovery from open (+1.5%), sitting at VWAP with heavy rvol (3.01x) and solid Q3 order backlog support.",
       "stop_price": 182.94,
@@ -1508,7 +1490,7 @@
       "entry_price": 64.81,
       "side": "long",
       "exit_price": null,
-      "exit_reason": null,
+      "exit_reason": "manager_sell",
       "pnl": null,
       "pnl_pct": null,
       "status": "open",
@@ -1543,11 +1525,11 @@
       "est_price": 548.145,
       "entry_price": 548.64,
       "side": "long",
-      "exit_price": null,
+      "exit_price": 547.98,
       "exit_reason": "manager_sell",
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "pnl": -7.25,
+      "pnl_pct": -0.0022,
+      "status": "closed",
       "conviction": 4,
       "reason": "Meta partnership and $1B Meta equity investment (sentiment 0.9, importance 5); day +3.2% on rvol 2.44; RSI 25.5 suggests bounce potential from oversold levels.",
       "stop_price": 537.18,
@@ -1561,11 +1543,11 @@
       "est_price": 339.27,
       "entry_price": 338.62,
       "side": "long",
-      "exit_price": null,
+      "exit_price": 337.132222,
       "exit_reason": "manager_sell",
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "pnl": -16.43,
+      "pnl_pct": -0.0054,
+      "status": "closed",
       "conviction": 3,
       "reason": "[75% invested rule] Analyst upgrade to $400 and Cramer endorsement; high rvol 3.44 but price below VWAP, awaiting bounce confirmation.",
       "stop_price": 332.48,
@@ -1575,15 +1557,15 @@
       "time": "10:20",
       "team": "tech",
       "symbol": "AAPL",
-      "qty": 9,
+      "qty": 9.0,
       "est_price": 344.35,
-      "entry_price": null,
+      "entry_price": 344.4,
       "side": "long",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 4,
       "reason": "[75% invested rule] Trading above VWAP, trend up, supported by Goldman price target hike to $390. Strong relative strength in a flat market. Best available setup for capital deployment.",
       "stop_price": 339.18,
@@ -1593,8 +1575,26 @@
       "time": "10:20",
       "team": "tech",
       "symbol": "TXN",
-      "qty": 11,
+      "qty": 11.0,
       "est_price": 301.64,
+      "entry_price": 302.07,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 4,
+      "reason": "[75% invested rule] Positive 5d and 20d momentum, trading near VWAP with upward trend. Defensive tech name fits President's capital preservation strategy.",
+      "stop_price": 297.12,
+      "take_profit_price": 310.69
+    },
+    {
+      "time": "10:32",
+      "team": "entertainment",
+      "symbol": "WMG",
+      "qty": 22,
+      "est_price": 30.22,
       "entry_price": null,
       "side": "long",
       "exit_price": null,
@@ -1603,9 +1603,27 @@
       "pnl_pct": null,
       "status": "submitted",
       "conviction": 4,
-      "reason": "[75% invested rule] Positive 5d and 20d momentum, trading near VWAP with upward trend. Defensive tech name fits President's capital preservation strategy.",
-      "stop_price": 297.12,
-      "take_profit_price": 310.69
+      "reason": "WMG is a music entertainment play holding above VWAP in an uptrend, but volume is dry; initiating with high conviction due portfolio minimum and defensive posture.",
+      "stop_price": 30.01,
+      "take_profit_price": 31.43
+    },
+    {
+      "time": "10:32",
+      "team": "healthcare",
+      "symbol": "CORT",
+      "qty": 15,
+      "est_price": 86.62,
+      "entry_price": null,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "submitted",
+      "conviction": 2,
+      "reason": "[75% invested rule] Broke above opening range (85.44-85.78) at $86.62 with an uptrend, but rvol is only 0.41 so volume confirmation is weak.",
+      "stop_price": 85.08,
+      "take_profit_price": 89.22
     }
   ],
   "blocked_today": [
@@ -1672,9 +1690,74 @@
       "symbol": "BLK",
       "action": "BUY",
       "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:29",
+      "team": "financials",
+      "symbol": "SOFI",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:29",
+      "team": "financials",
+      "symbol": "HOOD",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:29",
+      "team": "financials",
+      "symbol": "BLK",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:32",
+      "team": "defense",
+      "symbol": "KTOS",
+      "action": "BUY",
+      "reason": "team already has the maximum number of positions"
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-10-27",
+      "team": "space",
+      "symbol": "BA",
+      "entry_price": 186.5,
+      "exit_price": 182.82,
+      "exit_reason": "stop_loss",
+      "pnl": -11.59,
+      "pnl_pct": -0.0207,
+      "reason": "Strong intraday recovery from open (+1.5%), sitting at VWAP with heavy rvol (3.01x) and solid Q3 order backlog support."
+    },
+    {
+      "date": "2026-10-27",
+      "team": "tech",
+      "symbol": "AVGO",
+      "entry_price": 338.62,
+      "exit_price": 337.132222,
+      "exit_reason": "manager_sell",
+      "pnl": -16.43,
+      "pnl_pct": -0.0054,
+      "reason": "[75% invested rule] Analyst upgrade to $400 and Cramer endorsement; high rvol 3.44 but price below VWAP, awaiting bounce confirmation."
+    },
+    {
+      "date": "2026-10-27",
+      "team": "tech",
+      "symbol": "AMD",
+      "entry_price": 548.64,
+      "exit_price": 547.98,
+      "exit_reason": "manager_sell",
+      "pnl": -7.25,
+      "pnl_pct": -0.0022,
+      "reason": "Meta partnership and $1B Meta equity investment (sentiment 0.9, importance 5); day +3.2% on rvol 2.44; RSI 25.5 suggests bounce potential from oversold levels."
+    },
     {
       "date": "2026-10-27",
       "team": "healthcare",
@@ -1916,39 +1999,6 @@
       "pnl": -5.7,
       "pnl_pct": -0.0072,
       "reason": ""
-    },
-    {
-      "date": "2026-10-26",
-      "team": "space",
-      "symbol": "HWM",
-      "entry_price": 194.66,
-      "exit_price": 193.41,
-      "exit_reason": "end_of_day",
-      "pnl": -11.55,
-      "pnl_pct": -0.0074,
-      "reason": "[75% invested rule] ORB above VWAP, rvol 1.55, +4.6% day; earnings tomorrow add risk."
-    },
-    {
-      "date": "2026-10-26",
-      "team": "defense",
-      "symbol": "GD",
-      "entry_price": 355.31,
-      "exit_price": 356.03,
-      "exit_reason": "end_of_day",
-      "pnl": 4.01,
-      "pnl_pct": 0.001,
-      "reason": "GD broke above the opening range high at $354.24, held above VWAP, and showed positive momentum; aligns with executive focus on high-liquidity primes."
-    },
-    {
-      "date": "2026-10-26",
-      "team": "financials",
-      "symbol": "ICE",
-      "entry_price": 160.22,
-      "exit_price": 159.802143,
-      "exit_reason": "end_of_day",
-      "pnl": 3.61,
-      "pnl_pct": 0.0016,
-      "reason": "[75% invested rule] Breakdown below opening range on regulatory overhang; short-term weakness."
     }
   ],
   "report": {
@@ -2671,7 +2721,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-27T09:30-04:00",
+    "time": "2026-10-27T10:30-04:00",
     "earnings": [
       {
         "date": "2026-10-27",
@@ -2712,6 +2762,14 @@
         "eps_forecast": "$6.38",
         "last_year_eps": "$5.75",
         "team": "consumer"
+      },
+      {
+        "date": "2026-10-27",
+        "symbol": "SOFI",
+        "when": "before the open",
+        "eps_forecast": "$0.17",
+        "last_year_eps": "$0.11",
+        "team": "financials"
       },
       {
         "date": "2026-10-28",
@@ -2981,39 +3039,39 @@
     ]
   },
   "scorecard": {
-    "updated": "2026-10-27T09:30-04:00",
+    "updated": "2026-10-27T10:30-04:00",
     "days": 30,
     "overall": {
-      "trades": 291,
-      "win_rate": 0.368,
-      "avg_return": -0.0035,
-      "total_pnl": -1461.42,
-      "profit_factor": 0.47,
+      "trades": 308,
+      "win_rate": 0.377,
+      "avg_return": -0.0031,
+      "total_pnl": -1395.43,
+      "profit_factor": 0.51,
       "enough_data": true
     },
     "by_setup": {
-      "momentum": {
-        "trades": 76,
-        "win_rate": 0.329,
-        "avg_return": -0.0035,
-        "total_pnl": -337.37,
-        "profit_factor": 0.38,
+      "news catalyst": {
+        "trades": 80,
+        "win_rate": 0.375,
+        "avg_return": -0.0037,
+        "total_pnl": -280.5,
+        "profit_factor": 0.53,
         "enough_data": true
       },
-      "news catalyst": {
-        "trades": 74,
-        "win_rate": 0.365,
-        "avg_return": -0.0043,
-        "total_pnl": -323.86,
-        "profit_factor": 0.42,
+      "momentum": {
+        "trades": 78,
+        "win_rate": 0.321,
+        "avg_return": -0.0037,
+        "total_pnl": -358.78,
+        "profit_factor": 0.37,
         "enough_data": true
       },
       "opening range breakout": {
-        "trades": 67,
-        "win_rate": 0.403,
-        "avg_return": -0.0002,
-        "total_pnl": -7.47,
-        "profit_factor": 0.98,
+        "trades": 69,
+        "win_rate": 0.406,
+        "avg_return": -0.0001,
+        "total_pnl": 1.07,
+        "profit_factor": 1.0,
         "enough_data": true
       },
       "untagged": {
@@ -3022,6 +3080,14 @@
         "avg_return": -0.0102,
         "total_pnl": -690.69,
         "profit_factor": 0.34,
+        "enough_data": true
+      },
+      "mean reversion": {
+        "trades": 14,
+        "win_rate": 0.714,
+        "avg_return": 0.0057,
+        "total_pnl": 60.24,
+        "profit_factor": 3.31,
         "enough_data": true
       },
       "other": {
@@ -3033,19 +3099,11 @@
         "enough_data": true
       },
       "VWAP bounce": {
-        "trades": 10,
-        "win_rate": 0.3,
-        "avg_return": -0.0046,
-        "total_pnl": -56.85,
-        "profit_factor": 0.18,
-        "enough_data": true
-      },
-      "mean reversion": {
-        "trades": 9,
-        "win_rate": 0.556,
-        "avg_return": 0.0,
-        "total_pnl": 12.77,
-        "profit_factor": 1.49,
+        "trades": 11,
+        "win_rate": 0.273,
+        "avg_return": -0.0043,
+        "total_pnl": -57.23,
+        "profit_factor": 0.17,
         "enough_data": true
       },
       "pullback in uptrend": {
@@ -3057,12 +3115,12 @@
         "enough_data": true
       },
       "earnings gap": {
-        "trades": 4,
-        "win_rate": 0.75,
-        "avg_return": -0.0026,
-        "total_pnl": -21.06,
-        "profit_factor": 0.2,
-        "enough_data": false
+        "trades": 5,
+        "win_rate": 0.6,
+        "avg_return": -0.0062,
+        "total_pnl": -32.65,
+        "profit_factor": 0.14,
+        "enough_data": true
       },
       "sector rotation": {
         "trades": 2,
@@ -3344,20 +3402,20 @@
       },
       "entertainment": {
         "overall": {
-          "trades": 36,
-          "win_rate": 0.278,
-          "avg_return": -0.0054,
-          "total_pnl": -180.44,
-          "profit_factor": 0.14,
+          "trades": 37,
+          "win_rate": 0.27,
+          "avg_return": -0.0055,
+          "total_pnl": -185.3,
+          "profit_factor": 0.13,
           "enough_data": true
         },
         "by_setup": {
           "momentum": {
-            "trades": 16,
-            "win_rate": 0.188,
-            "avg_return": -0.0064,
-            "total_pnl": -79.53,
-            "profit_factor": 0.09,
+            "trades": 17,
+            "win_rate": 0.176,
+            "avg_return": -0.0066,
+            "total_pnl": -84.39,
+            "profit_factor": 0.08,
             "enough_data": true
           },
           "news catalyst": {
@@ -3473,16 +3531,24 @@
             "total_pnl": -6.44,
             "profit_factor": 0.0,
             "enough_data": false
+          },
+          "Test a VWAP-bounce strategy with tighter stops (0.2% below VWAP) on defensive names like CMCSA and DIS": {
+            "trades": 1,
+            "win_rate": 0.0,
+            "avg_return": -0.0097,
+            "total_pnl": -4.86,
+            "profit_factor": 0.0,
+            "enough_data": false
           }
         }
       },
       "financials": {
         "overall": {
-          "trades": 36,
-          "win_rate": 0.444,
-          "avg_return": -0.0003,
-          "total_pnl": 7.7,
-          "profit_factor": 1.08,
+          "trades": 38,
+          "win_rate": 0.447,
+          "avg_return": -0.0004,
+          "total_pnl": 1.55,
+          "profit_factor": 1.01,
           "enough_data": true
         },
         "by_setup": {
@@ -3495,11 +3561,11 @@
             "enough_data": true
           },
           "momentum": {
-            "trades": 10,
-            "win_rate": 0.4,
-            "avg_return": -0.0002,
-            "total_pnl": 11.67,
-            "profit_factor": 1.44,
+            "trades": 11,
+            "win_rate": 0.364,
+            "avg_return": -0.001,
+            "total_pnl": -4.88,
+            "profit_factor": 0.89,
             "enough_data": true
           },
           "news catalyst": {
@@ -3519,10 +3585,10 @@
             "enough_data": true
           },
           "mean reversion": {
-            "trades": 1,
+            "trades": 2,
             "win_rate": 1.0,
-            "avg_return": 0.0055,
-            "total_pnl": 9.91,
+            "avg_return": 0.0053,
+            "total_pnl": 20.31,
             "profit_factor": null,
             "enough_data": false
           },
@@ -3620,20 +3686,20 @@
       },
       "healthcare": {
         "overall": {
-          "trades": 51,
-          "win_rate": 0.294,
-          "avg_return": -0.0032,
-          "total_pnl": -217.08,
-          "profit_factor": 0.4,
+          "trades": 52,
+          "win_rate": 0.308,
+          "avg_return": -0.0024,
+          "total_pnl": -167.89,
+          "profit_factor": 0.54,
           "enough_data": true
         },
         "by_setup": {
           "news catalyst": {
-            "trades": 22,
-            "win_rate": 0.227,
-            "avg_return": -0.0046,
-            "total_pnl": -116.44,
-            "profit_factor": 0.26,
+            "trades": 23,
+            "win_rate": 0.261,
+            "avg_return": -0.0027,
+            "total_pnl": -67.25,
+            "profit_factor": 0.58,
             "enough_data": true
           },
           "momentum": {
@@ -3746,11 +3812,11 @@
       },
       "space": {
         "overall": {
-          "trades": 41,
-          "win_rate": 0.22,
-          "avg_return": -0.0093,
-          "total_pnl": -666.16,
-          "profit_factor": 0.14,
+          "trades": 48,
+          "win_rate": 0.271,
+          "avg_return": -0.0073,
+          "total_pnl": -656.58,
+          "profit_factor": 0.18,
           "enough_data": true
         },
         "by_setup": {
@@ -3763,11 +3829,11 @@
             "enough_data": true
           },
           "news catalyst": {
-            "trades": 9,
-            "win_rate": 0.111,
-            "avg_return": -0.0142,
-            "total_pnl": -81.73,
-            "profit_factor": 0.17,
+            "trades": 10,
+            "win_rate": 0.1,
+            "avg_return": -0.0152,
+            "total_pnl": -97.25,
+            "profit_factor": 0.15,
             "enough_data": true
           },
           "untagged": {
@@ -3795,18 +3861,34 @@
             "enough_data": true
           },
           "mean reversion": {
-            "trades": 2,
-            "win_rate": 0.5,
-            "avg_return": -0.0064,
-            "total_pnl": -1.63,
-            "profit_factor": 0.62,
-            "enough_data": false
+            "trades": 6,
+            "win_rate": 0.833,
+            "avg_return": 0.0104,
+            "total_pnl": 35.44,
+            "profit_factor": 9.36,
+            "enough_data": true
           },
           "pullback in uptrend": {
             "trades": 1,
             "win_rate": 0.0,
             "avg_return": -0.0127,
             "total_pnl": -6.01,
+            "profit_factor": 0.0,
+            "enough_data": false
+          },
+          "VWAP bounce": {
+            "trades": 1,
+            "win_rate": 0.0,
+            "avg_return": -0.0013,
+            "total_pnl": -0.38,
+            "profit_factor": 0.0,
+            "enough_data": false
+          },
+          "earnings gap": {
+            "trades": 1,
+            "win_rate": 0.0,
+            "avg_return": -0.0207,
+            "total_pnl": -11.59,
             "profit_factor": 0.0,
             "enough_data": false
           }
@@ -3818,6 +3900,14 @@
             "avg_return": -0.0034,
             "total_pnl": -20.05,
             "profit_factor": 0.6,
+            "enough_data": true
+          },
+          "Introduce a filter that blocks entries on symbols that have moved >8% intraday until a pull-back of at least 0.5% occurs": {
+            "trades": 6,
+            "win_rate": 0.667,
+            "avg_return": 0.0084,
+            "total_pnl": 21.17,
+            "profit_factor": 2.33,
             "enough_data": true
           },
           "volume-spike filter for entries following earnings or contract announcements": {
@@ -3859,16 +3949,24 @@
             "total_pnl": 3.68,
             "profit_factor": 3.65,
             "enough_data": false
+          },
+          "Require VWAP confirmation after a news catalyst before entering long positions": {
+            "trades": 1,
+            "win_rate": 0.0,
+            "avg_return": -0.0207,
+            "total_pnl": -11.59,
+            "profit_factor": 0.0,
+            "enough_data": false
           }
         }
       },
       "tech": {
         "overall": {
-          "trades": 49,
-          "win_rate": 0.469,
-          "avg_return": -0.0039,
-          "total_pnl": -383.46,
-          "profit_factor": 0.33,
+          "trades": 55,
+          "win_rate": 0.473,
+          "avg_return": -0.0032,
+          "total_pnl": -365.23,
+          "profit_factor": 0.41,
           "enough_data": true
         },
         "by_setup": {
@@ -3881,19 +3979,19 @@
             "enough_data": true
           },
           "opening range breakout": {
-            "trades": 12,
-            "win_rate": 0.667,
-            "avg_return": 0.0009,
-            "total_pnl": 12.1,
-            "profit_factor": 1.88,
+            "trades": 14,
+            "win_rate": 0.643,
+            "avg_return": 0.0011,
+            "total_pnl": 20.64,
+            "profit_factor": 1.69,
             "enough_data": true
           },
           "news catalyst": {
-            "trades": 6,
+            "trades": 10,
             "win_rate": 0.5,
-            "avg_return": -0.0025,
-            "total_pnl": -12.78,
-            "profit_factor": 0.71,
+            "avg_return": -0.0008,
+            "total_pnl": -3.09,
+            "profit_factor": 0.95,
             "enough_data": true
           },
           "untagged": {
@@ -3946,6 +4044,14 @@
           }
         },
         "by_experiment": {
+          "Implement an RSI floor filter (>30) for short trades to block shorting into climax bottoms.": {
+            "trades": 6,
+            "win_rate": 0.5,
+            "avg_return": -0.0021,
+            "total_pnl": -12.2,
+            "profit_factor": 0.82,
+            "enough_data": true
+          },
           "Test a momentum-reversal exit: close position if 5-min momentum turns negative even if price still above stop.": {
             "trades": 5,
             "win_rate": 0.2,
@@ -3954,20 +4060,20 @@
             "profit_factor": 0.12,
             "enough_data": true
           },
-          "Implement an RSI floor filter (>30) for short trades to block shorting into climax bottoms.": {
-            "trades": 5,
-            "win_rate": 0.6,
-            "avg_return": -0.0004,
-            "total_pnl": 4.2,
-            "profit_factor": 1.08,
-            "enough_data": true
-          },
           "shorting breakdowns in risk-off regime": {
             "trades": 4,
             "win_rate": 0.25,
             "avg_return": -0.0052,
             "total_pnl": -39.54,
             "profit_factor": 0.01,
+            "enough_data": false
+          },
+          "Implement an RSI floor filter (> 30) for short trades to block shorting into climax bottoms.": {
+            "trades": 3,
+            "win_rate": 1.0,
+            "avg_return": 0.0055,
+            "total_pnl": 34.55,
+            "profit_factor": null,
             "enough_data": false
           },
           "Testing risk-off news-catalyst and failed-momentum rotation; only taking high-conviction setups after closing stalled or": {
@@ -4001,25 +4107,17 @@
             "total_pnl": 10.69,
             "profit_factor": null,
             "enough_data": false
-          },
-          "Momentum-reversal exit: close position if 5-minute momentum turns negative even if price is still above the stop.": {
-            "trades": 2,
-            "win_rate": 1.0,
-            "avg_return": 0.0129,
-            "total_pnl": 39.6,
-            "profit_factor": null,
-            "enough_data": false
           }
         }
       }
     },
     "by_exit": {
       "manager_sell": {
-        "trades": 157,
-        "win_rate": 0.223,
+        "trades": 162,
+        "win_rate": 0.216,
         "avg_return": -0.0057,
-        "total_pnl": -1324.76,
-        "profit_factor": 0.23,
+        "total_pnl": -1381.77,
+        "profit_factor": 0.22,
         "enough_data": true
       },
       "end_of_day": {
@@ -4031,18 +4129,18 @@
         "enough_data": true
       },
       "trailing_stop": {
-        "trades": 38,
-        "win_rate": 0.947,
-        "avg_return": 0.0064,
-        "total_pnl": 393.38,
-        "profit_factor": 137.12,
+        "trades": 47,
+        "win_rate": 0.957,
+        "avg_return": 0.0084,
+        "total_pnl": 548.35,
+        "profit_factor": 190.74,
         "enough_data": true
       },
       "stop_loss": {
-        "trades": 22,
+        "trades": 25,
         "win_rate": 0.0,
-        "avg_return": -0.0215,
-        "total_pnl": -731.3,
+        "avg_return": -0.0211,
+        "total_pnl": -763.27,
         "profit_factor": 0.0,
         "enough_data": true
       },
@@ -4057,12 +4155,12 @@
     }
   },
   "mood": {
-    "time": "2026-10-27T10:20-04:00",
+    "time": "2026-10-27T10:30-04:00",
     "regime": "normal",
-    "spy": 0.0003,
-    "qqq": 0.0026,
-    "fear_vixy": -0.0006,
-    "breadth": 0.42,
+    "spy": 0.0021,
+    "qqq": 0.0063,
+    "fear_vixy": -0.0074,
+    "breadth": 0.43,
     "why": "no warning signs",
     "note": "Market is calm or rising. Trade your best setups as usual."
   },
@@ -6337,6 +6435,14 @@
           "symbol": "LHX",
           "action": "BUY",
           "reason": "conviction None is below the minimum 2"
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:32",
+          "team": "defense",
+          "symbol": "KTOS",
+          "action": "BUY",
+          "reason": "team already has the maximum number of positions"
         }
       ],
       "plans": [
@@ -7348,6 +7454,26 @@
           "experiment": "",
           "decisions": [],
           "results": []
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:32",
+          "trigger": "scheduled look",
+          "market_view": "",
+          "experiment": "",
+          "decisions": [
+            {
+              "symbol": "KTOS",
+              "action": "BUY",
+              "conviction": null,
+              "reason": "ARK Invest purchase news catalyst combined with positive 15m momentum and flat trend. RSI 35.5 suggests room for a bounce. Buying to meet the 75% investment minimum with a tight stop.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.03
+            }
+          ],
+          "results": [
+            "BUY KTOS blocked: team already has the maximum number of positions"
+          ]
         }
       ],
       "lessons": [
@@ -9618,13 +9744,13 @@
           "trail_active": null,
           "first_stop": 182.94,
           "entry_price": 186.5,
-          "exit_price": null,
-          "exit_time": null,
-          "exit_reason": null,
+          "exit_price": 182.82,
+          "exit_time": "2026-10-27T14:26:30.710093229Z",
+          "exit_reason": "stop_loss",
           "exit_note": null,
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "pnl": -11.59,
+          "pnl_pct": -0.0207,
+          "status": "closed",
           "conviction": 4,
           "reason": "Strong intraday recovery from open (+1.5%), sitting at VWAP with heavy rvol (3.01x) and solid Q3 order backlog support.",
           "stop_price": 182.94,
@@ -11215,6 +11341,15 @@
           "experiment": "",
           "decisions": [],
           "results": []
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:32",
+          "trigger": "price moves in ['BA']",
+          "market_view": "",
+          "experiment": "",
+          "decisions": [],
+          "results": []
         }
       ],
       "lessons": [
@@ -11448,8 +11583,8 @@
         },
         {
           "date": "2026-10-27",
-          "realized": 21.17,
-          "cum": -644.99
+          "realized": 9.58,
+          "cum": -656.58
         }
       ],
       "watchlist": {
@@ -11766,8 +11901,8 @@
             }
           ],
           "urgent": [],
-          "overall": "The aerospace group is showing modestly positive sentiment, with ASTS\u2019s routine update call offering little market impact. LightPath\u2019s large defense order provides a stronger, near\u2011term catalyst for its stock.",
-          "items_read": 33
+          "overall": "No new developments have been reported for the Space & Aerospace group in the past two hours. The market sentiment remains neutral with no catalysts to move prices.",
+          "items_read": 34
         },
         "social": {
           "findings": [],
@@ -13286,8 +13421,8 @@
           "entry_price": 64.81,
           "exit_price": null,
           "exit_time": null,
-          "exit_reason": null,
-          "exit_note": null,
+          "exit_reason": "manager_sell",
+          "exit_note": "FOX was a prior VWAP bounce that broke below the opening range/VWAP with weak momentum and fading volume; exiting the failed setup.",
           "pnl": null,
           "pnl_pct": null,
           "status": "open",
@@ -13295,6 +13430,33 @@
           "reason": "FOXA is a defensive media name trading flat at VWAP (+0.0%) with low intraday volatility, matching executive orders to prioritize capital preservation and defensive VWAP bounces.",
           "stop_price": 63.92,
           "take_profit_price": 66.84
+        },
+        {
+          "id": "entertainment-WMG-202610271032-a865",
+          "date": "2026-10-27",
+          "time": "10:32",
+          "symbol": "WMG",
+          "kind": "shares",
+          "qty": 22,
+          "dollars": 664.84,
+          "est_price": 30.22,
+          "setup": "pullback in uptrend",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 30.01,
+          "entry_price": null,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "submitted",
+          "conviction": 4,
+          "reason": "WMG is a music entertainment play holding above VWAP in an uptrend, but volume is dry; initiating with high conviction due portfolio minimum and defensive posture.",
+          "stop_price": 30.01,
+          "take_profit_price": 31.43
         }
       ],
       "blocked": [
@@ -14317,6 +14479,36 @@
           "results": [
             "BUY FOXA x10 (~$648.9)"
           ]
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:32",
+          "trigger": "scheduled look",
+          "market_view": "The market is calm and slightly positive, with SPY +0.1% and QQQ +0.4%. The entertainment group is mixed, with several names breaking below the opening range/VWAP on modest news. Our prior VWAP bounces in DIS and CMCSA failed, so we are staying defensive and selective.",
+          "experiment": "Test a VWAP-bounce strategy with tighter stops (0.2% below VWAP) on defensive names like CMCSA and DIS.",
+          "decisions": [
+            {
+              "symbol": "FOXA",
+              "action": "SELL",
+              "conviction": 3,
+              "reason": "FOX was a prior VWAP bounce that broke below the opening range/VWAP with weak momentum and fading volume; exiting the failed setup.",
+              "stop_loss_pct": 0.02,
+              "take_profit_pct": 0.04
+            },
+            {
+              "symbol": "WMG",
+              "action": "BUY",
+              "conviction": 4,
+              "reason": "WMG is a music entertainment play holding above VWAP in an uptrend, but volume is dry; initiating with high conviction due portfolio minimum and defensive posture.",
+              "stop_loss_pct": 0.005,
+              "take_profit_pct": 0.04
+            }
+          ],
+          "results": [
+            "SELL FOXA",
+            "BUY WMG x22 (~$664.84)",
+            "WATCHLIST remove rejected FOXA"
+          ]
         }
       ],
       "lessons": [
@@ -14629,12 +14821,6 @@
         "rejected": [
           {
             "time": "2026-10-21T22:11-04:00",
-            "action": "add_rejected",
-            "symbol": "ATVI",
-            "reason": "not tradable at the broker"
-          },
-          {
-            "time": "2026-10-21T22:11-04:00",
             "action": "remove_rejected",
             "symbol": "TKO",
             "reason": "list would drop below 15 stocks"
@@ -14806,9 +14992,15 @@
             "action": "remove_rejected",
             "symbol": "EA",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-27T10:32-04:00",
+            "action": "remove_rejected",
+            "symbol": "FOXA",
+            "reason": "still holding it; sell first"
           }
         ],
-        "updated": "2026-10-27T09:50-04:00"
+        "updated": "2026-10-27T10:32-04:00"
       },
       "research": {
         "time": "2026-10-27T08:47-04:00",
@@ -16715,13 +16907,13 @@
           "trail_active": null,
           "first_stop": 537.18,
           "entry_price": 548.64,
-          "exit_price": null,
-          "exit_time": null,
+          "exit_price": 547.98,
+          "exit_time": "2026-10-27T14:20:28.003488858Z",
           "exit_reason": "manager_sell",
           "exit_note": "Stalled momentum below VWAP with negative 15m trend. RSI is low (25.5) but intraday structure is weak. Rotating capital to stronger relative strength leaders per President's directive.",
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "pnl": -7.25,
+          "pnl_pct": -0.0022,
+          "status": "closed",
           "conviction": 4,
           "reason": "Meta partnership and $1B Meta equity investment (sentiment 0.9, importance 5); day +3.2% on rvol 2.44; RSI 25.5 suggests bounce potential from oversold levels.",
           "stop_price": 537.18,
@@ -16742,13 +16934,13 @@
           "trail_active": null,
           "first_stop": 332.48,
           "entry_price": 338.62,
-          "exit_price": null,
-          "exit_time": null,
+          "exit_price": 337.132222,
+          "exit_time": "2026-10-27T14:20:28.688147688Z",
           "exit_reason": "manager_sell",
           "exit_note": "Opening range breakdown with heavy volume (rvol 3.11) and negative 15m momentum. Capital preservation mandate from President requires exiting weak positions. News catalyst (Anthropic deal) has faded into the breakdown.",
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "pnl": -16.43,
+          "pnl_pct": -0.0054,
+          "status": "closed",
           "conviction": 3,
           "reason": "[75% invested rule] Analyst upgrade to $400 and Cramer endorsement; high rvol 3.44 but price below VWAP, awaiting bounce confirmation.",
           "stop_price": 332.48,
@@ -16760,7 +16952,7 @@
           "time": "10:20",
           "symbol": "AAPL",
           "kind": "shares",
-          "qty": 9,
+          "qty": 9.0,
           "dollars": 3099.15,
           "est_price": 344.35,
           "setup": "pullback in uptrend",
@@ -16768,14 +16960,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 339.18,
-          "entry_price": null,
+          "entry_price": 344.4,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 4,
           "reason": "[75% invested rule] Trading above VWAP, trend up, supported by Goldman price target hike to $390. Strong relative strength in a flat market. Best available setup for capital deployment.",
           "stop_price": 339.18,
@@ -16787,7 +16979,7 @@
           "time": "10:20",
           "symbol": "TXN",
           "kind": "shares",
-          "qty": 11,
+          "qty": 11.0,
           "dollars": 3318.04,
           "est_price": 301.64,
           "setup": "momentum",
@@ -16795,14 +16987,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 297.12,
-          "entry_price": null,
+          "entry_price": 302.07,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 4,
           "reason": "[75% invested rule] Positive 5d and 20d momentum, trading near VWAP with upward trend. Defensive tech name fits President's capital preservation strategy.",
           "stop_price": 297.12,
@@ -18670,8 +18862,8 @@
         },
         {
           "date": "2026-10-27",
-          "realized": 41.91,
-          "cum": -341.55
+          "realized": 18.23,
+          "cum": -365.23
         }
       ],
       "watchlist": {
@@ -24015,6 +24207,30 @@
           "symbol": "BLK",
           "action": "BUY",
           "reason": "conviction None is below the minimum 4"
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:29",
+          "team": "financials",
+          "symbol": "SOFI",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 4"
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:29",
+          "team": "financials",
+          "symbol": "HOOD",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 4"
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:29",
+          "team": "financials",
+          "symbol": "BLK",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 4"
         }
       ],
       "plans": [
@@ -27432,6 +27648,33 @@
           "reason": "[75% invested rule] Holding above VWAP (+0.3%) with steady 5d momentum (+4.9%) ahead of corporate events.",
           "stop_price": 262.33,
           "take_profit_price": 274.31
+        },
+        {
+          "id": "healthcare-CORT-202610271032-d7d0",
+          "date": "2026-10-27",
+          "time": "10:32",
+          "symbol": "CORT",
+          "kind": "shares",
+          "qty": 15,
+          "dollars": 1299.3,
+          "est_price": 86.62,
+          "setup": "opening range breakout",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 85.08,
+          "entry_price": null,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "submitted",
+          "conviction": 2,
+          "reason": "[75% invested rule] Broke above opening range (85.44-85.78) at $86.62 with an uptrend, but rvol is only 0.41 so volume confirmation is weak.",
+          "stop_price": 85.08,
+          "take_profit_price": 89.22
         }
       ],
       "blocked": [
@@ -29339,6 +29582,17 @@
           "experiment": "",
           "decisions": [],
           "results": []
+        },
+        {
+          "date": "2026-10-27",
+          "time": "10:32",
+          "trigger": "must invest $1,683 more (75% rule)",
+          "market_view": "The market is calm and slightly risk-on with SPY +0.2% and QQQ +0.6%; healthcare names are mostly flat with low intraday volume. A mandatory strategy pause is in effect: no new positions for 3 days due to a 29% win rate, so I am holding the four existing longs and not adding capital despite being below the 75% minimum. Existing stops are not hit and no targets are reached, so doing nothing is the right move.",
+          "experiment": "",
+          "decisions": [],
+          "results": [
+            "BUY CORT x15 (~$1299.3) [deploy]"
+          ]
         }
       ],
       "lessons": [
@@ -29742,7 +29996,7 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-27T10:00-04:00"
+        "updated": "2026-10-27T10:32-04:00"
       },
       "research": {
         "time": "2026-10-27T08:53-04:00",
@@ -29896,11 +30150,9 @@
               "source": "benzinga"
             }
           ],
-          "urgent": [
-            "MRNA"
-          ],
-          "overall": "The healthcare sector experiences mixed reactions as William Blair downgrades Moderna stock and UnitedHealth Group reports Q3 earnings.",
-          "items_read": 33
+          "urgent": [],
+          "overall": "No recent significant news or SEC filings found impacting the Healthcare stocks in the team's list. Please check back later for updates.",
+          "items_read": 34
         },
         "social": {
           "findings": [],
@@ -30392,38 +30644,6 @@
     }
   ],
   "blocked_recent": [
-    {
-      "date": "2026-10-23",
-      "time": "12:58",
-      "team": "entertainment",
-      "symbol": "WBD",
-      "action": "BUY",
-      "reason": "broker error: POST /v2/orders -> 422: {\"code\":40010001,\"message\":\"asset WBD is not active\"}"
-    },
-    {
-      "date": "2026-10-23",
-      "time": "13:34",
-      "team": "defense",
-      "symbol": "AVAV",
-      "action": "BUY",
-      "reason": "team used all of today's trades"
-    },
-    {
-      "date": "2026-10-23",
-      "time": "13:34",
-      "team": "defense",
-      "symbol": "LMT",
-      "action": "BUY",
-      "reason": "team used all of today's trades"
-    },
-    {
-      "date": "2026-10-23",
-      "time": "13:34",
-      "team": "defense",
-      "symbol": "CACI",
-      "action": "BUY",
-      "reason": "team used all of today's trades"
-    },
     {
       "date": "2026-10-23",
       "time": "13:34",
@@ -31591,6 +31811,38 @@
       "symbol": "BLK",
       "action": "BUY",
       "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:29",
+      "team": "financials",
+      "symbol": "SOFI",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:29",
+      "team": "financials",
+      "symbol": "HOOD",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:29",
+      "team": "financials",
+      "symbol": "BLK",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:32",
+      "team": "defense",
+      "symbol": "KTOS",
+      "action": "BUY",
+      "reason": "team already has the maximum number of positions"
     }
   ]
 }
