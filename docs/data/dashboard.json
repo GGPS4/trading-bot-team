@@ -1,11 +1,9 @@
 {
-  "updated": "2026-10-27T04:36-04:00",
+  "updated": "2026-10-27T06:06-04:00",
   "date": "2026-10-27",
   "mode": "paper",
   "health": {
-    "issues": [
-      "1 problem(s) in the last hour, latest: economic calendar (nextweek) unavailable: 404 Client Error: Not Found for url: https://nfs.faireconomy.media/ff_calendar_nextweek.json"
-    ]
+    "issues": []
   },
   "paused": false,
   "rules": {
@@ -14,10 +12,10 @@
     "strategy": "day_trading"
   },
   "account": {
-    "equity": 98975.56,
+    "equity": 99001.72,
     "cash": 95830.96,
-    "day_change": -0.92,
-    "day_change_pct": -0.0
+    "day_change": 25.24,
+    "day_change_pct": 0.0003
   },
   "benchmark": {
     "symbol": "SPY",
@@ -26,9 +24,9 @@
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 8,
-    "return_since_start": -0.0102,
+    "return_since_start": -0.01,
     "benchmark_since_start": -0.007,
-    "max_drawdown": 0.0102
+    "max_drawdown": 0.0101
   },
   "go_live": {
     "items": [
@@ -174,8 +172,8 @@
         "IBM"
       ],
       "budget": 22268.03,
-      "invested": 3144.6,
-      "unrealized_pnl": -28.73,
+      "invested": 3170.76,
+      "unrealized_pnl": -2.57,
       "realized_today": 0,
       "trades_today": 0,
       "blocked_today": 0,
@@ -296,10 +294,10 @@
       "team": "tech",
       "qty": 4.0,
       "entry": 392.99,
-      "price": 385.65,
-      "value": 1542.6,
-      "pnl": -29.36,
-      "pnl_pct": -0.0187,
+      "price": 389.94,
+      "value": 1559.76,
+      "pnl": -12.2,
+      "pnl_pct": -0.0078,
       "stop": 384.23,
       "target": 403.83,
       "reason": "OR breakout above 385, Bernstein PT raise to $700, day +3.6, above VWAP; oversold/50d below so high risk, conviction strong due to catalyst.",
@@ -314,10 +312,10 @@
       "team": "tech",
       "qty": 9.0,
       "entry": 177.93,
-      "price": 178.0,
-      "value": 1602.0,
-      "pnl": 0.63,
-      "pnl_pct": 0.0004,
+      "price": 179.0,
+      "value": 1611.0,
+      "pnl": 9.63,
+      "pnl_pct": 0.006,
       "stop": 175.38,
       "target": 183.39,
       "reason": "[75% invested rule] OR breakout above VWAP and trend up, but low rvol.",
@@ -1327,7 +1325,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-27T04:36-04:00",
+    "time": "2026-10-27T06:06-04:00",
     "earnings": [
       {
         "date": "2026-10-27",
@@ -2910,6 +2908,15 @@
     "space": [
       {
         "symbol": "SPCX",
+        "sentiment": 0.2,
+        "importance": 2,
+        "unconfirmed_rumor": true,
+        "summary": "Cathie Wood predicts SpaceX could boost economic growth, but it's speculative and not tied to concrete contracts or launches",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T06:05-04:00"
+      },
+      {
+        "symbol": "SPCX",
         "sentiment": 0.1,
         "importance": 2,
         "unconfirmed_rumor": false,
@@ -2970,15 +2977,6 @@
         "summary": "Barclays suggests a potential SpaceX-Tesla merger could accelerate AI and autonomous driving initiatives, but no official announcement or filing exists.",
         "source": "Benzinga",
         "seen_at": "2026-10-26T16:55-04:00"
-      },
-      {
-        "symbol": "SPCX",
-        "sentiment": -0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "SpaceX is mentioned in the context of Elon Musk's warnings on neoclouds and CoreWeave's debt crisis, but there is no direct negative news regarding SpaceX's operations or contracts.",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T16:25-04:00"
       }
     ],
     "entertainment": [
@@ -3040,6 +3038,33 @@
     "tech": [
       {
         "symbol": "MSFT",
+        "sentiment": -0.2,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Bill Gates warned that AI\u2011powered robots could replace many human jobs, raising concerns about future labor markets.",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T06:06-04:00"
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": -0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Mark Cuban warned Apple is being treated like a meme stock, raising bubble concerns",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T05:21-04:00"
+      },
+      {
+        "symbol": "MU",
+        "sentiment": -0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Mark Cuban warned Micron is being treated like a meme stock, raising bubble concerns",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T05:21-04:00"
+      },
+      {
+        "symbol": "MSFT",
         "sentiment": -0.4,
         "importance": 3,
         "unconfirmed_rumor": false,
@@ -3082,33 +3107,6 @@
         "summary": "IBM unveiled AI\u2011agent security features with HashiCorp Vault and Watsonx Orchestrate at TechXchange 2026.",
         "source": "benzinga",
         "seen_at": "2026-10-27T02:15-04:00"
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": -0.2,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Apple is offering replacements for iPhone Duo units with display cracks near the hinge, addressing a reported defect.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T00:45-04:00"
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": -0.4,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Ark Invest trimmed its position in AMD, indicating reduced confidence from a major investor.",
-        "source": "benzinga",
-        "seen_at": "2026-10-26T22:30-04:00"
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": 0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Narmi integrated its Model Context Protocol into Microsoft 365 Copilot, expanding AI capabilities for the platform.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T22:30-04:00"
       }
     ],
     "consumer": [
@@ -3187,6 +3185,15 @@
     ],
     "financials": [
       {
+        "symbol": "V",
+        "sentiment": 0,
+        "importance": 1,
+        "unconfirmed_rumor": false,
+        "summary": "Futures mixed as Fed starts meeting; no specific Visa news",
+        "source": "benzinga",
+        "seen_at": "2026-10-27T06:06-04:00"
+      },
+      {
         "symbol": "COIN",
         "sentiment": 0.2,
         "importance": 2,
@@ -3246,15 +3253,6 @@
         "importance": 3,
         "unconfirmed_rumor": false,
         "summary": "Public companies are objecting to the OKXICE tokenized share platform, posing regulatory and reputational risk for Intercontinental Exchange.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-26T08:17-04:00"
-      },
-      {
-        "symbol": "C",
-        "sentiment": 0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Citigroup acted as financial advisor on a $500\u202fmillion sale, generating advisory fees and showcasing its deal\u2011making capability.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-26T08:17-04:00"
       }
@@ -9599,6 +9597,15 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "SPCX",
+            "sentiment": 0.2,
+            "importance": 2,
+            "unconfirmed_rumor": true,
+            "summary": "Cathie Wood predicts SpaceX could boost economic growth, but it's speculative and not tied to concrete contracts or launches",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T06:05-04:00"
+          },
           {
             "symbol": "SPCX",
             "sentiment": 0.1,
@@ -15974,6 +15981,33 @@
         "overnight": [
           {
             "symbol": "MSFT",
+            "sentiment": -0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Bill Gates warned that AI\u2011powered robots could replace many human jobs, raising concerns about future labor markets.",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T06:06-04:00"
+          },
+          {
+            "symbol": "AAPL",
+            "sentiment": -0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Mark Cuban warned Apple is being treated like a meme stock, raising bubble concerns",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T05:21-04:00"
+          },
+          {
+            "symbol": "MU",
+            "sentiment": -0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Mark Cuban warned Micron is being treated like a meme stock, raising bubble concerns",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T05:21-04:00"
+          },
+          {
+            "symbol": "MSFT",
             "sentiment": -0.4,
             "importance": 3,
             "unconfirmed_rumor": false,
@@ -16212,33 +16246,6 @@
             "importance": 2,
             "unconfirmed_rumor": false,
             "summary": "AMD indicated interest in purchasing up to $5B of Meta shares",
-            "source": "benzinga",
-            "seen_at": "2026-10-26T07:31-04:00"
-          },
-          {
-            "symbol": "NVDA",
-            "sentiment": 0.1,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Nvidia indicated interest in purchasing up to $5B of Meta shares",
-            "source": "benzinga",
-            "seen_at": "2026-10-26T07:31-04:00"
-          },
-          {
-            "symbol": "AVGO",
-            "sentiment": 0.1,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Broadcom indicated interest in purchasing up to $5B of Meta shares (AVGO also mentioned)",
-            "source": "benzinga",
-            "seen_at": "2026-10-26T07:31-04:00"
-          },
-          {
-            "symbol": "NOW",
-            "sentiment": 0.7,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Cantor Fitzgerald maintains overweight on ServiceNow and raises price target to $201",
             "source": "benzinga",
             "seen_at": "2026-10-26T07:31-04:00"
           }
@@ -21826,6 +21833,15 @@
         },
         "overnight": [
           {
+            "symbol": "V",
+            "sentiment": 0,
+            "importance": 1,
+            "unconfirmed_rumor": false,
+            "summary": "Futures mixed as Fed starts meeting; no specific Visa news",
+            "source": "benzinga",
+            "seen_at": "2026-10-27T06:06-04:00"
+          },
+          {
             "symbol": "COIN",
             "sentiment": 0.2,
             "importance": 2,
@@ -21986,15 +22002,6 @@
             "summary": "Broad market decline and extreme fear weigh on Visa as the Dow tumbles over 1%.",
             "source": "benzinga",
             "seen_at": "2026-10-26T02:56-04:00"
-          },
-          {
-            "symbol": "HOOD",
-            "sentiment": 0.4,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "CEO says crypto\u2011based prediction markets could outpace traditional sports platforms, indicating growth potential for Robinhood\u2019s crypto offerings.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-25T21:06-04:00"
           }
         ],
         "technicals": {
