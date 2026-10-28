@@ -1,57 +1,57 @@
 {
   "date": "2026-10-28",
-  "time": "09:34",
-  "trigger": "first look this run",
-  "market_view": "Market mood is cautious with only 11% of watched stocks advancing, though SPY and QQQ show mild positive opens (+0.2% and +0.4%). Aerospace and space setups require extra selectivity due to recent sector pullbacks and elevated market volatility. We focus on relative strength candidates with specific contract catalysts and short weak single-stock news catalysts like Boeing.",
+  "time": "09:41",
+  "trigger": "big news on ['SPCX']",
+  "market_view": "The broader market opened modestly positive with SPY +0.2% and QQQ +0.4%, but space and aerospace names are exhibiting mixed early momentum. With 5 active positions entered just minutes ago at 09:34, we are at the maximum open position cap and holding through initial opening volatility. We respect the executive pause by initiating no new discretionary trades while tracking volume and VWAP stabilization across watchlist names.",
   "decisions": [],
   "ranked_ideas": [
     {
-      "symbol": "VSAT",
+      "symbol": "HWM",
       "direction": "long",
       "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Strong recent momentum (+16.9% 5d) trading above 50d SMA with positive MoU announcement with Space42 and Terrestar."
+      "stop_loss_pct": 0.018,
+      "take_profit_pct": 0.035,
+      "setup": "mean reversion",
+      "reason": "Oversold with 20d -16.9% pullback and RSI 24.7, showing early strength +1.1% on strong relative volume (rvol 2.32) holding VWAP."
     },
     {
-      "symbol": "FLY",
+      "symbol": "ASTS",
       "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.025,
       "take_profit_pct": 0.05,
-      "setup": "news catalyst",
-      "reason": "Milestone hit on $259M Space Force missile warning contract; strong 5d momentum (+22.0%)."
+      "setup": "mean reversion",
+      "reason": "Deep >25% pullback over 20 days with RSI 22.4, high rvol 3.14, stabilizing off open low and bouncing towards VWAP."
     },
     {
-      "symbol": "BA",
-      "direction": "short",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Severe fundamental headwinds with delayed 737 production ramp to 2H 2027, supplier shortages, and Morgan Stanley PT cut to $195."
-    },
-    {
-      "symbol": "RKLB",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Showing positive relative strength (+14.6% 5d) and green start to the session (+0.3%)."
-    },
-    {
-      "symbol": "GE",
+      "symbol": "SPCX",
       "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "Large cap aerospace stability holding support after recent modest consolidated pullbacks."
+      "setup": "news catalyst",
+      "reason": "Strong catalyst on upsized Anthropic compute contract renewal with massive liquidity and rvol 4.84 near VWAP."
+    },
+    {
+      "symbol": "LUNR",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion",
+      "reason": "Down 20.5% over 20d with RSI 29.7 and above-average opening volume (rvol 2.08), waiting for confirmed VWAP reclaim."
+    },
+    {
+      "symbol": "TDG",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.012,
+      "take_profit_pct": 0.025,
+      "setup": "momentum",
+      "reason": "Low volatility aerospace defense quality leader holding steady near previous close with RSI 60."
     }
   ],
-  "experiment": "Add a VWAP-bounce confirmation step for all news-catalyst entries, using a smaller position size until the bounce is validated",
+  "experiment": "Test a stricter pull-back rule that blocks entries until price retraces at least 0.5% after a >8% move",
   "watchlist_changes": {
     "add": [],
     "remove": []

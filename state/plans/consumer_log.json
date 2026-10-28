@@ -1075,5 +1075,92 @@
       "BUY LOW blocked: conviction None is below the minimum 2",
       "BUY BKNG blocked: conviction None is below the minimum 2"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "09:39",
+    "trigger": "first look this run",
+    "market_view": "Market sentiment is cautious with broad indices sliding and only 11% of tracked stocks positive. We are balancing selective longs with clear fundamental catalysts against high-conviction shorts on stocks with severe negative headlines.",
+    "experiment": "Testing high-conviction news catalyst entries with ATR-based stops in a risk-off regime while respecting the 50-day moving average",
+    "decisions": [
+      {
+        "symbol": "WHR",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "Stifel downgraded WHR to Sell and slashed price target to $20 following weak Q3 earnings, presenting a prime negative catalyst for intraday downside.",
+        "stop_loss_pct": 0.025,
+        "take_profit_pct": 0.05
+      },
+      {
+        "symbol": "DG",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "FTC and 20 states launched a lawsuit alleging systematic customer overcharging, establishing persistent selling pressure.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "RCL",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Multiple Wall Street firms raised targets up to $361 after strong Q3 operational execution and record booking trends.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.045
+      },
+      {
+        "symbol": "TSLA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Showing relative intraday strength (+0.7%) and leading 5-day trend supported by Miami and Tampa Robotaxi expansion news.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "AMZN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Benefiting from FCC approval of Globalstar acquisition and Verisk enterprise AI integrations ahead of earnings.",
+        "stop_loss_pct": 0.018,
+        "take_profit_pct": 0.035
+      }
+    ],
+    "results": [
+      "SHORT WHR x50 (~$1319.0)",
+      "SHORT DG x10 (~$1264.5)",
+      "BUY RCL x4 (~$1183.88)",
+      "BUY TSLA x3 (~$1221.42)",
+      "BUY AMZN x5 (~$1272.55)"
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "09:41",
+    "trigger": "price moves in ['WHR']",
+    "market_view": "The market opens with slight positive momentum (SPY +0.1%, QQQ +0.3%) in a calm regime. Sector rotation remains mixed, requiring strict adherence to VWAP and relative volume confirmation before taking day-trading setups.",
+    "experiment": "Testing high-conviction momentum entries strictly confirmed by price above VWAP and rvol > 1.5.",
+    "decisions": [
+      {
+        "symbol": "TSLA",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "TSLA has fallen -1.4% from the open and is trading -0.9% below VWAP, violating strict VWAP confirmation rules.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "LULU",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "LULU is trading +0.7% above open and +0.5% above VWAP with strong relative volume (rvol 1.53).",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      }
+    ],
+    "results": [
+      "SELL TSLA",
+      "BUY LULU x12 (~$1247.46)",
+      "WATCHLIST removed LKQ",
+      "WATCHLIST added WEN"
+    ]
   }
 ]

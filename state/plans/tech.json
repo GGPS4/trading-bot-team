@@ -1,25 +1,105 @@
 {
-  "date": "2026-10-27",
-  "time": "14:20",
-  "trigger": "must invest $3,541 more (75% rule)",
-  "orders": [
+  "date": "2026-10-28",
+  "time": "09:39",
+  "trigger": "first look this run",
+  "market_view": "Market mood is cautious with tech indices up slightly while broader market breadth is narrow. Strong AI catalysts in memory and custom silicon (MU, AVGO, AMD, NVDA) provide clear intraday momentum setups despite general market sliding. Enforcing the 75% budget deployment rule by targeting high-conviction catalyst-backed tech names.",
+  "decisions": [
+    {
+      "symbol": "MU",
+      "action": "BUY",
+      "conviction": 5,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Up +3.5% on strong SK Hynix Q3 record profit news showing massive AI memory demand and tight supply."
+    },
+    {
+      "symbol": "AVGO",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.035,
+      "setup": "news catalyst",
+      "reason": "Up +1.9% following analyst upgrade from D.A. Davidson to Buy with $400 PT on custom AI silicon momentum."
+    },
+    {
+      "symbol": "AMD",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.035,
+      "setup": "momentum",
+      "reason": "Up +2.2% with Susquehanna raising price target to $650, showing solid opening momentum."
+    },
+    {
+      "symbol": "NVDA",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Up +0.9% on news of HIVE Digital securing $129M credit facility for GB200 NVL72 deployments."
+    },
     {
       "symbol": "INTC",
-      "side": "buy",
-      "qty": 35,
-      "price": 93.35,
-      "stop_loss_pct": 0.01,
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum"
+      "setup": "news catalyst",
+      "reason": "Up +1.4% following multiyear enterprise AI collaboration announcement with Oracle Cloud."
     }
   ],
-  "watchlist_add": [],
-  "watchlist_remove": [],
   "ranked_ideas": [
-    "MSFT",
-    "NVDA",
-    "AAPL",
-    "NOW",
-    "AMAT"
-  ]
+    {
+      "symbol": "ANET",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Top momentum candidate requested by executive for trailing breakout strategy."
+    },
+    {
+      "symbol": "AMAT",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Trading up +1.5% off the open in sympathy with semiconductor memory strength."
+    },
+    {
+      "symbol": "PANW",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "pullback in uptrend",
+      "reason": "Strong 5d gain (+18%) consolidating nicely above 50-day moving average."
+    },
+    {
+      "symbol": "NOW",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Positive analyst sentiment ahead of today's post-close earnings report."
+    },
+    {
+      "symbol": "MSFT",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Expansion of Copilot into Dayforce platform and strong adoption metrics."
+    }
+  ],
+  "experiment": "Implement an automated filter that blocks long entries unless 15-minute momentum is positive and price is strictly above VWAP.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }
