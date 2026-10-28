@@ -1539,5 +1539,25 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-28",
+    "time": "11:05",
+    "trigger": "must invest $821 more (75% rule)",
+    "market_view": "The market is calm and slightly higher, with SPY +0.1%, QQQ flat, VIXY -1.1%, and about half the watchlist higher. LLY is pressuring higher on positive retatrutide data and an opening-range breakout, while the Fed announcement and upcoming earnings keep the session high event risk. I see one clean momentum long setup in VRTX above VWAP with strong relative volume, but the executive pause and low historical win rate require strict catalyst-plus-VWAP confirmation.",
+    "experiment": "ATR-based dynamic stops for all news catalyst trades",
+    "decisions": [
+      {
+        "symbol": "VRTX",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "VRTX cleared the opening range at 515.35-523.64, holds above VWAP, and shows rvol 1.52 with positive m15/m60 momentum; Fed price-target updates add to the upside narrative.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY VRTX x1 (~$534.63)"
+    ]
   }
 ]
