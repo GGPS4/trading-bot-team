@@ -1,78 +1,83 @@
 {
   "date": "2026-10-28",
-  "time": "12:41",
+  "time": "13:59",
   "trigger": "scheduled look",
-  "market_view": "Market is calm but with selective moves today. Defense stocks showing mixed action with some OR breakouts and breakdowns. Key levels being tested around VWAP and opening ranges in a normal regime (SPY +0.2%, QQQ +0.1%, VIXY -1.6%). Need to add ~$2,850 to reach 75% minimum while staying within 5-position limit and 15% max per position.",
+  "market_view": "Market is calm and slightly higher, with defense stocks mixed. LMT showed an opening range breakout and above VWAP on strong overnight news, but relative volume was below 1.5. News flow remains supportive of defense spending, though no new high-conviction setups met the strict VWAP+Rvol>1.5 filter. I am selectively adding to LMT while watching for tight risk control.",
   "decisions": [
     {
-      "symbol": "LDOS",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.001,
-      "setup": "other",
-      "reason": "LDOS trading below VWAP (-0.7%) with weak momentum (rvol 0.32). Below criteria for long entries per rule 'above VWAP + rvol > 1.5'. News about $99M Cyber Command contract not translating to intraday strength; technicals violate core entry rule."
-    },
-    {
-      "symbol": "HEI",
+      "symbol": "LMT",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "HEI trading above VWAP (+0.4%) with OR breakout (308.91-310.46). +1.2% intraday momentum, rvol 0.74 best among non-held stocks. News: quantum-solution suite for federal agencies (sentiment 0.4, importance 2). Fits opening range breakout setup with tight stop and 3% first target."
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "news catalyst",
+      "reason": "LMT is above VWAP and in an opening range breakout; overnight news includes a $694M hypersonic weapon contract and PAC-3 facility in Poland with high importance. Executive prioritized LMT for stability. Adding to the existing long to meet the 75% minimum while maintaining disciplined risk."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "TXT",
+      "symbol": "CACI",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "TXT trading above VWAP (+0.2%) with OR breakout (77.92-78.04). +0.4% intraday momentum, rvol 0.57, trend up. No strong negatives; solid technical setup among available names."
-    },
-    {
-      "symbol": "LHX",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "LHX trading above VWAP (+0.2%) with OR breakout (257.87-259.12). m15 +0.1%, m60 +0.1%, rvol 0.49, trend flat. Technicals acceptable among non-held names."
-    },
-    {
-      "symbol": "HII",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "sector rotation",
-      "reason": "HII trading above VWAP (+0.4%) with OR 279.16-281.41. m15 +0.1%, m60 +0.4%, rvol 0.46, trend up. Modest positive move; sector rotation setup with smaller position given lower conviction."
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "news catalyst",
+      "reason": "Navy contract win, above VWAP, but relative volume low; watch for confirmation."
     },
     {
       "symbol": "GD",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "sector rotation",
-      "reason": "GD trading above VWAP (+0.1%) with OR 352.85-354.9. m15 -0.1%, m60 +0.0%, rvol 0.37, trend flat. Overnight news: Land Systems-Kodiak AI autonomous driving tech partnership (sentiment 0.4, importance 3) provides fundamental support despite soft technicals."
+      "conviction": 3,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "news catalyst",
+      "reason": "Kodiak AI deployment news, defense focus, but earnings tomorrow."
     },
     {
-      "symbol": "CACI",
+      "symbol": "LDOS",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
       "setup": "news catalyst",
-      "reason": "CACI has importance 4 news: $145M four-year U.S. Navy contract for autonomous systems and maritime sensors (sentiment 0.8). Currently trading below VWAP (-0.1%) OR 657.36-661.6, rvol 0.57. Entry would be contrarian buy on strong news; risk is technicals below VWAP."
+      "reason": "Cyber Command contract, but price below VWAP."
+    },
+    {
+      "symbol": "LHX",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "earnings gap",
+      "reason": "Earnings tomorrow before open, avoid new long."
+    },
+    {
+      "symbol": "TXT",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "earnings gap",
+      "reason": "Earnings tomorrow before open, avoid new long."
     }
   ],
-  "experiment": "",
+  "experiment": "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news catalyst trade",
   "watchlist_changes": {
-    "add": [],
-    "remove": []
+    "add": [
+      {
+        "symbol": "CACI",
+        "reason": "Navy contract win with high news importance, defense sector."
+      },
+      {
+        "symbol": "GD",
+        "reason": "Defense AI deployment news, big defense contractor."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "SAIC",
+        "reason": "Quiet trading, no clear high-conviction day-trading catalyst."
+      }
+    ]
   }
 }

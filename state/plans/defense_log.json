@@ -1386,5 +1386,31 @@
       "SELL LDOS",
       "BUY HEI x10 (~$3117.8)"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "13:59",
+    "trigger": "scheduled look",
+    "market_view": "Market is calm and slightly higher, with defense stocks mixed. LMT showed an opening range breakout and above VWAP on strong overnight news, but relative volume was below 1.5. News flow remains supportive of defense spending, though no new high-conviction setups met the strict VWAP+Rvol>1.5 filter. I am selectively adding to LMT while watching for tight risk control.",
+    "experiment": "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news catalyst trade",
+    "decisions": [
+      {
+        "symbol": "LMT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "LMT is above VWAP and in an opening range breakout; overnight news includes a $694M hypersonic weapon contract and PAC-3 facility in Poland with high importance. Executive prioritized LMT for stability. Adding to the existing long to meet the 75% minimum while maintaining disciplined risk.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      }
+    ],
+    "results": [
+      "BUY LMT blocked: new trades paused around Federal Funds Rate (01:50-02:05 PM)",
+      "BUY CACI blocked: new trades paused around Federal Funds Rate (01:50-02:05 PM)",
+      "BUY GD blocked: new trades paused around Federal Funds Rate (01:50-02:05 PM)",
+      "BUY LDOS blocked: new trades paused around Federal Funds Rate (01:50-02:05 PM)",
+      "BUY LHX blocked: new trades paused around Federal Funds Rate (01:50-02:05 PM)",
+      "BUY TXT blocked: new trades paused around Federal Funds Rate (01:50-02:05 PM)",
+      "WATCHLIST remove rejected SAIC"
+    ]
   }
 ]
