@@ -1582,5 +1582,47 @@
       "BUY TMO blocked: conviction None is below the minimum 2",
       "BUY DHR blocked: conviction None is below the minimum 2"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "12:29",
+    "trigger": "must invest $2,817 more (75% rule)",
+    "market_view": "Market is calm with SPY +0.2%, QQQ +0.1%, and 48% of watched stocks up, but healthcare sector is mixed with most stocks flat to down today. Key movers include LLY on positive Phase 3 retatrutide data and Evercore target cuts across several names, while VRTX sits near its stop after an opening range breakout that's failed to sustain. Need to redeploy capital into best available setups.",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "VRTX",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "position approaching stop loss after OR breakout failed to sustain; cutting losses to redeploy capital into better setups per team rotation rule",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "ISRG",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "price 446.9 above OR top 443.83 and above VWAP (+0.5%); rvol 0.93 best available for long; positive news (Canaccord raise, lawsuit narrowing) offset by Evercore target cut; tight 1.5% stop per lessons learned",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "DHR",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "Evercore cut price target from $242 to $205 (significant); stock below VWAP (-0.9%) with rvol 1.27 providing short coverage support; normal market mood allows shorts on weak technicals with bad news",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL VRTX",
+      "BUY ISRG blocked: conviction 3 is below the minimum 4",
+      "SHORT DHR blocked: conviction 3 is below the minimum 4",
+      "BUY JNJ x2 (~$540.42) [deploy]",
+      "BUY ABBV x2 (~$573.26) [deploy]",
+      "BUY ABT x6 (~$618.42) [deploy]",
+      "BUY AMGN x1 (~$449.41) [deploy]"
+    ]
   }
 ]
