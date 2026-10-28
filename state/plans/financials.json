@@ -1,55 +1,51 @@
 {
   "date": "2026-10-28",
-  "time": "10:39",
-  "trigger": "big news on ['V']",
-  "decisions": [],
-  "ranked_ideas": [
+  "time": "11:04",
+  "trigger": "scheduled look",
+  "market_view": "Market is calm with SPY near flat and financials mixed; most watchlist names are choppy with low relative volume. We hold five positions and are slightly under the 75% investment floor, but no new setup meets the conviction bar except the executive's preferred large-cap stability name. The best use of capital is to exit the weakest position and rotate into GS rather than force low-quality breakouts.",
+  "decisions": [
+    {
+      "symbol": "SOFI",
+      "action": "SELL",
+      "conviction": 5,
+      "stop_loss_pct": 0,
+      "take_profit_pct": 0,
+      "setup": "momentum",
+      "reason": "SOFI is down 1.8% intraday, trading 1.4% below VWAP with negative 15m and 60m momentum, and sits only $0.05 above its stop at 16.68. Positive analyst news is not overcoming weak price action; selling now stops the bleed before a likely stop-out."
+    },
     {
       "symbol": "GS",
-      "side": "long",
-      "setup": "momentum",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "action": "BUY",
       "conviction": 4,
-      "reason": "Executive order prioritizes large-cap stability (JPM, GS). GS is trading above VWAP with strong relative volume (1.62) and positive 15m momentum. It is a high-quality setup that aligns with the directive to reduce trade frequency and focus on conviction."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Executive order directs focus on large-cap stability and specifically names GS. GS is up 0.7% on the day, slightly above VWAP, with rvol 1.36. It is the best available large-cap financial setup among non-held names."
+    }
+  ],
+  "ranked_ideas": [
+    {
+      "symbol": "BLK",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "BLK is up 1.0% on the day but lacks volume confirmation (rvol 0.58) and trades below VWAP; only a backup if more capital becomes available."
     },
     {
       "symbol": "MS",
-      "side": "long",
-      "setup": "pullback in uptrend",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "conviction": 4,
-      "reason": "MS is trading above VWAP with a positive trend and strong 5-day momentum (+3.6%). It offers a stable large-cap exposure with a clear technical structure, fitting the 'quality over quantity' mandate."
-    },
-    {
-      "symbol": "AXP",
-      "side": "long",
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "conviction": 3,
-      "reason": "AXP has broken out of its opening range and is holding above VWAP. While relative volume is moderate, the technicals are clean and it fits the financial services theme."
-    },
-    {
-      "symbol": "C",
-      "side": "long",
-      "setup": "VWAP bounce",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "conviction": 3,
-      "reason": "C is trading near VWAP with a flat trend but positive 5-day momentum. It is a lower-risk option if higher-conviction setups are filled."
-    },
-    {
-      "symbol": "COF",
-      "side": "long",
-      "setup": "momentum",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "direction": "long",
       "conviction": 2,
-      "reason": "COF is showing an uptrend and is above VWAP, but relative volume is low (0.37). It is a backup option if primary targets are unavailable."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "MS is up 0.6% but has low rvol (0.72) and flat trend; weak intraday confirmation makes it a low-conviction backup."
     }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "VWAP-above-price filter for all breakout entries",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

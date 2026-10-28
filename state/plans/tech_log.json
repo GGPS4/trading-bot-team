@@ -1502,5 +1502,37 @@
       "BUY NVDA x21 (~$4607.82)",
       "BUY INTC x49 (~$4621.43)"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "11:04",
+    "trigger": "must invest $23,396 more (75% rule)",
+    "market_view": "Market is calm with SPY +0.1% and VIX down; most watchlist stocks are flat or below VWAP with weak relative volume. AMAT is the clearest setup, breaking out above its opening range while holding above VWAP with positive momentum. MU has a strong memory-demand news catalyst but is only marginally above VWAP, so we are deploying selectively to meet the 75% minimum without chasing extended or breakdown names.",
+    "experiment": "Implement an automated filter that blocks long entries unless 15-minute momentum is positive and price is strictly above VWAP.",
+    "decisions": [
+      {
+        "symbol": "AMAT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Opening-range breakout above 409.11, price strictly above VWAP (+0.9%), positive 15m momentum (+0.4%), strong +3.6% day from oversold RSI 15.3; meets strict VWAP-plus-momentum filter.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "MU",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "SK Hynix record Q3 profit and 80% operating margin signal strong AI memory demand (importance 5, sentiment 0.8); stock up +4.3% on rvol 1.36, near VWAP inside opening range, news-backed momentum.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY AMAT x11 (~$4511.54)",
+      "BUY MU x4 (~$3875.12)",
+      "BUY CRWV x77 (~$4622.31) [deploy]",
+      "BUY INTC x50 (~$4679.0) [deploy]",
+      "BUY AAPL x13 (~$4491.63) [deploy]"
+    ]
   }
 ]

@@ -1,29 +1,33 @@
 {
   "date": "2026-10-28",
-  "time": "10:41",
-  "trigger": "scheduled look",
+  "time": "10:55",
+  "trigger": "must invest $2,993 more (75% rule)",
   "decisions": [
     {
       "symbol": "WHR",
-      "action": "SELL",
-      "reason": "Stop loss hit. Multiple analyst downgrades (Stifel to Sell, $20 PT) and negative news catalyst. Price is below entry and approaching stop level. Exiting to cut losses."
+      "action": "BUY",
+      "side": "short",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Strong bearish catalyst: Stifel downgrade to Sell with $20 PT and Wells Fargo price target cut. Stock is breaking down below opening range on high relative volume (2.61). Market mood is normal, allowing for short setups on clear weakness."
     },
     {
-      "symbol": "WEN",
+      "symbol": "CMG",
       "action": "BUY",
       "side": "long",
-      "reason": "Strong news catalyst: Trian Group $1.4B cash acquisition offer at $7.35/share. Stock is trading at $6.98, well below the offer price, creating a clear arbitrage/momentum play. High relative volume (6.59) confirms interest. Despite the breakdown from the open, the fundamental catalyst is strong and the stock is likely to rally toward the offer price or maintain high volatility for a day trade. Entering for the intraday bounce/momentum toward the $7.35 level.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.05,
-      "setup": "news catalyst"
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Strong intraday momentum: +3.2% on the day, breaking out of the opening range, trading above VWAP. RSI is oversold (21.1) suggesting a potential relief rally or short squeeze. High conviction setup for a quick scalp before earnings after the close."
     }
   ],
   "ranked_ideas": [
-    "BKNG",
     "TSLA",
+    "LULU",
+    "MCD",
     "LOW",
-    "CMG",
-    "HD"
+    "WEN"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

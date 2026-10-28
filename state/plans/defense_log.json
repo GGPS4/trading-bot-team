@@ -1297,5 +1297,36 @@
       "BUY CACI x5 (~$3298.2) [deploy]",
       "WATCHLIST remove rejected BAH"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "11:04",
+    "trigger": "scheduled look",
+    "market_view": "Defense names are mixed with LMT and RTX holding opening-range breakouts above VWAP, but relative volume is weak across the board (all rvol under 1.5). Geopolitical Iran rhetoric and LMT contract wins provide a positive bias, yet no new setup meets the strict Rvol > 1.5 and conviction >= 4 entry filter. CACI and HII are slightly negative with fading intraday structure, and HII faces earnings tomorrow before the open, so they are candidates to exit.",
+    "experiment": "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news-catalyst trade",
+    "decisions": [
+      {
+        "symbol": "CACI",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Position slightly negative, price inside opening range, rvol 0.65 below 1.5 threshold, no follow-through on $145M Navy contract news",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "HII",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Momentum faded, price flat to negative, rvol 0.46, no breakout, and earnings release tomorrow before the open creates event risk",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL CACI",
+      "SELL HII",
+      "BUY NOC x6 (~$3307.14) [deploy]",
+      "BUY BAH x40 (~$3325.6) [deploy]"
+    ]
   }
 ]
