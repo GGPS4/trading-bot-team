@@ -1,78 +1,9 @@
 {
   "date": "2026-10-28",
-  "time": "09:48",
-  "trigger": "price moves in ['MGM']",
-  "market_view": "Market regime is calm with broad indexes up modestly (SPY +0.1%, QQQ +0.2%). Entertainment sector shows divergent individual momentum, requiring strict adherence to VWAP alignment and relative volume above 1.2 to eliminate low-win-rate trades.",
-  "decisions": [
-    {
-      "symbol": "SPOT",
-      "action": "COVER",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "SPOT is trading +1.0% off open and +0.8% above VWAP with rvol 1.84, invalidating the short trade structure."
-    },
-    {
-      "symbol": "SONY",
-      "action": "COVER",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "Executive order explicitly paused mean-reversion tactics; price is holding above VWAP."
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "MGM",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Massive relative volume (7.88) with price up 2.1% on the day and trading above VWAP."
-    },
-    {
-      "symbol": "NFLX",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "VWAP bounce",
-      "reason": "Trading +0.8% off open, +0.3% above VWAP with rvol 1.56 confirming momentum."
-    },
-    {
-      "symbol": "SPOT",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Strong intraday recovery +1.0% above open and +0.8% above VWAP with rvol 1.84."
-    },
-    {
-      "symbol": "DIS",
-      "direction": "short",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Trading -0.2% below VWAP and -0.7% on the session with strong volume (rvol 2.32)."
-    },
-    {
-      "symbol": "CMCSA",
-      "direction": "short",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Trading -0.7% off open and -0.2% below VWAP with consistent downside pressure."
-    }
-  ],
-  "experiment": "Test a VWAP-bounce strategy that includes the rvol > 1.2 filter and a trailing stop to capture upside once the price confirms above VWAP.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "time": "10:12",
+  "trigger": "scheduled look",
+  "decisions": [],
+  "watchlist_add": [],
+  "watchlist_remove": [],
+  "ranked_ideas": []
 }

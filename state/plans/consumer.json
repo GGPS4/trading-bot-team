@@ -1,56 +1,78 @@
 {
   "date": "2026-10-28",
-  "time": "09:49",
-  "trigger": "big news on ['WEN']",
+  "time": "10:12",
+  "trigger": "scheduled look",
+  "market_view": "The market is calm with SPY flat and VIXY down, but Consumer Discretionary is mixed. Whirlpool is collapsing on multiple analyst downgrades with heavy volume, making it a clear short candidate, while Wendy's is fading after its takeover bid spike. Most other watchlist stocks lack the relative volume or VWAP confirmation required for new entries.",
   "decisions": [
     {
+      "symbol": "WEN",
+      "action": "SELL",
+      "conviction": 5,
+      "stop_loss_pct": 0,
+      "take_profit_pct": 0,
+      "setup": "news catalyst",
+      "reason": "Long is at its $7.04 stop with price at $7.05, rvol 8.6, m15 -1.3%, and below VWAP; fading despite the $7.35 takeover bid, so cut the loss before the stop triggers."
+    },
+    {
       "symbol": "WHR",
-      "action": "COVER",
-      "reason": "Price has moved against the short (26.72 vs entry 26.40) and is approaching the stop level (27.04). The stock is trading above VWAP with high relative volume (4.5) and recent look-up momentum (+0.9%). Despite the negative news (downgrades), the intraday price action is strong, indicating a potential short squeeze or news fade. Cutting the loss to preserve capital and redeploy into stronger momentum plays."
+      "action": "SHORT",
+      "conviction": 5,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Stifel downgraded WHR to Sell with a $20 target and Wells Fargo cut to $24; rvol 3.44, day -3.4%, trending down from the open high on heavy bearish news volume."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "WEN",
-      "setup": "news catalyst",
+      "symbol": "TSLA",
+      "direction": "short",
+      "conviction": 4,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "conviction": 5,
-      "reason": "Strong news catalyst: Trian Group offered $1.4B cash to acquire Wendy's at $7.35/share. Stock is up +17.1% on the day with massive relative volume (11.92). Currently trading at $7.18, well below the offer price of $7.35, suggesting room for further upside or at least a strong hold. High conviction due to clear price target and volume confirmation."
+      "take_profit_pct": 0.035,
+      "setup": "momentum",
+      "reason": "OR breakdown with rvol 3.02, day -2.3%, and weak 15m momentum; short the breakdown on high volume."
+    },
+    {
+      "symbol": "MCD",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Broke out above the opening range and holds above VWAP, though rvol is only 1.21 and RSI is overbought at 73.1."
     },
     {
       "symbol": "CMG",
-      "setup": "mean reversion",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "conviction": 4,
-      "reason": "RSI is deeply oversold at 21.1. Stock is up +1.6% today, showing a bounce off lows. Earnings are after the close, which may create volatility, but the intraday setup looks like a classic oversold bounce. Low risk/reward if it continues to stabilize."
+      "setup": "opening range breakout",
+      "reason": "Breakout above the opening range with uptrend, but earnings are after the close and rvol is only 1.03."
     },
     {
-      "symbol": "AMZN",
-      "setup": "VWAP bounce",
+      "symbol": "AZO",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "conviction": 4,
-      "reason": "Already held, but if the current position is closed or if we need to add to a stronger setup, AMZN is near VWAP (-0.3%) with high relative volume (2.39). However, since we are already holding it, this is a backup. Actually, I should not list held stocks in ranked_ideas for *new* buys if the system treats them as separate, but the prompt says 'not held'. So I will skip AMZN here. Let's look at others."
+      "setup": "opening range breakout",
+      "reason": "Breakout above the opening range in an uptrend, but rvol is weak at 0.67."
     },
     {
-      "symbol": "BKNG",
-      "setup": "momentum",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "conviction": 4,
-      "reason": "High relative volume (2.37) and trading near VWAP (-0.1%). The stock is down -0.7% on the day but showing some stability. Not a strong momentum play yet, but better than others. Wait, let's look at TSLA."
-    },
-    {
-      "symbol": "TSLA",
-      "setup": "pullback in uptrend",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "conviction": 4,
-      "reason": "TSLA is down -1.3% on the day but has a strong 20-day trend (+14.1%) and RSI at 62.4 (not overbought). It is trading below VWAP (-1.1%) which might indicate weakness, but the relative volume is high (3.04). If it bounces off the opening range low (401.98), it could be a good entry. However, it's currently at 402.03, right at the OR low. Risky. Let's stick to WEN as the primary idea."
+      "symbol": "DEO",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Breakout above the opening range in an uptrend, but rvol is weak at 0.84."
     }
   ],
-  "watchlist_additions": [],
-  "watchlist_removals": []
+  "experiment": "Testing efficacy of high-conviction opening range breakouts vs shorting high-volume breakdowns",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }
