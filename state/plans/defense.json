@@ -1,60 +1,32 @@
 {
   "date": "2026-10-28",
-  "time": "11:04",
+  "time": "11:30",
   "trigger": "scheduled look",
-  "market_view": "Defense names are mixed with LMT and RTX holding opening-range breakouts above VWAP, but relative volume is weak across the board (all rvol under 1.5). Geopolitical Iran rhetoric and LMT contract wins provide a positive bias, yet no new setup meets the strict Rvol > 1.5 and conviction >= 4 entry filter. CACI and HII are slightly negative with fading intraday structure, and HII faces earnings tomorrow before the open, so they are candidates to exit.",
   "decisions": [
     {
-      "symbol": "CACI",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Position slightly negative, price inside opening range, rvol 0.65 below 1.5 threshold, no follow-through on $145M Navy contract news"
+      "action": "BUY",
+      "symbol": "LMT",
+      "reason": "Strong overnight catalysts (PAC-3 Poland facility, $694M hypersonic contract) and Bernstein PT raise to $633. Trading above VWAP with OR breakout. Adding to position to meet 75% investment mandate with high-conviction momentum.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst"
     },
     {
-      "symbol": "HII",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Momentum faded, price flat to negative, rvol 0.46, no breakout, and earnings release tomorrow before the open creates event risk"
+      "action": "BUY",
+      "symbol": "HEI",
+      "reason": "Opening range breakout with positive trend. RSI 64.4 (not overbought). Provides diversification within defense sector to meet investment minimum.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "setup": "opening range breakout"
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "NOC",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "sector rotation",
-      "reason": "Executive priority for stability, Bernstein price target raised to $590, trading above VWAP"
-    },
-    {
-      "symbol": "BAH",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "other",
-      "reason": "Highest relative volume (0.81) among non-held names, near VWAP, though range-bound"
-    },
-    {
-      "symbol": "GD",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "sector rotation",
-      "reason": "Prime defense contractor with stable price action, earnings not until Oct 30"
-    }
+    "LHX",
+    "GD",
+    "HII",
+    "NOC",
+    "RTX"
   ],
-  "experiment": "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news-catalyst trade",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

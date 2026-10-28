@@ -1,69 +1,45 @@
 {
   "date": "2026-10-28",
-  "time": "11:05",
-  "trigger": "must invest $821 more (75% rule)",
-  "market_view": "The market is calm and slightly higher, with SPY +0.1%, QQQ flat, VIXY -1.1%, and about half the watchlist higher. LLY is pressuring higher on positive retatrutide data and an opening-range breakout, while the Fed announcement and upcoming earnings keep the session high event risk. I see one clean momentum long setup in VRTX above VWAP with strong relative volume, but the executive pause and low historical win rate require strict catalyst-plus-VWAP confirmation.",
-  "decisions": [
-    {
-      "symbol": "VRTX",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "VRTX cleared the opening range at 515.35-523.64, holds above VWAP, and shows rvol 1.52 with positive m15/m60 momentum; Fed price-target updates add to the upside narrative."
-    }
-  ],
+  "time": "11:38",
+  "trigger": "scheduled look",
+  "decisions": [],
   "ranked_ideas": [
     {
-      "symbol": "DHR",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "DHR is up 2.1% on very high relative volume, but VWAP and momentum are less clean."
-    },
-    {
       "symbol": "AMGN",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "side": "long",
       "setup": "opening range breakout",
-      "reason": "AMGN broke the opening range and holds above VWAP, but relative volume and follow-through are moderate."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03
     },
     {
       "symbol": "ISRG",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "side": "long",
       "setup": "opening range breakout",
-      "reason": "ISRG broke the opening range but showed weak m15 pullback; lower conviction."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03
+    },
+    {
+      "symbol": "CORT",
+      "side": "long",
+      "setup": "opening range breakout",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04
     },
     {
       "symbol": "ABBV",
-      "direction": "long",
-      "conviction": 2,
+      "side": "long",
+      "setup": "opening range breakout",
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "ABBV is participating in the upside gap but remains flat and overbought conditions are not ideal."
+      "take_profit_pct": 0.03
     },
     {
-      "symbol": "MRK",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "symbol": "MRNA",
+      "side": "long",
       "setup": "momentum",
-      "reason": "MRK is holding an opening-range breakout but only modestly; earnings tomorrow add risk."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04
     }
   ],
-  "experiment": "ATR-based dynamic stops for all news catalyst trades",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }
