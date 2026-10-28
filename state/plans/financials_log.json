@@ -1191,5 +1191,34 @@
     "experiment": "VWAP-above-price filter for all breakout entries",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-28",
+    "time": "11:54",
+    "trigger": "big news on ['HOOD']",
+    "market_view": "The market is calm and slightly positive, but financials are mixed with low conviction across most names. JPM and GS are breaking out on modest volume, while the rest of the watchlist lacks strong relative volume or clear trend confirmation. I am rotating out of overbought, flat SPGI into SOFI, which has a fresh analyst price-target raise and the highest relative volume among non-held names.",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "SPGI",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "SPGI is flat (-0.02%) with RSI 87.1 (overbought), Evercore cut its price target, and intraday momentum is absent (m15 0.0%, rvol 1.01). Exiting to redeploy capital into a higher-conviction setup.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "SOFI",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "StoneX maintains buy and raises price target to $27; RVOL is 2.58 with a +2.7% day move. RSI 55.8 is healthy. Best available catalyst setup among non-held names, though it trades just 0.5% below VWAP.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL SPGI",
+      "BUY SOFI x118 (~$1991.25)"
+    ]
   }
 ]
