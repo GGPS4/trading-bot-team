@@ -1413,5 +1413,40 @@
     "results": [
       "BUY GE blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "13:26",
+    "trigger": "price moves in ['VSAT']",
+    "market_view": "Mixed session with breakout candidates (GE +1.4%, HWM +2.8%, TDG +1.5%) alongside broad weakness (SPCX -2.9%, BA -1.0%, LUNR -2.8%). Market calm (SPY +0.2%, QQQ +0.1%, VIXY -1.9%, 47% stocks up). VSAT leading with +6.9% on strong momentum and news. Need to maintain 75% investment minimum; currently at 65% requiring ~$455 deployment. Executive pause on new trades but team strategy requires action; applying Rvol > 1.2 filter where possible.",
+    "experiment": "Test VWAP-bounce confirmation for news-catalyst entries: observe if 3% take-profit level holds as first target with VWAP acting as support, with plan to scale out half at target and trail stop on remainder. Applying given ASTS entry as primary test case.",
+    "decisions": [
+      {
+        "symbol": "SPCX",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Weak technicals: price below VWAP (-0.1%), trend down, OR 143.55-147.55 near bottom, rvol 1.18 below 1.2 threshold. No strong catalyst to support continuation. Exiting to free capital and reduce losing position.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "ASTS",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Overnight news: Viasat signed MoU with Space42 and Terrestar Solutions to develop satellite interoperability standards. ASTS above VWAP (+0.7%), OR 39.97-41.73 near top. Positive sentiment from interoperability deal. Entering with 2% stop, 3% first target to validate VWAP bounce per strategy.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL SPCX",
+      "BUY ASTS blocked: conviction 3 is below the minimum 4",
+      "BUY FLY x33 (~$651.75) [deploy]",
+      "BUY RKLB x11 (~$635.25) [deploy]",
+      "BUY PL blocked: conviction 1 is below the minimum 2",
+      "BUY LPTH blocked: conviction 1 is below the minimum 2",
+      "BUY RDW blocked: conviction 1 is below the minimum 2",
+      "WATCHLIST remove rejected SPCX"
+    ]
   }
 ]

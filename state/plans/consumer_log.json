@@ -1270,5 +1270,35 @@
     "results": [
       "BUY LOW blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "13:24",
+    "trigger": "big news on ['AIIO', 'WEN']",
+    "market_view": "The Consumer Discretionary sector shows mixed performance with WEN experiencing extreme volatility (+14.8% daily move that's fading below VWAP with rvol 4.8 indicating distribution) while LOW confirms an opening range breakout with positive Evercore news. Market mood is normal with SPY +0.2%, QQQ +0.1%, but FOMC events at 2:00 PM ET could introduce volatility. Only 8 minutes remain before the 15-minute no-new-position window, requiring decisive action on existing positions to maintain the 75% minimum investment rule.",
+    "experiment": "Testing rvol > 1.5 filter for long entries: none of today's breakout setups meet the rvol threshold, so evaluating whether to relax this rule in normal market regime or wait for higher volume conditions",
+    "decisions": [
+      {
+        "symbol": "WEN",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Stock trading below VWAP (-0.3%) with negative 15m/60m momentum (m15 -0.3%, m60 -0.4%) and extremely high rvol 4.8 indicating distribution; technicals deteriorated from +14.8% daily move; exiting per lesson: do not hold longs below VWAP with negative momentum",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "LOW",
+        "action": "BUY",
+        "conviction": 3.5,
+        "reason": "OR BREAKOUT confirmed (price 199.22 above OR high 198.97), vwap +0.1%, positive news (Evercore raised target to $220 from $200), day +0.5%, open +0.5%; setup meets VWAP confirmation criteria with positive m15/m60 momentum despite low rvol 0.53",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL WEN",
+      "BUY LOW blocked: conviction 3.5 is below the minimum 4",
+      "BUY MAR x3 (~$1177.38) [deploy]"
+    ]
   }
 ]

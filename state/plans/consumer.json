@@ -1,67 +1,67 @@
 {
   "date": "2026-10-28",
-  "time": "13:04",
-  "trigger": "scheduled look",
-  "market_view": "The market is calm and slightly positive with SPY and QQQ both up 0.4%, VIXY down 2.0%, and 50% of watched stocks up. Consumer Discretionary group shows low news flow with no major catalysts. KEY setups: LOW has a confirmed opening range breakout trending up, MAR also has an OR breakout. WHR faded from a +4.9% open on heavy volume with analyst downgrades. WEN surged 15.3% on strong earnings. I'll focus on adding the LOW breakout to reach the 75% minimum investment requirement while holding existing positions.",
+  "time": "13:24",
+  "trigger": "big news on ['AIIO', 'WEN']",
+  "market_view": "The Consumer Discretionary sector shows mixed performance with WEN experiencing extreme volatility (+14.8% daily move that's fading below VWAP with rvol 4.8 indicating distribution) while LOW confirms an opening range breakout with positive Evercore news. Market mood is normal with SPY +0.2%, QQQ +0.1%, but FOMC events at 2:00 PM ET could introduce volatility. Only 8 minutes remain before the 15-minute no-new-position window, requiring decisive action on existing positions to maintain the 75% minimum investment rule.",
   "decisions": [
+    {
+      "symbol": "WEN",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Stock trading below VWAP (-0.3%) with negative 15m/60m momentum (m15 -0.3%, m60 -0.4%) and extremely high rvol 4.8 indicating distribution; technicals deteriorated from +14.8% daily move; exiting per lesson: do not hold longs below VWAP with negative momentum"
+    },
     {
       "symbol": "LOW",
       "action": "BUY",
       "conviction": 3.5,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "OR breakout confirmed at 198.97, stock at 199.89 trending up with +0.8% gain, rvol 0.54 decent, market calm/rising, good momentum setup for remaining session. Stop placed near OR low at 197.13."
+      "reason": "OR BREAKOUT confirmed (price 199.22 above OR high 198.97), vwap +0.1%, positive news (Evercore raised target to $220 from $200), day +0.5%, open +0.5%; setup meets VWAP confirmation criteria with positive m15/m60 momentum despite low rvol 0.53"
     }
   ],
   "ranked_ideas": [
     {
       "symbol": "MAR",
       "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout confirmed at 391.66, stock at 392.57 trending up with +0.6% gain, rvol 1.0, market calm supports the move"
-    },
-    {
-      "symbol": "TSLA",
-      "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Trending up with +0.3% gain, rvol 1.17, m15 +0.4%, positive momentum despite -1.2% day move, OR 400.51-410.5 not yet broken but room for continuation"
+      "setup": "opening range breakout",
+      "reason": "OR BREAKOUT confirmed (392.31 above OR high 391.66), vwap +0.2%, rvol 0.99 (near 1.0 threshold), day +0.5%, open +0.9%; positive news context with Evercore raises supporting quality setup"
+    },
+    {
+      "symbol": "LULU",
+      "direction": "long",
+      "conviction": 2.5,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR BREAKOUT confirmed (105.91 above OR high 105.61), vwap +0.4%, strong open +2.6%, rvol 0.88; breakout technicals intact though rvol below 1.5 threshold limits conviction"
     },
     {
       "symbol": "WHR",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "other",
-      "reason": "Faded from +4.9% open on heavy volume (rvol 1.86), negative analyst downgrades overnight, OR breakout but stock above level but fading significantly from open - short on the fade"
+      "setup": "opening range breakout",
+      "reason": "OR BREAKOUT confirmed (26.95 above OR high 26.78) but CONFLICTING with strong negative news: RBC Underperform rating, target lowered to $15, and overnight sentiment -0.7; fading the breakout opportunity given bearish fundamental backdrop"
     },
     {
       "symbol": "CMG",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.018,
-      "take_profit_pct": 0.03,
-      "setup": "other",
-      "reason": "Breakout fading with m15 -0.2%, m60 -0.5%, trend down, rvol 1.11 but losing momentum, earnings after close may cap the move"
-    },
-    {
-      "symbol": "AZO",
       "direction": "long",
       "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout confirmed at 3144.21, stock at 3161.71, but rvol only 0.47 so lower conviction for sustained move"
+      "reason": "OR BREAKOUT confirmed (28.98 above OR high 28.63), vwap +0.3%, rvol 1.08, +3.6% daily move +3.2% open; however EARNINGS AFTER CLOSE today limits conviction for new entry given earnings uncertainty"
     }
   ],
-  "experiment": "",
+  "experiment": "Testing rvol > 1.5 filter for long entries: none of today's breakout setups meet the rvol threshold, so evaluating whether to relax this rule in normal market regime or wait for higher volume conditions",
   "watchlist_changes": {
     "add": [],
     "remove": []
