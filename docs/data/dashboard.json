@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-28T07:37-04:00",
+  "updated": "2026-10-28T08:07-04:00",
   "date": "2026-10-28",
   "mode": "paper",
   "health": {
     "issues": [
-      "2 problem(s) in the last hour, latest: economic calendar (nextweek) unavailable: 404 Client Error: Not Found for url: https://nfs.faireconomy.media/ff_calendar_nextweek.json"
+      "1 problem(s) in the last hour, latest: economic calendar (nextweek) unavailable: 404 Client Error: Not Found for url: https://nfs.faireconomy.media/ff_calendar_nextweek.json"
     ]
   },
   "paused": false,
@@ -21,13 +21,13 @@
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 769.58
+    "price": 770.69
   },
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 9,
     "return_since_start": -0.0097,
-    "benchmark_since_start": -0.0014,
+    "benchmark_since_start": 0.0001,
     "max_drawdown": 0.0101
   },
   "go_live": {
@@ -40,7 +40,7 @@
       {
         "rule": "Beating SPY since the start",
         "ok": false,
-        "value": "-1.0% vs -0.1%"
+        "value": "-1.0% vs +0.0%"
       },
       {
         "rule": "Worst drop under 15%",
@@ -1588,7 +1588,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-28T07:37-04:00",
+    "time": "2026-10-28T08:07-04:00",
     "earnings": [
       {
         "date": "2026-10-28",
@@ -3127,35 +3127,59 @@
     "all_ok": true
   },
   "premarket": {
-    "time": "2026-10-27T08:47-04:00",
-    "date": "2026-10-27",
+    "time": "2026-10-28T08:07-04:00",
+    "date": "2026-10-28",
     "watched": [
       {
-        "symbol": "AVGO",
-        "team": "tech",
-        "gap": 0.027,
-        "price": 338.18,
-        "prev_close": 329.275,
-        "headline": "Why Is Broadcom Stock Gaining Tuesday?"
+        "symbol": "HOOD",
+        "team": "financials",
+        "gap": -0.0674,
+        "price": 88.23,
+        "prev_close": 94.61,
+        "headline": "Analysts Adjust Price Targets for Robinhood Markets Following Q3 Results"
       }
     ],
     "outside": [
       {
-        "symbol": "LPTH",
-        "gap": 0.0848,
-        "price": 8.06,
-        "headline": "LightPath Technologies Receives Order From Undisclosed Defense Client For More Than 50K Optical Assemblies For Use In Drone Camera Systems"
+        "symbol": "ENPH",
+        "gap": -0.1415,
+        "price": 25.52,
+        "headline": "Enphase Energy Posts Downbeat Q3 Results, Joins NXP Semiconductors, Seagate And Other Big Stocks Moving Lower In Wednesday\u2019s Pre-Market Session"
       },
       {
-        "symbol": "CRWV",
-        "gap": 0.0448,
-        "price": 57.64,
-        "headline": "Jim Cramer Says In Social Media Post 'If Jensen thinks that CoreWeave is money good he should buy up their their 15% debt'"
+        "symbol": "STX",
+        "gap": -0.0634,
+        "price": 626.23,
+        "headline": "Enphase Energy Posts Downbeat Q3 Results, Joins NXP Semiconductors, Seagate And Other Big Stocks Moving Lower In Wednesday\u2019s Pre-Market Session"
+      },
+      {
+        "symbol": "BSX",
+        "gap": -0.0627,
+        "price": 42.25,
+        "headline": "Boston Scientific Reports Third Quarter 2026 Financial Results"
       }
     ]
   },
   "overnight": {
     "defense": [
+      {
+        "symbol": "LMT",
+        "sentiment": 0.7,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "Lockheed Martin opened a dedicated PAC-3 missile maintenance facility in Poland, signaling expanded support for European customers",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
+      {
+        "symbol": "KTOS",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Kratos Defense secured a $33.6M subcontract for a power conversion system on NASA\u2019s SR-1 Freedom nuclear spacecraft",
+        "source": "benzinga",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
       {
         "symbol": "LMT",
         "sentiment": 1.0,
@@ -3209,27 +3233,27 @@
         "summary": "CACI won a four\u2011year $145\u202fmillion U.S. Navy contract for autonomous systems and maritime sensors.",
         "source": "benzinga",
         "seen_at": "2026-10-27T08:26-04:00"
-      },
-      {
-        "symbol": "NOC",
-        "sentiment": 0.7,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Bernstein raised its price target for Northrop Grumman to $590 from $556.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-27T08:05-04:00"
-      },
-      {
-        "symbol": "NOC",
-        "sentiment": 0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Northrop Grumman announced a partnership with Operation Homefront's November campaign to support military families.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-27T06:50-04:00"
       }
     ],
     "space": [
+      {
+        "symbol": "BA",
+        "sentiment": 0.2,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "CFO projects 787 margins to exceed 2018 levels by 2029, while 737 margin recovery is expected to lag prior peaks.",
+        "source": "benzinga",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
+      {
+        "symbol": "BA",
+        "sentiment": -0.1,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Baird keeps an Outperform rating on Boeing but cuts its price target to $230.",
+        "source": "benzinga",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
       {
         "symbol": "BA",
         "sentiment": -0.4,
@@ -3283,27 +3307,18 @@
         "summary": "Rocket Lab shares rose modestly as eight SDA military satellites enter production and Neutron launch preparations progress",
         "source": "benzinga",
         "seen_at": "2026-10-28T02:17-04:00"
-      },
-      {
-        "symbol": "BA",
-        "sentiment": -0.7,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Jim Cramer notes Boeing's Q3 'kitchen sink' results have reset expectations amid a 10% stock drop and production woes",
-        "source": "benzinga",
-        "seen_at": "2026-10-28T01:32-04:00"
-      },
-      {
-        "symbol": "SPCX",
-        "sentiment": 0.6,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Maye Musk praised Starlink after its satellite internet helped save a mother and baby in remote Colombia, providing a positive PR boost for SPCX.",
-        "source": "benzinga",
-        "seen_at": "2026-10-27T23:17-04:00"
       }
     ],
     "entertainment": [
+      {
+        "symbol": "BAM",
+        "sentiment": -0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Brookfield Asset Management faces a legal dispute over unpaid indemnities with Bhv Marais, potentially weighing on its stock.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
       {
         "symbol": "DIS",
         "sentiment": 0.1,
@@ -3366,18 +3381,18 @@
         "summary": "BofA maintains buy on Take\u2011Two Interactive but lowers its price target to $330.",
         "source": "Benzinga",
         "seen_at": "2026-10-27T08:41-04:00"
-      },
-      {
-        "symbol": "TKO",
-        "sentiment": -0.2,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Goldman Sachs lowered its price target for TKO Group to $215 from $220.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-27T07:36-04:00"
       }
     ],
     "tech": [
+      {
+        "symbol": "NVDA",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "HIVE Digital Technologies secured a $129\u202fmillion credit facility to purchase NVIDIA GB200 GPU clusters for a sovereign AI contract, indicating rising demand for NVIDIA hardware.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
       {
         "symbol": "INTC",
         "sentiment": -0.2,
@@ -3440,18 +3455,27 @@
         "summary": "Otto Group and Sereact are deploying NVIDIA-powered AI robots to automate returns processing.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-28T06:52-04:00"
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": 0.4,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Cloudera launched Blueprints integrating NVIDIA's AI stack to aid enterprise AI deployments.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-28T06:52-04:00"
       }
     ],
     "consumer": [
+      {
+        "symbol": "RCL",
+        "sentiment": 0.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Analysts updated price targets for Royal Caribbean after its Q3 earnings, but the direction of the changes was not disclosed.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": -0.2,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Ford announced a low\u2011cost EV that can also power homes, adding competitive pressure for Tesla.",
+        "source": "benzinga",
+        "seen_at": "2026-10-28T07:52-04:00"
+      },
       {
         "symbol": "AMZN",
         "sentiment": 0.2,
@@ -3505,27 +3529,54 @@
         "summary": "Elon Musk says Tesla will soon launch Robotaxi service in Miami and Tampa beaches.",
         "source": "benzinga",
         "seen_at": "2026-10-28T02:17-04:00"
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": 0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Analysts adjust Tesla price targets on October 27, 2026",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-27T16:44-04:00"
-      },
-      {
-        "symbol": "RCL",
-        "sentiment": 0.8,
-        "importance": 5,
-        "unconfirmed_rumor": false,
-        "summary": "Q3 2026 EPS of $6.57 beat expectations and full-year guidance was raised",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-27T08:06-04:00"
       }
     ],
     "financials": [
+      {
+        "symbol": "HOOD",
+        "sentiment": 0.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Analysts including JPMorgan and Goldman Sachs adjusted Robinhood price targets, but the direction was not disclosed.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
+      {
+        "symbol": "V",
+        "sentiment": 0.8,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "Morgan Stanley raised its price target for Visa to $471 from $416.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
+      {
+        "symbol": "JPM",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "JPMorgan Chase was selected to lead the retail distribution for Anthropic's upcoming IPO.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
+      {
+        "symbol": "HOOD",
+        "sentiment": -0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Truist Securities lowered its price target on Robinhood to $125 while keeping a buy rating.",
+        "source": "benzinga",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
+      {
+        "symbol": "SPGI",
+        "sentiment": 0.7,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "Morgan Stanley reaffirmed an overweight rating on S&P Global and lifted its price target to $515, indicating confidence in the stock's upside.",
+        "source": "benzinga",
+        "seen_at": "2026-10-28T07:52-04:00"
+      },
       {
         "symbol": "COIN",
         "sentiment": -0.4,
@@ -3552,54 +3603,27 @@
         "summary": "BlackRock increased its stake in Domino's Pizza Group to 6.64%.",
         "source": "fiscal.ai",
         "seen_at": "2026-10-28T07:37-04:00"
-      },
-      {
-        "symbol": "GS",
-        "sentiment": -0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Goldman Sachs International reduced its holdings in Irish Residential Properties REIT.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-28T07:37-04:00"
-      },
-      {
-        "symbol": "V",
-        "sentiment": 0.3,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "JPMorgan raised Visa's price target to $455 from $450.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-28T07:37-04:00"
-      },
-      {
-        "symbol": "V",
-        "sentiment": 0.4,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Morgan Stanley maintained an overweight rating on Visa and raised its price target to $471.",
-        "source": "benzinga",
-        "seen_at": "2026-10-28T07:37-04:00"
-      },
-      {
-        "symbol": "SOFI",
-        "sentiment": -0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "KBW kept an Underperform rating on SoFi Technologies while raising the price target to $16.",
-        "source": "benzinga",
-        "seen_at": "2026-10-28T07:37-04:00"
-      },
-      {
-        "symbol": "HOOD",
-        "sentiment": 0.3,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "BTIG reiterated a Buy rating on Robinhood Markets with a $135 price target.",
-        "source": "benzinga",
-        "seen_at": "2026-10-28T07:37-04:00"
       }
     ],
     "healthcare": [
+      {
+        "symbol": "AMGN",
+        "sentiment": 0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Amgen narrowed the scope of its Eylea biosimilar lawsuit, reducing litigation risk.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
+      {
+        "symbol": "REGN",
+        "sentiment": 0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Regeneron also narrowed the scope of the Eylea biosimilar dispute, easing legal exposure.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-28T08:07-04:00"
+      },
       {
         "symbol": "LLY",
         "sentiment": 0.9,
@@ -3653,24 +3677,6 @@
         "summary": "Eli Lilly and Company announces executive leadership changes, with Patrik Jonsson's retirement and Ilya Yuffa's appointment to lead Lilly Global Markets effective January 1, 2027.",
         "source": "fiscal.ai, 2026-10-27T23:01:35Z",
         "seen_at": "2026-10-27T19:13-04:00"
-      },
-      {
-        "symbol": "VRTX",
-        "sentiment": 0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Vertex Pharmaceuticals receives positive ratings and price target updates from analysts.",
-        "source": "fiscal.ai, 2026-10-27T20:31:54Z",
-        "seen_at": "2026-10-27T16:44-04:00"
-      },
-      {
-        "symbol": "AMGN",
-        "sentiment": 0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Amgen presents new clinical data at ACR Convergence 2026.",
-        "source": "fiscal.ai, 2026-10-27T20:31:52Z",
-        "seen_at": "2026-10-27T16:44-04:00"
       }
     ]
   },
@@ -7291,6 +7297,24 @@
         "overnight": [
           {
             "symbol": "LMT",
+            "sentiment": 0.7,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Lockheed Martin opened a dedicated PAC-3 missile maintenance facility in Poland, signaling expanded support for European customers",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
+          {
+            "symbol": "KTOS",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Kratos Defense secured a $33.6M subcontract for a power conversion system on NASA\u2019s SR-1 Freedom nuclear spacecraft",
+            "source": "benzinga",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
+          {
+            "symbol": "LMT",
             "sentiment": 1.0,
             "importance": 3,
             "unconfirmed_rumor": false,
@@ -7369,15 +7393,6 @@
             "summary": "Rosenblatt Securities raised Palantir's price target from $225 to $260, indicating stronger expectations.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-27T06:50-04:00"
-          },
-          {
-            "symbol": "GD",
-            "sentiment": 0.6,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "GD secured a $135.9M Army contract modification for Stryker retrofit kits.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-26T22:30-04:00"
           }
         ],
         "technicals": {
@@ -11553,6 +11568,24 @@
         "overnight": [
           {
             "symbol": "BA",
+            "sentiment": 0.2,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "CFO projects 787 margins to exceed 2018 levels by 2029, while 737 margin recovery is expected to lag prior peaks.",
+            "source": "benzinga",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
+          {
+            "symbol": "BA",
+            "sentiment": -0.1,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Baird keeps an Outperform rating on Boeing but cuts its price target to $230.",
+            "source": "benzinga",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
+          {
+            "symbol": "BA",
             "sentiment": -0.4,
             "importance": 3,
             "unconfirmed_rumor": false,
@@ -15130,6 +15163,15 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "BAM",
+            "sentiment": -0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Brookfield Asset Management faces a legal dispute over unpaid indemnities with Bhv Marais, potentially weighing on its stock.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
           {
             "symbol": "DIS",
             "sentiment": 0.1,
@@ -19706,6 +19748,15 @@
         },
         "overnight": [
           {
+            "symbol": "NVDA",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "HIVE Digital Technologies secured a $129\u202fmillion credit facility to purchase NVIDIA GB200 GPU clusters for a sovereign AI contract, indicating rising demand for NVIDIA hardware.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
+          {
             "symbol": "INTC",
             "sentiment": -0.2,
             "importance": 3,
@@ -19964,15 +20015,6 @@
             "unconfirmed_rumor": false,
             "summary": "Apple launched a replacement program for iPhone Duo units with display defects, indicating a product quality issue but a proactive fix.",
             "source": "fiscal.ai",
-            "seen_at": "2026-10-27T06:51-04:00"
-          },
-          {
-            "symbol": "MSFT",
-            "sentiment": 0.2,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Analysts have revised Microsoft Q1 forecasts ahead of its earnings call, expecting $4.72 EPS and $90.69\u202fB revenue.",
-            "source": "benzinga",
             "seen_at": "2026-10-27T06:51-04:00"
           }
         ],
@@ -23193,6 +23235,24 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "RCL",
+            "sentiment": 0.0,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Analysts updated price targets for Royal Caribbean after its Q3 earnings, but the direction of the changes was not disclosed.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
+          {
+            "symbol": "TSLA",
+            "sentiment": -0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Ford announced a low\u2011cost EV that can also power homes, adding competitive pressure for Tesla.",
+            "source": "benzinga",
+            "seen_at": "2026-10-28T07:52-04:00"
+          },
           {
             "symbol": "AMZN",
             "sentiment": 0.2,
@@ -26870,6 +26930,51 @@
         },
         "overnight": [
           {
+            "symbol": "HOOD",
+            "sentiment": 0.0,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Analysts including JPMorgan and Goldman Sachs adjusted Robinhood price targets, but the direction was not disclosed.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
+          {
+            "symbol": "V",
+            "sentiment": 0.8,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Morgan Stanley raised its price target for Visa to $471 from $416.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
+          {
+            "symbol": "JPM",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "JPMorgan Chase was selected to lead the retail distribution for Anthropic's upcoming IPO.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
+          {
+            "symbol": "HOOD",
+            "sentiment": -0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Truist Securities lowered its price target on Robinhood to $125 while keeping a buy rating.",
+            "source": "benzinga",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
+          {
+            "symbol": "SPGI",
+            "sentiment": 0.7,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Morgan Stanley reaffirmed an overweight rating on S&P Global and lifted its price target to $515, indicating confidence in the stock's upside.",
+            "source": "benzinga",
+            "seen_at": "2026-10-28T07:52-04:00"
+          },
+          {
             "symbol": "COIN",
             "sentiment": -0.4,
             "importance": 3,
@@ -27094,52 +27199,6 @@
             "source": "fiscal.ai",
             "time": "2026-10-27T21:31:28Z",
             "seen_at": "2026-10-27T17:43-04:00"
-          },
-          {
-            "symbol": "V",
-            "sentiment": 1.0,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Visa Inc. implemented Visa Direct for employee reimbursements.",
-            "source": "fiscal.ai",
-            "time": "2026-10-27T21:31:30Z",
-            "seen_at": "2026-10-27T17:43-04:00"
-          },
-          {
-            "symbol": "V",
-            "sentiment": 1.0,
-            "importance": 5,
-            "unconfirmed_rumor": false,
-            "summary": "Visa reports strong Q4 earnings, beating market expectations.",
-            "source": "benzinga",
-            "seen_at": "2026-10-27T16:44-04:00"
-          },
-          {
-            "symbol": "GS",
-            "sentiment": 0.5,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Goldman Sachs' Q4 earnings beat estimates.",
-            "source": "benzinga",
-            "seen_at": "2026-10-27T16:44-04:00"
-          },
-          {
-            "symbol": "HOOD",
-            "sentiment": 0.5,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Robinhood Q3 results show growth in revenue, user base.",
-            "source": "benzinga",
-            "seen_at": "2026-10-27T16:44-04:00"
-          },
-          {
-            "symbol": "AXP",
-            "sentiment": 1.0,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Visa Q4 Adj. EPS $3.48 Beats $3.44 Estimate, Sales $12.139B Beat $12.084B Estimate",
-            "source": "benzinga",
-            "seen_at": "2026-10-27T16:29-04:00"
           }
         ],
         "technicals": {
@@ -31326,6 +31385,24 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "AMGN",
+            "sentiment": 0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Amgen narrowed the scope of its Eylea biosimilar lawsuit, reducing litigation risk.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
+          {
+            "symbol": "REGN",
+            "sentiment": 0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Regeneron also narrowed the scope of the Eylea biosimilar dispute, easing legal exposure.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-28T08:07-04:00"
+          },
           {
             "symbol": "LLY",
             "sentiment": 0.9,
