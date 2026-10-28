@@ -1,82 +1,54 @@
 {
-  "date": "2026-10-28",
-  "time": "13:54",
-  "trigger": "scheduled look",
-  "market_view": "Market is calm to rising, with SPY +0.2%, QQQ +0.1%, VIXY -1.8%, and 47% of watched stocks up. Financials are mixed, and current longs are mostly stalled or below VWAP. A high-impact FOMC announcement and press conference are scheduled for 2:00-2:30 PM ET today, so new buys should be paused.",
-  "decisions": [
+  "date": "2026-10-27",
+  "time": "14:20",
+  "trigger": "big news on ['COIN', 'HOOD']",
+  "orders": [
     {
-      "symbol": "V",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "momentum",
-      "reason": "Long failed intraday VWAP and opening-range confirmation; price is below VWAP, did not break OR, and m15/m60 momentum turned negative. News catalyst was not enough to overcome weak follow-through, so exit the stalled position."
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "SOFI",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
+      "symbol": "JPM",
+      "side": "buy",
+      "qty": 2.94,
+      "price": 336.23,
+      "stop_loss_pct": 0.01,
       "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "SoFi rose after Q3 beat and raised outlook with positive analyst reactions; stock is up 3.3% on the day, above VWAP, rvol 1.9, and trend up."
+      "setup": "sector rotation"
     },
     {
-      "symbol": "AXP",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
+      "symbol": "GS",
+      "side": "buy",
+      "qty": 0.93,
+      "price": 911.97,
+      "stop_loss_pct": 0.01,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "AXP showed an opening-range breakout and day change of +1.2%, but relative volume was low at 0.43, so conviction is limited."
+      "setup": "sector rotation"
     },
     {
       "symbol": "BLK",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
+      "side": "buy",
+      "qty": 0.36,
+      "price": 1132.58,
+      "stop_loss_pct": 0.01,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "BLK showed an opening-range breakout and day change of +1.6%, but relative volume was low at 0.38, so conviction is limited."
+      "setup": "momentum"
     },
     {
-      "symbol": "C",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
+      "symbol": "MS",
+      "side": "buy",
+      "qty": 0.25,
+      "price": 187.46,
+      "stop_loss_pct": 0.01,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "C showed an opening-range breakout and day change of +1.2%, but relative volume was low at 0.48, so conviction is limited."
+      "setup": "momentum"
     },
     {
-      "symbol": "COF",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
+      "symbol": "SOFI",
+      "side": "buy",
+      "qty": 3.41,
+      "price": 16.41,
+      "stop_loss_pct": 0.01,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "COF is relatively flat intraday with low momentum and low relative volume, so it is only a marginal idea."
+      "setup": "momentum"
     }
   ],
-  "experiment": "Add a VWAP-above-price filter for all breakout entries to ensure the trade aligns with the intraday trend.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": [
-      {
-        "symbol": "HOOD",
-        "reason": "Weak follow-through after Q3 news, below VWAP, failed breakout, and negative analyst concerns; executive wants to limit Entertainment/Space exposure."
-      },
-      {
-        "symbol": "SCHW",
-        "reason": "Breakdown below opening range and negative price target news, with weak momentum."
-      },
-      {
-        "symbol": "SPGI",
-        "reason": "Muted momentum and lack of a strong actionable setup despite minor news."
-      }
-    ]
-  }
+  "watchlist_additions": [],
+  "watchlist_removals": []
 }

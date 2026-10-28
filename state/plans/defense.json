@@ -1,82 +1,87 @@
 {
-  "date": "2026-10-28",
-  "time": "13:59",
-  "trigger": "scheduled look",
-  "market_view": "Market is calm and slightly higher, with defense stocks mixed. LMT showed an opening range breakout and above VWAP on strong overnight news, but relative volume was below 1.5. News flow remains supportive of defense spending, though no new high-conviction setups met the strict VWAP+Rvol>1.5 filter. I am selectively adding to LMT while watching for tight risk control.",
+  "date": "2026-10-27",
+  "time": "13:22",
+  "trigger": "market-moving post: BREAKING NEWS: Consumer Confidence is up 7.5%, an extremely big rise. President ",
+  "market_view": "Market is calm and slightly higher, with SPY +0.6% and QQQ +1.3%, while the VIXY fell 0.9%. Defense stocks are mixed: LMT has high-conviction news (Morgan Stanley upgrade, PAC-3 Poland, SRI acquisition) but is down intraday; RTX is breaking down below the opening range; GD is weak; KTOS is up; LDOS and CACI are choppy around headlines. I am staying defensive and prioritizing high-conviction, capital-preserving setups.",
   "decisions": [
     {
-      "symbol": "LMT",
+      "symbol": "LDOS",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "news catalyst",
+      "reason": "Close the weak underwater Leidos position; the contract news did not produce sustained follow-through and price is stalled below VWAP, so capital preservation calls for exiting."
+    },
+    {
+      "symbol": "AVAV",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "news catalyst",
-      "reason": "LMT is above VWAP and in an opening range breakout; overnight news includes a $694M hypersonic weapon contract and PAC-3 facility in Poland with high importance. Executive prioritized LMT for stability. Adding to the existing long to meet the 75% minimum while maintaining disciplined risk."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "ARK buy and opening range breakout above 127.75 with positive m15/m60 momentum, but rvol only 0.97; high relative confidence from ARK and defense momentum, fits intraday breakout strategy."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "CACI",
+      "symbol": "PLTR",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "news catalyst",
-      "reason": "Navy contract win, above VWAP, but relative volume low; watch for confirmation."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Rosenblatt PT raise but earnings buzz and fading momentum, lower priority."
     },
     {
-      "symbol": "GD",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "news catalyst",
-      "reason": "Kodiak AI deployment news, defense focus, but earnings tomorrow."
-    },
-    {
-      "symbol": "LDOS",
+      "symbol": "BAH",
       "direction": "long",
       "conviction": 2,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "news catalyst",
-      "reason": "Cyber Command contract, but price below VWAP."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Overbought after big run, not ideal for new long."
     },
     {
-      "symbol": "LHX",
+      "symbol": "SAIC",
       "direction": "long",
       "conviction": 2,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "earnings gap",
-      "reason": "Earnings tomorrow before open, avoid new long."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Overbought RSI 84, weak follow-through, avoid new entry."
     },
     {
-      "symbol": "TXT",
+      "symbol": "HEI",
       "direction": "long",
       "conviction": 2,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "earnings gap",
-      "reason": "Earnings tomorrow before open, avoid new long."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Low relative volume, no clean breakout, lower priority."
+    },
+    {
+      "symbol": "HII",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Breaking down intraday, avoid new long."
     }
   ],
-  "experiment": "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news catalyst trade",
+  "experiment": "Testing opening range breakout momentum with institutional confidence (ARK) while enforcing strict 30-minute VWAP hold for afternoon news catalyst entries.",
   "watchlist_changes": {
     "add": [
       {
-        "symbol": "CACI",
-        "reason": "Navy contract win with high news importance, defense sector."
-      },
-      {
-        "symbol": "GD",
-        "reason": "Defense AI deployment news, big defense contractor."
+        "symbol": "LPTH",
+        "reason": "LightPath received defense order from undisclosed client, fits defense watchlist and has real news."
       }
     ],
     "remove": [
       {
-        "symbol": "SAIC",
-        "reason": "Quiet trading, no clear high-conviction day-trading catalyst."
+        "symbol": "HII",
+        "reason": "Breaking down intraday and showing weak momentum, no longer a high-quality setup."
       }
     ]
   }
