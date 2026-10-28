@@ -1,103 +1,139 @@
 {
   "date": "2026-10-28",
-  "time": "14:55",
-  "trigger": "first look this run",
-  "market_view": "Defense names diverge sharply: LMT shows a strong opening-range breakout above $620 backed by bullish catalysts (PAC-3 facility in Poland, $694M hypersonic contract, analyst target lifts), while PLTR, LDOS, AVAV, SAIC, and HII break down below their opening ranges. Market is calm with SPY +0.4%, favoring confirmed catalyst plays over fading setups. Three current positions are below VWAP with negative momentum and should be exited.",
+  "time": "15:42",
+  "trigger": "scheduled look",
+  "market_view": "Defense sector shows mixed signals: LMT has strong bullish news but is already held; BAH, CACI, GD, TXT, and LHX exhibit strong opening range breakouts with momentum, while several others are weak or lack catalysts. To meet the 75% invested minimum, we will close losing shorts and sell LMT, then deploy capital into five new long positions at maximum size.",
   "decisions": [
     {
-      "symbol": "BAH",
-      "action": "COVER",
-      "conviction": null,
-      "stop_loss_pct": null,
-      "take_profit_pct": null,
-      "setup": "none",
-      "reason": "Below VWAP (-0.3%), breakdown below opening range, -0.51% loss. No valid setup; exiting to redeploy capital."
-    },
-    {
-      "symbol": "HEI",
-      "action": "COVER",
-      "conviction": null,
-      "stop_loss_pct": null,
-      "take_profit_pct": null,
-      "setup": "none",
-      "reason": "Below VWAP (-0.4%), -0.78% loss, no stabilization above VWAP. Exiting per discipline."
-    },
-    {
-      "symbol": "NOC",
-      "action": "COVER",
-      "conviction": null,
-      "stop_loss_pct": null,
-      "take_profit_pct": null,
-      "setup": "none",
-      "reason": "Below VWAP (-0.4%), trend down, -0.55% loss. No valid setup; exiting to redeploy capital."
-    },
-    {
       "symbol": "LMT",
+      "action": "SELL",
+      "conviction": 5,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Strong news catalysts (PAC-3 facility, hypersonic contract, analyst upgrades) but cannot re\u2011enter; need to free cash to meet 75% invested minimum and rotate into better setups."
+    },
+    {
+      "symbol": "AVAV",
+      "action": "COVER",
+      "conviction": 2,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Short losing, tight stop above entry, need to free capital for new positions."
+    },
+    {
+      "symbol": "PLTR",
+      "action": "COVER",
+      "conviction": 2,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Short losing, earnings uncertainty, need to free capital."
+    },
+    {
+      "symbol": "SAIC",
+      "action": "COVER",
+      "conviction": 2,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Short losing, no catalyst, need to free capital."
+    },
+    {
+      "symbol": "BAH",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.0187,
-      "take_profit_pct": 0.02,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Strong OR breakout above 615.49-620.78; price at $627.17. High-conviction news: PAC-3 missile facility in Poland (importance 4), $694M Air Force hypersonic contract (importance 3), TD Cowen PT $650, Bernstein PT $633. m15 +0.2% confirms breakout strength."
+      "reason": "Strong open, breakout above OR, momentum positive, defense sector, meets VWAP+momentum criteria."
     },
     {
-      "symbol": "RTX",
+      "symbol": "CACI",
       "action": "BUY",
       "conviction": 3,
-      "stop_loss_pct": 0.0176,
-      "take_profit_pct": 0.02,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Above VWAP (+0.1%) with OR breakout (193.26-194.8 to 196.72). Price stabilization above intraday average. Airbus engine issues are long-term, not today's catalyst."
+      "reason": "Breakout above OR, momentum positive, defense contractor."
+    },
+    {
+      "symbol": "GD",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Breakout above OR, momentum positive, defense contractor."
+    },
+    {
+      "symbol": "TXT",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Breakout above OR, momentum positive, defense/aerospace, dividend news."
+    },
+    {
+      "symbol": "LHX",
+      "action": "BUY",
+      "conviction": 3,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Breakout above OR, momentum positive, defense contractor."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "PLTR",
-      "direction": "short",
+      "symbol": "BAH",
+      "direction": "long",
       "conviction": 4,
-      "stop_loss_pct": 0.006,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "Breakdown below opening range (195.43-198.7) with -1.9% day decline. Negative earnings pressure ahead of Q3. Below VWAP. Mean reversion short on breakdown."
+      "setup": "opening range breakout",
+      "reason": "Strongest setup: breakout above OR, momentum +1.1%, defense sector, meets VWAP+momentum criteria."
     },
     {
-      "symbol": "LDOS",
-      "direction": "short",
+      "symbol": "CACI",
+      "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.0079,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "Breakdown below OR (138.61-140.5) with -1.5% day decline. Trend flat. No strong counter-catalyst."
+      "setup": "opening range breakout",
+      "reason": "Breakout above OR, momentum positive, defense contractor, decent volume."
     },
     {
-      "symbol": "AVAV",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.0055,
+      "symbol": "GD",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "Breakdown below OR (125.71-126.47) with -1.4% day decline. Mixed signals (m15 +0.9% but breakdown). Selective short."
+      "setup": "opening range breakout",
+      "reason": "Breakout above OR, momentum positive, defense contractor."
     },
     {
-      "symbol": "SAIC",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.0049,
+      "symbol": "TXT",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "Breakdown below OR (148.22-149.15) with -1.1% day decline. Trend flat. Limited catalyst for short."
+      "setup": "opening range breakout",
+      "reason": "Breakout above OR, momentum positive, defense/aerospace, dividend news provides support."
     },
     {
-      "symbol": "HII",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.0047,
+      "symbol": "LHX",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "Breakdown below OR (279.16-281.41) with -1.2% day decline. Trend flat. Limited catalyst for short."
+      "setup": "opening range breakout",
+      "reason": "Breakout above OR, momentum positive, defense contractor."
     }
   ],
-  "experiment": "Testing whether accepting rvol < 1.5 for high-conviction opening range breakouts (importance >= 3 news catalysts) improves entry timing vs. waiting for rvol confirmation, using LMT as the test case (rvol 0.92, PAC-3 facility importance 4, $694M contract importance 3).",
+  "experiment": "",
   "watchlist_changes": {
     "add": [],
     "remove": []

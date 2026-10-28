@@ -1,31 +1,59 @@
 {
   "date": "2026-10-28",
-  "time": "14:47",
-  "trigger": "first look this run",
-  "decisions": [
+  "time": "15:37",
+  "trigger": "price moves in ['MGM']",
+  "market_view": "Team is paused for strategy review with a 24.5% win rate \u2014 a net drag. Best available setups lack rvol > 1.2 confirmation required by current rules. No new trades initiated to respect the pause, though this conflicts with the 75% minimum investment rule. Strongest setups: MGM and FOXA breakdowns with high rvol (1.8, 1.93), and BAM/TKO/SONY breakouts with momentum, but none meet the strict entry filters. Capital preservation is the priority until the strategy review concludes.",
+  "decisions": [],
+  "ranked_ideas": [
+    {
+      "symbol": "MGM",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakdown with high rvol 1.8, vwap -2.2%, m15 -0.7% \u2014 strongest breakdown setup in the field"
+    },
     {
       "symbol": "FOXA",
-      "action": "COVER",
-      "reason": "Executive order: PAUSED for strategy review. Do not initiate new trades. Focus on capital preservation. Closing all positions to reset and comply with the 24.5% win rate review directive."
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakdown with high rvol 1.93, vwap -0.5%, m15 +0.1% \u2014 highest rvol breakdown, but momentum slightly positive; short on breakdown with volume"
     },
     {
-      "symbol": "LYV",
-      "action": "SELL",
-      "reason": "Executive order: PAUSED for strategy review. Do not initiate new trades. Focus on capital preservation. Closing all positions to reset and comply with the 24.5% win rate review directive."
+      "symbol": "BAM",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "up +1.1%, above vwap +0.3%, m15 +0.5%, 5d +2.6% / RSI 63 \u2014 strongest momentum setup; legal dispute is a known headwind but price action confirms trend"
     },
     {
-      "symbol": "WMG",
-      "action": "COVER",
-      "reason": "Executive order: PAUSED for strategy review. Do not initiate new trades. Focus on capital preservation. Closing all positions to reset and comply with the 24.5% win rate review directive."
+      "symbol": "TKO",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above 171.59, above vwap +0.2%, m15 +0.4%, 5d -2.8%/RSI 35.6 \u2014 breakout with trend confirmation despite oversold 50d"
+    },
+    {
+      "symbol": "SONY",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above 25.18, above vwap +0.4%, m15 +0.3%, 5d +0.3%/RSI 66.6 \u2014 breakout with above-vwap confirmation and positive momentum"
     }
   ],
-  "ranked_ideas": [
-    "LYV",
-    "TKO",
-    "BAM",
-    "MGM",
-    "NFLX"
-  ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

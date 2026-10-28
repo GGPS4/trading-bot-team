@@ -1258,5 +1258,97 @@
       "SHORT AVAV x26 (~$3251.3) [deploy]",
       "SHORT SAIC x8 (~$1182.12) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "15:42",
+    "trigger": "scheduled look",
+    "market_view": "Defense sector shows mixed signals: LMT has strong bullish news but is already held; BAH, CACI, GD, TXT, and LHX exhibit strong opening range breakouts with momentum, while several others are weak or lack catalysts. To meet the 75% invested minimum, we will close losing shorts and sell LMT, then deploy capital into five new long positions at maximum size.",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "LMT",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": "Strong news catalysts (PAC-3 facility, hypersonic contract, analyst upgrades) but cannot re\u2011enter; need to free cash to meet 75% invested minimum and rotate into better setups.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "AVAV",
+        "action": "COVER",
+        "conviction": 2,
+        "reason": "Short losing, tight stop above entry, need to free capital for new positions.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "PLTR",
+        "action": "COVER",
+        "conviction": 2,
+        "reason": "Short losing, earnings uncertainty, need to free capital.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "SAIC",
+        "action": "COVER",
+        "conviction": 2,
+        "reason": "Short losing, no catalyst, need to free capital.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "BAH",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strong open, breakout above OR, momentum positive, defense sector, meets VWAP+momentum criteria.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "CACI",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Breakout above OR, momentum positive, defense contractor.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "GD",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Breakout above OR, momentum positive, defense contractor.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "TXT",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Breakout above OR, momentum positive, defense/aerospace, dividend news.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "LHX",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Breakout above OR, momentum positive, defense contractor.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL LMT",
+      "COVER AVAV",
+      "COVER PLTR",
+      "COVER SAIC",
+      "BUY BAH blocked: no new day trades after 15:30",
+      "BUY CACI blocked: no new day trades after 15:30",
+      "BUY GD blocked: no new day trades after 15:30",
+      "BUY TXT blocked: no new day trades after 15:30",
+      "BUY LHX blocked: no new day trades after 15:30"
+    ]
   }
 ]

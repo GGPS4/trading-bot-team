@@ -13759,7 +13759,7 @@
     "order_id": null,
     "status": "open",
     "stop_order_id": "3132f8e6-efa7-46b9-a641-fc463b08578f",
-    "high": 451.225,
+    "high": 452.445,
     "low": 448.84,
     "stop_sent": 442.67,
     "stop_qty_sent": 1
@@ -13784,7 +13784,7 @@
     "order_id": null,
     "status": "open",
     "stop_order_id": "6b2f616a-cc23-4a6a-9f4e-a1bb227788fd",
-    "high": 254.35,
+    "high": 254.54,
     "low": 253.12,
     "stop_sent": 249.93,
     "stop_qty_sent": 5
@@ -13813,7 +13813,10 @@
     "low": 347.278462,
     "trail_active": true,
     "stop_sent": 348.57,
-    "stop_qty_sent": 13
+    "stop_qty_sent": 13,
+    "exit_order_id": "2132076a-f0ef-4c7f-9381-aa96f5bd18d9",
+    "exit_reason": "manager_sell",
+    "exit_note": "Profitable position; meeting 75% minimum investment rule by redeploying capital into momentum setups."
   },
   {
     "id": "space-BA-202610281438-51e9",
@@ -13836,7 +13839,7 @@
     "status": "open",
     "stop_order_id": "9d6ef8a7-6465-499b-9f02-5217f78e5ab6",
     "high": 167.58,
-    "low": 166.51,
+    "low": 166.47,
     "stop_sent": 162.89,
     "stop_qty_sent": 4
   },
@@ -14088,7 +14091,7 @@
     "order_id": null,
     "status": "open",
     "stop_order_id": "29c206bb-d5e0-40d3-8ecc-606dcb7ea616",
-    "high": 271.42,
+    "high": 271.66,
     "low": 270.32,
     "stop_sent": 266.16,
     "stop_qty_sent": 2
@@ -14170,7 +14173,7 @@
     "order_id": null,
     "status": "open",
     "stop_order_id": "494ab1b0-fc63-4ca4-afbd-0f60a663bfaf",
-    "high": 613.26,
+    "high": 613.605,
     "low": 611.27,
     "stop_sent": 604.29,
     "stop_qty_sent": 3
@@ -14249,7 +14252,10 @@
     "low": 964.245,
     "trail_active": true,
     "stop_sent": 974.58,
-    "stop_qty_sent": 4
+    "stop_qty_sent": 4,
+    "exit_order_id": "c96137cf-ca1e-4d24-81bd-c1c1c7e78de4",
+    "exit_reason": "manager_sell",
+    "exit_note": "Profitable position; meeting 75% minimum investment rule by redeploying capital into momentum setups."
   },
   {
     "id": "defense-NOC-202610281438-8b6d",
@@ -14296,17 +14302,18 @@
     "dollars": 641.96,
     "est_price": 57.82,
     "entry_price": 57.82,
-    "stop_price": 56.59,
+    "stop_price": 57.93,
     "take_profit_price": null,
     "conviction": null,
     "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
     "order_id": null,
     "status": "open",
-    "stop_order_id": "6f566c27-14cb-4ccc-a04b-c7d9bf7e4aad",
-    "high": 58.355,
+    "stop_order_id": "7fae7655-5ef2-4d45-b7f0-f86943bbfb4a",
+    "high": 58.4,
     "low": 57.75,
-    "stop_sent": 56.59,
-    "stop_qty_sent": 11
+    "stop_sent": 57.93,
+    "stop_qty_sent": 11,
+    "trail_active": true
   },
   {
     "id": "healthcare-VRTX-202610281438-13ee",
@@ -14328,7 +14335,7 @@
     "order_id": null,
     "status": "open",
     "stop_order_id": "70574d3e-5813-4240-89a7-f7c531b68414",
-    "high": 530.095,
+    "high": 530.63,
     "low": 527.64,
     "stop_sent": 520.15,
     "stop_qty_sent": 1
@@ -14393,7 +14400,10 @@
     "low": 628.22,
     "stop_order_id": "b2d3dbaa-49cb-44f9-98bf-b556b6cd8ff9",
     "stop_sent": 616.49,
-    "stop_qty_sent": 5
+    "stop_qty_sent": 5,
+    "exit_order_id": "8e521d99-2639-44b0-8847-a6d51522e7b8",
+    "exit_reason": "manager_sell",
+    "exit_note": "Strong news catalysts (PAC-3 facility, hypersonic contract, analyst upgrades) but cannot re\u2011enter; need to free cash to meet 75% invested minimum and rotate into better setups."
   },
   {
     "id": "defense-PLTR-202610281455-074d",
@@ -14423,7 +14433,10 @@
     "low": 193.45,
     "stop_order_id": "e4477b88-42b5-4cb4-8c86-51bba32cf8b9",
     "stop_sent": 195.51,
-    "stop_qty_sent": 17
+    "stop_qty_sent": 17,
+    "exit_order_id": "80c8d1a2-69d6-4409-bb41-81b418e19d67",
+    "exit_reason": "manager_sell",
+    "exit_note": "Short losing, earnings uncertainty, need to free capital."
   },
   {
     "id": "defense-LDOS-202610281455-fbcc",
@@ -14446,14 +14459,19 @@
     "setup": "mean reversion",
     "experiment": "Testing whether accepting rvol < 1.5 for high-conviction opening range breakouts (importance >= 3 news catalysts) improves entry timing vs. waiting for rvol confirmation, using LMT as the test case (r",
     "order_id": "d2c693cd-8aa8-4d8f-bdc4-b7745e3bb950",
-    "status": "open",
+    "status": "closed",
     "entry_price": 137.46,
     "entry_time": "2026-10-28T18:55:09.520764319Z",
     "high": 138.22,
     "low": 137.35,
     "stop_order_id": "958a03d6-4a36-4c36-aaea-36188ebbb486",
     "stop_sent": 138.59,
-    "stop_qty_sent": 24
+    "stop_qty_sent": 24,
+    "exit_price": 138.651666,
+    "exit_reason": "stop_loss",
+    "exit_time": "2026-10-28T19:32:51.650487174Z",
+    "pnl": -31.91,
+    "pnl_pct": -0.0097
   },
   {
     "id": "defense-AVAV-202610281455-bdde",
@@ -14479,11 +14497,14 @@
     "status": "open",
     "entry_price": 124.01,
     "entry_time": "2026-10-28T18:55:09.958130468Z",
-    "high": 124.99,
+    "high": 125.105,
     "low": 124.01,
     "stop_order_id": "a63af5bd-0aef-43db-ac29-007fdbaccf13",
     "stop_sent": 126.12,
-    "stop_qty_sent": 26
+    "stop_qty_sent": 26,
+    "exit_order_id": "a7dbb3a4-f9a1-434e-af4b-ee3e0f229b4b",
+    "exit_reason": "manager_sell",
+    "exit_note": "Short losing, tight stop above entry, need to free capital for new positions."
   },
   {
     "id": "defense-SAIC-202610281455-7ad4",
@@ -14509,10 +14530,13 @@
     "status": "open",
     "entry_price": 147.7,
     "entry_time": "2026-10-28T18:55:11.005816656Z",
-    "high": 148.1,
+    "high": 148.175,
     "low": 147.425,
     "stop_order_id": "eb4e5fbf-8698-4b71-a19b-fe50b7b6d861",
     "stop_sent": 148.85,
-    "stop_qty_sent": 8
+    "stop_qty_sent": 8,
+    "exit_order_id": "cafd91d2-ad63-48af-ae93-360f609c8c49",
+    "exit_reason": "manager_sell",
+    "exit_note": "Short losing, no catalyst, need to free capital."
   }
 ]
