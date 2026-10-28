@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-28T12:02-04:00",
+  "updated": "2026-10-28T12:19-04:00",
   "date": "2026-10-28",
   "mode": "paper",
   "health": {
     "issues": [
-      "8 problem(s) in the last hour, latest: financials: SELL V - Long momentum failed to follow through; price is below VWAP and the opening rang"
+      "8 problem(s) in the last hour, latest: LLM: groq qwen/qwen3.8-27b hit its daily limit: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5eapq7ve5qb5jvp26y8"
     ]
   },
   "paused": false,
@@ -14,21 +14,21 @@
     "strategy": "day_trading"
   },
   "account": {
-    "equity": 98747.33,
-    "cash": 48971.66,
-    "day_change": -285.18,
-    "day_change_pct": -0.0029
+    "equity": 98720.3,
+    "cash": 50060.85,
+    "day_change": -312.21,
+    "day_change_pct": -0.0032
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 771.54
+    "price": 771.16
   },
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 9,
-    "return_since_start": -0.0125,
-    "benchmark_since_start": 0.0012,
-    "max_drawdown": 0.0125
+    "return_since_start": -0.0128,
+    "benchmark_since_start": 0.0007,
+    "max_drawdown": 0.0128
   },
   "go_live": {
     "items": [
@@ -40,12 +40,12 @@
       {
         "rule": "Beating SPY since the start",
         "ok": false,
-        "value": "-1.2% vs +0.1%"
+        "value": "-1.3% vs +0.1%"
       },
       {
         "rule": "Worst drop under 15%",
         "ok": true,
-        "value": "1.2%"
+        "value": "1.3%"
       }
     ],
     "all_ok": false
@@ -72,8 +72,8 @@
         "GD"
       ],
       "budget": 22282.31,
-      "invested": 13861.73,
-      "unrealized_pnl": 36.52,
+      "invested": 13858.48,
+      "unrealized_pnl": 33.26,
       "realized_today": -106.43,
       "trades_today": 10,
       "blocked_today": 5,
@@ -106,8 +106,8 @@
         "LPTH"
       ],
       "budget": 4456.46,
-      "invested": 3157.78,
-      "unrealized_pnl": 22.73,
+      "invested": 3153.92,
+      "unrealized_pnl": 18.87,
       "realized_today": -33.85,
       "trades_today": 10,
       "blocked_today": 0,
@@ -140,17 +140,17 @@
         "MGM"
       ],
       "budget": 4456.46,
-      "invested": -2202.1,
-      "unrealized_pnl": 7.68,
-      "realized_today": -23.57,
+      "invested": -1689.9,
+      "unrealized_pnl": 12.14,
+      "realized_today": -32.07,
       "trades_today": 11,
       "blocked_today": 5,
       "all_time": {
-        "closed_trades": 56,
+        "closed_trades": 57,
         "wins": 13,
-        "losses": 43,
-        "win_rate": 0.232,
-        "realized_pnl": -242.47
+        "losses": 44,
+        "win_rate": 0.228,
+        "realized_pnl": -250.97
       }
     },
     "tech": {
@@ -174,8 +174,8 @@
         "IBM"
       ],
       "budget": 31195.24,
-      "invested": 22927.25,
-      "unrealized_pnl": 36.15,
+      "invested": 22921.03,
+      "unrealized_pnl": 29.94,
       "realized_today": -258.12,
       "trades_today": 11,
       "blocked_today": 22,
@@ -208,11 +208,11 @@
         "WEN"
       ],
       "budget": 8912.93,
-      "invested": 1.42,
-      "unrealized_pnl": -9.08,
+      "invested": 0.0,
+      "unrealized_pnl": -10.51,
       "realized_today": -38.06,
       "trades_today": 8,
-      "blocked_today": 12,
+      "blocked_today": 15,
       "all_time": {
         "closed_trades": 48,
         "wins": 15,
@@ -242,17 +242,17 @@
         "SOFI"
       ],
       "budget": 13369.39,
-      "invested": 8990.76,
-      "unrealized_pnl": 33.46,
-      "realized_today": -32.96,
+      "invested": 9271.13,
+      "unrealized_pnl": 35.91,
+      "realized_today": -37.68,
       "trades_today": 8,
       "blocked_today": 3,
       "all_time": {
-        "closed_trades": 50,
+        "closed_trades": 51,
         "wins": 19,
-        "losses": 31,
-        "win_rate": 0.38,
-        "realized_pnl": -97.45
+        "losses": 32,
+        "win_rate": 0.373,
+        "realized_pnl": -102.17
       }
     },
     "healthcare": {
@@ -276,17 +276,17 @@
         "CORT"
       ],
       "budget": 4456.46,
-      "invested": 3038.83,
-      "unrealized_pnl": 19.47,
-      "realized_today": 2.97,
+      "invested": 1144.19,
+      "unrealized_pnl": -4.62,
+      "realized_today": 5.05,
       "trades_today": 6,
-      "blocked_today": 0,
+      "blocked_today": 4,
       "all_time": {
-        "closed_trades": 58,
-        "wins": 20,
+        "closed_trades": 59,
+        "wins": 21,
         "losses": 38,
-        "win_rate": 0.345,
-        "realized_pnl": -165.56
+        "win_rate": 0.356,
+        "realized_pnl": -163.48
       }
     }
   },
@@ -296,10 +296,10 @@
       "team": "tech",
       "qty": 13.0,
       "entry": 345.42,
-      "price": 345.5,
-      "value": 4491.5,
-      "pnl": 1.04,
-      "pnl_pct": 0.0002,
+      "price": 345.34,
+      "value": 4489.42,
+      "pnl": -1.04,
+      "pnl_pct": -0.0002,
       "stop": 340.33,
       "target": 355.88,
       "reason": "[75% invested rule] MacBook Pro OLED redesign news and Copilot adoption; at VWAP (+0.0%) with flat but liquid large-cap action, weaker setup.",
@@ -314,10 +314,10 @@
       "team": "healthcare",
       "qty": 6.0,
       "entry": 102.33,
-      "price": 103.23,
-      "value": 619.38,
-      "pnl": 5.4,
-      "pnl_pct": 0.0088,
+      "price": 103.09,
+      "value": 618.54,
+      "pnl": 4.56,
+      "pnl_pct": 0.0074,
       "stop": 103.07,
       "target": 105.88,
       "reason": "[75% invested rule] FDA approval received for novel device treating post-heart-valve replacement leaks without surgery.",
@@ -332,10 +332,10 @@
       "team": "tech",
       "qty": 11.0,
       "entry": 411.59,
-      "price": 412.97,
-      "value": 4542.67,
-      "pnl": 15.18,
-      "pnl_pct": 0.0034,
+      "price": 414.13,
+      "value": 4555.38,
+      "pnl": 27.89,
+      "pnl_pct": 0.0062,
       "stop": 403.99,
       "target": 422.44,
       "reason": "Opening-range breakout above 409.11, price strictly above VWAP (+0.9%), positive 15m momentum (+0.4%), strong +3.6% day from oversold RSI 15.3; meets strict VWAP-plus-momentum filter.",
@@ -350,10 +350,10 @@
       "team": "tech",
       "qty": 8.0,
       "entry": 566.75,
-      "price": 568.05,
-      "value": 4544.4,
-      "pnl": 10.4,
-      "pnl_pct": 0.0023,
+      "price": 567.46,
+      "value": 4539.68,
+      "pnl": 5.68,
+      "pnl_pct": 0.0013,
       "stop": 555.16,
       "target": 583.48,
       "reason": "[75% invested rule] Above VWAP, m60 positive, rvol 1.1, executive momentum watchlist; pullback potential.",
@@ -368,10 +368,10 @@
       "team": "consumer",
       "qty": 5.0,
       "entry": 254.24,
-      "price": 252.44,
-      "value": 1262.2,
-      "pnl": -9.01,
-      "pnl_pct": -0.0071,
+      "price": 252.62,
+      "value": 1263.1,
+      "pnl": -8.11,
+      "pnl_pct": -0.0064,
       "stop": 249.93,
       "target": 263.42,
       "reason": "Benefiting from FCC approval of Globalstar acquisition and Verisk enterprise AI integrations ahead of earnings.",
@@ -386,10 +386,10 @@
       "team": "space",
       "qty": 4.0,
       "entry": 166.61,
-      "price": 166.8,
-      "value": 667.18,
-      "pnl": 0.74,
-      "pnl_pct": 0.0011,
+      "price": 166.82,
+      "value": 667.28,
+      "pnl": 0.84,
+      "pnl_pct": 0.0013,
       "stop": 162.89,
       "target": 169.54,
       "reason": "[75% invested rule] High volume (rvol 3.95) but mixed news (earnings beat/miss, CEO comments on 737 delays). Trading below VWAP (-0.2%) and flat momentum. Not a clear setup. Listed for monitoring only.",
@@ -404,10 +404,10 @@
       "team": "defense",
       "qty": 40.0,
       "entry": 83.0,
-      "price": 82.56,
-      "value": 3302.6,
-      "pnl": -17.57,
-      "pnl_pct": -0.0053,
+      "price": 82.55,
+      "value": 3301.8,
+      "pnl": -18.37,
+      "pnl_pct": -0.0055,
       "stop": 81.48,
       "target": 86.47,
       "reason": "[75% invested rule] Highest relative volume (0.81) among non-held names, near VWAP, though range-bound",
@@ -422,10 +422,10 @@
       "team": "tech",
       "qty": 77.0,
       "entry": 60.46,
-      "price": 60.49,
-      "value": 4657.67,
-      "pnl": 2.03,
-      "pnl_pct": 0.0004,
+      "price": 60.34,
+      "value": 4645.8,
+      "pnl": -9.84,
+      "pnl_pct": -0.0021,
       "stop": 58.82,
       "target": 61.83,
       "reason": "[75% invested rule] Above VWAP +0.8% with RSI 21.3 deep oversold bounce and slight positive 15m momentum; low rvol 0.89 keeps conviction modest.",
@@ -440,10 +440,10 @@
       "team": "consumer",
       "qty": -10.0,
       "entry": 126.07,
-      "price": 126.08,
-      "value": -1260.78,
-      "pnl": -0.07,
-      "pnl_pct": -0.0001,
+      "price": 126.31,
+      "value": -1263.1,
+      "pnl": -2.4,
+      "pnl_pct": -0.0019,
       "stop": 128.98,
       "target": 121.39,
       "reason": "FTC and 20 states launched a lawsuit alleging systematic customer overcharging, establishing persistent selling pressure.",
@@ -458,10 +458,10 @@
       "team": "entertainment",
       "qty": -6.0,
       "entry": 63.59,
-      "price": 63.83,
-      "value": -382.95,
-      "pnl": -1.41,
-      "pnl_pct": -0.0037,
+      "price": 63.86,
+      "value": -383.16,
+      "pnl": -1.62,
+      "pnl_pct": -0.0043,
       "stop": 64.54,
       "target": 61.68,
       "reason": "[75% invested rule] OR breakdown, rvol 0.76 below 1.2 threshold; weak setup",
@@ -476,10 +476,10 @@
       "team": "financials",
       "qty": 2.0,
       "entry": 918.86,
-      "price": 923.59,
-      "value": 1847.17,
-      "pnl": 9.45,
-      "pnl_pct": 0.0051,
+      "price": 924.01,
+      "value": 1848.03,
+      "pnl": 10.31,
+      "pnl_pct": 0.0056,
       "stop": 900.08,
       "target": 946.0,
       "reason": "Executive order directs focus on large-cap stability and specifically names GS. GS is up 0.7% on the day, slightly above VWAP, with rvol 1.36. It is the best available large-cap financial setup among non-held names.",
@@ -494,10 +494,10 @@
       "team": "space",
       "qty": 3.0,
       "entry": 196.21,
-      "price": 198.52,
-      "value": 595.56,
-      "pnl": 6.93,
-      "pnl_pct": 0.0118,
+      "price": 197.88,
+      "value": 593.64,
+      "pnl": 5.01,
+      "pnl_pct": 0.0085,
       "stop": 196.95,
       "target": 201.8,
       "reason": "[75% invested rule] Strong opening range breakout above 195.20 with rvol 2.21 and positive 15m momentum. RSI is oversold (24.7) suggesting potential for a relief bounce, and it fits the 'Defense' sector focus mentioned in the President's strategy. However, entry is paused per executive order until strategy review is complete, but it is the best technical setup on the list.",
@@ -512,10 +512,10 @@
       "team": "entertainment",
       "qty": -13.0,
       "entry": 51.01,
-      "price": 50.48,
-      "value": -656.24,
-      "pnl": 6.89,
-      "pnl_pct": 0.0104,
+      "price": 50.38,
+      "value": -654.88,
+      "pnl": 8.26,
+      "pnl_pct": 0.0124,
       "stop": 50.8,
       "target": 49.65,
       "reason": "[75% invested rule] Strong downtrend, rvol 0.43; no volume confirmation",
@@ -530,10 +530,10 @@
       "team": "tech",
       "qty": 50.0,
       "entry": 93.67,
-      "price": 93.82,
-      "value": 4691.01,
-      "pnl": 7.5,
-      "pnl_pct": 0.0016,
+      "price": 93.81,
+      "value": 4690.75,
+      "pnl": 7.25,
+      "pnl_pct": 0.0015,
       "stop": 92.18,
       "target": 96.39,
       "reason": "[75% invested rule] Intraday trend up, 15m momentum +0.4%, RSI 28.9 near oversold, price dipped -1.6% from open but holding support near 93.34.",
@@ -544,33 +544,15 @@
       "setup": "pullback in uptrend"
     },
     {
-      "symbol": "JNJ",
-      "team": "healthcare",
-      "qty": 2.0,
-      "entry": 266.81,
-      "price": 271.17,
-      "value": 542.34,
-      "pnl": 8.71,
-      "pnl_pct": 0.0163,
-      "stop": 270.52,
-      "target": 274.1,
-      "reason": "[75% invested rule] Trading above 50d average with +2.0% daily move and consistent 5-day gains.",
-      "side": "long",
-      "trailing": true,
-      "scaled": false,
-      "first_stop": 262.12,
-      "setup": "pullback in uptrend"
-    },
-    {
       "symbol": "JPM",
       "team": "financials",
       "qty": 5.0,
       "entry": 336.05,
-      "price": 339.43,
-      "value": 1697.15,
-      "pnl": 16.9,
-      "pnl_pct": 0.0101,
-      "stop": 336.95,
+      "price": 339.61,
+      "value": 1698.05,
+      "pnl": 17.8,
+      "pnl_pct": 0.0106,
+      "stop": 337.02,
       "target": 344.5,
       "reason": "Aligning with executive order to prioritize large-cap stability; holding at VWAP (+0.0%) with positive 15m momentum (+0.1%) to enforce 75% minimum deployment rule safely.",
       "side": "long",
@@ -584,10 +566,10 @@
       "team": "defense",
       "qty": 17.0,
       "entry": 139.8,
-      "price": 139.22,
-      "value": 2366.74,
-      "pnl": -9.86,
-      "pnl_pct": -0.0042,
+      "price": 138.81,
+      "value": 2359.86,
+      "pnl": -16.75,
+      "pnl_pct": -0.007,
       "stop": 137.57,
       "target": 144.56,
       "reason": "Awarded $99M US Cyber Command contract for integrated digital operational platforms, maintaining strong multi-day momentum.",
@@ -598,32 +580,14 @@
       "setup": "news catalyst"
     },
     {
-      "symbol": "LLY",
-      "team": "healthcare",
-      "qty": 0.523722893,
-      "entry": 1276.36,
-      "price": 1290.85,
-      "value": 676.05,
-      "pnl": 7.59,
-      "pnl_pct": 0.0114,
-      "stop": 1288.1,
-      "target": 1326.09,
-      "reason": "[75% invested rule] Phase 3 TRANSCEND-T2D-2 trial showed retatrutide outperformed Ozempic in A1C reduction and double the weight loss.",
-      "side": "long",
-      "trailing": true,
-      "scaled": false,
-      "first_stop": 1249.59,
-      "setup": "news catalyst"
-    },
-    {
       "symbol": "LMT",
       "team": "defense",
       "qty": 4.0,
       "entry": 620.0,
-      "price": 628.64,
-      "value": 2514.56,
-      "pnl": 34.56,
-      "pnl_pct": 0.0139,
+      "price": 629.32,
+      "value": 2517.28,
+      "pnl": 37.28,
+      "pnl_pct": 0.015,
       "stop": 624.38,
       "target": 644.88,
       "reason": "Secured major $694M USAF contract for hypersonic weapon development and expanding European PAC-3 presence; prime defense anchor prioritized by executive.",
@@ -634,32 +598,14 @@
       "setup": "news catalyst"
     },
     {
-      "symbol": "LYV",
-      "team": "entertainment",
-      "qty": -3.0,
-      "entry": 169.25,
-      "price": 171.45,
-      "value": -514.35,
-      "pnl": -6.6,
-      "pnl_pct": -0.013,
-      "stop": 171.9,
-      "target": 164.28,
-      "reason": "[75% invested rule] OR breakdown with highest rvol (1.02) among breakdown shorts; trend flat but weak",
-      "side": "short",
-      "trailing": false,
-      "scaled": false,
-      "first_stop": 171.9,
-      "setup": "opening range breakout"
-    },
-    {
       "symbol": "MA",
       "team": "financials",
       "qty": 3.0,
       "entry": 611.27,
-      "price": 614.75,
-      "value": 1844.25,
-      "pnl": 10.44,
-      "pnl_pct": 0.0057,
+      "price": 613.42,
+      "value": 1840.26,
+      "pnl": 6.45,
+      "pnl_pct": 0.0035,
       "stop": 604.29,
       "target": 629.98,
       "reason": "Trading above VWAP (+0.3%) with +0.9% gain off the open, strong 15-minute momentum (+0.6%), and heavy relative volume (2.51x).",
@@ -670,14 +616,32 @@
       "setup": "momentum"
     },
     {
+      "symbol": "MS",
+      "team": "financials",
+      "qty": 10.0,
+      "entry": 189.16,
+      "price": 189.59,
+      "value": 1895.9,
+      "pnl": 4.3,
+      "pnl_pct": 0.0023,
+      "stop": 186.32,
+      "target": 194.83,
+      "reason": "[75% invested rule] Cleared the opening range and held above VWAP with positive longer-term momentum; strict VWAP confirmation was met.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 186.32,
+      "setup": "opening range breakout"
+    },
+    {
       "symbol": "NOC",
       "team": "defense",
       "qty": 6.0,
       "entry": 552.44,
-      "price": 552.75,
-      "value": 3316.47,
-      "pnl": 1.83,
-      "pnl_pct": 0.0006,
+      "price": 552.47,
+      "value": 3314.82,
+      "pnl": 0.18,
+      "pnl_pct": 0.0001,
       "stop": 540.17,
       "target": 573.24,
       "reason": "[75% invested rule] Executive priority for stability, Bernstein price target raised to $590, trading above VWAP",
@@ -688,32 +652,14 @@
       "setup": "sector rotation"
     },
     {
-      "symbol": "REGN",
-      "team": "healthcare",
-      "qty": 0.825306128,
-      "entry": 809.95,
-      "price": 814.25,
-      "value": 672.0,
-      "pnl": 3.54,
-      "pnl_pct": 0.0053,
-      "stop": 814.05,
-      "target": 840.57,
-      "reason": "[75% invested rule] Canaccord Genuity price target increase to $922 and reduced litigation risk regarding Eylea biosimilar.",
-      "side": "long",
-      "trailing": true,
-      "scaled": false,
-      "first_stop": 792.08,
-      "setup": "news catalyst"
-    },
-    {
       "symbol": "RTX",
       "team": "defense",
       "qty": 12.0,
       "entry": 194.48,
-      "price": 196.78,
-      "value": 2361.36,
-      "pnl": 27.56,
-      "pnl_pct": 0.0118,
+      "price": 197.06,
+      "value": 2364.72,
+      "pnl": 30.92,
+      "pnl_pct": 0.0132,
       "stop": 195.6,
       "target": 200.41,
       "reason": "Executive directive priority pick for portfolio stability; Collins Aerospace secured multi-year maintenance agreement with steady baseline revenue.",
@@ -728,10 +674,10 @@
       "team": "financials",
       "qty": 118.0,
       "entry": 16.88,
-      "price": 16.88,
-      "value": 1991.39,
-      "pnl": -0.45,
-      "pnl_pct": -0.0002,
+      "price": 16.86,
+      "value": 1988.89,
+      "pnl": -2.95,
+      "pnl_pct": -0.0015,
       "stop": 16.54,
       "target": 17.38,
       "reason": "StoneX maintains buy and raises price target to $27; RVOL is 2.58 with a +2.7% day move. RSI 55.8 is healthy. Best available catalyst setup among non-held names, though it trades just 0.5% below VWAP.",
@@ -746,10 +692,10 @@
       "team": "space",
       "qty": 4.0,
       "entry": 144.21,
-      "price": 144.77,
-      "value": 579.08,
-      "pnl": 2.24,
-      "pnl_pct": 0.0039,
+      "price": 144.51,
+      "value": 578.04,
+      "pnl": 1.2,
+      "pnl_pct": 0.0021,
       "stop": 140.78,
       "target": 147.96,
       "reason": "[75% invested rule] High relative volume (2.89) and positive 15m momentum (+1.0%). Trading above VWAP (-0.5% is close, effectively at VWAP). News catalyst from Anthropic contract renewal. However, day change is -3.3%, so it's a counter-trend bounce. High risk, high reward.",
@@ -764,46 +710,28 @@
       "team": "space",
       "qty": 0.589303566,
       "entry": 1134.32,
-      "price": 1145.85,
-      "value": 675.25,
-      "pnl": 6.79,
-      "pnl_pct": 0.0102,
-      "stop": 1119.94,
+      "price": 1145.83,
+      "value": 675.24,
+      "pnl": 6.78,
+      "pnl_pct": 0.0101,
+      "stop": 1137.57,
       "target": 1165.41,
       "reason": "[75% invested rule] Opening range breakout above 1135.15 with rvol 1.68. Steady uptrend (5d -1.0% but 20d +2.8%). Less volatile than HWM, suitable for a lower-risk entry if the pause is lifted. Fits the 'Defense/Aerospace' theme.",
       "side": "long",
-      "trailing": false,
+      "trailing": true,
       "scaled": false,
       "first_stop": 1119.94,
       "setup": "opening range breakout"
-    },
-    {
-      "symbol": "V",
-      "team": "financials",
-      "qty": 4.0,
-      "entry": 403.42,
-      "price": 402.7,
-      "value": 1610.8,
-      "pnl": -2.88,
-      "pnl_pct": -0.0018,
-      "stop": 397.63,
-      "target": 417.82,
-      "reason": "Strong intraday breakout (+1.2% m15, +2.2% from open), trading +0.7% above VWAP with high relative volume (3.26x) and positive analyst commentary on payment volumes.",
-      "side": "long",
-      "trailing": false,
-      "scaled": false,
-      "first_stop": 397.63,
-      "setup": "momentum"
     },
     {
       "symbol": "VRTX",
       "team": "healthcare",
       "qty": 1.0,
       "entry": 534.83,
-      "price": 529.06,
-      "value": 529.06,
-      "pnl": -5.77,
-      "pnl_pct": -0.0108,
+      "price": 525.65,
+      "value": 525.65,
+      "pnl": -9.18,
+      "pnl_pct": -0.0172,
       "stop": 523.94,
       "target": 556.02,
       "reason": "VRTX cleared the opening range at 515.35-523.64, holds above VWAP, and shows rvol 1.52 with positive m15/m60 momentum; Fed price-target updates add to the upside narrative.",
@@ -818,15 +746,15 @@
       "team": "space",
       "qty": 9.0,
       "entry": 70.52,
-      "price": 71.19,
-      "value": 640.71,
-      "pnl": 6.03,
-      "pnl_pct": 0.0095,
-      "stop": 68.96,
+      "price": 71.08,
+      "value": 639.72,
+      "pnl": 5.04,
+      "pnl_pct": 0.0079,
+      "stop": 70.7,
       "target": 71.78,
       "reason": "[75% invested rule] Opening range breakdown. Negative momentum (m15 -0.7%). Potential short candidate if risk-on sentiment persists, but market is calm. Low conviction for a short in a calm market.",
       "side": "long",
-      "trailing": false,
+      "trailing": true,
       "scaled": false,
       "first_stop": 68.96,
       "setup": "other"
@@ -836,10 +764,10 @@
       "team": "entertainment",
       "qty": -22.0,
       "entry": 29.88,
-      "price": 29.48,
-      "value": -648.56,
-      "pnl": 8.8,
-      "pnl_pct": 0.0134,
+      "price": 29.63,
+      "value": -651.86,
+      "pnl": 5.5,
+      "pnl_pct": 0.0084,
       "stop": 29.66,
       "target": 29.03,
       "reason": "[75% invested rule] Trend down, OR range tight, very low rvol (0.22); no catalyst",
@@ -1310,7 +1238,7 @@
       "entry_price": 1276.362,
       "side": "long",
       "exit_price": null,
-      "exit_reason": null,
+      "exit_reason": "trailing_stop",
       "pnl": null,
       "pnl_pct": null,
       "status": "open",
@@ -1381,11 +1309,11 @@
       "est_price": 808.24,
       "entry_price": 809.954,
       "side": "long",
-      "exit_price": null,
-      "exit_reason": null,
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "exit_price": 813.29,
+      "exit_reason": "trailing_stop",
+      "pnl": 2.08,
+      "pnl_pct": 0.0031,
+      "status": "closed",
       "conviction": 4,
       "reason": "[75% invested rule] Canaccord Genuity price target increase to $922 and reduced litigation risk regarding Eylea biosimilar.",
       "stop_price": 814.05,
@@ -1507,11 +1435,11 @@
       "est_price": 403.69,
       "entry_price": 403.42,
       "side": "long",
-      "exit_price": null,
+      "exit_price": 402.6425,
       "exit_reason": "manager_sell",
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "pnl": -4.72,
+      "pnl_pct": -0.0029,
+      "status": "closed",
       "conviction": 4,
       "reason": "Strong intraday breakout (+1.2% m15, +2.2% from open), trading +0.7% above VWAP with high relative volume (3.26x) and positive analyst commentary on payment volumes.",
       "stop_price": 397.63,
@@ -1568,7 +1496,7 @@
       "status": "open",
       "conviction": 4,
       "reason": "Aligning with executive order to prioritize large-cap stability; holding at VWAP (+0.0%) with positive 15m momentum (+0.1%) to enforce 75% minimum deployment rule safely.",
-      "stop_price": 336.95,
+      "stop_price": 337.02,
       "take_profit_price": 344.5
     },
     {
@@ -1658,7 +1586,7 @@
       "status": "open",
       "conviction": 3,
       "reason": "[75% invested rule] Opening range breakout above 1135.15 with rvol 1.68. Steady uptrend (5d -1.0% but 20d +2.8%). Less volatile than HWM, suitable for a lower-risk entry if the pause is lifted. Fits the 'Defense/Aerospace' theme.",
-      "stop_price": 1119.94,
+      "stop_price": 1137.57,
       "take_profit_price": 1165.41
     },
     {
@@ -1712,7 +1640,7 @@
       "status": "open",
       "conviction": 2,
       "reason": "[75% invested rule] Opening range breakdown. Negative momentum (m15 -0.7%). Potential short candidate if risk-on sentiment persists, but market is calm. Low conviction for a short in a calm market.",
-      "stop_price": 68.96,
+      "stop_price": 70.7,
       "take_profit_price": 71.78
     },
     {
@@ -1723,11 +1651,11 @@
       "est_price": 169.36,
       "entry_price": 169.25,
       "side": "short",
-      "exit_price": null,
-      "exit_reason": null,
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "exit_price": 171.913333,
+      "exit_reason": "stop_loss",
+      "pnl": -8.5,
+      "pnl_pct": -0.0167,
+      "status": "closed",
       "conviction": 2,
       "reason": "[75% invested rule] OR breakdown with highest rvol (1.02) among breakdown shorts; trend flat but weak",
       "stop_price": 171.9,
@@ -1989,15 +1917,15 @@
       "time": "12:01",
       "team": "financials",
       "symbol": "MS",
-      "qty": 10,
+      "qty": 10.0,
       "est_price": 189.16,
-      "entry_price": null,
+      "entry_price": 189.16,
       "side": "long",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 4,
       "reason": "[75% invested rule] Cleared the opening range and held above VWAP with positive longer-term momentum; strict VWAP confirmation was met.",
       "stop_price": 186.32,
@@ -2380,9 +2308,98 @@
       "symbol": "CMCSA",
       "action": "BUY",
       "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:05",
+      "team": "healthcare",
+      "symbol": "ISRG",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 2"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:05",
+      "team": "healthcare",
+      "symbol": "MRNA",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 2"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:05",
+      "team": "healthcare",
+      "symbol": "TMO",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 2"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:05",
+      "team": "healthcare",
+      "symbol": "DHR",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 2"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:10",
+      "team": "consumer",
+      "symbol": "WEN",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:10",
+      "team": "consumer",
+      "symbol": "CMG",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:10",
+      "team": "consumer",
+      "symbol": "RCL",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-10-28",
+      "team": "entertainment",
+      "symbol": "LYV",
+      "entry_price": 169.25,
+      "exit_price": 171.913333,
+      "exit_reason": "stop_loss",
+      "pnl": -8.5,
+      "pnl_pct": -0.0167,
+      "reason": "[75% invested rule] OR breakdown with highest rvol (1.02) among breakdown shorts; trend flat but weak"
+    },
+    {
+      "date": "2026-10-28",
+      "team": "healthcare",
+      "symbol": "REGN",
+      "entry_price": 809.954,
+      "exit_price": 813.29,
+      "exit_reason": "trailing_stop",
+      "pnl": 2.08,
+      "pnl_pct": 0.0031,
+      "reason": "[75% invested rule] Canaccord Genuity price target increase to $922 and reduced litigation risk regarding Eylea biosimilar."
+    },
+    {
+      "date": "2026-10-28",
+      "team": "financials",
+      "symbol": "V",
+      "entry_price": 403.42,
+      "exit_price": 402.6425,
+      "exit_reason": "manager_sell",
+      "pnl": -4.72,
+      "pnl_pct": -0.0029,
+      "reason": "Strong intraday breakout (+1.2% m15, +2.2% from open), trading +0.7% above VWAP with high relative volume (3.26x) and positive analyst commentary on payment volumes."
+    },
     {
       "date": "2026-10-28",
       "team": "financials",
@@ -2624,39 +2641,6 @@
       "pnl": -14.35,
       "pnl_pct": -0.0288,
       "reason": "[75% invested rule] Milestone hit on $259M Space Force missile warning contract; strong 5d momentum (+22.0%)."
-    },
-    {
-      "date": "2026-10-28",
-      "team": "defense",
-      "symbol": "PLTR",
-      "entry_price": 195.8875,
-      "exit_price": 194.1575,
-      "exit_reason": "stop_loss",
-      "pnl": -30.8,
-      "pnl_pct": -0.0098,
-      "reason": "[75% invested rule] Strong relative volume (2.38x) with solid 5d momentum and AI/defense tech tailwinds."
-    },
-    {
-      "date": "2026-10-28",
-      "team": "tech",
-      "symbol": "MU",
-      "entry_price": 978.5675,
-      "exit_price": 962.2275,
-      "exit_reason": "stop_loss",
-      "pnl": -69.24,
-      "pnl_pct": -0.0177,
-      "reason": "Up +3.5% on strong SK Hynix Q3 record profit news showing massive AI memory demand and tight supply."
-    },
-    {
-      "date": "2026-10-28",
-      "team": "tech",
-      "symbol": "AVGO",
-      "entry_price": 350.09,
-      "exit_price": 345.633077,
-      "exit_reason": "stop_loss",
-      "pnl": -62.46,
-      "pnl_pct": -0.0137,
-      "reason": "Up +1.9% following analyst upgrade from D.A. Davidson to Buy with $400 PT on custom AI silicon momentum."
     }
   ],
   "report": {
@@ -5129,12 +5113,12 @@
     }
   },
   "mood": {
-    "time": "2026-10-28T12:00-04:00",
+    "time": "2026-10-28T12:15-04:00",
     "regime": "normal",
-    "spy": 0.0021,
-    "qqq": 0.0015,
-    "fear_vixy": -0.0167,
-    "breadth": 0.51,
+    "spy": 0.0023,
+    "qqq": 0.0014,
+    "fear_vixy": -0.0158,
+    "breadth": 0.49,
     "why": "no warning signs",
     "note": "Market is calm or rising. Trade your best setups as usual."
   },
@@ -11940,7 +11924,7 @@
           "setup": "opening range breakout",
           "side": "long",
           "partials": null,
-          "trail_active": null,
+          "trail_active": true,
           "first_stop": 1119.94,
           "entry_price": 1134.322,
           "exit_price": null,
@@ -11952,7 +11936,7 @@
           "status": "open",
           "conviction": 3,
           "reason": "[75% invested rule] Opening range breakout above 1135.15 with rvol 1.68. Steady uptrend (5d -1.0% but 20d +2.8%). Less volatile than HWM, suitable for a lower-risk entry if the pause is lifted. Fits the 'Defense/Aerospace' theme.",
-          "stop_price": 1119.94,
+          "stop_price": 1137.57,
           "take_profit_price": 1165.41
         },
         {
@@ -12021,7 +12005,7 @@
           "setup": "other",
           "side": "long",
           "partials": null,
-          "trail_active": null,
+          "trail_active": true,
           "first_stop": 68.96,
           "entry_price": 70.52,
           "exit_price": null,
@@ -12033,7 +12017,7 @@
           "status": "open",
           "conviction": 2,
           "reason": "[75% invested rule] Opening range breakdown. Negative momentum (m15 -0.7%). Potential short candidate if risk-on sentiment persists, but market is calm. Low conviction for a short in a calm market.",
-          "stop_price": 68.96,
+          "stop_price": 70.7,
           "take_profit_price": 71.78
         }
       ],
@@ -14447,6 +14431,24 @@
         "news": {
           "findings": [
             {
+              "symbol": "BA",
+              "sentiment": -0.2,
+              "importance": 2,
+              "unconfirmed_rumor": false,
+              "summary": "Barclays lowered its price target on Boeing to $250 while maintaining an Overweight rating.",
+              "source": "benzinga",
+              "time": "12:05"
+            },
+            {
+              "symbol": "SPCX",
+              "sentiment": 0.1,
+              "importance": 2,
+              "unconfirmed_rumor": true,
+              "summary": "A Varda executive speculated that SpaceX might retain Starship cost savings rather than lowering launch prices, though this is third-party commentary rather than official policy.",
+              "source": "benzinga",
+              "time": "12:05"
+            },
+            {
               "symbol": "SPCX",
               "sentiment": 0.2,
               "importance": 3,
@@ -14612,8 +14614,8 @@
             }
           ],
           "urgent": [],
-          "overall": "The space and aerospace group has limited activity today, with only a potential partnership between SpaceX and American Tower. The mood remains neutral, with no major catalysts to move prices significantly.",
-          "items_read": 41
+          "overall": "The news flow is light and largely consists of routine analyst adjustments and third-party speculation rather than hard operational updates. There are no urgent catalysts or confirmed major contract wins in the last two hours.",
+          "items_read": 43
         },
         "social": {
           "findings": [],
@@ -16555,13 +16557,13 @@
           "trail_active": null,
           "first_stop": 171.9,
           "entry_price": 169.25,
-          "exit_price": null,
-          "exit_time": null,
-          "exit_reason": null,
+          "exit_price": 171.913333,
+          "exit_time": "2026-10-28T16:13:08.021733764Z",
+          "exit_reason": "stop_loss",
           "exit_note": null,
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "pnl": -8.5,
+          "pnl_pct": -0.0167,
+          "status": "closed",
           "conviction": 2,
           "reason": "[75% invested rule] OR breakdown with highest rvol (1.02) among breakdown shorts; trend flat but weak",
           "stop_price": 171.9,
@@ -18396,8 +18398,8 @@
         },
         {
           "date": "2026-10-28",
-          "realized": -23.57,
-          "cum": -242.47
+          "realized": -32.07,
+          "cum": -250.97
         }
       ],
       "watchlist": {
@@ -26127,6 +26129,30 @@
           "symbol": "MCD",
           "action": "BUY",
           "reason": "conviction None is below the minimum 4"
+        },
+        {
+          "date": "2026-10-28",
+          "time": "12:10",
+          "team": "consumer",
+          "symbol": "WEN",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 4"
+        },
+        {
+          "date": "2026-10-28",
+          "time": "12:10",
+          "team": "consumer",
+          "symbol": "CMG",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 4"
+        },
+        {
+          "date": "2026-10-28",
+          "time": "12:10",
+          "team": "consumer",
+          "symbol": "RCL",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 4"
         }
       ],
       "plans": [
@@ -27780,6 +27806,24 @@
         "news": {
           "findings": [
             {
+              "symbol": "WHR",
+              "sentiment": -0.5,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "RBC Capital reiterated its Underperform rating on Whirlpool and lowered its price target to $15.",
+              "source": "benzinga",
+              "time": "12:10"
+            },
+            {
+              "symbol": "AMZN",
+              "sentiment": 0.0,
+              "importance": 2,
+              "unconfirmed_rumor": false,
+              "summary": "Analysts are previewing Amazon's upcoming Q3 earnings, highlighting AWS growth as the primary catalyst to watch.",
+              "source": "benzinga",
+              "time": "12:10"
+            },
+            {
               "symbol": "RCL",
               "sentiment": 0.2,
               "importance": 2,
@@ -27965,8 +28009,8 @@
             }
           ],
           "urgent": [],
-          "overall": "The news flow for the Consumer Discretionary sector is quiet with no material breaking developments. The single item regarding Royal Caribbean is a standard analyst rating update that does not signal a significant shift in market sentiment.",
-          "items_read": 54
+          "overall": "The mood is mixed with mild bearish pressure on Whirlpool due to a lowered price target, while Amazon faces neutral anticipation ahead of its earnings report. No immediate urgent catalysts were identified for the broader consumer discretionary group in the last two hours.",
+          "items_read": 56
         },
         "social": {
           "findings": [],
@@ -29665,13 +29709,13 @@
           "trail_active": null,
           "first_stop": 397.63,
           "entry_price": 403.42,
-          "exit_price": null,
-          "exit_time": null,
+          "exit_price": 402.6425,
+          "exit_time": "2026-10-28T16:02:02.088761756Z",
           "exit_reason": "manager_sell",
           "exit_note": "Long momentum failed to follow through; price is below VWAP and the opening range, with negative intraday momentum and a downward trend despite higher relative volume. Exit before the high-impact FOMC.",
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "pnl": -4.72,
+          "pnl_pct": -0.0029,
+          "status": "closed",
           "conviction": 4,
           "reason": "Strong intraday breakout (+1.2% m15, +2.2% from open), trading +0.7% above VWAP with high relative volume (3.26x) and positive analyst commentary on payment volumes.",
           "stop_price": 397.63,
@@ -29755,7 +29799,7 @@
           "status": "open",
           "conviction": 4,
           "reason": "Aligning with executive order to prioritize large-cap stability; holding at VWAP (+0.0%) with positive 15m momentum (+0.1%) to enforce 75% minimum deployment rule safely.",
-          "stop_price": 336.95,
+          "stop_price": 337.02,
           "take_profit_price": 344.5
         },
         {
@@ -29818,7 +29862,7 @@
           "time": "12:01",
           "symbol": "MS",
           "kind": "shares",
-          "qty": 10,
+          "qty": 10.0,
           "dollars": 1891.6,
           "est_price": 189.16,
           "setup": "opening range breakout",
@@ -29826,14 +29870,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 186.32,
-          "entry_price": null,
+          "entry_price": 189.16,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 4,
           "reason": "[75% invested rule] Cleared the opening range and held above VWAP with positive longer-term momentum; strict VWAP confirmation was met.",
           "stop_price": 186.32,
@@ -31753,8 +31797,8 @@
         },
         {
           "date": "2026-10-28",
-          "realized": -32.96,
-          "cum": -97.45
+          "realized": -37.68,
+          "cum": -102.17
         }
       ],
       "watchlist": {
@@ -32190,8 +32234,8 @@
             }
           ],
           "urgent": [],
-          "overall": "The group is showing mixed but generally positive momentum, driven primarily by SoFi's strong earnings and outlook. Robinhood faces minor headwinds from a price target cut, but no other major team members have significant news in this window.",
-          "items_read": 78
+          "overall": "",
+          "items_read": 79
         },
         "social": {
           "findings": [],
@@ -34208,8 +34252,8 @@
           "entry_price": 1276.362,
           "exit_price": null,
           "exit_time": null,
-          "exit_reason": null,
-          "exit_note": null,
+          "exit_reason": "trailing_stop",
+          "exit_note": "price 1285.96 hit the stop 1288.1",
           "pnl": null,
           "pnl_pct": null,
           "status": "open",
@@ -34314,13 +34358,13 @@
           "trail_active": true,
           "first_stop": 792.08,
           "entry_price": 809.954,
-          "exit_price": null,
-          "exit_time": null,
-          "exit_reason": null,
-          "exit_note": null,
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "exit_price": 813.29,
+          "exit_time": "2026-10-28T16:03:32.754921154Z",
+          "exit_reason": "trailing_stop",
+          "exit_note": "price 814.005 hit the stop 814.05",
+          "pnl": 2.08,
+          "pnl_pct": 0.0031,
+          "status": "closed",
           "conviction": 4,
           "reason": "[75% invested rule] Canaccord Genuity price target increase to $922 and reduced litigation risk regarding Eylea biosimilar.",
           "stop_price": 814.05,
@@ -34355,38 +34399,6 @@
         }
       ],
       "blocked": [
-        {
-          "date": "2026-10-22",
-          "time": "14:15",
-          "team": "healthcare",
-          "symbol": "MRK",
-          "action": "SHORT",
-          "reason": "conviction None is below the minimum 3"
-        },
-        {
-          "date": "2026-10-22",
-          "time": "14:15",
-          "team": "healthcare",
-          "symbol": "BMY",
-          "action": "BUY",
-          "reason": "conviction None is below the minimum 4 (risk-off market)"
-        },
-        {
-          "date": "2026-10-22",
-          "time": "14:15",
-          "team": "healthcare",
-          "symbol": "LLY",
-          "action": "BUY",
-          "reason": "conviction None is below the minimum 4 (risk-off market)"
-        },
-        {
-          "date": "2026-10-22",
-          "time": "14:15",
-          "team": "healthcare",
-          "symbol": "ISRG",
-          "action": "BUY",
-          "reason": "conviction None is below the minimum 4 (risk-off market)"
-        },
         {
           "date": "2026-10-23",
           "time": "09:47",
@@ -34834,6 +34846,38 @@
           "symbol": "AMGN",
           "action": "BUY",
           "reason": "team used all of today's trades"
+        },
+        {
+          "date": "2026-10-28",
+          "time": "12:05",
+          "team": "healthcare",
+          "symbol": "ISRG",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 2"
+        },
+        {
+          "date": "2026-10-28",
+          "time": "12:05",
+          "team": "healthcare",
+          "symbol": "MRNA",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 2"
+        },
+        {
+          "date": "2026-10-28",
+          "time": "12:05",
+          "team": "healthcare",
+          "symbol": "TMO",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 2"
+        },
+        {
+          "date": "2026-10-28",
+          "time": "12:05",
+          "team": "healthcare",
+          "symbol": "DHR",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 2"
         }
       ],
       "plans": [
@@ -36406,6 +36450,20 @@
           "experiment": "",
           "decisions": [],
           "results": []
+        },
+        {
+          "date": "2026-10-28",
+          "time": "12:05",
+          "trigger": "must invest $977 more (75% rule)",
+          "market_view": "",
+          "experiment": "",
+          "decisions": [],
+          "results": [
+            "BUY ISRG blocked: conviction None is below the minimum 2",
+            "BUY MRNA blocked: conviction None is below the minimum 2",
+            "BUY TMO blocked: conviction None is below the minimum 2",
+            "BUY DHR blocked: conviction None is below the minimum 2"
+          ]
         }
       ],
       "lessons": [
@@ -36601,8 +36659,8 @@
         },
         {
           "date": "2026-10-28",
-          "realized": 2.97,
-          "cum": -165.56
+          "realized": 5.05,
+          "cum": -163.48
         }
       ],
       "watchlist": {
@@ -37420,62 +37478,6 @@
     }
   ],
   "blocked_recent": [
-    {
-      "date": "2026-10-26",
-      "time": "12:48",
-      "team": "healthcare",
-      "symbol": "TMO",
-      "action": "BUY",
-      "reason": "team used all of today's trades"
-    },
-    {
-      "date": "2026-10-26",
-      "time": "12:55",
-      "team": "tech",
-      "symbol": "TXN",
-      "action": "BUY",
-      "reason": "conviction None is below the minimum 4"
-    },
-    {
-      "date": "2026-10-26",
-      "time": "12:55",
-      "team": "tech",
-      "symbol": "AMAT",
-      "action": "BUY",
-      "reason": "conviction None is below the minimum 4"
-    },
-    {
-      "date": "2026-10-26",
-      "time": "13:00",
-      "team": "healthcare",
-      "symbol": "CORT",
-      "action": "BUY",
-      "reason": "team used all of today's trades"
-    },
-    {
-      "date": "2026-10-26",
-      "time": "13:00",
-      "team": "healthcare",
-      "symbol": "MRNA",
-      "action": "BUY",
-      "reason": "team used all of today's trades"
-    },
-    {
-      "date": "2026-10-26",
-      "time": "13:00",
-      "team": "healthcare",
-      "symbol": "BMY",
-      "action": "BUY",
-      "reason": "team used all of today's trades"
-    },
-    {
-      "date": "2026-10-26",
-      "time": "13:00",
-      "team": "healthcare",
-      "symbol": "REGN",
-      "action": "BUY",
-      "reason": "team used all of today's trades"
-    },
     {
       "date": "2026-10-26",
       "time": "13:00",
@@ -38617,6 +38619,62 @@
       "time": "12:01",
       "team": "entertainment",
       "symbol": "CMCSA",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:05",
+      "team": "healthcare",
+      "symbol": "ISRG",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 2"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:05",
+      "team": "healthcare",
+      "symbol": "MRNA",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 2"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:05",
+      "team": "healthcare",
+      "symbol": "TMO",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 2"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:05",
+      "team": "healthcare",
+      "symbol": "DHR",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 2"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:10",
+      "team": "consumer",
+      "symbol": "WEN",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:10",
+      "team": "consumer",
+      "symbol": "CMG",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 4"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "12:10",
+      "team": "consumer",
+      "symbol": "RCL",
       "action": "BUY",
       "reason": "conviction None is below the minimum 4"
     }
