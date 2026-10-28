@@ -1039,5 +1039,90 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-28",
+    "time": "09:50",
+    "trigger": "must invest $10,027 more (75% rule)",
+    "market_view": "The broader market is calm with SPY flat and VIXY calm (+0.1%). Financial stocks are showing strength in payment networks (V, MA) and data providers (SPGI), backed by bullish price target upgrades, while fintech (HOOD) faces earnings-driven pressure.",
+    "experiment": "Add a VWAP-above-price filter for all breakout entries to ensure the trade aligns with the intraday trend.",
+    "decisions": [
+      {
+        "symbol": "SPGI",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Multiple price target upgrades from Wells Fargo ($545) and Deutsche Bank ($535); trading above VWAP (+0.3%) with strong relative volume (1.77x) and positive momentum.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "V",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strong intraday breakout (+1.2% m15, +2.2% from open), trading +0.7% above VWAP with high relative volume (3.26x) and positive analyst commentary on payment volumes.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "MA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Trading above VWAP (+0.3%) with +0.9% gain off the open, strong 15-minute momentum (+0.6%), and heavy relative volume (2.51x).",
+        "stop_loss_pct": 0.012,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "SOFI",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Up +3.8% on the day and +2.5% off the open, trading above VWAP with exceptional relative volume (6.20x) following earnings and a price target increase to $18.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "JPM",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Aligning with executive order to prioritize large-cap stability; holding at VWAP (+0.0%) with positive 15m momentum (+0.1%) to enforce 75% minimum deployment rule safely.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.025
+      }
+    ],
+    "results": [
+      "BUY SPGI x4 (~$1799.24)",
+      "BUY V x4 (~$1614.76)",
+      "BUY MA x3 (~$1834.89)",
+      "BUY SOFI x117 (~$1991.34)",
+      "BUY JPM x5 (~$1680.48)"
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "09:57",
+    "trigger": "big news on ['V']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "GS",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "Large-cap stability per executive orders. Trading near VWAP with relative volume > 1.5 and positive 5-day momentum. Fits the 'quality over quantity' directive.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "BLK",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "Strong news catalyst (Jefferies PT raise to $1,341). Trading above VWAP with positive trend. High conviction setup despite RSI near overbought, supported by strong 20-day trend.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY GS blocked: team already has the maximum number of positions",
+      "BUY BLK blocked: team already has the maximum number of positions"
+    ]
   }
 ]
