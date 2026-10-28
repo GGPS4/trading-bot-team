@@ -1,82 +1,64 @@
 {
   "date": "2026-10-28",
-  "time": "11:38",
-  "trigger": "big news on ['NOW']",
-  "market_view": "Market is calm and slightly higher, with SPY +0.2%, QQQ +0.1%, and VIXY -2.0. Consumer Confidence rose 7.5% on Truth Social, boosting sentiment. The FOMC and earnings after close (MSFT, NOW) are the key risks today. Favor momentum with strict VWAP and relative volume confirmation.",
+  "time": "12:34",
+  "trigger": "scheduled look",
+  "market_view": "The session is calm and rising, so favor confirmed momentum breakouts in Tech/Defense rather than breakdowns. AVGO is the cleanest momentum setup above VWAP with positive 15m/60m momentum and volume confirmation; ANET and IBM also fit. Keep AAPL, AMAT, and AMD with trailing stops, and exit the stalled CRWV long to redeploy capital. Earnings for MSFT/NOW after close and FOMC later today are secondary to today's intraday moves.",
   "decisions": [
     {
-      "symbol": "MU",
+      "symbol": "CRWV",
       "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.016,
-      "take_profit_pct": 0.027,
-      "setup": "news catalyst",
-      "reason": "News catalyst setup showed weak follow-through, stock in downtrend and below VWAP; exiting to rotate to higher-conviction momentum."
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "untagged",
+      "reason": "Stalled long: negative look and 60m momentum despite a positive day; trend down and below-VWAP strength fading; redeploy capital per rotation rules."
     },
     {
       "symbol": "AVGO",
       "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
+      "conviction": 4,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.02,
       "setup": "momentum",
-      "reason": "On executive momentum watchlist, rvol 1.38, day +1.2%, trend up; strict VWAP and relative volume confirmation preferred, but setup aligns with momentum focus."
+      "reason": "Momentum breakout above VWAP, positive 15m/60m momentum, rvol 1.1; Cantor and Susquehanna raised targets; team order to trail momentum breakouts."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "AMD",
+      "symbol": "ANET",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Above VWAP, m60 positive, rvol 1.1, executive momentum watchlist; pullback potential."
+      "reason": "Momentum breakout above VWAP, positive 60m momentum, team order to trail ANET."
     },
     {
-      "symbol": "NVDA",
+      "symbol": "IBM",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Positive AI model news, but below VWAP and rvol 0.97, so lower conviction."
-    },
-    {
-      "symbol": "MSFT",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "breakdown",
-      "reason": "OR breakdown and below VWAP, but earnings after close creates high risk."
+      "setup": "momentum",
+      "reason": "Trend up, above VWAP, positive 60m momentum, though RSI overbought and low rvol; wait for pullback."
     },
     {
       "symbol": "INTU",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Below VWAP and rvol 0.93, weak momentum, lower conviction."
-    },
-    {
-      "symbol": "TXN",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Above 50d and upgrade, but below VWAP and rvol 1.19, mixed."
+      "reason": "Positive 15m momentum, above VWAP, trend up; confirm with volume before scaling."
     }
   ],
-  "experiment": "Implement an automated filter that blocks long entries unless 15-minute momentum is positive and price is strictly above VWAP.",
+  "experiment": "",
   "watchlist_changes": {
     "add": [],
     "remove": [
       {
-        "symbol": "MU",
-        "reason": "Weak news catalyst setup in downtrend, below VWAP, low win rate; exiting position."
+        "symbol": "CRWV",
+        "reason": "Stalled, weak momentum, trending down; no catalyst to justify keeping on the active watchlist."
       }
     ]
   }

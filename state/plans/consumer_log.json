@@ -1212,5 +1212,43 @@
       "SELL WEN",
       "SHORT WHR x50 (~$1326.75)"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "12:34",
+    "trigger": "must invest $4,158 more (75% rule)",
+    "market_view": "Market is calm and slightly higher, with SPY +0.2%. WEN is showing strong momentum on earnings, while several discretionary names are breaking down. We need to deploy capital into high-conviction setups.",
+    "experiment": "Incorporate an automated filter that blocks long trade signals if sentiment for high-importance news in the last 24 hours is negative.",
+    "decisions": [
+      {
+        "symbol": "WEN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strong earnings beat and raised guidance, rvol 5.38, above VWAP, positive sentiment; momentum long.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "BKNG",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "Breakdown below opening range, rvol 1.3, oversold, weak trend; high-quality short setup.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "DEO",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "Breakdown below opening range, rvol 1.32, trend down; momentum short.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY WEN x189 (~$1334.34)",
+      "SHORT BKNG x9 (~$1330.38)",
+      "SHORT DEO x14 (~$1292.27)"
+    ]
   }
 ]
