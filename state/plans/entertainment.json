@@ -1,9 +1,105 @@
 {
   "date": "2026-10-28",
-  "time": "10:12",
+  "time": "10:41",
   "trigger": "scheduled look",
-  "decisions": [],
-  "watchlist_add": [],
-  "watchlist_remove": [],
-  "ranked_ideas": []
+  "market_view": "Team paused for strategy review but 75% minimum investment requires action. Entertainment stocks weak today with multiple breakdowns below opening ranges. SPOT shows strongest intraday momentum (look +0.3%, m60 +1.3%), making it the best available setup. MGM has unusually high volume (rvol 3.64) on breakdown suggesting distribution. FOMC at 2pm may add volatility. Closing four failing positions to free capital and deploying into SPOT.",
+  "decisions": [
+    {
+      "symbol": "CMCSA",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.018,
+      "take_profit_pct": 0.027,
+      "setup": "momentum",
+      "reason": "Small winning short approaching first target; close to lock profit and free capital"
+    },
+    {
+      "symbol": "DIS",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.012,
+      "take_profit_pct": 0.033,
+      "setup": "VWAP bounce",
+      "reason": "Breakdown below opening range with negative momentum; losing position, setup failed"
+    },
+    {
+      "symbol": "MGM",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.011,
+      "take_profit_pct": 0.034,
+      "setup": "momentum",
+      "reason": "Breakdown below opening range with high volume (rvol 3.64); distribution signal, losing"
+    },
+    {
+      "symbol": "NFLX",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.021,
+      "take_profit_pct": 0.039,
+      "setup": "VWAP bounce",
+      "reason": "Breakdown below opening range; losing position, negative momentum"
+    },
+    {
+      "symbol": "SPOT",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.018,
+      "take_profit_pct": 0.027,
+      "setup": "momentum",
+      "reason": "Strongest intraday momentum in team (look +0.3%, m60 +1.3%); add to meet 75% minimum"
+    }
+  ],
+  "ranked_ideas": [
+    {
+      "symbol": "LYV",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakdown with highest rvol (1.02) among breakdown shorts; trend flat but weak"
+    },
+    {
+      "symbol": "WMG",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Trend down, OR range tight, very low rvol (0.22); no catalyst"
+    },
+    {
+      "symbol": "IMAX",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Strong downtrend, rvol 0.43; no volume confirmation"
+    },
+    {
+      "symbol": "FOXA",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakdown, rvol 0.76 below 1.2 threshold; weak setup"
+    },
+    {
+      "symbol": "TKO",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakdown, rvol 0.08; no catalyst, very quiet"
+    }
+  ],
+  "experiment": "",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

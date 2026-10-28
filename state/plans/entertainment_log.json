@@ -999,5 +999,65 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-28",
+    "time": "10:41",
+    "trigger": "scheduled look",
+    "market_view": "Team paused for strategy review but 75% minimum investment requires action. Entertainment stocks weak today with multiple breakdowns below opening ranges. SPOT shows strongest intraday momentum (look +0.3%, m60 +1.3%), making it the best available setup. MGM has unusually high volume (rvol 3.64) on breakdown suggesting distribution. FOMC at 2pm may add volatility. Closing four failing positions to free capital and deploying into SPOT.",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "CMCSA",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Small winning short approaching first target; close to lock profit and free capital",
+        "stop_loss_pct": 0.018,
+        "take_profit_pct": 0.027
+      },
+      {
+        "symbol": "DIS",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Breakdown below opening range with negative momentum; losing position, setup failed",
+        "stop_loss_pct": 0.012,
+        "take_profit_pct": 0.033
+      },
+      {
+        "symbol": "MGM",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Breakdown below opening range with high volume (rvol 3.64); distribution signal, losing",
+        "stop_loss_pct": 0.011,
+        "take_profit_pct": 0.034
+      },
+      {
+        "symbol": "NFLX",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Breakdown below opening range; losing position, negative momentum",
+        "stop_loss_pct": 0.021,
+        "take_profit_pct": 0.039
+      },
+      {
+        "symbol": "SPOT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strongest intraday momentum in team (look +0.3%, m60 +1.3%); add to meet 75% minimum",
+        "stop_loss_pct": 0.018,
+        "take_profit_pct": 0.027
+      }
+    ],
+    "results": [
+      "SELL CMCSA",
+      "SELL DIS",
+      "SELL MGM blocked: not holding this stock",
+      "SELL NFLX",
+      "BUY SPOT blocked: already holding this stock",
+      "SHORT LYV x3 (~$508.08) [deploy]",
+      "SHORT WMG x22 (~$658.46) [deploy]",
+      "SHORT IMAX x13 (~$665.4) [deploy]",
+      "SHORT FOXA x6 (~$381.51) [deploy]"
+    ]
   }
 ]
