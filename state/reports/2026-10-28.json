@@ -1,0 +1,1490 @@
+{
+  "report": {
+    "headline": "Down 0.17% while SPY flat; Tech led gains, Defense lagged",
+    "summary": "Today the teams collectively realized approximately $148 in P&L, but the account equity fell $168.39, a gap driven by blocked orders, commissions, and slippage. Technology led with a $272.25 gain from five profitable closes, while defense posted a -$171.32 loss after forcing low-conviction shorts and prematurely exiting LMT. Healthcare lost $0.72 after early stop-outs on ABBV and ABT, and entertainment posted a modest $7.20 gain but suffered friction from unvalidated positions. The space and consumer teams contributed small gains, but several sectors saw weak win rates (space 33.9%, entertainment 25%, healthcare 35.5%). Despite the day's team-level activity, the account slipped because costs and blocked orders eroded the realized gains.",
+    "best_trade": "AMAT (+$59.46) captured a strong gain via a trailing stop after recovering from a system restart, demonstrating effective risk management on a volatile chip name.",
+    "worst_trade": "AVAV (-$49.01) was a low-conviction short forced to meet capital utilization, taking a breakdown loss without volume confirmation.",
+    "rule_issues": [
+      "Tech team submitted five new buy orders after 15:30 cutoff, violating team risk guidelines and blocking execution.",
+      "Defense team's RTX order blocked because conviction 3 is below the minimum 4.",
+      "Multiple defense and tech orders blocked because no new day trades occurred after 15:30."
+    ],
+    "concerns": [
+      "Defense team forced four low-conviction shorts to meet capital utilization, taking widespread losses and prematurely closing LMT.",
+      "Healthcare team stopped out ABBV and ABT too early due to tight stops, losing small gains.",
+      "Watchlist removals across entertainment, financials, and healthcare caused list sizes to drop below 15 stocks, indicating rule enforcement issues.",
+      "News searches were incomplete for several teams, limiting catalyst identification.",
+      "Portfolio underperformance over recent days with equity declining while benchmark rose."
+    ],
+    "patterns": "Over the past five trading days, equity declined from $99,304.07 to $98,864.12 (-0.44%), while the benchmark rose 0.32% since start. Win rates remain below 50% across most sectors, with defense at 45.2%, space 33.9%, entertainment 25%, consumer 36.2%, financials 41.2%, and healthcare 35.5%. The portfolio has been in a downtrend, with max drawdown of 1.14% since start.",
+    "date": "2026-10-28"
+  },
+  "numbers": {
+    "updated": "2026-10-28T16:17-04:00",
+    "date": "2026-10-28",
+    "mode": "paper",
+    "health": {
+      "issues": [
+        "Morning system check: AI: gemini, AI: openrouter failed",
+        "7 problem(s) in the last hour, latest: LLM: groq openai/gpt-oss-120b hit its per-minute limit: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m5eapq7ve"
+      ]
+    },
+    "paused": false,
+    "rules": {
+      "min_invested_pct": 0.75,
+      "max_positions": 5,
+      "strategy": "day_trading"
+    },
+    "account": {
+      "equity": 98864.12,
+      "cash": 98864.12,
+      "day_change": -168.39,
+      "day_change_pct": -0.0017
+    },
+    "benchmark": {
+      "symbol": "SPY",
+      "price": 773.08
+    },
+    "performance": {
+      "start_date": "2026-10-20",
+      "trading_days": 9,
+      "return_since_start": -0.0114,
+      "benchmark_since_start": 0.0032,
+      "max_drawdown": 0.0114
+    },
+    "go_live": {
+      "items": [
+        {
+          "rule": "At least 60 trading days on paper",
+          "ok": false,
+          "value": "9 days"
+        },
+        {
+          "rule": "Beating SPY since the start",
+          "ok": false,
+          "value": "-1.1% vs +0.3%"
+        },
+        {
+          "rule": "Worst drop under 15%",
+          "ok": true,
+          "value": "1.1%"
+        }
+      ],
+      "all_ok": false
+    },
+    "teams": {
+      "defense": {
+        "name": "Team 1: Defense",
+        "kind": "special",
+        "tickers": [
+          "LMT",
+          "RTX",
+          "NOC",
+          "LHX",
+          "LDOS",
+          "TXT",
+          "KTOS",
+          "AVAV",
+          "PLTR",
+          "BAH",
+          "CACI",
+          "SAIC",
+          "HEI",
+          "HII",
+          "GD"
+        ],
+        "budget": 22244.43,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": -171.32,
+        "trades_today": 8,
+        "blocked_today": 6,
+        "all_time": {
+          "closed_trades": 62,
+          "wins": 28,
+          "losses": 34,
+          "win_rate": 0.452,
+          "realized_pnl": -82.14
+        }
+      },
+      "space": {
+        "name": "Team 2: Space & Aerospace",
+        "kind": "special",
+        "tickers": [
+          "SPCX",
+          "BA",
+          "RKLB",
+          "LUNR",
+          "ASTS",
+          "PL",
+          "RDW",
+          "GE",
+          "HWM",
+          "TDG",
+          "IRDM",
+          "VSAT",
+          "SATS",
+          "FLY",
+          "LPTH"
+        ],
+        "budget": 4448.89,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": 10.22,
+        "trades_today": 3,
+        "blocked_today": 0,
+        "all_time": {
+          "closed_trades": 59,
+          "wins": 20,
+          "losses": 39,
+          "win_rate": 0.339,
+          "realized_pnl": -635.3
+        }
+      },
+      "entertainment": {
+        "name": "Team 3: Entertainment",
+        "kind": "special",
+        "tickers": [
+          "DIS",
+          "NFLX",
+          "SPOT",
+          "WMG",
+          "LYV",
+          "ROKU",
+          "IMAX",
+          "SONY",
+          "FOXA",
+          "CMCSA",
+          "TKO",
+          "EA",
+          "TTWO",
+          "BAM",
+          "MGM"
+        ],
+        "budget": 4448.89,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": 7.2,
+        "trades_today": 3,
+        "blocked_today": 0,
+        "all_time": {
+          "closed_trades": 52,
+          "wins": 13,
+          "losses": 39,
+          "win_rate": 0.25,
+          "realized_pnl": -211.7
+        }
+      },
+      "tech": {
+        "name": "Information Technology",
+        "kind": "sector",
+        "tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA",
+          "AVGO",
+          "AMD",
+          "INTU",
+          "TXN",
+          "NOW",
+          "AMAT",
+          "MU",
+          "PANW",
+          "ANET",
+          "CRWV",
+          "INTC",
+          "IBM"
+        ],
+        "budget": 31142.2,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": 272.25,
+        "trades_today": 5,
+        "blocked_today": 5,
+        "all_time": {
+          "closed_trades": 71,
+          "wins": 36,
+          "losses": 35,
+          "win_rate": 0.507,
+          "realized_pnl": -6.33
+        }
+      },
+      "consumer": {
+        "name": "Consumer Discretionary",
+        "kind": "sector",
+        "tickers": [
+          "AMZN",
+          "TSLA",
+          "HD",
+          "MCD",
+          "LOW",
+          "BKNG",
+          "CMG",
+          "MAR",
+          "RCL",
+          "LULU",
+          "LKQ",
+          "DG",
+          "AZO",
+          "DEO",
+          "WHR"
+        ],
+        "budget": 8897.77,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": 1.99,
+        "trades_today": 5,
+        "blocked_today": 0,
+        "all_time": {
+          "closed_trades": 47,
+          "wins": 17,
+          "losses": 30,
+          "win_rate": 0.362,
+          "realized_pnl": -280.88
+        }
+      },
+      "financials": {
+        "name": "Financial Services",
+        "kind": "sector",
+        "tickers": [
+          "JPM",
+          "GS",
+          "MS",
+          "V",
+          "MA",
+          "AXP",
+          "BLK",
+          "SCHW",
+          "C",
+          "COF",
+          "SPGI",
+          "ICE",
+          "HOOD",
+          "COIN",
+          "SOFI"
+        ],
+        "budget": 13346.66,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": 27.57,
+        "trades_today": 3,
+        "blocked_today": 0,
+        "all_time": {
+          "closed_trades": 51,
+          "wins": 21,
+          "losses": 30,
+          "win_rate": 0.412,
+          "realized_pnl": -36.92
+        }
+      },
+      "healthcare": {
+        "name": "Healthcare",
+        "kind": "sector",
+        "tickers": [
+          "LLY",
+          "UNH",
+          "JNJ",
+          "ABBV",
+          "MRK",
+          "TMO",
+          "ABT",
+          "AMGN",
+          "ISRG",
+          "BMY",
+          "VRTX",
+          "REGN",
+          "DHR",
+          "MRNA",
+          "CORT"
+        ],
+        "budget": 4448.89,
+        "invested": 0,
+        "unrealized_pnl": 0,
+        "realized_today": -0.72,
+        "trades_today": 5,
+        "blocked_today": 0,
+        "all_time": {
+          "closed_trades": 62,
+          "wins": 22,
+          "losses": 40,
+          "win_rate": 0.355,
+          "realized_pnl": -169.25
+        }
+      }
+    },
+    "positions": [],
+    "trades_today": [
+      {
+        "time": "14:38",
+        "team": "healthcare",
+        "symbol": "ABBV",
+        "qty": 2.0,
+        "est_price": 286.84,
+        "entry_price": 286.84,
+        "side": "long",
+        "exit_price": 285.86,
+        "exit_reason": "end_of_day",
+        "pnl": -2.53,
+        "pnl_pct": -0.0044,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 282.33,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "healthcare",
+        "symbol": "ABT",
+        "qty": 6.0,
+        "est_price": 103.14,
+        "entry_price": 103.14,
+        "side": "long",
+        "exit_price": 102.96,
+        "exit_reason": "end_of_day",
+        "pnl": -1.7,
+        "pnl_pct": -0.0027,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 101.52,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "tech",
+        "symbol": "AMAT",
+        "qty": 11.0,
+        "est_price": 411.59,
+        "entry_price": 411.59,
+        "side": "long",
+        "exit_price": 417.41,
+        "exit_reason": "trailing_stop",
+        "pnl": 59.46,
+        "pnl_pct": 0.0131,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 417.85,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "tech",
+        "symbol": "AMD",
+        "qty": 8.0,
+        "est_price": 566.75,
+        "entry_price": 566.75,
+        "side": "long",
+        "exit_price": 573.4875,
+        "exit_reason": "trailing_stop",
+        "pnl": 49.34,
+        "pnl_pct": 0.0109,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 573.59,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "healthcare",
+        "symbol": "AMGN",
+        "qty": 1.0,
+        "est_price": 450.07,
+        "entry_price": 450.07,
+        "side": "long",
+        "exit_price": 451.64,
+        "exit_reason": "end_of_day",
+        "pnl": 1.12,
+        "pnl_pct": 0.0025,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 442.67,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "consumer",
+        "symbol": "AMZN",
+        "qty": 5.0,
+        "est_price": 254.242,
+        "entry_price": 254.242,
+        "side": "long",
+        "exit_price": 255.03,
+        "exit_reason": "end_of_day",
+        "pnl": 2.67,
+        "pnl_pct": 0.0021,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 249.93,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "tech",
+        "symbol": "AVGO",
+        "qty": 13.0,
+        "est_price": 347.278462,
+        "entry_price": 347.278462,
+        "side": "long",
+        "exit_price": 350.907692,
+        "exit_reason": "manager_sell",
+        "pnl": 42.64,
+        "pnl_pct": 0.0094,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 348.57,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "space",
+        "symbol": "BA",
+        "qty": 4.0,
+        "est_price": 166.61,
+        "entry_price": 166.61,
+        "side": "long",
+        "exit_price": 166.82,
+        "exit_reason": "end_of_day",
+        "pnl": 0.17,
+        "pnl_pct": 0.0003,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 162.89,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "defense",
+        "symbol": "BAH",
+        "qty": 40.0,
+        "est_price": 83.004251,
+        "entry_price": 83.004251,
+        "side": "long",
+        "exit_price": 82.7,
+        "exit_reason": "manager_sell",
+        "pnl": -15.48,
+        "pnl_pct": -0.0047,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 81.48,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "consumer",
+        "symbol": "BKNG",
+        "qty": 9.0,
+        "est_price": 147.698889,
+        "entry_price": 147.698889,
+        "side": "short",
+        "exit_price": 148.21,
+        "exit_reason": "end_of_day",
+        "pnl": -5.93,
+        "pnl_pct": -0.0045,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 150.78,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "consumer",
+        "symbol": "DEO",
+        "qty": 14.0,
+        "est_price": 92.347857,
+        "entry_price": 92.347857,
+        "side": "short",
+        "exit_price": 91.91,
+        "exit_reason": "end_of_day",
+        "pnl": 4.84,
+        "pnl_pct": 0.0037,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 92.13,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "consumer",
+        "symbol": "DG",
+        "qty": 10.0,
+        "est_price": 126.07,
+        "entry_price": 126.07,
+        "side": "short",
+        "exit_price": 126.22,
+        "exit_reason": "end_of_day",
+        "pnl": -2.76,
+        "pnl_pct": -0.0022,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 128.98,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "space",
+        "symbol": "FLY",
+        "qty": 33.0,
+        "est_price": 19.84,
+        "entry_price": 19.84,
+        "side": "long",
+        "exit_price": 19.850303,
+        "exit_reason": "end_of_day",
+        "pnl": -0.31,
+        "pnl_pct": -0.0005,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 19.36,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "entertainment",
+        "symbol": "FOXA",
+        "qty": 6.0,
+        "est_price": 63.59,
+        "entry_price": 63.59,
+        "side": "short",
+        "exit_price": 63.668333,
+        "exit_reason": "manager_sell",
+        "pnl": -0.85,
+        "pnl_pct": -0.0022,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 64.54,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "defense",
+        "symbol": "HEI",
+        "qty": 10.0,
+        "est_price": 311.98,
+        "entry_price": 311.98,
+        "side": "long",
+        "exit_price": 308.01,
+        "exit_reason": "manager_sell",
+        "pnl": -42.8,
+        "pnl_pct": -0.0137,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 307.1,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "tech",
+        "symbol": "INTC",
+        "qty": 50.0,
+        "est_price": 93.67,
+        "entry_price": 93.67,
+        "side": "long",
+        "exit_price": 94.702,
+        "exit_reason": "trailing_stop",
+        "pnl": 46.89,
+        "pnl_pct": 0.01,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 94.76,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "healthcare",
+        "symbol": "JNJ",
+        "qty": 2.0,
+        "est_price": 270.32,
+        "entry_price": 270.32,
+        "side": "long",
+        "exit_price": 271.3,
+        "exit_reason": "end_of_day",
+        "pnl": 1.42,
+        "pnl_pct": 0.0026,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 266.16,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "financials",
+        "symbol": "JPM",
+        "qty": 5.0,
+        "est_price": 336.05,
+        "entry_price": 336.05,
+        "side": "long",
+        "exit_price": 339.25,
+        "exit_reason": "end_of_day",
+        "pnl": 14.31,
+        "pnl_pct": 0.0085,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 337.86,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "entertainment",
+        "symbol": "LYV",
+        "qty": 3.0,
+        "est_price": 171.96,
+        "entry_price": 171.96,
+        "side": "long",
+        "exit_price": 171.88,
+        "exit_reason": "manager_sell",
+        "pnl": -0.76,
+        "pnl_pct": -0.0015,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 168.3,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "financials",
+        "symbol": "MA",
+        "qty": 3.0,
+        "est_price": 611.27,
+        "entry_price": 611.27,
+        "side": "long",
+        "exit_price": 611.8,
+        "exit_reason": "end_of_day",
+        "pnl": -0.24,
+        "pnl_pct": -0.0001,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 604.29,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "consumer",
+        "symbol": "MAR",
+        "qty": 3.0,
+        "est_price": 392.65,
+        "entry_price": 392.65,
+        "side": "long",
+        "exit_price": 394.1,
+        "exit_reason": "end_of_day",
+        "pnl": 3.17,
+        "pnl_pct": 0.0027,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 386.57,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "financials",
+        "symbol": "MS",
+        "qty": 10.0,
+        "est_price": 189.16,
+        "entry_price": 189.16,
+        "side": "long",
+        "exit_price": 190.7,
+        "exit_reason": "end_of_day",
+        "pnl": 13.5,
+        "pnl_pct": 0.0071,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 186.32,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "tech",
+        "symbol": "MU",
+        "qty": 4.0,
+        "est_price": 964.245,
+        "entry_price": 964.245,
+        "side": "long",
+        "exit_price": 983.7,
+        "exit_reason": "manager_sell",
+        "pnl": 73.92,
+        "pnl_pct": 0.0192,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 974.58,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "defense",
+        "symbol": "NOC",
+        "qty": 6.0,
+        "est_price": 552.44,
+        "entry_price": 552.44,
+        "side": "long",
+        "exit_price": 550.12,
+        "exit_reason": "manager_sell",
+        "pnl": -17.23,
+        "pnl_pct": -0.0052,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 540.17,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "space",
+        "symbol": "RKLB",
+        "qty": 11.0,
+        "est_price": 57.82,
+        "entry_price": 57.82,
+        "side": "long",
+        "exit_price": 58.82,
+        "exit_reason": "end_of_day",
+        "pnl": 10.36,
+        "pnl_pct": 0.0163,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 58.33,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "healthcare",
+        "symbol": "VRTX",
+        "qty": 1.0,
+        "est_price": 528.0,
+        "entry_price": 528.0,
+        "side": "long",
+        "exit_price": 529.5,
+        "exit_reason": "end_of_day",
+        "pnl": 0.97,
+        "pnl_pct": 0.0018,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 520.15,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:38",
+        "team": "entertainment",
+        "symbol": "WMG",
+        "qty": 22.0,
+        "est_price": 29.88,
+        "entry_price": 29.88,
+        "side": "short",
+        "exit_price": 29.45,
+        "exit_reason": "manager_sell",
+        "pnl": 8.81,
+        "pnl_pct": 0.0134,
+        "status": "closed",
+        "conviction": null,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved).",
+        "stop_price": 29.66,
+        "take_profit_price": null
+      },
+      {
+        "time": "14:55",
+        "team": "defense",
+        "symbol": "LMT",
+        "qty": 5.0,
+        "est_price": 628.24,
+        "entry_price": 628.76,
+        "side": "long",
+        "exit_price": 629.79,
+        "exit_reason": "manager_sell",
+        "pnl": 2.0,
+        "pnl_pct": 0.0006,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "Strong OR breakout above 615.49-620.78; price at $627.17. High-conviction news: PAC-3 missile facility in Poland (importance 4), $694M Air Force hypersonic contract (importance 3), TD Cowen PT $650, Bernstein PT $633. m15 +0.2% confirms breakout strength.",
+        "stop_price": 616.49,
+        "take_profit_price": 640.8
+      },
+      {
+        "time": "14:55",
+        "team": "defense",
+        "symbol": "PLTR",
+        "qty": 17.0,
+        "est_price": 193.595,
+        "entry_price": 193.85,
+        "side": "short",
+        "exit_price": 194.099412,
+        "exit_reason": "manager_sell",
+        "pnl": -7.54,
+        "pnl_pct": -0.0023,
+        "status": "closed",
+        "conviction": 4,
+        "reason": "[75% invested rule] Breakdown below opening range (195.43-198.7) with -1.9% day decline. Negative earnings pressure ahead of Q3. Below VWAP. Mean reversion short on breakdown.",
+        "stop_price": 195.51,
+        "take_profit_price": 187.79
+      },
+      {
+        "time": "14:55",
+        "team": "defense",
+        "symbol": "LDOS",
+        "qty": 24.0,
+        "est_price": 137.5,
+        "entry_price": 137.46,
+        "side": "short",
+        "exit_price": 138.651666,
+        "exit_reason": "stop_loss",
+        "pnl": -31.91,
+        "pnl_pct": -0.0097,
+        "status": "closed",
+        "conviction": 3,
+        "reason": "[75% invested rule] Breakdown below OR (138.61-140.5) with -1.5% day decline. Trend flat. No strong counter-catalyst.",
+        "stop_price": 138.59,
+        "take_profit_price": 133.38
+      },
+      {
+        "time": "14:55",
+        "team": "defense",
+        "symbol": "AVAV",
+        "qty": 26.0,
+        "est_price": 125.05,
+        "entry_price": 124.01,
+        "side": "short",
+        "exit_price": 125.77,
+        "exit_reason": "manager_sell",
+        "pnl": -49.01,
+        "pnl_pct": -0.0152,
+        "status": "closed",
+        "conviction": 2,
+        "reason": "[75% invested rule] Breakdown below OR (125.71-126.47) with -1.4% day decline. Mixed signals (m15 +0.9% but breakdown). Selective short.",
+        "stop_price": 126.12,
+        "take_profit_price": 121.3
+      },
+      {
+        "time": "14:55",
+        "team": "defense",
+        "symbol": "SAIC",
+        "qty": 8.0,
+        "est_price": 147.765,
+        "entry_price": 147.7,
+        "side": "short",
+        "exit_price": 148.72,
+        "exit_reason": "manager_sell",
+        "pnl": -9.35,
+        "pnl_pct": -0.0079,
+        "status": "closed",
+        "conviction": 2,
+        "reason": "[75% invested rule] Breakdown below OR (148.22-149.15) with -1.1% day decline. Trend flat. Limited catalyst for short.",
+        "stop_price": 148.85,
+        "take_profit_price": 143.33
+      }
+    ],
+    "blocked_today": [
+      {
+        "date": "2026-10-28",
+        "time": "14:55",
+        "team": "defense",
+        "symbol": "RTX",
+        "action": "BUY",
+        "reason": "conviction 3 is below the minimum 4"
+      },
+      {
+        "date": "2026-10-28",
+        "time": "15:42",
+        "team": "defense",
+        "symbol": "BAH",
+        "action": "BUY",
+        "reason": "no new day trades after 15:30"
+      },
+      {
+        "date": "2026-10-28",
+        "time": "15:42",
+        "team": "defense",
+        "symbol": "CACI",
+        "action": "BUY",
+        "reason": "no new day trades after 15:30"
+      },
+      {
+        "date": "2026-10-28",
+        "time": "15:42",
+        "team": "defense",
+        "symbol": "GD",
+        "action": "BUY",
+        "reason": "no new day trades after 15:30"
+      },
+      {
+        "date": "2026-10-28",
+        "time": "15:42",
+        "team": "defense",
+        "symbol": "TXT",
+        "action": "BUY",
+        "reason": "no new day trades after 15:30"
+      },
+      {
+        "date": "2026-10-28",
+        "time": "15:42",
+        "team": "defense",
+        "symbol": "LHX",
+        "action": "BUY",
+        "reason": "no new day trades after 15:30"
+      },
+      {
+        "date": "2026-10-28",
+        "time": "15:42",
+        "team": "tech",
+        "symbol": "AMD",
+        "action": "BUY",
+        "reason": "no new day trades after 15:30"
+      },
+      {
+        "date": "2026-10-28",
+        "time": "15:42",
+        "team": "tech",
+        "symbol": "NVDA",
+        "action": "BUY",
+        "reason": "no new day trades after 15:30"
+      },
+      {
+        "date": "2026-10-28",
+        "time": "15:42",
+        "team": "tech",
+        "symbol": "NOW",
+        "action": "BUY",
+        "reason": "no new day trades after 15:30"
+      },
+      {
+        "date": "2026-10-28",
+        "time": "15:42",
+        "team": "tech",
+        "symbol": "INTC",
+        "action": "BUY",
+        "reason": "no new day trades after 15:30"
+      },
+      {
+        "date": "2026-10-28",
+        "time": "15:42",
+        "team": "tech",
+        "symbol": "PANW",
+        "action": "BUY",
+        "reason": "no new day trades after 15:30"
+      }
+    ],
+    "recent_trades": [
+      {
+        "date": "2026-10-28",
+        "team": "space",
+        "symbol": "RKLB",
+        "entry_price": 57.82,
+        "exit_price": 58.82,
+        "exit_reason": "end_of_day",
+        "pnl": 10.36,
+        "pnl_pct": 0.0163,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "financials",
+        "symbol": "MS",
+        "entry_price": 189.16,
+        "exit_price": 190.7,
+        "exit_reason": "end_of_day",
+        "pnl": 13.5,
+        "pnl_pct": 0.0071,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "consumer",
+        "symbol": "DEO",
+        "entry_price": 92.347857,
+        "exit_price": 91.91,
+        "exit_reason": "end_of_day",
+        "pnl": 4.84,
+        "pnl_pct": 0.0037,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "space",
+        "symbol": "FLY",
+        "entry_price": 19.84,
+        "exit_price": 19.850303,
+        "exit_reason": "end_of_day",
+        "pnl": -0.31,
+        "pnl_pct": -0.0005,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "healthcare",
+        "symbol": "VRTX",
+        "entry_price": 528.0,
+        "exit_price": 529.5,
+        "exit_reason": "end_of_day",
+        "pnl": 0.97,
+        "pnl_pct": 0.0018,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "consumer",
+        "symbol": "MAR",
+        "entry_price": 392.65,
+        "exit_price": 394.1,
+        "exit_reason": "end_of_day",
+        "pnl": 3.17,
+        "pnl_pct": 0.0027,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "consumer",
+        "symbol": "AMZN",
+        "entry_price": 254.242,
+        "exit_price": 255.03,
+        "exit_reason": "end_of_day",
+        "pnl": 2.67,
+        "pnl_pct": 0.0021,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "consumer",
+        "symbol": "DG",
+        "entry_price": 126.07,
+        "exit_price": 126.22,
+        "exit_reason": "end_of_day",
+        "pnl": -2.76,
+        "pnl_pct": -0.0022,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "financials",
+        "symbol": "MA",
+        "entry_price": 611.27,
+        "exit_price": 611.8,
+        "exit_reason": "end_of_day",
+        "pnl": -0.24,
+        "pnl_pct": -0.0001,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "financials",
+        "symbol": "JPM",
+        "entry_price": 336.05,
+        "exit_price": 339.25,
+        "exit_reason": "end_of_day",
+        "pnl": 14.31,
+        "pnl_pct": 0.0085,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "healthcare",
+        "symbol": "JNJ",
+        "entry_price": 270.32,
+        "exit_price": 271.3,
+        "exit_reason": "end_of_day",
+        "pnl": 1.42,
+        "pnl_pct": 0.0026,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "consumer",
+        "symbol": "BKNG",
+        "entry_price": 147.698889,
+        "exit_price": 148.21,
+        "exit_reason": "end_of_day",
+        "pnl": -5.93,
+        "pnl_pct": -0.0045,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "space",
+        "symbol": "BA",
+        "entry_price": 166.61,
+        "exit_price": 166.82,
+        "exit_reason": "end_of_day",
+        "pnl": 0.17,
+        "pnl_pct": 0.0003,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "healthcare",
+        "symbol": "AMGN",
+        "entry_price": 450.07,
+        "exit_price": 451.64,
+        "exit_reason": "end_of_day",
+        "pnl": 1.12,
+        "pnl_pct": 0.0025,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "healthcare",
+        "symbol": "ABT",
+        "entry_price": 103.14,
+        "exit_price": 102.96,
+        "exit_reason": "end_of_day",
+        "pnl": -1.7,
+        "pnl_pct": -0.0027,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "healthcare",
+        "symbol": "ABBV",
+        "entry_price": 286.84,
+        "exit_price": 285.86,
+        "exit_reason": "end_of_day",
+        "pnl": -2.53,
+        "pnl_pct": -0.0044,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "defense",
+        "symbol": "PLTR",
+        "entry_price": 193.85,
+        "exit_price": 194.099412,
+        "exit_reason": "manager_sell",
+        "pnl": -7.54,
+        "pnl_pct": -0.0023,
+        "reason": "[75% invested rule] Breakdown below opening range (195.43-198.7) with -1.9% day decline. Negative earnings pressure ahead of Q3. Below VWAP. Mean reversion short on breakdown."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "defense",
+        "symbol": "SAIC",
+        "entry_price": 147.7,
+        "exit_price": 148.72,
+        "exit_reason": "manager_sell",
+        "pnl": -9.35,
+        "pnl_pct": -0.0079,
+        "reason": "[75% invested rule] Breakdown below OR (148.22-149.15) with -1.1% day decline. Trend flat. Limited catalyst for short."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "tech",
+        "symbol": "AVGO",
+        "entry_price": 347.278462,
+        "exit_price": 350.907692,
+        "exit_reason": "manager_sell",
+        "pnl": 42.64,
+        "pnl_pct": 0.0094,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "defense",
+        "symbol": "LMT",
+        "entry_price": 628.76,
+        "exit_price": 629.79,
+        "exit_reason": "manager_sell",
+        "pnl": 2.0,
+        "pnl_pct": 0.0006,
+        "reason": "Strong OR breakout above 615.49-620.78; price at $627.17. High-conviction news: PAC-3 missile facility in Poland (importance 4), $694M Air Force hypersonic contract (importance 3), TD Cowen PT $650, Bernstein PT $633. m15 +0.2% confirms breakout strength."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "tech",
+        "symbol": "MU",
+        "entry_price": 964.245,
+        "exit_price": 983.7,
+        "exit_reason": "manager_sell",
+        "pnl": 73.92,
+        "pnl_pct": 0.0192,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "defense",
+        "symbol": "AVAV",
+        "entry_price": 124.01,
+        "exit_price": 125.77,
+        "exit_reason": "manager_sell",
+        "pnl": -49.01,
+        "pnl_pct": -0.0152,
+        "reason": "[75% invested rule] Breakdown below OR (125.71-126.47) with -1.4% day decline. Mixed signals (m15 +0.9% but breakdown). Selective short."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "defense",
+        "symbol": "LDOS",
+        "entry_price": 137.46,
+        "exit_price": 138.651666,
+        "exit_reason": "stop_loss",
+        "pnl": -31.91,
+        "pnl_pct": -0.0097,
+        "reason": "[75% invested rule] Breakdown below OR (138.61-140.5) with -1.5% day decline. Trend flat. No strong counter-catalyst."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "tech",
+        "symbol": "AMD",
+        "entry_price": 566.75,
+        "exit_price": 573.4875,
+        "exit_reason": "trailing_stop",
+        "pnl": 49.34,
+        "pnl_pct": 0.0109,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      },
+      {
+        "date": "2026-10-28",
+        "team": "defense",
+        "symbol": "NOC",
+        "entry_price": 552.44,
+        "exit_price": 550.12,
+        "exit_reason": "manager_sell",
+        "pnl": -17.23,
+        "pnl_pct": -0.0052,
+        "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
+      }
+    ]
+  },
+  "reviews": {
+    "defense": {
+      "what_went_well": "Lockheed Martin (LMT) demonstrated clean relative strength and followed through on legitimate contract and facility catalysts.",
+      "what_went_wrong": "We forced four low-conviction short positions (AVAV, LDOS, SAIC, PLTR) merely to fulfill capital utilization minimums without volume confirmation, taking widespread losses and prematurely closing our winning LMT trade to free cash.",
+      "lessons": [
+        "Never initiate short trades purely to meet cash-utilization rules; require high-conviction bearish catalysts (conviction >= 4) and volume confirmation.",
+        "Do not prematurely exit a profitable breakout trade with major multi-hundred-million-dollar contract catalysts just to reallocate capital."
+      ],
+      "strategy_ideas": [
+        "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x."
+      ],
+      "watchlist_changes": {
+        "add": [],
+        "remove": []
+      },
+      "watchlist": []
+    },
+    "space": {
+      "what_went_well": "RKLB delivered a solid gain of 1.63% following positive news regarding SDA military satellite production, effectively riding upward momentum with an active trailing stop into the close.",
+      "what_went_wrong": "FLY and BA hovered near breakeven and generated negligible returns or minor losses, as BA faced heavy analyst price target cuts and legal overhang, while FLY lacked late-day volume to follow through on its morning contract milestone.",
+      "lessons": [
+        "Do not enter long positions on large-cap aerospace names like BA when multiple analyst downgrades and legal probes cap upward momentum.",
+        "Require volume confirmation and sustained VWAP support before entering contract-catalyst plays like FLY to avoid getting trapped in afternoon chop."
+      ],
+      "strategy_ideas": [
+        "Implement an earnings-gap reaction plan for HWM's pre-open earnings tomorrow, enforcing a 15-minute wait post-bell before trading continuation.",
+        "Utilize dynamic trailing stops on contract-driven space runners (such as RKLB) to lock in gains into market close."
+      ],
+      "watchlist_changes": {
+        "add": [],
+        "remove": []
+      },
+      "watchlist": []
+    },
+    "entertainment": {
+      "what_went_well": "The team promptly executed executive orders to flatten open positions, locking in a +1.34% gain on the WMG short trade.",
+      "what_went_wrong": "Forced early market exits on FOXA and LYV during the portfolio reset resulted in minor friction losses on unconfirmed setups.",
+      "lessons": [
+        "Ensure trade rationale and parameters are persisted immediately upon order submission to avoid carrying unvalidated positions across system restarts."
+      ],
+      "strategy_ideas": [
+        "Pre-emptively reduce position sizes during market-wide strategy review pauses to minimize execution slippage on market exits."
+      ],
+      "watchlist_changes": {
+        "add": [],
+        "remove": [
+          {
+            "symbol": "BAM",
+            "reason": "Asset management profile dilutes team focus on core music, streaming, and film catalyst stocks."
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-28T16:17-04:00",
+          "action": "remove_rejected",
+          "symbol": "BAM",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "tech": {
+      "what_went_well": "All five open tech positions (AMAT, AMD, AVGO, INTC, and MU) were managed effectively and closed profitably, taking advantage of market strength via trailing stops and manual profit locks.",
+      "what_went_wrong": "The team attempted to initiate five late-day buy orders at 15:42, which were blocked due to violating the 15:30 cutoff rule for new intraday position entries.",
+      "lessons": [
+        "Do not submit new buy orders after 15:30 to adhere strictly to team risk guidelines and avoid EOD execution blocks."
+      ],
+      "strategy_ideas": [
+        "Develop a morning post-earnings breakout strategy to capture pre-market reaction moves in high-conviction software and chip tickers reporting after-market earnings."
+      ],
+      "watchlist_changes": {
+        "add": [],
+        "remove": []
+      },
+      "watchlist": []
+    },
+    "consumer": {
+      "what_went_well": "We maintained a positive net P&L across five trades, with profitable positions in AMZN, DEO, and MAR offsetting minor losses.",
+      "what_went_wrong": "Our short positions on BKNG and DG ended in small losses, with DG failing to hold downward momentum despite significant pre-market negative regulatory news.",
+      "lessons": [
+        "Lock in profits early on news-driven short setups (like regulatory actions) rather than holding into the close, as intra-day bounce back is common.",
+        "Avoid taking non-catalyst short positions on premium travel names like BKNG without explicit technical breakdown signals."
+      ],
+      "strategy_ideas": [
+        "Implement an automated partial profit-taking rule at 1R for news-catalyst short trades to prevent winning momentum entries from turning into EOD losses.",
+        "Prepare gap-and-go playbook strategies for LKQ reporting earnings before open tomorrow and AMZN reporting after close."
+      ],
+      "watchlist_changes": {
+        "add": [],
+        "remove": []
+      },
+      "watchlist": []
+    },
+    "financials": {
+      "what_went_well": "JPM and MS delivered modest gains, confirming our long bias on major banks.",
+      "what_went_wrong": "The MA trade lost a few cents due to lack of a defined profit target and transaction costs, highlighting sloppy trade setup.",
+      "lessons": [
+        "Always set a realistic take\u2011profit level to cover commissions and slippage",
+        "Avoid entering recovery trades without fresh analysis and a clear conviction"
+      ],
+      "strategy_ideas": [
+        "Implement trailing stops for long positions to lock in gains",
+        "Use VWAP or volume confirmation before entering breakout trades"
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "MA",
+            "reason": "Earnings tomorrow (Oct 29) and recent positive news"
+          },
+          {
+            "symbol": "ICE",
+            "reason": "Earnings tomorrow and market attention"
+          },
+          {
+            "symbol": "COIN",
+            "reason": "Earnings tomorrow and recent partnership news"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "C",
+            "reason": "No upcoming catalyst"
+          },
+          {
+            "symbol": "COF",
+            "reason": "No news or earnings soon"
+          },
+          {
+            "symbol": "SCHW",
+            "reason": "Lack of near\u2011term catalysts"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-28T16:17-04:00",
+          "action": "remove_rejected",
+          "symbol": "C",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-28T16:17-04:00",
+          "action": "remove_rejected",
+          "symbol": "COF",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-28T16:17-04:00",
+          "action": "remove_rejected",
+          "symbol": "SCHW",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "healthcare": {
+      "what_went_well": "Small gains on AMGN, JNJ and VRTX showed that when positions were entered above VWAP and had a clear breakout, the strategy can capture upside.",
+      "what_went_wrong": "Both ABBV and ABT were stopped out within a few ticks of entry because the stops were too close and there was no confirmation of intraday momentum or high volatility; the lack of a take\u2011profit also forced an end\u2011of\u2011day exit at a loss.",
+      "lessons": [
+        "Use an ATR\u2011based stop (\u22652% of ATR) instead of a fixed dollar stop to avoid premature stop\u2011outs on volatile moves.",
+        "Require intraday momentum (m15 > 0.5%) and rvol > 1.5 before taking a long position.",
+        "Avoid buying near the stop or in low\u2011volatility conditions; ensure the price is above VWAP and shows a clear breakout with strong volume."
+      ],
+      "strategy_ideas": [
+        "Implement an ATR\u2011based stop (2% of ATR) for all new entries.",
+        "Add a momentum filter: only enter a long when m15 > 0.5% and rvol > 1.5, and price is above VWAP."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "LLY",
+            "reason": "Upcoming earnings and positive Phase 3 trial news"
+          },
+          {
+            "symbol": "MRK",
+            "reason": "Earnings scheduled for Oct 29 and recent pipeline updates"
+          },
+          {
+            "symbol": "BMY",
+            "reason": "Earnings scheduled for Oct 29 and new drug approvals"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "CORT",
+            "reason": "No current catalysts and low activity"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-28T16:17-04:00",
+          "action": "remove_rejected",
+          "symbol": "CORT",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    }
+  },
+  "executives": {
+    "sector": {
+      "summary": "Today the teams collectively posted a strong net profit of roughly $302, driven mainly by the Technology sector's $272 gain. The Consumer Discretionary and Financial Services sectors added modest gains, while Healthcare posted a small loss. All sectors executed their planned trades, with Technology experiencing five blocked orders due to the 15:30 cutoff rule. Overall, the portfolio maintained a positive trajectory and adhered to most risk guidelines.",
+      "team_notes": {
+        "tech": "Closed five profitable positions and adhered to trailing stops, but faced five blocked buy orders after the 15:30 cutoff.",
+        "consumer": "Generated a modest $2 gain with profitable long positions, but short trades on BKNG and DG incurred small losses.",
+        "financials": "Earned $27 with long positions in JPM and MS, but the MA trade suffered a minor loss due to missing a profit target.",
+        "healthcare": "Achieved a slight loss of $0.72, with gains on AMGN, JNJ, VRTX, but ABBV and ABT were stopped out too early."
+      },
+      "escalations": [
+        "Technology team blocked five orders after the 15:30 cutoff; need President review of cutoff enforcement policy.",
+        "Financials team removed three stocks from watchlist due to list size constraints; review watchlist sizing rules."
+      ],
+      "coordination": "No overlapping companies or coordination issues among teams.",
+      "title": "Executive of Sector Teams"
+    },
+    "special": {
+      "summary": "Team 1: Defense and Aerospace - Defense team had a mixed day, with gains from RKLB and losses from BA and LYV; Team 2: Entertainment - Team 2 executed trade ideas effectively, but had friction losses due to asset management profile dilution; Companies shared between teams: []",
+      "team_notes": {
+        "team_id": "1",
+        "notes": "Team 1: Team 1 executed well, but had losses in BA and LYV. Team 1 will focus on core defense stocks and avoid shorting until market conditions improve."
+      },
+      "escalations": [
+        "Issue 1: Team 2's friction losses due to asset management dilution"
+      ],
+      "coordination": "No issues about overlapping companies or teams stepping on each other.",
+      "title": "Executive of Special Teams"
+    }
+  }
+}

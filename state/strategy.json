@@ -1,32 +1,36 @@
 {
-  "updated": "2026-10-27T16:26-04:00",
-  "strategy_notes": "We are underperforming the benchmark and bleeding capital in low-win-rate sectors; tomorrow we shift focus to high-conviction momentum in Tech and Defense while strictly limiting exposure in Entertainment and Space. All teams must enforce the 75% minimum investment rule but prioritize quality over quantity, requiring strict VWAP and relative volume confirmation before entry. We are pausing aggressive mean-reversion tactics in volatile sectors until win rates improve. The goal is to stop the bleed and align our returns with the market's direction rather than fighting it with poor setups.",
+  "updated": "2026-10-28T16:19-04:00",
+  "strategy_notes": "Focus on high\u2011conviction, catalyst\u2011driven long entries and avoid low\u2011conviction shorts. All new buy orders must be submitted before the 15:30 cutoff and meet a conviction of at least 4 with volume confirmation. Keep at least 75% of each team\u2019s budget invested during market hours and use tight trailing stops to protect gains. Prioritize the Technology, Financials and Consumer teams while pausing new entries for Space and Healthcare until their win\u2011rate improves.",
   "team_focus": {
-    "defense": "Focus on high-conviction entries only; strictly enforce the 'above VWAP + Rvol > 1.5' rule for news catalysts. Limit re-entries on the same ticker to one per day to reduce churn. Prioritize LMT, RTX, and NOC for stability.",
-    "space": "PAUSED for strategy review. Do not initiate new trades. The 32% win rate is unacceptable. Review the mean-reversion logic immediately. If you must trade, only take setups with >8% pullback confirmation and Rvol > 1.2.",
-    "entertainment": "PAUSED for strategy review. With a 24.5% win rate, this team is a net drag. Do not initiate new trades. Focus on capital preservation. Re-evaluate entry criteria for VWAP bounces requiring Rvol > 1.2.",
-    "tech": "Lead the charge. Continue using trailing stops on momentum breakouts (ANET, AVGO, AMD). Maintain discipline on entries; do not chase extended moves. Look for pullbacks to VWAP for better risk/reward.",
-    "consumer": "Maintain discipline. Avoid over-trading in choppy conditions. Only enter when there is clear sector rotation or strong relative volume. Keep position sizes conservative.",
-    "financials": "Reduce trade frequency. The 19 blocked trades indicate poor setup quality. Wait for clear trend confirmation and higher conviction scores before entering. Focus on large-cap stability (JPM, GS).",
-    "healthcare": "PAUSED for strategy review. Despite today's gain, the all-time P&L is negative and win rate is low. Do not initiate new trades. Review why defensive plays are failing to hold gains."
+    "defense": "Do not open any new short positions; only consider long entries on high\u2011conviction (>=4) defense stocks with clear catalyst and volume. Limit to 2 trades today and keep max position size 15% of team budget.",
+    "space": "Pause new entries; monitor existing positions and only adjust stops. Review strategy before resuming trades.",
+    "entertainment": "Trade only validated positions; avoid friction by confirming order persistence before market close. Limit to 2 trades and maintain watchlist size >=15.",
+    "tech": "Enter new buys before 15:30 on high\u2011conviction (>=4) earnings or breakout setups. Use trailing stops of 2% and cap open positions at 4.",
+    "consumer": "Focus on long bias with partial profit\u2011take at 1R for news\u2011driven shorts. Limit to 3 trades and keep positions under 15% of budget.",
+    "financials": "Add positions on upcoming earnings (MA, ICE, COIN) with conviction >=4. Use trailing stops and limit to 3 open positions.",
+    "healthcare": "Pause new entries; protect existing longs with stop\u2011losses at 1.5% and monitor for catalyst updates."
   },
   "allocations": {
-    "defense": 0.25,
+    "defense": 0.1,
     "space": 0.05,
     "entertainment": 0.05,
-    "tech": 0.35,
-    "consumer": 0.1,
+    "tech": 0.45,
+    "consumer": 0.15,
     "financials": 0.15,
     "healthcare": 0.05
   },
   "risk_overrides": {
     "max_position_pct": 0.15,
+    "max_daily_loss_pct": 0.02,
+    "max_open_positions_per_team": 4,
     "max_trades_per_team_per_day": 15,
-    "min_conviction_to_buy": 4
+    "min_conviction_to_buy": 4,
+    "cash_reserve_pct": 0.15,
+    "max_stop_loss_pct": 0.04
   },
   "go_live_assessment": {
     "ready": false,
-    "reason": "Only 8 trading days completed (need 60) and currently underperforming SPY by 0.82%."
+    "reason": "Only 9 trading days completed (need 60) and portfolio is underperforming SPY by 0.82% since start."
   },
-  "decision_log": "Reduced allocations for Space, Entertainment, and Healthcare due to poor win rates and negative P&L. Tightened conviction threshold to 4 and reduced max trades to 15 to curb churn and force higher quality entries. Paused Space and Healthcare for strategy review."
+  "decision_log": "Reduced allocations to underperforming Space, Entertainment, and Healthcare; tightened conviction and position limits; paused Space and Healthcare for strategy review."
 }
