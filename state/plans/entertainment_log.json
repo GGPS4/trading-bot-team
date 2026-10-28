@@ -1127,5 +1127,25 @@
     "results": [
       "BUY LYV blocked: already holding this stock"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "13:49",
+    "trigger": "must invest $1,146 more (75% rule)",
+    "market_view": "Market is calm and slightly higher, but the FOMC statement and press conference at 2:00-2:30 PM ET are high impact and will likely increase volatility. The executive strategy review and team win-rate issues support capital preservation. MGM is deteriorating into earnings after close, while FOXA/WMG shorts and LYV long need disciplined risk control.",
+    "experiment": "Add strict volume filter requiring positive 15-minute volume expansion and rvol > 1.2 for momentum entries.",
+    "decisions": [
+      {
+        "symbol": "MGM",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Long MGM from VWAP bounce is -0.98%, opening range broke down, rvol 1.63 but trend down, negative governance news, and earnings after close. Executive paused new trades and prioritized capital preservation; exiting before FOMC/earnings.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      }
+    ],
+    "results": [
+      "SELL MGM"
+    ]
   }
 ]
