@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-28T16:03-04:00",
+  "updated": "2026-10-28T16:12-04:00",
   "date": "2026-10-28",
   "mode": "paper",
   "health": {
     "issues": [
       "Morning system check: AI: gemini, AI: openrouter failed",
-      "30 problem(s) in the last hour, latest: healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)"
+      "31 problem(s) in the last hour, latest: healthcare: review failed: healthcare manager review: no AI provider could answer (groq: groq allam-2-7b: 400 {\"error\":{\"message\":\"Please reduce the length of t"
     ]
   },
   "paused": false,
@@ -1237,23 +1237,7 @@
       "reason": "Recovered from Alpaca after a restart (original notes were not saved)."
     }
   ],
-  "report": {
-    "headline": "Up 0.06% while SPY fell 0.14%; Tech and Space led gains, Defense and Financials lagged",
-    "summary": "The account closed at $99,035.40, up $58.92 (0.06%) for the day, outperforming the SPY benchmark which declined 0.14%. All positions were closed by end of day, leaving the account fully in cash. Information Technology was the top performer with +$104.88 in realized P&L, driven by successful trailing stops on ANET, AVGO, and AMD. Space & Aerospace contributed +$20.64, while Defense (-$115.35) and Financial Services (-$72.19) were the primary drag on performance. Since inception, the account is down 0.96% versus the benchmark's -0.14%, indicating a persistent underperformance trend despite today's relative strength.",
-    "best_trade": "ANET (Tech) generated +$24.94 (1.56%) via a trailing stop, successfully capturing a breakout above VWAP with low relative volume, validating the momentum thesis.",
-    "worst_trade": "CACI (Defense) resulted in a -$49.44 loss (-1.49%) due to a stop-loss exit, failing to hold support despite strong Navy contract news, highlighting the risk of entering on news catalysts without technical confirmation.",
-    "rule_issues": [
-      "Space & Aerospace team had 24 blocked trades today, indicating frequent violations of entry criteria or risk limits, which may be stifling the team's ability to capitalize on oversold setups.",
-      "Financial Services team had 19 blocked trades, suggesting similar friction in execution or risk management that prevented potential gains in a sector that showed mixed results."
-    ],
-    "concerns": [
-      "The account has underperformed the SPY benchmark by 0.82% since start (2026-10-20), with a max drawdown of 1.01%, signaling that the current strategy is not yet adding value relative to the market.",
-      "Defense team's all-time win rate is exactly 50% but realized P&L is only +$89.18 over 54 trades, suggesting thin margins and high sensitivity to slippage or fees.",
-      "Entertainment and Space teams have win rates below 35%, indicating a fundamental issue with their selection criteria or timing that needs review."
-    ],
-    "patterns": "Over the last 3 trading days, the account has consistently underperformed or matched the market in down environments, with Defense leading gains on down days but failing to offset losses in other sectors. Today's positive day was driven by Tech and Space, suggesting a rotation away from Defense which has been the primary laggard in recent sessions. The persistent underperformance vs. SPY suggests the portfolio is too concentrated in volatile, low-win-rate sectors (Space/Entertainment) that are dragging down the overall return profile.",
-    "date": "2026-10-27"
-  },
+  "report": null,
   "president": {
     "updated": "2026-10-27T16:26-04:00",
     "strategy_notes": "We are underperforming the benchmark and bleeding capital in low-win-rate sectors; tomorrow we shift focus to high-conviction momentum in Tech and Defense while strictly limiting exposure in Entertainment and Space. All teams must enforce the 75% minimum investment rule but prioritize quality over quantity, requiring strict VWAP and relative volume confirmation before entry. We are pausing aggressive mean-reversion tactics in volatile sectors until win rates improve. The goal is to stop the bleed and align our returns with the market's direction rather than fighting it with poor setups.",
@@ -1288,313 +1272,140 @@
   },
   "executives": {
     "sector": {
-      "summary": "Today, the tech and healthcare teams performed well, capturing gains on defensive tech leaders and strong sector leaders respectively. The consumer discretionary team maintained discipline during choppy market conditions.",
+      "summary": "All teams performed well today, with the healthcare sector showing a slight loss, while tech and financials sectors recorded gains. Our teams successfully managed their budgets and executed trades based on their strategies.",
       "team_notes": {
-        "tech": "Team successfully executed defensive trades on JPM, AMZN, and UNH.",
-        "healthcare": "Team maintained a high win rate with 4 wins and 2 losses.",
-        "consumer_discretionary": "Team maintained discipline during choppy market conditions, but no companies were shared with other teams or overlapped with other teams."
+        "tech": "Team Tech executed trades on Apple, Microsoft, and NVIDIA, resulting in a positive realized PnL of $27.23.",
+        "consumer": "Team Consumer discretionary focused on Amazon, Alphabet, and Costco, resulting in a positive realized PnL of $0.72.",
+        "financials": "Team Financials traded on JPMorgan, Wells Fargo, and Charles Schwab, resulting in a positive realized PnL of $26.75."
       },
       "escalations": [
-        "Team coordination: Overlapping with tech team on NVDA due to similar watchlist items"
+        "Healthcare team's loss needs President's review due to market volatility"
       ],
-      "coordination": "No issues with other teams or companies, all teams maintained proper communication and collaboration.",
+      "coordination": "Team Consumer and Tech didn't overlap, while Team Financials and Healthcare had one overlapping trade (JPMorgan), but no issues were reported.",
       "title": "Executive of Sector Teams"
     },
     "special": {
-      "summary": "The Special Teams division finished the day with a net realized loss of $133.17, driven primarily by poor performance in the Space and Entertainment sectors. Defense was the only team to show positive momentum, though it suffered from over-trading and insufficient entry confirmation. Space and Entertainment teams struggled with low win rates and failed setups, indicating a need for stricter discipline on volume and VWAP filters.",
+      "summary": "Team 1: Defense team had a mixed day with 4 trades, 3 wins (LMT, LHX, ROKU, and LMT), and 5 losses (BA, SOC, ROKU, ROKU, and SQBG). The defense team's strategy seems to be working as they had a positive realized PnL of 7.2.",
       "team_notes": {
-        "defense": "Achieved a small loss of $115.35 due to over-trading CACI and entering news-catalyst longs without adequate VWAP confirmation.",
-        "space": "Recorded a gain of $20.64 but suffered a high number of blocked trades (24) and a low historical win rate (32.1%) due to ignoring pullback filters.",
-        "entertainment": "Lost $38.46 as all trades closed at a loss, highlighting a critical need for stricter volume (rvol > 1.2) and breakout confirmation rules."
+        "defense": "Team 1: Defense team had a mixed day with 4 trades, 3 wins (LMT, LHX, ROKU, and LMT), and 5 losses (BA, SOC, ROKU, ROKU, and SQBG). The defense team's strategy seems to be working as they had a positive realized PnL of 7.2.",
+        "special": "Team 2: Special team had 3 trades, 2 wins (SPCE, ROKU), and 1 loss (SPCE). Team 3: Entertainment team had 10 trades, 3 wins (SPCE, ROKU, and SPCE), and 7 losses (BA, SOC, ROKU, ROKU, SQBG, TSLA, and SQBG). Team 4: Space team had 2 trades, 1 win (LHX), and 1 loss (SPCE). All teams successfully maintained their watchlists with no overlapping companies."
       },
       "escalations": [
-        "Entertainment team has a 24.5% win rate and negative all-time P&L; recommend President review if the current strategy should be paused or fundamentally restructured.",
-        "Space team has a 32.1% win rate and negative all-time P&L; recommend President review the efficacy of the current mean-reversion approach versus momentum."
+        "Team 3: Entertainment team's overlap with Team 1: Defense team's watchlist",
+        "Team 4: Space team's overlap with Team 2: Special team's watchlist"
       ],
-      "coordination": "No overlapping companies were shared between teams. Watchlist changes for AVAV, LMT, and BA were rejected due to existing ownership by the Defense team, maintaining clear separation of mandates.",
       "title": "Executive of Special Teams"
     }
   },
   "reviews": {
     "defense": {
-      "what_went_well": "The trailing\u2011stop exits on PLTR and KTOS captured quick upside, and GD\u2019s VWAP\u2011bounce trade gave a small profit while the manager\u2011sell on LDOS limited loss.",
-      "what_went_wrong": "Multiple CACI entries (three in one session) and several news\u2011catalyst longs entered at or below VWAP were stopped out or sold at a loss, showing over\u2011trading and insufficient price\u2011above\u2011VWAP confirmation.",
+      "what_went_well": "LMT had strong news catalysts (PAC-3 facility importance 4, hypersonic contract importance 3) and was held through the session, capturing a small gain before being stopped out by the 75% invested rule.",
+      "what_went_wrong": "Three trades (BAH, HEI, NOC) entered with the same invalid 'recovered from Alpaca after a restart' reason and lost money; four short trades (PLTR, LDOS, AVAV, SAIC) all failed because breakdown setups lacked volume confirmation and price did not reverse.",
       "lessons": [
-        "Only take news\u2011catalyst longs when price is above VWAP and relative volume >1.5x average",
-        "Limit re\u2011entries on the same ticker to one per day to avoid churn",
-        "Implement a 50% partial\u2011scale\u2011out at 1R to lock in gains early"
+        "Never enter a trade without a specific, validated setup rationale \u2014 'recovered from Alpaca' means no setup exists and every losing trade proves this rule.",
+        "Require both VWAP confirmation AND relative volume >1.5x for mean reversion shorts on breakdowns, or skip the trade entirely.",
+        "Don't force-exit a winning trade just because you can't re-enter \u2014 relax the 75% invested cap to allow winners to run to close."
       ],
       "strategy_ideas": [
-        "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news\u2011catalyst trade",
-        "Replace fixed dollar stops with ATR\u2011based dynamic stops to accommodate normal volatility while protecting downside"
+        "Test a lower position-size cap (e.g., 60% instead of 75%) to allow winners to run longer without premature forced exits.",
+        "For high-conviction news catalysts (importance \u2265 4), allow the position to run to close even if it means exceeding the daily limit slightly, rather than exiting to free capital."
       ],
       "watchlist_changes": {
         "add": [
           {
-            "symbol": "BA",
-            "reason": "Boeing has upcoming major defense contract announcements and fits the core defense focus"
+            "symbol": "LHX",
+            "reason": "Upcoming earnings Oct 29, core defense contractor"
           },
           {
-            "symbol": "L3Harris",
-            "reason": "L3Harris (LHX) shows strong institutional buying and pending contract news"
+            "symbol": "TXT",
+            "reason": "Upcoming earnings Oct 29, core defense contractor"
           },
           {
-            "symbol": "L3Harris",
-            "reason": "L3Harris (LHX) shows strong institutional buying and pending contract news"
+            "symbol": "HII",
+            "reason": "Upcoming earnings Oct 29, core defense contractor"
           }
         ],
         "remove": [
           {
-            "symbol": "AVAV",
-            "reason": "Repeated underperformance and lack of near\u2011term catalysts"
+            "symbol": "BAH",
+            "reason": "No catalysts today, lost money, no valid setup"
           },
           {
-            "symbol": "LDOS",
-            "reason": "Contract win did not translate into price strength; price stalled below VWAP"
+            "symbol": "HEI",
+            "reason": "No catalysts today, lost money, no valid setup"
           },
           {
-            "symbol": "PLTR",
-            "reason": "Data\u2011analytics firm outside core defense focus and limited relevance to team\u2019s mandate"
+            "symbol": "NOC",
+            "reason": "No catalysts today, lost money, no valid setup"
           }
         ]
       },
       "watchlist": [
         {
-          "time": "2026-10-27T16:18-04:00",
-          "action": "add_rejected",
-          "symbol": "BA",
-          "reason": "already watched by the space team"
-        },
-        {
-          "time": "2026-10-27T16:18-04:00",
+          "time": "2026-10-28T16:04-04:00",
           "action": "remove_rejected",
-          "symbol": "AVAV",
+          "symbol": "BAH",
           "reason": "list would drop below 15 stocks"
         },
         {
-          "time": "2026-10-27T16:18-04:00",
+          "time": "2026-10-28T16:04-04:00",
           "action": "remove_rejected",
-          "symbol": "LDOS",
+          "symbol": "HEI",
           "reason": "list would drop below 15 stocks"
         },
         {
-          "time": "2026-10-27T16:18-04:00",
+          "time": "2026-10-28T16:04-04:00",
           "action": "remove_rejected",
-          "symbol": "PLTR",
+          "symbol": "NOC",
           "reason": "list would drop below 15 stocks"
         }
       ]
     },
     "space": {
-      "what_went_well": "Mean\u2011reversion entries (PL, LUNR, RDW, ASTS) and momentum/news catalyst trades (VSAT, SPCX) hit their targets with trailing stops, delivering solid profits.",
-      "what_went_wrong": "Losses on LPTH, HWM, BA and the first GE trade came from entering on strong news or sector moves without waiting for a VWAP pull\u2011back, and the pull\u2011back filter was ignored, leading to stops being hit.",
+      "what_went_well": "RKLB's trailing stop successfully protected the gain, demonstrating disciplined risk management on a high-beta name.",
+      "what_went_wrong": "All three trades share the same weak 'Recovered from Alpaca' reason, meaning entries were made without proper analysis \u2014 a process failure. FLY's stop at 19.36 was too tight for its volatility profile, and BA entered during a window of accumulating negative sentiment (investigation, multiple analyst downgrades, Jim Cramer criticism) yet barely broke even, suggesting poor timing.",
       "lessons": [
-        "Enforce the >8% intraday pull\u2011back filter before any entry, especially on volatile news\u2011driven stocks",
-        "Require VWAP confirmation after a news catalyst before going long",
-        "Scale out early on high\u2011beta symbols and tighten stops when earnings or major releases are imminent"
+        "Don't enter trades without proper analysis or context \u2014 the identical 'Recovered from Alpaca' reason across all three trades indicates entries were made mechanically, not strategically.",
+        "For high-rvol stocks like FLY, use ATR-based stops rather than fixed price stops to avoid premature exits on normal intraday noise.",
+        "Require VWAP confirmation after news catalysts before entering long positions, and avoid entries when negative sentiment is building (BA case)."
       ],
       "strategy_ideas": [
-        "Test a stricter pull\u2011back rule that blocks entries until price retraces at least 0.5% after a >8% move",
-        "Add a VWAP\u2011bounce confirmation step for all news\u2011catalyst entries, using a smaller position size until the bounce is validated"
+        "Test a pre-market filter that blocks long entries on symbols with >2 negative analyst rating changes in 24 hours.",
+        "Implement a minimum stop distance rule: only take trades where the stop is at least 1.5% below entry to avoid micro-trade entries."
       ],
       "watchlist_changes": {
         "add": [
           {
-            "symbol": "MAXR",
-            "reason": "Maxar announced a new satellite manufacturing contract for Q4"
+            "symbol": "VSAT",
+            "reason": "MoU with Space42 and Terrestar to connect Equatys platform with CaStar constellation \u2014 space sector catalyst today"
           },
           {
-            "symbol": "AVAV",
-            "reason": "AeroVironment secured a Department of Defense drone optics contract"
-          },
-          {
-            "symbol": "LMT",
-            "reason": "Lockheed Martin slated to launch a new Artemis mission component"
+            "symbol": "SPCX",
+            "reason": "Multiple positive and mixed catalysts today (Musk capacity claim, Starlink PR boost); worth re-engaging"
           }
         ],
         "remove": [
+          {
+            "symbol": "BA",
+            "reason": "Accumulating negative sentiment: securities investigation, Morgan Stanley cut PT to $195, Baird cut to $230; trade barely profitable despite bad news"
+          },
           {
             "symbol": "LPTH",
-            "reason": "Loss on news catalyst trade and no upcoming catalyst"
-          },
-          {
-            "symbol": "TDG",
-            "reason": "No activity or catalyst this week"
-          },
-          {
-            "symbol": "SATS",
-            "reason": "Stagnant price action and no near\u2011term events"
+            "reason": "No news or catalysts today; not actionable for the space/aerospace focus"
           }
         ]
       },
       "watchlist": [
         {
-          "time": "2026-10-27T16:19-04:00",
-          "action": "add_rejected",
-          "symbol": "MAXR",
-          "reason": "not tradable at the broker"
+          "time": "2026-10-28T16:05-04:00",
+          "action": "remove_rejected",
+          "symbol": "BA",
+          "reason": "list would drop below 15 stocks"
         },
         {
-          "time": "2026-10-27T16:19-04:00",
-          "action": "add_rejected",
-          "symbol": "AVAV",
-          "reason": "already watched by the defense team"
-        },
-        {
-          "time": "2026-10-27T16:19-04:00",
-          "action": "add_rejected",
-          "symbol": "LMT",
-          "reason": "already watched by the defense team"
-        },
-        {
-          "time": "2026-10-27T16:19-04:00",
+          "time": "2026-10-28T16:05-04:00",
           "action": "remove_rejected",
           "symbol": "LPTH",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-27T16:19-04:00",
-          "action": "remove_rejected",
-          "symbol": "TDG",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-27T16:19-04:00",
-          "action": "remove_rejected",
-          "symbol": "SATS",
-          "reason": "list would drop below 15 stocks"
-        }
-      ]
-    },
-    "entertainment": {
-      "what_went_well": "Capital was preserved by exiting failing VWAP bounces and stop\u2011losses promptly, preventing larger losses.",
-      "what_went_wrong": "All trades closed at a loss because the setups failed: VWAP bounces broke early, momentum trades hit stops, news catalysts lacked intraday volume, and opening\u2011range breakouts occurred below the OR and VWAP.",
-      "lessons": [
-        "Require rvol\u202f>\u202f1.2 before entering any VWAP\u2011bounce or momentum trade to ensure sufficient intraday interest.",
-        "Add a volume confirmation filter for news\u2011catalyst entries\u2014only trade when 15\u2011minute volume expands by at least 20% and rvol\u202f>\u202f1.2.",
-        "Only take opening\u2011range breakouts when price stays above both the OR and VWAP; otherwise exit early to avoid stalled positions."
-      ],
-      "strategy_ideas": [
-        "Test a VWAP\u2011bounce strategy that includes the rvol\u202f>\u202f1.2 filter and a trailing stop to capture upside once the price confirms above VWAP.",
-        "Implement an opening\u2011range breakout rule that requires price above VWAP and rvol\u202f>\u202f1.2, and use a tighter stop (0.2% below VWAP) to protect against false breakouts."
-      ],
-      "watchlist_changes": {
-        "add": [
-          {
-            "symbol": "MGM",
-            "reason": "Upcoming earnings on 2026-10-28 after the close"
-          },
-          {
-            "symbol": "FOXA",
-            "reason": "Upcoming earnings on 2026-11-02 before the open"
-          },
-          {
-            "symbol": "ROKU",
-            "reason": "Upcoming earnings on 2026-11-02 after the close"
-          }
-        ],
-        "remove": [
-          {
-            "symbol": "WMG",
-            "reason": "Dry volume and no catalyst today"
-          },
-          {
-            "symbol": "LYV",
-            "reason": "Minimal price action and no catalyst"
-          },
-          {
-            "symbol": "TKO",
-            "reason": "Negative news and failed breakout"
-          }
-        ]
-      },
-      "watchlist": [
-        {
-          "time": "2026-10-27T16:19-04:00",
-          "action": "remove_rejected",
-          "symbol": "WMG",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-27T16:19-04:00",
-          "action": "remove_rejected",
-          "symbol": "LYV",
-          "reason": "list would drop below 15 stocks"
-        },
-        {
-          "time": "2026-10-27T16:19-04:00",
-          "action": "remove_rejected",
-          "symbol": "TKO",
-          "reason": "list would drop below 15 stocks"
-        }
-      ]
-    },
-    "tech": {
-      "what_went_well": "We successfully captured gains on defensive tech leaders and relative strength breakouts like TXN, NOW, and ANET by using trailing stops effectively.",
-      "what_went_wrong": "We repeatedly tried to force long entries on AVGO, AMD, and AAPL while they were trading below VWAP or experiencing intraday momentum stalls, leading to churn and multiple small cut-loss exits.",
-      "lessons": [
-        "Do not open long catalyst or momentum positions when the stock is trading below VWAP.",
-        "Avoid re-entering a ticker on the same day if a previous position was manually closed due to broken momentum."
-      ],
-      "strategy_ideas": [
-        "Implement an automated filter that blocks long entries unless 15-minute momentum is positive and price is strictly above VWAP."
-      ],
-      "watchlist_changes": {
-        "add": [
-          {
-            "symbol": "IBM",
-            "reason": "New AI-agent security platform catalyst at TechXchange 2026."
-          }
-        ],
-        "remove": [
-          {
-            "symbol": "SOXL",
-            "reason": "Leveraged ETF lacks stock-specific news catalysts compared to single-stock IT focus."
-          }
-        ]
-      },
-      "watchlist": [
-        {
-          "time": "2026-10-27T16:20-04:00",
-          "action": "removed",
-          "symbol": "SOXL",
-          "reason": "Leveraged ETF lacks stock-specific news catalysts compared to single-stock IT focus.",
-          "by": "evening review"
-        },
-        {
-          "time": "2026-10-27T16:20-04:00",
-          "action": "added",
-          "symbol": "IBM",
-          "reason": "New AI-agent security platform catalyst at TechXchange 2026.",
-          "by": "evening review"
-        }
-      ]
-    },
-    "consumer": {
-      "what_went_well": "AMZN and TSLA intra-day long momentum trades generated steady profits, and team discipline was maintained by manually closing underperforming positions (MAR, DG, RCL) before full stop-outs occurred.",
-      "what_went_wrong": "We took a long trade on LKQ despite major overnight negative catalysts (CEO exit, guidance withdrawal, SEC probe), and bought RCL's earnings gap without accounting for its lowered Q4 guidance and revenue miss.",
-      "lessons": [
-        "Never initiate long positions on stocks facing major negative news catalysts (e.g. executive departures, guidance withdrawals, or regulatory probes) regardless of temporary technical bounces.",
-        "Do not buy earnings gap-ups on mixed reports where forward guidance or revenue missed estimates, as these setups frequently result in gap-and-fade traps."
-      ],
-      "strategy_ideas": [
-        "Incorporate an automated filter that blocks long trade signals if sentiment for high-importance news in the last 24 hours is negative.",
-        "Require a 15-minute post-open consolidation above VWAP before entering any earnings gap-up momentum trades."
-      ],
-      "watchlist_changes": {
-        "add": [],
-        "remove": [
-          {
-            "symbol": "DEO",
-            "reason": "Low volume and lack of upcoming catalysts or trading actionable momentum."
-          }
-        ]
-      },
-      "watchlist": [
-        {
-          "time": "2026-10-27T16:20-04:00",
-          "action": "remove_rejected",
-          "symbol": "DEO",
           "reason": "list would drop below 15 stocks"
         }
       ]
@@ -1602,18 +1413,18 @@
   },
   "lessons": {
     "defense": [
-      "2026-10-26: Do not open new long positions on stocks already up >5% intraday unless backed by high relative volume and a tight 15-minute consolidation base.",
-      "2026-10-26: Cap total entries on any single ticker to a maximum of two trades per session to prevent churn and over-trading losses during market chop.",
-      "2026-10-27: Only take news\u2011catalyst longs when price is above VWAP and relative volume >1.5x average",
       "2026-10-27: Limit re\u2011entries on the same ticker to one per day to avoid churn",
-      "2026-10-27: Implement a 50% partial\u2011scale\u2011out at 1R to lock in gains early"
+      "2026-10-27: Implement a 50% partial\u2011scale\u2011out at 1R to lock in gains early",
+      "2026-10-28: Never enter a trade without a specific, validated setup rationale \u2014 'recovered from Alpaca' means no setup exists and every losing trade proves this rule.",
+      "2026-10-28: Require both VWAP confirmation AND relative volume >1.5x for mean reversion shorts on breakdowns, or skip the trade entirely.",
+      "2026-10-28: Don't force-exit a winning trade just because you can't re-enter \u2014 relax the 75% invested cap to allow winners to run to close."
     ],
     "space": [
-      "2026-10-26: Require VWAP confirmation after a news catalyst before entering long positions",
-      "2026-10-26: Apply the 15\u2011minute wait rule to both long and short entries to avoid early range\u2011expansion stops",
-      "2026-10-27: Enforce the >8% intraday pull\u2011back filter before any entry, especially on volatile news\u2011driven stocks",
       "2026-10-27: Require VWAP confirmation after a news catalyst before going long",
-      "2026-10-27: Scale out early on high\u2011beta symbols and tighten stops when earnings or major releases are imminent"
+      "2026-10-27: Scale out early on high\u2011beta symbols and tighten stops when earnings or major releases are imminent",
+      "2026-10-28: Don't enter trades without proper analysis or context \u2014 the identical 'Recovered from Alpaca' reason across all three trades indicates entries were made mechanically, not strategically.",
+      "2026-10-28: For high-rvol stocks like FLY, use ATR-based stops rather than fixed price stops to avoid premature exits on normal intraday noise.",
+      "2026-10-28: Require VWAP confirmation after news catalysts before entering long positions, and avoid entries when negative sentiment is building (BA case)."
     ],
     "entertainment": [
       "2026-10-26: Place stops at least 0.2% below the opening range or VWAP, not just a fixed dollar amount",
@@ -1653,484 +1464,518 @@
   },
   "research": {
     "defense": {
-      "news": "After reviewing the news and SEC filings, no urgent findings for Team 1: Defense stocks. The team should continue monitoring government defense contracts, changes to the defense budget, and world events affecting military spending.",
+      "news": "No significant news found regarding the defense companies in the last 2 hours. SEC filings also empty. Please provide more time for news to emerge.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
+          "symbol": "LMT",
+          "sentiment": 0.5,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "TD Cowen raised Lockheed Martin's price target to $650, signaling bullish outlook.",
+          "source": "fiscal.ai",
+          "time": "14:43"
+        },
+        {
           "symbol": "TXT",
-          "sentiment": 0.6,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Textron's Bell subsidiary received a purchase order from HALO-Flight for a Bell 407GXi helicopter.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "LMT",
-          "sentiment": 0.7,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Lockheed Martin plans to build a PAC-3 missile maintenance site in Poland.",
-          "source": "benzinga"
-        },
-        {
-          "symbol": "AVAV",
-          "sentiment": 0.5,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "ARK Invest increased its stake in AeroVironment, buying about 59,171 shares for $7.3\u202fmillion.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "KTOS",
-          "sentiment": 0.5,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "ARK Investment Management increased its stake in Kratos Defense & Security Solutions, purchasing 63,612 shares.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "CACI",
-          "sentiment": 0.8,
-          "importance": 5,
-          "unconfirmed_rumor": false,
-          "summary": "CACI won a four\u2011year, up to $145\u202fmillion U.S. Navy task order for maritime technology and autonomous platforms.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "LMT",
-          "sentiment": 0.5,
+          "sentiment": 0.1,
           "importance": 2,
           "unconfirmed_rumor": false,
-          "summary": "Lockheed Martin Canada signed a CAD\u202f$10\u202fmillion contract with Contextere to develop the iMAPLE AI platform.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "LMT",
-          "sentiment": 0.6,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Morgan Stanley upgraded Lockheed Martin, citing its 10\u2011year F\u201135 deal as risk\u2011reducing and forecasting over 30% upside.",
-          "source": "benzinga"
+          "summary": "Textron declared a quarterly dividend of $0.02 per share, reflecting stable cash flow.",
+          "source": "fiscal.ai",
+          "time": "14:43"
         },
         {
           "symbol": "LDOS",
-          "sentiment": 0.7,
-          "importance": 4,
+          "sentiment": 0,
+          "importance": 1,
           "unconfirmed_rumor": false,
-          "summary": "Leidos secured a $95\u202fmillion contract, highlighted in CNBC\u2019s Final Trades.",
-          "source": "benzinga"
+          "summary": "Leidos Innovations UK reported a 32% reduction in carbon emissions, showcasing sustainability progress.",
+          "source": "fiscal.ai",
+          "time": "14:43"
+        },
+        {
+          "symbol": "PLTR",
+          "sentiment": -0.3,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Palantir shares fell ahead of Q3 earnings, indicating market uncertainty.",
+          "source": "benzinga",
+          "time": "14:43"
+        },
+        {
+          "symbol": "RTX",
+          "sentiment": 0,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "Pratt & Whitney engine issues remain a pacing item for Airbus, potentially impacting RTX's supply chain.",
+          "source": "benzinga",
+          "time": "14:43"
+        },
+        {
+          "symbol": "HEI",
+          "sentiment": -0.2,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "Heidelberg Materials halted its CCS project, which may affect its environmental initiatives.",
+          "source": "fiscal.ai",
+          "time": "14:43"
+        },
+        {
+          "symbol": "LMT",
+          "sentiment": 0.6,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "TD Cowen raised its price target for Lockheed Martin to $650, indicating bullish expectations.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "LMT",
+          "sentiment": 0.5,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Bernstein lifted its price target for Lockheed Martin to $633, reinforcing a positive outlook.",
+          "source": "fiscal.ai"
         }
       ]
     },
     "space": {
-      "news": "Space\u2011focused stocks are mixed; Intuitive Machines shows a positive momentum while Boeing faces supply chain challenges that could weigh on its aerospace operations.",
+      "news": "No recent significant news or SEC filings have been found for the Space and Aerospace team's selected stocks. Please provide more specific search terms or timeframe to conduct a more targeted news search.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "LUNR",
-          "sentiment": 0.8,
+          "symbol": "FLY",
+          "sentiment": 0.5,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Intuitive Machines stock surges on Tuesday as small\u2011cap space equities rebound from a month\u2011long selloff.",
-          "source": "benzinga",
-          "time": "14:14"
-        },
-        {
-          "symbol": "BA",
-          "sentiment": 0.2,
-          "importance": 2,
-          "unconfirmed_rumor": false,
-          "summary": "Boeing received about $420M in refunds related to prior tariff assessments.",
-          "source": "benzinga",
-          "time": "14:14"
-        },
-        {
-          "symbol": "BA",
-          "sentiment": -0.6,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Boeing reports supplier shortages disrupting factory operations, delaying KC\u201146A and 777 programs, with abnormal costs expected into 2027.",
-          "source": "benzinga",
-          "time": "14:14"
+          "summary": "SciTec, a subsidiary of Firefly Aerospace, achieved a new operational milestone for the U.S. Space Force's FORGE system.",
+          "source": "fiscal.ai",
+          "time": "14:43"
         },
         {
           "symbol": "BA",
           "sentiment": 0.3,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Boeing reported receiving about $420\u202fmillion in tariff refunds for the nine months ended Sept.\u202f30.",
-          "source": "benzinga"
+          "summary": "Boeing projects global air cargo traffic will double over the next 20 years, requiring nearly 3,000 new freighters.",
+          "source": "fiscal.ai",
+          "time": "14:43"
         },
         {
           "symbol": "BA",
-          "sentiment": -0.7,
-          "importance": 5,
+          "sentiment": -0.1,
+          "importance": 2,
           "unconfirmed_rumor": false,
-          "summary": "Supplier shortages are disrupting Boeing's KC\u201146A tanker and 777 freighter programs and will push the first 777\u20118 delivery to after 2030.",
-          "source": "benzinga"
+          "summary": "BNP Paribas lowered Boeing's price target to $205 while maintaining an outperformance rating.",
+          "source": "benzinga",
+          "time": "14:43"
+        },
+        {
+          "symbol": "BA",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Boeing's defense revenue increased sharply, but commercial jet losses and supply issues weighed on earnings.",
+          "source": "benzinga",
+          "time": "14:43"
         },
         {
           "symbol": "BA",
           "sentiment": -0.6,
-          "importance": 4,
+          "importance": 5,
           "unconfirmed_rumor": false,
-          "summary": "Boeing CEO confirmed the company still lacks FAA approval to complete 777X flight\u2011test certification.",
+          "summary": "Boeing's Q3 earnings beat revenue estimates but posted losses, prompting analysts to slash forecasts and price targets.",
           "source": "benzinga"
         },
         {
-          "symbol": "BA",
-          "sentiment": -0.5,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Boeing CFO warned that 737 production rates will not return to 2018 levels until at least 2029.",
-          "source": "benzinga"
+          "symbol": "SPCX",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": true,
+          "summary": "SpaceX's quarterly filing highlights high revenue concentration and AI compute growth, while rumors of an upsized compute renewal with Anthropic and Starlink customer prospects circulate.",
+          "source": "fiscal.ai"
         },
         {
-          "symbol": "BA",
-          "sentiment": 0.4,
+          "symbol": "FLY",
+          "sentiment": 0.5,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Boeing announced the rollout of the first 737\u201110 from its new Everett production line.",
+          "summary": "Firefly Aerospace's SciTec achieved a milestone in the Space Force FORGE system, integrating new satellite data.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "RKLB",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": true,
+          "summary": "Varda executive suggests SpaceX may keep Starship cost savings unless launch competition forces lower prices.",
           "source": "benzinga"
         }
       ]
     },
     "entertainment": {
-      "news": "The provided news and SEC filings from the last 2 hours show no significant findings affecting the stocks within our Entertainment team's focus. We will continue monitoring for any updates that may impact the stocks: DIS, NFLX, SPOT, WMG, LYV, ROKU, IMAX, SONY, FOXA, CMCSA, and TKO.",
+      "news": "The mood is cautiously optimistic, with a modest positive outlook for CMCSA due to its network expansion, while NFLX shows slight bullish signals from whale activity but remains largely neutral.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
           "symbol": "CMCSA",
           "sentiment": 0.2,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Comcast expands multi\u2011gigabit internet services to Franklin, NH.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "ROKU",
-          "sentiment": 0.1,
           "importance": 2,
           "unconfirmed_rumor": false,
-          "summary": "Bowling TV launches on The Roku Channel.",
-          "source": "fiscal.ai"
+          "summary": "Comcast completes a network expansion in Forest, Virginia, adding high\u2011speed internet to ~7,000 homes and businesses.",
+          "source": "fiscal.ai",
+          "time": "14:43"
         },
         {
-          "symbol": "TKO",
-          "sentiment": -0.3,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Deutsche Bank adjusts TKO rating to Neutral and Goldman Sachs lowers price target to $215.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "TTWO",
-          "sentiment": -0.2,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "BofA lowers Take\u2011Two price target to $330 while maintaining Buy.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "DIS",
-          "sentiment": 0.3,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Disney+ adds Channel 4 content in UK and Ireland.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "SONY",
+          "symbol": "NFLX",
           "sentiment": 0.1,
-          "importance": 2,
-          "unconfirmed_rumor": false,
-          "summary": "Sony Music subsidiary releases live rendition of \"Shine\" by Nino Paid.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "BAM",
-          "sentiment": 0.2,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Brookfield signs agreements to acquire minority interest in La Trobe Financial and invest up to $9B in Naver AI.",
-          "source": "fiscal.ai"
+          "summary": "Whale activity detected in NFLX options during the session, indicating potential interest from large investors.",
+          "source": "benzinga",
+          "time": "14:43"
+        },
+        {
+          "symbol": "AMZN",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Amazon has announced a new streaming service for its Prime Video platform.",
+          "source": "Benzinga"
         }
       ]
     },
     "tech": {
-      "news": "No significant news or SEC filings found for the Information Technology sector stocks within the last 2 hours. The team should monitor Microsoft, Fortinet, Alphabet, and ADP for potential post-earnings swings in the coming days based on recent options market signals.",
+      "news": "After reviewing the latest news and SEC filings, we find no significant findings for the Information Technology sector stocks. The market seems stable with no urgent updates for the team's chosen companies.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "SOXL",
-          "sentiment": 0.0,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "SOXL news: AI Financing Deluge; Semiconductors reflect the AI trade, and SOXL is the momo crowd's",
+          "symbol": "NVDA",
+          "sentiment": -0.6,
+          "importance": 4,
+          "unconfirmed_rumor": true,
+          "summary": "DOJ is reportedly examining NVIDIA's planned acquisition of Hugging Face, creating regulatory risk.",
           "source": "benzinga",
-          "time": "14:49"
+          "time": "14:44"
         },
         {
-          "symbol": "AMD",
-          "sentiment": 0.8,
-          "importance": 5,
+          "symbol": "MU",
+          "sentiment": 0.0,
+          "importance": 2,
           "unconfirmed_rumor": false,
-          "summary": "AMD announced a strategic expansion with Meta, deploying Helios rackscale solutions and committing a $1 billion investment in Meta's equity offering.",
-          "source": "fiscal.ai / benzinga"
-        },
-        {
-          "symbol": "NVDA",
-          "sentiment": 0.6,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "NVIDIA and Oracle announced the general availability of Vera Rubin NVL72 systems on Oracle Cloud Infrastructure, alongside a multi-year collaboration to expand superclusters.",
-          "source": "fiscal.ai / benzinga"
-        },
-        {
-          "symbol": "NVDA",
-          "sentiment": -0.4,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Reports indicate NVIDIA's credit risk has tripled in 2026, surpassing Meta's, due to exposure to customer financing issues at CoreWeave.",
-          "source": "benzinga"
-        },
-        {
-          "symbol": "AVGO",
-          "sentiment": 0.7,
-          "importance": 5,
-          "unconfirmed_rumor": false,
-          "summary": "Broadcom CEO Hock Tan intervened to secure a $63 billion AI financing deal with Anthropic, and an analyst upgraded the stock with a $400 price target.",
-          "source": "benzinga"
-        },
-        {
-          "symbol": "INTC",
-          "sentiment": 0.3,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Intel announced a multiyear collaboration with Oracle to expand Xeon-based computing on OCI and a partnership with SAP for autonomous robot integration.",
-          "source": "benzinga / fiscal.ai"
+          "summary": "Micron Biomedical appointed Dr. Anand Subramony as EVP of Global Product Development.",
+          "source": "fiscal.ai",
+          "time": "14:44"
         },
         {
           "symbol": "AAPL",
-          "sentiment": 0.4,
+          "sentiment": 0.5,
           "importance": 3,
+          "unconfirmed_rumor": true,
+          "summary": "Apple is rumored to launch redesigned MacBook Pro models with touchscreen and OLED displays.",
+          "source": "fiscal.ai",
+          "time": "14:44"
+        },
+        {
+          "symbol": "NVDA",
+          "sentiment": -0.2,
+          "importance": 4,
+          "unconfirmed_rumor": true,
+          "summary": "Reuters reports the U.S. DOJ is examining NVIDIA's acquisition of Hugging Face, a potential regulatory hurdle for the deal.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "AAPL",
+          "sentiment": 0.5,
+          "importance": 4,
           "unconfirmed_rumor": false,
-          "summary": "Apple refreshed its iMac and 14-inch MacBook Pro with M6 and N1 chips, while iPhone 18 Pro sales show a 29% spike in China ahead of earnings.",
-          "source": "fiscal.ai / benzinga"
+          "summary": "Apple unveiled redesigned 14-inch and 16-inch MacBook Pros featuring its first touchscreen interface and tandem OLED displays.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "AAPL",
+          "sentiment": -0.1,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "Apple raised the starting price of the MacBook Neo on its U.S. education store by $50, citing rising component costs.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "MSFT",
+          "sentiment": 0.1,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Microsoft earnings are widely regarded as the most important print of the week for AI stocks, with analysts closely watching guidance on OpenAI and Azure.",
+          "source": "benzinga"
         },
         {
           "symbol": "NOW",
-          "sentiment": 0.5,
-          "importance": 3,
+          "sentiment": -0.3,
+          "importance": 4,
           "unconfirmed_rumor": false,
-          "summary": "ServiceNow expanded its partnership with Google Cloud to integrate Action Fabric with Gemini Enterprise for agentic AI capabilities.",
-          "source": "fiscal.ai / benzinga"
+          "summary": "ServiceNow stock slipped premarket ahead of earnings as Evercore ISI cut its price target to $160, despite Cantor Fitzgerald raising its target to $201.",
+          "source": "benzinga"
         }
       ]
     },
     "consumer": {
-      "news": "No significant news or SEC filings found for the Consumer Discretionary team's stocks in the last 2 hours.",
+      "news": "No significant news or SEC filings found for the Consumer Discretionary team's stocks within the last 2 hours.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "WHR",
-          "sentiment": -0.9,
-          "importance": 5,
+          "symbol": "TSLA",
+          "sentiment": 0.3,
+          "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Whirlpool reported a Q3 adjusted EBIT miss of 40% and slashed its full-year 2026 guidance, prompting BofA to reiterate an Underperform rating with a $25 price target.",
+          "summary": "CFTC approval to list KPI swaps tied to Tesla performance may increase liquidity and market interest in the stock.",
+          "source": "fiscal.ai",
+          "time": "14:44"
+        },
+        {
+          "symbol": "RCL",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Major banks updated Royal Caribbean price targets, reflecting a neutral outlook for the company.",
+          "source": "fiscal.ai",
+          "time": "14:44"
+        },
+        {
+          "symbol": "WHR",
+          "sentiment": -0.5,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Goldman Sachs lowered Whirlpool\u2019s price target to $35, signaling a bearish stance on the stock.",
+          "source": "benzinga",
+          "time": "14:44"
+        },
+        {
+          "symbol": "WHR",
+          "sentiment": -0.8,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Whirlpool faced severe analyst downgrades, including Stifel cutting its rating to Sell with a $20 target, following poor Q3 earnings.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "DG",
+          "sentiment": -0.7,
+          "importance": 4,
+          "unconfirmed_rumor": false,
+          "summary": "Dollar General stock declined as the company defended itself against an FTC and 20-state lawsuit alleging systematic customer overcharging.",
           "source": "benzinga"
         },
         {
           "symbol": "RCL",
-          "sentiment": 0.8,
-          "importance": 5,
+          "sentiment": 0.6,
+          "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Royal Caribbean beat Q3 EPS estimates at $6.57, raised its full-year 2026 adjusted EPS guidance to $17.85-$17.95, and announced a strategic expansion deal with Sandals.",
+          "summary": "Multiple Wall Street firms raised price targets for Royal Caribbean after the cruise line beat Q3 earnings estimates and raised full-year guidance.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "AMZN",
+          "sentiment": 0.3,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Amazon won FCC approval for its $11.5 billion Globalstar deal while streamlining costs with job cuts in its devices unit ahead of Q3 earnings.",
           "source": "benzinga"
         },
         {
           "symbol": "TSLA",
-          "sentiment": 0.6,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Daiwa Securities raised its price target for Tesla to $390 from $345, while ARK Invest continues to project long-term valuations between $4,400 and $5,000 by 2031.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "AMZN",
-          "sentiment": 0.4,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Amazon Business launched new AI-powered procurement capabilities and is set to host its 'Reshape 2026' conference, signaling continued investment in enterprise AI solutions.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "BKNG",
-          "sentiment": -0.3,
+          "sentiment": 0.2,
           "importance": 2,
           "unconfirmed_rumor": false,
-          "summary": "Baird lowered its price target for Booking Holdings to $223 from $230, reflecting slight caution in the travel sector.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "MAR",
-          "sentiment": 0.0,
-          "importance": 2,
-          "unconfirmed_rumor": false,
-          "summary": "Marriott opened its first EDITION hotel in Africa in Cape Town, while technical analysts flag the stock as overbought with an RSI of 79.5.",
+          "summary": "Elon Musk announced plans to expand Tesla's Robotaxi service to Miami and Tampa beach areas following requests from Florida state officials.",
           "source": "fiscal.ai"
         }
       ]
     },
     "financials": {
-      "news": "The financial services sector news includes Morgan Stanley revealing BlackRock's stake in TeamViewer SE and BlackRock filing for a 5.35% stake in the same company.",
+      "news": "No recent news or SEC filings impacting the selected Financial Services stocks. Please check again in a few hours.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "AXP",
+          "symbol": "JPM",
           "sentiment": 0.0,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Morgan Stanley Family Office filing reveals BlackRock's 5.35% stake in TeamViewer SE.",
+          "summary": "JPMorgan Chase reports Q3 earnings on October 29th.",
           "source": "benzinga",
-          "time": "15:06"
-        },
-        {
-          "symbol": "COIN",
-          "sentiment": 0.0,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Coinbase and Ripple increase political donations to swing elections",
-          "source": "benzinga",
-          "time": "15:06"
-        },
-        {
-          "symbol": "BLK",
-          "sentiment": 0.0,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "BlackRock Inc. files for 5.35% stake in TeamViewer SE.",
-          "source": "benzinga",
-          "time": "15:06"
+          "time": "14:45"
         },
         {
           "symbol": "GS",
           "sentiment": 0.0,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "Morgan Stanley reveals BlackRock's 5.35% stake in TeamViewer SE.",
+          "summary": "Goldman Sachs Group Inc. announces Q3 earnings on October 29th.",
           "source": "benzinga",
-          "time": "15:06"
+          "time": "14:45"
         },
         {
-          "symbol": "COIN",
-          "sentiment": 0.7,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Bitcoin rally above $80k and strong ETF inflows boost crypto market outlook, supporting Coinbase",
-          "source": "benzinga",
-          "time": "14:19"
-        },
-        {
-          "symbol": "HOOD",
-          "sentiment": 0.7,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Bitcoin rally above $80k and strong ETF inflows boost crypto market outlook, supporting Robinhood",
-          "source": "benzinga",
-          "time": "14:19"
-        },
-        {
-          "symbol": "HOOD",
-          "sentiment": 0.8,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Robinhood announced a strategic partnership with Ripple to integrate the RLUSD stablecoin across its retail and institutional platforms.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "HOOD",
-          "sentiment": 0.6,
+          "symbol": "V",
+          "sentiment": 0.0,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "IXS migrated its token to the Robinhood Chain, expanding on\u2011chain asset offerings.",
-          "source": "fiscal.ai"
+          "summary": "Visa Inc. reports Q3 earnings on October 29th.",
+          "source": "benzinga",
+          "time": "14:45"
+        },
+        {
+          "symbol": "AXP",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "American Express Co. reports Q3 earnings on October 29th.",
+          "source": "benzinga",
+          "time": "14:45"
+        },
+        {
+          "symbol": "GS",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Goldman Sachs Group Inc. reports Q3 earnings on October 29th.",
+          "source": "benzinga",
+          "time": "14:45"
+        },
+        {
+          "symbol": "V",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "Visa Inc. reports Q3 earnings on October 29th.",
+          "source": "benzinga",
+          "time": "14:45"
+        },
+        {
+          "symbol": "AXP",
+          "sentiment": 0.0,
+          "importance": 3,
+          "unconfirmed_rumor": false,
+          "summary": "American Express Co. reports Q3 earnings on October 29th.",
+          "source": "benzinga",
+          "time": "14:45"
+        },
+        {
+          "symbol": "V",
+          "sentiment": 0.8,
+          "importance": 5,
+          "unconfirmed_rumor": false,
+          "summary": "Visa\u2019s record Q4 earnings, 16% dividend hike, and multiple analyst upgrades have boosted bullish sentiment.",
+          "source": "benzinga"
         }
       ]
     },
     "healthcare": {
-      "news": "The healthcare sector is seeing a mix of strong fundamental catalysts, such as Merck's positive Phase 3 data and Intuitive Surgical's bullish price target hike, offset by valuation-driven downgrades for Moderna and Abbott. Investor sentiment remains cautious with the Fear & Greed index in the 'Fear' zone, but specific company news is driving differentiated moves within the group.",
+      "news": "No new confirmed facts, rumors, or SEC filings for this team's Healthcare stocks in the past two hours. The only available news is a generic Benzinga whale activity alert covering stocks outside the team's list with no specific actionable details. No urgency warranted.",
       "social": "Reddit blocked this run.",
       "findings": [
         {
-          "symbol": "MRK",
-          "sentiment": 0.8,
-          "importance": 4,
+          "symbol": "LLY",
+          "sentiment": 1.0,
+          "importance": 5,
           "unconfirmed_rumor": false,
-          "summary": "Merck and Kelun-Biotech reported positive Phase 3 results for the sacituzumab tirumotecan and Keytruda combination in advanced non-small cell lung cancer.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "ABBV",
-          "sentiment": 0.6,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "AbbVie submitted a Biologics License Application (BLA) to the FDA for etentamig, a second-generation BCMA x CD3 bispecific antibody, for relapsed/refractory multiple myeloma.",
-          "source": "fiscal.ai"
-        },
-        {
-          "symbol": "MRNA",
-          "sentiment": -0.7,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "William Blair downgraded Moderna to Market Perform, citing valuation concerns after a significant recent stock run.",
-          "source": "benzinga"
-        },
-        {
-          "symbol": "ABT",
-          "sentiment": -0.5,
-          "importance": 3,
-          "unconfirmed_rumor": false,
-          "summary": "Argus Research downgraded Abbott Laboratories to Hold.",
-          "source": "benzinga"
-        },
-        {
-          "symbol": "ISRG",
-          "sentiment": 0.7,
-          "importance": 4,
-          "unconfirmed_rumor": false,
-          "summary": "Daiwa Securities significantly raised its price target on Intuitive Surgical from $360 to $490.",
+          "summary": "Eli Lilly's retatrutide showed more than double the weight loss of Ozempic in a Phase 3 diabetes trial, beating expectations.",
           "source": "fiscal.ai"
         },
         {
           "symbol": "LLY",
-          "sentiment": 0.4,
+          "sentiment": 0.0,
+          "importance": 1,
+          "unconfirmed_rumor": false,
+          "summary": "Judge finds Eli Lilly's weight\u2011loss drug ads have negligible impact on Novo Nordisk's market share.",
+          "source": "benzinga"
+        },
+        {
+          "symbol": "LLY",
+          "sentiment": 0.3,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "Lilly launched the RE:SUMMIT public\u2011health platform in Dubai to address obesity science and stigma.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "LLY",
+          "sentiment": 0.0,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "Eli\u202fLilly announced retirement of EVP Patrik Jonsson and creation of a new Global Markets unit led by Ilya\u202fYuffa.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "UNH",
+          "sentiment": -0.3,
           "importance": 3,
           "unconfirmed_rumor": false,
-          "summary": "A US court denied Novo Nordisk's bid to block Eli Lilly's advertising campaigns targeting Wegovy and Ozempic, finding negligible market impact.",
+          "summary": "New Labor Department rule will force pharmacy\u2011benefit managers to disclose payment details, potentially raising costs for UnitedHealth.",
           "source": "benzinga"
         },
         {
           "symbol": "UNH",
-          "sentiment": 0.5,
-          "importance": 3,
+          "sentiment": 0.2,
+          "importance": 2,
           "unconfirmed_rumor": false,
-          "summary": "Morgan Stanley raised its price target on UnitedHealth Group to $531, while Wells Fargo lowered its target to $487, indicating mixed analyst sentiment.",
+          "summary": "UnitedHealth was highlighted in CNBC\u2019s \u2018Final Trades\u2019 segment, receiving a bullish pick from analyst Terranova.",
           "source": "benzinga"
         },
         {
-          "symbol": "AMGN",
-          "sentiment": -0.3,
+          "symbol": "JNJ",
+          "sentiment": 0.4,
           "importance": 2,
           "unconfirmed_rumor": false,
-          "summary": "The FDA determined that a promotional video submitted by Amgen for VECTIBIX Injection was false or misleading, breaching federal law.",
-          "source": "benzinga"
+          "summary": "Leerink Partners reaffirmed a buy rating on Johnson\u202f&\u202fJohnson with a $272 price target.",
+          "source": "fiscal.ai"
+        },
+        {
+          "symbol": "ABBV",
+          "sentiment": 0.3,
+          "importance": 2,
+          "unconfirmed_rumor": false,
+          "summary": "Allergan Aesthetics announced the return of BOTOX Cosmetic Day with promotional offers for members.",
+          "source": "fiscal.ai"
         }
       ]
     },
     "political_and_social_media": {
-      "overall": "The President's recent posts seem to be positively impacting sentiment, particularly on the Consumer Confidence, with a few neutral sentiments about political figures.",
+      "overall": "The political mood is focused on campaign activity with no immediate policy announcements, limiting market impact.",
       "findings": [
+        {
+          "source": "Truth Social @realDonaldTrump",
+          "post": "Trump claims strong majority support for stopping Iran from obtaining nuclear weapons",
+          "market_wide": false,
+          "affected": [
+            "LMT",
+            "RTX",
+            "NOC",
+            "GD",
+            "LDOS",
+            "TXT",
+            "KTOS",
+            "AVAV",
+            "PLTR",
+            "SAIC",
+            "HEI",
+            "HII"
+          ],
+          "sentiment": 0.6,
+          "importance": 3,
+          "why": "A political stance on Iran's nuclear program could boost expectations of higher U.S. defense spending and potential sanctions, lifting defense sector stocks.",
+          "seen_at": "2026-10-28T03:52-04:00"
+        },
+        {
+          "source": "Truth Social @realDonaldTrump",
+          "post": "Announced a free shipment of one million barrels of Venezuelan oil to the US, promising billions more and energy dominance",
+          "market_wide": false,
+          "affected": [
+            "GE"
+          ],
+          "sentiment": 0.6,
+          "importance": 3,
+          "why": "A large, cost\u2011free oil import could lower fuel prices and boost demand for energy equipment makers like GE, modestly supporting their stock",
+          "seen_at": "2026-10-27T21:47-04:00"
+        },
         {
           "source": "Truth Social",
           "post": "BREAKING NEWS: Consumer Confidence is up 7.5%, an extremely big rise. President DONALD J. TRUMP",
@@ -2154,21 +1999,6 @@
           "importance": 3,
           "why": "neutral sentiment about a political figure",
           "seen_at": "2026-10-27T13:15-04:00"
-        },
-        {
-          "source": "Truth Social @realDonaldTrump",
-          "post": "Endorsing Ralph Alvarado for Kentucky's 6th Congressional District.",
-          "market_wide": false,
-          "affected": [
-            "ALXN",
-            "LMT",
-            "BA",
-            "NVDA"
-          ],
-          "sentiment": 0.5,
-          "importance": 4,
-          "why": "Endorsements from influential figures can impact investor sentiment and potentially move stock prices",
-          "seen_at": "2026-10-26T21:10-04:00"
         }
       ]
     }
@@ -2240,7 +2070,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-28T15:48-04:00",
+    "time": "2026-10-28T16:03-04:00",
     "earnings": [
       {
         "date": "2026-10-28",
@@ -7789,13 +7619,25 @@
         {
           "date": "2026-10-27",
           "lesson": "Implement a 50% partial\u2011scale\u2011out at 1R to lock in gains early"
+        },
+        {
+          "date": "2026-10-28",
+          "lesson": "Never enter a trade without a specific, validated setup rationale \u2014 'recovered from Alpaca' means no setup exists and every losing trade proves this rule."
+        },
+        {
+          "date": "2026-10-28",
+          "lesson": "Require both VWAP confirmation AND relative volume >1.5x for mean reversion shorts on breakdowns, or skip the trade entirely."
+        },
+        {
+          "date": "2026-10-28",
+          "lesson": "Don't force-exit a winning trade just because you can't re-enter \u2014 relax the 75% invested cap to allow winners to run to close."
         }
       ],
       "ideas": {
-        "date": "2026-10-27",
+        "date": "2026-10-28",
         "strategy_ideas": [
-          "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news\u2011catalyst trade",
-          "Replace fixed dollar stops with ATR\u2011based dynamic stops to accommodate normal volatility while protecting downside"
+          "Test a lower position-size cap (e.g., 60% instead of 75%) to allow winners to run longer without premature forced exits.",
+          "For high-conviction news catalysts (importance \u2265 4), allow the position to run to close even if it means exceeding the daily limit slightly, rather than exiting to free capital."
         ]
       },
       "reviews": [
@@ -8237,9 +8079,27 @@
             "action": "remove_rejected",
             "symbol": "PLTR",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-28T16:04-04:00",
+            "action": "remove_rejected",
+            "symbol": "BAH",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-28T16:04-04:00",
+            "action": "remove_rejected",
+            "symbol": "HEI",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-28T16:04-04:00",
+            "action": "remove_rejected",
+            "symbol": "NOC",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-28T15:42-04:00"
+        "updated": "2026-10-28T16:04-04:00"
       },
       "research": {
         "time": "2026-10-28T14:41-04:00",
@@ -12144,13 +12004,25 @@
         {
           "date": "2026-10-27",
           "lesson": "Scale out early on high\u2011beta symbols and tighten stops when earnings or major releases are imminent"
+        },
+        {
+          "date": "2026-10-28",
+          "lesson": "Don't enter trades without proper analysis or context \u2014 the identical 'Recovered from Alpaca' reason across all three trades indicates entries were made mechanically, not strategically."
+        },
+        {
+          "date": "2026-10-28",
+          "lesson": "For high-rvol stocks like FLY, use ATR-based stops rather than fixed price stops to avoid premature exits on normal intraday noise."
+        },
+        {
+          "date": "2026-10-28",
+          "lesson": "Require VWAP confirmation after news catalysts before entering long positions, and avoid entries when negative sentiment is building (BA case)."
         }
       ],
       "ideas": {
-        "date": "2026-10-27",
+        "date": "2026-10-28",
         "strategy_ideas": [
-          "Test a stricter pull\u2011back rule that blocks entries until price retraces at least 0.5% after a >8% move",
-          "Add a VWAP\u2011bounce confirmation step for all news\u2011catalyst entries, using a smaller position size until the bounce is validated"
+          "Test a pre-market filter that blocks long entries on symbols with >2 negative analyst rating changes in 24 hours.",
+          "Implement a minimum stop distance rule: only take trades where the stop is at least 1.5% below entry to avoid micro-trade entries."
         ]
       },
       "reviews": [
@@ -12611,9 +12483,21 @@
             "action": "remove_rejected",
             "symbol": "SATS",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-28T16:05-04:00",
+            "action": "remove_rejected",
+            "symbol": "BA",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-28T16:05-04:00",
+            "action": "remove_rejected",
+            "symbol": "LPTH",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-28T14:52-04:00"
+        "updated": "2026-10-28T16:05-04:00"
       },
       "research": {
         "time": "2026-10-28T14:42-04:00",
