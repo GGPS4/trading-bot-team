@@ -959,5 +959,36 @@
       "BUY DIS x4 (~$440.96) [deploy]",
       "SHORT CMCSA x30 (~$654.45) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "09:49",
+    "trigger": "price moves in ['MGM']",
+    "market_view": "Market regime is calm with broad indexes up modestly (SPY +0.1%, QQQ +0.2%). Entertainment sector shows divergent individual momentum, requiring strict adherence to VWAP alignment and relative volume above 1.2 to eliminate low-win-rate trades.",
+    "experiment": "Test a VWAP-bounce strategy that includes the rvol > 1.2 filter and a trailing stop to capture upside once the price confirms above VWAP.",
+    "decisions": [
+      {
+        "symbol": "SPOT",
+        "action": "COVER",
+        "conviction": 4,
+        "reason": "SPOT is trading +1.0% off open and +0.8% above VWAP with rvol 1.84, invalidating the short trade structure.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "SONY",
+        "action": "COVER",
+        "conviction": 4,
+        "reason": "Executive order explicitly paused mean-reversion tactics; price is holding above VWAP.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "COVER SPOT",
+      "COVER SONY",
+      "BUY MGM x23 (~$657.0) [deploy]",
+      "BUY SPOT x1 (~$550.98) [deploy]"
+    ]
   }
 ]
