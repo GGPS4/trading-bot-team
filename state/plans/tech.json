@@ -1,60 +1,24 @@
 {
   "date": "2026-10-28",
-  "time": "11:04",
-  "trigger": "must invest $23,396 more (75% rule)",
-  "market_view": "Market is calm with SPY +0.1% and VIX down; most watchlist stocks are flat or below VWAP with weak relative volume. AMAT is the clearest setup, breaking out above its opening range while holding above VWAP with positive momentum. MU has a strong memory-demand news catalyst but is only marginally above VWAP, so we are deploying selectively to meet the 75% minimum without chasing extended or breakdown names.",
+  "time": "11:21",
+  "trigger": "big news on ['NVDA']",
   "decisions": [
     {
-      "symbol": "AMAT",
       "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Opening-range breakout above 409.11, price strictly above VWAP (+0.9%), positive 15m momentum (+0.4%), strong +3.6% day from oversold RSI 15.3; meets strict VWAP-plus-momentum filter."
-    },
-    {
-      "symbol": "MU",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "symbol": "NVDA",
       "setup": "news catalyst",
-      "reason": "SK Hynix record Q3 profit and 80% operating margin signal strong AI memory demand (importance 5, sentiment 0.8); stock up +4.3% on rvol 1.36, near VWAP inside opening range, news-backed momentum."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Positive news catalyst (new AI models) and stable price action. Buying to meet the 75% minimum investment requirement. Tight stop to respect the 'no chasing' rule."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "CRWV",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "VWAP bounce",
-      "reason": "Above VWAP +0.8% with RSI 21.3 deep oversold bounce and slight positive 15m momentum; low rvol 0.89 keeps conviction modest."
-    },
-    {
-      "symbol": "INTC",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "Intraday trend up, 15m momentum +0.4%, RSI 28.9 near oversold, price dipped -1.6% from open but holding support near 93.34."
-    },
-    {
-      "symbol": "AAPL",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "MacBook Pro OLED redesign news and Copilot adoption; at VWAP (+0.0%) with flat but liquid large-cap action, weaker setup."
-    }
+    "AMD",
+    "AVGO",
+    "MU",
+    "ANET",
+    "INTC"
   ],
-  "experiment": "Implement an automated filter that blocks long entries unless 15-minute momentum is positive and price is strictly above VWAP.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

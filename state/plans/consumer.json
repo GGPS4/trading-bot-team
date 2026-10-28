@@ -1,20 +1,39 @@
 {
   "date": "2026-10-28",
-  "time": "11:10",
-  "trigger": "must invest $2,989 more (75% rule)",
+  "time": "11:26",
+  "trigger": "must invest $2,992 more (75% rule)",
   "decisions": [
     {
       "symbol": "WEN",
-      "action": "SELL",
-      "reason": "Position is not currently held, but WEN is the strongest setup on the watchlist with a +14.3% gap on high volume (rvol 6.12) due to the Trian acquisition offer. However, since I do not hold it, I cannot sell. Wait, the instruction says 'Only list stocks you want to open (not already held) or close (currently held)'. I do not hold WEN. I must BUY it. Correcting action to BUY."
+      "action": "BUY",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Strong news catalyst (Trian acquisition offer at $7.35) with high relative volume (5.96) and positive momentum. Price is near the offer price, creating a clear intraday target."
+    },
+    {
+      "symbol": "CMG",
+      "action": "BUY",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Opening range breakout with strong 15m momentum and positive 60m trend. RSI is oversold (21.1), suggesting potential for a relief rally or continued momentum play ahead of after-close earnings."
+    },
+    {
+      "symbol": "WHR",
+      "action": "SHORT",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Bearish news catalyst (analyst downgrade to Sell, target cut to $24) despite opening range breakout. High relative volume (2.38) and negative sentiment suggest the breakout may fail or fade, offering a short opportunity."
     }
   ],
   "ranked_ideas": [
-    "WEN",
-    "WHR",
+    "MCD",
+    "MAR",
+    "LULU",
     "TSLA",
-    "CMG",
-    "MCD"
+    "HD"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
