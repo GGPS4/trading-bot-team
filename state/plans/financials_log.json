@@ -1220,5 +1220,27 @@
       "SELL SPGI",
       "BUY SOFI x118 (~$1991.25)"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "12:01",
+    "trigger": "big news on ['SOFI']",
+    "market_view": "The market is calm and slightly higher, with SPY +0.2% and most stocks mixed but broadly positive. The main event risk is the high-impact FOMC statement and press conference at 2:00 PM ET. Intraday setups are mixed, and we are near the close, so only high-quality momentum for today's move should be considered.",
+    "experiment": "Add a VWAP-above-price filter for all breakout entries to ensure the trade aligns with the intraday trend.",
+    "decisions": [
+      {
+        "symbol": "V",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Long momentum failed to follow through; price is below VWAP and the opening range, with negative intraday momentum and a downward trend despite higher relative volume. Exit before the high-impact FOMC.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      }
+    ],
+    "results": [
+      "SELL V",
+      "BUY MS x10 (~$1891.6) [deploy]",
+      "WATCHLIST remove rejected COF"
+    ]
   }
 ]
