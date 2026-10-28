@@ -1,34 +1,88 @@
 {
   "date": "2026-10-28",
-  "time": "10:12",
-  "trigger": "scheduled look",
+  "time": "10:28",
+  "trigger": "must invest $7,302 more (75% rule)",
+  "market_view": "Market is calm and slightly higher, with SPY +0.1%, QQQ +0.1%, VIXY -1.4%, and 47% of watchlist stocks up. Defense is supported by contract and price target news, but momentum is mixed and several stocks are overbought. We need to deploy capital to meet the 75% minimum while focusing on high-conviction intraday setups.",
   "decisions": [
     {
-      "symbol": "PLTR",
-      "action": "BUY",
-      "side": "short",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "symbol": "NOC",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.005,
+      "take_profit_pct": 0.0,
       "setup": "momentum",
-      "reason": "Strong breakdown below opening range with high relative volume (1.77) and negative momentum. News catalyst (analyst PT raises) is being sold off, indicating a 'sell the news' reaction. Shorting this weakness aligns with the risk-off tendency in high-beta tech/defense hybrids."
+      "reason": "NOC failed the strict VWAP filter, trading below VWAP and inside the opening range with weak momentum and low relative volume; exit the long."
     },
     {
-      "symbol": "AVAV",
+      "symbol": "HEI",
       "action": "BUY",
-      "side": "short",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Breakdown below opening range (125.71-126.47) with negative 15m momentum. RSI is low (33.3) but intraday trend is down. Shorting the breakdown to capture further downside before potential stabilization."
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "HEI broke above its opening range and held above VWAP with positive intraday momentum, but relative volume is low; tentative long."
     }
   ],
   "ranked_ideas": [
-    "HII",
-    "HEI",
-    "SAIC",
-    "LHX",
-    "GD"
+    {
+      "symbol": "HII",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Above VWAP and positive 15m momentum, but earnings tomorrow and overbought RSI limit conviction."
+    },
+    {
+      "symbol": "CACI",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Navy contract news with high importance, but relative volume below 1.5 and strict VWAP/Rvol filter not met."
+    },
+    {
+      "symbol": "SAIC",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "OR breakout and above VWAP, but low relative volume and overbought RSI; lower priority."
+    },
+    {
+      "symbol": "GD",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Geopolitical tension supporting defense, but weak trend and low relative volume; not high conviction."
+    },
+    {
+      "symbol": "TXT",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Breakdown below opening range and VWAP, weak trend; but market mood is normal, so short conviction limited."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news catalyst trade.",
+  "watchlist_changes": {
+    "add": [
+      {
+        "symbol": "GD",
+        "reason": "Geopolitical tension over Iran nuclear ambitions is keeping defense stocks in focus."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "BAH",
+        "reason": "Trend down and no fresh catalyst; lacks a high-conviction setup."
+      }
+    ]
+  }
 }

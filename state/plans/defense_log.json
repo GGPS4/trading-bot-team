@@ -1265,5 +1265,37 @@
     "results": [
       "BUY PLTR x16 (~$3154.72) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "10:28",
+    "trigger": "must invest $7,302 more (75% rule)",
+    "market_view": "Market is calm and slightly higher, with SPY +0.1%, QQQ +0.1%, VIXY -1.4%, and 47% of watchlist stocks up. Defense is supported by contract and price target news, but momentum is mixed and several stocks are overbought. We need to deploy capital to meet the 75% minimum while focusing on high-conviction intraday setups.",
+    "experiment": "Add a filter that requires a contract value >$200M or confirmation from at least two independent sources before entering a news catalyst trade.",
+    "decisions": [
+      {
+        "symbol": "NOC",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "NOC failed the strict VWAP filter, trading below VWAP and inside the opening range with weak momentum and low relative volume; exit the long.",
+        "stop_loss_pct": 0.005,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "HEI",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "HEI broke above its opening range and held above VWAP with positive intraday momentum, but relative volume is low; tentative long.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL NOC",
+      "BUY HEI blocked: conviction 3 is below the minimum 4",
+      "BUY HII x11 (~$3084.51) [deploy]",
+      "BUY CACI x5 (~$3298.2) [deploy]",
+      "WATCHLIST remove rejected BAH"
+    ]
   }
 ]
