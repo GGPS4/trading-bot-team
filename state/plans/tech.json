@@ -1,65 +1,78 @@
 {
   "date": "2026-10-28",
-  "time": "12:34",
+  "time": "13:19",
   "trigger": "scheduled look",
-  "market_view": "The session is calm and rising, so favor confirmed momentum breakouts in Tech/Defense rather than breakdowns. AVGO is the cleanest momentum setup above VWAP with positive 15m/60m momentum and volume confirmation; ANET and IBM also fit. Keep AAPL, AMAT, and AMD with trailing stops, and exit the stalled CRWV long to redeploy capital. Earnings for MSFT/NOW after close and FOMC later today are secondary to today's intraday moves.",
+  "market_view": "The market is calm and rising with SPY +0.3%, QQQ +0.3%, VIXY -1.8%, and 50% of watched stocks up. MU leads with +4.7% on AI sector tailwinds, CRWV breaks out of its opening range with strong m15 momentum, and most tech names are trading near VWAP with mixed signals. The Fed FOMC event at 2 PM ET provides a near-term catalyst, but overall momentum favors quality breakouts and AI-driven moves in the final trading hours. I'm looking to redeploy capital into the best intraday setups while respecting the 75% investment minimum.",
   "decisions": [
     {
-      "symbol": "CRWV",
+      "symbol": "AAPL",
       "action": "SELL",
       "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "untagged",
-      "reason": "Stalled long: negative look and 60m momentum despite a positive day; trend down and below-VWAP strength fading; redeploy capital per rotation rules."
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "news catalyst",
+      "reason": "AAPL trading flat with look +0.1%, vwap +0.1%, rvol 0.67, trend flat; news catalyst setup playing out without strong momentum; rotating capital to better setups per executive order discipline on VWAP and relative volume confirmation."
     },
     {
-      "symbol": "AVGO",
+      "symbol": "CRWV",
       "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.02,
-      "setup": "momentum",
-      "reason": "Momentum breakout above VWAP, positive 15m/60m momentum, rvol 1.1; Cantor and Susquehanna raised targets; team order to trail momentum breakouts."
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "CRWV confirmed opening range breakout above 60.59 with strong m15 momentum +1.1% and above VWAP +1.6%. rvol low at 0.69 but breakout with AI sector strength favors continuation. Overnight Susquehanna positive on AMD indicates AI sector momentum benefiting related names."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "ANET",
+      "symbol": "MU",
       "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Momentum breakout above VWAP, positive 60m momentum, team order to trail ANET."
+      "setup": "news catalyst",
+      "reason": "MU +4.7% day on AI sector tailwinds, above VWAP with OR intact. Positive sentiment from Benzinga and fiscal.ai. Strong momentum day despite low rvol 0.83. Overnight: MU rises on AI sector tailwinds despite broader market volatility."
     },
     {
       "symbol": "IBM",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Trend up, above VWAP, positive 60m momentum, though RSI overbought and low rvol; wait for pullback."
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "IBM OR breakout confirmed at 247.96-251.92, above VWAP +0.9%. Low rvol 0.34 means fade risk, but breakout with daily +1.1% gain supports continuation. IBM extended partnership with USTA for five years, reinforcing presence in sports technology. 5d +3.4%, 20d +13.7%, RSI 82.4, 50d above."
     },
     {
-      "symbol": "INTU",
+      "symbol": "ANET",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Positive 15m momentum, above VWAP, trend up; confirm with volume before scaling."
+      "setup": "pullback in uptrend",
+      "reason": "ANET at OR low 187.08, above VWAP +0.1%. m15 +0.1%, m60 -0.1%. Rvol 0.67 low but waiting for momentum shift. Earnings not today (INTC, AMD, ANET earnings coming Nov 3)."
+    },
+    {
+      "symbol": "TXN",
+      "direction": "long",
+      "conviction": 1,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "other",
+      "reason": "TXN below VWAP -0.2% but rvol 1.03 just above 1. Awaiting VWAP reclaimed or skip. DZ Bank upgraded to Hold with $300 price target overnight. 5d +11.2%, 20d +9.6%, RSI 64.7, 50d above."
+    },
+    {
+      "symbol": "MSFT",
+      "direction": "long",
+      "conviction": 1,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "MSFT OR breakdown 529.8-534.55, below VWAP -0.3%, rvol 1.04, trend down. Executive order prioritizes quality over quantity and strict VWAP confirmation. Gains on AI-driven market rally but technicals favor waiting. Earnings after the close."
     }
   ],
   "experiment": "",
   "watchlist_changes": {
     "add": [],
-    "remove": [
-      {
-        "symbol": "CRWV",
-        "reason": "Stalled, weak momentum, trending down; no catalyst to justify keeping on the active watchlist."
-      }
-    ]
+    "remove": []
   }
 }
