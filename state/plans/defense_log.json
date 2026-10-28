@@ -1357,5 +1357,34 @@
       "BUY LMT blocked: already holding this stock",
       "BUY HEI blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "12:41",
+    "trigger": "scheduled look",
+    "market_view": "Market is calm but with selective moves today. Defense stocks showing mixed action with some OR breakouts and breakdowns. Key levels being tested around VWAP and opening ranges in a normal regime (SPY +0.2%, QQQ +0.1%, VIXY -1.6%). Need to add ~$2,850 to reach 75% minimum while staying within 5-position limit and 15% max per position.",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "LDOS",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "LDOS trading below VWAP (-0.7%) with weak momentum (rvol 0.32). Below criteria for long entries per rule 'above VWAP + rvol > 1.5'. News about $99M Cyber Command contract not translating to intraday strength; technicals violate core entry rule.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.001
+      },
+      {
+        "symbol": "HEI",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "HEI trading above VWAP (+0.4%) with OR breakout (308.91-310.46). +1.2% intraday momentum, rvol 0.74 best among non-held stocks. News: quantum-solution suite for federal agencies (sentiment 0.4, importance 2). Fits opening range breakout setup with tight stop and 3% first target.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL LDOS",
+      "BUY HEI x10 (~$3117.8)"
+    ]
   }
 ]
