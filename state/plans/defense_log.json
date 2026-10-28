@@ -1198,5 +1198,65 @@
       "WATCHLIST add rejected LPTH",
       "WATCHLIST remove rejected HII"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "time": "14:55",
+    "trigger": "first look this run",
+    "market_view": "Defense names diverge sharply: LMT shows a strong opening-range breakout above $620 backed by bullish catalysts (PAC-3 facility in Poland, $694M hypersonic contract, analyst target lifts), while PLTR, LDOS, AVAV, SAIC, and HII break down below their opening ranges. Market is calm with SPY +0.4%, favoring confirmed catalyst plays over fading setups. Three current positions are below VWAP with negative momentum and should be exited.",
+    "experiment": "Testing whether accepting rvol < 1.5 for high-conviction opening range breakouts (importance >= 3 news catalysts) improves entry timing vs. waiting for rvol confirmation, using LMT as the test case (rvol 0.92, PAC-3 facility importance 4, $694M contract importance 3).",
+    "decisions": [
+      {
+        "symbol": "BAH",
+        "action": "COVER",
+        "conviction": null,
+        "reason": "Below VWAP (-0.3%), breakdown below opening range, -0.51% loss. No valid setup; exiting to redeploy capital.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "HEI",
+        "action": "COVER",
+        "conviction": null,
+        "reason": "Below VWAP (-0.4%), -0.78% loss, no stabilization above VWAP. Exiting per discipline.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "NOC",
+        "action": "COVER",
+        "conviction": null,
+        "reason": "Below VWAP (-0.4%), trend down, -0.55% loss. No valid setup; exiting to redeploy capital.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "LMT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strong OR breakout above 615.49-620.78; price at $627.17. High-conviction news: PAC-3 missile facility in Poland (importance 4), $694M Air Force hypersonic contract (importance 3), TD Cowen PT $650, Bernstein PT $633. m15 +0.2% confirms breakout strength.",
+        "stop_loss_pct": 0.0187,
+        "take_profit_pct": 0.02
+      },
+      {
+        "symbol": "RTX",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Above VWAP (+0.1%) with OR breakout (193.26-194.8 to 196.72). Price stabilization above intraday average. Airbus engine issues are long-term, not today's catalyst.",
+        "stop_loss_pct": 0.0176,
+        "take_profit_pct": 0.02
+      }
+    ],
+    "results": [
+      "COVER BAH",
+      "COVER HEI",
+      "COVER NOC",
+      "BUY LMT x5 (~$3141.2)",
+      "BUY RTX blocked: conviction 3 is below the minimum 4",
+      "SHORT PLTR x17 (~$3291.11) [deploy]",
+      "SHORT LDOS x24 (~$3300.0) [deploy]",
+      "SHORT AVAV x26 (~$3251.3) [deploy]",
+      "SHORT SAIC x8 (~$1182.12) [deploy]"
+    ]
   }
 ]
