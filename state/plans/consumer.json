@@ -1,67 +1,67 @@
 {
   "date": "2026-10-28",
-  "time": "12:34",
-  "trigger": "must invest $4,158 more (75% rule)",
-  "market_view": "Market is calm and slightly higher, with SPY +0.2%. WEN is showing strong momentum on earnings, while several discretionary names are breaking down. We need to deploy capital into high-conviction setups.",
+  "time": "13:04",
+  "trigger": "scheduled look",
+  "market_view": "The market is calm and slightly positive with SPY and QQQ both up 0.4%, VIXY down 2.0%, and 50% of watched stocks up. Consumer Discretionary group shows low news flow with no major catalysts. KEY setups: LOW has a confirmed opening range breakout trending up, MAR also has an OR breakout. WHR faded from a +4.9% open on heavy volume with analyst downgrades. WEN surged 15.3% on strong earnings. I'll focus on adding the LOW breakout to reach the 75% minimum investment requirement while holding existing positions.",
   "decisions": [
     {
-      "symbol": "WEN",
+      "symbol": "LOW",
       "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Strong earnings beat and raised guidance, rvol 5.38, above VWAP, positive sentiment; momentum long."
-    },
-    {
-      "symbol": "BKNG",
-      "action": "SHORT",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakdown",
-      "reason": "Breakdown below opening range, rvol 1.3, oversold, weak trend; high-quality short setup."
-    },
-    {
-      "symbol": "DEO",
-      "action": "SHORT",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakdown",
-      "reason": "Breakdown below opening range, rvol 1.32, trend down; momentum short."
+      "conviction": 3.5,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout confirmed at 198.97, stock at 199.89 trending up with +0.8% gain, rvol 0.54 decent, market calm/rising, good momentum setup for remaining session. Stop placed near OR low at 197.13."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "WEN",
+      "symbol": "MAR",
       "direction": "long",
       "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout confirmed at 391.66, stock at 392.57 trending up with +0.6% gain, rvol 1.0, market calm supports the move"
+    },
+    {
+      "symbol": "TSLA",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Strong earnings and high volume."
+      "reason": "Trending up with +0.3% gain, rvol 1.17, m15 +0.4%, positive momentum despite -1.2% day move, OR 400.51-410.5 not yet broken but room for continuation"
     },
     {
-      "symbol": "BKNG",
+      "symbol": "WHR",
       "direction": "short",
-      "conviction": 4,
+      "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakdown",
-      "reason": "Breakdown with high relative volume."
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "Faded from +4.9% open on heavy volume (rvol 1.86), negative analyst downgrades overnight, OR breakout but stock above level but fading significantly from open - short on the fade"
     },
     {
-      "symbol": "DEO",
+      "symbol": "CMG",
       "direction": "short",
-      "conviction": 4,
+      "conviction": 2,
+      "stop_loss_pct": 0.018,
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "Breakout fading with m15 -0.2%, m60 -0.5%, trend down, rvol 1.11 but losing momentum, earnings after close may cap the move"
+    },
+    {
+      "symbol": "AZO",
+      "direction": "long",
+      "conviction": 2,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "opening range breakdown",
-      "reason": "Breakdown with high relative volume."
+      "setup": "opening range breakout",
+      "reason": "OR breakout confirmed at 3144.21, stock at 3161.71, but rvol only 0.47 so lower conviction for sustained move"
     }
   ],
-  "experiment": "Incorporate an automated filter that blocks long trade signals if sentiment for high-importance news in the last 24 hours is negative.",
+  "experiment": "",
   "watchlist_changes": {
     "add": [],
     "remove": []
