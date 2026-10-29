@@ -16835,7 +16835,7 @@
     "setup": "momentum",
     "experiment": "Testing opening-range breakout momentum with volume confirmation; TKO rvol 1.19 was slightly under the 1.2 threshold, so I am watching for volume follow-through.",
     "order_id": "81b31e26-c829-4944-8136-4f33e020b29e",
-    "status": "open",
+    "status": "closed",
     "entry_price": 176.61,
     "entry_time": "2026-10-29T15:33:40.934072232Z",
     "high": 176.61,
@@ -16845,7 +16845,11 @@
     "stop_qty_sent": 1,
     "exit_order_id": "cdf33bd8-daa4-4e4a-95c1-0ceec522705c",
     "exit_reason": "manager_sell",
-    "exit_note": "Long momentum failed; price is below VWAP and inside the opening range, so exit the setup instead of holding a broken trade."
+    "exit_note": "Long momentum failed; price is below VWAP and inside the opening range, so exit the setup instead of holding a broken trade.",
+    "exit_price": 175.29,
+    "exit_time": "2026-10-29T16:53:18.170857704Z",
+    "pnl": -1.5,
+    "pnl_pct": -0.0085
   },
   {
     "id": "financials-AXP-202610291133-dd96",
@@ -16905,7 +16909,7 @@
     "setup": "opening range breakout",
     "experiment": "Implement trailing stops for long positions to lock in gains",
     "order_id": "16a9ad9e-04ce-4c19-a40d-624e70d9faa3",
-    "status": "open",
+    "status": "closed",
     "entry_price": 92.24,
     "entry_time": "2026-10-29T15:33:42.834920441Z",
     "high": 92.355,
@@ -16915,7 +16919,11 @@
     "stop_qty_sent": 10,
     "exit_order_id": "79fd3eff-9ead-4af8-b77a-85b2b6595326",
     "exit_reason": "manager_sell",
-    "exit_note": "Fading opening-range breakout momentum and losing relative strength; exit before close."
+    "exit_note": "Fading opening-range breakout momentum and losing relative strength; exit before close.",
+    "exit_price": 91.3,
+    "exit_time": "2026-10-29T16:53:17.95261523Z",
+    "pnl": -10.32,
+    "pnl_pct": -0.0112
   },
   {
     "id": "tech-AVGO-202610291137-8f67",
@@ -17010,7 +17018,7 @@
     "setup": "opening range breakout",
     "experiment": "Use VWAP or volume confirmation before entering breakout trades",
     "order_id": "71b86305-b14f-4951-a20e-43947d9a6a5e",
-    "status": "open",
+    "status": "closed",
     "entry_price": 17.52,
     "entry_time": "2026-10-29T16:04:05.69242473Z",
     "high": 17.555,
@@ -17020,7 +17028,11 @@
     "stop_qty_sent": 80,
     "exit_order_id": "1c0c9115-5d60-4eff-8e09-8d729dfe9540",
     "exit_reason": "manager_sell",
-    "exit_note": "Failed to hold above opening range high, momentum turning down; exit."
+    "exit_note": "Failed to hold above opening range high, momentum turning down; exit.",
+    "exit_price": 17.47,
+    "exit_time": "2026-10-29T16:53:20.119012532Z",
+    "pnl": -5.4,
+    "pnl_pct": -0.0039
   },
   {
     "id": "financials-V-202610291204-7df5",
@@ -17043,7 +17055,7 @@
     "setup": "momentum",
     "experiment": "Use VWAP or volume confirmation before entering breakout trades",
     "order_id": "6fd4bb09-6479-49de-8cee-ef5810a9631f",
-    "status": "open",
+    "status": "closed",
     "entry_price": 410.01,
     "entry_time": "2026-10-29T16:04:02.380827167Z",
     "high": 410.56,
@@ -17053,7 +17065,11 @@
     "stop_qty_sent": 3,
     "exit_order_id": "ac78481d-be8d-48b6-b3d6-7b829d00c5d3",
     "exit_reason": "manager_sell",
-    "exit_note": "Legal/risk-off headwinds and lack of fresh strength; exit to reduce exposure."
+    "exit_note": "Legal/risk-off headwinds and lack of fresh strength; exit to reduce exposure.",
+    "exit_price": 409.55,
+    "exit_time": "2026-10-29T16:53:18.854811053Z",
+    "pnl": -2.61,
+    "pnl_pct": -0.0021
   },
   {
     "id": "entertainment-BAM-202610291207-4f56",
@@ -17244,7 +17260,7 @@
     "qty_open": 3.0,
     "dollars": 657.15,
     "est_price": 219.05,
-    "stop_price": 212.48,
+    "stop_price": 219.83,
     "first_stop": 212.48,
     "take_profit_price": 232.19,
     "risk_dollars": 19.71,
@@ -17256,11 +17272,12 @@
     "status": "open",
     "entry_price": 219.38,
     "entry_time": "2026-10-29T16:17:41.555231849Z",
-    "high": 221.16,
+    "high": 221.6,
     "low": 219.38,
-    "stop_order_id": "94b836b3-8f70-426b-a9fb-67e297fcc57e",
-    "stop_sent": 212.48,
-    "stop_qty_sent": 3
+    "stop_order_id": "58ecf580-1578-4f43-99a9-a26fce9daade",
+    "stop_sent": 219.83,
+    "stop_qty_sent": 3,
+    "trail_active": true
   },
   {
     "id": "financials-COIN-202610291227-ded7",
@@ -17317,7 +17334,7 @@
     "entry_price": 80.34,
     "entry_time": "2026-10-29T16:34:01.402330814Z",
     "high": 80.82,
-    "low": 80.3,
+    "low": 80.26,
     "stop_order_id": "abcd12c5-0c3f-48ad-8936-040ccc3a1980",
     "stop_sent": 79.11,
     "stop_qty_sent": 3
@@ -17488,7 +17505,7 @@
     "entry_price": 314.95,
     "entry_time": "2026-10-29T16:43:02.58940405Z",
     "high": 314.95,
-    "low": 314.03,
+    "low": 313.755,
     "stop_order_id": "2a1aea35-22d2-4a81-b74a-e92bdfd0a937",
     "stop_sent": 307.94,
     "stop_qty_sent": 2
@@ -17531,8 +17548,8 @@
     "symbol": "DIS",
     "side": "long",
     "kind": "shares",
-    "qty": 2,
-    "qty_open": 2,
+    "qty": 2.0,
+    "qty_open": 2.0,
     "dollars": 221.45,
     "est_price": 110.725,
     "stop_price": 108.51,
@@ -17544,8 +17561,14 @@
     "setup": "momentum",
     "experiment": "Pre-emptively reduce position sizes during market-wide strategy review pauses to minimize execution slippage on market exits.",
     "order_id": "db253f83-607f-4ca5-b241-92cc3c1e1d0c",
-    "status": "submitted",
-    "entry_price": null
+    "status": "open",
+    "entry_price": 110.79,
+    "entry_time": "2026-10-29T16:53:18.158950765Z",
+    "high": 110.9,
+    "low": 110.79,
+    "stop_order_id": "3065fe1e-0717-4bec-9941-ef74c5921821",
+    "stop_sent": 108.51,
+    "stop_qty_sent": 2
   },
   {
     "id": "financials-ICE-202610291253-e97e",
@@ -17555,8 +17578,8 @@
     "symbol": "ICE",
     "side": "long",
     "kind": "shares",
-    "qty": 5,
-    "qty_open": 5,
+    "qty": 5.0,
+    "qty_open": 5.0,
     "dollars": 827.05,
     "est_price": 165.41,
     "stop_price": 162.1,
@@ -17568,7 +17591,13 @@
     "setup": "earnings gap",
     "experiment": "Use VWAP or volume confirmation before entering breakout trades",
     "order_id": "738b84ea-ae69-4616-8dac-b97b1b034578",
-    "status": "submitted",
-    "entry_price": null
+    "status": "open",
+    "entry_price": 165.51,
+    "entry_time": "2026-10-29T16:53:18.79160841Z",
+    "high": 165.64,
+    "low": 165.32,
+    "stop_order_id": "f47177b0-33e1-4433-aebd-8b581915a24a",
+    "stop_sent": 162.1,
+    "stop_qty_sent": 5
   }
 ]

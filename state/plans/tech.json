@@ -1,61 +1,83 @@
 {
   "date": "2026-10-29",
-  "time": "12:43",
-  "trigger": "big news on ['GOOG', 'GOOGL']",
+  "time": "12:58",
+  "trigger": "must invest $25,820 more (75% rule)",
+  "market_view": "Market is in risk-off with SPY down 0.4%, QQQ down 1.4%, and VIXY down 1.6%. The broad market is falling hard while most watched stocks are up, indicating risk-off tone. Longs are half size and need high conviction; breakdowns are favored. We are in the final hour before close, so only high-quality intraday setups for today are suitable.",
   "decisions": [
     {
-      "symbol": "MSFT",
-      "action": "SELL",
-      "reason": "Opening range breakdown with price below VWAP. Market is risk-off, and despite positive analyst news, the intraday technicals are weak. Closing to protect capital and redeploy into stronger setups.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
-    },
-    {
-      "symbol": "NVDA",
-      "action": "SELL",
-      "reason": "Trading below VWAP with flat momentum in a risk-off market. The 'news catalyst' (Cohere investment) is not driving price action. Closing to free up capital for higher conviction setups.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
-    },
-    {
-      "symbol": "INTU",
-      "action": "SELL",
-      "reason": "Stalled momentum and trading near entry with no clear intraday catalyst. Risk-off environment makes holding weak momentum plays risky. Selling to meet the 75% investment mandate with stronger candidates.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
-    },
-    {
-      "symbol": "GOOGL",
+      "symbol": "AVGO",
       "action": "BUY",
-      "reason": "High-conviction mean reversion/bounce setup. Stock is significantly oversold (RSI 15.9) after a -12.3% drop, but showing +0.3% intraday strength and heavy volume (rvol 8.25). Positive analyst sentiment (Needham Buy, $450 PT) provides a catalyst for a bounce. Conviction 5/5.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "mean reversion"
-    },
-    {
-      "symbol": "PANW",
-      "action": "BUY",
-      "reason": "Strong relative strength in a down market. Trading above VWAP with positive 15m momentum and high volume (rvol 1.7). Conviction 4/5 due to risk-off regime, but setup is valid for intraday bounce.",
-      "stop_loss_pct": 0.02,
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum"
+      "setup": "opening range breakout",
+      "reason": "AVGO broke above its opening range and holds above VWAP, with prior uptrend context. Breakout setup aligns with a high-profit-factor setup. Risk-off requires high conviction, but this is the cleanest breakout."
     },
     {
-      "symbol": "CRWV",
-      "action": "BUY",
-      "reason": "Opening range breakout confirmed. Price is above VWAP (+2.0%) and OR high. News catalyst (Treasury Secretary downplaying AI debt worries) supports the move. Conviction 4/5.",
+      "symbol": "NOW",
+      "action": "SHORT",
+      "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "opening range breakout"
+      "setup": "news catalyst",
+      "reason": "ServiceNow Q3 earnings disappointed, stock down 18.5% in premarket and now around -25.6% on high volume, breaking below OR/VWAP. High-impact bearish catalyst in risk-off regime favors short."
     }
   ],
   "ranked_ideas": [
-    "AAPL",
-    "AMD",
-    "AVGO",
-    "MU",
-    "TXN"
+    {
+      "symbol": "MSFT",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Analyst upgrades to PT 650 and bullish Azure/AI narrative, but stock broke down below VWAP; high conviction news, execution risk."
+    },
+    {
+      "symbol": "NVDA",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Cohere investment and AI demand signal, but stock below VWAP; high conviction news, not a long setup."
+    },
+    {
+      "symbol": "PANW",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Positive m15/m60 and rvol 1.72, but below VWAP; not suitable in risk-off."
+    },
+    {
+      "symbol": "CRWV",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Above VWAP and broke opening range, but momentum turning negative and low rvol; lower conviction."
+    },
+    {
+      "symbol": "AMD",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Above VWAP, but no breakout and weak momentum; lower conviction."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Develop a morning post-earnings breakout strategy to capture pre-market reaction moves in high-conviction software and chip tickers reporting after-hours earnings.",
+  "watchlist_changes": {
+    "add": [
+      {
+        "symbol": "EQIX",
+        "reason": "TD Cowen maintained Buy and raised price target; data center demand in headlines."
+      }
+    ],
+    "remove": []
+  }
 }
