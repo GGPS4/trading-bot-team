@@ -1420,5 +1420,37 @@
       "BUY LMT blocked: team already has the maximum number of positions",
       "BUY KTOS blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "09:58",
+    "trigger": "price moves in ['TXT']",
+    "market_view": "Market is in risk-off with SPY -0.5% and QQQ -1.7%, while VIXY rose. Defense stocks are mixed but supported by earnings and contract catalysts. We are focusing on high-conviction defense longs and avoiding low-conviction setups.",
+    "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
+    "decisions": [
+      {
+        "symbol": "CACI",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Held long with Army contract news but live relative volume only 1.01, below the 1.5 threshold for news longs; slight loss and weak momentum, exit to redeploy.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "TXT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Textron Q3 EPS beat and raised FY2026 guidance; live day +10.6%, m15 +1.2%, rvol 2.46, above VWAP, strong momentum in defense sector.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL CACI",
+      "BUY TXT blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY LMT x0.976191 (~$630.24) [deploy]",
+      "WATCHLIST remove rejected LDOS",
+      "WATCHLIST remove rejected BAH"
+    ]
   }
 ]

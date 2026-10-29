@@ -1,85 +1,76 @@
 {
   "date": "2026-10-29",
-  "time": "09:43",
-  "trigger": "first look this run",
-  "market_view": "Broad market is risk-off with QQQ down 1.8% and SPY down 0.6%, favoring selectivity and strict volume confirmation. However, financial bellwethers with earnings catalysts (MA and ICE) are showing significant relative strength and high trading volume against market headwinds. We focus our day trades strictly on executive-targeted earnings catalysts with tight stops.",
+  "time": "09:58",
+  "trigger": "price moves in ['ICE']",
+  "market_view": "Market regime is risk-off with broader indexes falling, but Financials are displaying notable relative strength led by strong earnings reports. We are prioritizing high-conviction earnings catalysts like ICE and MA that trade cleanly above VWAP with heavy volume, while trimming stalled setups to comply with position limits.",
   "decisions": [
     {
-      "symbol": "MA",
-      "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.018,
-      "take_profit_pct": 0.036,
-      "setup": "earnings gap",
-      "reason": "Mastercard reported strong Q3 beats on EPS ($5.31) and revenue ($9.81B), leading to a +4.7% day move, +1.4% above VWAP with massive relative volume of 11.67x."
+      "symbol": "AXP",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Rotating out of AXP as its intraday momentum has stalled and trend turned down, freeing position capacity for higher-conviction earnings catalyst ICE."
     },
     {
       "symbol": "ICE",
       "action": "BUY",
-      "conviction": 4,
+      "conviction": 5,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Intercontinental Exchange reported robust Q3 earnings with net revenue up 15% YoY to $2.8B, supported by high relative volume (5.25x) and a solid opening gain of +3.5% on the day."
-    },
-    {
-      "symbol": "COIN",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Targeted for upcoming earnings; recovering strongly from a pre-market dip, currently +1.1% off open and above VWAP (+0.2%) with heavy relative volume of 3.8x."
+      "take_profit_pct": 0.035,
+      "setup": "earnings gap",
+      "reason": "Q3 revenues surged 15% YoY beating estimates; price is up +5.8% today (+2.3% m15 momentum) and trading well above VWAP (+1.7%) with rvol 2.26."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "V",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Strong sympathy run with MA, up +2.6% on the day, +0.9% above VWAP, with extreme relative volume of 15.4x."
-    },
-    {
-      "symbol": "SOFI",
+      "symbol": "COIN",
       "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Intraday momentum pushing +1.0% off open, +0.6% above VWAP with 3.57x relative volume."
+      "setup": "earnings gap",
+      "reason": "Earnings catalyst approaching today; strong intraday recovery +2.0% off open and above VWAP with rvol 2.30."
     },
     {
-      "symbol": "AXP",
+      "symbol": "SPGI",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.035,
+      "setup": "momentum",
+      "reason": "Strong intraday trend (+1.8% off open, +1.2% m15) trading above VWAP with clear upward momentum."
+    },
+    {
+      "symbol": "BLK",
       "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Solid payments momentum, +2.0% day, +0.4% above VWAP with 2.89x relative volume."
+      "reason": "Steady uptrend (+1.8% day, +0.6% m15) trading above VWAP."
     },
     {
-      "symbol": "JPM",
+      "symbol": "SCHW",
       "direction": "long",
-      "conviction": 4,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "VWAP bounce",
-      "reason": "Holding steady above VWAP (+0.2%) with 1.62x relative volume despite broader index drag."
+      "setup": "mean reversion",
+      "reason": "Deeply oversold daily RSI of 22.2 holding above VWAP (+0.2%) with elevated volume (rvol 2.05)."
     },
     {
-      "symbol": "MS",
+      "symbol": "COF",
       "direction": "long",
-      "conviction": 4,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Demonstrating high relative volume of 4.51x and holding above opening levels."
+      "reason": "Up +2.0% today and holding above VWAP (+0.3%) with positive intraday slope."
     }
   ],
-  "experiment": "Use VWAP or volume confirmation before entering breakout trades",
+  "experiment": "Implement trailing stops for long positions to lock in gains",
   "watchlist_changes": {
     "add": [],
     "remove": []

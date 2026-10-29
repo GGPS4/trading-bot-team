@@ -1071,5 +1071,34 @@
       "BUY SOFI x55 (~$943.8) [deploy]",
       "BUY AXP x2 (~$648.12) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "09:58",
+    "trigger": "price moves in ['ICE']",
+    "market_view": "Market regime is risk-off with broader indexes falling, but Financials are displaying notable relative strength led by strong earnings reports. We are prioritizing high-conviction earnings catalysts like ICE and MA that trade cleanly above VWAP with heavy volume, while trimming stalled setups to comply with position limits.",
+    "experiment": "Implement trailing stops for long positions to lock in gains",
+    "decisions": [
+      {
+        "symbol": "AXP",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Rotating out of AXP as its intraday momentum has stalled and trend turned down, freeing position capacity for higher-conviction earnings catalyst ICE.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "ICE",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Q3 revenues surged 15% YoY beating estimates; price is up +5.8% today (+2.3% m15 momentum) and trading well above VWAP (+1.7%) with rvol 2.26.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      }
+    ],
+    "results": [
+      "SELL AXP",
+      "BUY ICE x5 (~$822.57)"
+    ]
   }
 ]

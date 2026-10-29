@@ -1,32 +1,87 @@
 {
   "date": "2026-10-29",
-  "time": "09:45",
-  "trigger": "price moves in ['HII']",
+  "time": "09:58",
+  "trigger": "price moves in ['TXT']",
+  "market_view": "Market is in risk-off with SPY -0.5% and QQQ -1.7%, while VIXY rose. Defense stocks are mixed but supported by earnings and contract catalysts. We are focusing on high-conviction defense longs and avoiding low-conviction setups.",
   "decisions": [
     {
-      "symbol": "LMT",
-      "action": "BUY",
-      "reason": "Strong relative strength (+1.7% day) in a risk-off market, high volume (rvol 2.02), and above VWAP. RSI is high (85.7) indicating strong momentum, but the 'look' is negative (-0.3%), suggesting a potential pullback entry point. Trump's comments on Iran nuclear program provide a geopolitical catalyst for defense spending. Conviction 4/5.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum"
+      "symbol": "CACI",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Held long with Army contract news but live relative volume only 1.01, below the 1.5 threshold for news longs; slight loss and weak momentum, exit to redeploy."
     },
     {
-      "symbol": "KTOS",
+      "symbol": "TXT",
       "action": "BUY",
-      "reason": "Trading above VWAP (+0.9%) with positive 15m momentum. RSI is neutral (46.5), offering room for upside without being overbought. Volume is decent (rvol 1.53). Trump's defense spending comments support the sector. Conviction 4/5.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "VWAP bounce"
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Textron Q3 EPS beat and raised FY2026 guidance; live day +10.6%, m15 +1.2%, rvol 2.46, above VWAP, strong momentum in defense sector."
     }
   ],
   "ranked_ideas": [
-    "NOC",
-    "GD",
-    "HEI",
-    "AVAV",
-    "BAH"
+    {
+      "symbol": "LMT",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Prime defense contractor but conviction low and RSI overbought; watch for pullback."
+    },
+    {
+      "symbol": "GD",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Earnings tomorrow, but RSI overbought and no clear intraday catalyst."
+    },
+    {
+      "symbol": "NOC",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Defense prime, but live setup lacks volume confirmation."
+    },
+    {
+      "symbol": "KTOS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Defense momentum but 20-day trend weak and RSI neutral."
+    },
+    {
+      "symbol": "AVAV",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Defense but live trend down and low relative volume; lower priority."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": [
+      {
+        "symbol": "LDOS",
+        "reason": "No live price/volume catalyst and quiet session, so it no longer deserves a spot for today's trading."
+      },
+      {
+        "symbol": "BAH",
+        "reason": "Weak momentum and low relative volume, no clear defense catalyst."
+      }
+    ]
+  }
 }

@@ -1127,5 +1127,52 @@
       "WATCHLIST removed WHR",
       "WATCHLIST added EAT"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "10:00",
+    "trigger": "price moves in ['LULU']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "CMG",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Strong opening range breakout above $30.89 with high relative volume (4.54) and positive 15m momentum. Despite mixed analyst notes, the intraday price action and volume confirm a strong long setup. Market is risk-off, but this stock is leading with conviction.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "BKNG",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Trading above VWAP with strong 15m momentum (+1.4%) and positive look (+1.6%). RSI is low (35), suggesting room for a bounce. Volume is decent (1.28). Fits the 'strong move off the open' criteria.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "RCL",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Trading above VWAP with positive 15m momentum and high relative volume (1.74). Day change is +3.6%, indicating strength. RSI is approaching overbought (68.6) but not yet there. Good candidate for a momentum continuation.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "DEO",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "Clear opening range breakdown below $91.66 with negative 15m momentum (-1.0%) and trading below VWAP. Market is risk-off, favoring shorts on weak stocks. Volume is low (0.51) but the trend is down.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY CMG blocked: team already has the maximum number of positions",
+      "BUY BKNG blocked: team already has the maximum number of positions",
+      "BUY RCL blocked: team already has the maximum number of positions",
+      "SHORT DEO blocked: team already has the maximum number of positions"
+    ]
   }
 ]
