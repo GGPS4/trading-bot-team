@@ -1239,5 +1239,36 @@
       "WATCHLIST removed AZO",
       "WATCHLIST added EBAY"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "11:37",
+    "trigger": "scheduled look",
+    "market_view": "Market is in caution with the index down -1.1%, SPY -0.2%, QQQ -1.1%, and VIXY -2.2%. Longs are sized 25% smaller and we should be pickier. With a long bias from the executive but a need to avoid low-conviction shorts, the focus is on high-conviction, catalyst-driven long entries with volume confirmation before the 15:30 cutoff.",
+    "experiment": "Testing gap-and-go playbook for AMZN ahead of Q3 earnings after close, using OR breakout with volume confirmation and ATR-based stops.",
+    "decisions": [
+      {
+        "symbol": "CMG",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Bearish analyst price target cuts (RBC, Keybanc) and negative news; prior long setup had tight stop at 30.94 near entry, risking whipsaw.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "EBAY",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Q3 beat and raised 2026 outlook, analysts PT raises, OR breakout above 122.84 with rvol 2.59, above VWAP, volume confirmation; high conviction long.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL CMG",
+      "BUY EBAY x11 (~$1360.87)",
+      "WATCHLIST remove rejected MCD",
+      "WATCHLIST remove rejected TSLA"
+    ]
   }
 ]

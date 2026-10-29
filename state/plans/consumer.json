@@ -1,87 +1,86 @@
 {
   "date": "2026-10-29",
-  "time": "11:08",
+  "time": "11:37",
   "trigger": "scheduled look",
-  "market_view": "The market is in risk-off, with SPY down and VIX spiking. Watchlist names are mixed, but some show intraday strength. We are focusing on high-conviction catalyst-driven long entries and avoiding low-conviction shorts.",
+  "market_view": "Market is in caution with the index down -1.1%, SPY -0.2%, QQQ -1.1%, and VIXY -2.2%. Longs are sized 25% smaller and we should be pickier. With a long bias from the executive but a need to avoid low-conviction shorts, the focus is on high-conviction, catalyst-driven long entries with volume confirmation before the 15:30 cutoff.",
   "decisions": [
     {
-      "symbol": "RCL",
+      "symbol": "CMG",
       "action": "SELL",
       "conviction": 3,
       "stop_loss_pct": 0.0,
       "take_profit_pct": 0.0,
       "setup": "momentum",
-      "reason": "Long was negative and momentum stalled in a risk-off tape; exit to redeploy capital."
+      "reason": "Bearish analyst price target cuts (RBC, Keybanc) and negative news; prior long setup had tight stop at 30.94 near entry, risking whipsaw."
     },
     {
-      "symbol": "AMZN",
+      "symbol": "EBAY",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.03,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "reason": "Overnight analyst upgrades and positive EPS/revenue expectations; high rvol 3.72, m15/m60 positive, above VWAP, with volume confirmation."
+      "reason": "Q3 beat and raised 2026 outlook, analysts PT raises, OR breakout above 122.84 with rvol 2.59, above VWAP, volume confirmation; high conviction long."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "BKNG",
+      "symbol": "AMZN",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "OR breakout but weak follow-through; watch for continuation."
+      "reason": "OR breakout above 248.36 with rvol 3.04, above VWAP, overnight positive analysts, trend up."
     },
     {
-      "symbol": "DG",
+      "symbol": "RCL",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout occurred but low relative volume; lower quality."
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "OR 303.9-311.3, day +4.2, rvol 1.43, positive cabin automation news."
     },
     {
       "symbol": "LULU",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "Day up but 60-min momentum negative; wait for reclaim."
+      "reason": "day +3.9, OR 105.88-109.81, rvol 1.49, above VWAP but m15 fading."
     },
     {
-      "symbol": "MCD",
+      "symbol": "CVNA",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
       "setup": "momentum",
-      "reason": "Overbought; avoid in risk-off."
+      "reason": "day +15.1, OR breakout, rvol 3.04, but m60 -0.9 fading; high volatility."
     },
     {
-      "symbol": "TSLA",
+      "symbol": "EAT",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Flat intraday; no edge."
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Analysts overweight, price targets raised, but day -0.4; not high conviction."
     }
   ],
-  "experiment": "Testing high-conviction news catalyst entries with ATR-based stops in a risk-off regime while respecting the 50-day moving average.",
+  "experiment": "Testing gap-and-go playbook for AMZN ahead of Q3 earnings after close, using OR breakout with volume confirmation and ATR-based stops.",
   "watchlist_changes": {
-    "add": [
-      {
-        "symbol": "EBAY",
-        "reason": "Barclays maintains Overweight and raises price target; in consumer discretionary sector and moving on news."
-      }
-    ],
+    "add": [],
     "remove": [
       {
-        "symbol": "AZO",
-        "reason": "Quiet, low relative volume and no fresh catalyst."
+        "symbol": "MCD",
+        "reason": "Overbought RSI 81.4 and trend down with weak momentum; not a high-quality day-trading setup."
+      },
+      {
+        "symbol": "TSLA",
+        "reason": "Flat trend, low rvol 1.06, no clear catalyst; conviction low."
       }
     ]
   }

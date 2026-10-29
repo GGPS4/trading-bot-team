@@ -1,47 +1,60 @@
 {
   "date": "2026-10-29",
-  "time": "11:27",
-  "trigger": "scheduled look",
+  "time": "11:37",
+  "trigger": "big news on ['MSFT', 'MSFT']",
   "decisions": [
     {
-      "symbol": "AMD",
-      "action": "BUY",
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "AMD is trading above VWAP (+0.9%) and has broken out of the opening range (560.75-572.54) with positive 60m momentum (+0.6%). Despite the risk-off market, AMD is holding up well relative to peers like MSFT and NOW. The breakout is supported by a slight volume uptick (rvol 1.19) and fits the 'strong move off the open' criteria. Conviction is moderate (4/5) due to market headwinds, but it is the strongest long candidate on the watchlist currently."
-    },
-    {
-      "symbol": "AVGO",
-      "action": "BUY",
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "AVGO has broken out of its opening range (338.84-344.18) and is trading above VWAP (+0.8%). It shows positive 60m momentum (+0.7%) and is one of the few tech stocks maintaining an uptrend in a risk-off environment. The setup is clean, with the price holding above the breakout level. Conviction is 4/5."
-    },
-    {
-      "symbol": "TXN",
-      "action": "BUY",
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "TXN has broken out of its opening range (306.55-309.01) and is trading above VWAP (+0.5%). It has strong 60m momentum (+0.6%) and is part of a broader semiconductor strength theme. Although rvol is low (0.58), the price action is firm. Conviction is 4/5."
-    },
-    {
-      "symbol": "NVDA",
-      "action": "BUY",
-      "setup": "momentum",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "NVDA is trading above VWAP (+0.2%) and has positive 60m momentum (+0.1%). It is near the top of its opening range but showing resilience. The news catalyst (partnership with Eclypsium) adds a slight bullish bias. Conviction is 4/5, slightly lower due to flat 15m momentum."
+      "symbol": "CRWV",
+      "action": "SELL",
+      "reason": "Position has hit first target (64.36) and is trading near resistance. Taking partial profits to lock in gains and redeploy capital into higher-conviction setups. Trailing stop is active on remaining shares."
     }
   ],
   "ranked_ideas": [
-    "INTC",
-    "IBM",
-    "MU",
-    "PANW",
-    "INTU"
+    {
+      "symbol": "AVGO",
+      "side": "long",
+      "conviction": 4,
+      "setup": "opening range breakout",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Strong opening range breakout above 344.18 with positive momentum (m15 +0.4%, m60 +0.7%) and trading above VWAP. Despite market caution, relative strength and technical setup align with day-trading strategy."
+    },
+    {
+      "symbol": "AMD",
+      "side": "long",
+      "conviction": 4,
+      "setup": "opening range breakout",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Broke out of opening range (572.54) and is holding above VWAP with positive 60m momentum. RSI is neutral (41.8), leaving room for upside. Fits the high-conviction breakout criteria."
+    },
+    {
+      "symbol": "TXN",
+      "side": "long",
+      "conviction": 4,
+      "setup": "opening range breakout",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Clean breakout above OR high (309.01) with steady momentum. RSI at 65.7 suggests strength but not yet overbought. Volume is lower (rvol 0.59), so size is reduced, but technicals are sound."
+    },
+    {
+      "symbol": "NVDA",
+      "side": "long",
+      "conviction": 3,
+      "setup": "momentum",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Trading above VWAP with positive momentum. News catalyst (Eclypsium partnership) provides supportive sentiment. However, conviction is slightly lower due to flat 15m momentum and lower volume."
+    },
+    {
+      "symbol": "INTU",
+      "side": "long",
+      "conviction": 3,
+      "setup": "pullback in uptrend",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "reason": "Holding above VWAP with positive 15m momentum. RSI at 62.4 indicates bullish trend. Less urgent than breakouts but offers a safer entry point if breakouts fail."
+    }
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
