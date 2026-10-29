@@ -1330,5 +1330,72 @@
       "BUY CVNA blocked: team already has the maximum number of positions",
       "BUY EBAY blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "13:02",
+    "trigger": "scheduled look",
+    "market_view": "Market is risk-off with broad indices down and VIX spiking; focus stays on high-conviction catalyst-driven long setups and avoiding low-conviction shorts. Existing longs are mostly stalled or overbought, while the best intraday setup on the watchlist is CMG breaking its opening range on volume.",
+    "experiment": "Testing high-conviction opening range breakouts in a risk-off regime with ATR-based stops and partial profit-taking at 1R.",
+    "decisions": [
+      {
+        "symbol": "HD",
+        "action": "SELL",
+        "conviction": 1,
+        "reason": "Weak opening range breakout with fading momentum and low volume; stalled long, exit.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "CMG",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "CMG broke above opening range on rvol 1.72 and Q3 revenue beat; high conviction but risk-off size reduced.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL HD",
+      "BUY CMG blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY CVNA x12 (~$821.4) [deploy]",
+      "WATCHLIST removed DG",
+      "WATCHLIST removed TSLA",
+      "WATCHLIST removed MCD",
+      "WATCHLIST added SBUX",
+      "WATCHLIST added CCL",
+      "WATCHLIST added NCLH"
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "13:07",
+    "trigger": "big news on ['NCLH']",
+    "market_view": "Market is in a risk-off tape, with SPY and QQQ lower and VIXY higher, while the majority of watched discretionary names are still up. The session is being driven by consumer-discretionary Q3 news flow, especially NCLH and AMZN, but the broad risk backdrop limits conviction for longs. I favor high-conviction catalyst names only and would avoid low-conviction shorts in this regime.",
+    "experiment": "Testing high-conviction news catalyst entries with ATR-based stops in a risk-off regime while respecting the 50-day moving average.",
+    "decisions": [
+      {
+        "symbol": "LOW",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Stalled after the opening-range breakout, overbought, and losing momentum with fading m15/m60 and low relative volume. In a risk-off tape, I am rotating this long out before the close.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "NCLH",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "NCLH reported Q3 EPS above expectations and is the urgent catalyst of the session; stock is up 13%, above VWAP, and the opening range broke out with rvol 3.16 for volume confirmation. High conviction, but risk-off halves size and overbought RSI warrants tight risk.",
+        "stop_loss_pct": 0.04,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL LOW",
+      "BUY NCLH blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY CMG x30 (~$935.1) [deploy]",
+      "WATCHLIST remove rejected HD"
+    ]
   }
 ]

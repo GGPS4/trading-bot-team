@@ -1,83 +1,69 @@
 {
   "date": "2026-10-29",
-  "time": "12:43",
-  "trigger": "must invest $5,069 more (75% rule)",
-  "market_view": "Risk-off session with broad market selling; VIX spiking and SPY/QQQ down. Defense stocks are mixed but showing selective earnings/news strength. Best setups remain high-conviction long breakouts with volume, especially post-earnings momentum. Staying defensive and trading only A+ setups.",
+  "time": "13:07",
+  "trigger": "scheduled look",
+  "market_view": "Risk-off tape with SPY -0.4%, QQQ -1.4%, VIXY -2.2%, and broad selling pressure. Despite the risk-off tone, selective defense strength is emerging from earnings and contract catalysts. LHX is breaking out after strong earnings, but longs require higher conviction in this regime.",
   "decisions": [
     {
       "symbol": "LHX",
       "action": "BUY",
-      "conviction": 4,
+      "conviction": 5,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "LHX beat Q3 earnings and raised full-year guidance; stock cleared opening range with rvol 2.46 and held above VWAP, fitting pre-market earnings breakout strategy."
-    },
-    {
-      "symbol": "TXT",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "TXT beat EPS and lifted outlook; OR breakout occurred with rvol 2.12 and price above VWAP, though sales fell short; high-conviction momentum long."
+      "take_profit_pct": 0.03,
+      "setup": "earnings gap",
+      "reason": "LHX reported strong Q3 results before the open, beat expectations and raised full-year guidance. Stock broke above its opening range with rvol 2.36, held above VWAP, and showed uptrend momentum. High-conviction defense earnings long with volume confirmation; in risk-off we require conviction +1, so rated 5."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "HII",
+      "symbol": "TXT",
       "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "earnings gap",
-      "reason": "HII reported strong Q3 and raised guidance; high volume suggests post-earnings continuation."
-    },
-    {
-      "symbol": "GD",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "GD broke opening range but low relative volume; mild long momentum."
+      "reason": "Earnings beat but sales miss; OR breakout and rvol 2.05, above VWAP, but already up 14% and momentum cooled, so lower conviction."
     },
     {
       "symbol": "CACI",
       "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
+      "setup": "news catalyst",
+      "reason": "Army contract win, but relative volume only 0.67, lacking volume confirmation for new entry in risk-off."
+    },
+    {
+      "symbol": "KTOS",
+      "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "CACI won Army contract, but weak volume; conviction lower."
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "OR breakout above VWAP and uptrend, but no high-conviction catalyst and rvol 1.28, conviction below threshold."
     },
     {
       "symbol": "HEI",
       "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "HEI broke OR but low rvol; tentative long."
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "OR breakout above VWAP and uptrend, but weak relative volume and no clear catalyst."
     },
     {
-      "symbol": "NOC",
+      "symbol": "AVAV",
       "direction": "long",
-      "conviction": 2,
+      "conviction": 3,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
+      "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "NOC day positive but weak momentum; low conviction."
+      "reason": "OR breakout above VWAP and oversold RSI, but low relative volume and no high-conviction catalyst."
     }
   ],
   "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
   "watchlist_changes": {
     "add": [],
-    "remove": [
-      {
-        "symbol": "LDOS",
-        "reason": "No volume catalyst or clear setup; stock quiet today."
-      }
-    ]
+    "remove": []
   }
 }
