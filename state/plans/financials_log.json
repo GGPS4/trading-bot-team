@@ -1212,5 +1212,47 @@
       "BUY AXP x2 (~$651.63) [deploy]",
       "BUY HOOD x10 (~$917.6) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "12:04",
+    "trigger": "scheduled look",
+    "market_view": "Caution regime persists with SPY -0.3%, QQQ -1.1%, VIXY -1.6%; market is sliding. MA and ICE earnings before the open beat, ICE Hyperliquid partnership positive, COIN crypto adoption headline. Longs are sized 25% smaller. Current longs are mostly stalled or underwater (MA, AXP). No strong high-conviction long with volume above VWAP in risk-off; best setups are selective momentum like SOFI.",
+    "experiment": "Use VWAP or volume confirmation before entering breakout trades",
+    "decisions": [
+      {
+        "symbol": "AXP",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Below VWAP and in downtrend with negative momentum; news catalyst faded, stop not hit but risk/reward poor.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "MA",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Earnings beat failed; now below VWAP, in downtrend, negative 15m/60m momentum, fading; cut loss.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "SOFI",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "OR breakout above 17.49 with rvol 1.61, above VWAP, m15/m60 positive, day +2.4; strong intraday momentum despite caution.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL AXP",
+      "SELL MA",
+      "BUY SOFI x80 (~$1403.2)",
+      "BUY V x3 (~$1228.62) [deploy]",
+      "WATCHLIST remove rejected SCHW",
+      "WATCHLIST remove rejected BLK",
+      "WATCHLIST remove rejected COF"
+    ]
   }
 ]

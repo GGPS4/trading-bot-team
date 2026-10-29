@@ -1,32 +1,74 @@
 {
   "date": "2026-10-29",
-  "time": "11:33",
+  "time": "12:04",
   "trigger": "scheduled look",
+  "market_view": "Caution tape is dominant, with the index down about 1.1% and SPY -0.3%, QQQ -1.1%, so long sizing is reduced and I am being selective. The defense group has selective catalysts, but the broader mood is risk-off. Textron's opening-range breakout on volume and the Bell/earnings beat stand out, while LMT and RTX lack the required volume confirmation.",
   "decisions": [
-    {
-      "symbol": "CACI",
-      "action": "BUY",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reasoning": "Strong news catalyst: $185M 5-year US Army contract for contested-environment technologies. Stock is above VWAP, opening range breakout, and has positive momentum. Conviction 4/5 due to clear catalyst and volume confirmation, though market is risk-off (half size applied)."
-    },
     {
       "symbol": "TXT",
       "action": "BUY",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "earnings gap",
-      "reasoning": "Earnings beat and raised guidance. Strong opening range breakout, trading well above VWAP with high relative volume (2.19). Conviction 4/5 based on strong earnings reaction and momentum, despite risk-off market."
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "Bell Textron announced an additional Bell 407GXi order and Q3 EPS beat/raised guidance; stock broke the opening range at 84.36-87.22 with rvol 2.19 and held above VWAP, day +14.2%. High conviction with volume confirmation."
     }
   ],
   "ranked_ideas": [
-    "KTOS",
-    "AVAV",
-    "HEI",
-    "GD",
-    "NOC"
+    {
+      "symbol": "GD",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "Defense prime broke OR with volume, but earnings tomorrow add risk."
+    },
+    {
+      "symbol": "CACI",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Army contract won, but relative volume was only 0.77, weakening the entry."
+    },
+    {
+      "symbol": "KTOS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "Defense momentum broke OR, but rvol 1.23 was modest."
+    },
+    {
+      "symbol": "AVAV",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "Defense momentum, but low volume and no clear catalyst."
+    },
+    {
+      "symbol": "PLTR",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Analyst PT raise, but stock did not confirm OR breakout and Space is paused."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": [
+      {
+        "symbol": "LDOS",
+        "reason": "No fresh catalyst and very weak volume, quiet for a day-trading defense watchlist."
+      }
+    ]
+  }
 }

@@ -1,87 +1,39 @@
 {
   "date": "2026-10-29",
-  "time": "11:37",
+  "time": "12:04",
   "trigger": "scheduled look",
-  "market_view": "Market is in caution with the index down -1.1%, SPY -0.2%, QQQ -1.1%, and VIXY -2.2%. Longs are sized 25% smaller and we should be pickier. With a long bias from the executive but a need to avoid low-conviction shorts, the focus is on high-conviction, catalyst-driven long entries with volume confirmation before the 15:30 cutoff.",
   "decisions": [
     {
-      "symbol": "CMG",
+      "symbol": "BKNG",
       "action": "SELL",
-      "conviction": 3,
+      "reason": "Stock is below VWAP, losing momentum (m15 -0.7%), and showing a clear downtrend. In a risk-off market with QQQ down 1.1%, this long is underperforming and violating the 'above VWAP' rule for longs. Closing to free up capital for stronger setups.",
       "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "momentum",
-      "reason": "Bearish analyst price target cuts (RBC, Keybanc) and negative news; prior long setup had tight stop at 30.94 near entry, risking whipsaw."
+      "take_profit_pct": 0.0
     },
     {
-      "symbol": "EBAY",
+      "symbol": "CMG",
       "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Q3 beat and raised 2026 outlook, analysts PT raises, OR breakout above 122.84 with rvol 2.59, above VWAP, volume confirmation; high conviction long."
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "AMZN",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above 248.36 with rvol 3.04, above VWAP, overnight positive analysts, trend up."
-    },
-    {
-      "symbol": "RCL",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "OR 303.9-311.3, day +4.2, rvol 1.43, positive cabin automation news."
-    },
-    {
-      "symbol": "LULU",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "day +3.9, OR 105.88-109.81, rvol 1.49, above VWAP but m15 fading."
+      "reason": "Strong opening range breakout above $30.89 with high relative volume (2.15) and positive momentum (m15 +0.3%, m60 +0.6%). Trading above VWAP (+1.3%). Despite mixed analyst notes, the intraday technicals are strong, fitting the 'momentum' setup. Conviction 4/5 due to high volume and clear breakout.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
     },
     {
       "symbol": "CVNA",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
-      "setup": "momentum",
-      "reason": "day +15.1, OR breakout, rvol 3.04, but m60 -0.9 fading; high volatility."
-    },
-    {
-      "symbol": "EAT",
-      "direction": "long",
-      "conviction": 3,
+      "action": "BUY",
+      "reason": "Massive gap up (+15.6% day, +5.2% open) on heavy volume (rvol 2.76). Holding above VWAP (+0.9%) with positive momentum. The pre-market news mentioned analysts slashing forecasts, but the stock is gapping up aggressively, suggesting a strong catalyst or short squeeze. High conviction (4/5) due to volume and trend strength, but sizing will be reduced due to market caution.",
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Analysts overweight, price targets raised, but day -0.4; not high conviction."
+      "setup": "earnings gap"
     }
   ],
-  "experiment": "Testing gap-and-go playbook for AMZN ahead of Q3 earnings after close, using OR breakout with volume confirmation and ATR-based stops.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": [
-      {
-        "symbol": "MCD",
-        "reason": "Overbought RSI 81.4 and trend down with weak momentum; not a high-quality day-trading setup."
-      },
-      {
-        "symbol": "TSLA",
-        "reason": "Flat trend, low rvol 1.06, no clear catalyst; conviction low."
-      }
-    ]
-  }
+  "ranked_ideas": [
+    "LULU",
+    "DG",
+    "RCL",
+    "TSLA",
+    "MCD"
+  ],
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

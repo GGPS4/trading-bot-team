@@ -1,73 +1,64 @@
 {
   "date": "2026-10-29",
-  "time": "11:33",
+  "time": "12:04",
   "trigger": "scheduled look",
-  "market_view": "Market is in risk-off with SPY down 0.3%, QQQ down 1.2%, and VIXY down 2.1%, fear spiking. Longs are half size and need higher conviction, and intraday focus is on clear opening-range breakouts with volume while avoiding weak longs. Existing ICE and MA earnings longs are holding, but we are into the last hours before close, so only high-conviction setups are appropriate.",
+  "market_view": "Caution regime persists with SPY -0.3%, QQQ -1.1%, VIXY -1.6%; market is sliding. MA and ICE earnings before the open beat, ICE Hyperliquid partnership positive, COIN crypto adoption headline. Longs are sized 25% smaller. Current longs are mostly stalled or underwater (MA, AXP). No strong high-conviction long with volume above VWAP in risk-off; best setups are selective momentum like SOFI.",
   "decisions": [
     {
-      "symbol": "SOFI",
+      "symbol": "AXP",
       "action": "SELL",
       "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "momentum",
-      "reason": "Risk-off and need to rotate out of high-beta momentum into the earnings trio; close long."
-    },
-    {
-      "symbol": "V",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.0,
       "setup": "news catalyst",
-      "reason": "Overnight negative legal risk (5bn UK lawsuit) and risk-off regime; position stalled at +0.004%, stop 402.69 not hit. Close long."
+      "reason": "Below VWAP and in downtrend with negative momentum; news catalyst faded, stop not hit but risk/reward poor."
     },
     {
-      "symbol": "COIN",
+      "symbol": "MA",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.0,
+      "setup": "earnings gap",
+      "reason": "Earnings beat failed; now below VWAP, in downtrend, negative 15m/60m momentum, fading; cut loss."
+    },
+    {
+      "symbol": "SOFI",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "earnings gap",
-      "reason": "Executive team order to add on upcoming/after-close earnings with conviction >=4; earnings catalyst."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above 17.49 with rvol 1.61, above VWAP, m15/m60 positive, day +2.4; strong intraday momentum despite caution."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "AXP",
+      "symbol": "V",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "rvol 2.35, day +2.1, but trend down and VWAP below; fading momentum despite high volume."
+    },
+    {
+      "symbol": "C",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "OR breakout, rvol 1.36, above VWAP, but m15 -0.4; momentum fading."
+    },
+    {
+      "symbol": "COIN",
       "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "reason": "Amex Canada launched Hilton Honors card; consumer sector, OR breakout, but risk-off limits conviction."
-    },
-    {
-      "symbol": "HOOD",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout with rvol 1.38, tech, but m15 fading momentum; lower conviction."
-    },
-    {
-      "symbol": "GS",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout, financial, but low rvol 0.91; needs volume confirmation."
-    },
-    {
-      "symbol": "COF",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Financial OR breakout, rvol 0.8; weak volume."
+      "reason": "Crypto adoption headline and earnings after close, but unconfirmed revenue run rate; high retail interest."
     },
     {
       "symbol": "JPM",
@@ -76,12 +67,47 @@
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "Financials but no clear catalyst/breakout; weak in risk-off."
+      "reason": "Flat; no clear edge."
+    },
+    {
+      "symbol": "GS",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Flat; no clear edge."
     }
   ],
-  "experiment": "Implement trailing stops for long positions to lock in gains",
+  "experiment": "Use VWAP or volume confirmation before entering breakout trades",
   "watchlist_changes": {
-    "add": [],
-    "remove": []
+    "add": [
+      {
+        "symbol": "COIN",
+        "reason": "Crypto adoption headline and upcoming earnings after close; high retail interest."
+      },
+      {
+        "symbol": "V",
+        "reason": "High relative volume 2.35 and price target update; institutional flow."
+      },
+      {
+        "symbol": "C",
+        "reason": "Opening range breakout with rvol 1.36 and above VWAP."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "SCHW",
+        "reason": "Oversold and quiet; no fresh catalyst."
+      },
+      {
+        "symbol": "BLK",
+        "reason": "Breakdown below opening range; no long setup."
+      },
+      {
+        "symbol": "COF",
+        "reason": "Low relative volume and weak trend; no clear catalyst."
+      }
+    ]
   }
 }
