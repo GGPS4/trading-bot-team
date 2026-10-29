@@ -1023,5 +1023,27 @@
     "experiment": "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries.",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-29",
+    "time": "10:57",
+    "trigger": "scheduled look",
+    "market_view": "Risk-off tape remains in control with broad downside; entertainment group is not immune. MGM is the dominant catalyst today, hit by multiple bearish price target cuts and a Q3 EPS/revenue miss, which breaks the prior momentum long. Other watchlist names lack high-conviction, volume-confirmed setups in this regime, so the focus is on capital preservation and only acting on clear dislocations.",
+    "experiment": "Pre-emptively reduce position sizes during market-wide strategy review pauses to minimize execution slippage on market exits.",
+    "decisions": [
+      {
+        "symbol": "MGM",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "Multiple bearish price target cuts (JPMorgan, Barclays, Stifel, Truist) and Q3 miss; prior long thesis broken in risk-off market.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.05
+      }
+    ],
+    "results": [
+      "SELL MGM",
+      "BUY SPOT x0.505771 (~$280.11) [deploy]",
+      "BUY TKO x1 (~$176.89) [deploy]"
+    ]
   }
 ]

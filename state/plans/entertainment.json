@@ -1,18 +1,28 @@
 {
   "date": "2026-10-29",
-  "time": "10:33",
+  "time": "10:57",
   "trigger": "scheduled look",
-  "market_view": "Market is in risk-off with broad indices down; SPY -0.4%, QQQ -1.4%. Entertainment sector is mixed, with MGM hit by multiple price target cuts and a Q3 miss, while existing longs are mostly flat or weak except SONY and SPOT. No new high-conviction catalyst long meets the executive's conviction >=4 and volume confirmation rules today.",
-  "decisions": [],
+  "market_view": "Risk-off tape remains in control with broad downside; entertainment group is not immune. MGM is the dominant catalyst today, hit by multiple bearish price target cuts and a Q3 EPS/revenue miss, which breaks the prior momentum long. Other watchlist names lack high-conviction, volume-confirmed setups in this regime, so the focus is on capital preservation and only acting on clear dislocations.",
+  "decisions": [
+    {
+      "symbol": "MGM",
+      "action": "SELL",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.05,
+      "setup": "news catalyst",
+      "reason": "Multiple bearish price target cuts (JPMorgan, Barclays, Stifel, Truist) and Q3 miss; prior long thesis broken in risk-off market."
+    }
+  ],
   "ranked_ideas": [
     {
-      "symbol": "DIS",
+      "symbol": "SPOT",
       "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.03,
       "take_profit_pct": 0.06,
-      "setup": "momentum",
-      "reason": "Disney in consumer media, day +1.3%, rvol 1.23, but weak catalyst and risk-off."
+      "setup": "news catalyst",
+      "reason": "Spotify 360 launch offers a catalyst, but rvol 0.82 and weak volume confirmation; only tentative long."
     },
     {
       "symbol": "TKO",
@@ -20,8 +30,8 @@
       "conviction": 3,
       "stop_loss_pct": 0.03,
       "take_profit_pct": 0.06,
-      "setup": "momentum",
-      "reason": "Entertainment optioned, +1.7% day, but oversold and low volume."
+      "setup": "opening range breakout",
+      "reason": "OR near upper end and rvol 1.08, but momentum mixed and news sentiment flat; low conviction."
     },
     {
       "symbol": "LYV",
@@ -30,28 +40,28 @@
       "stop_loss_pct": 0.03,
       "take_profit_pct": 0.06,
       "setup": "momentum",
-      "reason": "Live entertainment, +2.0% day, but below VWAP and fading momentum."
+      "reason": "m15 positive with rvol 1.05, but price below VWAP and no clear breakout; weak follow-through."
     },
     {
-      "symbol": "FOXA",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
-      "setup": "momentum",
-      "reason": "Media, +1.1% day, but low volume."
-    },
-    {
-      "symbol": "NFLX",
+      "symbol": "DIS",
       "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.03,
       "take_profit_pct": 0.06,
-      "setup": "news catalyst",
-      "reason": "Netflix positive news, but oversold and not high conviction."
+      "setup": "VWAP bounce",
+      "reason": "Above VWAP with m15 positive and rvol 1.06, but no OR breakout; tentative bounce in risk-off tape."
+    },
+    {
+      "symbol": "ROKU",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "opening range breakout",
+      "reason": "OR breakout signal flashed, but rvol collapsed to 0.06; not actionable."
     }
   ],
-  "experiment": "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries.",
+  "experiment": "Pre-emptively reduce position sizes during market-wide strategy review pauses to minimize execution slippage on market exits.",
   "watchlist_changes": {
     "add": [],
     "remove": []

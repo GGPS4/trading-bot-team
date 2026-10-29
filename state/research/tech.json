@@ -276,6 +276,24 @@
   "news": {
     "findings": [
       {
+        "symbol": "NOW",
+        "sentiment": -0.9,
+        "importance": 5,
+        "unconfirmed_rumor": false,
+        "summary": "ServiceNow shares fell 23% after slower bookings guidance and Wells Fargo lowered its price target to $175.",
+        "source": "benzinga",
+        "time": "10:50"
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": 0.8,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Wells Fargo keeps overweight on Microsoft and raises price target to $750.",
+        "source": "benzinga",
+        "time": "10:50"
+      },
+      {
         "symbol": "MSFT",
         "sentiment": 0.5,
         "importance": 4,
@@ -502,9 +520,11 @@
         "source": "fiscal.ai"
       }
     ],
-    "urgent": [],
-    "overall": "No significant news for the IT sector stocks in the last two hours. The market mood remains neutral.",
-    "items_read": 73
+    "urgent": [
+      "NOW"
+    ],
+    "overall": "ServiceNow's sharp decline and lower price target cast a negative tone on the IT sector. Microsoft receives a bullish rating and higher target, adding a positive note.",
+    "items_read": 76
   },
   "social": {
     "findings": [],
@@ -685,304 +705,124 @@
   },
   "intraday": {
     "AAPL": {
-      "price": 349.98,
-      "change_today": 0.0172,
-      "from_open": 0.0056,
+      "price": 349.53,
+      "change_today": 0.0159,
+      "from_open": 0.0043,
       "day_high": 351.365,
       "day_low": 347.42,
-      "since_last_look": 0.0002,
-      "vwap": 349.63,
-      "vs_vwap": 0.001,
-      "opening_range": [
-        347.42,
-        351.37
-      ],
-      "breakout_up": false,
-      "breakdown": false,
-      "momentum_15m": -0.0,
-      "momentum_60m": 0.0004,
-      "rel_volume": 1.66,
-      "trend_5m": "flat"
+      "since_last_look": -0.0013
     },
     "MSFT": {
-      "price": 526.31,
-      "change_today": -0.0111,
-      "from_open": -0.0259,
+      "price": 523.52,
+      "change_today": -0.0164,
+      "from_open": -0.0311,
       "day_high": 540.79,
       "day_low": 523.13,
-      "since_last_look": 0.0038,
-      "vwap": 530.15,
-      "vs_vwap": -0.0072,
-      "opening_range": [
-        525.44,
-        540.79
-      ],
-      "breakout_up": false,
-      "breakdown": false,
-      "momentum_15m": 0.0032,
-      "momentum_60m": -0.0017,
-      "rel_volume": 4.46,
-      "trend_5m": "flat"
+      "since_last_look": -0.0053
     },
     "NVDA": {
-      "price": 214.02,
+      "price": 214.03,
       "change_today": -0.0061,
-      "from_open": -0.002,
+      "from_open": -0.0019,
       "day_high": 215.32,
       "day_low": 212.09,
-      "since_last_look": 0.0015,
-      "vwap": 213.42,
-      "vs_vwap": 0.0028,
-      "opening_range": [
-        212.09,
-        215.32
-      ],
-      "breakout_up": false,
-      "breakdown": false,
-      "momentum_15m": 0.0015,
-      "momentum_60m": 0.0036,
-      "rel_volume": 1.78,
-      "trend_5m": "flat"
+      "since_last_look": 0.0
     },
     "AVGO": {
-      "price": 343.09,
-      "change_today": -0.025,
+      "price": 343.08,
+      "change_today": -0.0251,
       "from_open": 0.002,
       "day_high": 344.18,
       "day_low": 338.84,
-      "since_last_look": 0.0007,
-      "vwap": 341.73,
-      "vs_vwap": 0.004,
-      "opening_range": [
-        338.84,
-        344.18
-      ],
-      "breakout_up": false,
-      "breakdown": false,
-      "momentum_15m": 0.0007,
-      "momentum_60m": 0.006,
-      "rel_volume": 1.25,
-      "trend_5m": "flat"
+      "since_last_look": -0.0
     },
     "AMD": {
-      "price": 569.22,
-      "change_today": -0.0159,
-      "from_open": 0.0121,
+      "price": 567.53,
+      "change_today": -0.0189,
+      "from_open": 0.0091,
       "day_high": 572.54,
       "day_low": 560.75,
-      "since_last_look": -0.0012,
-      "vwap": 566.9,
-      "vs_vwap": 0.0041,
-      "opening_range": [
-        560.75,
-        572.54
-      ],
-      "breakout_up": false,
-      "breakdown": false,
-      "momentum_15m": -0.0012,
-      "momentum_60m": 0.0014,
-      "rel_volume": 1.76,
-      "trend_5m": "flat"
+      "since_last_look": -0.003
     },
     "INTU": {
-      "price": 326.65,
-      "change_today": -0.005,
-      "from_open": 0.022,
+      "price": 327.43,
+      "change_today": -0.0026,
+      "from_open": 0.0245,
       "day_high": 332.665,
       "day_low": 319.595,
-      "since_last_look": -0.0114,
-      "vwap": 328.15,
-      "vs_vwap": -0.0046,
-      "opening_range": [
-        319.6,
-        331.11
-      ],
-      "breakout_up": false,
-      "breakdown": false,
-      "momentum_15m": -0.0114,
-      "momentum_60m": 0.0195,
-      "rel_volume": 1.34,
-      "trend_5m": "down"
+      "since_last_look": 0.0024
     },
     "TXN": {
-      "price": 309.22,
-      "change_today": -0.0014,
-      "from_open": 0.0027,
-      "day_high": 309.225,
+      "price": 309.05,
+      "change_today": -0.002,
+      "from_open": 0.0022,
+      "day_high": 309.335,
       "day_low": 306.545,
-      "since_last_look": 0.0007,
-      "vwap": 308.08,
-      "vs_vwap": 0.0037,
-      "opening_range": [
-        306.55,
-        309.01
-      ],
-      "breakout_up": true,
-      "breakdown": false,
-      "momentum_15m": 0.0007,
-      "momentum_60m": 0.0017,
-      "rel_volume": 0.55,
-      "trend_5m": "flat"
+      "since_last_look": -0.0005
     },
     "NOW": {
-      "price": 113.54,
-      "change_today": -0.2426,
-      "from_open": -0.0567,
+      "price": 113.57,
+      "change_today": -0.2424,
+      "from_open": -0.0564,
       "day_high": 120.655,
       "day_low": 112.39,
-      "since_last_look": -0.0004,
-      "vwap": 114.89,
-      "vs_vwap": -0.0118,
-      "opening_range": [
-        112.39,
-        120.66
-      ],
-      "breakout_up": false,
-      "breakdown": false,
-      "momentum_15m": -0.0004,
-      "momentum_60m": -0.0068,
-      "rel_volume": 8.64,
-      "trend_5m": "flat"
+      "since_last_look": 0.0003
     },
     "AMAT": {
-      "price": 420.37,
-      "change_today": 0.0115,
-      "from_open": 0.0178,
+      "price": 418.55,
+      "change_today": 0.0071,
+      "from_open": 0.0134,
       "day_high": 420.37,
       "day_low": 410.04,
-      "since_last_look": 0.0049,
-      "vwap": 414.43,
-      "vs_vwap": 0.0143,
-      "opening_range": [
-        410.04,
-        415.45
-      ],
-      "breakout_up": true,
-      "breakdown": false,
-      "momentum_15m": 0.0049,
-      "momentum_60m": 0.0172,
-      "rel_volume": 1.34,
-      "trend_5m": "flat"
+      "since_last_look": -0.0043
     },
     "MU": {
-      "price": 954.16,
-      "change_today": -0.0293,
-      "from_open": -0.0142,
+      "price": 951.76,
+      "change_today": -0.0318,
+      "from_open": -0.0167,
       "day_high": 970.6,
       "day_low": 941.15,
-      "since_last_look": -0.0007,
-      "vwap": 952.42,
-      "vs_vwap": 0.0018,
-      "opening_range": [
-        941.15,
-        970.6
-      ],
-      "breakout_up": false,
-      "breakdown": false,
-      "momentum_15m": -0.0007,
-      "momentum_60m": 0.0012,
-      "rel_volume": 1.4,
-      "trend_5m": "flat"
+      "since_last_look": -0.0025
     },
     "PANW": {
-      "price": 377.46,
-      "change_today": -0.043,
-      "from_open": 0.0217,
+      "price": 379.23,
+      "change_today": -0.0385,
+      "from_open": 0.0264,
       "day_high": 389.05,
       "day_low": 367.685,
-      "since_last_look": -0.0117,
-      "vwap": 379.83,
-      "vs_vwap": -0.0062,
-      "opening_range": [
-        367.69,
-        388.81
-      ],
-      "breakout_up": false,
-      "breakdown": false,
-      "momentum_15m": -0.0118,
-      "momentum_60m": 0.0169,
-      "rel_volume": 3.33,
-      "trend_5m": "down"
+      "since_last_look": 0.0047
     },
     "ANET": {
-      "price": 186.46,
-      "change_today": -0.0017,
-      "from_open": 0.0128,
+      "price": 186.05,
+      "change_today": -0.0039,
+      "from_open": 0.0105,
       "day_high": 187.375,
       "day_low": 182.69,
-      "since_last_look": -0.0022,
-      "vwap": 185.11,
-      "vs_vwap": 0.0073,
-      "opening_range": [
-        182.69,
-        185
-      ],
-      "breakout_up": true,
-      "breakdown": false,
-      "momentum_15m": -0.0022,
-      "momentum_60m": 0.0157,
-      "rel_volume": 0.57,
-      "trend_5m": "flat"
+      "since_last_look": -0.0022
     },
     "CRWV": {
-      "price": 62.8,
-      "change_today": -0.0174,
-      "from_open": 0.0252,
-      "day_high": 62.95,
+      "price": 62.64,
+      "change_today": -0.02,
+      "from_open": 0.0225,
+      "day_high": 63.04,
       "day_low": 60.18,
-      "since_last_look": 0.0047,
-      "vwap": 61.46,
-      "vs_vwap": 0.0219,
-      "opening_range": [
-        60.18,
-        62.26
-      ],
-      "breakout_up": true,
-      "breakdown": false,
-      "momentum_15m": 0.0047,
-      "momentum_60m": 0.0316,
-      "rel_volume": 1.49,
-      "trend_5m": "up"
+      "since_last_look": -0.0026
     },
     "INTC": {
-      "price": 93.17,
-      "change_today": -0.0247,
-      "from_open": 0.0018,
+      "price": 92.62,
+      "change_today": -0.0304,
+      "from_open": -0.004,
       "day_high": 93.47,
       "day_low": 91.555,
-      "since_last_look": 0.0005,
-      "vwap": 92.54,
-      "vs_vwap": 0.0069,
-      "opening_range": [
-        91.56,
-        93.47
-      ],
-      "breakout_up": false,
-      "breakdown": false,
-      "momentum_15m": 0.0006,
-      "momentum_60m": 0.0082,
-      "rel_volume": 1.45,
-      "trend_5m": "flat"
+      "since_last_look": -0.0058
     },
     "IBM": {
-      "price": 252.19,
-      "change_today": -0.0041,
-      "from_open": 0.0168,
+      "price": 253.42,
+      "change_today": 0.0008,
+      "from_open": 0.0218,
       "day_high": 254.92,
       "day_low": 248.025,
-      "since_last_look": -0.0055,
-      "vwap": 252.85,
-      "vs_vwap": -0.0026,
-      "opening_range": [
-        248.03,
-        254.69
-      ],
-      "breakout_up": false,
-      "breakdown": false,
-      "momentum_15m": -0.0055,
-      "momentum_60m": 0.0144,
-      "rel_volume": 0.89,
-      "trend_5m": "flat"
+      "since_last_look": 0.0049
     }
   },
   "discovery": {

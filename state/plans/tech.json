@@ -1,54 +1,55 @@
 {
   "date": "2026-10-29",
-  "time": "10:35",
-  "trigger": "big news on ['MSFT']",
+  "time": "10:50",
+  "trigger": "big news on ['NOW']",
   "decisions": [
     {
       "symbol": "MSFT",
-      "action": "SELL",
-      "reason": "Position is underwater (-0.1%) and trading below VWAP. In a risk-off environment, capital should be rotated into stronger momentum setups. Freeing up capital to meet the 75% invested requirement with higher-conviction entries.",
-      "qty": 5
-    },
-    {
-      "symbol": "IBM",
-      "action": "SELL",
-      "reason": "RSI is overbought at 81.1 and the stock is trading below VWAP with negative 15m momentum (-0.5%). The setup is stalling and risk/reward is poor for a day trade. Closing to redeploy capital.",
-      "qty": 11
-    },
-    {
-      "symbol": "CRWV",
       "action": "BUY",
-      "reason": "Strong intraday momentum: +2.5% off the open, trading 2.2% above VWAP, and breaking out of the opening range. 60m momentum is +3.2%. News catalyst: Treasury Secretary downplaying AI debt worries. Conviction 4/5. Fits the 'breakout' setup.",
-      "qty": 280,
+      "side": "long",
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "setup": "news catalyst",
+      "conviction": 5,
+      "reasoning": "Strong bullish news catalyst (multiple PT raises, Azure growth) combined with a technical opening range breakdown. In a risk-off market, this is a high-conviction 'buy the dip' setup. The breakdown suggests the initial sell-off is exhausting, and the news provides a floor. Targeting a bounce to VWAP or the OR high."
     },
     {
       "symbol": "AMAT",
       "action": "BUY",
-      "reason": "Opening range breakout (OR 410.04-415.45, price 420.37). Trading 1.4% above VWAP with positive 60m momentum (+1.7%). RSI is oversold (25.1) suggesting a potential reversal from the 20d downtrend. Conviction 4/5.",
-      "qty": 40,
+      "side": "long",
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "setup": "opening range breakout",
+      "conviction": 4,
+      "reasoning": "Clear opening range breakout above 415.45 with RSI at 25 (oversold). Despite the weak market, the relative strength (day +0.1% vs QQQ -1.7%) and breakout structure make this a viable momentum play. Tight stop below the OR low."
     },
     {
-      "symbol": "TXN",
+      "symbol": "CRWV",
       "action": "BUY",
-      "reason": "Opening range breakout (OR 306.55-309.01, price 309.22). Trading above VWAP (+0.4%). Strong 5d momentum (+8.8%). Conviction 4/5. Note: Low relative volume (0.55) is a risk, but the breakout is clean.",
-      "qty": 55,
+      "side": "long",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "conviction": 4,
+      "reasoning": "Opening range breakout above 62.26. Trading above VWAP (+1.2%) with positive 60m momentum (+1.9%). The news about Treasury Secretary downplaying AI debt concerns provides a sentiment tailwind. High volatility allows for a slightly wider target."
+    },
+    {
+      "symbol": "ANET",
+      "action": "BUY",
+      "side": "long",
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "setup": "opening range breakout",
+      "conviction": 4,
+      "reasoning": "Opening range breakout above 185.00. Trading at VWAP (0.0%) with positive 60m momentum (+1.0%). Relative strength in a down market. Low volume (rvol 0.55) is a concern, but the breakout structure and relative strength justify a small position to meet the 75% investment rule."
     }
   ],
   "ranked_ideas": [
+    "IBM",
+    "AAPL",
     "NVDA",
-    "AMD",
-    "ANET",
     "INTC",
-    "AVGO"
+    "TXN"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
