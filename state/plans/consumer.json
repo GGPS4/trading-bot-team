@@ -1,87 +1,87 @@
 {
   "date": "2026-10-29",
-  "time": "10:43",
-  "trigger": "must invest $7,127 more (75% rule)",
-  "market_view": "The broad market is in a risk-off regime with SPY down, QQQ down, and VIX spiking. The S&P 500 and Nasdaq are selling off while the VIXY is up, and most watched stocks are only slightly positive. The consumer discretionary sector is largely neutral with no broad catalyst, though news is mixed. I am staying selective for high-conviction intraday long setups with volume and VWAP confirmation, while avoiding low-conviction names.",
+  "time": "11:08",
+  "trigger": "scheduled look",
+  "market_view": "The market is in risk-off, with SPY down and VIX spiking. Watchlist names are mixed, but some show intraday strength. We are focusing on high-conviction catalyst-driven long entries and avoiding low-conviction shorts.",
   "decisions": [
     {
-      "symbol": "LULU",
+      "symbol": "RCL",
       "action": "SELL",
-      "conviction": 1,
+      "conviction": 3,
       "stop_loss_pct": 0.0,
       "take_profit_pct": 0.0,
       "setup": "momentum",
-      "reason": "LULU lost the session momentum, trading below VWAP and with negative m15/m60 momentum, so I am exiting the weak long."
+      "reason": "Long was negative and momentum stalled in a risk-off tape; exit to redeploy capital."
     },
     {
       "symbol": "AMZN",
       "action": "BUY",
       "conviction": 4,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "momentum",
-      "reason": "AMZN is holding above VWAP, with m60 up, rvol 4.54, trend up, and overnight analyst positivity; high-volume momentum long in a risk-off tape with half size."
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Overnight analyst upgrades and positive EPS/revenue expectations; high rvol 3.72, m15/m60 positive, above VWAP, with volume confirmation."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "CMG",
+      "symbol": "BKNG",
       "direction": "long",
-      "conviction": 4,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Strong rvol 3.44, above VWAP, earnings beat, but price target downgrades create mixed news."
+      "setup": "opening range breakout",
+      "reason": "OR breakout but weak follow-through; watch for continuation."
     },
     {
-      "symbol": "RCL",
+      "symbol": "DG",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "OR breakout occurred but low relative volume; lower quality."
+    },
+    {
+      "symbol": "LULU",
       "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Positive Honeywell cabin news, above VWAP, rvol 1.67, trend up; solid but conviction lower in risk-off."
+      "reason": "Day up but 60-min momentum negative; wait for reclaim."
+    },
+    {
+      "symbol": "MCD",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Overbought; avoid in risk-off."
     },
     {
       "symbol": "TSLA",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout, above VWAP, trend up, but rvol only 1.38."
-    },
-    {
-      "symbol": "BKNG",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout and above VWAP, but low rvol 0.95; lower conviction."
-    },
-    {
-      "symbol": "EAT",
-      "direction": "long",
       "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Analyst overweight and raised targets, but stock still down day; mean reversion risk."
+      "reason": "Flat intraday; no edge."
     }
   ],
   "experiment": "Testing high-conviction news catalyst entries with ATR-based stops in a risk-off regime while respecting the 50-day moving average.",
   "watchlist_changes": {
     "add": [
       {
-        "symbol": "CVNA",
-        "reason": "Unusual premarket gap up 8.8% on Carvana analyst forecast cuts, a consumer discretionary name in news and moving unusually."
+        "symbol": "EBAY",
+        "reason": "Barclays maintains Overweight and raises price target; in consumer discretionary sector and moving on news."
       }
     ],
     "remove": [
       {
-        "symbol": "MAR",
-        "reason": "No clear catalyst or momentum, low relative volume, and trend flat; no longer deserves a watchlist spot."
+        "symbol": "AZO",
+        "reason": "Quiet, low relative volume and no fresh catalyst."
       }
     ]
   }

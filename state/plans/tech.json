@@ -1,55 +1,45 @@
 {
   "date": "2026-10-29",
-  "time": "10:50",
-  "trigger": "big news on ['NOW']",
+  "time": "11:00",
+  "trigger": "must invest $22,961 more (75% rule)",
   "decisions": [
     {
       "symbol": "MSFT",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "conviction": 5,
-      "reasoning": "Strong bullish news catalyst (multiple PT raises, Azure growth) combined with a technical opening range breakdown. In a risk-off market, this is a high-conviction 'buy the dip' setup. The breakdown suggests the initial sell-off is exhausting, and the news provides a floor. Targeting a bounce to VWAP or the OR high."
-    },
-    {
-      "symbol": "AMAT",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "conviction": 4,
-      "reasoning": "Clear opening range breakout above 415.45 with RSI at 25 (oversold). Despite the weak market, the relative strength (day +0.1% vs QQQ -1.7%) and breakout structure make this a viable momentum play. Tight stop below the OR low."
-    },
-    {
-      "symbol": "CRWV",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "conviction": 4,
-      "reasoning": "Opening range breakout above 62.26. Trading above VWAP (+1.2%) with positive 60m momentum (+1.9%). The news about Treasury Secretary downplaying AI debt concerns provides a sentiment tailwind. High volatility allows for a slightly wider target."
-    },
-    {
-      "symbol": "ANET",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "conviction": 4,
-      "reasoning": "Opening range breakout above 185.00. Trading at VWAP (0.0%) with positive 60m momentum (+1.0%). Relative strength in a down market. Low volume (rvol 0.55) is a concern, but the breakout structure and relative strength justify a small position to meet the 75% investment rule."
+      "action": "SELL",
+      "reason": "Stock broke down below the opening range (525.44-540.79) and is trading 1.5% below VWAP with high relative volume (3.8). Despite bullish news, the technical breakdown in a risk-off market (QQQ -1.5%) invalidates the long setup. Cutting losses to free up capital for stronger setups."
     }
   ],
   "ranked_ideas": [
-    "IBM",
-    "AAPL",
-    "NVDA",
-    "INTC",
-    "TXN"
+    {
+      "symbol": "AMAT",
+      "setup": "opening range breakout",
+      "conviction": 4,
+      "reason": "Broke out above the opening range (410.04-415.45) and is trading above VWAP. RSI is oversold (25.1) suggesting a potential bounce/mean reversion play, supported by positive momentum (m60 +0.9%). Fits the 'best available setup' rule in a weak market."
+    },
+    {
+      "symbol": "CRWV",
+      "setup": "opening range breakout",
+      "conviction": 4,
+      "reason": "Strong breakout above the opening range (60.18-62.26) and trading 1.5% above VWAP. Positive 60m momentum (+1.5%) and news catalyst (Treasury Secretary downplaying AI debt worries) provides a fundamental floor. High relative volume (1.2) confirms interest."
+    },
+    {
+      "symbol": "ANET",
+      "setup": "opening range breakout",
+      "conviction": 3,
+      "reason": "Broke out above the opening range (182.69-185.00) and is trading above VWAP. However, low relative volume (0.55) reduces conviction. Included as a secondary option if AMAT/CRWV fail."
+    },
+    {
+      "symbol": "NVDA",
+      "setup": "VWAP bounce",
+      "conviction": 3,
+      "reason": "Trading slightly above VWAP with positive 60m momentum (+0.4%). Neutral news flow but strong AI narrative. A potential bounce play in a risk-off environment, but lacks the clear breakout confirmation of AMAT/CRWV."
+    },
+    {
+      "symbol": "IBM",
+      "setup": "momentum",
+      "conviction": 3,
+      "reason": "Trading above VWAP with positive 15m momentum (+0.2%). However, RSI is overbought (81.1) and relative volume is low (0.74), making this a lower-conviction momentum play compared to the breakouts."
+    }
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

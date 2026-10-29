@@ -1132,5 +1132,45 @@
       "BUY JPM x2 (~$690.52) [deploy]",
       "WATCHLIST remove rejected BLK"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "11:08",
+    "trigger": "scheduled look",
+    "market_view": "Risk-off tape remains in force with SPY down and QQQ down about 1.4%, while VIX is spiking; most stocks are struggling but some earnings and sector strength are emerging. We are focusing on high-conviction catalyst-driven long setups and avoiding low-conviction names in weak momentum conditions.",
+    "experiment": "Use VWAP or volume confirmation before entering breakout trades",
+    "decisions": [
+      {
+        "symbol": "AXP",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "OR breakout momentum faded (m15/m60 negative, rvol 1.12) and slight negative PnL; closing weak setup.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "JPM",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Momentum failed (rvol 0.93, flat trend) and slight negative PnL; closing weak position.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "C",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "OR breakout with rvol 1.71, above VWAP, m60 positive, day +2.1; Financials/Consumer; volume confirmation; high conviction in risk-off.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL AXP",
+      "SELL JPM",
+      "BUY C blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY V x2 (~$821.82) [deploy]",
+      "BUY SOFI x54 (~$939.6) [deploy]"
+    ]
   }
 ]

@@ -1,88 +1,32 @@
 {
   "date": "2026-10-29",
-  "time": "10:43",
-  "trigger": "big news on ['LMT']",
-  "market_view": "Market is in risk-off, with SPY down, QQQ down, and VIX spiking. Defense sector has positive catalysts such as LMT's Army contract and RTX's earnings beat, but broad selling pressure means longs are half size and require high conviction. We are focusing on high-conviction, above-VWAP long setups with volume confirmation.",
+  "time": "11:08",
+  "trigger": "scheduled look",
   "decisions": [
     {
-      "symbol": "TXT",
+      "symbol": "CACI",
       "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above 87.22 on high rvol 2.09 and m60 +2.3, above VWAP, with earnings/order catalyst; high conviction."
-    },
-    {
-      "symbol": "GD",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "opening range breakout",
-      "reason": "Closing existing position to free slot for high-conviction defense long; GD failed to sustain OR breakout and is slightly underwater."
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "LMT",
-      "direction": "long",
-      "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "news catalyst",
-      "reason": "Army contract $1.08B, high importance, above VWAP, but rvol 1.2 slightly below preferred 1.5."
-    },
-    {
-      "symbol": "KTOS",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Day +3.0, rvol 1.65, m60 positive, but below VWAP; momentum long."
+      "reason": "Strong catalyst: $185M 5-year US Army contract for contested-environment tech. Trading above VWAP with positive momentum. High conviction (5/5) news. Fits risk-off defense rotation."
     },
     {
       "symbol": "HEI",
-      "direction": "long",
-      "conviction": 3,
+      "action": "BUY",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "OR breakout, but low rvol 0.71; weaker."
-    },
-    {
-      "symbol": "AVAV",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout, but low rvol 0.47; weak."
-    },
-    {
-      "symbol": "LDOS",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "earnings gap",
-      "reason": "Earnings beat, but low rvol 0.16; weak."
+      "reason": "Opening range breakout with positive 60m momentum. RSI 65.6 (not overbought). Strong defense sector momentum. Meets conviction threshold."
     }
   ],
-  "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
-  "watchlist_changes": {
-    "add": [
-      {
-        "symbol": "BA",
-        "reason": "Boeing headlines and volume expectations for Boeing/Airbus programs; defense-related aerospace."
-      }
-    ],
-    "remove": [
-      {
-        "symbol": "LDOS",
-        "reason": "Very low relative volume and quiet trading; no clear catalyst."
-      }
-    ]
-  }
+  "ranked_ideas": [
+    "GD",
+    "KTOS",
+    "NOC",
+    "AVAV",
+    "LMT"
+  ],
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }
