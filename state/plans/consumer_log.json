@@ -1270,5 +1270,27 @@
       "WATCHLIST remove rejected MCD",
       "WATCHLIST remove rejected TSLA"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "12:17",
+    "trigger": "must invest $7,984 more (75% rule)",
+    "market_view": "Market is in risk-off, with SPY down 0.4%, QQQ down 1.4%, and broad selling pressure. Volatility and fear are spiking, so longs are half size and require higher conviction, and the focus is on high-conviction catalyst-driven long entries while avoiding low-conviction shorts. The best setup is CMG breaking above the opening range with strong volume and positive post-earnings momentum.",
+    "experiment": "Testing high-conviction news catalyst entries with ATR-based stops in a risk-off regime while respecting the 50-day moving average",
+    "decisions": [
+      {
+        "symbol": "CMG",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "CMG cleared the opening range at 29.92-30.89 with rvol 2.01, above VWAP +1.3%, and positive m15/m60 momentum. Q3 revenue beat lifted the stock despite mixed price targets, and Oppenheimer reiterated Outperform. High volume confirmation supports the breakout in a risk-off tape.",
+        "stop_loss_pct": 0.04,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY CMG blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY RCL x3 (~$931.96) [deploy]",
+      "BUY EAT x3 (~$657.15) [deploy]"
+    ]
   }
 ]
