@@ -17102,7 +17102,7 @@
     "qty_open": 8.0,
     "dollars": 388.56,
     "est_price": 48.57,
-    "stop_price": 50.51,
+    "stop_price": 48.49,
     "first_stop": 50.51,
     "take_profit_price": 43.71,
     "risk_dollars": 15.54,
@@ -17115,10 +17115,11 @@
     "entry_price": 48.6,
     "entry_time": "2026-10-29T16:07:38.446388269Z",
     "high": 48.69,
-    "low": 48.24,
-    "stop_order_id": "b3a16f7b-5d8c-43cc-9e02-d785fc1b0598",
-    "stop_sent": 50.51,
-    "stop_qty_sent": 8
+    "low": 48.11,
+    "stop_order_id": "7969b545-f334-467e-851d-081961677bb7",
+    "stop_sent": 48.49,
+    "stop_qty_sent": 8,
+    "trail_active": true
   },
   {
     "id": "healthcare-LLY-202610291207-5c0d",
@@ -17172,7 +17173,7 @@
     "entry_price": 147.69,
     "entry_time": "2026-10-29T16:07:37.893180229Z",
     "high": 148.63,
-    "low": 146.7,
+    "low": 145.975,
     "stop_order_id": "f15958f0-101f-4015-bbd7-88d2bcd69610",
     "stop_sent": 145.38,
     "stop_qty_sent": 2
@@ -17324,14 +17325,19 @@
     "setup": "news catalyst",
     "experiment": "Implement trailing stops for long positions to lock in gains",
     "order_id": "a34804f6-1572-44bf-9f76-d2d3d09fc077",
-    "status": "open",
+    "status": "closed",
     "entry_price": 161.27,
     "entry_time": "2026-10-29T16:27:30.821272426Z",
     "high": 161.78,
-    "low": 159.625,
+    "low": 157.91,
     "stop_order_id": "a4eeb4e5-9b3d-4fce-a15a-21ad9ab4dc57",
     "stop_sent": 157.86,
-    "stop_qty_sent": 5
+    "stop_qty_sent": 5,
+    "exit_price": 157.81,
+    "exit_reason": "stop_loss",
+    "exit_time": "2026-10-29T18:31:34.614635134Z",
+    "pnl": -18.1,
+    "pnl_pct": -0.0224
   },
   {
     "id": "space-VSAT-202610291234-4d48",
@@ -17539,7 +17545,7 @@
     "entry_price": 314.95,
     "entry_time": "2026-10-29T16:43:02.58940405Z",
     "high": 317.6,
-    "low": 313.45,
+    "low": 313.35,
     "stop_order_id": "2a1aea35-22d2-4a81-b74a-e92bdfd0a937",
     "stop_sent": 307.94,
     "stop_qty_sent": 2
@@ -17569,7 +17575,7 @@
     "entry_price": 369.82,
     "entry_time": "2026-10-29T16:43:01.921190036Z",
     "high": 370.63,
-    "low": 369.07,
+    "low": 368.84,
     "stop_order_id": "1565c60d-3d71-4bef-a6ad-40432823feca",
     "stop_sent": 361.61,
     "stop_qty_sent": 1
@@ -17659,7 +17665,7 @@
     "entry_price": 68.43,
     "entry_time": "2026-10-29T17:02:41.719690631Z",
     "high": 68.77,
-    "low": 68.14,
+    "low": 68.135,
     "stop_order_id": "4f09debe-ba99-4db6-9bad-aa1be662c296",
     "stop_sent": 66.4,
     "stop_qty_sent": 12
@@ -17688,7 +17694,7 @@
     "status": "open",
     "entry_price": 31.19,
     "entry_time": "2026-10-29T17:07:34.347247191Z",
-    "high": 31.36,
+    "high": 31.44,
     "low": 31.155,
     "stop_order_id": "19f39165-a142-41a9-acb0-790dd6737d0b",
     "stop_sent": 30.55,
@@ -17702,8 +17708,8 @@
     "symbol": "GE",
     "side": "long",
     "kind": "shares",
-    "qty": 1,
-    "qty_open": 1,
+    "qty": 1.0,
+    "qty_open": 1.0,
     "dollars": 311.35,
     "est_price": 311.345,
     "stop_price": 306.67,
@@ -17715,8 +17721,14 @@
     "setup": "opening range breakout",
     "experiment": "Implement an earnings-gap reaction plan for HWM's pre-open earnings tomorrow, enforcing a 15-minute wait post-bell before trading continuation.",
     "order_id": "ae4a7b9d-b69c-4f1f-9ddc-6e7315e85484",
-    "status": "submitted",
-    "entry_price": null
+    "status": "open",
+    "entry_price": 311.2,
+    "entry_time": "2026-10-29T18:21:06.245413645Z",
+    "high": 311.93,
+    "low": 311.2,
+    "stop_order_id": "2c4c9475-f54f-4ea6-ba2f-7f5a59339a17",
+    "stop_sent": 306.67,
+    "stop_qty_sent": 1
   },
   {
     "id": "space-ASTS-202610291421-fcc4",
@@ -17726,8 +17738,8 @@
     "symbol": "ASTS",
     "side": "long",
     "kind": "shares",
-    "qty": 7,
-    "qty_open": 7,
+    "qty": 7.0,
+    "qty_open": 7.0,
     "dollars": 306.78,
     "est_price": 43.825,
     "stop_price": 42.95,
@@ -17739,7 +17751,13 @@
     "setup": "opening range breakout",
     "experiment": "Implement an earnings-gap reaction plan for HWM's pre-open earnings tomorrow, enforcing a 15-minute wait post-bell before trading continuation.",
     "order_id": "c20a448a-d1c9-4435-a5ff-314aaabf6547",
-    "status": "submitted",
-    "entry_price": null
+    "status": "open",
+    "entry_price": 43.8,
+    "entry_time": "2026-10-29T18:21:06.372522838Z",
+    "high": 43.8,
+    "low": 43.25,
+    "stop_order_id": "8c9d849d-c84e-4513-b548-1997eec5b603",
+    "stop_sent": 42.95,
+    "stop_qty_sent": 7
   }
 ]
