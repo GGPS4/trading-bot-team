@@ -1,73 +1,73 @@
 {
   "date": "2026-10-29",
-  "time": "11:33",
-  "trigger": "must invest $2,535 more (75% rule)",
-  "market_view": "Market is in risk-off with SPY -0.3%, QQQ -1.2%, and VIXY -2.1%, indicating falling prices and spiking fear. Longs are half size and need higher conviction. Entertainment stocks are mixed: MGM was hit by price target cuts and Q3 miss, TKO showed an opening-range breakout, SPOT had positive news but weak volume, and NFLX received positive streaming partnership news. I am focusing on high-conviction long setups only.",
+  "time": "12:07",
+  "trigger": "scheduled look",
+  "market_view": "Caution regime with S&P down about 1.1% and Nasdaq down 1.1%. Media and entertainment names are mostly weak or flat, with only mild positive catalysts for SPOT and NFLX, both already held. No new high-conviction long setups met the volume confirmation filter today, so the focus is risk management and avoiding low-conviction longs.",
   "decisions": [
     {
-      "symbol": "TKO",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "TKO cleared the opening range high at $177.07 and held above VWAP with positive 60-min momentum; day +2.0%, rvol 1.19, and the stock is within the consumer/entertainment focus. Despite slightly under the ideal 1.2 volume threshold, the breakout structure is valid for a high-conviction long in a risk-off tape."
+      "symbol": "NFLX",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "mean reversion",
+      "reason": "NFLX stalled below VWAP and inside the range after the mean-reversion entry; intraday momentum turned negative and 15-minute relative volume was 0.93, below the required 1.2. Close the weak position."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "SPOT",
-      "direction": "long",
+      "symbol": "BAM",
+      "direction": "short",
       "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.06,
+      "stop_loss_pct": 0.04,
+      "take_profit_pct": 0.1,
       "setup": "news catalyst",
-      "reason": "Spotify 360 launch with positive sentiment, but rvol 0.72 and OR breakout lacked volume confirmation."
+      "reason": "Legal dispute over unpaid indemnities with Bhv Marais; bearish but lower conviction."
     },
     {
-      "symbol": "LYV",
-      "direction": "long",
+      "symbol": "TKO",
+      "direction": "short",
       "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.05,
+      "stop_loss_pct": 0.04,
+      "take_profit_pct": 0.1,
       "setup": "momentum",
-      "reason": "Music entertainment with day +2.2%, but rvol 0.9 and OR not decisive."
+      "reason": "Breakdown below VWAP and opening range with negative momentum; relative volume 1.18."
+    },
+    {
+      "symbol": "IMAX",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.04,
+      "take_profit_pct": 0.1,
+      "setup": "momentum",
+      "reason": "Opening range breakdown and weak momentum; intraday sell pressure."
     },
     {
       "symbol": "DIS",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.05,
-      "setup": "momentum",
-      "reason": "Disney day +1.6% and OR breakout, but rvol 0.9 and fading momentum."
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
+      "setup": "opening range breakout",
+      "reason": "Opening range breakout but fading momentum and trend down; low conviction."
     },
     {
       "symbol": "FOXA",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.05,
+      "conviction": 2,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.1,
       "setup": "momentum",
-      "reason": "Fox day +1.2%, but low rvol 0.45 and no clear catalyst."
-    },
-    {
-      "symbol": "CMCSA",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.05,
-      "setup": "momentum",
-      "reason": "Comcast day +1.5%, but intraday momentum mixed and rvol 0.69."
+      "reason": "Positive day but weak volume and flat setup; low conviction."
     }
   ],
-  "experiment": "Testing opening-range breakout momentum with volume confirmation; TKO rvol 1.19 was slightly under the 1.2 threshold, so I am watching for volume follow-through.",
+  "experiment": "Pre-emptively reduce position sizes during market-wide strategy review pauses to minimize execution slippage on market exits.",
   "watchlist_changes": {
     "add": [],
     "remove": [
       {
-        "symbol": "ROKU",
-        "reason": "No volume or catalyst; rvol 0.11 and flat momentum, no longer a useful day-trading setup."
+        "symbol": "EA",
+        "reason": "Overbought and no clear intraday catalyst; quiet setup."
       }
     ]
   }

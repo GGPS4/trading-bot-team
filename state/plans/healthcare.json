@@ -1,30 +1,82 @@
 {
   "date": "2026-10-29",
-  "time": "11:55",
-  "trigger": "scheduled look",
+  "time": "12:07",
+  "trigger": "must invest $2,557 more (75% rule)",
+  "market_view": "Risk-off tape remains bearish intraday, with healthcare mixed and existing longs under pressure. ISRG failed its opening-range breakout and sits below VWAP/OR with weak momentum; its stop was too wide at -3.0%. VRTX is also below VWAP and momentum negative but its stop was tighter. Executive orders pause new healthcare entries, so I will not force new longs. Capital protection is the priority before close.",
   "decisions": [
     {
-      "symbol": "MRK",
+      "symbol": "ISRG",
       "action": "SELL",
-      "reason": "President ordered a pause on new entries and protection of existing positions with 1.5% stops. MRK is down 0.74% from entry and has a stop set at 143.88 (approx 2.9% away), which is wider than the mandated 1.5% protection level. Additionally, MRK is trading below its opening range high and showing fading momentum (m60 -0.7%). Closing this position allows for redeployment into stronger setups or adherence to the pause order while managing risk.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
-    },
-    {
-      "symbol": "ABBV",
-      "action": "SELL",
-      "reason": "ABBV is down 0.77% from entry and has broken down below its opening range (289.32-292.5). The current stop is 287.61 (approx 0.58% away), but the stock is showing negative momentum (m15 -0.2%, m60 -0.4%) and is below VWAP. Given the risk-off market mood and the executive order to protect capital with tight stops, exiting this underperforming position is prudent to free up capital for higher-conviction setups or to strictly adhere to the pause order.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.1,
+      "setup": "opening range breakout",
+      "reason": "Failed opening-range breakout; price below VWAP/OR and m15 momentum weak. Stop was -3.0%, wider than executive 1.5% protection. Close long to prevent further drawdown."
     }
   ],
   "ranked_ideas": [
-    "LLY",
-    "MRNA",
-    "HCA",
-    "DHR",
-    "ISRG"
+    {
+      "symbol": "LLY",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Mounjaro sales beat and raised guidance, but special charges and below VWAP/m15 weak; high risk in risk-off."
+    },
+    {
+      "symbol": "MRK",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Headwinds from generics/exclusivity but revenue target; below VWAP and fading momentum; not high conviction."
+    },
+    {
+      "symbol": "BMY",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "earnings gap",
+      "reason": "Q3 beat but FY EPS guidance lowered; risk-off and earnings make it lower quality."
+    },
+    {
+      "symbol": "HLN",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Breakdown below OR/VWAP, 52-week low, weak sales; risk-off favors short, but executive prefers high conviction longs."
+    },
+    {
+      "symbol": "HCA",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Barclays PT raise and clinical recognition, but muted momentum; below executive healthcare pause."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "ATR-based stop (2% of ATR) for all new entries; add momentum filter: only enter a long when m15 > 0.5% and rvol > 1.5, and price is above VWAP.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": [
+      {
+        "symbol": "TMO",
+        "reason": "No volume confirmation or clear VWAP/OR setup; quiet relative to day."
+      },
+      {
+        "symbol": "ABT",
+        "reason": "Low relative volume and no clear catalyst/setup."
+      },
+      {
+        "symbol": "DHR",
+        "reason": "Breakout lacked volume confirmation (rvol 0.5); weak follow-through."
+      }
+    ]
+  }
 }

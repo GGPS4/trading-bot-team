@@ -1640,5 +1640,32 @@
       "WATCHLIST removed UNH",
       "WATCHLIST added HCA"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "12:07",
+    "trigger": "must invest $2,557 more (75% rule)",
+    "market_view": "Risk-off tape remains bearish intraday, with healthcare mixed and existing longs under pressure. ISRG failed its opening-range breakout and sits below VWAP/OR with weak momentum; its stop was too wide at -3.0%. VRTX is also below VWAP and momentum negative but its stop was tighter. Executive orders pause new healthcare entries, so I will not force new longs. Capital protection is the priority before close.",
+    "experiment": "ATR-based stop (2% of ATR) for all new entries; add momentum filter: only enter a long when m15 > 0.5% and rvol > 1.5, and price is above VWAP.",
+    "decisions": [
+      {
+        "symbol": "ISRG",
+        "action": "SELL",
+        "conviction": 2,
+        "reason": "Failed opening-range breakout; price below VWAP/OR and m15 momentum weak. Stop was -3.0%, wider than executive 1.5% protection. Close long to prevent further drawdown.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.1
+      }
+    ],
+    "results": [
+      "SELL ISRG",
+      "BUY LLY x0.230044 (~$315.12) [deploy]",
+      "BUY MRK x2 (~$295.18) [deploy]",
+      "BUY BMY blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "SHORT HLN x74 (~$628.63) [deploy]",
+      "WATCHLIST remove rejected TMO",
+      "WATCHLIST remove rejected ABT",
+      "WATCHLIST remove rejected DHR"
+    ]
   }
 ]

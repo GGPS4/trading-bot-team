@@ -1,60 +1,45 @@
 {
   "date": "2026-10-29",
-  "time": "11:37",
-  "trigger": "big news on ['MSFT', 'MSFT']",
+  "time": "12:07",
+  "trigger": "scheduled look",
   "decisions": [
     {
-      "symbol": "CRWV",
-      "action": "SELL",
-      "reason": "Position has hit first target (64.36) and is trading near resistance. Taking partial profits to lock in gains and redeploy capital into higher-conviction setups. Trailing stop is active on remaining shares."
+      "symbol": "NOW",
+      "action": "BUY",
+      "side": "long",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "conviction": 4,
+      "reason": "ServiceNow gapped down 18.5% on earnings but is stabilizing above the opening range low and showing positive 15m momentum. RSI is not oversold yet, but the extreme gap down with high volume (rvol 6.0) often leads to intraday bounces. Buying the dip in a high-conviction setup."
+    },
+    {
+      "symbol": "MSFT",
+      "action": "BUY",
+      "side": "long",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "conviction": 4,
+      "reason": "Strong bullish news flow with multiple analyst upgrades (DA Davidson, TD Cowen, Scotiabank, Citizens) raising price targets to $625-$650. Despite the market being risk-off, MSFT is holding up relatively well with a breakdown from the opening range but stabilizing. The news catalyst provides a clear reason for a long entry."
+    },
+    {
+      "symbol": "INTC",
+      "action": "BUY",
+      "side": "long",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "conviction": 4,
+      "reason": "Intel is down 2.7% today but has been up 2.8% over the last 5 days. RSI is 36.1, approaching oversold territory. With earnings coming up after the close, there is potential for a pre-earnings bounce or stabilization. The stock is trading above VWAP, indicating some support."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "AVGO",
-      "side": "long",
-      "conviction": 4,
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Strong opening range breakout above 344.18 with positive momentum (m15 +0.4%, m60 +0.7%) and trading above VWAP. Despite market caution, relative strength and technical setup align with day-trading strategy."
-    },
-    {
-      "symbol": "AMD",
-      "side": "long",
-      "conviction": 4,
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "reason": "Broke out of opening range (572.54) and is holding above VWAP with positive 60m momentum. RSI is neutral (41.8), leaving room for upside. Fits the high-conviction breakout criteria."
-    },
-    {
-      "symbol": "TXN",
-      "side": "long",
-      "conviction": 4,
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "reason": "Clean breakout above OR high (309.01) with steady momentum. RSI at 65.7 suggests strength but not yet overbought. Volume is lower (rvol 0.59), so size is reduced, but technicals are sound."
-    },
-    {
-      "symbol": "NVDA",
-      "side": "long",
-      "conviction": 3,
-      "setup": "momentum",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "reason": "Trading above VWAP with positive momentum. News catalyst (Eclypsium partnership) provides supportive sentiment. However, conviction is slightly lower due to flat 15m momentum and lower volume."
-    },
-    {
-      "symbol": "INTU",
-      "side": "long",
-      "conviction": 3,
-      "setup": "pullback in uptrend",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "reason": "Holding above VWAP with positive 15m momentum. RSI at 62.4 indicates bullish trend. Less urgent than breakouts but offers a safer entry point if breakouts fail."
-    }
+    "NVDA",
+    "PANW",
+    "CRWV",
+    "TXN",
+    "IBM"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
