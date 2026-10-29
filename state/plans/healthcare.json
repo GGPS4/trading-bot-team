@@ -1,67 +1,11 @@
 {
   "date": "2026-10-29",
-  "time": "12:34",
-  "trigger": "scheduled look",
-  "market_view": "Risk-off tape with broad indexes down and VIX spiking; healthcare slightly bearish. LLY got a Mounjaro revenue beat but special charges and price below VWAP, while MRK news was mixed. No new long setup meets the VWAP plus momentum and volume filters. Executive and team orders pause new entries, so I am focused on protecting existing longs.",
-  "decisions": [
-    {
-      "symbol": "VRTX",
-      "action": "SELL",
-      "conviction": 1,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "momentum",
-      "reason": "Existing VRTX long is underwater and its stop is looser than the required 1.5%; price is below VWAP and momentum faded in the risk-off tape, so close to protect capital."
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "TMO",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout but rvol only 0.5, low conviction."
-    },
-    {
-      "symbol": "DHR",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout but rvol only 0.51, low conviction."
-    },
-    {
-      "symbol": "MRNA",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "m15 +0.3% and rvol 0.81 but below VWAP and weak momentum, low conviction."
-    },
-    {
-      "symbol": "ABBV",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "No new catalyst today, but 20d trend strong; not a day-trading setup."
-    },
-    {
-      "symbol": "ISRG",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "No clear momentum or volume; low conviction."
-    }
-  ],
-  "experiment": "Testing ATR-based stop (2% of ATR) for all new entries and momentum filter: only enter long when m15 > 0.5% and rvol > 1.5, and price is above VWAP.",
+  "time": "12:46",
+  "trigger": "must invest $1,906 more (75% rule)",
+  "market_view": "Risk-off tape with broad indices down about 1.4% and healthcare slightly bearish. LLY is strong on Mounjaro but below VWAP and overbought, while MRK is up but momentum is mixed. Existing LLY/MRK longs are near their 1.5% stops, and HLN is under pressure; executive and team orders pause new entries, so no new positions are attractive.",
+  "decisions": [],
+  "ranked_ideas": [],
+  "experiment": "ATR-based stop and momentum filter: only enter long when m15 > 0.5% and rvol > 1.5, and price above VWAP.",
   "watchlist_changes": {
     "add": [],
     "remove": []

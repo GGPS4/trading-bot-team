@@ -1,74 +1,78 @@
 {
   "date": "2026-10-29",
-  "time": "12:07",
+  "time": "12:53",
   "trigger": "scheduled look",
-  "market_view": "Caution regime with S&P down about 1.1% and Nasdaq down 1.1%. Media and entertainment names are mostly weak or flat, with only mild positive catalysts for SPOT and NFLX, both already held. No new high-conviction long setups met the volume confirmation filter today, so the focus is risk management and avoiding low-conviction longs.",
+  "market_view": "Market is in risk-off, with SPY -0.4% and QQQ -1.5%; volatility is elevated and the tape is weak. Entertainment names are mixed, MGM is hit by bearish price target news, and VWAP/or-day filters are important. WMG stands out as a high-quality intraday long, while LYV failed its momentum setup and is below VWAP.",
   "decisions": [
     {
-      "symbol": "NFLX",
+      "symbol": "LYV",
       "action": "SELL",
-      "conviction": 3,
+      "conviction": 2,
       "stop_loss_pct": 0.0,
       "take_profit_pct": 0.0,
-      "setup": "mean reversion",
-      "reason": "NFLX stalled below VWAP and inside the range after the mean-reversion entry; intraday momentum turned negative and 15-minute relative volume was 0.93, below the required 1.2. Close the weak position."
+      "setup": "momentum",
+      "reason": "Long momentum failed; price is below VWAP and inside the opening range, so exit the setup instead of holding a broken trade."
+    },
+    {
+      "symbol": "WMG",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "WMG broke above the opening range, held above VWAP, and showed strong 15m/60m momentum with rvol 1.42. High conviction long in the focus Consumer/Entertainment group; stop below VWAP, first target 4%."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "BAM",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.04,
-      "take_profit_pct": 0.1,
-      "setup": "news catalyst",
-      "reason": "Legal dispute over unpaid indemnities with Bhv Marais; bearish but lower conviction."
-    },
-    {
-      "symbol": "TKO",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.04,
-      "take_profit_pct": 0.1,
-      "setup": "momentum",
-      "reason": "Breakdown below VWAP and opening range with negative momentum; relative volume 1.18."
-    },
-    {
-      "symbol": "IMAX",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.04,
-      "take_profit_pct": 0.1,
-      "setup": "momentum",
-      "reason": "Opening range breakdown and weak momentum; intraday sell pressure."
-    },
-    {
       "symbol": "DIS",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
-      "setup": "opening range breakout",
-      "reason": "Opening range breakout but fading momentum and trend down; low conviction."
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "OR breakout attempt, but rvol only 0.8 and m15 momentum weak; conviction below threshold."
     },
     {
       "symbol": "FOXA",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "Positive day but weak volume and flat setup; low conviction."
+      "reason": "rvol 1.39 and bounce, but price below VWAP, so VWAP bias is negative."
+    },
+    {
+      "symbol": "TKO",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "OR close and m15 bounce, but rvol 1.12 below preferred 1.2 confirmation."
+    },
+    {
+      "symbol": "CMCSA",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "VWAP bounce",
+      "reason": "Defensive entertainment name, but rvol 0.61 and no strong volume; low conviction."
+    },
+    {
+      "symbol": "MGM",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Bearish price target and Q3 miss news, but risk-off short requires high conviction; MGM is weak and oversold."
     }
   ],
   "experiment": "Pre-emptively reduce position sizes during market-wide strategy review pauses to minimize execution slippage on market exits.",
   "watchlist_changes": {
     "add": [],
-    "remove": [
-      {
-        "symbol": "EA",
-        "reason": "Overbought and no clear intraday catalyst; quiet setup."
-      }
-    ]
+    "remove": []
   }
 }

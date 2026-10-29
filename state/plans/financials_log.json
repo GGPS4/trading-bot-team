@@ -1285,5 +1285,68 @@
       "BUY COIN x5 (~$805.4) [deploy]",
       "WATCHLIST remove rejected SCHW"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "12:53",
+    "trigger": "scheduled look",
+    "market_view": "Market is in risk-off, with SPY down and VIX spiking, but MA and ICE showed strong post-earnings momentum with high volume. I am focusing on high-conviction long entries only, using tight stops and VWAP/volume confirmation, while avoiding low-conviction names. Intraday focus is on ICE breakout and MA momentum.",
+    "experiment": "Use VWAP or volume confirmation before entering breakout trades",
+    "decisions": [
+      {
+        "symbol": "V",
+        "action": "SELL",
+        "conviction": 1,
+        "reason": "Legal/risk-off headwinds and lack of fresh strength; exit to reduce exposure.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "HOOD",
+        "action": "SELL",
+        "conviction": 1,
+        "reason": "Fading opening-range breakout momentum and losing relative strength; exit before close.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "SOFI",
+        "action": "SELL",
+        "conviction": 1,
+        "reason": "Failed to hold above opening range high, momentum turning down; exit.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "ICE",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "ICE Q3 beat and OR breakout above 165.3 with rvol 3.36, above VWAP, and uptrend; high conviction earnings momentum.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.05
+      },
+      {
+        "symbol": "MA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "MA Q3 EPS/sales beat with rvol 3.09 and day +4.2%, strong consumer spending; risk-off half size but conviction meets minimum.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL V",
+      "SELL HOOD",
+      "SELL SOFI",
+      "BUY ICE x5 (~$827.05)",
+      "BUY MA blocked: team used all of today's trades",
+      "BUY JPM blocked: team used all of today's trades",
+      "BUY GS blocked: team used all of today's trades",
+      "BUY MS blocked: team used all of today's trades",
+      "BUY AXP blocked: team used all of today's trades",
+      "BUY SCHW blocked: team used all of today's trades",
+      "WATCHLIST removed BLK",
+      "WATCHLIST added EVR"
+    ]
   }
 ]
