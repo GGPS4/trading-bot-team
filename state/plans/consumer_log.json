@@ -1174,5 +1174,38 @@
       "BUY RCL blocked: team already has the maximum number of positions",
       "SHORT DEO blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "10:43",
+    "trigger": "must invest $7,127 more (75% rule)",
+    "market_view": "The broad market is in a risk-off regime with SPY down, QQQ down, and VIX spiking. The S&P 500 and Nasdaq are selling off while the VIXY is up, and most watched stocks are only slightly positive. The consumer discretionary sector is largely neutral with no broad catalyst, though news is mixed. I am staying selective for high-conviction intraday long setups with volume and VWAP confirmation, while avoiding low-conviction names.",
+    "experiment": "Testing high-conviction news catalyst entries with ATR-based stops in a risk-off regime while respecting the 50-day moving average.",
+    "decisions": [
+      {
+        "symbol": "LULU",
+        "action": "SELL",
+        "conviction": 1,
+        "reason": "LULU lost the session momentum, trading below VWAP and with negative m15/m60 momentum, so I am exiting the weak long.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "AMZN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "AMZN is holding above VWAP, with m60 up, rvol 4.54, trend up, and overnight analyst positivity; high-volume momentum long in a risk-off tape with half size.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      }
+    ],
+    "results": [
+      "SELL LULU",
+      "BUY AMZN blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY CMG x30 (~$924.45) [deploy]",
+      "BUY RCL x3 (~$933.3) [deploy]",
+      "WATCHLIST removed MAR",
+      "WATCHLIST added CVNA"
+    ]
   }
 ]

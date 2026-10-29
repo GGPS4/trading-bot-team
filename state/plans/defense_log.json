@@ -1477,5 +1477,37 @@
       "WATCHLIST remove rejected LDOS",
       "WATCHLIST remove rejected SAIC"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "10:43",
+    "trigger": "big news on ['LMT']",
+    "market_view": "Market is in risk-off, with SPY down, QQQ down, and VIX spiking. Defense sector has positive catalysts such as LMT's Army contract and RTX's earnings beat, but broad selling pressure means longs are half size and require high conviction. We are focusing on high-conviction, above-VWAP long setups with volume confirmation.",
+    "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
+    "decisions": [
+      {
+        "symbol": "TXT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "OR breakout above 87.22 on high rvol 2.09 and m60 +2.3, above VWAP, with earnings/order catalyst; high conviction.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "GD",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Closing existing position to free slot for high-conviction defense long; GD failed to sustain OR breakout and is slightly underwater.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      }
+    ],
+    "results": [
+      "SELL GD",
+      "BUY TXT blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY LMT x0.977417 (~$630.24) [deploy]",
+      "WATCHLIST add rejected BA",
+      "WATCHLIST remove rejected LDOS"
+    ]
   }
 ]

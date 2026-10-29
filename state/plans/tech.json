@@ -1,47 +1,54 @@
 {
   "date": "2026-10-29",
-  "time": "10:23",
-  "trigger": "scheduled look",
+  "time": "10:35",
+  "trigger": "big news on ['MSFT']",
   "decisions": [
     {
-      "symbol": "AMAT",
-      "action": "BUY",
-      "reason": "Opening range breakout above 415.45 with strong volume (rvol 1.51) and positive 15m momentum. RSI is oversold (25.1) on the daily, suggesting a potential intraday bounce. Fits the 'breakout' setup criteria with volume confirmation.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "symbol": "MSFT",
+      "action": "SELL",
+      "reason": "Position is underwater (-0.1%) and trading below VWAP. In a risk-off environment, capital should be rotated into stronger momentum setups. Freeing up capital to meet the 75% invested requirement with higher-conviction entries.",
+      "qty": 5
+    },
+    {
+      "symbol": "IBM",
+      "action": "SELL",
+      "reason": "RSI is overbought at 81.1 and the stock is trading below VWAP with negative 15m momentum (-0.5%). The setup is stalling and risk/reward is poor for a day trade. Closing to redeploy capital.",
+      "qty": 11
     },
     {
       "symbol": "CRWV",
       "action": "BUY",
-      "reason": "Opening range breakout above 62.26 with high relative volume (1.76) and strong 15m momentum (+1.0%). Despite the 20-day downtrend, the intraday reversal and volume spike suggest a short-covering rally or new momentum leg. Conviction is moderate but setup is clean.",
+      "reason": "Strong intraday momentum: +2.5% off the open, trading 2.2% above VWAP, and breaking out of the opening range. 60m momentum is +3.2%. News catalyst: Treasury Secretary downplaying AI debt worries. Conviction 4/5. Fits the 'breakout' setup.",
+      "qty": 280,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout"
-    },
-    {
-      "symbol": "ANET",
-      "action": "BUY",
-      "reason": "Opening range breakout above 185.00 with positive 15m momentum (+0.6%) and price well above VWAP (+1.2%). Trend is up. Although rvol is low (0.55), the clean break and trend alignment make it a viable momentum play in a risk-off environment where we are selective.",
-      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout"
     },
     {
-      "symbol": "INTC",
+      "symbol": "AMAT",
       "action": "BUY",
-      "reason": "Strong intraday momentum (+1.6% look) and breakout above opening range high (93.47). Earnings are after the close, which often drives pre-earnings volatility and momentum. RSI 36.1 is not overbought. Fits the momentum setup.",
+      "reason": "Opening range breakout (OR 410.04-415.45, price 420.37). Trading 1.4% above VWAP with positive 60m momentum (+1.7%). RSI is oversold (25.1) suggesting a potential reversal from the 20d downtrend. Conviction 4/5.",
+      "qty": 40,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum"
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
+    },
+    {
+      "symbol": "TXN",
+      "action": "BUY",
+      "reason": "Opening range breakout (OR 306.55-309.01, price 309.22). Trading above VWAP (+0.4%). Strong 5d momentum (+8.8%). Conviction 4/5. Note: Low relative volume (0.55) is a risk, but the breakout is clean.",
+      "qty": 55,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
     }
   ],
   "ranked_ideas": [
     "NVDA",
     "AMD",
-    "MU",
-    "AVGO",
-    "TXN"
+    "ANET",
+    "INTC",
+    "AVGO"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
