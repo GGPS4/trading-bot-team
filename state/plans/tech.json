@@ -1,68 +1,41 @@
 {
   "date": "2026-10-29",
-  "time": "13:12",
-  "trigger": "must invest $25,815 more (75% rule)",
-  "market_view": "Market is in risk-off with SPY and QQQ down and VIXY up; broad selling pressure is driving the session. Longs are half size and need high conviction, while shorting weak breakdowns is favored. AMAT is holding but stalled, and the only actionable OR breakout was AVGO, though volume was weak; no new high-conviction long is obvious until a stock shows volume-backed strength.",
-  "decisions": [
-    {
-      "symbol": "EQIX",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "EQIX is up 4.4% on rvol 1.76, above VWAP, RSI 56, not overbought, and above the 50-day average; volume-confirmed momentum long in a risk-off tape requires high conviction."
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "AVGO",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "AVGO broke above OR high at $344.18 and held above VWAP with uptrend up; OR breakout historically PF 2.52, but weak rvol."
-    },
+  "time": "14:21",
+  "trigger": "first look this run",
+  "orders": [
     {
       "symbol": "MSFT",
-      "direction": "long",
-      "conviction": 5,
+      "action": "BUY",
+      "size_usd": 5667.9,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Analyst PT raises to 650 and bullish Azure; however breakdown below VWAP/OR limits new long entry."
+      "setup": "news catalyst"
     },
     {
-      "symbol": "NVDA",
-      "direction": "long",
-      "conviction": 4,
+      "symbol": "NOW",
+      "action": "SHORT",
+      "size_usd": 5667.9,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Nvidia invests in Cohere, AI demand; below VWAP, so long setup is not ideal but high-conviction news."
+      "setup": "news catalyst"
     },
     {
       "symbol": "GOOGL",
-      "direction": "short",
-      "conviction": 3,
+      "action": "SHORT",
+      "size_usd": 5667.9,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Earnings miss and high volume; but RSI oversold, so shorting into climax is risky."
-    },
-    {
-      "symbol": "CRWV",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Broke OR high but momentum/trend down, fading long."
+      "setup": "news catalyst"
     }
   ],
-  "experiment": "",
-  "watchlist_changes": {
+  "ranked_ideas": [
+    "AVGO",
+    "AMAT",
+    "PANW",
+    "INTU",
+    "AAPL"
+  ],
+  "watchlist_updates": {
     "add": [],
     "remove": []
   }
