@@ -984,5 +984,26 @@
       "BUY SONY x12 (~$302.7) [deploy]",
       "BUY CMCSA x14 (~$306.39) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "09:54",
+    "trigger": "price moves in ['MGM']",
+    "market_view": "The broader market remains in a risk-off posture with SPY down 0.6% and QQQ down 1.8%, requiring high conviction and strict volume confirmation for any long entries. Despite macro weakness, select entertainment names like DIS and MGM are exhibiting relative intraday strength with positive 15-minute momentum and elevated volume. We hold profitable positions in SPOT, SONY, and CMCSA while deploying remaining capital into high-volume setups.",
+    "experiment": "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries.",
+    "decisions": [
+      {
+        "symbol": "DIS",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "DIS shows solid relative volume (rvol 1.8), trading above VWAP (+0.3%) with positive 15-minute momentum (+0.4%), satisfying our risk-off volume and conviction thresholds.",
+        "stop_loss_pct": 0.012,
+        "take_profit_pct": 0.025
+      }
+    ],
+    "results": [
+      "BUY DIS blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY MGM x11 (~$305.42) [deploy]"
+    ]
   }
 ]

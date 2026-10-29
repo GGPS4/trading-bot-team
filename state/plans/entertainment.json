@@ -1,73 +1,64 @@
 {
   "date": "2026-10-29",
-  "time": "09:39",
-  "trigger": "first look this run",
-  "market_view": "The broader market opens under distinct risk-off pressure with QQQ down 1.2% and SPY down 0.4%. We focus defensively on catalyst-backed long opportunities with high conviction and exploit severe, validated earnings misses via selective short setups while adhering strictly to position limits.",
+  "time": "09:54",
+  "trigger": "price moves in ['MGM']",
+  "market_view": "The broader market remains in a risk-off posture with SPY down 0.6% and QQQ down 1.8%, requiring high conviction and strict volume confirmation for any long entries. Despite macro weakness, select entertainment names like DIS and MGM are exhibiting relative intraday strength with positive 15-minute momentum and elevated volume. We hold profitable positions in SPOT, SONY, and CMCSA while deploying remaining capital into high-volume setups.",
   "decisions": [
     {
-      "symbol": "SPOT",
+      "symbol": "DIS",
       "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.035,
-      "setup": "news catalyst",
-      "reason": "Spotify launched the Spotify 360 premium experience driving positive fundamental sentiment; stock trades above its 50-day moving average with solid +10.4% 20-day momentum."
-    },
-    {
-      "symbol": "MGM",
-      "action": "SHORT",
       "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "High-conviction negative catalyst following Q3 EPS and revenue misses, multiple analyst price target cuts from Stifel and Truist, and price action hovering near 52-week lows."
+      "stop_loss_pct": 0.012,
+      "take_profit_pct": 0.025,
+      "setup": "momentum",
+      "reason": "DIS shows solid relative volume (rvol 1.8), trading above VWAP (+0.3%) with positive 15-minute momentum (+0.4%), satisfying our risk-off volume and conviction thresholds."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "SONY",
+      "symbol": "MGM",
       "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.035,
+      "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Maintaining consistent multi-week relative strength (+7.1% over 20d) and trading comfortably above 50-day moving average."
-    },
-    {
-      "symbol": "CMCSA",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Network expansion announcement provides steady defensive support, trading +1.0% in early action."
-    },
-    {
-      "symbol": "DIS",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "Holding key technical support above 50-day MA with moderate RSI at 57.8."
+      "reason": "Massive relative volume (rvol 5.42) with strong intraday gain (+2.3% open, +2.8% m15) trading well above VWAP (+1.4%)."
     },
     {
       "symbol": "NFLX",
       "direction": "long",
       "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Mercado Libre ad partnership catalyst provides potential mean-reversion upside from oversold RSI 24.2."
+      "stop_loss_pct": 0.012,
+      "take_profit_pct": 0.025,
+      "setup": "momentum",
+      "reason": "Volume confirmation (rvol 1.43) with positive 15m momentum (+0.3%) and trading above VWAP."
+    },
+    {
+      "symbol": "LYV",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Up +1.2% off open and +0.3% above VWAP with +1.1% 15-minute momentum, though rvol is moderate (0.61)."
     },
     {
       "symbol": "BAM",
       "direction": "long",
-      "conviction": 4,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.035,
+      "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "Solid 20-day uptrend (+6.3%) trading well above 50-day moving average."
+      "reason": "Up +1.2% off open and +0.7% above VWAP with strong 15m momentum (+1.2%)."
+    },
+    {
+      "symbol": "FOXA",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.012,
+      "take_profit_pct": 0.025,
+      "setup": "momentum",
+      "reason": "Trading above VWAP (+0.1%) with positive daily change (+1.0%) ahead of upcoming earnings."
     }
   ],
   "experiment": "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries.",

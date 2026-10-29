@@ -1,59 +1,32 @@
 {
   "date": "2026-10-29",
-  "time": "09:43",
-  "trigger": "price moves in ['AVAV']",
-  "market_view": "Defense sector shows strong relative strength today despite broader market risk-off sentiment (SPY -0.6%, QQQ -1.8%). Earnings beats and guidance raises from LHX, RTX, HII, and TXT, alongside CACI's $185M Army contract, are driving sector-wide momentum. We maintain our existing high-conviction catalyst positions while monitoring potential expansion entries.",
-  "decisions": [],
-  "ranked_ideas": [
-    {
-      "symbol": "KTOS",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Breaking out above opening range high of 42.24 with rvol 2.12 and trading above VWAP (+0.9%)."
-    },
+  "time": "09:45",
+  "trigger": "price moves in ['HII']",
+  "decisions": [
     {
       "symbol": "LMT",
-      "direction": "long",
-      "conviction": 4,
+      "action": "BUY",
+      "reason": "Strong relative strength (+1.7% day) in a risk-off market, high volume (rvol 2.02), and above VWAP. RSI is high (85.7) indicating strong momentum, but the 'look' is negative (-0.3%), suggesting a potential pullback entry point. Trump's comments on Iran nuclear program provide a geopolitical catalyst for defense spending. Conviction 4/5.",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "High relative volume of 2.7x, trading above VWAP (+0.1%), backed by strong multi-day momentum."
+      "setup": "momentum"
     },
     {
-      "symbol": "HII",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "earnings gap",
-      "reason": "Q3 EPS beat and increased full-year shipbuilding guidance with massive volume (rvol 12.03)."
-    },
-    {
-      "symbol": "BAH",
-      "direction": "long",
-      "conviction": 4,
+      "symbol": "KTOS",
+      "action": "BUY",
+      "reason": "Trading above VWAP (+0.9%) with positive 15m momentum. RSI is neutral (46.5), offering room for upside without being overbought. Volume is decent (rvol 1.53). Trump's defense spending comments support the sector. Conviction 4/5.",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Trading above VWAP (+0.5%) with consistent uptrend momentum and positive sector tailwinds."
-    },
-    {
-      "symbol": "GD",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "Major defense prime trading above VWAP (+0.1%) ahead of earnings, benefiting from sector momentum."
+      "setup": "VWAP bounce"
     }
   ],
-  "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "ranked_ideas": [
+    "NOC",
+    "GD",
+    "HEI",
+    "AVAV",
+    "BAH"
+  ],
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

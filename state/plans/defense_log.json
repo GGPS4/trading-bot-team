@@ -1391,5 +1391,34 @@
     "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-29",
+    "time": "09:45",
+    "trigger": "price moves in ['HII']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "LMT",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "Strong relative strength (+1.7% day) in a risk-off market, high volume (rvol 2.02), and above VWAP. RSI is high (85.7) indicating strong momentum, but the 'look' is negative (-0.3%), suggesting a potential pullback entry point. Trump's comments on Iran nuclear program provide a geopolitical catalyst for defense spending. Conviction 4/5.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "KTOS",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "Trading above VWAP (+0.9%) with positive 15m momentum. RSI is neutral (46.5), offering room for upside without being overbought. Volume is decent (rvol 1.53). Trump's defense spending comments support the sector. Conviction 4/5.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY LMT blocked: team already has the maximum number of positions",
+      "BUY KTOS blocked: team already has the maximum number of positions"
+    ]
   }
 ]
