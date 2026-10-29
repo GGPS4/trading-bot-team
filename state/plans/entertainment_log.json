@@ -1045,5 +1045,28 @@
       "BUY SPOT x0.505771 (~$280.11) [deploy]",
       "BUY TKO x1 (~$176.89) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "11:33",
+    "trigger": "must invest $2,535 more (75% rule)",
+    "market_view": "Market is in risk-off with SPY -0.3%, QQQ -1.2%, and VIXY -2.1%, indicating falling prices and spiking fear. Longs are half size and need higher conviction. Entertainment stocks are mixed: MGM was hit by price target cuts and Q3 miss, TKO showed an opening-range breakout, SPOT had positive news but weak volume, and NFLX received positive streaming partnership news. I am focusing on high-conviction long setups only.",
+    "experiment": "Testing opening-range breakout momentum with volume confirmation; TKO rvol 1.19 was slightly under the 1.2 threshold, so I am watching for volume follow-through.",
+    "decisions": [
+      {
+        "symbol": "TKO",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "TKO cleared the opening range high at $177.07 and held above VWAP with positive 60-min momentum; day +2.0%, rvol 1.19, and the stock is within the consumer/entertainment focus. Despite slightly under the ideal 1.2 volume threshold, the breakout structure is valid for a high-conviction long in a risk-off tape.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY TKO blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY SPOT x0.503552 (~$280.11) [deploy]",
+      "BUY LYV x1 (~$176.41) [deploy]",
+      "WATCHLIST remove rejected ROKU"
+    ]
   }
 ]

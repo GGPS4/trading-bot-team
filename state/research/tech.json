@@ -276,6 +276,42 @@
   "news": {
     "findings": [
       {
+        "symbol": "INTC",
+        "sentiment": -0.4,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Intel shares have fallen up to 65% amid a broader tech selloff, but some analysts see a rebound opportunity.",
+        "source": "benzinga",
+        "time": "11:30"
+      },
+      {
+        "symbol": "NOW",
+        "sentiment": -0.4,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Okta shares have dropped up to 65% in the tech selloff, yet may present a buying opportunity.",
+        "source": "benzinga",
+        "time": "11:30"
+      },
+      {
+        "symbol": "CRWV",
+        "sentiment": -0.4,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Crayon shares have fallen up to 65% amid the tech selloff, but could be a buy signal.",
+        "source": "benzinga",
+        "time": "11:30"
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": 0.8,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Truist Securities raises Microsoft price target to $630, reaffirming a buy rating.",
+        "source": "benzinga",
+        "time": "11:30"
+      },
+      {
         "symbol": "MSFT",
         "sentiment": 0.7,
         "importance": 3,
@@ -508,43 +544,11 @@
         "summary": "Stifel maintains Buy on Microsoft and raises price target to $650.",
         "source": "benzinga",
         "time": "09:35"
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": 0.8,
-        "importance": 5,
-        "unconfirmed_rumor": false,
-        "summary": "Microsoft beat Q1 earnings estimates with Azure growth at 48% and a $677B backlog, though capex was slightly below guidance due to delivery delays.",
-        "source": "benzinga"
-      },
-      {
-        "symbol": "NOW",
-        "sentiment": -0.9,
-        "importance": 5,
-        "unconfirmed_rumor": false,
-        "summary": "ServiceNow stock plunged approximately 18-19% after missing Q3 earnings estimates, despite beating revenue targets and securing a major HPE contract.",
-        "source": "benzinga"
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": -0.4,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Nvidia faces DOJ scrutiny regarding its $12.9 billion acquisition of Hugging Face, adding regulatory risk to its AI expansion plans.",
-        "source": "benzinga"
-      },
-      {
-        "symbol": "PANW",
-        "sentiment": -0.2,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Palo Alto Networks acknowledged active exploitation of its PAN-OS management interfaces via the PHP2Shell vulnerability and released patches.",
-        "source": "fiscal.ai"
       }
     ],
     "urgent": [],
-    "overall": "The mood for the IT sector remains cautiously optimistic, with a notable positive outlook for Microsoft following Barclays' upgrade. No other significant developments were reported in the last two hours.",
-    "items_read": 80
+    "overall": "The IT sector remains mixed, with some stocks experiencing steep declines but potential rebound signals, while Microsoft receives a bullish upgrade.",
+    "items_read": 82
   },
   "social": {
     "findings": [],
@@ -725,143 +729,319 @@
   },
   "intraday": {
     "AAPL": {
-      "price": 348.94,
-      "change_today": 0.0142,
-      "from_open": 0.0026,
+      "price": 348.9,
+      "change_today": 0.0141,
+      "from_open": 0.0025,
       "day_high": 351.365,
       "day_low": 347.42,
-      "since_last_look": -0.0006
+      "since_last_look": -0.0007,
+      "vwap": 349.52,
+      "vs_vwap": -0.0018,
+      "opening_range": [
+        347.42,
+        351.37
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0006,
+      "momentum_60m": -0.0027,
+      "rel_volume": 1.21,
+      "trend_5m": "flat"
     },
     "MSFT": {
-      "price": 524.5,
-      "change_today": -0.0145,
-      "from_open": -0.0293,
+      "price": 523.63,
+      "change_today": -0.0162,
+      "from_open": -0.0309,
       "day_high": 540.79,
       "day_low": 519.59,
-      "since_last_look": 0.0062
+      "since_last_look": 0.0045,
+      "vwap": 528.43,
+      "vs_vwap": -0.0091,
+      "opening_range": [
+        525.44,
+        540.79
+      ],
+      "breakout_up": false,
+      "breakdown": true,
+      "momentum_15m": -0.0005,
+      "momentum_60m": -0.0006,
+      "rel_volume": 3.36,
+      "trend_5m": "flat"
     },
     "NVDA": {
-      "price": 214.23,
-      "change_today": -0.0052,
-      "from_open": -0.001,
+      "price": 213.9,
+      "change_today": -0.0067,
+      "from_open": -0.0025,
       "day_high": 215.32,
       "day_low": 212.09,
-      "since_last_look": 0.0012
+      "since_last_look": -0.0004,
+      "vwap": 213.54,
+      "vs_vwap": 0.0017,
+      "opening_range": [
+        212.09,
+        215.32
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0015,
+      "momentum_60m": 0.0013,
+      "rel_volume": 1.35,
+      "trend_5m": "up"
     },
     "AVGO": {
-      "price": 344.47,
-      "change_today": -0.0211,
-      "from_open": 0.006,
+      "price": 344.63,
+      "change_today": -0.0207,
+      "from_open": 0.0065,
       "day_high": 344.71,
       "day_low": 338.84,
-      "since_last_look": 0.0047
+      "since_last_look": 0.0051,
+      "vwap": 342.08,
+      "vs_vwap": 0.0075,
+      "opening_range": [
+        338.84,
+        344.18
+      ],
+      "breakout_up": true,
+      "breakdown": false,
+      "momentum_15m": 0.0015,
+      "momentum_60m": 0.0072,
+      "rel_volume": 0.91,
+      "trend_5m": "up"
     },
     "AMD": {
-      "price": 573.26,
-      "change_today": -0.0089,
-      "from_open": 0.0193,
+      "price": 572.59,
+      "change_today": -0.0101,
+      "from_open": 0.0181,
       "day_high": 573.765,
       "day_low": 560.75,
-      "since_last_look": 0.0097
+      "since_last_look": 0.0085,
+      "vwap": 567.4,
+      "vs_vwap": 0.0091,
+      "opening_range": [
+        560.75,
+        572.54
+      ],
+      "breakout_up": true,
+      "breakdown": false,
+      "momentum_15m": 0.0018,
+      "momentum_60m": 0.0057,
+      "rel_volume": 1.19,
+      "trend_5m": "up"
     },
     "INTU": {
-      "price": 326.55,
-      "change_today": -0.0053,
-      "from_open": 0.0217,
+      "price": 325.18,
+      "change_today": -0.0094,
+      "from_open": 0.0174,
       "day_high": 332.665,
       "day_low": 319.595,
-      "since_last_look": 0.0002
+      "since_last_look": -0.004,
+      "vwap": 327.75,
+      "vs_vwap": -0.0078,
+      "opening_range": [
+        319.6,
+        331.11
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0037,
+      "momentum_60m": -0.0125,
+      "rel_volume": 1.04,
+      "trend_5m": "flat"
     },
     "TXN": {
-      "price": 309.37,
-      "change_today": -0.001,
-      "from_open": 0.0032,
-      "day_high": 309.365,
+      "price": 309.9,
+      "change_today": 0.0008,
+      "from_open": 0.0049,
+      "day_high": 309.9,
       "day_low": 306.545,
-      "since_last_look": 0.0038
+      "since_last_look": 0.0056,
+      "vwap": 308.29,
+      "vs_vwap": 0.0052,
+      "opening_range": [
+        306.55,
+        309.01
+      ],
+      "breakout_up": true,
+      "breakdown": false,
+      "momentum_15m": 0.0048,
+      "momentum_60m": 0.0058,
+      "rel_volume": 0.58,
+      "trend_5m": "up"
     },
     "NOW": {
-      "price": 112.94,
-      "change_today": -0.2466,
-      "from_open": -0.0616,
+      "price": 112.0,
+      "change_today": -0.2528,
+      "from_open": -0.0694,
       "day_high": 120.655,
       "day_low": 111.285,
-      "since_last_look": -0.0012
+      "since_last_look": -0.0095,
+      "vwap": 114.24,
+      "vs_vwap": -0.0196,
+      "opening_range": [
+        112.39,
+        120.66
+      ],
+      "breakout_up": false,
+      "breakdown": true,
+      "momentum_15m": -0.0038,
+      "momentum_60m": -0.0164,
+      "rel_volume": 6.99,
+      "trend_5m": "down"
     },
     "AMAT": {
-      "price": 421.19,
-      "change_today": 0.0135,
-      "from_open": 0.0198,
+      "price": 420.46,
+      "change_today": 0.0117,
+      "from_open": 0.018,
       "day_high": 421.41,
       "day_low": 410.04,
-      "since_last_look": 0.0069
+      "since_last_look": 0.0052,
+      "vwap": 415.4,
+      "vs_vwap": 0.0122,
+      "opening_range": [
+        410.04,
+        415.45
+      ],
+      "breakout_up": true,
+      "breakdown": false,
+      "momentum_15m": 0.0,
+      "momentum_60m": 0.0066,
+      "rel_volume": 0.98,
+      "trend_5m": "flat"
     },
     "MU": {
-      "price": 954.85,
-      "change_today": -0.0286,
-      "from_open": -0.0135,
+      "price": 952.75,
+      "change_today": -0.0307,
+      "from_open": -0.0157,
       "day_high": 970.6,
       "day_low": 941.15,
-      "since_last_look": 0.0028
+      "since_last_look": 0.0006,
+      "vwap": 952.28,
+      "vs_vwap": 0.0005,
+      "opening_range": [
+        941.15,
+        970.6
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0021,
+      "momentum_60m": -0.0019,
+      "rel_volume": 0.99,
+      "trend_5m": "flat"
     },
     "PANW": {
-      "price": 373.12,
-      "change_today": -0.054,
-      "from_open": 0.0099,
+      "price": 374.25,
+      "change_today": -0.0511,
+      "from_open": 0.013,
       "day_high": 389.05,
       "day_low": 367.685,
-      "since_last_look": -0.0035
+      "since_last_look": -0.0004,
+      "vwap": 378.97,
+      "vs_vwap": -0.0125,
+      "opening_range": [
+        367.69,
+        388.81
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0011,
+      "momentum_60m": -0.0171,
+      "rel_volume": 2.35,
+      "trend_5m": "flat"
     },
     "ANET": {
-      "price": 186.19,
-      "change_today": -0.0032,
-      "from_open": 0.0113,
+      "price": 185.15,
+      "change_today": -0.0087,
+      "from_open": 0.0056,
       "day_high": 187.375,
       "day_low": 182.69,
-      "since_last_look": 0.0014
+      "since_last_look": -0.0042,
+      "vwap": 185.41,
+      "vs_vwap": -0.0014,
+      "opening_range": [
+        182.69,
+        185
+      ],
+      "breakout_up": true,
+      "breakdown": false,
+      "momentum_15m": -0.0056,
+      "momentum_60m": -0.0086,
+      "rel_volume": 0.62,
+      "trend_5m": "flat"
     },
     "CRWV": {
-      "price": 63.27,
-      "change_today": -0.0102,
-      "from_open": 0.0328,
+      "price": 63.3,
+      "change_today": -0.0097,
+      "from_open": 0.0333,
       "day_high": 63.35,
       "day_low": 60.18,
-      "since_last_look": 0.0125
+      "since_last_look": 0.013,
+      "vwap": 61.7,
+      "vs_vwap": 0.026,
+      "opening_range": [
+        60.18,
+        62.26
+      ],
+      "breakout_up": true,
+      "breakdown": false,
+      "momentum_15m": 0.0013,
+      "momentum_60m": 0.0104,
+      "rel_volume": 1.02,
+      "trend_5m": "up"
     },
     "INTC": {
-      "price": 93.2,
-      "change_today": -0.0243,
-      "from_open": 0.0022,
+      "price": 93.21,
+      "change_today": -0.0242,
+      "from_open": 0.0023,
       "day_high": 93.47,
       "day_low": 91.555,
-      "since_last_look": 0.0047
+      "since_last_look": 0.0049,
+      "vwap": 92.61,
+      "vs_vwap": 0.0065,
+      "opening_range": [
+        91.56,
+        93.47
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": 0.0006,
+      "momentum_60m": 0.0013,
+      "rel_volume": 1.17,
+      "trend_5m": "up"
     },
     "IBM": {
-      "price": 254.07,
-      "change_today": 0.0033,
-      "from_open": 0.0244,
+      "price": 253.18,
+      "change_today": -0.0002,
+      "from_open": 0.0208,
       "day_high": 254.92,
       "day_low": 248.025,
-      "since_last_look": 0.0008
+      "since_last_look": -0.0027,
+      "vwap": 252.96,
+      "vs_vwap": 0.0009,
+      "opening_range": [
+        248.03,
+        254.69
+      ],
+      "breakout_up": false,
+      "breakdown": false,
+      "momentum_15m": -0.0028,
+      "momentum_60m": 0.0006,
+      "rel_volume": 0.64,
+      "trend_5m": "flat"
     }
   },
   "discovery": {
     "top_gainers": [
       {
         "symbol": "BURU",
-        "chg": 95.18
+        "chg": 103.08
       },
       {
         "symbol": "GENVR",
-        "chg": 67.45
-      },
-      {
-        "symbol": "ABLVW",
-        "chg": 66.91
+        "chg": 65.09
       },
       {
         "symbol": "NCPL",
-        "chg": 47.45
+        "chg": 48.64
       },
       {
         "symbol": "GRABW",
@@ -876,38 +1056,42 @@
         "chg": 39.97
       },
       {
-        "symbol": "INLF",
-        "chg": 39.67
+        "symbol": "FLYX.WS",
+        "chg": 39.5
+      },
+      {
+        "symbol": "ASPSW",
+        "chg": 37.78
       }
     ],
     "top_losers": [
       {
         "symbol": "GME.WS",
-        "chg": -50.04
-      },
-      {
-        "symbol": "NOWX",
-        "chg": -49.91
+        "chg": -54.77
       },
       {
         "symbol": "NOWL",
-        "chg": -49.1
+        "chg": -49.3
+      },
+      {
+        "symbol": "NOWX",
+        "chg": -48.28
       },
       {
         "symbol": "QUMSR",
         "chg": -46.08
       },
       {
-        "symbol": "LVWR",
-        "chg": -45.62
+        "symbol": "OPTT",
+        "chg": -40.37
       },
       {
-        "symbol": "OPTT",
-        "chg": -41.81
+        "symbol": "LVWR",
+        "chg": -39.84
       },
       {
         "symbol": "XRX",
-        "chg": -37.46
+        "chg": -37.72
       },
       {
         "symbol": "DAAQW",
@@ -917,26 +1101,26 @@
     "most_active": [
       "BURU",
       "INLF",
-      "RBNE",
       "WFF",
-      "GOOGL",
+      "RBNE",
       "ADT",
+      "GOOGL",
       "NVD",
       "GOOG",
       "SOXS",
       "SOXL"
     ],
     "headlines": [
-      "THG: The Hanover Insurance Gr Q3 2026 Earnings Call Transcript",
-      "EBAY: Barclays Maintains Overweight on eBay, Raises Price Target to $136",
-      "CP: Barclays Maintains Overweight on Canadian Pacific Kansas, Raises Price Target to $104",
-      "LXU: LSB Industries Q3 2026 Earnings Call Transcript",
-      "ETSY: Wedbush Maintains Neutral on Etsy, Raises Price Target to $99",
-      "TRS: TriMas Q3 2026 Earnings Call Transcript",
-      "BKR: Barclays Maintains Equal-Weight on Baker Hughes, Lowers Price Target to $62",
-      "IDCC: InterDigital Q3 2026 Earnings Call Transcript",
-      "FTV: Truist Securities Reiterates Hold on Fortive, Raises Price Target to $65",
-      "AXGN: Barclays Maintains Overweight on Axogen, Raises Price Target to $60"
+      "WEX: WEX Q3 2026 Earnings Call Transcript",
+      "LH: Barclays Maintains Equal-Weight on Labcorp Holdings, Raises Price Target to $380",
+      "HWM: Howmet Aerospace Q3 2026 Earnings Call Transcript",
+      "ICLR: Barclays Maintains Equal-Weight on Icon, Raises Price Target to $230",
+      "DBD: Wedbush Maintains Outperform on Diebold Nixdorf, Lowers Price Target to $90",
+      "CSW: CSW Industrials Q2 2027 Earnings Call Transcript",
+      "EHC: Encompass Health Q3 2026 Earnings Call Transcript",
+      "HRI: Barclays Maintains Overweight on Herc Holdings, Raises Price Target to $200",
+      "XEL: Xcel Energy Q3 2026 Earnings Call Transcript",
+      "HCA: Barclays Maintains Equal-Weight on HCA Healthcare, Raises Price Target to $401"
     ],
     "note": "stocks other teams already watch were left out"
   },
@@ -996,13 +1180,13 @@
     "note": "Under 5 trades is too few to judge. Favor setups with PF (profit factor) above 1.2."
   },
   "mood": {
-    "time": "2026-10-29T11:00-04:00",
+    "time": "2026-10-29T11:25-04:00",
     "regime": "risk_off",
-    "spy": -0.0046,
-    "qqq": -0.015,
-    "fear_vixy": -0.01,
-    "breadth": 0.72,
-    "why": "index down -1.5%",
+    "spy": -0.003,
+    "qqq": -0.0123,
+    "fear_vixy": -0.0188,
+    "breadth": 0.78,
+    "why": "index down -1.2%",
     "note": "Market is falling hard or fear is spiking. Longs are half size and need conviction +1. Shorting weak stocks (below VWAP, breaking down) is favored."
   },
   "premarket": {

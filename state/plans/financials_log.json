@@ -1172,5 +1172,45 @@
       "BUY V x2 (~$821.82) [deploy]",
       "BUY SOFI x54 (~$939.6) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "11:33",
+    "trigger": "scheduled look",
+    "market_view": "Market is in risk-off with SPY down 0.3%, QQQ down 1.2%, and VIXY down 2.1%, fear spiking. Longs are half size and need higher conviction, and intraday focus is on clear opening-range breakouts with volume while avoiding weak longs. Existing ICE and MA earnings longs are holding, but we are into the last hours before close, so only high-conviction setups are appropriate.",
+    "experiment": "Implement trailing stops for long positions to lock in gains",
+    "decisions": [
+      {
+        "symbol": "SOFI",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Risk-off and need to rotate out of high-beta momentum into the earnings trio; close long.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "V",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Overnight negative legal risk (5bn UK lawsuit) and risk-off regime; position stalled at +0.004%, stop 402.69 not hit. Close long.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "COIN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Executive team order to add on upcoming/after-close earnings with conviction >=4; earnings catalyst.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.1
+      }
+    ],
+    "results": [
+      "SELL SOFI",
+      "SELL V",
+      "BUY COIN blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY AXP x2 (~$651.63) [deploy]",
+      "BUY HOOD x10 (~$917.6) [deploy]"
+    ]
   }
 ]
