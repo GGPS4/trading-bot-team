@@ -1,57 +1,76 @@
 {
-  "date": "2026-10-28",
-  "time": "15:37",
-  "trigger": "price moves in ['MGM']",
-  "market_view": "Team is paused for strategy review with a 24.5% win rate \u2014 a net drag. Best available setups lack rvol > 1.2 confirmation required by current rules. No new trades initiated to respect the pause, though this conflicts with the 75% minimum investment rule. Strongest setups: MGM and FOXA breakdowns with high rvol (1.8, 1.93), and BAM/TKO/SONY breakouts with momentum, but none meet the strict entry filters. Capital preservation is the priority until the strategy review concludes.",
-  "decisions": [],
-  "ranked_ideas": [
+  "date": "2026-10-29",
+  "time": "09:39",
+  "trigger": "first look this run",
+  "market_view": "The broader market opens under distinct risk-off pressure with QQQ down 1.2% and SPY down 0.4%. We focus defensively on catalyst-backed long opportunities with high conviction and exploit severe, validated earnings misses via selective short setups while adhering strictly to position limits.",
+  "decisions": [
     {
-      "symbol": "MGM",
-      "direction": "short",
-      "conviction": 4,
+      "symbol": "SPOT",
+      "action": "BUY",
+      "conviction": 5,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakdown with high rvol 1.8, vwap -2.2%, m15 -0.7% \u2014 strongest breakdown setup in the field"
+      "take_profit_pct": 0.035,
+      "setup": "news catalyst",
+      "reason": "Spotify launched the Spotify 360 premium experience driving positive fundamental sentiment; stock trades above its 50-day moving average with solid +10.4% 20-day momentum."
     },
     {
-      "symbol": "FOXA",
-      "direction": "short",
+      "symbol": "MGM",
+      "action": "SHORT",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "High-conviction negative catalyst following Q3 EPS and revenue misses, multiple analyst price target cuts from Stifel and Truist, and price action hovering near 52-week lows."
+    }
+  ],
+  "ranked_ideas": [
+    {
+      "symbol": "SONY",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.035,
+      "setup": "momentum",
+      "reason": "Maintaining consistent multi-week relative strength (+7.1% over 20d) and trading comfortably above 50-day moving average."
+    },
+    {
+      "symbol": "CMCSA",
+      "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakdown with high rvol 1.93, vwap -0.5%, m15 +0.1% \u2014 highest rvol breakdown, but momentum slightly positive; short on breakdown with volume"
+      "setup": "news catalyst",
+      "reason": "Network expansion announcement provides steady defensive support, trading +1.0% in early action."
+    },
+    {
+      "symbol": "DIS",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "pullback in uptrend",
+      "reason": "Holding key technical support above 50-day MA with moderate RSI at 57.8."
+    },
+    {
+      "symbol": "NFLX",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Mercado Libre ad partnership catalyst provides potential mean-reversion upside from oversold RSI 24.2."
     },
     {
       "symbol": "BAM",
       "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "take_profit_pct": 0.035,
       "setup": "momentum",
-      "reason": "up +1.1%, above vwap +0.3%, m15 +0.5%, 5d +2.6% / RSI 63 \u2014 strongest momentum setup; legal dispute is a known headwind but price action confirms trend"
-    },
-    {
-      "symbol": "TKO",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above 171.59, above vwap +0.2%, m15 +0.4%, 5d -2.8%/RSI 35.6 \u2014 breakout with trend confirmation despite oversold 50d"
-    },
-    {
-      "symbol": "SONY",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above 25.18, above vwap +0.4%, m15 +0.3%, 5d +0.3%/RSI 66.6 \u2014 breakout with above-vwap confirmation and positive momentum"
+      "reason": "Solid 20-day uptrend (+6.3%) trading well above 50-day moving average."
     }
   ],
-  "experiment": "",
+  "experiment": "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries.",
   "watchlist_changes": {
     "add": [],
     "remove": []

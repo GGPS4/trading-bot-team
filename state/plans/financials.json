@@ -1,54 +1,87 @@
 {
-  "date": "2026-10-27",
-  "time": "14:20",
-  "trigger": "big news on ['COIN', 'HOOD']",
-  "orders": [
+  "date": "2026-10-29",
+  "time": "09:43",
+  "trigger": "first look this run",
+  "market_view": "Broad market is risk-off with QQQ down 1.8% and SPY down 0.6%, favoring selectivity and strict volume confirmation. However, financial bellwethers with earnings catalysts (MA and ICE) are showing significant relative strength and high trading volume against market headwinds. We focus our day trades strictly on executive-targeted earnings catalysts with tight stops.",
+  "decisions": [
     {
-      "symbol": "JPM",
-      "side": "buy",
-      "qty": 2.94,
-      "price": 336.23,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "sector rotation"
+      "symbol": "MA",
+      "action": "BUY",
+      "conviction": 5,
+      "stop_loss_pct": 0.018,
+      "take_profit_pct": 0.036,
+      "setup": "earnings gap",
+      "reason": "Mastercard reported strong Q3 beats on EPS ($5.31) and revenue ($9.81B), leading to a +4.7% day move, +1.4% above VWAP with massive relative volume of 11.67x."
     },
     {
-      "symbol": "GS",
-      "side": "buy",
-      "qty": 0.93,
-      "price": 911.97,
-      "stop_loss_pct": 0.01,
+      "symbol": "ICE",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "sector rotation"
+      "setup": "news catalyst",
+      "reason": "Intercontinental Exchange reported robust Q3 earnings with net revenue up 15% YoY to $2.8B, supported by high relative volume (5.25x) and a solid opening gain of +3.5% on the day."
     },
     {
-      "symbol": "BLK",
-      "side": "buy",
-      "qty": 0.36,
-      "price": 1132.58,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "momentum"
-    },
+      "symbol": "COIN",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Targeted for upcoming earnings; recovering strongly from a pre-market dip, currently +1.1% off open and above VWAP (+0.2%) with heavy relative volume of 3.8x."
+    }
+  ],
+  "ranked_ideas": [
     {
-      "symbol": "MS",
-      "side": "buy",
-      "qty": 0.25,
-      "price": 187.46,
-      "stop_loss_pct": 0.01,
+      "symbol": "V",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum"
+      "setup": "momentum",
+      "reason": "Strong sympathy run with MA, up +2.6% on the day, +0.9% above VWAP, with extreme relative volume of 15.4x."
     },
     {
       "symbol": "SOFI",
-      "side": "buy",
-      "qty": 3.41,
-      "price": 16.41,
-      "stop_loss_pct": 0.01,
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Intraday momentum pushing +1.0% off open, +0.6% above VWAP with 3.57x relative volume."
+    },
+    {
+      "symbol": "AXP",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum"
+      "setup": "momentum",
+      "reason": "Solid payments momentum, +2.0% day, +0.4% above VWAP with 2.89x relative volume."
+    },
+    {
+      "symbol": "JPM",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "VWAP bounce",
+      "reason": "Holding steady above VWAP (+0.2%) with 1.62x relative volume despite broader index drag."
+    },
+    {
+      "symbol": "MS",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Demonstrating high relative volume of 4.51x and holding above opening levels."
     }
   ],
-  "watchlist_additions": [],
-  "watchlist_removals": []
+  "experiment": "Use VWAP or volume confirmation before entering breakout trades",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

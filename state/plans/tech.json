@@ -1,121 +1,68 @@
 {
-  "date": "2026-10-28",
-  "time": "15:42",
-  "trigger": "scheduled look",
-  "market_view": "The market is calm with SPY and QQQ slightly up, fear gauge low. Most stocks are mixed, with several breakouts above opening ranges and breakdowns below. We are underperforming the benchmark, so shifting to high-conviction Tech momentum. Existing positions are profitable but we need to meet the 75% minimum investment rule, so we will take profits on AVGO and MU and redeploy capital into AMD, NVDA, NOW, INTC, and PANW based on intraday setups.",
-  "decisions": [
+  "date": "2026-10-29",
+  "time": "09:43",
+  "trigger": "first look this run",
+  "orders": [
     {
-      "symbol": "AVGO",
-      "action": "SELL",
-      "conviction": 0,
-      "stop_loss_pct": 0,
-      "take_profit_pct": 0,
-      "setup": "close",
-      "reason": "Profitable position; meeting 75% minimum investment rule by redeploying capital into momentum setups."
-    },
-    {
-      "symbol": "MU",
-      "action": "SELL",
-      "conviction": 0,
-      "stop_loss_pct": 0,
-      "take_profit_pct": 0,
-      "setup": "close",
-      "reason": "Profitable position; meeting 75% minimum investment rule by redeploying capital into momentum setups."
-    },
-    {
-      "symbol": "AMD",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.02,
-      "setup": "momentum breakout",
-      "reason": "Breakout above opening range with positive 15m momentum and analyst upgrade (Susquehanna target $650)."
-    },
-    {
-      "symbol": "NVDA",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.02,
-      "setup": "breakdown",
-      "reason": "Breakdown below opening range with negative momentum and DOJ regulatory risk news."
+      "symbol": "MSFT",
+      "side": "buy",
+      "size_usd": 5672.15,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst"
     },
     {
       "symbol": "NOW",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.02,
-      "setup": "breakdown",
-      "reason": "Breakdown below opening range with high volume (rvol 2.13) and mixed analyst sentiment."
+      "side": "short",
+      "size_usd": 5672.15,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "earnings gap"
+    },
+    {
+      "symbol": "CRWV",
+      "side": "short",
+      "size_usd": 5672.15,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst"
     },
     {
       "symbol": "INTC",
-      "action": "BUY",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum breakdown",
-      "reason": "Negative 15m momentum and below VWAP after premarket rally faded."
-    },
-    {
-      "symbol": "PANW",
-      "action": "BUY",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "breakdown",
-      "reason": "Breakdown below opening range with low volume and no strong catalyst."
+      "side": "short",
+      "size_usd": 5672.15,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "earnings gap"
     }
   ],
   "ranked_ideas": [
     {
       "symbol": "AMD",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum breakout",
-      "reason": "Breakout above opening range with positive 15m momentum and analyst upgrade."
+      "conviction": 3,
+      "reason": "moderate volume, positive news"
     },
     {
       "symbol": "NVDA",
-      "direction": "short",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "breakdown",
-      "reason": "Breakdown below opening range with negative momentum and DOJ regulatory risk."
+      "reason": "AI demand, high rvol"
     },
     {
-      "symbol": "NOW",
-      "direction": "short",
+      "symbol": "AVGO",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "breakdown",
-      "reason": "Breakdown below opening range with high volume and mixed analyst sentiment."
+      "reason": "high rvol, price bounce"
     },
     {
-      "symbol": "INTC",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum breakdown",
-      "reason": "Negative 15m momentum and below VWAP after premarket rally faded."
+      "symbol": "AAPL",
+      "conviction": 3,
+      "reason": "iPhone Duo production news"
     },
     {
-      "symbol": "PANW",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "breakdown",
-      "reason": "Breakdown below opening range with low volume and no strong catalyst."
+      "symbol": "MU",
+      "conviction": 3,
+      "reason": "solid volume, uptrend"
     }
   ],
-  "experiment": "Implement an automated filter that blocks long entries unless 15-minute momentum is positive and price is strictly above VWAP.",
   "watchlist_changes": {
     "add": [],
     "remove": []

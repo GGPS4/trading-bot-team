@@ -1084,5 +1084,48 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-29",
+    "time": "09:43",
+    "trigger": "first look this run",
+    "market_view": "The market is in a risk-off regime with SPY down 0.6% and QQQ down 1.8%, favoring defensive strength, relative momentum, and high-conviction news-driven breakdown shorts. We focus on resilient consumer leaders showing high relative volume above VWAP while capitalizing on clear post-earnings breakdowns.",
+    "experiment": "Implement an automated partial profit-taking rule at 1R for news-catalyst short trades to prevent winning momentum entries from turning into EOD losses.",
+    "decisions": [
+      {
+        "symbol": "RCL",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Strong relative strength against a risk-off tape, trading +3.4% on the day, +1.5% off open, +1.0% above VWAP with robust 4.33 rvol breaking out of its opening range.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "MCD",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Defensive consumer staple-like resilience during broad market selloff, up +2.0% on the day, holding above VWAP (+0.3%) with strong 4.07 rvol.",
+        "stop_loss_pct": 0.012,
+        "take_profit_pct": 0.025
+      },
+      {
+        "symbol": "LKQ",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "High-conviction earnings breakdown after missing Q3 EPS and revenue estimates and abruptly halting its strategic sale process; trading below open and VWAP.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.025
+      }
+    ],
+    "results": [
+      "BUY RCL blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY MCD blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "SHORT LKQ x106 (~$1887.86)",
+      "BUY HD x2 (~$649.76) [deploy]",
+      "BUY LOW x4 (~$810.86) [deploy]",
+      "BUY LULU x8 (~$866.04) [deploy]",
+      "WATCHLIST removed WHR",
+      "WATCHLIST added EAT"
+    ]
   }
 ]

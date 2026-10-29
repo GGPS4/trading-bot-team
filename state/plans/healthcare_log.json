@@ -1497,5 +1497,55 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-29",
+    "time": "09:43",
+    "trigger": "first look this run",
+    "market_view": "The overall market is in a risk-off environment with SPY down -0.6% and QQQ down -1.8%. Despite broad market weakness, select healthcare names are showing exceptional strong relative strength driven by strong Q3 earnings beats and business catalysts, led by LLY and MRK trading well above VWAP with high relative volume.",
+    "experiment": "Testing executive strategy: focus on high-conviction catalyst-driven long entries above VWAP with 1.5% stops.",
+    "decisions": [
+      {
+        "symbol": "LLY",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Q3 revenue beat ($24.4B) with Mounjaro sales up 65% YoY and full-year guidance raised; trading +1.3% above VWAP with strong rvol of 6.78.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "MRK",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Q3 earnings beat with $18.1B sales and raised FY2026 EPS guidance; stock is above VWAP (+0.4%) with high volume confirmation (rvol 4.20).",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "ABT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Initiation of pivotal trial for Cephea mitral heart valve device; trading above VWAP (+0.4%) with strong volume (rvol 3.09).",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "JNJ",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Market share gains for Icotyde and new Telo Genomics collaboration; price is above VWAP (+0.2%) with rvol of 2.32.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY LLY x0.224476 (~$315.12)",
+      "BUY MRK blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY ABT blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY JNJ blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY ABBV x1 (~$291.99) [deploy]",
+      "BUY VRTX x0.58017 (~$315.12) [deploy]",
+      "BUY AMGN x0.675844 (~$315.12) [deploy]"
+    ]
   }
 ]

@@ -953,5 +953,36 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-29",
+    "time": "09:39",
+    "trigger": "first look this run",
+    "market_view": "The broader market opens under distinct risk-off pressure with QQQ down 1.2% and SPY down 0.4%. We focus defensively on catalyst-backed long opportunities with high conviction and exploit severe, validated earnings misses via selective short setups while adhering strictly to position limits.",
+    "experiment": "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries.",
+    "decisions": [
+      {
+        "symbol": "SPOT",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Spotify launched the Spotify 360 premium experience driving positive fundamental sentiment; stock trades above its 50-day moving average with solid +10.4% 20-day momentum.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "MGM",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "High-conviction negative catalyst following Q3 EPS and revenue misses, multiple analyst price target cuts from Stifel and Truist, and price action hovering near 52-week lows.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY SPOT x0.582863 (~$315.12)",
+      "SHORT MGM x23 (~$622.61)",
+      "BUY SONY x12 (~$302.7) [deploy]",
+      "BUY CMCSA x14 (~$306.39) [deploy]"
+    ]
   }
 ]

@@ -1030,5 +1030,46 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-29",
+    "time": "09:43",
+    "trigger": "first look this run",
+    "market_view": "Broad market is risk-off with QQQ down 1.8% and SPY down 0.6%, favoring selectivity and strict volume confirmation. However, financial bellwethers with earnings catalysts (MA and ICE) are showing significant relative strength and high trading volume against market headwinds. We focus our day trades strictly on executive-targeted earnings catalysts with tight stops.",
+    "experiment": "Use VWAP or volume confirmation before entering breakout trades",
+    "decisions": [
+      {
+        "symbol": "MA",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Mastercard reported strong Q3 beats on EPS ($5.31) and revenue ($9.81B), leading to a +4.7% day move, +1.4% above VWAP with massive relative volume of 11.67x.",
+        "stop_loss_pct": 0.018,
+        "take_profit_pct": 0.036
+      },
+      {
+        "symbol": "ICE",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Intercontinental Exchange reported robust Q3 earnings with net revenue up 15% YoY to $2.8B, supported by high relative volume (5.25x) and a solid opening gain of +3.5% on the day.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "COIN",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Targeted for upcoming earnings; recovering strongly from a pre-market dip, currently +1.1% off open and above VWAP (+0.2%) with heavy relative volume of 3.8x.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY MA x1 (~$636.4)",
+      "BUY ICE blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY COIN blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY V x2 (~$819.19) [deploy]",
+      "BUY SOFI x55 (~$943.8) [deploy]",
+      "BUY AXP x2 (~$648.12) [deploy]"
+    ]
   }
 ]

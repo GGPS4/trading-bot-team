@@ -1,139 +1,57 @@
 {
-  "date": "2026-10-28",
-  "time": "15:42",
-  "trigger": "scheduled look",
-  "market_view": "Defense sector shows mixed signals: LMT has strong bullish news but is already held; BAH, CACI, GD, TXT, and LHX exhibit strong opening range breakouts with momentum, while several others are weak or lack catalysts. To meet the 75% invested minimum, we will close losing shorts and sell LMT, then deploy capital into five new long positions at maximum size.",
-  "decisions": [
-    {
-      "symbol": "LMT",
-      "action": "SELL",
-      "conviction": 5,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Strong news catalysts (PAC-3 facility, hypersonic contract, analyst upgrades) but cannot re\u2011enter; need to free cash to meet 75% invested minimum and rotate into better setups."
-    },
-    {
-      "symbol": "AVAV",
-      "action": "COVER",
-      "conviction": 2,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "Short losing, tight stop above entry, need to free capital for new positions."
-    },
-    {
-      "symbol": "PLTR",
-      "action": "COVER",
-      "conviction": 2,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "Short losing, earnings uncertainty, need to free capital."
-    },
-    {
-      "symbol": "SAIC",
-      "action": "COVER",
-      "conviction": 2,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "Short losing, no catalyst, need to free capital."
-    },
-    {
-      "symbol": "BAH",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Strong open, breakout above OR, momentum positive, defense sector, meets VWAP+momentum criteria."
-    },
-    {
-      "symbol": "CACI",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Breakout above OR, momentum positive, defense contractor."
-    },
-    {
-      "symbol": "GD",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Breakout above OR, momentum positive, defense contractor."
-    },
-    {
-      "symbol": "TXT",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Breakout above OR, momentum positive, defense/aerospace, dividend news."
-    },
-    {
-      "symbol": "LHX",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Breakout above OR, momentum positive, defense contractor."
-    }
-  ],
+  "date": "2026-10-29",
+  "time": "09:43",
+  "trigger": "price moves in ['AVAV']",
+  "market_view": "Defense sector shows strong relative strength today despite broader market risk-off sentiment (SPY -0.6%, QQQ -1.8%). Earnings beats and guidance raises from LHX, RTX, HII, and TXT, alongside CACI's $185M Army contract, are driving sector-wide momentum. We maintain our existing high-conviction catalyst positions while monitoring potential expansion entries.",
+  "decisions": [],
   "ranked_ideas": [
     {
-      "symbol": "BAH",
+      "symbol": "KTOS",
       "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Strongest setup: breakout above OR, momentum +1.1%, defense sector, meets VWAP+momentum criteria."
+      "reason": "Breaking out above opening range high of 42.24 with rvol 2.12 and trading above VWAP (+0.9%)."
     },
     {
-      "symbol": "CACI",
+      "symbol": "LMT",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Breakout above OR, momentum positive, defense contractor, decent volume."
+      "reason": "High relative volume of 2.7x, trading above VWAP (+0.1%), backed by strong multi-day momentum."
+    },
+    {
+      "symbol": "HII",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "earnings gap",
+      "reason": "Q3 EPS beat and increased full-year shipbuilding guidance with massive volume (rvol 12.03)."
+    },
+    {
+      "symbol": "BAH",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Trading above VWAP (+0.5%) with consistent uptrend momentum and positive sector tailwinds."
     },
     {
       "symbol": "GD",
       "direction": "long",
-      "conviction": 3,
+      "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Breakout above OR, momentum positive, defense contractor."
-    },
-    {
-      "symbol": "TXT",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Breakout above OR, momentum positive, defense/aerospace, dividend news provides support."
-    },
-    {
-      "symbol": "LHX",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Breakout above OR, momentum positive, defense contractor."
+      "setup": "pullback in uptrend",
+      "reason": "Major defense prime trading above VWAP (+0.1%) ahead of earnings, benefiting from sector momentum."
     }
   ],
-  "experiment": "",
+  "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
   "watchlist_changes": {
     "add": [],
     "remove": []

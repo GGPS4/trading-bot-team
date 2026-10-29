@@ -1350,5 +1350,46 @@
       "BUY TXT blocked: no new day trades after 15:30",
       "BUY LHX blocked: no new day trades after 15:30"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "09:39",
+    "trigger": "first look this run",
+    "market_view": "Market opens under a risk-off regime with broader indexes down, requiring extra caution and high conviction for long entries. Despite broader market weakness, the defense sector features strong individual earnings prints and contract wins that provide high-conviction catalysts today.",
+    "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
+    "decisions": [
+      {
+        "symbol": "CACI",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Secured major $185M 5-year U.S. Army contract for contested-environment technologies with strong recent 5-day momentum (+7.2%).",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.035
+      },
+      {
+        "symbol": "HII",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Reported strong Q3 EPS beat ($5.48) and raised full-year FY2026 revenue guidance to $13.5B-$13.9B.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY CACI x0.936614 (~$630.24)",
+      "BUY HII blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY LHX x2 (~$540.38) [deploy]",
+      "BUY RTX x3 (~$598.51) [deploy]",
+      "BUY PLTR x3 (~$573.62) [deploy]"
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "09:43",
+    "trigger": "price moves in ['AVAV']",
+    "market_view": "Defense sector shows strong relative strength today despite broader market risk-off sentiment (SPY -0.6%, QQQ -1.8%). Earnings beats and guidance raises from LHX, RTX, HII, and TXT, alongside CACI's $185M Army contract, are driving sector-wide momentum. We maintain our existing high-conviction catalyst positions while monitoring potential expansion entries.",
+    "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
+    "decisions": [],
+    "results": []
   }
 ]
