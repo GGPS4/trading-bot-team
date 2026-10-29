@@ -1,51 +1,46 @@
 {
   "date": "2026-10-29",
-  "time": "10:00",
-  "trigger": "price moves in ['LULU']",
+  "time": "10:26",
+  "trigger": "scheduled look",
   "decisions": [
     {
-      "symbol": "CMG",
+      "symbol": "LKQ",
+      "action": "COVER",
+      "reason": "Short is losing money and the stock is bouncing with high relative volume (rvol 1.11) despite the bad news. The 'news catalyst' short thesis is failing as the market is absorbing the earnings miss and the stock is holding above the opening range low. Exiting to free up capital and reduce risk in a choppy, risk-off environment.",
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0
+    },
+    {
+      "symbol": "AMZN",
       "action": "BUY",
+      "reason": "High conviction long setup. Stock is trading above VWAP (+0.8%) with strong relative volume (rvol 5.33) and positive 15m momentum. Earnings are after the close, so intraday momentum is driven by pre-earnings positioning and analyst upgrades (target up to $385). Fits the 'momentum' setup with volume confirmation.",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "conviction": 5,
-      "reason": "Strong opening range breakout above $30.89 with high relative volume (4.54) and positive 15m momentum. Despite mixed analyst notes, the intraday price action and volume confirm a strong long setup. Market is risk-off, but this stock is leading with conviction."
+      "setup": "momentum"
+    },
+    {
+      "symbol": "TSLA",
+      "action": "BUY",
+      "reason": "Strong intraday momentum with positive 15m trend and volume confirmation (rvol 1.46). Trading above VWAP. Positive news catalyst (Korean court ruling) supports the move. Fits the 'momentum' setup.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum"
     },
     {
       "symbol": "BKNG",
       "action": "BUY",
+      "reason": "Opening range breakout confirmed. Price is above the OR high (150.57) and trading above VWAP (+0.9%). Although rvol is moderate (1.05), the breakout structure is clear. Fits the 'opening range breakout' setup.",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "conviction": 4,
-      "reason": "Trading above VWAP with strong 15m momentum (+1.4%) and positive look (+1.6%). RSI is low (35), suggesting room for a bounce. Volume is decent (1.28). Fits the 'strong move off the open' criteria."
-    },
-    {
-      "symbol": "RCL",
-      "action": "BUY",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "conviction": 4,
-      "reason": "Trading above VWAP with positive 15m momentum and high relative volume (1.74). Day change is +3.6%, indicating strength. RSI is approaching overbought (68.6) but not yet there. Good candidate for a momentum continuation."
-    },
-    {
-      "symbol": "DEO",
-      "action": "SHORT",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakdown",
-      "conviction": 4,
-      "reason": "Clear opening range breakdown below $91.66 with negative 15m momentum (-1.0%) and trading below VWAP. Market is risk-off, favoring shorts on weak stocks. Volume is low (0.51) but the trend is down."
+      "setup": "opening range breakout"
     }
   ],
   "ranked_ideas": [
-    "LULU",
-    "LOW",
-    "HD",
-    "AMZN",
-    "TSLA"
+    "RCL",
+    "CMG",
+    "MCD",
+    "MAR",
+    "DG"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

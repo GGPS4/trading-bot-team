@@ -1565,5 +1565,56 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-29",
+    "time": "10:26",
+    "trigger": "price moves in ['MRNA']",
+    "market_view": "Market is in risk-off with broad indices down and VIX elevated. Healthcare is mixed, and the executive/team orders pause new entries while protecting existing longs. Existing positions are near or below par, but stops are set. No new high-conviction long setup meeting the full catalyst/VWAP/momentum filters right now.",
+    "experiment": "Testing ATR-based stop and momentum filter (m15 > 0.5%, rvol > 1.5, price above VWAP) in a risk-off regime; paused new entries per executive/team orders.",
+    "decisions": [],
+    "results": [
+      "BUY LLY x0.227626 (~$315.12) [deploy]",
+      "WATCHLIST removed CORT",
+      "WATCHLIST added HLN"
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "10:33",
+    "trigger": "big news on ['HLN']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "HLN",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "52-week low, -15% day, breakdown below opening range, weak guidance news. High conviction short in risk-off market.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "MRK",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "Strong +4.6% day, high relative volume (2.7), trading near opening range high. Needs volume confirmation but fits momentum profile.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.025
+      },
+      {
+        "symbol": "MRNA",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "Above VWAP, positive 15m momentum (+1.1%), strong 5d/20d trend. Good candidate for intraday continuation.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY HLN blocked: team already has the maximum number of positions",
+      "BUY MRK blocked: team already has the maximum number of positions",
+      "BUY MRNA blocked: team already has the maximum number of positions"
+    ]
   }
 ]

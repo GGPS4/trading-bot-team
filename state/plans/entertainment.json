@@ -1,11 +1,59 @@
 {
   "date": "2026-10-29",
-  "time": "10:05",
-  "trigger": "price moves in ['TKO']",
-  "orders": [],
-  "watchlist_updates": {
+  "time": "10:33",
+  "trigger": "scheduled look",
+  "market_view": "Market is in risk-off with broad indices down; SPY -0.4%, QQQ -1.4%. Entertainment sector is mixed, with MGM hit by multiple price target cuts and a Q3 miss, while existing longs are mostly flat or weak except SONY and SPOT. No new high-conviction catalyst long meets the executive's conviction >=4 and volume confirmation rules today.",
+  "decisions": [],
+  "ranked_ideas": [
+    {
+      "symbol": "DIS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "momentum",
+      "reason": "Disney in consumer media, day +1.3%, rvol 1.23, but weak catalyst and risk-off."
+    },
+    {
+      "symbol": "TKO",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "momentum",
+      "reason": "Entertainment optioned, +1.7% day, but oversold and low volume."
+    },
+    {
+      "symbol": "LYV",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "momentum",
+      "reason": "Live entertainment, +2.0% day, but below VWAP and fading momentum."
+    },
+    {
+      "symbol": "FOXA",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "momentum",
+      "reason": "Media, +1.1% day, but low volume."
+    },
+    {
+      "symbol": "NFLX",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "news catalyst",
+      "reason": "Netflix positive news, but oversold and not high conviction."
+    }
+  ],
+  "experiment": "Add a strict volume filter requiring positive 15-minute volume expansion to confirm momentum entries.",
+  "watchlist_changes": {
     "add": [],
     "remove": []
-  },
-  "ranked_ideas": []
+  }
 }

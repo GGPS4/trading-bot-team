@@ -1,6 +1,41 @@
 {
   "date": "2026-10-29",
-  "time": "10:15",
-  "trigger": "price moves in ['VSAT']",
-  "decisions": []
+  "time": "10:33",
+  "trigger": "must invest $2,840 more (75% rule)",
+  "market_view": "Risk-off tape is dominant with SPY down 0.4 percent, QQQ down 1.4 percent, and the S and P down 1.4 percent; space names are showing upside gaps but news flow is mixed. HWM stands out on strong earnings, guidance, and demand, while BA is pressured by legal and analyst headlines. Given the executive and team orders to pause new entries, I am staying on hold.",
+  "decisions": [],
+  "ranked_ideas": [
+    {
+      "symbol": "HWM",
+      "direction": "long",
+      "conviction": 5,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Earnings beat, guidance raise, exec demand; OR breakout, rvol 2.02, above VWAP."
+    },
+    {
+      "symbol": "ASTS",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "OR breakout, rvol 2.16, m15 positive, above VWAP; high beta momentum."
+    },
+    {
+      "symbol": "RKLB",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "OR breakout, rvol 1.56, above VWAP, m15 positive; momentum with PF near 1.2."
+    }
+  ],
+  "experiment": "Earnings-gap reaction plan for HWM post-open with 15-minute wait; dynamic trailing stops on contract-driven space runners like RKLB when trading resumes.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }
