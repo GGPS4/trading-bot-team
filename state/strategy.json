@@ -1,36 +1,32 @@
 {
-  "updated": "2026-10-28T16:19-04:00",
-  "strategy_notes": "Focus on high\u2011conviction, catalyst\u2011driven long entries and avoid low\u2011conviction shorts. All new buy orders must be submitted before the 15:30 cutoff and meet a conviction of at least 4 with volume confirmation. Keep at least 75% of each team\u2019s budget invested during market hours and use tight trailing stops to protect gains. Prioritize the Technology, Financials and Consumer teams while pausing new entries for Space and Healthcare until their win\u2011rate improves.",
+  "updated": "2026-10-29T16:26-04:00",
+  "strategy_notes": "The account is at max drawdown and significantly underperforming SPY, so capital preservation is the top priority. We are enforcing a strict 'No-Trade' protocol for any team that cannot identify a setup with Relative Volume > 1.5x and price above VWAP; the 75% invested rule is suspended for tomorrow to prevent forced low-quality entries in a risk-off environment. Defense is the only team showing consistent profitability and will receive increased capital to capitalize on momentum. All other teams must reduce trade frequency and focus exclusively on high-conviction setups to stop the bleeding.",
   "team_focus": {
-    "defense": "Do not open any new short positions; only consider long entries on high\u2011conviction (>=4) defense stocks with clear catalyst and volume. Limit to 2 trades today and keep max position size 15% of team budget.",
-    "space": "Pause new entries; monitor existing positions and only adjust stops. Review strategy before resuming trades.",
-    "entertainment": "Trade only validated positions; avoid friction by confirming order persistence before market close. Limit to 2 trades and maintain watchlist size >=15.",
-    "tech": "Enter new buys before 15:30 on high\u2011conviction (>=4) earnings or breakout setups. Use trailing stops of 2% and cap open positions at 4.",
-    "consumer": "Focus on long bias with partial profit\u2011take at 1R for news\u2011driven shorts. Limit to 3 trades and keep positions under 15% of budget.",
-    "financials": "Add positions on upcoming earnings (MA, ICE, COIN) with conviction >=4. Use trailing stops and limit to 3 open positions.",
-    "healthcare": "Pause new entries; protect existing longs with stop\u2011losses at 1.5% and monitor for catalyst updates."
+    "defense": "Maintain current strategy. Focus on earnings breakouts and momentum plays in LHX and HII. Ensure all entries have RVol > 1.5x. You are the primary growth engine; keep risk tight but allow for larger position sizes.",
+    "space": "Strategy review mandatory. Do not take any new positions until you demonstrate a clear improvement in entry criteria. Focus on trailing stops for existing momentum plays. If no high-conviction setup (RVol > 2.0) exists, stay in cash.",
+    "entertainment": "Pause trading. Your win rate is critically low (26.6%). Focus on identifying why your momentum trades are failing. Only re-enter if you can identify a setup with RVol > 1.5x and strong volume confirmation.",
+    "tech": "Implement the QQQ regime filter immediately. Do not take long positions below VWAP in a down market. Reduce position size by 50% until you show two consecutive days of positive P&L. Focus on high-liquidity names like NVDA and AAPL only.",
+    "consumer": "Tighten entry criteria. Avoid news-catalyst shorts unless volume is extremely high. Focus on locking in profits at 1R. Do not chase momentum without volume confirmation.",
+    "financials": "Submit retroactive analysis of today's losses by tomorrow morning. No new positions until you provide a clear plan for improving win rate. Focus on defensive financials (JPM, MS) only.",
+    "healthcare": "Submit retroactive analysis of today's losses by tomorrow morning. No new positions until you provide a clear plan for improving win rate. Focus on defensive healthcare (LLY, ABBV) only."
   },
   "allocations": {
-    "defense": 0.1,
+    "defense": 0.35,
     "space": 0.05,
     "entertainment": 0.05,
-    "tech": 0.45,
-    "consumer": 0.15,
-    "financials": 0.15,
-    "healthcare": 0.05
+    "tech": 0.25,
+    "consumer": 0.1,
+    "financials": 0.1,
+    "healthcare": 0.1
   },
   "risk_overrides": {
     "max_position_pct": 0.15,
-    "max_daily_loss_pct": 0.02,
-    "max_open_positions_per_team": 4,
-    "max_trades_per_team_per_day": 15,
-    "min_conviction_to_buy": 4,
-    "cash_reserve_pct": 0.15,
-    "max_stop_loss_pct": 0.04
+    "max_open_positions_per_team": 3,
+    "min_conviction_to_buy": 5
   },
   "go_live_assessment": {
     "ready": false,
-    "reason": "Only 9 trading days completed (need 60) and portfolio is underperforming SPY by 0.82% since start."
+    "reason": "Only 10 trading days completed (need 60) and portfolio is underperforming SPY by 1.1% since start. Max drawdown is at 1.25%."
   },
-  "decision_log": "Reduced allocations to underperforming Space, Entertainment, and Healthcare; tightened conviction and position limits; paused Space and Healthcare for strategy review."
+  "decision_log": "Increased allocation to Defense (35%) due to consistent outperformance. Reduced allocations to Space, Entertainment, and Healthcare to 5-10% due to low win rates and strategy issues. Tightened risk rules (min conviction 5, max positions 3) to force higher quality trades and prevent capital erosion."
 }
