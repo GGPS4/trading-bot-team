@@ -1481,5 +1481,27 @@
       "BUY LUNR blocked: team already has the maximum number of positions",
       "BUY VSAT blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "12:34",
+    "trigger": "must invest $2,458 more (75% rule)",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "GE",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position has hit its first target (313.22) and is already scaled out with trailing stop active. In a risk-off market (QQQ -1.4%), locking in the 2.1% gain is prudent. Reinvesting capital into higher-conviction setups like VSAT or LUNR is better than holding a stalled momentum play.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "SELL GE",
+      "BUY VSAT x3 (~$241.78) [deploy]",
+      "BUY LUNR x26 (~$313.69) [deploy]"
+    ]
   }
 ]

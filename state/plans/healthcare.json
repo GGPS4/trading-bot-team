@@ -1,82 +1,69 @@
 {
   "date": "2026-10-29",
-  "time": "12:07",
-  "trigger": "must invest $2,557 more (75% rule)",
-  "market_view": "Risk-off tape remains bearish intraday, with healthcare mixed and existing longs under pressure. ISRG failed its opening-range breakout and sits below VWAP/OR with weak momentum; its stop was too wide at -3.0%. VRTX is also below VWAP and momentum negative but its stop was tighter. Executive orders pause new healthcare entries, so I will not force new longs. Capital protection is the priority before close.",
+  "time": "12:34",
+  "trigger": "scheduled look",
+  "market_view": "Risk-off tape with broad indexes down and VIX spiking; healthcare slightly bearish. LLY got a Mounjaro revenue beat but special charges and price below VWAP, while MRK news was mixed. No new long setup meets the VWAP plus momentum and volume filters. Executive and team orders pause new entries, so I am focused on protecting existing longs.",
   "decisions": [
     {
-      "symbol": "ISRG",
+      "symbol": "VRTX",
       "action": "SELL",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.1,
-      "setup": "opening range breakout",
-      "reason": "Failed opening-range breakout; price below VWAP/OR and m15 momentum weak. Stop was -3.0%, wider than executive 1.5% protection. Close long to prevent further drawdown."
+      "conviction": 1,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "momentum",
+      "reason": "Existing VRTX long is underwater and its stop is looser than the required 1.5%; price is below VWAP and momentum faded in the risk-off tape, so close to protect capital."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "LLY",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Mounjaro sales beat and raised guidance, but special charges and below VWAP/m15 weak; high risk in risk-off."
-    },
-    {
-      "symbol": "MRK",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Headwinds from generics/exclusivity but revenue target; below VWAP and fading momentum; not high conviction."
-    },
-    {
-      "symbol": "BMY",
+      "symbol": "TMO",
       "direction": "long",
       "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.04,
-      "setup": "earnings gap",
-      "reason": "Q3 beat but FY EPS guidance lowered; risk-off and earnings make it lower quality."
+      "setup": "opening range breakout",
+      "reason": "OR breakout but rvol only 0.5, low conviction."
     },
     {
-      "symbol": "HLN",
-      "direction": "short",
+      "symbol": "DHR",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "OR breakout but rvol only 0.51, low conviction."
+    },
+    {
+      "symbol": "MRNA",
+      "direction": "long",
       "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "Breakdown below OR/VWAP, 52-week low, weak sales; risk-off favors short, but executive prefers high conviction longs."
+      "reason": "m15 +0.3% and rvol 0.81 but below VWAP and weak momentum, low conviction."
     },
     {
-      "symbol": "HCA",
+      "symbol": "ABBV",
       "direction": "long",
       "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "reason": "Barclays PT raise and clinical recognition, but muted momentum; below executive healthcare pause."
+      "reason": "No new catalyst today, but 20d trend strong; not a day-trading setup."
+    },
+    {
+      "symbol": "ISRG",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "No clear momentum or volume; low conviction."
     }
   ],
-  "experiment": "ATR-based stop (2% of ATR) for all new entries; add momentum filter: only enter a long when m15 > 0.5% and rvol > 1.5, and price is above VWAP.",
+  "experiment": "Testing ATR-based stop (2% of ATR) for all new entries and momentum filter: only enter long when m15 > 0.5% and rvol > 1.5, and price is above VWAP.",
   "watchlist_changes": {
     "add": [],
-    "remove": [
-      {
-        "symbol": "TMO",
-        "reason": "No volume confirmation or clear VWAP/OR setup; quiet relative to day."
-      },
-      {
-        "symbol": "ABT",
-        "reason": "Low relative volume and no clear catalyst/setup."
-      },
-      {
-        "symbol": "DHR",
-        "reason": "Breakout lacked volume confirmation (rvol 0.5); weak follow-through."
-      }
-    ]
+    "remove": []
   }
 }
