@@ -1,76 +1,83 @@
 {
   "date": "2026-10-29",
-  "time": "12:27",
-  "trigger": "scheduled look",
+  "time": "12:43",
+  "trigger": "must invest $5,069 more (75% rule)",
+  "market_view": "Risk-off session with broad market selling; VIX spiking and SPY/QQQ down. Defense stocks are mixed but showing selective earnings/news strength. Best setups remain high-conviction long breakouts with volume, especially post-earnings momentum. Staying defensive and trading only A+ setups.",
   "decisions": [
     {
       "symbol": "LHX",
-      "action": "SELL",
-      "reason": "Position has hit first target (278.30) and is scaling out. Momentum is fading (m15 -0.1%) in a risk-off market. Locking in profits to redeploy capital into higher-conviction setups.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
-    },
-    {
-      "symbol": "HII",
-      "action": "SELL",
-      "reason": "Position is up 3% and has hit/near first target (315.02). RSI is 65 but the stock is extended. In a risk-off regime, taking profits on a 12% gapper is prudent to manage risk and free up capital.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
-    },
-    {
-      "symbol": "KTOS",
       "action": "BUY",
-      "reason": "Strong opening range breakout (OR 41.33-42.66, price 43.44). Trading well above VWAP (+1.8%). Positive 15m and 60m momentum. RSI 46.5 suggests room to run before overbought. Fits 'high-conviction long' criteria with volume confirmation (rvol 1.22).",
+      "conviction": 4,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "LHX beat Q3 earnings and raised full-year guidance; stock cleared opening range with rvol 2.46 and held above VWAP, fitting pre-market earnings breakout strategy."
     },
     {
-      "symbol": "HEI",
+      "symbol": "TXT",
       "action": "BUY",
-      "reason": "Opening range breakout (OR 313.26-316.37, price 324.39). Trading above VWAP (+0.8%). Positive momentum (m15 +0.4%, m60 +0.4%). RSI 65.6 is healthy. Strong uptrend trend. Fits 'high-conviction long' criteria.",
+      "conviction": 4,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "TXT beat EPS and lifted outlook; OR breakout occurred with rvol 2.12 and price above VWAP, though sales fell short; high-conviction momentum long."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "AVAV",
-      "reason": "Strong OR breakout, above VWAP, positive momentum. RSI 33.6 suggests potential for further upside from oversold levels.",
+      "symbol": "HII",
+      "direction": "long",
+      "conviction": 4,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "take_profit_pct": 0.04,
+      "setup": "earnings gap",
+      "reason": "HII reported strong Q3 and raised guidance; high volume suggests post-earnings continuation."
     },
     {
       "symbol": "GD",
-      "reason": "OR breakout, above VWAP. Earnings coming tomorrow, but today's setup is strong. RSI 78.1 is high, so caution needed, but momentum is positive.",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "setup": "opening range breakout",
+      "reason": "GD broke opening range but low relative volume; mild long momentum."
     },
     {
-      "symbol": "TXT",
-      "reason": "Strong OR breakout, above VWAP. Earnings beat and guidance raise. RSI 72.6 is overbought, but momentum is strong. High risk due to RSI.",
+      "symbol": "CACI",
+      "direction": "long",
+      "conviction": 3,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout"
+      "setup": "news catalyst",
+      "reason": "CACI won Army contract, but weak volume; conviction lower."
     },
     {
-      "symbol": "LMT",
-      "reason": "Already held. Strong news catalyst ($1.08B contract). RSI 85.7 is very overbought, so no new entry, but holding is justified by strong fundamental news.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "news catalyst"
+      "symbol": "HEI",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "HEI broke OR but low rvol; tentative long."
     },
     {
-      "symbol": "RTX",
-      "reason": "Already held. Earnings beat and guidance raise. RSI 65.0 is healthy. Holding is justified by strong fundamental news and OR breakout.",
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "news catalyst"
+      "symbol": "NOC",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "NOC day positive but weak momentum; low conviction."
     }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
+  "watchlist_changes": {
+    "add": [],
+    "remove": [
+      {
+        "symbol": "LDOS",
+        "reason": "No volume catalyst or clear setup; stock quiet today."
+      }
+    ]
+  }
 }

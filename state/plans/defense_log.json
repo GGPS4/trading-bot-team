@@ -1638,5 +1638,37 @@
       "BUY GD blocked: conviction None is below the minimum 3 (risk-off market)",
       "BUY TXT blocked: conviction None is below the minimum 3 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "12:43",
+    "trigger": "must invest $5,069 more (75% rule)",
+    "market_view": "Risk-off session with broad market selling; VIX spiking and SPY/QQQ down. Defense stocks are mixed but showing selective earnings/news strength. Best setups remain high-conviction long breakouts with volume, especially post-earnings momentum. Staying defensive and trading only A+ setups.",
+    "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
+    "decisions": [
+      {
+        "symbol": "LHX",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "LHX beat Q3 earnings and raised full-year guidance; stock cleared opening range with rvol 2.46 and held above VWAP, fitting pre-market earnings breakout strategy.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "TXT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "TXT beat EPS and lifted outlook; OR breakout occurred with rvol 2.12 and price above VWAP, though sales fell short; high-conviction momentum long.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY LHX blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY TXT blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY HII x2 (~$628.44) [deploy]",
+      "BUY GD x1 (~$368.99) [deploy]",
+      "WATCHLIST remove rejected LDOS"
+    ]
   }
 ]

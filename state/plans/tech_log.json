@@ -1761,5 +1761,57 @@
       "BUY MSFT blocked: team already has the maximum number of positions",
       "BUY INTC blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "12:35",
+    "trigger": "scheduled look",
+    "market_view": "Market is in risk-off, broad indices down over 1%, VIX spiking, Nasdaq lower. Our long book is mostly weak or stalled; AMAT is the only strong breakout but is trailing. News flow has high-conviction MSFT bias but price is below VWAP/OR breakdown, and NOW is breaking down on earnings. No clean high-conviction long above VWAP right now, so I am trimming weak longs and watching for relative strength.",
+    "experiment": "Develop a morning post-earnings breakout strategy to capture pre-market reaction moves in high-conviction software and chip tickers reporting after-market earnings.",
+    "decisions": [
+      {
+        "symbol": "AAPL",
+        "action": "SELL",
+        "conviction": 0,
+        "reason": "Weak untagged long with no momentum/volume confirmation; stalled in risk-off tape, trim.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "ANET",
+        "action": "SELL",
+        "conviction": 0,
+        "reason": "Lost OR breakout structure and trading below VWAP; cut loss.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "AVGO",
+        "action": "SELL",
+        "conviction": 0,
+        "reason": "Failed OR breakout and losing; cut loss in risk-off.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "CRWV",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Cleared OR and holds above VWAP; AI infrastructure bounce, OR breakout historically high conviction. News flow supportive but risk-off requires strict stop.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL AAPL",
+      "SELL ANET",
+      "SELL AVGO",
+      "BUY CRWV blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY MSFT x5 (~$2621.7) [deploy]",
+      "BUY NVDA x13 (~$2773.42) [deploy]",
+      "BUY INTU x8 (~$2637.44) [deploy]",
+      "WATCHLIST removed IBM",
+      "WATCHLIST added GOOGL"
+    ]
   }
 ]

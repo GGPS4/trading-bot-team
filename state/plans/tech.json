@@ -1,45 +1,60 @@
 {
   "date": "2026-10-29",
-  "time": "12:07",
-  "trigger": "scheduled look",
+  "time": "12:43",
+  "trigger": "big news on ['GOOG', 'GOOGL']",
   "decisions": [
     {
-      "symbol": "NOW",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "conviction": 4,
-      "reason": "ServiceNow gapped down 18.5% on earnings but is stabilizing above the opening range low and showing positive 15m momentum. RSI is not oversold yet, but the extreme gap down with high volume (rvol 6.0) often leads to intraday bounces. Buying the dip in a high-conviction setup."
-    },
-    {
       "symbol": "MSFT",
-      "action": "BUY",
-      "side": "long",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "conviction": 4,
-      "reason": "Strong bullish news flow with multiple analyst upgrades (DA Davidson, TD Cowen, Scotiabank, Citizens) raising price targets to $625-$650. Despite the market being risk-off, MSFT is holding up relatively well with a breakdown from the opening range but stabilizing. The news catalyst provides a clear reason for a long entry."
+      "action": "SELL",
+      "reason": "Opening range breakdown with price below VWAP. Market is risk-off, and despite positive analyst news, the intraday technicals are weak. Closing to protect capital and redeploy into stronger setups.",
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0
     },
     {
-      "symbol": "INTC",
+      "symbol": "NVDA",
+      "action": "SELL",
+      "reason": "Trading below VWAP with flat momentum in a risk-off market. The 'news catalyst' (Cohere investment) is not driving price action. Closing to free up capital for higher conviction setups.",
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0
+    },
+    {
+      "symbol": "INTU",
+      "action": "SELL",
+      "reason": "Stalled momentum and trading near entry with no clear intraday catalyst. Risk-off environment makes holding weak momentum plays risky. Selling to meet the 75% investment mandate with stronger candidates.",
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0
+    },
+    {
+      "symbol": "GOOGL",
       "action": "BUY",
-      "side": "long",
+      "reason": "High-conviction mean reversion/bounce setup. Stock is significantly oversold (RSI 15.9) after a -12.3% drop, but showing +0.3% intraday strength and heavy volume (rvol 8.25). Positive analyst sentiment (Needham Buy, $450 PT) provides a catalyst for a bounce. Conviction 5/5.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion"
+    },
+    {
+      "symbol": "PANW",
+      "action": "BUY",
+      "reason": "Strong relative strength in a down market. Trading above VWAP with positive 15m momentum and high volume (rvol 1.7). Conviction 4/5 due to risk-off regime, but setup is valid for intraday bounce.",
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "conviction": 4,
-      "reason": "Intel is down 2.7% today but has been up 2.8% over the last 5 days. RSI is 36.1, approaching oversold territory. With earnings coming up after the close, there is potential for a pre-earnings bounce or stabilization. The stock is trading above VWAP, indicating some support."
+      "setup": "momentum"
+    },
+    {
+      "symbol": "CRWV",
+      "action": "BUY",
+      "reason": "Opening range breakout confirmed. Price is above VWAP (+2.0%) and OR high. News catalyst (Treasury Secretary downplaying AI debt worries) supports the move. Conviction 4/5.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout"
     }
   ],
   "ranked_ideas": [
-    "NVDA",
-    "PANW",
-    "CRWV",
-    "TXN",
-    "IBM"
+    "AAPL",
+    "AMD",
+    "AVGO",
+    "MU",
+    "TXN"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
