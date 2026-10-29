@@ -1,37 +1,37 @@
 {
   "date": "2026-10-29",
-  "time": "12:58",
-  "trigger": "must invest $25,820 more (75% rule)",
-  "market_view": "Market is in risk-off with SPY down 0.4%, QQQ down 1.4%, and VIXY down 1.6%. The broad market is falling hard while most watched stocks are up, indicating risk-off tone. Longs are half size and need high conviction; breakdowns are favored. We are in the final hour before close, so only high-quality intraday setups for today are suitable.",
+  "time": "13:12",
+  "trigger": "must invest $25,815 more (75% rule)",
+  "market_view": "Market is in risk-off with SPY and QQQ down and VIXY up; broad selling pressure is driving the session. Longs are half size and need high conviction, while shorting weak breakdowns is favored. AMAT is holding but stalled, and the only actionable OR breakout was AVGO, though volume was weak; no new high-conviction long is obvious until a stock shows volume-backed strength.",
   "decisions": [
     {
-      "symbol": "AVGO",
+      "symbol": "EQIX",
       "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "AVGO broke above its opening range and holds above VWAP, with prior uptrend context. Breakout setup aligns with a high-profit-factor setup. Risk-off requires high conviction, but this is the cleanest breakout."
-    },
-    {
-      "symbol": "NOW",
-      "action": "SHORT",
       "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "ServiceNow Q3 earnings disappointed, stock down 18.5% in premarket and now around -25.6% on high volume, breaking below OR/VWAP. High-impact bearish catalyst in risk-off regime favors short."
+      "setup": "momentum",
+      "reason": "EQIX is up 4.4% on rvol 1.76, above VWAP, RSI 56, not overbought, and above the 50-day average; volume-confirmed momentum long in a risk-off tape requires high conviction."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "MSFT",
+      "symbol": "AVGO",
       "direction": "long",
       "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "AVGO broke above OR high at $344.18 and held above VWAP with uptrend up; OR breakout historically PF 2.52, but weak rvol."
+    },
+    {
+      "symbol": "MSFT",
+      "direction": "long",
+      "conviction": 5,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "reason": "Analyst upgrades to PT 650 and bullish Azure/AI narrative, but stock broke down below VWAP; high conviction news, execution risk."
+      "reason": "Analyst PT raises to 650 and bullish Azure; however breakdown below VWAP/OR limits new long entry."
     },
     {
       "symbol": "NVDA",
@@ -40,44 +40,30 @@
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "news catalyst",
-      "reason": "Cohere investment and AI demand signal, but stock below VWAP; high conviction news, not a long setup."
+      "reason": "Nvidia invests in Cohere, AI demand; below VWAP, so long setup is not ideal but high-conviction news."
     },
     {
-      "symbol": "PANW",
-      "direction": "long",
+      "symbol": "GOOGL",
+      "direction": "short",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Positive m15/m60 and rvol 1.72, but below VWAP; not suitable in risk-off."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "Earnings miss and high volume; but RSI oversold, so shorting into climax is risky."
     },
     {
       "symbol": "CRWV",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "Above VWAP and broke opening range, but momentum turning negative and low rvol; lower conviction."
-    },
-    {
-      "symbol": "AMD",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Above VWAP, but no breakout and weak momentum; lower conviction."
+      "reason": "Broke OR high but momentum/trend down, fading long."
     }
   ],
-  "experiment": "Develop a morning post-earnings breakout strategy to capture pre-market reaction moves in high-conviction software and chip tickers reporting after-hours earnings.",
+  "experiment": "",
   "watchlist_changes": {
-    "add": [
-      {
-        "symbol": "EQIX",
-        "reason": "TD Cowen maintained Buy and raised price target; data center demand in headlines."
-      }
-    ],
+    "add": [],
     "remove": []
   }
 }
