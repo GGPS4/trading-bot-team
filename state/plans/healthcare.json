@@ -1,41 +1,79 @@
 {
   "date": "2026-10-29",
-  "time": "10:57",
-  "trigger": "scheduled look",
+  "time": "11:27",
+  "trigger": "must invest $2,232 more (75% rule)",
+  "market_view": "Risk-off tape with SPY -0.3% and QQQ -1.2%, VIXY -1.9%, broad selling pressure. Healthcare names are mixed, with LLY below VWAP and rolling over despite strong volume, while VRTX holds a slight gain and ABBV is flat. News flow lacks urgent catalysts, and executive orders now call for pausing new healthcare entries and protecting longs at 1.5%.",
   "decisions": [
     {
-      "symbol": "AMGN",
+      "symbol": "LLY",
       "action": "SELL",
-      "reason": "Opening range breakdown, price below VWAP, negative 15m/60m momentum, and RSI overbought at 76.3. Stopping out to protect capital in a risk-off environment.",
+      "conviction": 1,
       "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0
-    },
-    {
-      "symbol": "HLN",
-      "action": "BUY",
-      "side": "short",
-      "reason": "Strong short setup: 52-week low, negative news (lowered guidance, weak respiratory sales), opening range breakdown, price below VWAP, and high relative volume (4.0). Risk-off regime favors shorts on weak names.",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst"
-    },
-    {
-      "symbol": "MRK",
-      "action": "BUY",
-      "side": "long",
-      "reason": "Strong momentum and news catalyst (bioprocessing investment, moderate growth outlook). Trading above VWAP, positive 15m momentum, and high relative volume (2.26). RSI is neutral at 52.5, leaving room for upside.",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum"
+      "take_profit_pct": 0.0,
+      "setup": "news catalyst",
+      "reason": "Existing LLY long is down -0.93% and trading below VWAP with m15 flat, m60 -0.9%, despite rvol 2.83; stop at -2.0% is looser than the executive 1.5% protection rule. Exit to protect capital in a risk-off market."
     }
   ],
   "ranked_ideas": [
-    "MRK",
-    "HLN",
-    "ABT",
-    "ISRG",
-    "DHR"
+    {
+      "symbol": "MRK",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "momentum",
+      "reason": "Consumer name with day +5.1%, rvol 1.89, above VWAP, m15 +0.4, m60 +0.5; earnings today but strong relative strength. Fails strict m15>0.5 filter, conviction reduced."
+    },
+    {
+      "symbol": "ISRG",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above 447.66 with m15 +0.3, m60 +0.8, but rvol only 0.68, weak confirmation."
+    },
+    {
+      "symbol": "DHR",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "opening range breakout",
+      "reason": "OR breakout above 235.96 with m15 +0.3, m60 +0.7, but rvol 0.56, weak confirmation."
+    },
+    {
+      "symbol": "REGN",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "momentum",
+      "reason": "Above VWAP, m15 +0.7, rvol 1.86, meets momentum filter, but RSI 73.5 overbought and no fresh catalyst."
+    },
+    {
+      "symbol": "AMGN",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "opening range breakdown",
+      "reason": "OR breakdown with short bias, but executive prefers avoiding low-conviction shorts and risk-off long focus."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "ATR-based stop (2% of ATR) for all new entries and momentum filter: only enter long when m15 > 0.5% and rvol > 1.5, and price is above VWAP.",
+  "watchlist_changes": {
+    "add": [
+      {
+        "symbol": "HCA",
+        "reason": "Barclays raised price target and maintained Equal-Weight; healthcare sector news and potential institutional interest."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "UNH",
+        "reason": "No fresh catalyst and trading flat with low rvol; lacks a high-quality day-trading setup."
+      }
+    ]
+  }
 }

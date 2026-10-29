@@ -1,45 +1,47 @@
 {
   "date": "2026-10-29",
-  "time": "11:00",
-  "trigger": "must invest $22,961 more (75% rule)",
+  "time": "11:27",
+  "trigger": "scheduled look",
   "decisions": [
     {
-      "symbol": "MSFT",
-      "action": "SELL",
-      "reason": "Stock broke down below the opening range (525.44-540.79) and is trading 1.5% below VWAP with high relative volume (3.8). Despite bullish news, the technical breakdown in a risk-off market (QQQ -1.5%) invalidates the long setup. Cutting losses to free up capital for stronger setups."
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "AMAT",
+      "symbol": "AMD",
+      "action": "BUY",
       "setup": "opening range breakout",
-      "conviction": 4,
-      "reason": "Broke out above the opening range (410.04-415.45) and is trading above VWAP. RSI is oversold (25.1) suggesting a potential bounce/mean reversion play, supported by positive momentum (m60 +0.9%). Fits the 'best available setup' rule in a weak market."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "AMD is trading above VWAP (+0.9%) and has broken out of the opening range (560.75-572.54) with positive 60m momentum (+0.6%). Despite the risk-off market, AMD is holding up well relative to peers like MSFT and NOW. The breakout is supported by a slight volume uptick (rvol 1.19) and fits the 'strong move off the open' criteria. Conviction is moderate (4/5) due to market headwinds, but it is the strongest long candidate on the watchlist currently."
     },
     {
-      "symbol": "CRWV",
+      "symbol": "AVGO",
+      "action": "BUY",
       "setup": "opening range breakout",
-      "conviction": 4,
-      "reason": "Strong breakout above the opening range (60.18-62.26) and trading 1.5% above VWAP. Positive 60m momentum (+1.5%) and news catalyst (Treasury Secretary downplaying AI debt worries) provides a fundamental floor. High relative volume (1.2) confirms interest."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "AVGO has broken out of its opening range (338.84-344.18) and is trading above VWAP (+0.8%). It shows positive 60m momentum (+0.7%) and is one of the few tech stocks maintaining an uptrend in a risk-off environment. The setup is clean, with the price holding above the breakout level. Conviction is 4/5."
     },
     {
-      "symbol": "ANET",
+      "symbol": "TXN",
+      "action": "BUY",
       "setup": "opening range breakout",
-      "conviction": 3,
-      "reason": "Broke out above the opening range (182.69-185.00) and is trading above VWAP. However, low relative volume (0.55) reduces conviction. Included as a secondary option if AMAT/CRWV fail."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "TXN has broken out of its opening range (306.55-309.01) and is trading above VWAP (+0.5%). It has strong 60m momentum (+0.6%) and is part of a broader semiconductor strength theme. Although rvol is low (0.58), the price action is firm. Conviction is 4/5."
     },
     {
       "symbol": "NVDA",
-      "setup": "VWAP bounce",
-      "conviction": 3,
-      "reason": "Trading slightly above VWAP with positive 60m momentum (+0.4%). Neutral news flow but strong AI narrative. A potential bounce play in a risk-off environment, but lacks the clear breakout confirmation of AMAT/CRWV."
-    },
-    {
-      "symbol": "IBM",
+      "action": "BUY",
       "setup": "momentum",
-      "conviction": 3,
-      "reason": "Trading above VWAP with positive 15m momentum (+0.2%). However, RSI is overbought (81.1) and relative volume is low (0.74), making this a lower-conviction momentum play compared to the breakouts."
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "NVDA is trading above VWAP (+0.2%) and has positive 60m momentum (+0.1%). It is near the top of its opening range but showing resilience. The news catalyst (partnership with Eclypsium) adds a slight bullish bias. Conviction is 4/5, slightly lower due to flat 15m momentum."
     }
+  ],
+  "ranked_ideas": [
+    "INTC",
+    "IBM",
+    "MU",
+    "PANW",
+    "INTU"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []

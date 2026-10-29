@@ -1616,5 +1616,29 @@
       "BUY MRK blocked: team already has the maximum number of positions",
       "BUY MRNA blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "11:27",
+    "trigger": "must invest $2,232 more (75% rule)",
+    "market_view": "Risk-off tape with SPY -0.3% and QQQ -1.2%, VIXY -1.9%, broad selling pressure. Healthcare names are mixed, with LLY below VWAP and rolling over despite strong volume, while VRTX holds a slight gain and ABBV is flat. News flow lacks urgent catalysts, and executive orders now call for pausing new healthcare entries and protecting longs at 1.5%.",
+    "experiment": "ATR-based stop (2% of ATR) for all new entries and momentum filter: only enter long when m15 > 0.5% and rvol > 1.5, and price is above VWAP.",
+    "decisions": [
+      {
+        "symbol": "LLY",
+        "action": "SELL",
+        "conviction": 1,
+        "reason": "Existing LLY long is down -0.93% and trading below VWAP with m15 flat, m60 -0.9%, despite rvol 2.83; stop at -2.0% is looser than the executive 1.5% protection rule. Exit to protect capital in a risk-off market.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      }
+    ],
+    "results": [
+      "SELL LLY",
+      "BUY MRK x1 (~$148.33) [deploy]",
+      "BUY ISRG x0.624261 (~$280.11) [deploy]",
+      "WATCHLIST removed UNH",
+      "WATCHLIST added HCA"
+    ]
   }
 ]
