@@ -1,74 +1,76 @@
 {
   "date": "2026-10-29",
-  "time": "12:04",
+  "time": "12:27",
   "trigger": "scheduled look",
-  "market_view": "Caution tape is dominant, with the index down about 1.1% and SPY -0.3%, QQQ -1.1%, so long sizing is reduced and I am being selective. The defense group has selective catalysts, but the broader mood is risk-off. Textron's opening-range breakout on volume and the Bell/earnings beat stand out, while LMT and RTX lack the required volume confirmation.",
   "decisions": [
     {
-      "symbol": "TXT",
+      "symbol": "LHX",
+      "action": "SELL",
+      "reason": "Position has hit first target (278.30) and is scaling out. Momentum is fading (m15 -0.1%) in a risk-off market. Locking in profits to redeploy capital into higher-conviction setups.",
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0
+    },
+    {
+      "symbol": "HII",
+      "action": "SELL",
+      "reason": "Position is up 3% and has hit/near first target (315.02). RSI is 65 but the stock is extended. In a risk-off regime, taking profits on a 12% gapper is prudent to manage risk and free up capital.",
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0
+    },
+    {
+      "symbol": "KTOS",
       "action": "BUY",
-      "conviction": 4,
+      "reason": "Strong opening range breakout (OR 41.33-42.66, price 43.44). Trading well above VWAP (+1.8%). Positive 15m and 60m momentum. RSI 46.5 suggests room to run before overbought. Fits 'high-conviction long' criteria with volume confirmation (rvol 1.22).",
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Bell Textron announced an additional Bell 407GXi order and Q3 EPS beat/raised guidance; stock broke the opening range at 84.36-87.22 with rvol 2.19 and held above VWAP, day +14.2%. High conviction with volume confirmation."
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
+    },
+    {
+      "symbol": "HEI",
+      "action": "BUY",
+      "reason": "Opening range breakout (OR 313.26-316.37, price 324.39). Trading above VWAP (+0.8%). Positive momentum (m15 +0.4%, m60 +0.4%). RSI 65.6 is healthy. Strong uptrend trend. Fits 'high-conviction long' criteria.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "GD",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Defense prime broke OR with volume, but earnings tomorrow add risk."
-    },
-    {
-      "symbol": "CACI",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Army contract won, but relative volume was only 0.77, weakening the entry."
-    },
-    {
-      "symbol": "KTOS",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Defense momentum broke OR, but rvol 1.23 was modest."
-    },
-    {
       "symbol": "AVAV",
-      "direction": "long",
-      "conviction": 2,
+      "reason": "Strong OR breakout, above VWAP, positive momentum. RSI 33.6 suggests potential for further upside from oversold levels.",
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Defense momentum, but low volume and no clear catalyst."
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
     },
     {
-      "symbol": "PLTR",
-      "direction": "long",
-      "conviction": 3,
+      "symbol": "GD",
+      "reason": "OR breakout, above VWAP. Earnings coming tomorrow, but today's setup is strong. RSI 78.1 is high, so caution needed, but momentum is positive.",
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Analyst PT raise, but stock did not confirm OR breakout and Space is paused."
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
+    },
+    {
+      "symbol": "TXT",
+      "reason": "Strong OR breakout, above VWAP. Earnings beat and guidance raise. RSI 72.6 is overbought, but momentum is strong. High risk due to RSI.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
+    },
+    {
+      "symbol": "LMT",
+      "reason": "Already held. Strong news catalyst ($1.08B contract). RSI 85.7 is very overbought, so no new entry, but holding is justified by strong fundamental news.",
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "news catalyst"
+    },
+    {
+      "symbol": "RTX",
+      "reason": "Already held. Earnings beat and guidance raise. RSI 65.0 is healthy. Holding is justified by strong fundamental news and OR breakout.",
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "news catalyst"
     }
   ],
-  "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": [
-      {
-        "symbol": "LDOS",
-        "reason": "No fresh catalyst and very weak volume, quiet for a day-trading defense watchlist."
-      }
-    ]
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

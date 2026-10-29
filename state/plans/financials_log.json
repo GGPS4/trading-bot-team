@@ -1254,5 +1254,36 @@
       "WATCHLIST remove rejected BLK",
       "WATCHLIST remove rejected COF"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "12:27",
+    "trigger": "scheduled look",
+    "market_view": "Market is in risk-off with SPY -0.4%, QQQ -1.5%, and VIXY -1.8%. MA and ICE reported before the open; MA beat with strong revenue growth and showed momentum, while ICE's earnings gap faded. I favor a high-conviction earnings long in MA but will size tight in this risk-off tape.",
+    "experiment": "Implement trailing stops for long positions to lock in gains",
+    "decisions": [
+      {
+        "symbol": "MA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "MA Q3 beat with 14% revenue growth; rvol 3.37, above VWAP, trend up, earnings catalyst. Risk-off half size, conviction adjusted.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "ICE",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "ICE earnings gap failed; price below VWAP, m15/m60 negative, momentum down. Cut loss.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.02
+      }
+    ],
+    "results": [
+      "SELL ICE",
+      "BUY MA blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY COIN x5 (~$805.4) [deploy]",
+      "WATCHLIST remove rejected SCHW"
+    ]
   }
 ]

@@ -1,46 +1,37 @@
 {
   "date": "2026-10-29",
-  "time": "12:04",
+  "time": "12:27",
   "trigger": "scheduled look",
-  "market_view": "Caution regime persists with SPY -0.3%, QQQ -1.1%, VIXY -1.6%; market is sliding. MA and ICE earnings before the open beat, ICE Hyperliquid partnership positive, COIN crypto adoption headline. Longs are sized 25% smaller. Current longs are mostly stalled or underwater (MA, AXP). No strong high-conviction long with volume above VWAP in risk-off; best setups are selective momentum like SOFI.",
+  "market_view": "Market is in risk-off with SPY -0.4%, QQQ -1.5%, and VIXY -1.8%. MA and ICE reported before the open; MA beat with strong revenue growth and showed momentum, while ICE's earnings gap faded. I favor a high-conviction earnings long in MA but will size tight in this risk-off tape.",
   "decisions": [
     {
-      "symbol": "AXP",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.0,
-      "setup": "news catalyst",
-      "reason": "Below VWAP and in downtrend with negative momentum; news catalyst faded, stop not hit but risk/reward poor."
-    },
-    {
       "symbol": "MA",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.0,
-      "setup": "earnings gap",
-      "reason": "Earnings beat failed; now below VWAP, in downtrend, negative 15m/60m momentum, fading; cut loss."
-    },
-    {
-      "symbol": "SOFI",
       "action": "BUY",
       "conviction": 4,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "OR breakout above 17.49 with rvol 1.61, above VWAP, m15/m60 positive, day +2.4; strong intraday momentum despite caution."
+      "setup": "momentum",
+      "reason": "MA Q3 beat with 14% revenue growth; rvol 3.37, above VWAP, trend up, earnings catalyst. Risk-off half size, conviction adjusted."
+    },
+    {
+      "symbol": "ICE",
+      "action": "SELL",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.02,
+      "setup": "earnings gap",
+      "reason": "ICE earnings gap failed; price below VWAP, m15/m60 negative, momentum down. Cut loss."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "V",
+      "symbol": "COIN",
       "direction": "long",
       "conviction": 3,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "rvol 2.35, day +2.1, but trend down and VWAP below; fading momentum despite high volume."
+      "setup": "news catalyst",
+      "reason": "Executive team order to add on upcoming earnings; after close earnings, but current setup mixed."
     },
     {
       "symbol": "C",
@@ -49,64 +40,21 @@
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "OR breakout, rvol 1.36, above VWAP, but m15 -0.4; momentum fading."
-    },
-    {
-      "symbol": "COIN",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "Crypto adoption headline and earnings after close, but unconfirmed revenue run rate; high retail interest."
-    },
-    {
-      "symbol": "JPM",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Flat; no clear edge."
-    },
-    {
-      "symbol": "GS",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Flat; no clear edge."
+      "reason": "C broke OR, day +1.9%, but low rvol and risk-off."
     }
   ],
-  "experiment": "Use VWAP or volume confirmation before entering breakout trades",
+  "experiment": "Implement trailing stops for long positions to lock in gains",
   "watchlist_changes": {
     "add": [
       {
         "symbol": "COIN",
-        "reason": "Crypto adoption headline and upcoming earnings after close; high retail interest."
-      },
-      {
-        "symbol": "V",
-        "reason": "High relative volume 2.35 and price target update; institutional flow."
-      },
-      {
-        "symbol": "C",
-        "reason": "Opening range breakout with rvol 1.36 and above VWAP."
+        "reason": "Upcoming earnings after close and executive team order to add earnings plays; high-profile adoption narrative but revenue run rate estimate."
       }
     ],
     "remove": [
       {
         "symbol": "SCHW",
-        "reason": "Oversold and quiet; no fresh catalyst."
-      },
-      {
-        "symbol": "BLK",
-        "reason": "Breakdown below opening range; no long setup."
-      },
-      {
-        "symbol": "COF",
-        "reason": "Low relative volume and weak trend; no clear catalyst."
+        "reason": "RSI 22 oversold and no fresh catalyst; quiet relative to market move."
       }
     ]
   }

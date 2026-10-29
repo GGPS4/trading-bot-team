@@ -1588,5 +1588,55 @@
       "BUY TXT blocked: team already has the maximum number of positions",
       "WATCHLIST remove rejected LDOS"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "12:27",
+    "trigger": "scheduled look",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "LHX",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position has hit first target (278.30) and is scaling out. Momentum is fading (m15 -0.1%) in a risk-off market. Locking in profits to redeploy capital into higher-conviction setups.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "HII",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is up 3% and has hit/near first target (315.02). RSI is 65 but the stock is extended. In a risk-off regime, taking profits on a 12% gapper is prudent to manage risk and free up capital.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "KTOS",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "Strong opening range breakout (OR 41.33-42.66, price 43.44). Trading well above VWAP (+1.8%). Positive 15m and 60m momentum. RSI 46.5 suggests room to run before overbought. Fits 'high-conviction long' criteria with volume confirmation (rvol 1.22).",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "HEI",
+        "action": "BUY",
+        "conviction": null,
+        "reason": "Opening range breakout (OR 313.26-316.37, price 324.39). Trading above VWAP (+0.8%). Positive momentum (m15 +0.4%, m60 +0.4%). RSI 65.6 is healthy. Strong uptrend trend. Fits 'high-conviction long' criteria.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL LHX",
+      "SELL HII",
+      "BUY KTOS blocked: conviction None is below the minimum 5 (risk-off market)",
+      "BUY HEI blocked: conviction None is below the minimum 5 (risk-off market)",
+      "BUY AVAV blocked: conviction None is below the minimum 3 (risk-off market)",
+      "BUY GD blocked: conviction None is below the minimum 3 (risk-off market)",
+      "BUY TXT blocked: conviction None is below the minimum 3 (risk-off market)"
+    ]
   }
 ]
