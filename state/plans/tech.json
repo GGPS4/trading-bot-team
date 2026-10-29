@@ -1,106 +1,48 @@
 {
   "date": "2026-10-29",
-  "time": "09:58",
-  "trigger": "price moves in ['PANW']",
-  "market_view": "Market is in a risk-off tape: SPY -0.5%, QQQ -1.7%, VIXY rising, and only 74% of watched stocks up. Longs are half size and need high conviction. I see a high-quality long setup in PANW above VWAP with strong volume, but the broader market is fragile.",
+  "time": "10:23",
+  "trigger": "scheduled look",
   "decisions": [
     {
-      "symbol": "NVDA",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "momentum",
-      "reason": "Below VWAP and in downtrend; risk-off regime; momentum negative. Closing the long to redeploy capital."
-    },
-    {
-      "symbol": "AVGO",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "momentum",
-      "reason": "Below VWAP and struggling; risk-off; no follow-through long. Closing the long."
-    },
-    {
-      "symbol": "AMD",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "momentum",
-      "reason": "Below VWAP and in downtrend; risk-off; thesis broken. Closing the long."
-    },
-    {
-      "symbol": "PANW",
+      "symbol": "AMAT",
       "action": "BUY",
-      "conviction": 4,
+      "reason": "Opening range breakout above 415.45 with strong volume (rvol 1.51) and positive 15m momentum. RSI is oversold (25.1) on the daily, suggesting a potential intraday bounce. Fits the 'breakout' setup criteria with volume confirmation.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
+    },
+    {
+      "symbol": "CRWV",
+      "action": "BUY",
+      "reason": "Opening range breakout above 62.26 with high relative volume (1.76) and strong 15m momentum (+1.0%). Despite the 20-day downtrend, the intraday reversal and volume spike suggest a short-covering rally or new momentum leg. Conviction is moderate but setup is clean.",
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Above VWAP, opening range breakout/momentum, m15 +2.3%, rvol 4.85, trend up; high conviction long in risk-off tape."
+      "setup": "opening range breakout"
+    },
+    {
+      "symbol": "ANET",
+      "action": "BUY",
+      "reason": "Opening range breakout above 185.00 with positive 15m momentum (+0.6%) and price well above VWAP (+1.2%). Trend is up. Although rvol is low (0.55), the clean break and trend alignment make it a viable momentum play in a risk-off environment where we are selective.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout"
+    },
+    {
+      "symbol": "INTC",
+      "action": "BUY",
+      "reason": "Strong intraday momentum (+1.6% look) and breakout above opening range high (93.47). Earnings are after the close, which often drives pre-earnings volatility and momentum. RSI 36.1 is not overbought. Fits the momentum setup.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum"
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "IBM",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Above VWAP, m15 +0.8%, trend up, positive news; lower conviction."
-    },
-    {
-      "symbol": "INTU",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Above VWAP, m15 +1.6%, trend up; rvol low but momentum positive."
-    },
-    {
-      "symbol": "MSFT",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Keybanc upgrade, bond sale, Azure strength; below VWAP, so only momentum-long if VWAP reclaims."
-    },
-    {
-      "symbol": "MU",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Below VWAP and downtrend; weak, but executive prefers to avoid low-conviction shorts."
-    },
-    {
-      "symbol": "AMAT",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Below VWAP and downtrend; weak, but executive prefers to avoid low-conviction shorts."
-    }
+    "NVDA",
+    "AMD",
+    "MU",
+    "AVGO",
+    "TXN"
   ],
-  "experiment": "Develop a morning post-earnings breakout strategy to capture pre-market reaction moves in high-conviction software and chip tickers reporting after-hours earnings.",
-  "watchlist_changes": {
-    "add": [
-      {
-        "symbol": "PANW",
-        "reason": "Strong opening-range breakout with rvol 4.85 and above VWAP; high-conviction momentum long."
-      }
-    ],
-    "remove": [
-      {
-        "symbol": "NOW",
-        "reason": "Stock had major pre-market gap on downbeat earnings but is bouncing; not a clean short/long setup and executive prefers to avoid low-conviction shorts."
-      }
-    ]
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

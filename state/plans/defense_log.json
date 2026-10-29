@@ -1452,5 +1452,30 @@
       "WATCHLIST remove rejected LDOS",
       "WATCHLIST remove rejected BAH"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "time": "10:23",
+    "trigger": "price moves in ['AVAV']",
+    "market_view": "Market is in risk-off with SPY down 0.4%, QQQ down 1.3%, and VIXY down 0.8%, indicating broad selling pressure. Defense stocks showed some lift on HII earnings and contracts, but risk-off conditions require high conviction, above VWAP entries with volume confirmation. I am focusing on short-term intraday breakouts.",
+    "experiment": "Pre-market earnings breakout strategy targeting LHX, TXT, and HII post-print, entering only on opening range breakouts with relative volume > 2.0x.",
+    "decisions": [
+      {
+        "symbol": "TXT",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Q3 earnings beat and raised FY2026 EPS guidance; stock broke above opening range at 87.22, held above VWAP, and showed rvol 2.27 with volume confirmation. High-conviction catalyst and above VWAP in risk-off.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY TXT blocked: conviction 4 is below the minimum 5 (risk-off market)",
+      "BUY HII x2 (~$611.68) [deploy]",
+      "BUY RTX x3 (~$599.99) [deploy]",
+      "BUY GD x1 (~$366.62) [deploy]",
+      "WATCHLIST remove rejected LDOS",
+      "WATCHLIST remove rejected SAIC"
+    ]
   }
 ]
