@@ -1,51 +1,61 @@
 {
   "date": "2026-10-30",
-  "time": "09:53",
-  "trigger": "big news on ['INTC']",
-  "market_view": "The market is in a severe risk-off regime with QQQ down -2.7%, VIXY up 6.5%, and most IT stocks under pressure. Intel is collapsing on disastrous guidance, dragging AMD and the semiconductor complex lower. We are prioritizing capital preservation: exiting longs that are below VWAP with no reversal, and only adding high-liquidity longs that are above VWAP with confirmed momentum.",
+  "time": "10:07",
+  "trigger": "price moves in ['CRWV']",
   "decisions": [
     {
-      "symbol": "AAPL",
+      "symbol": "INTU",
       "action": "SELL",
-      "conviction": 5,
-      "stop_loss_pct": 0,
-      "take_profit_pct": 0,
-      "setup": "other",
-      "reason": "AAPL is below VWAP (-0.2%) and trending down in a risk-off market; the QQQ regime filter blocks longs below VWAP and capital preservation requires exiting this weak long rather than holding a breaking position."
+      "reason": "Holding from a previous session with no defined stop or target. In a risk-off environment with the executive order to reduce trade frequency and focus on high-liquidity names, I am closing this stale position to free up capital and reduce risk. The stock is up 3.6% but lacks the specific intraday momentum signals required for a new entry under the current strict protocol."
     },
     {
-      "symbol": "MSFT",
-      "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "MSFT is the best available long: above VWAP (+0.6%), strong 15m momentum (+0.7%), high relative volume (4.08x), and near the top of its opening range. It is a high-liquidity focus name, though conviction is capped by the risk-off regime."
+      "symbol": "GOOGL",
+      "action": "SELL",
+      "reason": "Position is flat (0.00026% P&L) and the stock is trading below its opening range high with negative 15m momentum (-0.1%) in a risk-off market. The executive order requires high-conviction setups with RVOL > 1.5 and price above VWAP. While RVOL is high (4.18), the lack of positive momentum and the 'mean reversion' setup in a down market is low conviction. Closing to preserve capital and avoid forced low-quality entries."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "GOOGL",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "mean reversion",
-      "reason": "Above VWAP (+0.2%) with high rvol (5.27) and deeply oversold RSI (15.6); potential bounce but negative news and risk-off cap conviction."
+      "symbol": "NVDA",
+      "side": "long",
+      "setup": "VWAP bounce",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "NVDA is one of the few names showing positive intraday momentum (m15 +0.4%, look +0.5%) and is trading above VWAP (+0.4%). It has high relative volume (2.23) and is a high-liquidity name explicitly requested by the executive. The trend is 'up' despite the broader market drop, suggesting relative strength. This fits the 'high-conviction' criteria better than other longs in a risk-off environment."
     },
     {
       "symbol": "AMD",
-      "direction": "long",
-      "conviction": 3,
+      "side": "long",
+      "setup": "momentum",
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
+      "reason": "AMD is gapping down but showing strong relative volume (6.27) and positive momentum (m15 +0.4%, look +0.6%) while trading above VWAP (+0.6%). It is a high-liquidity name. The 'flat' trend label is misleading given the strong volume and price action above VWAP. This is a potential bounce play from the gap-down, fitting the 'high-liquidity' and 'momentum' criteria."
+    },
+    {
+      "symbol": "CRWV",
+      "side": "long",
       "setup": "momentum",
-      "reason": "Above VWAP (+0.1%) with very high rvol (7.72) and strong 15m momentum (+0.9%); sympathy bounce candidate after Intel news but still risky."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "reason": "CRWV is showing the strongest positive momentum among the watchlist (m15 +1.9%, look +2.0%) and is trading above VWAP (+1.6%) with high relative volume (3.69). The trend is 'up'. Although it gapped down, the intraday reversal is strong. This fits the 'high-conviction' setup with RVOL > 1.5 and price above VWAP."
+    },
+    {
+      "symbol": "PANW",
+      "side": "long",
+      "setup": "VWAP bounce",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "PANW is trading above VWAP (+0.4%) with positive momentum (m15 +1.1%, look +1.1%) and high relative volume (2.23). The trend is 'flat' but the intraday action is constructive. It is a high-liquidity name. This is a secondary choice to NVDA and AMD."
+    },
+    {
+      "symbol": "NOW",
+      "side": "long",
+      "setup": "VWAP bounce",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "NOW is trading above VWAP (+0.4%) with positive momentum (m15 +0.1%, look +0.2%) and high relative volume (3.7). The trend is 'flat' but the price action is stable. It is a high-liquidity name. This is a tertiary choice."
     }
   ],
-  "experiment": "Add a VWAP-reclaim filter to the entry criteria",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

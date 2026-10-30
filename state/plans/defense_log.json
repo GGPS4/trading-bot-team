@@ -1784,5 +1784,44 @@
       "SELL RTX",
       "BUY PLTR x12 (~$2277.6) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "10:07",
+    "trigger": "must invest $19,940 more (75% rule)",
+    "market_view": "The market is in a strong risk-off regime with the SPY down 1.2% and fear gauge VIXY up 6.4%, favoring shorting weak stocks and keeping long positions small. Most defense stocks are trading below their VWAPs and breaking down from their opening ranges, except for PLTR and BAH. We are enforcing the strict no-trade protocol, focusing only on PLTR for longs (high relative volume and above VWAP) and GD for a high-conviction short breakdown.",
+    "experiment": "Testing the strict 'No-Trade' protocol requiring Relative Volume > 1.5x and price above VWAP for long entries, while focusing on high-volume breakdowns for shorts in a risk-off environment.",
+    "decisions": [
+      {
+        "symbol": "LHX",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": "Trading below VWAP (-0.7%) with downward momentum, failing the strict price above VWAP criterion. Cutting losses to redeploy capital to higher-conviction setups.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.02
+      },
+      {
+        "symbol": "PLTR",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Meets strict criteria with RVol 4.43 and price above VWAP (+0.4%). JP Morgan initiated Overweight rating, providing catalyst.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "GD",
+        "action": "SHORT",
+        "conviction": 5,
+        "reason": "High-volume breakdown (RVol 1.98) below opening range despite strong Q3 earnings. Overbought RSI (83.8) and risk-off market favoring shorts.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.05
+      }
+    ],
+    "results": [
+      "SELL LHX",
+      "BUY PLTR blocked: already holding this stock",
+      "SHORT GD x12 (~$4534.68)",
+      "BUY BAH x26 (~$2296.06) [deploy]"
+    ]
   }
 ]

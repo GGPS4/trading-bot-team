@@ -1408,5 +1408,34 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-30",
+    "time": "10:00",
+    "trigger": "must invest $6,666 more (75% rule)",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "JPM",
+        "action": "BUY",
+        "conviction": null,
+        "reason": null,
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.02
+      },
+      {
+        "symbol": "MS",
+        "action": "BUY",
+        "conviction": null,
+        "reason": null,
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.02
+      }
+    ],
+    "results": [
+      "BUY JPM blocked: conviction None is below the minimum 6 (risk-off market)",
+      "BUY MS blocked: conviction None is below the minimum 6 (risk-off market)"
+    ]
   }
 ]

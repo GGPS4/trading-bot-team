@@ -1,26 +1,35 @@
 {
   "date": "2026-10-30",
-  "time": "09:53",
-  "trigger": "big news on ['AMZN']",
-  "market_view": "The market is in a strong risk-off regime with indices down sharply and fear gauge rising, favoring short positions on weak stocks with high volume. My team is underinvested at 36% but must deploy capital into high-conviction setups while respecting strict criteria. I will exit losing longs and focus on shorts with negative momentum and relative volume above 1.5x.",
+  "time": "10:07",
+  "trigger": "price moves in ['EAT']",
+  "market_view": "The market is in a risk-off regime with SPY down 1.2% and QQQ falling 2.5%, while the VIXY fear gauge spikes 6.4%. Only 37% of our watchlist stocks are positive, and most are breaking below their opening ranges and VWAP. We are focusing on high-volume breakdowns and locking in profits.",
   "decisions": [
     {
-      "symbol": "BKNG",
-      "action": "SELL",
-      "conviction": 5,
-      "stop_loss_pct": 0.005,
-      "take_profit_pct": 0.01,
-      "setup": "mean reversion",
-      "reason": "BKNG long position is below VWAP with negative momentum (m15 -1.5%, trend down), violating the VWAP rule for longs and incurring a loss. Exit immediately per lesson to prevent further downside."
+      "symbol": "SBUX",
+      "action": "COVER",
+      "conviction": 4,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "momentum",
+      "reason": "Short is up ~1R (1.1% profit) and we want to lock in gains per president's directive and redeploy into higher-conviction setups."
+    },
+    {
+      "symbol": "CVNA",
+      "action": "SHORT",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakdown",
+      "reason": "CVNA is breaking down below its opening range and VWAP with strong negative momentum (m15 -1.6%) and relative volume 2.79x, meeting our short criteria."
     },
     {
       "symbol": "LULU",
       "action": "SHORT",
       "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "LULU is below VWAP with strong negative momentum (m15 -2.0%, trend down) and high relative volume (rvol 2.31), qualifying as a short in risk-off market. No major news catalyst, so technical breakdown is clear."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakdown",
+      "reason": "LULU is also below VWAP with an opening range breakdown, negative momentum, and relative volume 2.29x."
     }
   ],
   "ranked_ideas": [
@@ -28,51 +37,61 @@
       "symbol": "LOW",
       "direction": "short",
       "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakdown",
+      "reason": "LOW is below VWAP with an opening range breakdown, negative momentum, and very high relative volume (3.66x)."
+    },
+    {
+      "symbol": "NCLH",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "LOW is below VWAP with very high relative volume (rvol 4.93) and negative momentum (m15 -0.8%, trend down), making it a strong short candidate despite mild positive day performance."
+      "reason": "NCLH is below VWAP with high relative volume (2.87x) and a down trend, though m15 momentum is slightly positive."
     },
     {
       "symbol": "HD",
       "direction": "short",
       "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "HD is below VWAP with relative volume above 1.5x (rvol 1.75) and negative momentum (m15 -1.1%, trend down), suitable for shorting in risk-off environment."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakdown",
+      "reason": "HD shows an opening range breakdown and is below VWAP, but relative volume is only 1.29x."
     },
     {
-      "symbol": "EBAY",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "EBAY is above VWAP with positive momentum (m15 +1.4%) and high volume (rvol 2.13), but longs are half size in risk-off market. Mild bullish news supports a small position."
-    },
-    {
-      "symbol": "CCL",
+      "symbol": "AMZN",
       "direction": "short",
       "conviction": 2,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "CCL is below VWAP with trend down, but relative volume is low (rvol 0.93), so conviction is lower. Consider only if other setups fail."
+      "setup": "news catalyst",
+      "reason": "AMZN has extremely high volume (7.75x) and negative earnings news, but price is above VWAP, making a short risky."
     },
     {
-      "symbol": "AMZN",
-      "direction": "long",
+      "symbol": "EAT",
+      "direction": "short",
       "conviction": 2,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "news catalyst",
-      "reason": "AMZN has high volume (rvol 8.96) and above VWAP, but mixed news (earnings miss vs. bullish report) and risk-off mood reduce conviction. Avoid due to major negative news catalyst per lessons."
+      "setup": "opening range breakdown",
+      "reason": "EAT is below VWAP with a breakdown, but relative volume is below 1.5x (0.97x)."
     }
   ],
-  "experiment": "Add a momentum filter for short trades: only short if m15/m60 momentum is negative and relative volume >1.5x; otherwise skip.",
+  "experiment": "Momentum filter for short trades: only short if m15 negative and relative volume >1.5x",
   "watchlist_changes": {
-    "add": [],
-    "remove": []
+    "add": [
+      {
+        "symbol": "HLT",
+        "reason": "Hilton is in our sector and shows positive news with a raised price target, and it's trading actively."
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "DEO",
+        "reason": "DEO has low volume and no significant price movement, making it a poor day-trading candidate."
+      }
+    ]
   }
 }

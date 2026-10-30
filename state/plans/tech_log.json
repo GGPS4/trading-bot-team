@@ -1929,5 +1929,38 @@
       "BUY MSFT blocked: conviction 5 is below the minimum 6 (risk-off market)",
       "BUY GOOGL x5 (~$1407.15) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "10:07",
+    "trigger": "price moves in ['CRWV']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "INTU",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Holding from a previous session with no defined stop or target. In a risk-off environment with the executive order to reduce trade frequency and focus on high-liquidity names, I am closing this stale position to free up capital and reduce risk. The stock is up 3.6% but lacks the specific intraday momentum signals required for a new entry under the current strict protocol.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "GOOGL",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Position is flat (0.00026% P&L) and the stock is trading below its opening range high with negative 15m momentum (-0.1%) in a risk-off market. The executive order requires high-conviction setups with RVOL > 1.5 and price above VWAP. While RVOL is high (4.18), the lack of positive momentum and the 'mean reversion' setup in a down market is low conviction. Closing to preserve capital and avoid forced low-quality entries.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "SELL INTU",
+      "SELL GOOGL",
+      "BUY AMD blocked: conviction None is below the minimum 3 (risk-off market)",
+      "BUY CRWV blocked: conviction None is below the minimum 3 (risk-off market)",
+      "BUY PANW blocked: conviction None is below the minimum 3 (risk-off market)",
+      "BUY NOW blocked: conviction None is below the minimum 3 (risk-off market)"
+    ]
   }
 ]
