@@ -1831,5 +1831,38 @@
       "BUY REGN x0.727408 (~$666.58) [deploy]",
       "SHORT ALNY x7 (~$1187.69) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "11:20",
+    "trigger": "scheduled look",
+    "market_view": "Risk-off market with strong defensive healthcare performers. REGN is leading today with a +12% day move, FDA approval for Pasatru, and very high volume (rvol 7.88) above VWAP. LLY and ABBV remain stable with above-average momentum. The executive strategy emphasizes defensive healthcare; we should maintain LLY and REGN positions and add REGN as a new long. ALNY is in a downtrend (breakdown pattern, RSI 22.0) and should be closed.",
+    "experiment": "momentum filter",
+    "decisions": [
+      {
+        "symbol": "REGN",
+        "action": "BUY",
+        "conviction": 1,
+        "reason": null,
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "ALNY",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": null,
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL ALNY",
+      "BUY REGN blocked: already holding this stock",
+      "BUY ABBV blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY VRTX blocked: conviction 1 is below the minimum 3 (risk-off market)",
+      "BUY AMGN blocked: conviction 1 is below the minimum 3 (risk-off market)",
+      "WATCHLIST remove rejected ALNY"
+    ]
   }
 ]

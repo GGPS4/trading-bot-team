@@ -1,87 +1,86 @@
 {
   "date": "2026-10-30",
-  "time": "10:55",
-  "trigger": "must invest $5,412 more (75% rule)",
-  "market_view": "Healthcare sector mixed amid risk-off environment with SPY down 1.2%, QQQ down 2.6%, VIXY up 6.4%. Major indices under pressure with fear spiking. LLY holding above VWAP (+0.2%) with strong rvol 3.49, while ABBV below VWAP (-0.4%) with rvol 1.27. REGN gapped +7.7% pre-market on earnings beat but already up 12.2% VTD. VRTX showing momentum with rvol 4.0 above VWAP (+0.1%). ISRG breaking down below VWAP (-0.7%) with OR breakdown. Executive has suspended 75% rule and directed focus on defensive healthcare LLY/ABBV only, with No-Trade protocol requiring RVOL > 1.5x and price above VWAP for new entries.",
+  "time": "11:20",
+  "trigger": "scheduled look",
+  "market_view": "Risk-off market with strong defensive healthcare performers. REGN is leading today with a +12% day move, FDA approval for Pasatru, and very high volume (rvol 7.88) above VWAP. LLY and ABBV remain stable with above-average momentum. The executive strategy emphasizes defensive healthcare; we should maintain LLY and REGN positions and add REGN as a new long. ALNY is in a downtrend (breakdown pattern, RSI 22.0) and should be closed.",
   "decisions": [
     {
-      "symbol": "ABBV",
+      "symbol": "REGN",
+      "action": "BUY",
+      "conviction": 1,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst"
+    },
+    {
+      "symbol": "ALNY",
       "action": "SELL",
       "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "earnings gap",
-      "reason": "ABBV trading below VWAP (-0.4%) with rvol 1.27 < 1.5x, not meeting No-Trade protocol criteria. Position down 0.5% from entry; rotating capital to better setups per team strategy."
-    },
-    {
-      "symbol": "VRTX",
-      "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
+      "stop_loss_pct": 0.05,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Defensive healthcare stock trading above VWAP (+0.1%) with rvol 4.0 > 1.5x and m15 +0.6% momentum. RBC price target raise supports setup. Fits risk-off strategy of buying defensive names with conviction and volume above VWAP with strong intraday momentum."
-    },
-    {
-      "symbol": "ISRG",
-      "action": "SHORT",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "vwap breakdown",
-      "reason": "Trading below VWAP (-0.7%) with OR breakdown and m15 -0.5% negative momentum. Risk-off environment favors shorting weak stocks below VWAP on breakdown. rvol 1.55 meets threshold. Whole shares of easy-to-borrow stock."
+      "setup": "breakdown"
     }
   ],
   "ranked_ideas": [
     {
       "symbol": "REGN",
       "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Gapped +7.7% pre-market on massive Q3 earnings beat ($20.07 EPS vs $16.19 expected), FDA approval for Pasatru, expanded Sanofi partnership. rvol 7.88 extreme, above VWAP +0.4%, m15 +0.6%. Despite large VTD move (+12.2%), breakout quality is exceptional. Highest conviction long after VRTX."
+      "conviction": 1,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Strong Q3 results with FDA approval for Pasatru, +12% day move, and very high volume (rvol 7.88) trading above VWAP"
     },
     {
-      "symbol": "ALNY",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "breakdown below VWAP",
-      "reason": "Down -2.8% below VWAP, OR breakdown, m15 -1.1%, m60 -3.5%, rvol 6.49 extremely high. RSI 22.0 oversold but in risk-off oversold can mean further downside. Strong downtrend (-23.5% 5d, -24.8% 20d) makes it a candidate for risk-off shorting."
-    },
-    {
-      "symbol": "HLN",
+      "symbol": "LLY",
       "direction": "long",
       "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "rvol 1.89 > 1.5, above VWAP +0.1%, OR 8.65-8.77. m15 -0.1% (below 0.5% filter) but small-cap healthcare could react to momentum. Limited conviction due to weak intraday momentum."
+      "reason": "Trading above VWAP range (1418.46-1447) with strong m15 momentum (+0.5%) and rvol 3.63"
+    },
+    {
+      "symbol": "ABBV",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "earnings gap",
+      "reason": "Q3 earnings release with strong guidance; price near VWAP range (293.28-298.6) with moderate volume"
+    },
+    {
+      "symbol": "VRTX",
+      "direction": "long",
+      "conviction": 1,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Strong day move (+3.5%) and above VWAP with positive m60 momentum (+1.4%)"
     },
     {
       "symbol": "AMGN",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "vwap breakdown",
-      "reason": "Below VWAP -0.4%, rvol 2.05, OR 468.47-475.42. Mixed signal with m15 +0.3% positive but price below VWAP. In risk-off, below VWAP with decent volume supports short, but momentum not confirming."
-    },
-    {
-      "symbol": "MRK",
       "direction": "long",
-      "conviction": 2,
+      "conviction": 1,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "rvol 1.8, below VWAP -0.9% currently but daily trend shows 5d -0.6%, 20d +1.8%. Guggenheim raised price target to $171. If can get above VWAP on rally, could work as pullback buy. Low conviction due to current below VWAP."
+      "setup": "opening range breakout",
+      "reason": "Trading above VWAP range (468.47-475.42) with positive m60 momentum (+0.4%)"
     }
   ],
-  "experiment": "Following executive strategy: prioritize high-conviction setups above VWAP with RVOL > 1.5x and ATR-based stops, as this experiment showed 75% win rate and PF 9.33 in backtesting.",
+  "experiment": "momentum filter",
   "watchlist_changes": {
-    "add": [],
-    "remove": []
+    "add": [
+      {
+        "symbol": "REGN",
+        "reason": "Strong Q3 results (+12% day move), FDA approval for Pasatru, and very high volume (rvol 7.88) above VWAP - best current setup"
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "ALNY",
+        "reason": "Short position in a downtrend (breakdown pattern, RSI 22.0). Price is falling and the stock is weak in risk-off environment. Closing the short to reallocate to stronger setups."
+      }
+    ]
   }
 }

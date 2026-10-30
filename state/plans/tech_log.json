@@ -2154,5 +2154,54 @@
       "BUY NOW x15 (~$1598.85) [deploy]",
       "BUY AMAT x4 (~$1579.88) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "11:20",
+    "trigger": "must invest $13,508 more (75% rule)",
+    "market_view": "The market is in a strong risk-off regime with QQQ down 2.9%, VIXY up 7.9%, SPY down 1.4%. All 15 team stocks are in the red, with the semiconductor sector leading declines. AAPL and MSFT are the only names trading above VWAP with rvol > 1.5, while most others have opening-range breakdowns below VWAP. Capital preservation is the top priority per executive order, with the 75% invested rule suspended but position sizes halved until two consecutive days of positive P&L. Defense is favored in this risk-off environment.",
+    "experiment": "Test VWAP-reclaim filter: only enter long positions when price reclaims and holds above VWAP after initial pullback, confirming trend shift in risk-off market. Following executive's 'No-Trade' protocol requiring price above VWAP for long entries.",
+    "decisions": [
+      {
+        "symbol": "AMAT",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": "Cutting loss in risk-off market; AMAT down -7.2% day, OR breakdown below VWAP (-1.7%), rvol 1.11 < 1.5. Following lesson 2026-10-27: 'Do not go long when price is below VWAP without a clear reversal signal.' Stock already held; exiting per risk management rules for below-VWAP longs in down market.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "NOW",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": "Cutting loss in risk-off market; NOW down -3.3% day, OR breakdown below VWAP (-1.4%), rvol 2.88. Stock already held; exiting per 2026-10-27 lesson and risk management rules for below-VWAP longs in down market.",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "AAPL",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Meets executive QQQ regime filter: rvol 1.92 > 1.5, price above VWAP (+0.4%). AAPL is the executive's favored name for high-liquidity focus ('Focus on high-liquidity names like NVDA and AAPL only'). Trading near top of OR 344.14-348.75 but above VWAP. Tight 1% stop needed given risk-off trend down. Partial profit at 3% with trailing stop on rest per strategy: 'set the first target about 2-4% away (half is sold there, the rest trails).'",
+        "stop_loss_pct": 0.01,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "AVGO",
+        "action": "SHORT",
+        "conviction": 5,
+        "reason": "Risk-off market favors shorts of weak stocks. AVGO OR BREAKDOWN below VWAP (-0.7%), trend down, rvol 1.95 > 1.5. Chip sector weakness confirmed. Shorting weak stocks (below VWAP, breaking down) is favored per market mood. RSI 38.3 not extremely oversold (<25), avoiding high bounce risk per lesson 2026-10-23. Tight 1.5% stop, 3% target with partial sell and trailing stop rest.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL AMAT",
+      "SELL NOW",
+      "BUY AAPL blocked: conviction 5 is below the minimum 6 (risk-off market)",
+      "SHORT AVGO x10 (~$3266.5)",
+      "BUY MSFT x3 (~$1566.15) [deploy]",
+      "BUY INTU x4 (~$1357.64) [deploy]"
+    ]
   }
 ]

@@ -1188,5 +1188,34 @@
     "experiment": "",
     "decisions": [],
     "results": []
+  },
+  {
+    "date": "2026-10-30",
+    "time": "11:20",
+    "trigger": "must invest $3,333 more (75% rule)",
+    "market_view": "Risk-off market with SPOT showing a strong breakout above its opening range (570.41-582.86) at +5.4% day move, with rvol of 2.43 and clear momentum. CMCSA also has a breakout above its OR (22.6-22.93) at +3.4% with rvol of 1.57. The overall environment is cautious but SPOT's technical breakout provides a clear entry opportunity.",
+    "experiment": "Volume-filtered momentum entry test - applying rvol > 1.2 and 15-min volume > 1.5x average filter to SPOT and CMCSA",
+    "decisions": [
+      {
+        "symbol": "SPOT",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "Strong breakout above OR (570.41-582.86) with rvol 2.43 and positive day momentum (+5.4%). Meets volume filter >1.5x and has clear technical setup above VWAP.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.02
+      },
+      {
+        "symbol": "CMCSA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Breakout above OR (22.6-22.93) with rvol 1.57 and positive day move (+3.4%). Solid volume confirmation and above VWAP strength.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.02
+      }
+    ],
+    "results": [
+      "BUY SPOT blocked: conviction 5 is below the minimum 6 (risk-off market)",
+      "BUY CMCSA blocked: conviction 4 is below the minimum 6 (risk-off market)"
+    ]
   }
 ]

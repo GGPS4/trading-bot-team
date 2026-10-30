@@ -1,16 +1,60 @@
 {
   "date": "2026-10-30",
-  "time": "11:05",
+  "time": "11:20",
   "trigger": "must invest $3,333 more (75% rule)",
-  "decisions": [],
-  "ranked_ideas": [
-    "SPOT",
-    "CMCSA",
-    "MGM",
-    "TTWO",
-    "NFLX"
+  "market_view": "Risk-off market with SPOT showing a strong breakout above its opening range (570.41-582.86) at +5.4% day move, with rvol of 2.43 and clear momentum. CMCSA also has a breakout above its OR (22.6-22.93) at +3.4% with rvol of 1.57. The overall environment is cautious but SPOT's technical breakout provides a clear entry opportunity.",
+  "decisions": [
+    {
+      "symbol": "SPOT",
+      "action": "BUY",
+      "conviction": 5,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.02,
+      "setup": "opening range breakout",
+      "reason": "Strong breakout above OR (570.41-582.86) with rvol 2.43 and positive day momentum (+5.4%). Meets volume filter >1.5x and has clear technical setup above VWAP."
+    },
+    {
+      "symbol": "CMCSA",
+      "action": "BUY",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.02,
+      "setup": "opening range breakout",
+      "reason": "Breakout above OR (22.6-22.93) with rvol 1.57 and positive day move (+3.4%). Solid volume confirmation and above VWAP strength."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": [],
-  "notes": "Executive has suspended the 75% invested rule and enforced a 'No-Trade' protocol for setups lacking RVol > 1.5x and price above VWAP. Current market is risk-off (SPY -1.4%, VIXY +7.5%). No watchlist stocks currently meet the strict re-entry criteria with high conviction. SPOT has RVol 2.44 and is above VWAP but momentum has stalled (m15 -0.1%) and news is unconfirmed rumor. CMCSA has RVol 1.74 and is above VWAP but m15 is flat. MGM has RVol 1.77 and is above VWAP but faces negative analyst news. Given the 26.6% win rate and max drawdown status, capital preservation is prioritized over forced entries. Waiting for a clear, high-conviction momentum trigger."
+  "ranked_ideas": [
+    {
+      "symbol": "SPOT",
+      "direction": "long",
+      "conviction": 5,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.02,
+      "setup": "opening range breakout",
+      "reason": "Strong breakout above OR with high volume (rvol 2.43) and positive day momentum. Clear technical setup above VWAP."
+    },
+    {
+      "symbol": "CMCSA",
+      "direction": "long",
+      "conviction": 4,
+      "stop_loss_pct": 0.05,
+      "take_profit_pct": 0.02,
+      "setup": "opening range breakout",
+      "reason": "Breakout above OR (22.6-22.93) with solid volume (rvol 1.57) and positive day move. Meets volume filter and shows strength above VWAP."
+    }
+  ],
+  "experiment": "Volume-filtered momentum entry test - applying rvol > 1.2 and 15-min volume > 1.5x average filter to SPOT and CMCSA",
+  "watchlist_changes": {
+    "add": [
+      {
+        "symbol": "SPOT",
+        "reason": "Strong breakout above OR (570.41-582.86) with rvol 2.43 and positive day momentum (+5.4%). Clear technical entry above VWAP."
+      },
+      {
+        "symbol": "CMCSA",
+        "reason": "Breakout above OR (22.6-22.93) with rvol 1.57 and positive day move (+3.4%). Solid volume confirmation and above VWAP strength."
+      }
+    ],
+    "remove": []
+  }
 }
