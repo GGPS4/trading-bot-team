@@ -1962,5 +1962,79 @@
       "BUY PANW blocked: conviction None is below the minimum 3 (risk-off market)",
       "BUY NOW blocked: conviction None is below the minimum 3 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "10:11",
+    "trigger": "big news on ['GOOGL']",
+    "market_view": "The market is in a strong risk-off mode with the QQQ down 2.7% and the VIX up 6.5%. Most of our watchlist is trading below VWAP, limiting long opportunities. We will focus on high-conviction names like NVDA and consider shorting weak stocks such as AAPL.",
+    "experiment": "Add a VWAP-reclaim filter to the entry criteria",
+    "decisions": [
+      {
+        "symbol": "NVDA",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "NVDA is above VWAP with relative volume 2.14 and shows relative strength in a down market, offering a high-conviction long.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "AAPL",
+        "action": "SHORT",
+        "conviction": 5,
+        "reason": "AAPL is below VWAP and faces negative news about AI hyperscalers selling stock; in risk-off market, shorting weak names is favored.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "BUY NVDA blocked: already holding this stock",
+      "SHORT AAPL x9 (~$3106.35)",
+      "BUY CRWV x29 (~$1626.32) [deploy]",
+      "WATCHLIST removed EQIX",
+      "WATCHLIST removed ANET",
+      "WATCHLIST added RDDT",
+      "WATCHLIST added SNDK"
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "10:19",
+    "trigger": "big news on ['RDDT']",
+    "market_view": "The market is in a strong risk-off regime with QQQ down 2.9% and fear gauge VIXY up 7.9%. Most watched stocks are trading below VWAP with high relative volume, favoring short positions. We are closing longs that violate our VWAP rule and focusing on high-liquidity shorts.",
+    "experiment": "Require a short-term momentum confirmation (15-min RSI or volume spike) before opening a position",
+    "decisions": [
+      {
+        "symbol": "CRWV",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Long position fails to hold above VWAP and momentum is negative; closing to reduce exposure in risk-off market.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "NVDA",
+        "action": "SELL",
+        "conviction": 4,
+        "reason": "Price now below VWAP, violating rule for longs in down market; closing to prevent further losses.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "NVDA",
+        "action": "SHORT",
+        "conviction": 5,
+        "reason": "Negative news on AI hyperscalers and price below VWAP with high relative volume (2.17x) suggests further downside.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "SELL CRWV",
+      "SELL NVDA",
+      "SHORT NVDA failed: POST /v2/orders -> 403: {\"available\":\"0\",\"code\":40310000,\"existing_qty\":\"8\",\"held_for_orders\":\"8\",\"message\":\"insufficient qty available for order (requested: 16, available: 0)\",\"related_orders\":[\"ba72899b-a389-4dd1-aec8-085bb2f3ec47\"],\"symbol\":\"NVDA\"}",
+      "SHORT AVGO x10 (~$3286.5) [deploy]",
+      "SHORT AMD x6 (~$3076.89) [deploy]"
+    ]
   }
 ]

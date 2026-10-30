@@ -1437,5 +1437,43 @@
       "BUY JPM blocked: conviction None is below the minimum 6 (risk-off market)",
       "BUY MS blocked: conviction None is below the minimum 6 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "10:19",
+    "trigger": "price moves in ['COIN']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "HOOD",
+        "action": "SHORT",
+        "conviction": 8,
+        "reason": "Strong short setup: -8.6% day, breaking down below opening range and VWAP with massive relative volume (7.47x). Binance hack news is a clear negative catalyst. RSI 28.6 suggests weakness. Market is risk-off, favoring shorts on weak names.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "COIN",
+        "action": "SHORT",
+        "conviction": 8,
+        "reason": "Strong short setup: -13.2% day, well below VWAP (-2.2%) and opening range. High relative volume (4.87x). Negative analyst revisions (Mizuho cut to $145) and Binance hack fears. RSI 36.5. Clear breakdown in a risk-off market.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "MA",
+        "action": "SHORT",
+        "conviction": 6,
+        "reason": "Breakdown below opening range (637.38-644.24) with negative 15m momentum (-0.5%) and high relative volume (2.08x). RSI is overbought at 73.8, suggesting a pullback is due. Despite positive news, technical breakdown in a risk-off market favors a short entry on the breakdown.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.025
+      }
+    ],
+    "results": [
+      "SHORT HOOD x15 (~$1255.35)",
+      "SHORT COIN x9 (~$1256.13)",
+      "SHORT MA x2 (~$1270.05)"
+    ]
   }
 ]

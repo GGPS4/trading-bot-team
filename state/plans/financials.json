@@ -1,36 +1,42 @@
 {
   "date": "2026-10-30",
-  "time": "10:00",
-  "trigger": "must invest $6,666 more (75% rule)",
+  "time": "10:19",
+  "trigger": "price moves in ['COIN']",
   "decisions": [
     {
-      "symbol": "JPM",
-      "action": "BUY",
-      "quantity": 3,
-      "price": 337.5,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.02,
-      "setup": "VWAP bounce"
+      "symbol": "HOOD",
+      "action": "SHORT",
+      "reason": "Strong short setup: -8.6% day, breaking down below opening range and VWAP with massive relative volume (7.47x). Binance hack news is a clear negative catalyst. RSI 28.6 suggests weakness. Market is risk-off, favoring shorts on weak names.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "conviction": 8
     },
     {
-      "symbol": "MS",
-      "action": "BUY",
-      "quantity": 7,
-      "price": 184.56,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.02,
-      "setup": "VWAP bounce"
+      "symbol": "COIN",
+      "action": "SHORT",
+      "reason": "Strong short setup: -13.2% day, well below VWAP (-2.2%) and opening range. High relative volume (4.87x). Negative analyst revisions (Mizuho cut to $145) and Binance hack fears. RSI 36.5. Clear breakdown in a risk-off market.",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "conviction": 8
+    },
+    {
+      "symbol": "MA",
+      "action": "SHORT",
+      "reason": "Breakdown below opening range (637.38-644.24) with negative 15m momentum (-0.5%) and high relative volume (2.08x). RSI is overbought at 73.8, suggesting a pullback is due. Despite positive news, technical breakdown in a risk-off market favors a short entry on the breakdown.",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
+      "setup": "opening range breakout",
+      "conviction": 6
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "JPM",
-      "reason": "Relative volume 1.71x, price above VWAP, defensive financial stock, risk\u2011off environment favors short\u2011term momentum."
-    },
-    {
-      "symbol": "MS",
-      "reason": "Relative volume 2.77x, price above VWAP, defensive financial stock, moderate upside potential in a risk\u2011off market."
-    }
+    "JPM",
+    "MS",
+    "GS",
+    "SCHW",
+    "C"
   ],
   "watchlist_adds": [],
   "watchlist_removes": []
