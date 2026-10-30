@@ -1513,5 +1513,27 @@
       "WATCHLIST removed DEO",
       "WATCHLIST added HLT"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "10:54",
+    "trigger": "must invest $4,106 more (75% rule)",
+    "market_view": "The market is in a confirmed risk-off regime with SPY down 1.3%, QQQ down 2.6%, and VIXY spiking 6.6%. Consumer discretionary names are exhibiting widespread weakness, with many breaking below opening ranges and trading under VWAP. Shorting technically weak setups with volume confirmation is the dominant strategy, while long entries require exceptional conviction above VWAP with strong relative volume.",
+    "experiment": "Add a momentum filter for short trades: only short if m15/m60 momentum is negative and relative volume >1.5x; otherwise skip.",
+    "decisions": [
+      {
+        "symbol": "SBUX",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "Risk-off regime favors shorting weak stocks; SBUX has opening range breakdown below VWAP (vwap -1.0%) with high relative volume (rvol 2.36 > 1.5). BTIG Buy rating provides counter-catalyst risk, but technicals dominate. Tight stop at 1.5% and 1R first target align with team orders to lock profits at 1R.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.015
+      }
+    ],
+    "results": [
+      "SHORT SBUX blocked: conviction 3 is below the minimum 5",
+      "BUY AMZN blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY EBAY x5 (~$610.65) [deploy]"
+    ]
   }
 ]

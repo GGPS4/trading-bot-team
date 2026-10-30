@@ -1658,5 +1658,66 @@
       "SHORT RKLB x11 (~$614.35) [deploy]",
       "SHORT LUNR x61 (~$665.51) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "10:49",
+    "trigger": "price moves in ['VSAT']",
+    "market_view": "The market is in strong risk-off mode with SPY down 1.3%, QQQ down 2.6%, and VIXY up 7.3%, reflecting heightened fear. Aerospace stocks are mixed: some breaking down on analyst downgrades and negative news (GE, SATS), while high-volume names like BA and LPTH show technical strength with opening range breakouts. Short opportunities favor stocks below VWAP with breakdowns, but entries must meet volume thresholds given the cautious environment.",
+    "experiment": "Testing RVol > 2.0 filter for long entries (LPTH qualifies meeting highest conviction threshold) and dynamic trailing-stop with 3% first target then trailing stop activation per strategy guidelines",
+    "decisions": [
+      {
+        "symbol": "SPCX",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Closing long at small profit +0.33% after T-Mobile CEO rules out MVNO deal (news researcher sentiment -0.5) and SpaceX opposing FCC spectrum limits; stock at top of OR 135.93-139 with rvol 1.94; negative sentiment building.",
+        "stop_loss_pct": 0.05,
+        "take_profit_pct": 0.003
+      },
+      {
+        "symbol": "LUNR",
+        "action": "COVER",
+        "conviction": 3,
+        "reason": "Covering short at loss -0.92% after stock moved against short near top of OR 10.97-11.29; very weak rvol 0.81 and m60 -1.9% negative momentum; risk-off mood favors other setups.",
+        "stop_loss_pct": 0.009,
+        "take_profit_pct": 0.05
+      },
+      {
+        "symbol": "RKLB",
+        "action": "COVER",
+        "conviction": 3,
+        "reason": "Covering short at loss -1.25% after stock moved against short near top of OR 55.68-57.51; rvol 1.52 just above threshold but m15 +1.3% positive momentum working against short; reallocating capital.",
+        "stop_loss_pct": 0.0125,
+        "take_profit_pct": 0.05
+      },
+      {
+        "symbol": "LPTH",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "High rvol 2.51 > 2.0 meets highest conviction threshold; OR 7.75-8.06 with price $8.02 at top of range; vwap +0.5%, m15 +0.9%, m60 +0.3%, trend flat; daily history shows +5.2% typical move; 5d +18.9% 20d -23.3% but RSI 35.9 not overbought.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "GE",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "Clear breakdown below VWAP -0.8% and OR low 306.0; rvol 1.67 > 1.5; negative news BNP Paribas cuts price target to $250 from $310 (fiscal.ai sentiment -0.7 overnight); day -2.4% open -1.6% strong down move; risk-off mood favors shorts of large-cap breakdowns.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL SPCX",
+      "COVER LUNR",
+      "COVER RKLB blocked: not holding this stock",
+      "BUY LPTH blocked: conviction 4 is below the minimum 6 (risk-off market)",
+      "SHORT GE blocked: conviction 4 is below the minimum 5",
+      "BUY VSAT x4 (~$308.92) [deploy]",
+      "BUY TDG blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY BA blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY FLY blocked: conviction 1 is below the minimum 3 (risk-off market)",
+      "BUY SATS blocked: conviction 1 is below the minimum 3 (risk-off market)"
+    ]
   }
 ]
