@@ -1,9 +1,11 @@
 {
-  "updated": "2026-10-30T06:07-04:00",
+  "updated": "2026-10-30T07:37-04:00",
   "date": "2026-10-30",
   "mode": "paper",
   "health": {
-    "issues": []
+    "issues": [
+      "2 problem(s) in the last hour, latest: economic calendar (nextweek) unavailable: 404 Client Error: Not Found for url: https://nfs.faireconomy.media/ff_calendar_nextweek.json"
+    ]
   },
   "paused": false,
   "rules": {
@@ -1424,9 +1426,9 @@
     }
   },
   "market_watch": {
-    "updated": "2026-10-29T23:17-04:00",
-    "overall": "Current political chatter is focused on post\u2011election narratives with no clear policy announcements, keeping market sentiment largely unchanged.",
-    "posts_read": 309,
+    "updated": "2026-10-30T06:52-04:00",
+    "overall": "The current political chatter is broadly optimistic about the economy but lacks concrete policy announcements, so market impact is expected to be minimal.",
+    "posts_read": 315,
     "findings": [
       {
         "source": "Truth Social @realDonaldTrump",
@@ -1457,7 +1459,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-30T06:07-04:00",
+    "time": "2026-10-30T07:37-04:00",
     "earnings": [
       {
         "date": "2026-10-30",
@@ -2955,6 +2957,15 @@
     "defense": [
       {
         "symbol": "GD",
+        "sentiment": 0.8,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "General Dynamics posted Q3 earnings and sales that both beat estimates, indicating stronger performance than expected.",
+        "source": "benzinga",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "GD",
         "sentiment": 0.6,
         "importance": 4,
         "unconfirmed_rumor": false,
@@ -3015,18 +3026,18 @@
         "summary": "HII raised its full-year shipbuilding revenue guidance after reporting $3.5\u202fbillion Q3 revenue",
         "source": "fiscal.ai",
         "seen_at": "2026-10-29T07:44-04:00"
-      },
-      {
-        "symbol": "TXT",
-        "sentiment": 0.8,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Textron beat EPS estimates and lifted its full-year earnings outlook",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-29T07:44-04:00"
       }
     ],
     "space": [
+      {
+        "symbol": "SPCX",
+        "sentiment": -0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "SpaceX's Cursor platform suffered a security breach affecting about 5,000 users.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T06:52-04:00"
+      },
       {
         "symbol": "SPCX",
         "sentiment": -0.2,
@@ -3089,18 +3100,36 @@
         "summary": "Neptune Digital Assets Corp. reports increased SpaceX holdings and updates on its derivative strategy.",
         "source": "fiscal.ai, 2026-10-29T21:31:30Z",
         "seen_at": "2026-10-29T17:41-04:00"
-      },
-      {
-        "symbol": "BA",
-        "sentiment": 0.5,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "T-Mobile CEO denies partnership with SpaceX, no impact on BA stock.",
-        "source": "fiscal.ai, 2026-10-29T21:31:30Z",
-        "seen_at": "2026-10-29T17:41-04:00"
       }
     ],
     "entertainment": [
+      {
+        "symbol": "WMG",
+        "sentiment": 0.2,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Warner Music's ADA division partnered with songwriter Al Wordlaw via Rocstar, a modest collaboration.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "WMG",
+        "sentiment": 0.1,
+        "importance": 3,
+        "unconfirmed_rumor": true,
+        "summary": "Warner Music is negotiating with Spotify to allow its catalog on an upcoming AI\u2011remix service, a potential revenue source pending agreement.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": 0.2,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "Netflix will add South Korean director Lee Chang\u2011dong's short film \u201cHeartbeat\u201d to its catalog next week.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T06:52-04:00"
+      },
       {
         "symbol": "SONY",
         "sentiment": 0.3,
@@ -3140,79 +3169,142 @@
     ],
     "tech": [
       {
+        "symbol": "NOW",
+        "sentiment": 0.7,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "ServiceNow unveiled the Apriel Voice 27B Preview, an open\u2011source voice\u2011enabled AI model built on Google\u2019s Gemma 4 architecture, signaling a push into generative AI services.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Foxconn confirmed it has enough production capacity to meet demand for Apple\u2019s newly launched iPhone Duo, easing supply\u2011chain concerns.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": 0.2,
+        "importance": 3,
+        "unconfirmed_rumor": true,
+        "summary": "NVIDIA is reportedly in talks to provide credit guarantees for an Nscale data\u2011center project aimed at Anthropic, a potential new revenue stream if finalized.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": 0.0,
+        "importance": 1,
+        "unconfirmed_rumor": false,
+        "summary": "The Trump administration is moving to block Chinese telecom firms from accessing U.S. phone numbers, a regulatory action that may have limited direct impact on Google\u2019s core business.",
+        "source": "benzinga",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
         "symbol": "INTC",
+        "sentiment": -0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Cantor Fitzgerald kept a neutral rating on Intel but cut its price target to $90, reflecting concerns over competitive pressures and execution risk.",
+        "source": "benzinga",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "NVDA",
         "sentiment": -0.8,
         "importance": 4,
         "unconfirmed_rumor": false,
-        "summary": "Intel reports a deeper\u2011than\u2011expected PC slowdown and warns AI\u2011driven CPU growth may not offset costly foundry investments.",
+        "summary": "Nvidia shares down about 2.8% in pre\u2011market as chip sell\u2011off spreads from Intel\u2019s earnings shock.",
         "source": "benzinga",
-        "seen_at": "2026-10-30T06:07-04:00"
+        "seen_at": "2026-10-30T06:52-04:00"
       },
       {
-        "symbol": "INTC",
-        "sentiment": -0.7,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Intel shares fell sharply after Q3 earnings, with the stock sliding as market reacts to weaker guidance.",
-        "source": "benzinga",
-        "seen_at": "2026-10-30T06:07-04:00"
-      },
-      {
-        "symbol": "INTC",
+        "symbol": "AVGO",
         "sentiment": -0.6,
         "importance": 4,
         "unconfirmed_rumor": false,
-        "summary": "Intel\u2019s stock headed for its worst single\u2011day drop in over two years, though CEO predicts AI could expand the server CPU market to $200\u202fbillion.",
+        "summary": "Broadcom dragged lower alongside Intel and other chip makers in the same sell\u2011off.",
         "source": "benzinga",
-        "seen_at": "2026-10-30T06:07-04:00"
+        "seen_at": "2026-10-30T06:52-04:00"
       },
       {
-        "symbol": "INTC",
-        "sentiment": -0.7,
+        "symbol": "AMD",
+        "sentiment": -0.9,
         "importance": 4,
         "unconfirmed_rumor": false,
-        "summary": "Bank of America downgraded Intel to Neutral and cut its price target to $100, reflecting concerns over execution risk.",
+        "summary": "AMD shares fell roughly 8% pre\u2011market as Intel\u2019s weak outlook pulled the whole chip sector down.",
         "source": "benzinga",
-        "seen_at": "2026-10-30T06:07-04:00"
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": -0.8,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Alphabet shares fell sharply, pulling down the Nasdaq despite overall market strength.",
-        "source": "benzinga",
-        "seen_at": "2026-10-30T04:37-04:00"
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": -0.7,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Alphabet fell 10% prompting a tech selloff, hurting GOOGL.",
-        "source": "benzinga",
-        "seen_at": "2026-10-30T03:02-04:00"
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": -0.3,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Broad tech selloff pressures MSFT.",
-        "source": "benzinga",
-        "seen_at": "2026-10-30T03:02-04:00"
-      },
-      {
-        "symbol": "NOW",
-        "sentiment": -0.3,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Broad tech selloff pressures NOW.",
-        "source": "benzinga",
-        "seen_at": "2026-10-30T03:02-04:00"
+        "seen_at": "2026-10-30T06:52-04:00"
       }
     ],
     "consumer": [
+      {
+        "symbol": "EBAY",
+        "sentiment": 0.4,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "eBay rose after being highlighted on CNBC's Final Trades segment.",
+        "source": "benzinga",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "SBUX",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "BTIG reiterates Buy on Starbucks with a $115 price target.",
+        "source": "benzinga",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "CMG",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "BTIG maintains Buy rating on Chipotle Mexican Grill with a $45 price target.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "SBUX",
+        "sentiment": 0.4,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Starbucks shares up about 1.4% after mixed fiscal Q4 results.",
+        "source": "benzinga",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": 0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Mizuho raises Amazon price target to $335 and maintains Outperform.",
+        "source": "benzinga",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": -0.3,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Cantor Fitzgerald lowers Amazon price target to $280 while keeping Overweight.",
+        "source": "benzinga",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "SBUX",
+        "sentiment": 0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Analysts at Bernstein and Citigroup adjusted Starbucks' price targets after its earnings report, but the direction of the changes was not disclosed.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T06:52-04:00"
+      },
       {
         "symbol": "AMZN",
         "sentiment": -0.2,
@@ -3221,146 +3313,146 @@
         "summary": "CEO Andy Jassy says the market is undervaluing Amazon's stores business despite an 8% share decline over six months.",
         "source": "benzinga",
         "seen_at": "2026-10-30T06:07-04:00"
-      },
-      {
-        "symbol": "SBUX",
-        "sentiment": 0.7,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "TD Cowen reiterates a Buy rating on Starbucks and keeps its $120 price target.",
-        "source": "benzinga",
-        "seen_at": "2026-10-30T06:07-04:00"
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": -0.9,
-        "importance": 5,
-        "unconfirmed_rumor": false,
-        "summary": "Amazon shares fell 7.3% in pre\u2011market trading after missing Q3 revenue and earnings expectations.",
-        "source": "benzinga",
-        "seen_at": "2026-10-30T05:22-04:00"
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": -0.9,
-        "importance": 5,
-        "unconfirmed_rumor": false,
-        "summary": "Amazon missed earnings estimates, causing its shares to tumble about 7.3%",
-        "source": "benzinga",
-        "seen_at": "2026-10-30T03:52-04:00"
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": 0.4,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Amazon will start selling its Trainium AI chips to external customers by late 2027, adding a new revenue stream while managing AWS capacity.",
-        "source": "benzinga",
-        "seen_at": "2026-10-30T03:02-04:00"
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": -0.2,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Analysts see Amazon as an AI powerhouse despite a sharp earnings\u2011related sell\u2011off, suggesting cautious optimism.",
-        "source": "benzinga",
-        "seen_at": "2026-10-30T00:02-04:00"
-      },
-      {
-        "symbol": "RCL",
-        "sentiment": 0.4,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Royal Caribbean began its Asia deployment of Navigator of the Seas, signaling growth in the region.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-29T22:32-04:00"
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": 0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Amazon announced over 100 new shopping-related actions for its Alexa AI assistant to enhance customer convenience.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-29T19:14-04:00"
       }
     ],
     "financials": [
       {
         "symbol": "COIN",
+        "sentiment": 0.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "JPMorgan and Mizuho revised their price targets for Coinbase.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "COIN",
+        "sentiment": 0.6,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Cantor Fitzgerald maintains overweight rating on Coinbase with a $212 price target.",
+        "source": "benzinga",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "JPM",
+        "sentiment": 0.0,
+        "importance": 2,
+        "unconfirmed_rumor": false,
+        "summary": "JPMorgan reported its holding in Pennon Group fell below the notification threshold.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "COIN",
         "sentiment": 0.7,
         "importance": 3,
         "unconfirmed_rumor": false,
-        "summary": "BTIG reiterates a Buy rating on Coinbase and keeps its $240 price target, suggesting confidence in near\u2011term performance",
+        "summary": "HC Wainwright reiterated a Buy on Coinbase and kept its $240 price target.",
         "source": "benzinga",
-        "seen_at": "2026-10-30T06:07-04:00"
+        "seen_at": "2026-10-30T06:52-04:00"
       },
       {
         "symbol": "COIN",
-        "sentiment": -0.6,
-        "importance": 4,
+        "sentiment": -0.2,
+        "importance": 2,
         "unconfirmed_rumor": false,
-        "summary": "A major hack at Binance raises security concerns for crypto exchanges, weighing on Coinbase.",
+        "summary": "CEO Brian Armstrong warned that quantum computing poses a greater long\u2011term threat to crypto security than AI.",
         "source": "benzinga",
-        "seen_at": "2026-10-30T00:02-04:00"
+        "seen_at": "2026-10-30T06:52-04:00"
       },
       {
-        "symbol": "ICE",
-        "sentiment": 0.3,
-        "importance": 3,
+        "symbol": "MA",
+        "sentiment": 0.0,
+        "importance": 2,
         "unconfirmed_rumor": false,
-        "summary": "ICE now expects to close its MarketAxess acquisition in Q1 2027 after regulatory clearance, extending the timeline.",
+        "summary": "Analysts from TD Cowen, Mizuho and KeyBanc updated their price targets for Mastercard on Oct\u202f30.",
         "source": "fiscal.ai",
-        "seen_at": "2026-10-29T22:32-04:00"
+        "seen_at": "2026-10-30T06:52-04:00"
       },
       {
-        "symbol": "V",
-        "sentiment": 0.2,
-        "importance": 1,
-        "unconfirmed_rumor": false,
-        "summary": "Macquarie raised its price target on Visa to $465 and maintained an Outperform rating, a routine analyst action with minimal immediate impact.",
-        "source": "benzinga",
-        "seen_at": "2026-10-29T18:56-04:00"
+        "symbol": "GS",
+        "sentiment": 0.5,
+        "importance": 4,
+        "unconfirmed_rumor": true,
+        "summary": "Goldman Sachs is reportedly exploring a purchase of a controlling stake in South Korea\u2019s Tmap Mobility.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T06:52-04:00"
       },
       {
-        "symbol": "COIN",
-        "sentiment": 0.0,
+        "symbol": "SCHW",
+        "sentiment": -0.4,
         "importance": 3,
         "unconfirmed_rumor": false,
-        "summary": "Coinbase Global reported Q3 earnings with GAAP EPS $2.51, including a $715.0M gain on crypto assets held for investment, and operating income of $61.7M vs $480.5M Y/Y. Source: Benzinga",
-        "source": "Benzinga",
-        "seen_at": "2026-10-29T17:42-04:00"
-      },
-      {
-        "symbol": "ICE",
-        "sentiment": 0.0,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "Intercontinental Exchange Inc. reported Q3 earnings with revenue of $1.79B vs $1.57B Y/Y, and net income of $167M vs $118M Y/Y. Source: FiscalNote",
-        "source": "FiscalNote",
-        "seen_at": "2026-10-29T17:42-04:00"
-      },
-      {
-        "symbol": "COIN",
-        "sentiment": 0.2,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Coinbase reported mixed Q3 earnings with a notable highlight of $200 million in annualized revenue from prediction markets.",
-        "source": "benzinga",
-        "seen_at": "2026-10-29T16:56-04:00"
-      },
-      {
-        "symbol": "COIN",
-        "sentiment": 0.2,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Coinbase reported Q3 adjusted EPS of $0.27, significantly beating the $0.06 estimate, but revenue of $1.216B slightly missed the $1.230B consensus.",
-        "source": "benzinga",
-        "seen_at": "2026-10-29T16:27-04:00"
+        "summary": "An insider sold roughly $18.1\u202fmillion of Charles Schwab shares, per an SEC filing.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T06:52-04:00"
       }
     ],
     "healthcare": [
+      {
+        "symbol": "ALNY",
+        "sentiment": -0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Alnylam's price target was cut by RBC and Chardan, indicating a negative outlook.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "MRK",
+        "sentiment": 0.5,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Goldman Sachs raised Merck's price target, suggesting a positive view.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T07:37-04:00"
+      },
+      {
+        "symbol": "LLY",
+        "sentiment": 0.8,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Truist raises Eli Lilly price target to $1,612, signaling confidence in its growth prospects.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T06:52-04:00"
+      },
+      {
+        "symbol": "LLY",
+        "sentiment": 0.8,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "JPMorgan lifts Eli Lilly price target to $1,650, citing strong revenue and volume growth in its metabolic and weight\u2011loss portfolio.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T06:52-04:00"
+      },
+      {
+        "symbol": "LLY",
+        "sentiment": 0.8,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Eli Lilly shares hit a record close after CEO David Ricks highlighted robust demand from middle\u2011income consumers.",
+        "source": "benzinga",
+        "seen_at": "2026-10-30T06:52-04:00"
+      },
+      {
+        "symbol": "VRTX",
+        "sentiment": 0.7,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "UK regulator expands approval of Vertex\u2019s gene\u2011editing therapy Casgevy to children aged five and older.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T06:52-04:00"
+      },
+      {
+        "symbol": "REGN",
+        "sentiment": 0.8,
+        "importance": 4,
+        "unconfirmed_rumor": false,
+        "summary": "Regeneron beats Q3 earnings and sales estimates, reporting adjusted EPS of $20.07 and $5.116B in sales.",
+        "source": "benzinga",
+        "seen_at": "2026-10-30T06:52-04:00"
+      },
       {
         "symbol": "ALNY",
         "sentiment": -0.2,
@@ -3369,69 +3461,6 @@
         "summary": "Raymond James downgraded ALNY to Outperform and cut its price target to $315, suggesting modest downside pressure.",
         "source": "benzinga",
         "seen_at": "2026-10-30T06:07-04:00"
-      },
-      {
-        "symbol": "REGN",
-        "sentiment": 0.8,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Analysts raise REGN EPS/revenue forecasts and price targets ahead of Q3 earnings, noting an extended BARDA Inmazeb deal.",
-        "source": "benzinga",
-        "seen_at": "2026-10-30T03:02-04:00"
-      },
-      {
-        "symbol": "DHR",
-        "sentiment": -0.6,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Danaher executives sold over $8.7\u202fmillion in company shares per SEC filings",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-29T22:32-04:00"
-      },
-      {
-        "symbol": "JNJ",
-        "sentiment": 0.3,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Johnson & Johnson is expanding research collaboration with Telo Genomics to validate TELO-MRD technology.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-29T08:15-04:00"
-      },
-      {
-        "symbol": "JNJ",
-        "sentiment": 0.3,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Johnson & Johnson is a Platinum Sponsor of the LUNGevity Foundation's 'Every Breath Forward' lung cancer initiative.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-29T08:15-04:00"
-      },
-      {
-        "symbol": "MRK",
-        "sentiment": -0.6,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "Merck forecasts higher operating expenses and moderating Keytruda growth, with benefits expected to unwind, suggesting pressure on earnings",
-        "source": "benzinga",
-        "seen_at": "2026-10-29T07:59-04:00"
-      },
-      {
-        "symbol": "LLY",
-        "sentiment": 0.8,
-        "importance": 5,
-        "unconfirmed_rumor": false,
-        "summary": "Eli Lilly posted Q3 2026 revenue of $24.4B, beating expectations and raised full-year guidance, driven by diabetes and obesity drugs",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-29T07:45-04:00"
-      },
-      {
-        "symbol": "BMY",
-        "sentiment": 0,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Bristol Myers Squibb released its Q3 2026 results, details not disclosed",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-29T07:45-04:00"
       }
     ]
   },
@@ -8446,6 +8475,15 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "GD",
+            "sentiment": 0.8,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "General Dynamics posted Q3 earnings and sales that both beat estimates, indicating stronger performance than expected.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
           {
             "symbol": "GD",
             "sentiment": 0.6,
@@ -13503,6 +13541,15 @@
         "overnight": [
           {
             "symbol": "SPCX",
+            "sentiment": -0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "SpaceX's Cursor platform suffered a security breach affecting about 5,000 users.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "SPCX",
             "sentiment": -0.2,
             "importance": 4,
             "unconfirmed_rumor": false,
@@ -17785,6 +17832,33 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "WMG",
+            "sentiment": 0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Warner Music's ADA division partnered with songwriter Al Wordlaw via Rocstar, a modest collaboration.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "WMG",
+            "sentiment": 0.1,
+            "importance": 3,
+            "unconfirmed_rumor": true,
+            "summary": "Warner Music is negotiating with Spotify to allow its catalog on an upcoming AI\u2011remix service, a potential revenue source pending agreement.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "NFLX",
+            "sentiment": 0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Netflix will add South Korean director Lee Chang\u2011dong's short film \u201cHeartbeat\u201d to its catalog next week.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
           {
             "symbol": "SONY",
             "sentiment": 0.3,
@@ -23415,6 +23489,96 @@
         },
         "overnight": [
           {
+            "symbol": "NOW",
+            "sentiment": 0.7,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "ServiceNow unveiled the Apriel Voice 27B Preview, an open\u2011source voice\u2011enabled AI model built on Google\u2019s Gemma 4 architecture, signaling a push into generative AI services.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "AAPL",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Foxconn confirmed it has enough production capacity to meet demand for Apple\u2019s newly launched iPhone Duo, easing supply\u2011chain concerns.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "NVDA",
+            "sentiment": 0.2,
+            "importance": 3,
+            "unconfirmed_rumor": true,
+            "summary": "NVIDIA is reportedly in talks to provide credit guarantees for an Nscale data\u2011center project aimed at Anthropic, a potential new revenue stream if finalized.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "GOOGL",
+            "sentiment": 0.0,
+            "importance": 1,
+            "unconfirmed_rumor": false,
+            "summary": "The Trump administration is moving to block Chinese telecom firms from accessing U.S. phone numbers, a regulatory action that may have limited direct impact on Google\u2019s core business.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "INTC",
+            "sentiment": -0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Cantor Fitzgerald kept a neutral rating on Intel but cut its price target to $90, reflecting concerns over competitive pressures and execution risk.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "NVDA",
+            "sentiment": -0.8,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Nvidia shares down about 2.8% in pre\u2011market as chip sell\u2011off spreads from Intel\u2019s earnings shock.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "AVGO",
+            "sentiment": -0.6,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Broadcom dragged lower alongside Intel and other chip makers in the same sell\u2011off.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "AMD",
+            "sentiment": -0.9,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "AMD shares fell roughly 8% pre\u2011market as Intel\u2019s weak outlook pulled the whole chip sector down.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "INTC",
+            "sentiment": -1.0,
+            "importance": 5,
+            "unconfirmed_rumor": false,
+            "summary": "Intel stock plunged ~25\u201126% after weak Q4 guidance, analyst downgrades and a sharp price\u2011target cut.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "GOOGL",
+            "sentiment": -0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Alphabet\u2019s shares tumbled after earnings, highlighted in Dan Loeb\u2019s portfolio report.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
             "symbol": "INTC",
             "sentiment": -0.8,
             "importance": 4,
@@ -23593,96 +23757,6 @@
             "summary": "Intel's CFO warned that 2026 PC TAM is expected to decline ~12% with H2 units down >20%, and that the company does not expect positive cash flow this year.",
             "source": "benzinga",
             "seen_at": "2026-10-29T17:56-04:00"
-          },
-          {
-            "symbol": "INTC",
-            "sentiment": -0.2,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Intel confirmed 2026 gross capex remains on track for $20B with 2027 spending expected to rise strongly, while Q4 non-controlling interest is projected at ~$250M.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T17:56-04:00"
-          },
-          {
-            "symbol": "GOOGL",
-            "sentiment": -0.3,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Bernstein maintained a Market Perform rating on Alphabet but lowered its price target to $325.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T17:56-04:00"
-          },
-          {
-            "symbol": "AAPL",
-            "sentiment": 0.0,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Apple CEO discusses Apple's growth in services, highlights AI and automation",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T17:41-04:00"
-          },
-          {
-            "symbol": "MSFT",
-            "sentiment": 0.0,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Microsoft reports strong Q3 results, highlights AI and cloud computing",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T17:41-04:00"
-          },
-          {
-            "symbol": "NVDA",
-            "sentiment": 0.0,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "NVIDIA shares up 20% after strong Q3 results and AI growth outlook",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T17:41-04:00"
-          },
-          {
-            "symbol": "AMD",
-            "sentiment": 0.0,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "AMD shares up 10% after strong Q3 results and AI growth outlook",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T17:41-04:00"
-          },
-          {
-            "symbol": "AVGO",
-            "sentiment": 0,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "NVIDIA refutes rumors about Intel CEO Jensen Huang being a target of a Chinese intelligence operation. The company maintains a positive outlook for its business.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T16:41-04:00"
-          },
-          {
-            "symbol": "GOOG",
-            "sentiment": 0,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Google's parent company Alphabet shares remain unchanged after rumors about CEO Sundar Pichai being investigated by Chinese authorities.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T16:41-04:00"
-          },
-          {
-            "symbol": "MSFT",
-            "sentiment": 1.0,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Microsoft reports Q3 results: EPS of $2.30, beating estimates of $2.19; Revenue: $40.31B, beating estimates of $39.43B.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T16:26-04:00"
-          },
-          {
-            "symbol": "INTC",
-            "sentiment": 1.0,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Intel reports Q3 results: EPS of $1.12, beating estimates of $1.05; Revenue: $24.44B, beating estimates of $23.95B.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T16:26-04:00"
           }
         ],
         "technicals": {
@@ -28120,6 +28194,69 @@
         },
         "overnight": [
           {
+            "symbol": "EBAY",
+            "sentiment": 0.4,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "eBay rose after being highlighted on CNBC's Final Trades segment.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "SBUX",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "BTIG reiterates Buy on Starbucks with a $115 price target.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "CMG",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "BTIG maintains Buy rating on Chipotle Mexican Grill with a $45 price target.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "SBUX",
+            "sentiment": 0.4,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Starbucks shares up about 1.4% after mixed fiscal Q4 results.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "AMZN",
+            "sentiment": 0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Mizuho raises Amazon price target to $335 and maintains Outperform.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "AMZN",
+            "sentiment": -0.3,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Cantor Fitzgerald lowers Amazon price target to $280 while keeping Overweight.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "SBUX",
+            "sentiment": 0,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Analysts at Bernstein and Citigroup adjusted Starbucks' price targets after its earnings report, but the direction of the changes was not disclosed.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
             "symbol": "AMZN",
             "sentiment": -0.2,
             "importance": 3,
@@ -28325,69 +28462,6 @@
             "summary": "LKQ reported its Q3 2026 earnings, but no performance details were provided.",
             "source": "fiscal.ai",
             "seen_at": "2026-10-29T07:44-04:00"
-          },
-          {
-            "symbol": "CMG",
-            "sentiment": 0.0,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Analysts adjusted Chipotle's price targets after its Q3 2026 earnings, though the direction of the adjustments was not disclosed.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-29T07:44-04:00"
-          },
-          {
-            "symbol": "LKQ",
-            "sentiment": -0.4,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "LKQ's board halted its strategic review, pausing the specialty segment sales process to let new leadership reassess the business.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T07:29-04:00"
-          },
-          {
-            "symbol": "LKQ",
-            "sentiment": -0.6,
-            "importance": 4,
-            "unconfirmed_rumor": false,
-            "summary": "LKQ reported Q3 adjusted EPS of $0.50 and sales of $3.319B, both missing analyst estimates.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T07:29-04:00"
-          },
-          {
-            "symbol": "TSLA",
-            "sentiment": 0.6,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "South Korean court rejected lawsuit seeking refunds for Tesla's Full Self-Driving software, a win for the company.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-29T06:44-04:00"
-          },
-          {
-            "symbol": "CMG",
-            "sentiment": 0.4,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Chipotle reported Q3 revenue above expectations, lifting the stock despite mixed earnings.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T06:44-04:00"
-          },
-          {
-            "symbol": "TSLA",
-            "sentiment": -0.2,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Former Tesla Autopilot chief criticized Musk's camera\u2011only strategy, raising concerns about the company's self\u2011driving roadmap.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T06:44-04:00"
-          },
-          {
-            "symbol": "AMZN",
-            "sentiment": -0.2,
-            "importance": 3,
-            "unconfirmed_rumor": true,
-            "summary": "Traders on Polymarket are betting Amazon may spend over $220\u202fbn on AI by 2026, highlighting speculation about high AI costs.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T05:14-04:00"
           }
         ],
         "technicals": {
@@ -32720,6 +32794,105 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "COIN",
+            "sentiment": 0.0,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "JPMorgan and Mizuho revised their price targets for Coinbase.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "COIN",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Cantor Fitzgerald maintains overweight rating on Coinbase with a $212 price target.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "JPM",
+            "sentiment": 0.0,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "JPMorgan reported its holding in Pennon Group fell below the notification threshold.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "COIN",
+            "sentiment": 0.7,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "HC Wainwright reiterated a Buy on Coinbase and kept its $240 price target.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "COIN",
+            "sentiment": -0.2,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "CEO Brian Armstrong warned that quantum computing poses a greater long\u2011term threat to crypto security than AI.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "MA",
+            "sentiment": 0.0,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Analysts from TD Cowen, Mizuho and KeyBanc updated their price targets for Mastercard on Oct\u202f30.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "GS",
+            "sentiment": 0.5,
+            "importance": 4,
+            "unconfirmed_rumor": true,
+            "summary": "Goldman Sachs is reportedly exploring a purchase of a controlling stake in South Korea\u2019s Tmap Mobility.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "SCHW",
+            "sentiment": -0.4,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "An insider sold roughly $18.1\u202fmillion of Charles Schwab shares, per an SEC filing.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "C",
+            "sentiment": 0.3,
+            "importance": 2,
+            "unconfirmed_rumor": false,
+            "summary": "Citigroup Global Markets is acting as a joint book\u2011running manager for the OPay Limited IPO.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "V",
+            "sentiment": 0.6,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Visa reported $25\u202fbillion in stablecoin settlement volume for FY2026, a tenfold YoY increase, and joined the Canton Network as a Super Validator.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "V",
+            "sentiment": 0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Visa and Tencent expanded their partnership to enhance cross\u2011border payments, remittances and AI\u2011driven shopping solutions.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
           {
             "symbol": "COIN",
             "sentiment": 0.7,
@@ -37836,6 +38009,69 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "ALNY",
+            "sentiment": -0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Alnylam's price target was cut by RBC and Chardan, indicating a negative outlook.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "MRK",
+            "sentiment": 0.5,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Goldman Sachs raised Merck's price target, suggesting a positive view.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T07:37-04:00"
+          },
+          {
+            "symbol": "LLY",
+            "sentiment": 0.8,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Truist raises Eli Lilly price target to $1,612, signaling confidence in its growth prospects.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "LLY",
+            "sentiment": 0.8,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "JPMorgan lifts Eli Lilly price target to $1,650, citing strong revenue and volume growth in its metabolic and weight\u2011loss portfolio.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "LLY",
+            "sentiment": 0.8,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Eli Lilly shares hit a record close after CEO David Ricks highlighted robust demand from middle\u2011income consumers.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "VRTX",
+            "sentiment": 0.7,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "UK regulator expands approval of Vertex\u2019s gene\u2011editing therapy Casgevy to children aged five and older.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
+          {
+            "symbol": "REGN",
+            "sentiment": 0.8,
+            "importance": 4,
+            "unconfirmed_rumor": false,
+            "summary": "Regeneron beats Q3 earnings and sales estimates, reporting adjusted EPS of $20.07 and $5.116B in sales.",
+            "source": "benzinga",
+            "seen_at": "2026-10-30T06:52-04:00"
+          },
           {
             "symbol": "ALNY",
             "sentiment": -0.2,
