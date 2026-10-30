@@ -1,87 +1,55 @@
 {
   "date": "2026-10-30",
-  "time": "11:39",
-  "trigger": "must invest $2,400 more (75% rule)",
-  "market_view": "The market is in severe risk-off mode with SPY down 1.4%, QQQ down 2.9%, and VIXY spiking 8.1%. Only 31% of watched stocks are up, and space/aerospace names are mostly weak with breakdowns below VWAP and opening ranges. LPTH stands out with a high-rvol (2.89) opening range breakout above VWAP, while HWM is benefiting from risk-off shorting pressure. We're adding to the LPTH long (our only RVol > 2.0 long setup) and increasing the HWM short, while initiating a small VSAT position that meets the president's RVol > 1.5x and price above VWAP criteria.",
-  "decisions": [
-    {
-      "symbol": "LPTH",
-      "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.035,
-      "setup": "opening range breakout",
-      "reason": "rvol 2.89 > 2.0 meets executive high-conviction criteria; price 7.99 above VWAP (+0.1%) and near upper OR end (7.75-8.06); open +3.1% resilience in risk-off; OR breakout with sustained volume and rvol 2.89 highest in universe"
-    },
-    {
-      "symbol": "HWM",
-      "action": "SHORT",
-      "conviction": 3,
-      "stop_loss_pct": 0.025,
-      "take_profit_pct": 0.035,
-      "setup": "other",
-      "reason": "risk-off environment favors shorts; breakdown below OR (201.83-205.69) and VWAP (-1.0%); overnight BNP Paribas cutting price target to $250 from $310 supports thesis; already profitable at +0.525%, adding to winning short in risk-off favoring environment"
-    },
-    {
-      "symbol": "VSAT",
-      "action": "BUY",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "rvol 1.58 > 1.5 meets president's criteria; OR breakout above 75.33; price 76.8 above VWAP (+1.4%); open +2.4% momentum with day only -1.5% despite market decline; relative strength name showing resilience in broad sell-off"
-    }
-  ],
+  "time": "11:49",
+  "trigger": "price moves in ['LPTH']",
+  "decisions": [],
   "ranked_ideas": [
     {
-      "symbol": "TDG",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.035,
-      "setup": "other",
-      "reason": "rvol 2.01 > 2.0; breakdown below OR (1164.18-1180.6) and VWAP (-0.4%); high rvol makes it the best short idea despite $1161 price; risk-off favors breakdown plays; code will size position appropriately given high price"
+      "symbol": "VSAT",
+      "side": "long",
+      "conviction": 6,
+      "setup": "opening range breakout",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Strongest relative strength in a risk-off tape. Trading above VWAP (+1.5%) with a clear opening range breakout. 5-day momentum is +32%. Fits the 'high-conviction' criteria (RVol 1.62, above VWAP) despite the President's strict guidelines, as it is the only name showing genuine intraday strength."
     },
     {
-      "symbol": "GE",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.04,
-      "setup": "other",
-      "reason": "breakdown below OR (306.0-312.6) and VWAP (-0.8%); rvol 1.28 moderate; defense-friendly name in risk-off; analyst scrutiny and multiple downgrades cap upward momentum"
+      "symbol": "TDG",
+      "side": "short",
+      "conviction": 5,
+      "setup": "momentum",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "High relative volume (2.33) and breaking down below the opening range. In a risk-off environment (SPY -1.6%, VIXY +8.8%), shorting high-momentum breakdowns is favored. RSI is 68, suggesting potential for a pullback from recent highs."
+    },
+    {
+      "symbol": "SPCX",
+      "side": "short",
+      "conviction": 5,
+      "setup": "news catalyst",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "reason": "Gapped down -4.3% on negative news (T-Mobile deal ruled out, Amazon competition). Trading below VWAP with flat-to-negative momentum. Fits the short-weak-stocks strategy in a risk-off regime."
+    },
+    {
+      "symbol": "RKLB",
+      "side": "short",
+      "conviction": 4,
+      "setup": "opening range breakdown",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "reason": "Clear opening range breakdown. Down -6.3% on the day. Below VWAP. Fits the short setup, though RVol (1.21) is slightly below the President's preferred 1.5x threshold, so conviction is lower."
     },
     {
       "symbol": "LUNR",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.04,
-      "setup": "other",
-      "reason": "BREAKDOWN below OR (10.97-11.29) and VWAP (-1.4%); rvol 0.75 low but strong downtrend -7.2% day; shorting weak stocks favored in risk-off mood; small-cap liquidity risk"
-    },
-    {
-      "symbol": "FLY",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.04,
-      "setup": "other",
-      "reason": "BREAKDOWN below OR (18.74-19.55) and VWAP (-2.1%); biggest intraday drop -7.2%; rvol 0.76; risk-off environment and -4.2% open provide shorting opportunity; use ATR stops per lessons learned"
-    },
-    {
-      "symbol": "SATS",
-      "direction": "short",
-      "conviction": 1,
-      "stop_loss_pct": 0.03,
-      "take_profit_pct": 0.04,
-      "setup": "other",
-      "reason": "BREAKDOWN below OR (93.5-93.59) and VWAP (-0.1%); OR extremely tight 0.09 range suggests imminent move; rvol 0.42 low but breakdown in risk-off offers speculative short; limited conviction due to low volume"
+      "side": "short",
+      "conviction": 4,
+      "setup": "opening range breakdown",
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "reason": "Down -8.1% on the day with a clear opening range breakdown. Below VWAP. High volatility allows for quick moves. Fits the short-weak-stocks strategy."
     }
   ],
-  "experiment": "Testing dynamic trailing-stop that only activates after 0.5% move in favor, reducing premature stop-outs on volatile names. Applying to LPTH add entry per strategy ideas list. Also testing whether adding to existing positions (rather than new entries) satisfies the min_conviction_to_buy: 5 rule while meeting the RVol > 2.0 executive requirement.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

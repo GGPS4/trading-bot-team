@@ -1,50 +1,41 @@
 {
   "date": "2026-10-30",
-  "time": "10:55",
-  "trigger": "big news on ['MA']",
-  "decisions": [],
-  "ranked_ideas": [
+  "time": "11:42",
+  "trigger": "scheduled look",
+  "market_view": "Market is in strong risk-off mode with SPY down -1.5%, QQQ down -3.1%, VIXY up 8.5%. Financials mostly down with only ICE showing notable strength (+3.9%). Binance $6.3B hack is devastating crypto-related financials HOOD (-8.5%) and COIN (-13.1%) with gap-down openings. No stocks meet president's criteria of Relative Volume > 1.5x AND price above VWAP. Defensive financials JPM and MS held slightly underwater. Environment favors shorting weak stocks with bad news on breakdowns below VWAP/opening range.",
+  "decisions": [
     {
       "symbol": "ICE",
-      "setup": "opening range breakout",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "conviction": 6,
-      "reason": "Opening range breakout above 168.24 with positive news catalyst (Barclays/KBW upgrades) and price above VWAP. Strongest long setup on the list despite risk-off market."
-    },
-    {
-      "symbol": "MA",
-      "setup": "news catalyst",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "conviction": 5,
-      "reason": "Multiple analyst upgrades (Barclays, Argus, Evercore) and positive sentiment. Trading above VWAP with high relative volume (2.13). Defensive financial fits executive order."
-    },
-    {
-      "symbol": "V",
-      "setup": "momentum",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.025,
-      "conviction": 4,
-      "reason": "Positive day change (+0.8%) and high relative volume (2.45). Trading above VWAP. Defensive financial fits executive order."
-    },
-    {
-      "symbol": "SOFI",
-      "setup": "other",
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "action": "SELL",
       "conviction": 3,
-      "reason": "Opening range breakdown below 16.93 with high relative volume (1.83) and negative momentum. Short setup favored in risk-off environment."
+      "stop_loss_pct": 0.005,
+      "take_profit_pct": 0.005,
+      "setup": "opening range breakout",
+      "reason": "Taking partial profits on OR breakout with weak rvol confirmation (1.06x) in risk-off mode; setup not confirming strongly enough to hold through decline; lock in +0.421% gain before potential reversal"
     },
     {
       "symbol": "HOOD",
-      "setup": "other",
+      "action": "SHORT",
+      "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "conviction": 3,
-      "reason": "Major drop (-8.1%) on Binance hack news. High relative volume (4.8). Short setup favored in risk-off environment, though RSI is oversold."
+      "setup": "other",
+      "reason": "Strong breakdown below OR and VWAP (-0.2%) on Binance $6.3B hack news; rvol 3.5 indicates high participation/capitulation; risk-off mode favors shorting weak stocks with bad news; price down -8.5% day, -6.7% pre-market gap"
+    },
+    {
+      "symbol": "COIN",
+      "action": "SHORT",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "other",
+      "reason": "Extreme weakness (-13.1% day, -6.7% gap down pre-market), breakdown OR, high rvol 3.74; Barclays underweight rating, price target lowered to $120; Binance hack raising concerns about crypto revenue; risk-off mode strongly favors shorting this weak name with bad news catalyst"
     }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "ranked_ideas": [],
+  "experiment": "",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }
