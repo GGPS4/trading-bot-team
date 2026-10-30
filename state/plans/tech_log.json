@@ -2314,5 +2314,43 @@
       "SHORT AAPL blocked: conviction 3 is below the minimum 5",
       "SHORT NVDA x16 (~$3287.2) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "12:27",
+    "trigger": "must invest $10,135 more (75% rule)",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "AMD",
+        "action": "short",
+        "conviction": 7,
+        "reason": "Strong breakdown below opening range with high relative volume (2.91x) and negative momentum in a risk-off environment. Shorting weakness is favored by the current regime.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "RDDT",
+        "action": "short",
+        "conviction": 8,
+        "reason": "Massive gap down (-29.2%) on bad news (analyst forecast cuts), trading well below VWAP with high volume (6.0x rvol). Clear breakdown setup.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "INTC",
+        "action": "short",
+        "conviction": 9,
+        "reason": "Catastrophic drop (-29.6%) on weak guidance and analyst downgrades. Extremely high volume (8.13x rvol) and clear breakdown. High conviction short in risk-off market.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SHORT INTC x51 (~$3296.13)",
+      "SHORT RDDT blocked: team already has the maximum number of positions",
+      "SHORT AMD blocked: team already has the maximum number of positions"
+    ]
   }
 ]

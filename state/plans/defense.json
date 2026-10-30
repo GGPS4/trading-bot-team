@@ -1,87 +1,41 @@
 {
   "date": "2026-10-30",
-  "time": "12:10",
-  "trigger": "scheduled look",
-  "market_view": "Risk-off environment with SPY -1.6% and VIXY spiking +9.5%. Defense is the lone bright spot \u2014 GD posted record Q3 results and raised FY26 guidance, while BAH and LHX show intraday strength. I'm scaling out the profitable BAH position and closing LMT (breakdown setup, RVol < 1.5, positive news not reflected in price). GD offers the best new setup today: pullback-in-uptrend with RVol > 1.5 and strong m60 momentum after a brief breakdown. LHX remains a hold given insufficient RVol for new entries.",
+  "time": "12:27",
+  "trigger": "must invest $18,863 more (75% rule)",
   "decisions": [
     {
-      "symbol": "LMT",
-      "action": "SELL",
-      "conviction": 1,
-      "stop_loss_pct": 0.0085,
-      "take_profit_pct": 0.05,
-      "setup": "news catalyst",
-      "reason": "Breakdown in opening range (OR 646.37\u2013656.35), RVol 0.99 < 1.5, positive $1.08B Future Interceptor news not reflected in price action; risk-off environment makes this dangerous"
-    },
-    {
       "symbol": "BAH",
-      "action": "SELL",
-      "conviction": 4,
-      "stop_loss_pct": 0.005,
+      "action": "BUY",
+      "side": "long",
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Profitable at +0.97% toward +2.96% target; scaling out 50% at first target 90.96 to lock in gains before close and redeploy capital"
+      "setup": "earnings gap",
+      "reason": "Strong earnings beat and guidance raise. Trading above VWAP with Opening Range Breakout and RVol 1.56. Clear momentum leader in a risk-off market where defense is the safe haven."
     },
     {
       "symbol": "GD",
       "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.005,
-      "take_profit_pct": 0.025,
-      "setup": "pullback in uptrend",
-      "reason": "RVol 1.63 > 1.5, m60 +1.0% momentum, Q3 revenue $14.57B / EPS $4.49 beat + raised FY26 guidance, strong 5d/20d uptrend; brief breakdown may be false given sustained trend"
-    }
-  ],
-  "ranked_ideas": [
-    {
-      "symbol": "PLTR",
-      "direction": "long",
-      "conviction": 3,
+      "side": "long",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Highest RVol (2.16) but below VWAP; watch for bounce above VWAP with momentum confirmation before entry"
-    },
-    {
-      "symbol": "RTX",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Positive day +1.0% but RVol < 1.5 and flat trend; watch for breakout above OR with volume"
+      "setup": "earnings gap",
+      "reason": "Record Q3 revenue and EPS beat. Raised FY26 guidance. Trading above VWAP with RVol 1.58. Strong fundamental catalyst supporting intraday momentum."
     },
     {
       "symbol": "HII",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Trending up m60 +0.7% but RVol 0.63 < 1.5; watch for volume expansion confirming trend"
-    },
-    {
-      "symbol": "LHX",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Trending up m60 +0.9% but RVol 1.26 < 1.5; watch for volume expansion to confirm"
-    },
-    {
-      "symbol": "KTOS",
-      "direction": "short",
-      "conviction": 1,
+      "action": "BUY",
+      "side": "long",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "mean reversion",
-      "reason": "Breakdown -4.9% with very low RVol 0.7; require RVol > 1.5 and VWAP confirmation before initiating"
+      "setup": "momentum",
+      "reason": "Strong 60m momentum (+1.6%) and trading above VWAP (+0.8%). Executive explicitly flagged for focus. Fits the 'pullback in uptrend' or momentum continuation profile despite lower RVol, as it is the best remaining setup on the list."
     }
   ],
-  "experiment": "Testing momentum pullback-in-uptrend setups in defense stocks during risk-off environments, using GD as the primary test case with RVol > 1.5 confirmation and tight stops",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "ranked_ideas": [
+    "RTX",
+    "LMT",
+    "NOC"
+  ],
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

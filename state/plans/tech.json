@@ -1,33 +1,43 @@
 {
   "date": "2026-10-30",
-  "time": "12:09",
-  "trigger": "big news on ['TXN', 'ABR']",
-  "market_view": "Market is in strong risk-off regime with QQQ down 3.2% and VIXY up 9.5%. Broad tech sell-off has most watchlist stocks trading below VWAP with opening-range breakdowns. Executive guidance to focus on high-liquidity names (NVDA, AAPL) and avoid longs below VWAP in down market severely limits long opportunities. We maintain existing AVGO short and look to short AAPL below VWAP in continuation of risk-off trend.",
+  "time": "12:27",
+  "trigger": "must invest $10,135 more (75% rule)",
   "decisions": [
     {
-      "symbol": "AAPL",
-      "action": "SHORT",
-      "conviction": 3,
+      "symbol": "AMD",
+      "action": "short",
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
       "setup": "momentum",
-      "reason": "AAPL trading below VWAP (-0.1%) with rvol 1.66 > 1.5 in risk-off environment; executive favors shorts of weak stocks below VWAP. Negative 15-min momentum (-0.3%) and trend flat confirm downtrend. Tight stop required per volatility guidelines."
+      "conviction": 7,
+      "reason": "Strong breakdown below opening range with high relative volume (2.91x) and negative momentum in a risk-off environment. Shorting weakness is favored by the current regime."
+    },
+    {
+      "symbol": "RDDT",
+      "action": "short",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "conviction": 8,
+      "reason": "Massive gap down (-29.2%) on bad news (analyst forecast cuts), trading well below VWAP with high volume (6.0x rvol). Clear breakdown setup."
+    },
+    {
+      "symbol": "INTC",
+      "action": "short",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "conviction": 9,
+      "reason": "Catastrophic drop (-29.6%) on weak guidance and analyst downgrades. Extremely high volume (8.13x rvol) and clear breakdown. High conviction short in risk-off market."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "NVDA",
-      "direction": "short",
-      "conviction": 2,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.02,
-      "setup": "opening range breakdown",
-      "reason": "NVDA already down -3.9% with OR breakdown and vwap -0.6%; shorting risky given potential bounce from oversold conditions; very tight stop (1%) needed if entering. Only consider if breakdown accelerates further."
-    }
+    "SNDK",
+    "NOW",
+    "AMAT",
+    "PANW",
+    "TXN"
   ],
-  "experiment": "",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }
