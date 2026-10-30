@@ -1,11 +1,9 @@
 {
-  "updated": "2026-10-30T16:12-04:00",
+  "updated": "2026-10-30T17:21-04:00",
   "date": "2026-10-30",
   "mode": "paper",
   "health": {
-    "issues": [
-      "51 problem(s) in the last hour, latest: healthcare: review failed: healthcare manager review: no AI provider could answer (gemini: gemini failed)"
-    ]
+    "issues": []
   },
   "paused": false,
   "rules": {
@@ -71,7 +69,7 @@
         "GD",
         "ONDS"
       ],
-      "budget": 31069.51,
+      "budget": 31066.75,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -234.17,
@@ -105,7 +103,7 @@
         "FLY",
         "LPTH"
       ],
-      "budget": 4438.5,
+      "budget": 4438.11,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -24.15,
@@ -139,7 +137,7 @@
         "BAM",
         "MGM"
       ],
-      "budget": 4438.5,
+      "budget": 4438.11,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -14.02,
@@ -173,7 +171,7 @@
         "RDDT",
         "SNDK"
       ],
-      "budget": 22192.51,
+      "budget": 22190.54,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": 97.87,
@@ -207,7 +205,7 @@
         "NCLH",
         "HLT"
       ],
-      "budget": 8877.0,
+      "budget": 8876.21,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -8.75,
@@ -241,7 +239,7 @@
         "SOFI",
         "EVR"
       ],
-      "budget": 8877.0,
+      "budget": 8876.21,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -13.7,
@@ -275,7 +273,7 @@
         "HCA",
         "ALNY"
       ],
-      "budget": 8877.0,
+      "budget": 8876.21,
       "invested": 0,
       "unrealized_pnl": 0,
       "realized_today": -16.13,
@@ -2993,88 +2991,471 @@
   },
   "executives": {
     "sector": {
-      "summary": "All teams performed well today, despite a few losses in the healthcare and financials sectors. The tech and consumer discretionary teams showed strong gains. We will continue to monitor the healthcare and financials teams closely.",
+      "summary": "Tech sector earned $97.87 today, driven by successful short setups but suffered a significant loss on an AAPL short that violated the mega\u2011cap short filter. Consumer Discretionary lost $8.75, with several shorts and longs failing to meet momentum criteria and stops being too tight. Financial Services and Healthcare both recorded losses, with Financials struggling to adjust stops to daily volatility and Healthcare repeatedly violating the No\u2011Trade protocol. Overall, the teams need tighter rule enforcement and better volatility\u2011adjusted risk controls.",
       "team_notes": {
-        "tech": "Team has maintained a positive win rate, but today's trades in healthcare and financials led to losses. Need to adjust strategies for better diversification.",
-        "consumer_discretionary": "Team performed well today with gains in key stocks like AMZN, NFLX, and MRNA. Need to ensure continued focus on growth stocks.",
-        "healthcare": "Team experienced significant losses due to heavy investments in MRK and ABBV. Need to review risk management strategies and consider diversification.",
-        "financials": "Team had a tough day with losses in BAC and JPM. Review risk management and diversification strategies to prevent similar occurrences in the future.",
-        "escalations": [
-          "Healthcare team's losses in MRK and ABBV",
-          "Financials team's losses in BAC and JPM"
-        ],
-        "coordination": "No issues related to overlapping companies or teams stepping on each other's toes today."
+        "tech": "Tech team earned $97.87 today, but the AAPL short loss highlights the need for a stricter mega\u2011cap short filter.",
+        "consumer": "Consumer team lost $8.75, early AMZN short and tight stops indicate rule enforcement gaps.",
+        "financials": "Financials team lost $13.70, many exits at loss due to weak momentum and premature manager exits.",
+        "healthcare": "Healthcare team lost $16.13, repeated No\u2011Trade violations show need for stricter compliance."
       },
+      "escalations": [
+        "AAPL short loss in Tech sector indicates violation of mega\u2011cap short filter; Consumer early AMZN short violates momentum rule; Healthcare repeated No\u2011Trade protocol violations; Financials lack of volatility\u2011adjusted stops leading to multiple losses"
+      ],
+      "coordination": "",
       "title": "Executive of Sector Teams"
     },
     "special": {
-      "summary": "All teams experienced losses today. Team 1's defense sector had a -234.32 realized PnL, Team 2's space & aerospace sector had a -14.02 realized PnL, and Team 3's entertainment sector had a -14.02 realized PnL.",
+      "summary": "All three special teams posted net losses today, with the Defense team taking the largest hit due to multiple biased flips on PLTR and a series of intraday VWAP losses. Space & Aerospace managed a modest loss but suffered from missed volume and regime checks on several momentum entries. Entertainment's two short trades closed at small losses, reflecting a cautious but under\u2011convicted approach. Overall, win rates remain below target across all teams, highlighting the need for tighter discipline and better risk\u2011regime alignment.",
       "team_notes": {
-        "team_id": [
-          "Team 1 defense",
-          "Team 2 space & aerospace",
-          "Team 3 entertainment"
-        ]
+        "defense": "Defense suffered a -$234 loss today, largely from repeated bias flips on PLTR and intraday VWAP churn.",
+        "space": "Space & Aerospace posted a -$24 loss, with several momentum entries hitting stops due to inadequate volume and regime filtering.",
+        "entertainment": "Entertainment closed two shorts at modest losses, underscoring the need for stricter entry filters and higher conviction in risk\u2011off markets."
       },
       "escalations": [
-        "No escalations today"
+        "Defense team's repeated bias flips on PLTR leading to four consecutive losing trades",
+        "Space team's failure to apply volume and regime filters on multiple momentum entries",
+        "Entertainment's short entries in risk\u2011off markets with price above VWAP and low conviction"
       ],
-      "coordination": [
-        "No coordination issues reported today"
-      ],
+      "coordination": "",
       "title": "Executive of Special Teams"
     }
   },
-  "reviews": {},
+  "reviews": {
+    "defense": {
+      "what_went_well": "The team strictly executed disciplined manager exits on failing setups (HII, RTX, LMT) to keep losses minimal, while locking in gains on profitable trades in BAH and a GD breakdown short.",
+      "what_went_wrong": "We repeatedly flipped bias and over-traded PLTR (four trades: short, long, long, short) during intraday chop around VWAP, generating four consecutive losing trades and taking unnecessary paper cuts.",
+      "lessons": [
+        "Never flip directional bias back and forth on the same stock within a single session, as intraday chop around VWAP leads to churn and repeated stops.",
+        "Do not initiate long momentum or breakout trades on stocks trading below VWAP during risk-off market conditions."
+      ],
+      "strategy_ideas": [
+        "Enforce a mandatory lock-out rule that blocks taking opposite-side trades on a symbol if a trade was already closed at a loss on that ticker earlier in the session."
+      ],
+      "watchlist_changes": {
+        "add": [],
+        "remove": []
+      },
+      "watchlist": []
+    },
+    "space": {
+      "what_went_well": "The short on HWM and the short on VSAT generated solid gains, and the SPCX long and LPTH long both closed profitably, showing our stop\u2011loss discipline worked.",
+      "what_went_wrong": "Many momentum/open\u2011range breakout entries (VSAT long, TDG, SPCX short, RKLB long, RKLB short, LUNR) were taken in a risk\u2011off, low\u2011volume environment and hit stops, indicating the volume\u2011spike filter and market\u2011regime check were not applied properly.",
+      "lessons": [
+        "Only enter momentum trades when relative volume (RVol) exceeds 2x and the market regime is not risk\u2011off;",
+        "Avoid opening\u2011range breakouts without confirming sustained volume and VWAP support;",
+        "Place stops at logical technical levels (e.g., below VWAP for longs) and verify stop execution logic to prevent price\u2011stop mismatches."
+      ],
+      "strategy_ideas": [
+        "Implement an automated RVol>2 filter for all entry signals and require price to be above VWAP for long entries;",
+        "Add a two\u2011tier exit: take partial profit at the first target then trail the remainder with a dynamic stop."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "ASTS",
+            "reason": "Upcoming launch window and contract award news this week"
+          },
+          {
+            "symbol": "LMT",
+            "reason": "Lockheed Martin announced a new satellite bus contract"
+          },
+          {
+            "symbol": "AJRD",
+            "reason": "Aerojet Rocketdyne filing for a major propulsion contract"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "PL",
+            "reason": "No space\u2011related catalyst or news upcoming"
+          },
+          {
+            "symbol": "RDW",
+            "reason": "Earnings not until early November, no near\u2011term catalyst"
+          },
+          {
+            "symbol": "IRDM",
+            "reason": "Low relevance to core aerospace focus and no upcoming events"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-30T16:15-04:00",
+          "action": "add_rejected",
+          "symbol": "LMT",
+          "reason": "already watched by the defense team"
+        },
+        {
+          "time": "2026-10-30T16:15-04:00",
+          "action": "add_rejected",
+          "symbol": "AJRD",
+          "reason": "not tradable at the broker"
+        },
+        {
+          "time": "2026-10-30T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "PL",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-30T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "RDW",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-30T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "IRDM",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "entertainment": {
+      "what_went_well": "Both short entries were executed with clear criteria and stopped before significant loss, preserving capital.",
+      "what_went_wrong": "NFLX short lost 0.9% because price stayed above VWAP and momentum flat; MGM short lost 1.7% after rally above opening range despite news catalyst, indicating low conviction and risk\u2011off misalignment.",
+      "lessons": [
+        "Avoid shorting when price is above VWAP or momentum neutral; require price below VWAP and negative 15\u2011min momentum before shorting.",
+        "Only take trades with conviction >=4 in risk\u2011off markets; skip low\u2011conviction setups.",
+        "Use ATR\u2011based stops for shorts to avoid premature triggers in volatile markets."
+      ],
+      "strategy_ideas": [
+        "Implement a short filter that requires price < VWAP, rvol>1.2, and 15\u2011min momentum <0 before entry.",
+        "Add a trailing ATR stop for short positions to lock in gains and reduce loss exposure."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "FOXA",
+            "reason": "Earnings before open on 2026-11-02"
+          },
+          {
+            "symbol": "ROKU",
+            "reason": "Earnings after close on 2026-11-02"
+          },
+          {
+            "symbol": "SONY",
+            "reason": "Earnings before open on 2026-11-05"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "BAM",
+            "reason": "No upcoming catalysts"
+          },
+          {
+            "symbol": "MGM",
+            "reason": "No upcoming catalysts"
+          },
+          {
+            "symbol": "WMG",
+            "reason": "Limited news impact"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-30T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "BAM",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-30T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "MGM",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-30T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "WMG",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "tech": {
+      "what_went_well": "The team successfully identified and executed high-conviction short setups in a risk-off environment, specifically capturing gains on INTC (trailing stop) and AVGO (manager sell). Capital preservation protocols were effective in quickly exiting weak longs like AAPL and NOW that failed to hold above VWAP.",
+      "what_went_wrong": "The largest loss came from shorting AAPL (-$18.59) despite it being a high-liquidity mega-cap that often squeezes in risk-off bounces, and the INTU long (-$13.86) was stopped out immediately due to entering a 'relative strength' trade in a broadly falling market without sufficient confirmation. The NOW long was a contradictory entry (longing a breakdown) that violated the team's own risk-off bias.",
+      "lessons": [
+        "Do not short high-liquidity mega-caps like AAPL or MSFT on news alone without a clear technical breakdown; they are prone to sharp squeezes.",
+        "Never take a long position on a stock breaking below its opening range in a risk-off market; this contradicts the regime filter and leads to immediate stop-outs.",
+        "Relative strength entries require the stock to be above VWAP and holding that level for at least 15 minutes before entry to avoid buying into a temporary spike."
+      ],
+      "strategy_ideas": [
+        "Implement a 'Mega-Cap Short Filter' that requires price to be below the 20-period EMA on the 15-minute chart in addition to being below VWAP before allowing short entries on AAPL/MSFT/GOOGL.",
+        "Test a 'VWAP Reclaim Confirmation' rule where long entries are only permitted if price crosses above VWAP and holds for 5 minutes, filtering out false breakouts in choppy markets."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "AMD",
+            "reason": "Earnings report scheduled for Nov 3; high volatility and news catalyst expected."
+          },
+          {
+            "symbol": "AAPL",
+            "reason": "Earnings report scheduled for Nov 2; major catalyst for tech sector direction."
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "RDDT",
+            "reason": "No immediate news catalysts or earnings events; low liquidity compared to core tech names."
+          },
+          {
+            "symbol": "SNDK",
+            "reason": "No immediate news catalysts; sector focus is shifting to AI/semis and mega-caps ahead of earnings."
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-30T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "RDDT",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-30T16:15-04:00",
+          "action": "remove_rejected",
+          "symbol": "SNDK",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "consumer": {
+      "what_went_well": "Short NCLH, SBUX, EBAY and the late\u2011day AMZN long all hit their targets or produced quick gains, validating our volume\u2011driven entry filters for high\u2011conviction setups.",
+      "what_went_wrong": "Several shorts (AMZN early, BKNG long, LOW, LULU, LKQ) were stopped out or manually exited because we entered on weak momentum or ignored the m15 trend, and our stop levels were too tight relative to intraday volatility.",
+      "lessons": [
+        "Only short when the 15\u2011minute momentum is negative and relative volume exceeds 1.5x; the early AMZN short violated this and got stopped.",
+        "Place stops a full ATR away rather than a fixed dollar amount to avoid being hit by normal price swings.",
+        "Avoid long entries above VWAP in a risk\u2011off market; the BKNG long was above VWAP and quickly reversed."
+      ],
+      "strategy_ideas": [
+        "Implement an ATR\u2011based stop\u2011loss/take\u2011profit framework for all trades to better align risk with volatility.",
+        "Add a mandatory 15\u2011minute momentum check (m15 RSI <50 for shorts, >50 for longs) before any entry in the risk\u2011off regime."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "RCL",
+            "reason": "Upcoming earnings next week and cruise\u2011industry recovery catalyst"
+          },
+          {
+            "symbol": "CCL",
+            "reason": "Earnings release tomorrow and positive cruise demand outlook"
+          },
+          {
+            "symbol": "DIS",
+            "reason": "Strong media\u2011segment news and earnings in 2\u20113 days"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "EAT",
+            "reason": "No news or catalyst and flat price action"
+          },
+          {
+            "symbol": "CVNA",
+            "reason": "Weak volume and no upcoming events"
+          },
+          {
+            "symbol": "HD",
+            "reason": "Stable home\u2011improvement sector with no near\u2011term catalyst"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-30T16:16-04:00",
+          "action": "add_rejected",
+          "symbol": "DIS",
+          "reason": "already watched by the entertainment team"
+        },
+        {
+          "time": "2026-10-30T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "EAT",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-30T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "CVNA",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-30T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "HD",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "financials": {
+      "what_went_well": "The COIN short performed well, capturing a modest profit with a trailing stop that protected gains. The ICE long at 168.65 yielded a small but positive return before the end\u2011of\u2011day exit.",
+      "what_went_wrong": "Several trades exited at a loss due to weak momentum and premature manager exits in a risk\u2011off market: JPM and MS were closed at a small loss after falling below VWAP, MA short reversed after a brief breakdown, and HOOD was sold at a loss despite a stop that had not yet been hit. The overall lack of conviction and the failure to adjust stop levels to the day\u2019s volatility contributed to the losses.",
+      "lessons": [
+        "Avoid entering short positions on a simple breakdown without a strong volume confirmation or a clear catalyst; add a volume\u2011threshold filter.",
+        "In risk\u2011off environments, require a minimum conviction of 4 or higher before taking a position, and consider tightening stop\u2011loss levels to 1\u20131.5% of entry.",
+        "Use trailing stops for short trades to lock in gains and reduce the chance of a reversal wiping out the position.",
+        ""
+      ],
+      "strategy_ideas": [
+        "Test a VWAP\u2011bounce strategy that only triggers when the VWAP bounce is accompanied by at least 1.5\u00d7 relative volume and a 0.5% intraday gain before entry.",
+        "Implement a volatility\u2011adjusted stop\u2011loss: set stops at 1.5\u00d7 the ATR to better align with daily volatility swings."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "C",
+            "reason": "Upcoming earnings and potential interest rate news"
+          },
+          {
+            "symbol": "COF",
+            "reason": "Quarterly earnings due next week with possible credit market catalyst"
+          },
+          {
+            "symbol": "EVR",
+            "reason": "New product launch scheduled for next month"
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "MS",
+            "reason": "No catalysts or earnings in the near term"
+          },
+          {
+            "symbol": "SPGI",
+            "reason": "No upcoming news or earnings"
+          },
+          {
+            "symbol": "AXP",
+            "reason": "Lack of catalysts and low recent activity"
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-30T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "MS",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-30T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "SPGI",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-30T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "AXP",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    },
+    "healthcare": {
+      "what_went_well": "The ALNY short captured a small profit in a risk-off environment, and the risk rules successfully blocked several low-conviction entries (VRTX, ISRG) that likely would have resulted in losses given the market conditions.",
+      "what_went_wrong": "We repeatedly violated our own 'No-Trade' protocol by entering LLY, ABBV, and REGN longs below VWAP or with insufficient RVOL (<1.5x), resulting in immediate drawdowns; specifically, the REGN earnings gap buy failed to hold gains in a risk-off tape, and the second ABBV entry was taken despite the trader explicitly noting it did not meet entry criteria.",
+      "lessons": [
+        "Never enter a long position if the stock is below VWAP, regardless of fundamental catalysts or executive preference; wait for a confirmed reclaim.",
+        "Strictly enforce the RVOL > 1.5x threshold for all new entries; do not override this rule based on conviction scores or 'defensive' status during risk-off regimes.",
+        "If a position is down >1% within the first 30 minutes and momentum (m15) is negative, exit immediately rather than holding for a potential VWAP bounce."
+      ],
+      "strategy_ideas": [
+        "Implement a hard 'VWAP Filter' in the order execution logic that prevents buy orders from being placed if the current price is below the session VWAP.",
+        "Shift focus to shorting high-RVOL healthcare names that break below their opening range in risk-off markets, as the ALNY short demonstrated this is a more reliable edge than catching falling knives."
+      ],
+      "watchlist_changes": {
+        "add": [
+          {
+            "symbol": "VRTX",
+            "reason": "Earnings report on 2026-11-02 (after close) will drive significant volatility; need to monitor pre-market gap and intraday reaction."
+          },
+          {
+            "symbol": "AMGN",
+            "reason": "Earnings report on 2026-11-03 (after close); high-impact biotech catalyst for the following trading day."
+          }
+        ],
+        "remove": [
+          {
+            "symbol": "HLN",
+            "reason": "No recent news catalysts or earnings events identified in the next 48 hours; low liquidity for day trading."
+          },
+          {
+            "symbol": "BMY",
+            "reason": "Lack of specific intraday catalysts or analyst upgrades in the recent news feed; passive name with no edge."
+          }
+        ]
+      },
+      "watchlist": [
+        {
+          "time": "2026-10-30T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "HLN",
+          "reason": "list would drop below 15 stocks"
+        },
+        {
+          "time": "2026-10-30T16:16-04:00",
+          "action": "remove_rejected",
+          "symbol": "BMY",
+          "reason": "list would drop below 15 stocks"
+        }
+      ]
+    }
+  },
   "lessons": {
     "defense": [
-      "2026-10-28: Don't force-exit a winning trade just because you can't re-enter \u2014 relax the 75% invested cap to allow winners to run to close.",
-      "2026-10-28: Never initiate short trades purely to meet cash-utilization rules; require high-conviction bearish catalysts (conviction >= 4) and volume confirmation.",
       "2026-10-28: Do not prematurely exit a profitable breakout trade with major multi-hundred-million-dollar contract catalysts just to reallocate capital.",
       "2026-10-29: Do not execute news catalyst or opening range breakout entries unless relative volume is strictly greater than 1.5x.",
-      "2026-10-29: Avoid taking long positions when short-term RSI is above 80, regardless of positive contract announcements."
+      "2026-10-29: Avoid taking long positions when short-term RSI is above 80, regardless of positive contract announcements.",
+      "2026-10-30: Never flip directional bias back and forth on the same stock within a single session, as intraday chop around VWAP leads to churn and repeated stops.",
+      "2026-10-30: Do not initiate long momentum or breakout trades on stocks trading below VWAP during risk-off market conditions."
     ],
     "space": [
-      "2026-10-28: Do not enter long positions on large-cap aerospace names like BA when multiple analyst downgrades and legal probes cap upward momentum.",
-      "2026-10-28: Require volume confirmation and sustained VWAP support before entering contract-catalyst plays like FLY to avoid getting trapped in afternoon chop.",
-      "2026-10-29: Don't enter news\u2011catalyst trades without confirming sustained volume and price momentum;",
       "2026-10-29: Use wider initial stops for volatile news stocks and let trailing stops work rather than exiting at the first stop;",
-      "2026-10-29: Avoid end\u2011of\u2011day forced exits on low\u2011conviction setups; let the trade run if the risk\u2011reward still meets criteria"
+      "2026-10-29: Avoid end\u2011of\u2011day forced exits on low\u2011conviction setups; let the trade run if the risk\u2011reward still meets criteria",
+      "2026-10-30: Only enter momentum trades when relative volume (RVol) exceeds 2x and the market regime is not risk\u2011off;",
+      "2026-10-30: Avoid opening\u2011range breakouts without confirming sustained volume and VWAP support;",
+      "2026-10-30: Place stops at logical technical levels (e.g., below VWAP for longs) and verify stop execution logic to prevent price\u2011stop mismatches."
     ],
     "entertainment": [
-      "2026-10-27: Only take opening\u2011range breakouts when price stays above both the OR and VWAP; otherwise exit early to avoid stalled positions.",
-      "2026-10-28: Ensure trade rationale and parameters are persisted immediately upon order submission to avoid carrying unvalidated positions across system restarts.",
-      "2026-10-29: Require relative volume >1.2 before any momentum or news\u2011catalyst entry.",
       "2026-10-29: Use ATR\u2011based stops for short positions to avoid premature stop\u2011loss triggers.",
-      "2026-10-29: Avoid opening\u2011range breakout trades in risk\u2011off markets unless volume confirms the move."
+      "2026-10-29: Avoid opening\u2011range breakout trades in risk\u2011off markets unless volume confirms the move.",
+      "2026-10-30: Avoid shorting when price is above VWAP or momentum neutral; require price below VWAP and negative 15\u2011min momentum before shorting.",
+      "2026-10-30: Only take trades with conviction >=4 in risk\u2011off markets; skip low\u2011conviction setups.",
+      "2026-10-30: Use ATR\u2011based stops for shorts to avoid premature triggers in volatile markets."
     ],
     "tech": [
-      "2026-10-27: Avoid re-entering a ticker on the same day if a previous position was manually closed due to broken momentum.",
-      "2026-10-28: Do not submit new buy orders after 15:30 to adhere strictly to team risk guidelines and avoid EOD execution blocks.",
-      "2026-10-29: Do not go long when price is below VWAP without a clear reversal signal",
       "2026-10-29: Use volatility\u2011based stops (e.g., 1.5\u00d7ATR) to improve risk\u2011reward",
-      "2026-10-29: Apply a market\u2011regime filter \u2013 limit new entries when QQQ is down >0.5%"
+      "2026-10-29: Apply a market\u2011regime filter \u2013 limit new entries when QQQ is down >0.5%",
+      "2026-10-30: Do not short high-liquidity mega-caps like AAPL or MSFT on news alone without a clear technical breakdown; they are prone to sharp squeezes.",
+      "2026-10-30: Never take a long position on a stock breaking below its opening range in a risk-off market; this contradicts the regime filter and leads to immediate stop-outs.",
+      "2026-10-30: Relative strength entries require the stock to be above VWAP and holding that level for at least 15 minutes before entry to avoid buying into a temporary spike."
     ],
     "consumer": [
-      "2026-10-28: Lock in profits early on news-driven short setups (like regulatory actions) rather than holding into the close, as intra-day bounce back is common.",
-      "2026-10-28: Avoid taking non-catalyst short positions on premium travel names like BKNG without explicit technical breakdown signals.",
-      "2026-10-29: For news\u2011catalyst shorts, lock 1R profit immediately to avoid a bounce turning into a loss.",
       "2026-10-29: For long entries, enforce a strict VWAP rule\u2014exit if the price falls below VWAP before the close.",
-      "2026-10-29: Avoid shorting on earnings days unless a tighter stop or higher conviction is justified; the volatility can erode gains quickly."
+      "2026-10-29: Avoid shorting on earnings days unless a tighter stop or higher conviction is justified; the volatility can erode gains quickly.",
+      "2026-10-30: Only short when the 15\u2011minute momentum is negative and relative volume exceeds 1.5x; the early AMZN short violated this and got stopped.",
+      "2026-10-30: Place stops a full ATR away rather than a fixed dollar amount to avoid being hit by normal price swings.",
+      "2026-10-30: Avoid long entries above VWAP in a risk\u2011off market; the BKNG long was above VWAP and quickly reversed."
     ],
     "financials": [
-      "2026-10-23: Avoid opening\u2011range breakout entries when relative volume is high but price is already losing momentum; require VWAP confirmation before entry.",
-      "2026-10-23: Tighten stop distances on low\u2011volume or flat\u2011trend stocks and use tighter trailing stops for mean\u2011reversion plays.",
-      "2026-10-23: Do not re\u2011enter the same ticker after an early manager\u2011sell unless a new catalyst emerges.",
       "2026-10-28: Always set a realistic take\u2011profit level to cover commissions and slippage",
-      "2026-10-28: Avoid entering recovery trades without fresh analysis and a clear conviction"
+      "2026-10-28: Avoid entering recovery trades without fresh analysis and a clear conviction",
+      "2026-10-30: Avoid entering short positions on a simple breakdown without a strong volume confirmation or a clear catalyst; add a volume\u2011threshold filter.",
+      "2026-10-30: In risk\u2011off environments, require a minimum conviction of 4 or higher before taking a position, and consider tightening stop\u2011loss levels to 1\u20131.5% of entry.",
+      "2026-10-30: Use trailing stops for short trades to lock in gains and reduce the chance of a reversal wiping out the position."
     ],
     "healthcare": [
-      "2026-10-23: Use an ATR\u2011based stop (\u22652% of ATR) instead of a fixed dollar stop to avoid premature stop\u2011outs on volatile moves;",
-      "2026-10-23: Hold a position until it recovers above VWAP for at least 15 minutes before exiting on a VWAP dip.",
-      "2026-10-28: Use an ATR\u2011based stop (\u22652% of ATR) instead of a fixed dollar stop to avoid premature stop\u2011outs on volatile moves.",
       "2026-10-28: Require intraday momentum (m15 > 0.5%) and rvol > 1.5 before taking a long position.",
-      "2026-10-28: Avoid buying near the stop or in low\u2011volatility conditions; ensure the price is above VWAP and shows a clear breakout with strong volume."
+      "2026-10-28: Avoid buying near the stop or in low\u2011volatility conditions; ensure the price is above VWAP and shows a clear breakout with strong volume.",
+      "2026-10-30: Never enter a long position if the stock is below VWAP, regardless of fundamental catalysts or executive preference; wait for a confirmed reclaim.",
+      "2026-10-30: Strictly enforce the RVOL > 1.5x threshold for all new entries; do not override this rule based on conviction scores or 'defensive' status during risk-off regimes.",
+      "2026-10-30: If a position is down >1% within the first 30 minutes and momentum (m15) is negative, exit immediately rather than holding for a potential VWAP bounce."
     ]
   },
   "research": {
@@ -3610,7 +3991,7 @@
     ]
   },
   "calendar": {
-    "time": "2026-10-30T16:03-04:00",
+    "time": "2026-10-30T17:21-04:00",
     "earnings": [
       {
         "date": "2026-10-30",
@@ -5176,24 +5557,6 @@
         "summary": "JP Morgan initiated coverage on Palantir with an Overweight rating and a $262 price target, providing mild positive analyst sentiment.",
         "source": "benzinga",
         "seen_at": "2026-10-29T16:41-04:00"
-      },
-      {
-        "symbol": "RTX",
-        "sentiment": 0.7,
-        "importance": 4,
-        "unconfirmed_rumor": false,
-        "summary": "RTX beat earnings estimates and raised guidance, prompting a positive market reaction.",
-        "source": "benzinga",
-        "seen_at": "2026-10-29T08:20-04:00"
-      },
-      {
-        "symbol": "CACI",
-        "sentiment": 0.9,
-        "importance": 5,
-        "unconfirmed_rumor": false,
-        "summary": "CACI secured a five-year, $185\u202fmillion U.S. Army contract for contested-environment technologies.",
-        "source": "benzinga",
-        "seen_at": "2026-10-29T08:20-04:00"
       }
     ],
     "space": [
@@ -5476,6 +5839,24 @@
     ],
     "financials": [
       {
+        "symbol": "ICE",
+        "sentiment": 0.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "TD Cowen Adjusts Price Target on Intercontinental Exchange (ICE) from $167 to $182, indicating a potential increase in value.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T16:36-04:00"
+      },
+      {
+        "symbol": "SCHW",
+        "sentiment": 0.0,
+        "importance": 3,
+        "unconfirmed_rumor": false,
+        "summary": "Charles Schwab releases its 36th annual Independent Advisor Outlook Study, highlighting growth opportunities in the financial services sector.",
+        "source": "fiscal.ai",
+        "seen_at": "2026-10-30T16:36-04:00"
+      },
+      {
         "symbol": "SPGI",
         "sentiment": -0.7,
         "importance": 3,
@@ -5528,24 +5909,6 @@
         "summary": "Mizuho cuts Coinbase price target to $145 while maintaining a neutral rating.",
         "source": "benzinga",
         "seen_at": "2026-10-30T08:07-04:00"
-      },
-      {
-        "symbol": "MS",
-        "sentiment": -0.2,
-        "importance": 2,
-        "unconfirmed_rumor": false,
-        "summary": "Morgan Stanley's stake in Central Asia Metals fell below 5%, reducing its voting rights.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-30T08:07-04:00"
-      },
-      {
-        "symbol": "COIN",
-        "sentiment": 0.0,
-        "importance": 3,
-        "unconfirmed_rumor": false,
-        "summary": "JPMorgan and Mizuho revised their price targets for Coinbase.",
-        "source": "fiscal.ai",
-        "seen_at": "2026-10-30T07:37-04:00"
       }
     ],
     "healthcare": [
@@ -10606,12 +10969,20 @@
         {
           "date": "2026-10-29",
           "lesson": "Avoid taking long positions when short-term RSI is above 80, regardless of positive contract announcements."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Never flip directional bias back and forth on the same stock within a single session, as intraday chop around VWAP leads to churn and repeated stops."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Do not initiate long momentum or breakout trades on stocks trading below VWAP during risk-off market conditions."
         }
       ],
       "ideas": {
-        "date": "2026-10-29",
+        "date": "2026-10-30",
         "strategy_ideas": [
-          "Implement an automated entry check requiring both relative volume > 1.5x and price strictly above VWAP for all news and ORB setups."
+          "Enforce a mandatory lock-out rule that blocks taking opposite-side trades on a symbol if a trade was already closed at a loss on that ticker earlier in the session."
         ]
       },
       "reviews": [
@@ -11167,7 +11538,7 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T14:16-04:00"
+        "updated": "2026-10-30T16:14-04:00"
       },
       "research": {
         "time": "2026-10-30T14:11-04:00",
@@ -11331,24 +11702,6 @@
             "summary": "JP Morgan initiated coverage on Palantir with an Overweight rating and a $262 price target, providing mild positive analyst sentiment.",
             "source": "benzinga",
             "seen_at": "2026-10-29T16:41-04:00"
-          },
-          {
-            "symbol": "RTX",
-            "sentiment": 0.7,
-            "importance": 4,
-            "unconfirmed_rumor": false,
-            "summary": "RTX beat earnings estimates and raised guidance, prompting a positive market reaction.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T08:20-04:00"
-          },
-          {
-            "symbol": "CACI",
-            "sentiment": 0.9,
-            "importance": 5,
-            "unconfirmed_rumor": false,
-            "summary": "CACI secured a five-year, $185\u202fmillion U.S. Army contract for contested-environment technologies.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T08:20-04:00"
           }
         ],
         "technicals": {
@@ -16015,13 +16368,25 @@
         {
           "date": "2026-10-29",
           "lesson": "Avoid end\u2011of\u2011day forced exits on low\u2011conviction setups; let the trade run if the risk\u2011reward still meets criteria"
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Only enter momentum trades when relative volume (RVol) exceeds 2x and the market regime is not risk\u2011off;"
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Avoid opening\u2011range breakouts without confirming sustained volume and VWAP support;"
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Place stops at logical technical levels (e.g., below VWAP for longs) and verify stop execution logic to prevent price\u2011stop mismatches."
         }
       ],
       "ideas": {
-        "date": "2026-10-29",
+        "date": "2026-10-30",
         "strategy_ideas": [
-          "Add a volume\u2011spike filter (rvol >2) before taking news\u2011catalyst entries to improve entry quality",
-          "Test a dynamic trailing\u2011stop that only activates after a 0.5% move in your favor, reducing premature stop\u2011outs"
+          "Implement an automated RVol>2 filter for all entry signals and require price to be above VWAP for long entries;",
+          "Add a two\u2011tier exit: take partial profit at the first target then trail the remainder with a dynamic stop."
         ]
       },
       "reviews": [
@@ -16426,36 +16791,6 @@
         ],
         "rejected": [
           {
-            "time": "2026-10-22T16:15-04:00",
-            "action": "remove_rejected",
-            "symbol": "BKSY",
-            "reason": "list would drop below 15 stocks"
-          },
-          {
-            "time": "2026-10-23T10:14-04:00",
-            "action": "remove_rejected",
-            "symbol": "SATS",
-            "reason": "list would drop below 15 stocks"
-          },
-          {
-            "time": "2026-10-23T11:15-04:00",
-            "action": "remove_rejected",
-            "symbol": "LUNR",
-            "reason": "still holding it; sell first"
-          },
-          {
-            "time": "2026-10-23T11:15-04:00",
-            "action": "remove_rejected",
-            "symbol": "ASTS",
-            "reason": "list would drop below 15 stocks"
-          },
-          {
-            "time": "2026-10-23T11:15-04:00",
-            "action": "remove_rejected",
-            "symbol": "SATS",
-            "reason": "list would drop below 15 stocks"
-          },
-          {
             "time": "2026-10-23T13:49-04:00",
             "action": "remove_rejected",
             "symbol": "SPCX",
@@ -16604,9 +16939,39 @@
             "action": "remove_rejected",
             "symbol": "VSAT",
             "reason": "still holding it; sell first"
+          },
+          {
+            "time": "2026-10-30T16:15-04:00",
+            "action": "add_rejected",
+            "symbol": "LMT",
+            "reason": "already watched by the defense team"
+          },
+          {
+            "time": "2026-10-30T16:15-04:00",
+            "action": "add_rejected",
+            "symbol": "AJRD",
+            "reason": "not tradable at the broker"
+          },
+          {
+            "time": "2026-10-30T16:15-04:00",
+            "action": "remove_rejected",
+            "symbol": "PL",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:15-04:00",
+            "action": "remove_rejected",
+            "symbol": "RDW",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:15-04:00",
+            "action": "remove_rejected",
+            "symbol": "IRDM",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T14:16-04:00"
+        "updated": "2026-10-30T16:15-04:00"
       },
       "research": {
         "time": "2026-10-30T14:11-04:00",
@@ -20558,13 +20923,25 @@
         {
           "date": "2026-10-29",
           "lesson": "Avoid opening\u2011range breakout trades in risk\u2011off markets unless volume confirms the move."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Avoid shorting when price is above VWAP or momentum neutral; require price below VWAP and negative 15\u2011min momentum before shorting."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Only take trades with conviction >=4 in risk\u2011off markets; skip low\u2011conviction setups."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Use ATR\u2011based stops for shorts to avoid premature triggers in volatile markets."
         }
       ],
       "ideas": {
-        "date": "2026-10-29",
+        "date": "2026-10-30",
         "strategy_ideas": [
-          "Test a volume\u2011filtered momentum entry rule: rvol >1.2 and 15\u2011minute volume >1.5\u00d7 average before entry.",
-          "Implement ATR\u2011based trailing stops to protect gains while allowing for volatility."
+          "Implement a short filter that requires price < VWAP, rvol>1.2, and 15\u2011min momentum <0 before entry.",
+          "Add a trailing ATR stop for short positions to lock in gains and reduce loss exposure."
         ]
       },
       "reviews": [
@@ -21002,24 +21379,6 @@
         ],
         "rejected": [
           {
-            "time": "2026-10-23T08:49-04:00",
-            "action": "remove_rejected",
-            "symbol": "EA",
-            "reason": "list would drop below 15 stocks"
-          },
-          {
-            "time": "2026-10-23T12:58-04:00",
-            "action": "remove_rejected",
-            "symbol": "BAM",
-            "reason": "still holding it; sell first"
-          },
-          {
-            "time": "2026-10-23T14:13-04:00",
-            "action": "remove_rejected",
-            "symbol": "WBD",
-            "reason": "list would drop below 15 stocks"
-          },
-          {
             "time": "2026-10-23T14:13-04:00",
             "action": "remove_rejected",
             "symbol": "EA",
@@ -21180,9 +21539,27 @@
             "action": "remove_rejected",
             "symbol": "EA",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:15-04:00",
+            "action": "remove_rejected",
+            "symbol": "BAM",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:15-04:00",
+            "action": "remove_rejected",
+            "symbol": "MGM",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:15-04:00",
+            "action": "remove_rejected",
+            "symbol": "WMG",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T14:16-04:00"
+        "updated": "2026-10-30T16:15-04:00"
       },
       "research": {
         "time": "2026-10-30T14:12-04:00",
@@ -27169,13 +27546,25 @@
         {
           "date": "2026-10-29",
           "lesson": "Apply a market\u2011regime filter \u2013 limit new entries when QQQ is down >0.5%"
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Do not short high-liquidity mega-caps like AAPL or MSFT on news alone without a clear technical breakdown; they are prone to sharp squeezes."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Never take a long position on a stock breaking below its opening range in a risk-off market; this contradicts the regime filter and leads to immediate stop-outs."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Relative strength entries require the stock to be above VWAP and holding that level for at least 15 minutes before entry to avoid buying into a temporary spike."
         }
       ],
       "ideas": {
-        "date": "2026-10-29",
+        "date": "2026-10-30",
         "strategy_ideas": [
-          "Add a VWAP\u2011reclaim filter to the entry criteria",
-          "Require a short\u2011term momentum confirmation (15\u2011min RSI or volume spike) before opening a position"
+          "Implement a 'Mega-Cap Short Filter' that requires price to be below the 20-period EMA on the 15-minute chart in addition to being below VWAP before allowing short entries on AAPL/MSFT/GOOGL.",
+          "Test a 'VWAP Reclaim Confirmation' rule where long entries are only permitted if price crosses above VWAP and holds for 5 minutes, filtering out false breakouts in choppy markets."
         ]
       },
       "reviews": [
@@ -27808,9 +28197,21 @@
             "action": "remove_rejected",
             "symbol": "AMAT",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:15-04:00",
+            "action": "remove_rejected",
+            "symbol": "RDDT",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:15-04:00",
+            "action": "remove_rejected",
+            "symbol": "SNDK",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T14:16-04:00"
+        "updated": "2026-10-30T16:15-04:00"
       },
       "research": {
         "time": "2026-10-30T14:12-04:00",
@@ -32581,13 +32982,25 @@
         {
           "date": "2026-10-29",
           "lesson": "Avoid shorting on earnings days unless a tighter stop or higher conviction is justified; the volatility can erode gains quickly."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Only short when the 15\u2011minute momentum is negative and relative volume exceeds 1.5x; the early AMZN short violated this and got stopped."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Place stops a full ATR away rather than a fixed dollar amount to avoid being hit by normal price swings."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Avoid long entries above VWAP in a risk\u2011off market; the BKNG long was above VWAP and quickly reversed."
         }
       ],
       "ideas": {
-        "date": "2026-10-29",
+        "date": "2026-10-30",
         "strategy_ideas": [
-          "Implement an automated 1R partial profit\u2011taking rule for all news\u2011catalyst trades, regardless of direction.",
-          "Add a momentum filter for short trades: only short if m15/m60 momentum is negative and relative volume >1.5x; otherwise skip."
+          "Implement an ATR\u2011based stop\u2011loss/take\u2011profit framework for all trades to better align risk with volatility.",
+          "Add a mandatory 15\u2011minute momentum check (m15 RSI <50 for shorts, >50 for longs) before any entry in the risk\u2011off regime."
         ]
       },
       "reviews": [
@@ -33187,9 +33600,33 @@
             "action": "remove_rejected",
             "symbol": "EBAY",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:16-04:00",
+            "action": "add_rejected",
+            "symbol": "DIS",
+            "reason": "already watched by the entertainment team"
+          },
+          {
+            "time": "2026-10-30T16:16-04:00",
+            "action": "remove_rejected",
+            "symbol": "EAT",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:16-04:00",
+            "action": "remove_rejected",
+            "symbol": "CVNA",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:16-04:00",
+            "action": "remove_rejected",
+            "symbol": "HD",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T12:39-04:00"
+        "updated": "2026-10-30T16:16-04:00"
       },
       "research": {
         "time": "2026-10-30T14:12-04:00",
@@ -33540,15 +33977,6 @@
             "summary": "Citigroup maintained a Buy rating on Brinker International and raised its price target to $277.",
             "source": "benzinga",
             "seen_at": "2026-10-29T16:27-04:00"
-          },
-          {
-            "symbol": "AMZN",
-            "sentiment": 0.7,
-            "importance": 4,
-            "unconfirmed_rumor": false,
-            "summary": "Analysts forecast Q3 EPS of $1.96 and revenue of $202.24B, with target prices up to $385, indicating a positive outlook.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T08:14-04:00"
           }
         ],
         "technicals": {
@@ -37889,13 +38317,25 @@
         {
           "date": "2026-10-28",
           "lesson": "Avoid entering recovery trades without fresh analysis and a clear conviction"
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Avoid entering short positions on a simple breakdown without a strong volume confirmation or a clear catalyst; add a volume\u2011threshold filter."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "In risk\u2011off environments, require a minimum conviction of 4 or higher before taking a position, and consider tightening stop\u2011loss levels to 1\u20131.5% of entry."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Use trailing stops for short trades to lock in gains and reduce the chance of a reversal wiping out the position."
         }
       ],
       "ideas": {
-        "date": "2026-10-28",
+        "date": "2026-10-30",
         "strategy_ideas": [
-          "Implement trailing stops for long positions to lock in gains",
-          "Use VWAP or volume confirmation before entering breakout trades"
+          "Test a VWAP\u2011bounce strategy that only triggers when the VWAP bounce is accompanied by at least 1.5\u00d7 relative volume and a 0.5% intraday gain before entry.",
+          "Implement a volatility\u2011adjusted stop\u2011loss: set stops at 1.5\u00d7 the ATR to better align with daily volatility swings."
         ]
       },
       "reviews": [
@@ -38358,9 +38798,27 @@
             "action": "remove_rejected",
             "symbol": "COF",
             "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:16-04:00",
+            "action": "remove_rejected",
+            "symbol": "MS",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:16-04:00",
+            "action": "remove_rejected",
+            "symbol": "SPGI",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:16-04:00",
+            "action": "remove_rejected",
+            "symbol": "AXP",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T14:16-04:00"
+        "updated": "2026-10-30T16:16-04:00"
       },
       "research": {
         "time": "2026-10-30T14:13-04:00",
@@ -38424,6 +38882,24 @@
           "items_read": 0
         },
         "overnight": [
+          {
+            "symbol": "ICE",
+            "sentiment": 0.0,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "TD Cowen Adjusts Price Target on Intercontinental Exchange (ICE) from $167 to $182, indicating a potential increase in value.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T16:36-04:00"
+          },
+          {
+            "symbol": "SCHW",
+            "sentiment": 0.0,
+            "importance": 3,
+            "unconfirmed_rumor": false,
+            "summary": "Charles Schwab releases its 36th annual Independent Advisor Outlook Study, highlighting growth opportunities in the financial services sector.",
+            "source": "fiscal.ai",
+            "seen_at": "2026-10-30T16:36-04:00"
+          },
           {
             "symbol": "SPGI",
             "sentiment": -0.7,
@@ -38657,24 +39133,6 @@
             "summary": "Coinbase reported Q3 adjusted EPS of $0.27, significantly beating the $0.06 estimate, but revenue of $1.216B slightly missed the $1.230B consensus.",
             "source": "benzinga",
             "seen_at": "2026-10-29T16:27-04:00"
-          },
-          {
-            "symbol": "MA",
-            "sentiment": 0.7,
-            "importance": 4,
-            "unconfirmed_rumor": false,
-            "summary": "Mastercard Q3 adjusted EPS of $5.31 and sales of $9.81B beat estimates, indicating strong earnings momentum.",
-            "source": "benzinga",
-            "seen_at": "2026-10-29T08:15-04:00"
-          },
-          {
-            "symbol": "ICE",
-            "sentiment": 0.6,
-            "importance": 3,
-            "unconfirmed_rumor": false,
-            "summary": "Intercontinental Exchange reported a 15% YoY rise in Q3 net revenues to $2.8B, showing robust growth.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-29T08:15-04:00"
           }
         ],
         "technicals": {
@@ -43529,13 +43987,25 @@
         {
           "date": "2026-10-28",
           "lesson": "Avoid buying near the stop or in low\u2011volatility conditions; ensure the price is above VWAP and shows a clear breakout with strong volume."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Never enter a long position if the stock is below VWAP, regardless of fundamental catalysts or executive preference; wait for a confirmed reclaim."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "Strictly enforce the RVOL > 1.5x threshold for all new entries; do not override this rule based on conviction scores or 'defensive' status during risk-off regimes."
+        },
+        {
+          "date": "2026-10-30",
+          "lesson": "If a position is down >1% within the first 30 minutes and momentum (m15) is negative, exit immediately rather than holding for a potential VWAP bounce."
         }
       ],
       "ideas": {
-        "date": "2026-10-28",
+        "date": "2026-10-30",
         "strategy_ideas": [
-          "Implement an ATR\u2011based stop (2% of ATR) for all new entries.",
-          "Add a momentum filter: only enter a long when m15 > 0.5% and rvol > 1.5, and price is above VWAP."
+          "Implement a hard 'VWAP Filter' in the order execution logic that prevents buy orders from being placed if the current price is below the session VWAP.",
+          "Shift focus to shorting high-RVOL healthcare names that break below their opening range in risk-off markets, as the ALNY short demonstrated this is a more reliable edge than catching falling knives."
         ]
       },
       "reviews": [
@@ -44041,9 +44511,21 @@
             "action": "remove_rejected",
             "symbol": "ALNY",
             "reason": "still holding it; sell first"
+          },
+          {
+            "time": "2026-10-30T16:16-04:00",
+            "action": "remove_rejected",
+            "symbol": "HLN",
+            "reason": "list would drop below 15 stocks"
+          },
+          {
+            "time": "2026-10-30T16:16-04:00",
+            "action": "remove_rejected",
+            "symbol": "BMY",
+            "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T14:23-04:00"
+        "updated": "2026-10-30T16:16-04:00"
       },
       "research": {
         "time": "2026-10-30T14:13-04:00",
@@ -44324,24 +44806,6 @@
             "summary": "Danaher executives sold over $8.7\u202fmillion in company shares per SEC filings",
             "source": "fiscal.ai",
             "seen_at": "2026-10-29T22:32-04:00"
-          },
-          {
-            "symbol": "JNJ",
-            "sentiment": 0.3,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Johnson & Johnson is expanding research collaboration with Telo Genomics to validate TELO-MRD technology.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-29T08:15-04:00"
-          },
-          {
-            "symbol": "JNJ",
-            "sentiment": 0.3,
-            "importance": 2,
-            "unconfirmed_rumor": false,
-            "summary": "Johnson & Johnson is a Platinum Sponsor of the LUNGevity Foundation's 'Every Breath Forward' lung cancer initiative.",
-            "source": "fiscal.ai",
-            "seen_at": "2026-10-29T08:15-04:00"
           }
         ],
         "technicals": {
