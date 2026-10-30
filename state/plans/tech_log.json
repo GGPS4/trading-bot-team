@@ -2074,5 +2074,46 @@
       "BUY RDDT blocked: team already has the maximum number of positions",
       "BUY NVDA blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "10:38",
+    "trigger": "big news on ['INTC']",
+    "market_view": "Risk-off market with SPY and QQQ down sharply. INTC gapped -25.4% and is down -27.9% on extremely negative news (target cut to $90, weak guidance). NVDA is down -3.6% with decent volume. I'm covering the AAPL short (trending up, momentum positive) and initiating shorts on NVDA and INTC for their extreme setups.",
+    "experiment": "Require a short-term momentum confirmation (15-min RSI or volume spike) before opening a position",
+    "decisions": [
+      {
+        "symbol": "AAPL",
+        "action": "COVER",
+        "conviction": 3,
+        "reason": "Stock trending up with positive momentum (m15 +0.3%, m60 +0.2%), above VWAP, risking stop-hit. President directs focus on AAPL.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "NVDA",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "High liquidity (president's focus), down -3.6% with volume (rvol 2.13), below VWAP, risk-off favors shorts.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "INTC",
+        "action": "SHORT",
+        "conviction": 5,
+        "reason": "Extreme setup: -27.9% day, -25.4% premarket gap, very negative news (target cut to $90, weak guidance, multiple downgrades), high rvol (14.43), clear breakdown.",
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 0.06
+      }
+    ],
+    "results": [
+      "COVER AAPL",
+      "SHORT INTC x44 (~$2922.92)",
+      "SHORT NVDA blocked: team already has the maximum number of positions",
+      "WATCHLIST remove rejected TXN",
+      "WATCHLIST remove rejected NOW",
+      "WATCHLIST remove rejected AMAT"
+    ]
   }
 ]

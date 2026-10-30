@@ -1,46 +1,91 @@
 {
   "date": "2026-10-30",
-  "time": "10:25",
+  "time": "10:38",
   "trigger": "big news on ['INTC']",
+  "market_view": "Risk-off market with SPY and QQQ down sharply. INTC gapped -25.4% and is down -27.9% on extremely negative news (target cut to $90, weak guidance). NVDA is down -3.6% with decent volume. I'm covering the AAPL short (trending up, momentum positive) and initiating shorts on NVDA and INTC for their extreme setups.",
   "decisions": [
     {
-      "symbol": "NVDA",
-      "action": "BUY",
-      "side": "short",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "conviction": 7,
-      "reason": "Short NVDA: -3.6% day, below VWAP, negative 15m momentum, risk-off regime, and negative news flow regarding AI hyperscaler spending. High liquidity and clear breakdown setup."
-    },
-    {
-      "symbol": "SNDK",
-      "action": "BUY",
-      "side": "short",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "conviction": 8,
-      "reason": "Short SNDK: Explicit BREAKDOWN below opening range, -10.7% day, below VWAP, high relative volume (3.76), and negative analyst sentiment. Strong downside momentum in a risk-off market."
-    },
-    {
-      "symbol": "RDDT",
-      "action": "BUY",
-      "side": "short",
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
+      "symbol": "AAPL",
+      "action": "COVER",
+      "conviction": 3,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
       "setup": "news catalyst",
-      "conviction": 8,
-      "reason": "Short RDDT: -26.5% day, significant breakdown below opening range, very high relative volume (7.8), and confirmed negative news (analyst downgrades post-earnings). Strong continuation risk."
+      "reason": "Stock trending up with positive momentum (m15 +0.3%, m60 +0.2%), above VWAP, risking stop-hit. President directs focus on AAPL."
+    },
+    {
+      "symbol": "NVDA",
+      "action": "SHORT",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "High liquidity (president's focus), down -3.6% with volume (rvol 2.13), below VWAP, risk-off favors shorts."
+    },
+    {
+      "symbol": "INTC",
+      "action": "SHORT",
+      "conviction": 5,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "breakdown",
+      "reason": "Extreme setup: -27.9% day, -25.4% premarket gap, very negative news (target cut to $90, weak guidance, multiple downgrades), high rvol (14.43), clear breakdown."
     }
   ],
   "ranked_ideas": [
-    "MSFT",
-    "NOW",
-    "AMAT",
-    "CRWV",
-    "INTC"
+    {
+      "symbol": "NVDA",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "High liquidity, down -3.6% with volume, below VWAP, risk-off favors shorts."
+    },
+    {
+      "symbol": "INTC",
+      "direction": "short",
+      "conviction": 5,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.06,
+      "setup": "breakdown",
+      "reason": "Extreme setup, -27.9% day, -25.4% gap, very negative news, high rvol."
+    },
+    {
+      "symbol": "SNDK",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "Day -10%, good volume (rvol 3.78), trend down, analyst lowered targets."
+    }
   ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Require a short-term momentum confirmation (15-min RSI or volume spike) before opening a position",
+  "watchlist_changes": {
+    "add": [
+      {
+        "symbol": "INTC",
+        "reason": "Extreme setup: -27.9% day, -25.4% premarket gap, very negative news, high rvol (14.43)"
+      },
+      {
+        "symbol": "SNDK",
+        "reason": "Day -10%, good volume (rvol 3.78), trend down, analyst lowered targets"
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "TXN",
+        "reason": "Breakdown but weak volume (rvol 1.58), insufficient conviction"
+      },
+      {
+        "symbol": "NOW",
+        "reason": "Trend down (m60 -1.2%), no clear setup, weak volume"
+      },
+      {
+        "symbol": "AMAT",
+        "reason": "Breakdown but low volume (rvol 1.29), insufficient conviction"
+      }
+    ]
+  }
 }
