@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-30T14:51-04:00",
+  "updated": "2026-10-30T15:11-04:00",
   "date": "2026-10-30",
   "mode": "paper",
   "health": {
     "issues": [
-      "27 problem(s) in the last hour, latest: consumer: skipped this check: consumer manager: no AI provider could answer (gemini: gemini failed)"
+      "47 problem(s) in the last hour, latest: healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)"
     ]
   },
   "paused": false,
@@ -14,21 +14,21 @@
     "strategy": "day_trading"
   },
   "account": {
-    "equity": 98714.89,
-    "cash": 104526.08,
-    "day_change": -37.97,
-    "day_change_pct": -0.0004
+    "equity": 98636.37,
+    "cash": 96104.2,
+    "day_change": -116.49,
+    "day_change_pct": -0.0012
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 750.76
+    "price": 753.17
   },
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 11,
-    "return_since_start": -0.0129,
-    "benchmark_since_start": -0.0258,
-    "max_drawdown": 0.0129
+    "return_since_start": -0.0136,
+    "benchmark_since_start": -0.0227,
+    "max_drawdown": 0.0136
   },
   "go_live": {
     "items": [
@@ -40,12 +40,12 @@
       {
         "rule": "Beating SPY since the start",
         "ok": true,
-        "value": "-1.3% vs -2.6%"
+        "value": "-1.4% vs -2.3%"
       },
       {
         "rule": "Worst drop under 15%",
         "ok": true,
-        "value": "1.3%"
+        "value": "1.4%"
       }
     ],
     "all_ok": false
@@ -72,8 +72,8 @@
         "ONDS"
       ],
       "budget": 31069.51,
-      "invested": -2383.47,
-      "unrealized_pnl": 10.76,
+      "invested": -2408.72,
+      "unrealized_pnl": -14.49,
       "realized_today": -190.98,
       "trades_today": 13,
       "blocked_today": 23,
@@ -106,8 +106,8 @@
         "LPTH"
       ],
       "budget": 4438.5,
-      "invested": -897.38,
-      "unrealized_pnl": 15.98,
+      "invested": -301.21,
+      "unrealized_pnl": 3.46,
       "realized_today": -33.45,
       "trades_today": 14,
       "blocked_today": 20,
@@ -174,17 +174,17 @@
         "SNDK"
       ],
       "budget": 22192.51,
-      "invested": -7771.01,
-      "unrealized_pnl": 128.35,
-      "realized_today": -5.22,
+      "invested": 0,
+      "unrealized_pnl": 0,
+      "realized_today": 97.87,
       "trades_today": 17,
       "blocked_today": 30,
       "all_time": {
-        "closed_trades": 100,
-        "wins": 43,
+        "closed_trades": 103,
+        "wins": 46,
         "losses": 57,
-        "win_rate": 0.43,
-        "realized_pnl": -114.46
+        "win_rate": 0.447,
+        "realized_pnl": -11.37
       }
     },
     "consumer": {
@@ -208,8 +208,8 @@
         "HLT"
       ],
       "budget": 8877.0,
-      "invested": 1780.28,
-      "unrealized_pnl": -1.9,
+      "invested": 1781.43,
+      "unrealized_pnl": -0.75,
       "realized_today": -15.53,
       "trades_today": 13,
       "blocked_today": 22,
@@ -242,8 +242,8 @@
         "EVR"
       ],
       "budget": 8877.0,
-      "invested": 1610.94,
-      "unrealized_pnl": -1.11,
+      "invested": 1612.82,
+      "unrealized_pnl": 0.77,
       "realized_today": -12.22,
       "trades_today": 10,
       "blocked_today": 8,
@@ -276,8 +276,8 @@
         "ALNY"
       ],
       "budget": 8877.0,
-      "invested": 1849.65,
-      "unrealized_pnl": -6.06,
+      "invested": 1847.8,
+      "unrealized_pnl": -7.91,
       "realized_today": -7.98,
       "trades_today": 8,
       "blocked_today": 11,
@@ -296,10 +296,10 @@
       "team": "healthcare",
       "qty": 2.0,
       "entry": 295.93,
-      "price": 294.7,
-      "value": 589.4,
-      "pnl": -2.46,
-      "pnl_pct": -0.0042,
+      "price": 294.36,
+      "value": 588.72,
+      "pnl": -3.14,
+      "pnl_pct": -0.0053,
       "stop": 290.64,
       "target": 303.92,
       "reason": "[75% invested rule] Strongest defensive candidate per executive order. Beat Q3 earnings, raised FY guidance, and dividend. Trading flat/slightly up (+1.5%) in a risk-off market, showing relative strength. However, it is currently below VWAP and RVol is low (0.98). This is a 'watch' idea; the investor should only buy if it reclaims VWAP with RVol > 1.5x. Currently, it does not meet the strict entry criteria (above VWAP + RVol > 1.5x), so this is a conditional idea for the next check.",
@@ -310,32 +310,14 @@
       "setup": "news catalyst"
     },
     {
-      "symbol": "AMD",
-      "team": "tech",
-      "qty": -6.0,
-      "entry": 498.33,
-      "price": 493.95,
-      "value": -2963.7,
-      "pnl": 26.28,
-      "pnl_pct": 0.0088,
-      "stop": 496.54,
-      "target": 483.4,
-      "reason": "[75% invested rule] High relative volume (2.51x), clear opening-range breakdown, below VWAP, RSI 34.8 above the bounce-risk zone, and sympathy weakness from the Intel news.",
-      "side": "short",
-      "trailing": true,
-      "scaled": false,
-      "first_stop": 508.32,
-      "setup": "opening range breakout"
-    },
-    {
       "symbol": "AMZN",
       "team": "consumer",
       "qty": 2.0,
       "entry": 238.85,
-      "price": 237.27,
-      "value": 474.54,
-      "pnl": -3.16,
-      "pnl_pct": -0.0066,
+      "price": 238.99,
+      "value": 477.98,
+      "pnl": 0.28,
+      "pnl_pct": 0.0006,
       "stop": 235.54,
       "target": 246.3,
       "reason": "Strong news catalyst short: Q3 earnings miss and $220B AI capex shock. Gapped down 7.9% pre-market, currently trading below VWAP (-0.4% vs VWAP, -1.9% day) with high relative volume (3.4x). Market is risk-off (SPY -2.1%, VIXY +14.1%), favoring shorts on weak names. RSI 33.1 suggests downside room but high volume confirms the move is real, not a fade. Stop is tight to respect the 1-2% rule.",
@@ -346,32 +328,14 @@
       "setup": "news catalyst"
     },
     {
-      "symbol": "AVGO",
-      "team": "tech",
-      "qty": -10.0,
-      "entry": 326.61,
-      "price": 319.8,
-      "value": -3198.03,
-      "pnl": 68.08,
-      "pnl_pct": 0.0208,
-      "stop": 321.95,
-      "target": 316.85,
-      "reason": "Risk-off market favors shorts of weak stocks. AVGO OR BREAKDOWN below VWAP (-0.7%), trend down, rvol 1.95 > 1.5. Chip sector weakness confirmed. Shorting weak stocks (below VWAP, breaking down) is favored per market mood. RSI 38.3 not extremely oversold (<25), avoiding high bounce risk per lesson 2026-10-23. Tight 1.5% stop, 3% target with partial sell and trailing stop rest.",
-      "side": "short",
-      "trailing": true,
-      "scaled": false,
-      "first_stop": 331.55,
-      "setup": "momentum"
-    },
-    {
       "symbol": "GE",
       "team": "space",
       "qty": -1.0,
       "entry": 304.67,
-      "price": 300.65,
-      "value": -300.65,
-      "pnl": 4.01,
-      "pnl_pct": 0.0132,
+      "price": 301.21,
+      "value": -301.21,
+      "pnl": 3.46,
+      "pnl_pct": 0.0114,
       "stop": 302.52,
       "target": 292.66,
       "reason": "[75% invested rule] breakdown below OR (306.0-312.6) and VWAP (-0.8%); rvol 1.28 moderate; defense-friendly name in risk-off; analyst scrutiny and multiple downgrades cap upward momentum",
@@ -382,32 +346,14 @@
       "setup": "other"
     },
     {
-      "symbol": "HWM",
-      "team": "space",
-      "qty": -3.0,
-      "entry": 202.9,
-      "price": 198.91,
-      "value": -596.73,
-      "pnl": 11.97,
-      "pnl_pct": 0.0197,
-      "stop": 200.72,
-      "target": 195.07,
-      "reason": "[75% invested rule] vwap -0.5% with OR 201.83-205.69 breakdown; overnight BNP Paribas cut to $250 from $310 (sentiment -0.7, importance 4); multiple analyst downgrades; risk-off favors shorts of weak names with bad news; rvol 0.81 low but breakdown on strong fundamental deterioration is valid short in current regime",
-      "side": "short",
-      "trailing": true,
-      "scaled": false,
-      "first_stop": 207.26,
-      "setup": "other"
-    },
-    {
       "symbol": "ICE",
       "team": "financials",
       "qty": 3.0,
       "entry": 169.34,
-      "price": 169.41,
-      "value": 508.23,
-      "pnl": 0.22,
-      "pnl_pct": 0.0004,
+      "price": 169.53,
+      "value": 508.59,
+      "pnl": 0.58,
+      "pnl_pct": 0.0011,
       "stop": 166.9,
       "target": 174.53,
       "reason": "[75% invested rule] ICE is the strongest relative performer on the watchlist (+4.0% day), trading above VWAP (+0.6%), and has broken out of the opening range. It has positive news catalysts (Barclays/KBW upgrades) and is in a defensive sector (exchange infrastructure) that often holds up in risk-off environments. High conviction due to momentum and news alignment.",
@@ -422,10 +368,10 @@
       "team": "defense",
       "qty": 8.0,
       "entry": 277.44,
-      "price": 277.16,
-      "value": 2217.28,
-      "pnl": -2.24,
-      "pnl_pct": -0.001,
+      "price": 277.79,
+      "value": 2222.28,
+      "pnl": 2.76,
+      "pnl_pct": 0.0012,
       "stop": 273.54,
       "target": 286.04,
       "reason": "[75% invested rule] BNP Paribas and RBC raise price targets. Trend is up, currently below VWAP \u2014 likely to recover and confirm above VWAP with volume.",
@@ -440,10 +386,10 @@
       "team": "healthcare",
       "qty": 0.46495844,
       "entry": 1433.61,
-      "price": 1420.19,
-      "value": 660.33,
-      "pnl": -6.24,
-      "pnl_pct": -0.0094,
+      "price": 1418.91,
+      "value": 659.74,
+      "pnl": -6.83,
+      "pnl_pct": -0.0103,
       "stop": 1399.35,
       "target": 1470.38,
       "reason": "[75% invested rule] Top defensive pharma showing relative stability at the open with strong analyst target increases up to $1,650; watching for intraday breakout confirmation above VWAP.",
@@ -458,10 +404,10 @@
       "team": "consumer",
       "qty": 6.0,
       "entry": 107.34,
-      "price": 107.27,
-      "value": 643.59,
-      "pnl": -0.45,
-      "pnl_pct": -0.0007,
+      "price": 107.01,
+      "value": 642.06,
+      "pnl": -1.98,
+      "pnl_pct": -0.0031,
       "stop": 105.73,
       "target": 110.57,
       "reason": "Breakdown short: Broke below opening range (109.34-111.76) and is trading below VWAP (-0.9%). High relative volume (1.84x) confirms the breakdown. Trend is down, RSI 65.8 is not oversold enough to prevent further downside in a risk-off tape. Fits the 'short weak stocks below VWAP' strategy.",
@@ -476,10 +422,10 @@
       "team": "financials",
       "qty": 1.0,
       "entry": 635.54,
-      "price": 638.65,
-      "value": 638.65,
-      "pnl": 3.11,
-      "pnl_pct": 0.0049,
+      "price": 639.42,
+      "value": 639.42,
+      "pnl": 3.88,
+      "pnl_pct": 0.0061,
       "stop": 626.0,
       "target": 651.42,
       "reason": "[75% invested rule] MA has strong news catalysts (Barclays PT $700, Argus PT $694, Evercore PT $640). It is trading near VWAP (-0.3%) and has broken down from the opening range, which is a risk. However, the positive news flow is significant. If it stabilizes and reclaims VWAP, it could be a good entry. Currently slightly below VWAP, so waiting for confirmation.",
@@ -494,10 +440,10 @@
       "team": "healthcare",
       "qty": 4.0,
       "entry": 149.32,
-      "price": 149.98,
-      "value": 599.92,
-      "pnl": 2.64,
-      "pnl_pct": 0.0044,
+      "price": 149.84,
+      "value": 599.34,
+      "pnl": 2.06,
+      "pnl_pct": 0.0034,
       "stop": 146.21,
       "target": 155.16,
       "reason": "[75% invested rule] Trading above VWAP (0.0%) and has RVol 1.55. However, it broke down below the opening range high. In a risk-off market, longs are half size and need conviction +1. Conviction is low (4) because of the breakdown. Not a primary candidate for immediate entry given the strict 'No-Trade' protocol for sub-1.5x RVol or below VWAP, but MRK is borderline. Better to wait for a VWAP bounce confirmation.",
@@ -512,10 +458,10 @@
       "team": "consumer",
       "qty": 38.0,
       "entry": 17.38,
-      "price": 17.43,
-      "value": 662.15,
-      "pnl": 1.71,
-      "pnl_pct": 0.0026,
+      "price": 17.41,
+      "value": 661.39,
+      "pnl": 0.95,
+      "pnl_pct": 0.0014,
       "stop": 17.03,
       "target": 18.08,
       "reason": "Breakdown short: Broke below opening range (17.48-17.96) and is trading below VWAP (-1.0%). Day change is -4.5%, indicating significant weakness. Relative volume is 1.04x (average), which is lower than ideal but the price action is clear. In a risk-off environment, cruise lines are vulnerable. Stop is tight to limit risk on lower conviction.",
@@ -526,32 +472,14 @@
       "setup": "opening range breakout"
     },
     {
-      "symbol": "NVDA",
-      "team": "tech",
-      "qty": -8.0,
-      "entry": 205.41,
-      "price": 201.16,
-      "value": -1609.28,
-      "pnl": 33.99,
-      "pnl_pct": 0.0207,
-      "stop": 202.56,
-      "target": 201.34,
-      "reason": "[75% invested rule] NVDA already down -3.9% with OR breakdown and vwap -0.6%; shorting risky given potential bounce from oversold conditions; very tight stop (1%) needed if entering. Only consider if breakdown accelerates further.",
-      "side": "short",
-      "trailing": true,
-      "scaled": true,
-      "first_stop": 207.5,
-      "setup": "other"
-    },
-    {
       "symbol": "PLTR",
       "team": "defense",
       "qty": -25.0,
       "entry": 184.55,
-      "price": 184.03,
-      "value": -4600.75,
-      "pnl": 13.0,
-      "pnl_pct": 0.0028,
+      "price": 185.24,
+      "value": -4631.0,
+      "pnl": -17.25,
+      "pnl_pct": -0.0037,
       "stop": 188.5,
       "target": 177.41,
       "reason": "[75% invested rule] RVol is 1.57 and price is below VWAP with a breakdown, but short-term momentum is slightly positive and earnings are Monday, so conviction is limited.",
@@ -566,10 +494,10 @@
       "team": "financials",
       "qty": 1.0,
       "entry": 468.5,
-      "price": 464.06,
-      "value": 464.06,
-      "pnl": -4.44,
-      "pnl_pct": -0.0095,
+      "price": 464.81,
+      "value": 464.81,
+      "pnl": -3.69,
+      "pnl_pct": -0.0079,
       "stop": 461.41,
       "target": 480.15,
       "reason": "[75% invested rule] SPGI is up +1.7% on the day and above VWAP (+0.2%). While RSI is overbought (86.9), it is in a strong 20-day uptrend (+18.6%). In a risk-off market, high-quality financial data providers can act as defensive plays. Looking for a hold of VWAP or a slight pullback to enter. Lower conviction due to overbought RSI and overnight warning of potential pullback.",
@@ -1496,7 +1424,7 @@
       "status": "open",
       "conviction": 2,
       "reason": "[75% invested rule] vwap -0.5% with OR 201.83-205.69 breakdown; overnight BNP Paribas cut to $250 from $310 (sentiment -0.7, importance 4); multiple analyst downgrades; risk-off favors shorts of weak names with bad news; rvol 0.81 low but breakdown on strong fundamental deterioration is valid short in current regime",
-      "stop_price": 200.72,
+      "stop_price": 200.58,
       "take_profit_price": 195.07
     },
     {
@@ -1561,11 +1489,11 @@
       "est_price": 326.65,
       "entry_price": 326.61,
       "side": "short",
-      "exit_price": null,
-      "exit_reason": null,
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "exit_price": 321.98,
+      "exit_reason": "trailing_stop",
+      "pnl": 43.06,
+      "pnl_pct": 0.0132,
+      "status": "closed",
       "conviction": 5,
       "reason": "Risk-off market favors shorts of weak stocks. AVGO OR BREAKDOWN below VWAP (-0.7%), trend down, rvol 1.95 > 1.5. Chip sector weakness confirmed. Shorting weak stocks (below VWAP, breaking down) is favored per market mood. RSI 38.3 not extremely oversold (<25), avoiding high bounce risk per lesson 2026-10-23. Tight 1.5% stop, 3% target with partial sell and trailing stop rest.",
       "stop_price": 321.95,
@@ -1759,11 +1687,11 @@
       "est_price": 205.45,
       "entry_price": 205.40875,
       "side": "short",
-      "exit_price": null,
-      "exit_reason": null,
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "exit_price": 202.575,
+      "exit_reason": "trailing_stop",
+      "pnl": 52.72,
+      "pnl_pct": 0.016,
+      "status": "closed",
       "conviction": 2,
       "reason": "[75% invested rule] NVDA already down -3.9% with OR breakdown and vwap -0.6%; shorting risky given potential bounce from oversold conditions; very tight stop (1%) needed if entering. Only consider if breakdown accelerates further.",
       "stop_price": 202.56,
@@ -1903,11 +1831,11 @@
       "est_price": 498.35,
       "entry_price": 498.33,
       "side": "short",
-      "exit_price": null,
-      "exit_reason": null,
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "open",
+      "exit_price": 496.615,
+      "exit_reason": "trailing_stop",
+      "pnl": 7.31,
+      "pnl_pct": 0.0024,
+      "status": "closed",
       "conviction": 4,
       "reason": "[75% invested rule] High relative volume (2.51x), clear opening-range breakdown, below VWAP, RSI 34.8 above the bounce-risk zone, and sympathy weakness from the Intel news.",
       "stop_price": 496.54,
@@ -2973,6 +2901,39 @@
   "recent_trades": [
     {
       "date": "2026-10-30",
+      "team": "tech",
+      "symbol": "AMD",
+      "entry_price": 498.33,
+      "exit_price": 496.615,
+      "exit_reason": "trailing_stop",
+      "pnl": 7.31,
+      "pnl_pct": 0.0024,
+      "reason": "[75% invested rule] High relative volume (2.51x), clear opening-range breakdown, below VWAP, RSI 34.8 above the bounce-risk zone, and sympathy weakness from the Intel news."
+    },
+    {
+      "date": "2026-10-30",
+      "team": "tech",
+      "symbol": "AVGO",
+      "entry_price": 326.61,
+      "exit_price": 321.98,
+      "exit_reason": "trailing_stop",
+      "pnl": 43.06,
+      "pnl_pct": 0.0132,
+      "reason": "Risk-off market favors shorts of weak stocks. AVGO OR BREAKDOWN below VWAP (-0.7%), trend down, rvol 1.95 > 1.5. Chip sector weakness confirmed. Shorting weak stocks (below VWAP, breaking down) is favored per market mood. RSI 38.3 not extremely oversold (<25), avoiding high bounce risk per lesson 2026-10-23. Tight 1.5% stop, 3% target with partial sell and trailing stop rest."
+    },
+    {
+      "date": "2026-10-30",
+      "team": "tech",
+      "symbol": "NVDA",
+      "entry_price": 205.40875,
+      "exit_price": 202.575,
+      "exit_reason": "trailing_stop",
+      "pnl": 52.72,
+      "pnl_pct": 0.016,
+      "reason": "[75% invested rule] NVDA already down -3.9% with OR breakdown and vwap -0.6%; shorting risky given potential bounce from oversold conditions; very tight stop (1%) needed if entering. Only consider if breakdown accelerates further."
+    },
+    {
+      "date": "2026-10-30",
       "team": "defense",
       "symbol": "PLTR",
       "entry_price": 186.88,
@@ -3212,39 +3173,6 @@
       "pnl": -5.62,
       "pnl_pct": -0.0035,
       "reason": "[75% invested rule] Strong breakdown below OR (106.67-109.82) to 106.59. Below VWAP (-1.0%). High rvol (3.07). Trend is down. Risk-off environment favors shorts. Clear technical breakdown."
-    },
-    {
-      "date": "2026-10-30",
-      "team": "tech",
-      "symbol": "INTC",
-      "entry_price": 66.982273,
-      "exit_price": 66.44,
-      "exit_reason": "trailing_stop",
-      "pnl": 20.92,
-      "pnl_pct": 0.0071,
-      "reason": "Extreme setup: -27.9% day, -25.4% premarket gap, very negative news (target cut to $90, weak guidance, multiple downgrades), high rvol (14.43), clear breakdown."
-    },
-    {
-      "date": "2026-10-30",
-      "team": "tech",
-      "symbol": "AVGO",
-      "entry_price": 328.117,
-      "exit_price": 326.64,
-      "exit_reason": "manager_sell",
-      "pnl": 11.5,
-      "pnl_pct": 0.0035,
-      "reason": "[75% invested rule] Negative rumor and price below VWAP with high relative volume (3.07x) suggests continued weakness."
-    },
-    {
-      "date": "2026-10-30",
-      "team": "tech",
-      "symbol": "AMD",
-      "entry_price": 512.83,
-      "exit_price": 513.0,
-      "exit_reason": "manager_sell",
-      "pnl": -4.1,
-      "pnl_pct": -0.0013,
-      "reason": "[75% invested rule] Trading below VWAP with strong relative volume (6.11x) and negative momentum, likely to continue declining."
     }
   ],
   "report": {
@@ -5458,13 +5386,13 @@
     }
   },
   "mood": {
-    "time": "2026-10-30T14:48-04:00",
+    "time": "2026-10-30T15:08-04:00",
     "regime": "risk_off",
-    "spy": -0.0239,
-    "qqq": -0.0433,
-    "fear_vixy": 0.1611,
+    "spy": -0.0214,
+    "qqq": -0.0403,
+    "fear_vixy": 0.1374,
     "breadth": 0.29,
-    "why": "index down -4.3%, fear gauge (VIXY) up 16.1%",
+    "why": "index down -4.0%, fear gauge (VIXY) up 13.7%",
     "note": "Market is falling hard or fear is spiking. Longs are half size and need conviction +1. Shorting weak stocks (below VWAP, breaking down) is favored."
   },
   "preflight": {
@@ -11700,6 +11628,33 @@
         "news": {
           "findings": [
             {
+              "symbol": "LMT",
+              "sentiment": 0.5,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "U.S. approves $2.1B sale of 500 Patriot Missiles to Ukraine",
+              "source": "benzinga",
+              "time": "15:03"
+            },
+            {
+              "symbol": "SPY",
+              "sentiment": 0.0,
+              "importance": 1,
+              "unconfirmed_rumor": false,
+              "summary": "Market performance tracking ETF",
+              "source": "benzinga",
+              "time": "15:03"
+            },
+            {
+              "symbol": "VGK",
+              "sentiment": 0.0,
+              "importance": 1,
+              "unconfirmed_rumor": false,
+              "summary": "European equity ETF",
+              "source": "benzinga",
+              "time": "15:03"
+            },
+            {
               "symbol": "TXT",
               "sentiment": 0.3,
               "importance": 2,
@@ -11764,9 +11719,11 @@
               "source": "benzinga"
             }
           ],
-          "urgent": [],
-          "overall": "Defense stocks posted broadly positive earnings and guidance, especially General Dynamics and L3Harris, while Kratos faced a notable downgrade. Overall sentiment is cautiously optimistic, with most companies showing solid performance but a few negative analyst actions.",
-          "items_read": 22
+          "urgent": [
+            "LMT"
+          ],
+          "overall": "The news about LMT's $2.1B Patriot Missile sale to Ukraine has caught the market's attention, while the performance of the SPY and VGK ETFs are monitored for market trends.",
+          "items_read": 23
         },
         "social": {
           "findings": [],
@@ -14307,7 +14264,7 @@
           "status": "open",
           "conviction": 2,
           "reason": "[75% invested rule] vwap -0.5% with OR 201.83-205.69 breakdown; overnight BNP Paribas cut to $250 from $310 (sentiment -0.7, importance 4); multiple analyst downgrades; risk-off favors shorts of weak names with bad news; rvol 0.81 low but breakdown on strong fundamental deterioration is valid short in current regime",
-          "stop_price": 200.72,
+          "stop_price": 200.58,
           "take_profit_price": 195.07
         },
         {
@@ -17207,8 +17164,8 @@
             }
           ],
           "urgent": [],
-          "overall": "Space and aerospace stocks saw mixed signals: Howmet Aerospace faced several downward price\u2011target revisions, while Astra Space drew negative analyst commentary. SpaceX had a blend of setbacks\u2014lost a telecom partnership and faces spectrum competition\u2014but also posted a strong AI\u2011division profit, keeping sentiment cautiously optimistic.",
-          "items_read": 22
+          "overall": "No recent news or SEC filings have been found for the team's selected space and aerospace companies. Please provide more criteria or timeframe for the search.",
+          "items_read": 23
         },
         "social": {
           "findings": [],
@@ -24615,13 +24572,13 @@
           "trail_active": true,
           "first_stop": 331.55,
           "entry_price": 326.61,
-          "exit_price": null,
-          "exit_time": null,
-          "exit_reason": null,
+          "exit_price": 321.98,
+          "exit_time": "2026-10-30T19:07:21.477033457Z",
+          "exit_reason": "trailing_stop",
           "exit_note": null,
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "pnl": 43.06,
+          "pnl_pct": 0.0132,
+          "status": "closed",
           "conviction": 5,
           "reason": "Risk-off market favors shorts of weak stocks. AVGO OR BREAKDOWN below VWAP (-0.7%), trend down, rvol 1.95 > 1.5. Chip sector weakness confirmed. Shorting weak stocks (below VWAP, breaking down) is favored per market mood. RSI 38.3 not extremely oversold (<25), avoiding high bounce risk per lesson 2026-10-23. Tight 1.5% stop, 3% target with partial sell and trailing stop rest.",
           "stop_price": 321.95,
@@ -24706,13 +24663,13 @@
           "trail_active": true,
           "first_stop": 207.5,
           "entry_price": 205.40875,
-          "exit_price": null,
-          "exit_time": null,
-          "exit_reason": null,
+          "exit_price": 202.575,
+          "exit_time": "2026-10-30T19:04:43.884926496Z",
+          "exit_reason": "trailing_stop",
           "exit_note": null,
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "pnl": 52.72,
+          "pnl_pct": 0.016,
+          "status": "closed",
           "conviction": 2,
           "reason": "[75% invested rule] NVDA already down -3.9% with OR breakdown and vwap -0.6%; shorting risky given potential bounce from oversold conditions; very tight stop (1%) needed if entering. Only consider if breakdown accelerates further.",
           "stop_price": 202.56,
@@ -24760,13 +24717,13 @@
           "trail_active": true,
           "first_stop": 508.32,
           "entry_price": 498.33,
-          "exit_price": null,
-          "exit_time": null,
-          "exit_reason": null,
+          "exit_price": 496.615,
+          "exit_time": "2026-10-30T19:07:32.515759404Z",
+          "exit_reason": "trailing_stop",
           "exit_note": null,
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "open",
+          "pnl": 7.31,
+          "pnl_pct": 0.0024,
+          "status": "closed",
           "conviction": 4,
           "reason": "[75% invested rule] High relative volume (2.51x), clear opening-range breakdown, below VWAP, RSI 34.8 above the bounce-risk zone, and sympathy weakness from the Intel news.",
           "stop_price": 496.54,
@@ -27942,8 +27899,8 @@
         },
         {
           "date": "2026-10-30",
-          "realized": -5.22,
-          "cum": -114.46
+          "realized": 97.87,
+          "cum": -11.37
         }
       ],
       "watchlist": {
@@ -44547,6 +44504,24 @@
         "news": {
           "findings": [
             {
+              "symbol": "BMY",
+              "sentiment": -1.0,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Bristol Myers Squibb's stock price may be affected as Morgan Stanley reduces its price target from $41 to $40.",
+              "source": "fiscal.ai, 2026-10-30T19:01:56Z",
+              "time": "15:05"
+            },
+            {
+              "symbol": "AMGN",
+              "sentiment": 0.0,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Amgen's Phase III clinical trial for pegloticase in gout remains active and continues to recruit participants.",
+              "source": "FDA, 2026-10-30T19:01:52Z",
+              "time": "15:05"
+            },
+            {
               "symbol": "MRK",
               "sentiment": 0.8,
               "importance": 5,
@@ -44630,10 +44605,10 @@
             }
           ],
           "urgent": [
-            "MRK"
+            "BMY"
           ],
-          "overall": "Merck\u2019s strong earnings and upgraded guidance boost sentiment in the healthcare space. The rest of the listed stocks have no material news at this time.",
-          "items_read": 52
+          "overall": "The news impacting the Healthcare sector today involves Bristol Myers Squibb's reduced price target and Amgen's active Phase III clinical trial.",
+          "items_read": 55
         },
         "social": {
           "findings": [],
