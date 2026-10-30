@@ -1,60 +1,40 @@
 {
   "date": "2026-10-30",
-  "time": "11:20",
+  "time": "11:39",
   "trigger": "must invest $3,333 more (75% rule)",
-  "market_view": "Risk-off market with SPOT showing a strong breakout above its opening range (570.41-582.86) at +5.4% day move, with rvol of 2.43 and clear momentum. CMCSA also has a breakout above its OR (22.6-22.93) at +3.4% with rvol of 1.57. The overall environment is cautious but SPOT's technical breakout provides a clear entry opportunity.",
   "decisions": [
+    {
+      "symbol": "MGM",
+      "action": "BUY",
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Strong intraday momentum with +2.8% day move, +1.9% above VWAP, and 2.22x relative volume. Opening range breakout confirmed. Despite negative news on price targets, the technical setup is the strongest on the watchlist and meets the RVol > 1.5x requirement."
+    },
     {
       "symbol": "SPOT",
       "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.02,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
       "setup": "opening range breakout",
-      "reason": "Strong breakout above OR (570.41-582.86) with rvol 2.43 and positive day momentum (+5.4%). Meets volume filter >1.5x and has clear technical setup above VWAP."
+      "reason": "High conviction long: +5.6% day move, +0.5% above VWAP, and 2.33x relative volume. Clear opening range breakout. News catalyst regarding AI remix service adds fundamental support. Meets RVol > 1.5x requirement."
     },
     {
       "symbol": "CMCSA",
       "action": "BUY",
-      "conviction": 4,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.02,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.025,
       "setup": "opening range breakout",
-      "reason": "Breakout above OR (22.6-22.93) with rvol 1.57 and positive day move (+3.4%). Solid volume confirmation and above VWAP strength."
+      "reason": "Defensive play in a risk-off market. +3.6% day move, +0.6% above VWAP, and 1.46x relative volume (close to threshold, but strong trend). Opening range breakout confirmed. RSI 66.7 suggests room to run before overbought."
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "SPOT",
-      "direction": "long",
-      "conviction": 5,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.02,
-      "setup": "opening range breakout",
-      "reason": "Strong breakout above OR with high volume (rvol 2.43) and positive day momentum. Clear technical setup above VWAP."
-    },
-    {
-      "symbol": "CMCSA",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.02,
-      "setup": "opening range breakout",
-      "reason": "Breakout above OR (22.6-22.93) with solid volume (rvol 1.57) and positive day move. Meets volume filter and shows strength above VWAP."
-    }
+    "MGM",
+    "SPOT",
+    "CMCSA",
+    "TTWO",
+    "BAM"
   ],
-  "experiment": "Volume-filtered momentum entry test - applying rvol > 1.2 and 15-min volume > 1.5x average filter to SPOT and CMCSA",
-  "watchlist_changes": {
-    "add": [
-      {
-        "symbol": "SPOT",
-        "reason": "Strong breakout above OR (570.41-582.86) with rvol 2.43 and positive day momentum (+5.4%). Clear technical entry above VWAP."
-      },
-      {
-        "symbol": "CMCSA",
-        "reason": "Breakout above OR (22.6-22.93) with rvol 1.57 and positive day move (+3.4%). Solid volume confirmation and above VWAP strength."
-      }
-    ],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }
