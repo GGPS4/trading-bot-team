@@ -1,57 +1,76 @@
 {
   "date": "2026-10-30",
-  "time": "09:37",
-  "trigger": "first look this run",
-  "market_view": "The broader market is sharply risk-off with QQQ down 2.5% and VIXY surging 5.5%. At just 9:31 AM, intraday volume, VWAP, and opening ranges have not yet established across our sector watchlist. In strict compliance with the President's capital-preservation and No-Trade protocol, we are standing down until clear relative volume (>1.5x) and opening-range structures materialize.",
-  "decisions": [],
-  "ranked_ideas": [
-    {
-      "symbol": "AMZN",
-      "direction": "short",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "earnings gap",
-      "reason": "Q3 earnings miss, sharp debt increase, and multiple price-target cuts; prime short candidate if opening range breaks down on high volume."
-    },
-    {
-      "symbol": "NCLH",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.025,
-      "take_profit_pct": 0.05,
-      "setup": "momentum",
-      "reason": "Down 1.6% at the open following an extended 20-day run (RSI 72.3); susceptible to risk-off profit-taking if broader market stays weak."
-    },
+  "time": "09:53",
+  "trigger": "big news on ['AMZN']",
+  "market_view": "The market is in a strong risk-off regime with indices down sharply and fear gauge rising, favoring short positions on weak stocks with high volume. My team is underinvested at 36% but must deploy capital into high-conviction setups while respecting strict criteria. I will exit losing longs and focus on shorts with negative momentum and relative volume above 1.5x.",
+  "decisions": [
     {
       "symbol": "BKNG",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "action": "SELL",
+      "conviction": 5,
+      "stop_loss_pct": 0.005,
+      "take_profit_pct": 0.01,
       "setup": "mean reversion",
-      "reason": "Showing early relative strength (+1.1%) from an oversold RSI of 37.5; requires VWAP confirmation and rvol > 1.5x before entry."
+      "reason": "BKNG long position is below VWAP with negative momentum (m15 -1.5%, trend down), violating the VWAP rule for longs and incurring a loss. Exit immediately per lesson to prevent further downside."
     },
     {
-      "symbol": "CVNA",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.025,
-      "take_profit_pct": 0.05,
-      "setup": "news catalyst",
-      "reason": "Citizens PT upgrade to $85; strong prior 5d momentum (+16.2%), but needs volume confirmation above VWAP in this risk-off environment."
-    },
-    {
-      "symbol": "SBUX",
-      "direction": "long",
-      "conviction": 3,
+      "symbol": "LULU",
+      "action": "SHORT",
+      "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "BTIG reiterated Buy with $115 target post-Q4 results; stable at open, but overbought (RSI 90.2) requires patience for a VWAP hold."
+      "setup": "momentum",
+      "reason": "LULU is below VWAP with strong negative momentum (m15 -2.0%, trend down) and high relative volume (rvol 2.31), qualifying as a short in risk-off market. No major news catalyst, so technical breakdown is clear."
     }
   ],
-  "experiment": "Testing strict volume confirmation (rvol > 1.5x) and 1R profit locking in risk-off regime",
+  "ranked_ideas": [
+    {
+      "symbol": "LOW",
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "LOW is below VWAP with very high relative volume (rvol 4.93) and negative momentum (m15 -0.8%, trend down), making it a strong short candidate despite mild positive day performance."
+    },
+    {
+      "symbol": "HD",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "HD is below VWAP with relative volume above 1.5x (rvol 1.75) and negative momentum (m15 -1.1%, trend down), suitable for shorting in risk-off environment."
+    },
+    {
+      "symbol": "EBAY",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "EBAY is above VWAP with positive momentum (m15 +1.4%) and high volume (rvol 2.13), but longs are half size in risk-off market. Mild bullish news supports a small position."
+    },
+    {
+      "symbol": "CCL",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "momentum",
+      "reason": "CCL is below VWAP with trend down, but relative volume is low (rvol 0.93), so conviction is lower. Consider only if other setups fail."
+    },
+    {
+      "symbol": "AMZN",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "news catalyst",
+      "reason": "AMZN has high volume (rvol 8.96) and above VWAP, but mixed news (earnings miss vs. bullish report) and risk-off mood reduce conviction. Avoid due to major negative news catalyst per lessons."
+    }
+  ],
+  "experiment": "Add a momentum filter for short trades: only short if m15/m60 momentum is negative and relative volume >1.5x; otherwise skip.",
   "watchlist_changes": {
     "add": [],
     "remove": []

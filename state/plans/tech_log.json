@@ -1899,5 +1899,35 @@
     "results": [
       "BUY NVDA x8 (~$1652.64) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "09:53",
+    "trigger": "big news on ['INTC']",
+    "market_view": "The market is in a severe risk-off regime with QQQ down -2.7%, VIXY up 6.5%, and most IT stocks under pressure. Intel is collapsing on disastrous guidance, dragging AMD and the semiconductor complex lower. We are prioritizing capital preservation: exiting longs that are below VWAP with no reversal, and only adding high-liquidity longs that are above VWAP with confirmed momentum.",
+    "experiment": "Add a VWAP-reclaim filter to the entry criteria",
+    "decisions": [
+      {
+        "symbol": "AAPL",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": "AAPL is below VWAP (-0.2%) and trending down in a risk-off market; the QQQ regime filter blocks longs below VWAP and capital preservation requires exiting this weak long rather than holding a breaking position.",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "MSFT",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "MSFT is the best available long: above VWAP (+0.6%), strong 15m momentum (+0.7%), high relative volume (4.08x), and near the top of its opening range. It is a high-liquidity focus name, though conviction is capped by the risk-off regime.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL AAPL",
+      "BUY MSFT blocked: conviction 5 is below the minimum 6 (risk-off market)",
+      "BUY GOOGL x5 (~$1407.15) [deploy]"
+    ]
   }
 ]

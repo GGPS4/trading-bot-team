@@ -1592,5 +1592,39 @@
       "SELL TDG",
       "COVER SPCX"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "09:45",
+    "trigger": "price moves in ['VSAT']",
+    "market_view": "The market is in a sharp risk-off environment with SPY down 1.2% and QQQ down 2.7%. Per executive orders, the 75% investment rule is suspended and strict entry filters are active. We are staying in cash as no stock currently presents a high-conviction setup above VWAP with clean momentum.",
+    "experiment": "Add a volume-spike filter (rvol >2) before taking news-catalyst entries to improve entry quality",
+    "decisions": [],
+    "results": [
+      "BUY SPCX x2 (~$276.19) [deploy]",
+      "BUY RKLB x5 (~$284.52) [deploy]",
+      "SHORT VSAT x9 (~$661.05) [deploy]"
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "09:53",
+    "trigger": "price moves in ['VSAT']",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "RKLB",
+        "action": "SELL",
+        "conviction": null,
+        "reason": "Stop hit. Price $56.04 is below the $56.03 stop level. In a risk-off environment with -1.5% move since entry and negative 15m momentum, the opening range breakout thesis is invalidated. Cutting losses to preserve capital per executive order.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "SELL RKLB",
+      "BUY LPTH x41 (~$326.77) [deploy]"
+    ]
   }
 ]

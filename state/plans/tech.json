@@ -1,59 +1,49 @@
 {
   "date": "2026-10-30",
-  "time": "09:43",
-  "trigger": "price moves in ['ANET']",
-  "orders": [
+  "time": "09:53",
+  "trigger": "big news on ['INTC']",
+  "market_view": "The market is in a severe risk-off regime with QQQ down -2.7%, VIXY up 6.5%, and most IT stocks under pressure. Intel is collapsing on disastrous guidance, dragging AMD and the semiconductor complex lower. We are prioritizing capital preservation: exiting longs that are below VWAP with no reversal, and only adding high-liquidity longs that are above VWAP with confirmed momentum.",
+  "decisions": [
     {
       "symbol": "AAPL",
-      "side": "long",
-      "action": "sell",
-      "qty": 2,
-      "reason": "reduce position size by 50% per president directive"
+      "action": "SELL",
+      "conviction": 5,
+      "stop_loss_pct": 0,
+      "take_profit_pct": 0,
+      "setup": "other",
+      "reason": "AAPL is below VWAP (-0.2%) and trending down in a risk-off market; the QQQ regime filter blocks longs below VWAP and capital preservation requires exiting this weak long rather than holding a breaking position."
     },
     {
-      "symbol": "INTU",
-      "side": "long",
-      "action": "sell",
-      "qty": 1,
-      "reason": "reduce position size by 50% (full close)"
-    },
-    {
-      "symbol": "INTC",
-      "side": "short",
-      "action": "sell",
-      "qty": 50,
-      "stop_loss_pct": 0.02,
+      "symbol": "MSFT",
+      "action": "BUY",
+      "conviction": 5,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "reason": "high conviction short setup: price below VWAP, rvol 27.68, negative news importance 5"
+      "setup": "momentum",
+      "reason": "MSFT is the best available long: above VWAP (+0.6%), strong 15m momentum (+0.7%), high relative volume (4.08x), and near the top of its opening range. It is a high-liquidity focus name, though conviction is capped by the risk-off regime."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "NVDA",
-      "setup": "opening range breakout",
-      "conviction": 4
-    },
-    {
-      "symbol": "AAPL",
-      "setup": "opening range breakout",
-      "conviction": 3
-    },
-    {
-      "symbol": "MSFT",
-      "setup": "momentum",
-      "conviction": 4
-    },
-    {
       "symbol": "GOOGL",
-      "setup": "momentum",
-      "conviction": 2
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "mean reversion",
+      "reason": "Above VWAP (+0.2%) with high rvol (5.27) and deeply oversold RSI (15.6); potential bounce but negative news and risk-off cap conviction."
     },
     {
-      "symbol": "AMAT",
+      "symbol": "AMD",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "momentum",
-      "conviction": 3
+      "reason": "Above VWAP (+0.1%) with very high rvol (7.72) and strong 15m momentum (+0.9%); sympathy bounce candidate after Intel news but still risky."
     }
   ],
+  "experiment": "Add a VWAP-reclaim filter to the entry criteria",
   "watchlist_changes": {
     "add": [],
     "remove": []

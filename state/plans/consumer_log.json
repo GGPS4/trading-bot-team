@@ -1410,5 +1410,64 @@
       "SHORT NCLH x74 (~$1316.46) [deploy]",
       "BUY BKNG x4 (~$606.88) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "09:45",
+    "trigger": "big news on ['AMZN']",
+    "market_view": "The market is in a steep risk-off decline with QQQ down 2.7% and VIXY up 6.2%, heavily weighed down by Amazon's post-earnings drop. With the 75% mandatory capital deployment rule suspended, capital preservation is paramount. We are liquidating underperforming longs trading below VWAP and restricting new entries to high-volume setups meeting strict presidential filters.",
+    "experiment": "Implement an automated 1R partial profit-taking rule for all news-catalyst trades, regardless of direction.",
+    "decisions": [
+      {
+        "symbol": "BKNG",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": "BKNG is trading -0.8% below VWAP and -1.5% off the open in a severe risk-off tape. Violates strict long requirements and triggers our rule to exit longs below VWAP.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "EBAY",
+        "action": "BUY",
+        "conviction": 5,
+        "reason": "EBAY satisfies the executive 'No-Trade' exception criteria with relative volume at 1.83 (>1.5x) and price holding +0.2% above VWAP following target upgrades.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL BKNG failed: DELETE /v2/positions/BKNG -> 403: {\"available\":\"0\",\"code\":40310000,\"existing_qty\":\"4\",\"held_for_orders\":\"4\",\"message\":\"insufficient qty available for order (requested: 4, available: 0)\",\"symbol\":\"BKNG\"}",
+      "BUY EBAY blocked: conviction 5 is below the minimum 6 (risk-off market)",
+      "SHORT SBUX x12 (~$1258.68) [deploy]"
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "09:53",
+    "trigger": "big news on ['AMZN']",
+    "market_view": "The market is in a strong risk-off regime with indices down sharply and fear gauge rising, favoring short positions on weak stocks with high volume. My team is underinvested at 36% but must deploy capital into high-conviction setups while respecting strict criteria. I will exit losing longs and focus on shorts with negative momentum and relative volume above 1.5x.",
+    "experiment": "Add a momentum filter for short trades: only short if m15/m60 momentum is negative and relative volume >1.5x; otherwise skip.",
+    "decisions": [
+      {
+        "symbol": "BKNG",
+        "action": "SELL",
+        "conviction": 5,
+        "reason": "BKNG long position is below VWAP with negative momentum (m15 -1.5%, trend down), violating the VWAP rule for longs and incurring a loss. Exit immediately per lesson to prevent further downside.",
+        "stop_loss_pct": 0.005,
+        "take_profit_pct": 0.01
+      },
+      {
+        "symbol": "LULU",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "LULU is below VWAP with strong negative momentum (m15 -2.0%, trend down) and high relative volume (rvol 2.31), qualifying as a short in risk-off market. No major news catalyst, so technical breakdown is clear.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL BKNG failed: DELETE /v2/positions/BKNG -> 404: {\"code\":40410000,\"message\":\"position not found: BKNG\"}",
+      "SHORT LULU blocked: team already has the maximum number of positions"
+    ]
   }
 ]
