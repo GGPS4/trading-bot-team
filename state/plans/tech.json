@@ -1,64 +1,28 @@
 {
   "date": "2026-10-30",
-  "time": "11:53",
-  "trigger": "scheduled look",
-  "market_view": "The IT sector is under significant pressure in a risk-off environment with QQQ down -3.2% and VIXY up 8.8%. Most watchlist stocks trade below VWAP with opening range breakdowns, reflecting broad selling pressure. Only AAPL remains notably above VWAP with acceptable relative volume (1.74), while INTC and other severely declining names present short opportunities as risk-off favors shorting weak stocks below VWAP per the QQQ regime filter. President's orders enforce no long positions below VWAP in down market and focus on high-liquidity names NVDA and AAPL.",
+  "time": "12:09",
+  "trigger": "big news on ['TXN', 'ABR']",
+  "market_view": "Market is in strong risk-off regime with QQQ down 3.2% and VIXY up 9.5%. Broad tech sell-off has most watchlist stocks trading below VWAP with opening-range breakdowns. Executive guidance to focus on high-liquidity names (NVDA, AAPL) and avoid longs below VWAP in down market severely limits long opportunities. We maintain existing AVGO short and look to short AAPL below VWAP in continuation of risk-off trend.",
   "decisions": [
     {
       "symbol": "AAPL",
-      "action": "BUY",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "Above VWAP (+0.1%) with rvol 1.74 > 1.5, president's focus stock per executive orders. OR 344.14-348.75 with price at 347.12 (83% up range). Breakout above 348.75 would confirm opening range breakout. Risk-off environment permits only longs above VWAP per QQQ regime filter."
-    },
-    {
-      "symbol": "INTC",
-      "action": "SHORT",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakdown",
-      "reason": "-28.6% day drop with -25.4% premarket gap, rvol 9.07 (highest in watchlist). Below VWAP (-0.1%) in risk-off environment. Pre-market guidance cut to $90, CDS at record high, Evercore target cut to $131. Clear downtrend favors shorting weak stocks per team strategy. Largest rvol provides volume confirmation of downside move."
-    },
-    {
-      "symbol": "NVDA",
       "action": "SHORT",
       "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakdown / VWAP breakdown",
-      "reason": "President's focus stock for liquidity. Below VWAP (-0.6%) with OR breakdown confirmed. Risk-off market favors shorting weak stocks. rvol 1.65 > 1.5 provides volume support. NVIDIA's -3.8% decline aligns with sector risk-off. Avoid long below VWAP per regime filter; shorting weak stocks permitted in risk-off."
+      "setup": "momentum",
+      "reason": "AAPL trading below VWAP (-0.1%) with rvol 1.66 > 1.5 in risk-off environment; executive favors shorts of weak stocks below VWAP. Negative 15-min momentum (-0.3%) and trend flat confirm downtrend. Tight stop required per volatility guidelines."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "GOOGL",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Above VWAP (+0.3%) with rvol 2.72 > 1.5, trend flat. OR 279.01-281.94 with price at 281.8 near top. Breakout above 281.94 would confirm. Selective long allowed above VWAP in risk-off per regime filter. Aligns with president's high-liquidity focus."
-    },
-    {
-      "symbol": "AMD",
-      "direction": "short",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakdown",
-      "reason": "Down -9.8% with rvol 3.29 (second highest after INTC). Below VWAP (-0.5%) in risk-off favors shorts. Significant decline provides momentum. RSI 36.7 not extreme oversold so bounce risk limited per lesson 2026-10-23 (no shorting <25 RSI). Technicals support continuation short."
-    },
-    {
-      "symbol": "SNDK",
+      "symbol": "NVDA",
       "direction": "short",
       "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
+      "stop_loss_pct": 0.01,
+      "take_profit_pct": 0.02,
       "setup": "opening range breakdown",
-      "reason": "Down -11.8% with rvol 2.67 > 1.5, OR breakdown confirmed. Below VWAP (-2.5%) in risk-off favors shorts. Data-center business drove 88.3% of revenue increase reflecting AI infrastructure demand (news sentiment 0.7), but stock technicals weak near-term. AI storage demand theme intact but taking partial profits on breakdown."
+      "reason": "NVDA already down -3.9% with OR breakdown and vwap -0.6%; shorting risky given potential bounce from oversold conditions; very tight stop (1%) needed if entering. Only consider if breakdown accelerates further."
     }
   ],
   "experiment": "",

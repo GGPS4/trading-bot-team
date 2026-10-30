@@ -2241,5 +2241,78 @@
       "BUY AAPL blocked: team already has the maximum number of positions",
       "SHORT NVDA blocked: team already has the maximum number of positions"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "12:00",
+    "trigger": "big news on ['INTC']",
+    "market_view": "Market is in strong risk-off mode with QQQ down 3.1%, VIXY up 8.9%, SPY down 1.6%. All 15 watchlist stocks are down today, led by INTC (-29%), RDDT (-28.1%), SNDK (-11.9%), AMD (-9.9%), and CRWV (-10.5%). Key technical themes: opening range breakdowns prevalent (11 of 15 stocks), VWAP below price on only 3 names (AAPL +0.2%, MSFT +0.1%, GOOGL +0.3%). Executive orders enforce QQQ regime filter (no longs below VWAP in down market), 50% position size reduction until two consecutive positive P&L days, and focus on high-liquidity names AAPL/NVDA. Account at max drawdown, capital preservation top priority.",
+    "experiment": "QQQ regime filter - limit new long entries when QQQ is down >0.5% and price below VWAP; testing compliance with executive order to not take long positions below VWAP in down market, which is currently active (QQQ -3.1%, 12 of 15 watchlist stocks below VWAP)",
+    "decisions": [
+      {
+        "symbol": "MSFT",
+        "action": "SELL",
+        "conviction": 2,
+        "reason": "Cutting small loss (-0.073%) in risk-off environment; OR 514.59-526, vwap +0.1%, rvol 1.7; per executive order to reduce position size and focus on high-conviction setups; QQQ down -3.1% favors capital preservation over losing trades",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0
+      },
+      {
+        "symbol": "INTU",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "Realizing profit (0.886%) on momentum setup; OR 333.31-343.75, stock at 342.27 near top; vwap +0.6%, rvol 1.33 < 1.5; risk-off environment favors reducing exposure; per executive order to focus on high-conviction setups and high-liquidity names",
+        "stop_loss_pct": 0,
+        "take_profit_pct": 0.009
+      },
+      {
+        "symbol": "AAPL",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "rvol 1.7 > 1.5 threshold, price above VWAP (+0.2%) satisfies QQQ regime filter; focus on high-liquidity name per executive order; OR 344.14-348.75 offers upside potential; day -0.5%, open +0.1%, look +0.1%, rvol 1.7 supports breakout above OR top",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "NOW",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "Risk-off market favors shorting weak stocks; vwap -1.5% below VWAP; rvol 2.59 > 1.5; OR BREAKDOWN and trend down align with shorting strategy; stock down -3.7% day, open -3.0%, OR 106.67-109.82 BREAKDOWN; m15 +0.1%, m60 -1.1%",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL MSFT",
+      "SELL INTU",
+      "BUY AAPL blocked: conviction 3 is below the minimum 6 (risk-off market)",
+      "SHORT NOW blocked: conviction 3 is below the minimum 5",
+      "BUY GOOGL blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY AMD blocked: conviction 1 is below the minimum 3 (risk-off market)",
+      "BUY INTC blocked: conviction 0 is below the minimum 3 (risk-off market)",
+      "BUY SNDK blocked: conviction 1 is below the minimum 3 (risk-off market)",
+      "BUY CRWV blocked: conviction 1 is below the minimum 3 (risk-off market)"
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "12:09",
+    "trigger": "big news on ['TXN', 'ABR']",
+    "market_view": "Market is in strong risk-off regime with QQQ down 3.2% and VIXY up 9.5%. Broad tech sell-off has most watchlist stocks trading below VWAP with opening-range breakdowns. Executive guidance to focus on high-liquidity names (NVDA, AAPL) and avoid longs below VWAP in down market severely limits long opportunities. We maintain existing AVGO short and look to short AAPL below VWAP in continuation of risk-off trend.",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "AAPL",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "AAPL trading below VWAP (-0.1%) with rvol 1.66 > 1.5 in risk-off environment; executive favors shorts of weak stocks below VWAP. Negative 15-min momentum (-0.3%) and trend flat confirm downtrend. Tight stop required per volatility guidelines.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SHORT AAPL blocked: conviction 3 is below the minimum 5",
+      "SHORT NVDA x16 (~$3287.2) [deploy]"
+    ]
   }
 ]

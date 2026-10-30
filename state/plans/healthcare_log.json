@@ -1940,5 +1940,35 @@
       "BUY REGN blocked: conviction 3 is below the minimum 6 (risk-off market)",
       "SHORT MRK blocked: conviction 2 is below the minimum 5"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "12:09",
+    "trigger": "must invest $4,823 more (75% rule)",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "ALNY",
+        "action": "COVER",
+        "conviction": null,
+        "reason": "Executive order mandates focus on defensive healthcare (LLY, ABBV) only and suspends the 75% invested rule due to max drawdown. This short position is underperforming (flat PnL) and violates the 'defensive only' directive. Closing it to preserve capital and comply with strict no-trade protocol for non-defensive names.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      },
+      {
+        "symbol": "LLY",
+        "action": "HOLD",
+        "conviction": null,
+        "reason": "Holding existing defensive position. Although RSI is overbought (77.7) and price is below VWAP, the executive order explicitly prioritizes LLY and ABBV. No new entries allowed without high conviction (RVol > 1.5x AND above VWAP), which LLY does not currently meet (below VWAP). Waiting for a retest of VWAP or opening range support before considering any adjustment, but for now, holding to comply with the 'defensive focus' order.",
+        "stop_loss_pct": null,
+        "take_profit_pct": null
+      }
+    ],
+    "results": [
+      "COVER ALNY",
+      "BUY ABBV x2 (~$590.13) [deploy]",
+      "BUY MRK x4 (~$596.76) [deploy]"
+    ]
   }
 ]

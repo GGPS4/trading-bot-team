@@ -1,41 +1,61 @@
 {
   "date": "2026-10-30",
-  "time": "11:53",
-  "trigger": "must invest $6,006 more (75% rule)",
-  "market_view": "Healthcare sector trading in pronounced risk-off environment with SPY down 1.6%, QQQ down 3.0%, VIXY up 8.7%. Only REGN shows extreme relative volume (7.27x) with +5.1% gap up on earnings, while 13 of 15 team stocks trade below VWAP with opening range breakdowns. Market mood favors shorting weak stocks below VWAP on breakdowns, but 75% invested rule requires deploying capital. LLY already long from earlier session down -1.0%.",
+  "time": "12:09",
+  "trigger": "must invest $4,823 more (75% rule)",
   "decisions": [
     {
       "symbol": "ALNY",
-      "action": "SHORT",
-      "conviction": 5,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakdown",
-      "reason": "rvol 5.19 with OR breakdown 170.86-180.01, price 3.5% below VWAP (-3.5%), day -3.8% trending down. RBC cuts price target to $280 provides fundamental support. Perfect risk-off short: high rvol, breakdown, well below VWAP, negative sentiment aligns with favored shorting strategy in risk-off regime."
+      "action": "COVER",
+      "reason": "Executive order mandates focus on defensive healthcare (LLY, ABBV) only and suspends the 75% invested rule due to max drawdown. This short position is underperforming (flat PnL) and violates the 'defensive only' directive. Closing it to preserve capital and comply with strict no-trade protocol for non-defensive names."
     },
     {
-      "symbol": "REGN",
-      "action": "BUY",
-      "conviction": 3,
+      "symbol": "LLY",
+      "action": "HOLD",
+      "reason": "Holding existing defensive position. Although RSI is overbought (77.7) and price is below VWAP, the executive order explicitly prioritizes LLY and ABBV. No new entries allowed without high conviction (RVol > 1.5x AND above VWAP), which LLY does not currently meet (below VWAP). Waiting for a retest of VWAP or opening range support before considering any adjustment, but for now, holding to comply with the 'defensive focus' order."
+    }
+  ],
+  "ranked_ideas": [
+    {
+      "symbol": "ABBV",
+      "setup": "news catalyst",
+      "conviction": 6,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "rvol 7.27 (extreme) meets executive criteria of >1.5x with price above VWAP (-0.1%). +11.7% day, +5.1% gap up on Q3 results with Sanofi partnership expansion and FDA approval for Pasatru. Size reduced given risk-off and earnings lesson (m15 -0.1% not >0.5%), but undeniable volume and catalyst demand entry despite broader market weakness."
+      "reason": "Strongest defensive candidate per executive order. Beat Q3 earnings, raised FY guidance, and dividend. Trading flat/slightly up (+1.5%) in a risk-off market, showing relative strength. However, it is currently below VWAP and RVol is low (0.98). This is a 'watch' idea; the investor should only buy if it reclaims VWAP with RVol > 1.5x. Currently, it does not meet the strict entry criteria (above VWAP + RVol > 1.5x), so this is a conditional idea for the next check."
     },
     {
       "symbol": "MRK",
-      "action": "SHORT",
+      "setup": "momentum",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "reason": "Trading above VWAP (0.0%) and has RVol 1.55. However, it broke down below the opening range high. In a risk-off market, longs are half size and need conviction +1. Conviction is low (4) because of the breakdown. Not a primary candidate for immediate entry given the strict 'No-Trade' protocol for sub-1.5x RVol or below VWAP, but MRK is borderline. Better to wait for a VWAP bounce confirmation."
+    },
+    {
+      "symbol": "HLN",
+      "setup": "mean reversion",
+      "conviction": 3,
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
+      "reason": "Oversold (RSI 38.5, 5d -17.6%). Gapped up +2.3% pre-market. However, it is below VWAP (-0.6%) and RVol is 1.46 (below the 1.5x threshold). Executive order restricts to LLY/ABBV. This idea is invalid under current orders."
+    },
+    {
+      "symbol": "REGN",
+      "setup": "earnings gap",
       "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "opening range breakdown",
-      "reason": "OR BREAKDOWN 149.82-151.28, price below VWAP (-0.5%), rvol 1.6 just above 1.5 threshold. Day +1.5% but flat trend with breakdown. Goldman Sachs lowered price target from $63 to $61 provides mild fundamental support for short. Secondary risk-off short with modest conviction given rvol barely clears 1.5x."
+      "stop_loss_pct": 0.03,
+      "take_profit_pct": 0.05,
+      "reason": "Strong earnings gap (+11.7%) and high RVol (6.85). However, it is below VWAP (-0.2%) and trend is down. Executive order restricts to LLY/ABBV. This idea is invalid under current orders."
+    },
+    {
+      "symbol": "TMO",
+      "setup": "other",
+      "conviction": 1,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "reason": "Weak stock, below VWAP, breakdown. Could be a short candidate, but executive order focuses on defensive longs (LLY, ABBV) and capital preservation. Shorting is favored in risk-off, but the specific order is 'Focus on defensive healthcare (LLY, ABBV) only'. This implies avoiding other names. Therefore, no action."
     }
   ],
-  "ranked_ideas": [],
-  "experiment": "Testing executive strategy: prioritize high-conviction news catalysts above VWAP with dynamic ATR-based stops. Evaluating whether REGN entry violates risk-off earnings lesson or if extreme rvol (7.27x) overrides m15 momentum filter.",
-  "watchlist_changes": {
-    "add": [],
-    "remove": []
-  }
+  "watchlist_adds": [],
+  "watchlist_removes": []
 }

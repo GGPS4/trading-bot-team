@@ -1,14 +1,3 @@
-[2026-10-30 08:46:56 ET] LLM: providers ready: gemini, groq, openrouter
-[2026-10-30 08:46:56 ET] mode=paper capital=$98,752.86 teams=['defense', 'space', 'entertainment', 'tech', 'consumer', 'financials', 'healthcare']
-[2026-10-30 08:46:56 ET] Auto: trading session until 14:06 ET
-[2026-10-30 08:47:54 ET] LLM: groq models -> ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'allam-2-7b', 'qwen/qwen3.8-27b']
-[2026-10-30 08:47:55 ET] LLM: openrouter models -> ['recursive/flint-v1.0:free', 'xingchen-agi/xing4.0-29b-a4b:free', 'nvidia/nemotron-3.5-super-vl:free', 'dots-studio/dots-3-note-preview:free', 'liquid/lfm-2.5-2.6b:free', 'nvidia/nemotron-3.5-lightning:free']
-[2026-10-30 08:47:57 ET] LLM: openrouter xingchen-agi/xing4.0-29b-a4b:free hit its per-minute limit: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"xingchen-agi/xing4.0-29b-a4b:free is temporarily rate-limited upstream. Please retry
-[2026-10-30 08:48:06 ET] System check: all good
-[2026-10-30 08:48:13 ET] entertainment: watchlist remove_rejected EA - list would drop below 15 stocks
-[2026-10-30 08:48:22 ET] Pre-market scan: 11 watched gappers, 4 outside the watchlists
-[2026-10-30 08:48:22 ET] defense: researching (morning)
-[2026-10-30 08:48:25 ET] LLM: defense news researcher answered (groq openai/gpt-oss-120b)
 [2026-10-30 08:48:25 ET] space: researching (morning)
 [2026-10-30 08:48:32 ET] LLM: space news researcher answered (groq openai/gpt-oss-120b)
 [2026-10-30 08:48:32 ET] entertainment: researching (morning)
@@ -503,3 +492,27 @@
 [2026-10-30 11:59:01 ET] financials: BUY SPGI x1 stop 461.41 first target 480.15 (75% rule)
 [2026-10-30 11:59:01 ET] financials: BUY MA x1 stop 626.0 first target 651.42 (75% rule)
 [2026-10-30 11:59:01 ET] financials: ['SELL JPM', 'SELL MS', 'BUY ICE x3 (~$508.33) [deploy]', 'BUY SPGI x1 (~$468.44) [deploy]', 'BUY MA x1 (~$635.53) [deploy]']
+[2026-10-30 11:59:03 ET] Saved progress to GitHub (dashboard updated).
+[2026-10-30 11:59:30 ET] LLM: tech manager answered (openrouter nvidia/nemotron-3.5-lightning:free)
+[2026-10-30 12:00:08 ET] journal: updated 5 trade(s)
+[2026-10-30 12:00:19 ET] LLM: financials news researcher answered (groq allam-2-7b)
+[2026-10-30 12:00:19 ET] tech: SELL MSFT - Cutting small loss (-0.073%) in risk-off environment; OR 514.59-526, vwap +0.1%,
+[2026-10-30 12:00:19 ET] tech: SELL INTU - Realizing profit (0.886%) on momentum setup; OR 333.31-343.75, stock at 342.27 n
+[2026-10-30 12:00:19 ET] tech: ['SELL MSFT', 'SELL INTU', 'BUY AAPL blocked: conviction 3 is below the minimum 6 (risk-off market)', 'SHORT NOW blocked: conviction 3 is below the minimum 5', 'BUY GOOGL blocked: conviction 2 is below the minimum 3 (risk-off market)', 'BUY AMD blocked: conviction 1 is below the minimum 3 (risk-off market)', 'BUY INTC blocked: conviction 0 is below the minimum 3 (risk-off market)', 'BUY SNDK blocked: conviction 1 is below the minimum 3 (risk-off market)', 'BUY CRWV blocked: conviction 1 is below the minimum 3 (risk-off market)']
+[2026-10-30 12:05:04 ET] journal: updated 2 trade(s)
+[2026-10-30 12:05:11 ET] entertainment: manager takes a look (must invest $3,333 more (75% rule))
+[2026-10-30 12:05:11 ET] defense: manager takes a look (scheduled look)
+[2026-10-30 12:05:12 ET] LLM: tech news researcher answered (groq allam-2-7b)
+[2026-10-30 12:05:12 ET] tech: manager takes a look (big news on ['TXN', 'ABR'])
+[2026-10-30 12:05:12 ET] LLM: entertainment manager answered (groq qwen/qwen3.8-27b)
+[2026-10-30 12:05:12 ET] consumer: manager takes a look (scheduled look)
+[2026-10-30 12:08:03 ET] LLM: tech manager answered (openrouter nvidia/nemotron-3.5-lightning:free)
+[2026-10-30 12:08:04 ET] healthcare: manager takes a look (must invest $4,823 more (75% rule))
+[2026-10-30 12:08:06 ET] LLM: healthcare manager answered (groq qwen/qwen3.8-27b)
+[2026-10-30 12:09:00 ET] entertainment: skipped this check: 'str' object has no attribute 'get'
+[2026-10-30 12:09:00 ET] tech: SHORT NVDA x16 stop 207.5 first target 201.34 (75% rule)
+[2026-10-30 12:09:00 ET] tech: ['SHORT AAPL blocked: conviction 3 is below the minimum 5', 'SHORT NVDA x16 (~$3287.2) [deploy]']
+[2026-10-30 12:09:00 ET] healthcare: COVER ALNY - Executive order mandates focus on defensive healthcare (LLY, ABBV) only and susp
+[2026-10-30 12:09:00 ET] healthcare: BUY ABBV x2 stop 290.64 first target 303.92 (75% rule)
+[2026-10-30 12:09:00 ET] healthcare: BUY MRK x4 stop 146.21 first target 155.16 (75% rule)
+[2026-10-30 12:09:00 ET] healthcare: ['COVER ALNY', 'BUY ABBV x2 (~$590.13) [deploy]', 'BUY MRK x4 (~$596.76) [deploy]']
