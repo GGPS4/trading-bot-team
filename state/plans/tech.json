@@ -1,43 +1,59 @@
 {
   "date": "2026-10-30",
-  "time": "12:27",
-  "trigger": "must invest $10,135 more (75% rule)",
-  "decisions": [
+  "time": "14:16",
+  "trigger": "first look this run",
+  "market_view": "The market is in a severe risk-off regime with QQQ down 4% and VIXY up 14%, led by a historic Intel crash that is dragging semiconductors lower. Nearly every watchlist stock is below VWAP with opening-range breakdowns, and many are at extreme oversold RSI levels below 25, which makes new shorts dangerous due to bounce risk. Our two existing shorts (AVGO, NVDA) are working and up about 1.5%, so the disciplined move is to hold them into the automatic close rather than force new low-conviction entries.",
+  "decisions": [],
+  "ranked_ideas": [
     {
       "symbol": "AMD",
-      "action": "short",
-      "stop_loss_pct": 0.015,
+      "direction": "short",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "conviction": 7,
-      "reason": "Strong breakdown below opening range with high relative volume (2.91x) and negative momentum in a risk-off environment. Shorting weakness is favored by the current regime."
+      "setup": "opening range breakout",
+      "reason": "High relative volume (2.51x), clear opening-range breakdown, below VWAP, RSI 34.8 above the bounce-risk zone, and sympathy weakness from the Intel news."
     },
     {
-      "symbol": "RDDT",
-      "action": "short",
-      "stop_loss_pct": 0.015,
+      "symbol": "SNDK",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "conviction": 8,
-      "reason": "Massive gap down (-29.2%) on bad news (analyst forecast cuts), trading well below VWAP with high volume (6.0x rvol). Clear breakdown setup."
+      "setup": "opening range breakout",
+      "reason": "Relative volume 2.12x, down 14.9%, below VWAP by 4.3%, opening-range breakdown, with mixed post-earnings price-target adjustments weighing on the stock."
     },
     {
-      "symbol": "INTC",
-      "action": "short",
-      "stop_loss_pct": 0.015,
+      "symbol": "NOW",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakout",
+      "reason": "Relative volume 2.03x, below VWAP by 2.1%, opening-range breakdown, and a slight price-target cut from BNP Paribas in a risk-off software selloff."
+    },
+    {
+      "symbol": "AAPL",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "High-liquidity name per executive orders, relative volume 1.56x, below VWAP, opening-range breakdown, and intraday downtrend in a risk-off market."
+    },
+    {
+      "symbol": "GOOGL",
+      "direction": "short",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
       "setup": "news catalyst",
-      "conviction": 9,
-      "reason": "Catastrophic drop (-29.6%) on weak guidance and analyst downgrades. Extremely high volume (8.13x rvol) and clear breakdown. High conviction short in risk-off market."
+      "reason": "Relative volume 2.01x and below VWAP, but RSI 13.9 is extreme oversold so conviction is capped; avoid new short until bounce risk subsides."
     }
   ],
-  "ranked_ideas": [
-    "SNDK",
-    "NOW",
-    "AMAT",
-    "PANW",
-    "TXN"
-  ],
-  "watchlist_adds": [],
-  "watchlist_removes": []
+  "experiment": "Add a VWAP-reclaim filter to the entry criteria",
+  "watchlist_changes": {
+    "add": [],
+    "remove": []
+  }
 }

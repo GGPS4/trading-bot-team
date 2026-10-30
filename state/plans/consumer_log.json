@@ -1673,5 +1673,43 @@
       "BUY CCL blocked: conviction 1 is below the minimum 3 (risk-off market)",
       "BUY NCLH blocked: conviction 1 is below the minimum 3 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "14:16",
+    "trigger": "first look this run",
+    "market_view": "",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "AMZN",
+        "action": "buy",
+        "conviction": 8,
+        "reason": "Strong news catalyst short: Q3 earnings miss and $220B AI capex shock. Gapped down 7.9% pre-market, currently trading below VWAP (-0.4% vs VWAP, -1.9% day) with high relative volume (3.4x). Market is risk-off (SPY -2.1%, VIXY +14.1%), favoring shorts on weak names. RSI 33.1 suggests downside room but high volume confirms the move is real, not a fade. Stop is tight to respect the 1-2% rule.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "LULU",
+        "action": "buy",
+        "conviction": 7,
+        "reason": "Breakdown short: Broke below opening range (109.34-111.76) and is trading below VWAP (-0.9%). High relative volume (1.84x) confirms the breakdown. Trend is down, RSI 65.8 is not oversold enough to prevent further downside in a risk-off tape. Fits the 'short weak stocks below VWAP' strategy.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "NCLH",
+        "action": "buy",
+        "conviction": 6,
+        "reason": "Breakdown short: Broke below opening range (17.48-17.96) and is trading below VWAP (-1.0%). Day change is -4.5%, indicating significant weakness. Relative volume is 1.04x (average), which is lower than ideal but the price action is clear. In a risk-off environment, cruise lines are vulnerable. Stop is tight to limit risk on lower conviction.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      }
+    ],
+    "results": [
+      "BUY AMZN x2 (~$478.25)",
+      "BUY LULU x6 (~$644.07)",
+      "BUY NCLH x38 (~$660.44)"
+    ]
   }
 ]
