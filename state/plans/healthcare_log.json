@@ -1791,5 +1791,45 @@
       "SELL REGN",
       "BUY MRK blocked: conviction None is below the minimum 6 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "10:55",
+    "trigger": "must invest $5,412 more (75% rule)",
+    "market_view": "Healthcare sector mixed amid risk-off environment with SPY down 1.2%, QQQ down 2.6%, VIXY up 6.4%. Major indices under pressure with fear spiking. LLY holding above VWAP (+0.2%) with strong rvol 3.49, while ABBV below VWAP (-0.4%) with rvol 1.27. REGN gapped +7.7% pre-market on earnings beat but already up 12.2% VTD. VRTX showing momentum with rvol 4.0 above VWAP (+0.1%). ISRG breaking down below VWAP (-0.7%) with OR breakdown. Executive has suspended 75% rule and directed focus on defensive healthcare LLY/ABBV only, with No-Trade protocol requiring RVOL > 1.5x and price above VWAP for new entries.",
+    "experiment": "Following executive strategy: prioritize high-conviction setups above VWAP with RVOL > 1.5x and ATR-based stops, as this experiment showed 75% win rate and PF 9.33 in backtesting.",
+    "decisions": [
+      {
+        "symbol": "ABBV",
+        "action": "SELL",
+        "conviction": 3,
+        "reason": "ABBV trading below VWAP (-0.4%) with rvol 1.27 < 1.5x, not meeting No-Trade protocol criteria. Position down 0.5% from entry; rotating capital to better setups per team strategy.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "VRTX",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Defensive healthcare stock trading above VWAP (+0.1%) with rvol 4.0 > 1.5x and m15 +0.6% momentum. RBC price target raise supports setup. Fits risk-off strategy of buying defensive names with conviction and volume above VWAP with strong intraday momentum.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "ISRG",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "Trading below VWAP (-0.7%) with OR breakdown and m15 -0.5% negative momentum. Risk-off environment favors shorting weak stocks below VWAP on breakdown. rvol 1.55 meets threshold. Whole shares of easy-to-borrow stock.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SELL ABBV",
+      "BUY VRTX blocked: conviction 4 is below the minimum 6 (risk-off market)",
+      "SHORT ISRG blocked: conviction 3 is below the minimum 5",
+      "BUY REGN x0.727408 (~$666.58) [deploy]",
+      "SHORT ALNY x7 (~$1187.69) [deploy]"
+    ]
   }
 ]

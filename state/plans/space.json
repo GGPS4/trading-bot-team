@@ -1,35 +1,17 @@
 {
   "date": "2026-10-30",
-  "time": "10:49",
-  "trigger": "price moves in ['VSAT']",
-  "market_view": "The market is in strong risk-off mode with SPY down 1.3%, QQQ down 2.6%, and VIXY up 7.3%, reflecting heightened fear. Aerospace stocks are mixed: some breaking down on analyst downgrades and negative news (GE, SATS), while high-volume names like BA and LPTH show technical strength with opening range breakouts. Short opportunities favor stocks below VWAP with breakdowns, but entries must meet volume thresholds given the cautious environment.",
+  "time": "11:03",
+  "trigger": "must invest $3,024 more (75% rule)",
+  "market_view": "A risk-off environment prevails with SPY -1.3%, QQQ -2.6%, and VIXY spiking 6.7% amid fears. Space aerospace stocks show negative bias from cancelled MVNO deals, analyst downgrades, and Cramer sell calls, though oversold candidates and breakdown opportunities exist. The team must balance the executive's RVol > 2.0 filter with the president's risk-off shorting preference while working to deploy capital toward the 75% minimum.",
   "decisions": [
     {
-      "symbol": "SPCX",
+      "symbol": "VSAT",
       "action": "SELL",
       "conviction": 3,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.003,
-      "setup": "other",
-      "reason": "Closing long at small profit +0.33% after T-Mobile CEO rules out MVNO deal (news researcher sentiment -0.5) and SpaceX opposing FCC spectrum limits; stock at top of OR 135.93-139 with rvol 1.94; negative sentiment building."
-    },
-    {
-      "symbol": "LUNR",
-      "action": "COVER",
-      "conviction": 3,
-      "stop_loss_pct": 0.009,
-      "take_profit_pct": 0.05,
-      "setup": "other",
-      "reason": "Covering short at loss -0.92% after stock moved against short near top of OR 10.97-11.29; very weak rvol 0.81 and m60 -1.9% negative momentum; risk-off mood favors other setups."
-    },
-    {
-      "symbol": "RKLB",
-      "action": "COVER",
-      "conviction": 3,
-      "stop_loss_pct": 0.0125,
-      "take_profit_pct": 0.05,
-      "setup": "other",
-      "reason": "Covering short at loss -1.25% after stock moved against short near top of OR 55.68-57.51; rvol 1.52 just above threshold but m15 +1.3% positive momentum working against short; reallocating capital."
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "momentum",
+      "reason": "Position bought at 10:49 has stalled with minimal gain (PNL +0.0015%); RVol 1.45 below president's 1.5x threshold; risk-off environment favors redeployment; lessons learned caution on low-conviction momentum plays that have lost steam"
     },
     {
       "symbol": "LPTH",
@@ -37,69 +19,79 @@
       "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "High rvol 2.51 > 2.0 meets highest conviction threshold; OR 7.75-8.06 with price $8.02 at top of range; vwap +0.5%, m15 +0.9%, m60 +0.3%, trend flat; daily history shows +5.2% typical move; 5d +18.9% 20d -23.3% but RSI 35.9 not overbought."
+      "setup": "mean reversion",
+      "reason": "RVol 2.09 meets executive's high-conviction threshold; oversold RSI 35.9 despite -4.0% daily move; opened +3.1% but fading toward OR top at 8.06; 50d below with 5d +18.9%/20d -23.3% divergence suggesting mean reversion potential; risk-off oversold bounces viable in aerospace names"
     },
     {
-      "symbol": "GE",
+      "symbol": "FLY",
       "action": "SHORT",
       "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "other",
-      "reason": "Clear breakdown below VWAP -0.8% and OR low 306.0; rvol 1.67 > 1.5; negative news BNP Paribas cuts price target to $250 from $310 (fiscal.ai sentiment -0.7 overnight); day -2.4% open -1.6% strong down move; risk-off mood favors shorts of large-cap breakdowns."
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout (downside)",
+      "reason": "OR 18.74-19.55 breakdown with vwap -1.1% significantly below price; day -5.8% strong downmove consistent with risk-off mood; m15 -0.4%, m60 -0.8% confirm downtrend; lessons learned note FLY's high-rvol nature but breakdown on bad news favors shorts when market is risk-off; tight 2% stop limits premature exit on normal noise"
     }
   ],
   "ranked_ideas": [
-    {
-      "symbol": "VSAT",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "strong breakout momentum m15 +3.2% m60 +2.8% trend up OR breakout 71.78-75.33 rvol 1.46 above 1.5x threshold; price $77.47 above OR despite day -0.6% open +3.3% look +3.2%"
-    },
     {
       "symbol": "TDG",
       "direction": "long",
       "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "other",
-      "reason": "rvol 1.87 > 1.5 high-priced name daily move +1.4% 5d +3.0% 20d +7.2% RSI 68.1 50d above average though lessons learned caution on wide stops for first 15 min for TDG"
+      "setup": "momentum",
+      "reason": "RVol 1.58 just above president's 1.5x threshold; trend up with m15 +0.0%, m60 +0.2%; high-priced $1166.24 requires widened stops per lessons learned; OR 1164.18-1180.6 with price at bottom; daily +1.4% move but fragile in risk-off environment"
+    },
+    {
+      "symbol": "SPCX",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "RVol 1.78 above 1.5x president threshold; OR 135.93-139 BREAKOUT with price at 139.68 above range; m15 +0.9%, m60 +1.1% show upside momentum; however, gapped -4.3% premarket on T-Mobile MVNO cancellation news and multiple negative sentiment readings create overhang"
     },
     {
       "symbol": "BA",
       "direction": "long",
+      "conviction": 1,
+      "stop_loss_pct": 0.025,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "RVol 2.32 highest in universe but heavily compromised by multiple analyst downgrades and legal probes; OR breakout above 172.72 but trend flat, vwap +0.3% weak, look -0.2% deteriorating; lessons learned explicitly warn against BA longs when downgrades cap upward momentum in large-cap aerospace"
+    },
+    {
+      "symbol": "GE",
+      "direction": "long",
       "conviction": 2,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakout",
-      "reason": "rvol 2.01 > 2.0 OR breakout but overwhelming negative sentiment from news researcher (-0.5, -0.2, -0.2) multiple analyst downgrades and legal probes cap upward momentum per lessons learned 2026-10-28"
+      "setup": "VWAP bounce",
+      "reason": "RVol 1.43 below 1.5x threshold but trending up from -1.4% open; OR 306.0-312.6 wide with price at 306.04 at bottom; m15 +0.1% slight positive; risk-off pressure but defense/aerospace staple may find support; 50d below with RSI 53.8 offering modest oversold cushion"
     },
     {
-      "symbol": "FLY",
-      "direction": "long",
-      "conviction": 1,
+      "symbol": "HWM",
+      "direction": "short",
+      "conviction": 2,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "other",
-      "reason": "down -5.7% day open -2.6% vwap -1.2% OR 18.74-19.55 risk-off environment not favorable for longs per team strategy; prior 5d +13.6% strength now fading"
-    },
-    {
-      "symbol": "SATS",
-      "direction": "long",
-      "conviction": 1,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "other",
-      "reason": "OR breakdown rvol 0.73 low volume negative Cramer advice sentiment -0.5 overnight fiscal.ai -0.6; direct-to-phone satellite benefits from FCC proposal but bearish commentary dominates"
+      "setup": "VWAP breakdown on news",
+      "reason": "vwap -0.5% with OR 201.83-205.69 breakdown; overnight BNP Paribas cut to $250 from $310 (sentiment -0.7, importance 4); multiple analyst downgrades; risk-off favors shorts of weak names with bad news; rvol 0.81 low but breakdown on strong fundamental deterioration is valid short in current regime"
     }
   ],
-  "experiment": "Testing RVol > 2.0 filter for long entries (LPTH qualifies meeting highest conviction threshold) and dynamic trailing-stop with 3% first target then trailing stop activation per strategy guidelines",
+  "experiment": "Testing executive-mandated RVol > 2.0 filter for long entries alongside risk-off shorting strategy; comparing president's 1.5x threshold with executive's 2.0x conviction requirement in single session to determine optimal conviction level for mixed market regime",
   "watchlist_changes": {
-    "add": [],
-    "remove": []
+    "add": [
+      {
+        "symbol": "LPTH",
+        "reason": "High rvol 2.09, oversold RSI 35.9, OR near top at 8.06 - belongs on watchlist as primary high-conviction day-trading setup meeting executive's RVol > 2.0 criteria"
+      }
+    ],
+    "remove": [
+      {
+        "symbol": "VSAT",
+        "reason": "Sold position; low RVol 1.45 and stalled momentum no longer merits watchlist spot after redeployment into higher-conviction setups"
+      }
+    ]
   }
 }
