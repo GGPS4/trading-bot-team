@@ -1,37 +1,37 @@
 {
-  "updated": "2026-10-30T11:35-04:00",
+  "updated": "2026-10-30T12:35-04:00",
   "days": 30,
   "overall": {
-    "trades": 535,
-    "win_rate": 0.366,
+    "trades": 548,
+    "win_rate": 0.369,
     "avg_return": -0.0026,
-    "total_pnl": -1869.43,
-    "profit_factor": 0.55,
+    "total_pnl": -1841.68,
+    "profit_factor": 0.56,
     "enough_data": true
   },
   "by_setup": {
     "news catalyst": {
-      "trades": 136,
-      "win_rate": 0.338,
+      "trades": 137,
+      "win_rate": 0.343,
       "avg_return": -0.0032,
-      "total_pnl": -491.97,
+      "total_pnl": -491.16,
       "profit_factor": 0.47,
       "enough_data": true
     },
     "momentum": {
-      "trades": 128,
-      "win_rate": 0.344,
-      "avg_return": -0.0024,
-      "total_pnl": -403.03,
-      "profit_factor": 0.49,
+      "trades": 130,
+      "win_rate": 0.354,
+      "avg_return": -0.0023,
+      "total_pnl": -381.9,
+      "profit_factor": 0.52,
       "enough_data": true
     },
     "opening range breakout": {
-      "trades": 112,
-      "win_rate": 0.375,
-      "avg_return": -0.0013,
-      "total_pnl": -122.53,
-      "profit_factor": 0.81,
+      "trades": 119,
+      "win_rate": 0.37,
+      "avg_return": -0.0014,
+      "total_pnl": -113.36,
+      "profit_factor": 0.83,
       "enough_data": true
     },
     "untagged": {
@@ -43,19 +43,19 @@
       "enough_data": true
     },
     "other": {
-      "trades": 26,
-      "win_rate": 0.346,
-      "avg_return": -0.0028,
-      "total_pnl": -54.09,
-      "profit_factor": 0.62,
+      "trades": 28,
+      "win_rate": 0.321,
+      "avg_return": -0.0027,
+      "total_pnl": -59.19,
+      "profit_factor": 0.6,
       "enough_data": true
     },
     "mean reversion": {
-      "trades": 23,
-      "win_rate": 0.478,
-      "avg_return": 0.0009,
-      "total_pnl": -98.58,
-      "profit_factor": 0.47,
+      "trades": 24,
+      "win_rate": 0.5,
+      "avg_return": 0.001,
+      "total_pnl": -96.84,
+      "profit_factor": 0.48,
       "enough_data": true
     },
     "VWAP bounce": {
@@ -94,20 +94,20 @@
   "by_team": {
     "consumer": {
       "overall": {
-        "trades": 64,
-        "win_rate": 0.375,
-        "avg_return": -0.0037,
-        "total_pnl": -329.09,
-        "profit_factor": 0.31,
+        "trades": 67,
+        "win_rate": 0.388,
+        "avg_return": -0.0034,
+        "total_pnl": -324.36,
+        "profit_factor": 0.33,
         "enough_data": true
       },
       "by_setup": {
         "momentum": {
-          "trades": 17,
-          "win_rate": 0.353,
-          "avg_return": -0.0029,
-          "total_pnl": -60.48,
-          "profit_factor": 0.45,
+          "trades": 18,
+          "win_rate": 0.389,
+          "avg_return": -0.0024,
+          "total_pnl": -53.54,
+          "profit_factor": 0.51,
           "enough_data": true
         },
         "news catalyst": {
@@ -126,6 +126,14 @@
           "profit_factor": 0.41,
           "enough_data": true
         },
+        "mean reversion": {
+          "trades": 7,
+          "win_rate": 0.714,
+          "avg_return": 0.002,
+          "total_pnl": 11.1,
+          "profit_factor": 1.65,
+          "enough_data": true
+        },
         "untagged": {
           "trades": 6,
           "win_rate": 0.5,
@@ -134,20 +142,20 @@
           "profit_factor": 0.1,
           "enough_data": true
         },
-        "mean reversion": {
-          "trades": 6,
-          "win_rate": 0.667,
-          "avg_return": 0.0019,
-          "total_pnl": 9.36,
-          "profit_factor": 1.55,
-          "enough_data": true
-        },
         "VWAP bounce": {
           "trades": 4,
           "win_rate": 0.25,
           "avg_return": -0.0082,
           "total_pnl": -42.45,
           "profit_factor": 0.09,
+          "enough_data": false
+        },
+        "other": {
+          "trades": 2,
+          "win_rate": 0.5,
+          "avg_return": 0.0006,
+          "total_pnl": -1.68,
+          "profit_factor": 0.57,
           "enough_data": false
         },
         "earnings gap": {
@@ -172,14 +180,6 @@
           "avg_return": -0.0049,
           "total_pnl": -5.77,
           "profit_factor": 0.0,
-          "enough_data": false
-        },
-        "other": {
-          "trades": 1,
-          "win_rate": 1.0,
-          "avg_return": 0.0045,
-          "total_pnl": 2.27,
-          "profit_factor": null,
           "enough_data": false
         }
       },
@@ -232,6 +232,14 @@
           "profit_factor": 0.18,
           "enough_data": false
         },
+        "Momentum filter for short trades: only short if m15 negative and relative volume >1.5x": {
+          "trades": 3,
+          "win_rate": 0.333,
+          "avg_return": 0.0004,
+          "total_pnl": 2.01,
+          "profit_factor": 1.41,
+          "enough_data": false
+        },
         "Testing intraday opening-range breakout rotation in a risk-off tape: sell breakdowns, buy high-quality OR breakouts only": {
           "trades": 2,
           "win_rate": 0.5,
@@ -239,41 +247,33 @@
           "total_pnl": -2.38,
           "profit_factor": 0.76,
           "enough_data": false
-        },
-        "momentum shorting after breakdown in risk-off regime": {
-          "trades": 2,
-          "win_rate": 1.0,
-          "avg_return": 0.0048,
-          "total_pnl": 17.16,
-          "profit_factor": null,
-          "enough_data": false
         }
       }
     },
     "defense": {
       "overall": {
-        "trades": 81,
-        "win_rate": 0.42,
-        "avg_return": -0.0007,
-        "total_pnl": -228.43,
-        "profit_factor": 0.77,
+        "trades": 83,
+        "win_rate": 0.434,
+        "avg_return": -0.0005,
+        "total_pnl": -204.45,
+        "profit_factor": 0.79,
         "enough_data": true
       },
       "by_setup": {
         "news catalyst": {
-          "trades": 29,
-          "win_rate": 0.379,
-          "avg_return": -0.0019,
-          "total_pnl": -177.57,
-          "profit_factor": 0.46,
+          "trades": 30,
+          "win_rate": 0.4,
+          "avg_return": -0.0018,
+          "total_pnl": -176.76,
+          "profit_factor": 0.47,
           "enough_data": true
         },
         "opening range breakout": {
-          "trades": 25,
-          "win_rate": 0.48,
-          "avg_return": -0.0,
-          "total_pnl": 59.21,
-          "profit_factor": 1.27,
+          "trades": 26,
+          "win_rate": 0.5,
+          "avg_return": 0.0004,
+          "total_pnl": 82.38,
+          "profit_factor": 1.38,
           "enough_data": true
         },
         "untagged": {
@@ -552,28 +552,28 @@
     },
     "financials": {
       "overall": {
-        "trades": 70,
-        "win_rate": 0.357,
-        "avg_return": -0.0015,
-        "total_pnl": -99.14,
-        "profit_factor": 0.63,
+        "trades": 73,
+        "win_rate": 0.356,
+        "avg_return": -0.0016,
+        "total_pnl": -102.92,
+        "profit_factor": 0.62,
         "enough_data": true
       },
       "by_setup": {
+        "opening range breakout": {
+          "trades": 20,
+          "win_rate": 0.15,
+          "avg_return": -0.0031,
+          "total_pnl": -78.26,
+          "profit_factor": 0.14,
+          "enough_data": true
+        },
         "momentum": {
           "trades": 20,
           "win_rate": 0.35,
           "avg_return": -0.0003,
           "total_pnl": -5.85,
           "profit_factor": 0.9,
-          "enough_data": true
-        },
-        "opening range breakout": {
-          "trades": 17,
-          "win_rate": 0.118,
-          "avg_return": -0.0031,
-          "total_pnl": -74.48,
-          "profit_factor": 0.13,
           "enough_data": true
         },
         "news catalyst": {
@@ -702,11 +702,11 @@
     },
     "healthcare": {
       "overall": {
-        "trades": 75,
-        "win_rate": 0.32,
+        "trades": 77,
+        "win_rate": 0.312,
         "avg_return": -0.0029,
-        "total_pnl": -199.09,
-        "profit_factor": 0.53,
+        "total_pnl": -202.44,
+        "profit_factor": 0.52,
         "enough_data": true
       },
       "by_setup": {
@@ -726,6 +726,14 @@
           "profit_factor": 0.21,
           "enough_data": true
         },
+        "opening range breakout": {
+          "trades": 11,
+          "win_rate": 0.273,
+          "avg_return": -0.0024,
+          "total_pnl": -27.12,
+          "profit_factor": 0.3,
+          "enough_data": true
+        },
         "untagged": {
           "trades": 10,
           "win_rate": 0.5,
@@ -734,20 +742,12 @@
           "profit_factor": 0.67,
           "enough_data": true
         },
-        "opening range breakout": {
-          "trades": 10,
-          "win_rate": 0.3,
-          "avg_return": -0.0023,
-          "total_pnl": -24.92,
-          "profit_factor": 0.32,
-          "enough_data": true
-        },
         "other": {
-          "trades": 2,
-          "win_rate": 1.0,
-          "avg_return": 0.0089,
-          "total_pnl": 24.76,
-          "profit_factor": null,
+          "trades": 3,
+          "win_rate": 0.667,
+          "avg_return": 0.0056,
+          "total_pnl": 23.61,
+          "profit_factor": 21.53,
           "enough_data": false
         },
         "earnings gap": {
@@ -844,20 +844,20 @@
     },
     "space": {
       "overall": {
-        "trades": 82,
-        "win_rate": 0.378,
-        "avg_return": -0.0042,
-        "total_pnl": -649.15,
+        "trades": 83,
+        "win_rate": 0.373,
+        "avg_return": -0.0044,
+        "total_pnl": -656.44,
         "profit_factor": 0.25,
         "enough_data": true
       },
       "by_setup": {
         "opening range breakout": {
-          "trades": 20,
-          "win_rate": 0.35,
-          "avg_return": -0.0012,
-          "total_pnl": -70.68,
-          "profit_factor": 0.43,
+          "trades": 21,
+          "win_rate": 0.333,
+          "avg_return": -0.0022,
+          "total_pnl": -77.97,
+          "profit_factor": 0.41,
           "enough_data": true
         },
         "momentum": {
@@ -994,28 +994,28 @@
     },
     "tech": {
       "overall": {
-        "trades": 97,
-        "win_rate": 0.423,
-        "avg_return": -0.0016,
-        "total_pnl": -133.8,
-        "profit_factor": 0.85,
+        "trades": 99,
+        "win_rate": 0.424,
+        "avg_return": -0.0014,
+        "total_pnl": -120.34,
+        "profit_factor": 0.87,
         "enough_data": true
       },
       "by_setup": {
         "momentum": {
-          "trades": 26,
-          "win_rate": 0.385,
-          "avg_return": -0.0017,
-          "total_pnl": -75.63,
-          "profit_factor": 0.67,
+          "trades": 27,
+          "win_rate": 0.407,
+          "avg_return": -0.0012,
+          "total_pnl": -61.44,
+          "profit_factor": 0.73,
           "enough_data": true
         },
         "opening range breakout": {
-          "trades": 22,
-          "win_rate": 0.591,
-          "avg_return": 0.0015,
-          "total_pnl": 54.88,
-          "profit_factor": 1.6,
+          "trades": 23,
+          "win_rate": 0.565,
+          "avg_return": 0.0014,
+          "total_pnl": 54.15,
+          "profit_factor": 1.59,
           "enough_data": true
         },
         "news catalyst": {
@@ -1145,11 +1145,11 @@
   },
   "by_exit": {
     "manager_sell": {
-      "trades": 276,
-      "win_rate": 0.199,
-      "avg_return": -0.0045,
-      "total_pnl": -1813.32,
-      "profit_factor": 0.28,
+      "trades": 288,
+      "win_rate": 0.212,
+      "avg_return": -0.0043,
+      "total_pnl": -1778.28,
+      "profit_factor": 0.3,
       "enough_data": true
     },
     "end_of_day": {
@@ -1169,10 +1169,10 @@
       "enough_data": true
     },
     "stop_loss": {
-      "trades": 46,
+      "trades": 47,
       "win_rate": 0.0,
-      "avg_return": -0.0188,
-      "total_pnl": -1158.42,
+      "avg_return": -0.0189,
+      "total_pnl": -1165.71,
       "profit_factor": 0.0,
       "enough_data": true
     },

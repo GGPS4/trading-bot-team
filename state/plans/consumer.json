@@ -1,84 +1,103 @@
 {
   "date": "2026-10-30",
-  "time": "12:10",
-  "trigger": "scheduled look",
-  "market_view": "Market is in a strong risk-off regime: SPY -1.6%, QQQ -3.2%, VIXY +9.5%, with only 31% of watched stocks advancing. Longs are heavily disfavored, requiring exceptional conviction and volume confirmation. Shorting weak stocks breaking below VWAP and the opening range on high relative volume is the preferred edge today.",
+  "time": "12:39",
+  "trigger": "must invest $4,050 more (75% rule)",
+  "market_view": "Risk-off environment with SPY and QQQ down sharply; fear gauge VIXY up 9.4%. Two existing shorts (LKQ, LULU) are both above their first targets and losing money\u2014must be covered to stop the bleeding and redeploy capital. CVNA offers a clean opening-range breakout long with volume confirmation (RV 1.57, above VWAP, +1.9% m60 momentum). SBUX shows a breakdown below its opening range with above-average volume (RV 1.61) and negative intraday momentum. AMZN gapped down on weak earnings with extremely high volume (RV 4.18) and negative news catalyst, fitting a breakdown short. LOW is a tentative VWAP bounce long but RSI overbought in risk-off.",
   "decisions": [
     {
-      "symbol": "EBAY",
-      "action": "SELL",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "mean reversion",
-      "reason": "Tiny profit +0.44% after mean reversion entry; rvol 1.25 < 1.5, trend down, market risk-off; locking profit aligns with executive order to prioritize 1R gains and avoid low-conviction holds in risk-off environment."
-    },
-    {
-      "symbol": "LOW",
+      "symbol": "LKQ",
       "action": "COVER",
-      "conviction": 3,
+      "conviction": 1,
       "stop_loss_pct": 0.0,
       "take_profit_pct": 0.0,
       "setup": "other",
-      "reason": "Small loss -0.22% after short entry; price hovering just above OR low 208.83, setup stalling; redeploying capital to higher-conviction shorts with stronger volume confirmation."
-    },
-    {
-      "symbol": "NCLH",
-      "action": "COVER",
-      "conviction": 3,
-      "stop_loss_pct": 0.0,
-      "take_profit_pct": 0.0,
-      "setup": "momentum",
-      "reason": "Small profit +0.54% after momentum short; rvol 1.24 < 1.5, momentum losing steam in risk-off; locking gain and freeing capital for better setups."
+      "reason": "Short is above first target ($17.64); current price $18.39 is a loss. Stop $18.74 not hit but position unprofitable. Exit to stop bleeding and redeploy capital."
     },
     {
       "symbol": "LULU",
-      "action": "SHORT",
-      "conviction": 5,
+      "action": "COVER",
+      "conviction": 1,
+      "stop_loss_pct": 0.0,
+      "take_profit_pct": 0.0,
+      "setup": "other",
+      "reason": "Short is above first target ($103.95); current price $107.62 is a loss. Stop $108.77 not hit but position unprofitable. Exit to stop bleeding and redeploy capital."
+    },
+    {
+      "symbol": "CVNA",
+      "action": "BUY",
+      "conviction": 4,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakdown",
-      "reason": "OR breakdown below 109.34 with relative volume 1.93x > 1.5, price -1.6% below VWAP, market risk-off favors shorts; technicals strong with sustained downside momentum; no offsetting negative catalyst for LULU itself."
+      "setup": "opening range breakout",
+      "reason": "Clear opening-range breakout above OR high ($68.73) with volume confirmation (RV 1.57 > 1.5), price above VWAP, strong m60 momentum (+1.9%), uptrend (5d +15.5%, RSI 63.7). Barclays raises target to $82. Conviction high in risk-off for a confirmed breakout."
     },
     {
       "symbol": "SBUX",
       "action": "SHORT",
-      "conviction": 4,
-      "stop_loss_pct": 0.018,
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "opening range breakdown",
-      "reason": "OR breakdown below 103.94 with rvol 1.75x > 1.5, price below VWAP -0.5%, negative day -2.4%; caution with overnight BTIG Buy note but technical breakdown with volume is the play in risk-off regime; aligns with strategy to short weak stocks on breakdowns."
+      "setup": "breakdown",
+      "reason": "Breakdown below opening range ($103.94-106.12) with RV 1.61 > 1.5, price below VWAP, negative m15 momentum (-0.4%). BTIG reiterates Buy but technical breakdown dominates. Risk-off favors high-volume breakdowns."
+    },
+    {
+      "symbol": "AMZN",
+      "action": "SHORT",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "news catalyst",
+      "reason": "Gapped down -7.9% on missed Q3 earnings and debt concerns (sentiment -0.7, importance 5). Extremely high volume (RV 4.18). Negative intraday momentum (m15 -0.1%, m60 -0.3%). Likely breakdown below VWAP. News-catalyst short with extreme volume confirmation."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "AMZN",
+      "symbol": "LOW",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "VWAP bounce",
+      "reason": "Above VWAP (vwap +0.2%), RV 1.73 > 1.5, uptrend momentum (m15 +0.3%, m60 +0.6%). But RSI 76.8 overbought in risk-off\u2014lower conviction."
+    },
+    {
+      "symbol": "HD",
       "direction": "long",
       "conviction": 1,
-      "stop_loss_pct": 0.05,
-      "take_profit_pct": 0.1,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "other",
-      "reason": "Negative earnings and debt news override technical setup; RV 4.5 and price above VWAP meet No-Trade criteria but catalyst prevents entry."
+      "reason": "Weak volume (RV 0.54), no clear setup. Skip."
     },
     {
-      "symbol": "CVNA",
+      "symbol": "EBAY",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "VWAP bounce",
-      "reason": "OR 67.25-68.73, rvol 1.5 at threshold, Barclays raise to $82 overweight, trend up; but risk-off limits long size, conviction moderate."
-    },
-    {
-      "symbol": "LKQ",
-      "direction": "short",
-      "conviction": 2,
+      "conviction": 1,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
       "setup": "other",
-      "reason": "20d down -20.1%, RSI 29.9 oversold; shorting oversold bounce possible in risk-off but rvol 0.71 low limits conviction."
+      "reason": "Within opening range, weak volume (RV 1.2 < 1.5). No setup."
+    },
+    {
+      "symbol": "CCL",
+      "direction": "long",
+      "conviction": 1,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "other",
+      "reason": "Above OR breakout but RV 0.71 < 1.5, no volume confirmation."
+    },
+    {
+      "symbol": "NCLH",
+      "direction": "long",
+      "conviction": 1,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "other",
+      "reason": "Within opening range, weak volume (RV 1.16 < 1.5). No setup."
     }
   ],
+  "experiment": "momentum filter for shorts: only short if m15/m60 momentum is negative and relative volume >1.5x; otherwise skip. Testing whether SBUX (m60 +0.4% positive) should be excluded despite RV > 1.5.",
   "watchlist_changes": {
     "add": [],
     "remove": []

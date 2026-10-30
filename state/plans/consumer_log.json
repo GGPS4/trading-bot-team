@@ -1612,5 +1612,66 @@
       "BUY CVNA blocked: conviction 2 is below the minimum 3 (risk-off market)",
       "SHORT LKQ x72 (~$1323.0) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "12:39",
+    "trigger": "must invest $4,050 more (75% rule)",
+    "market_view": "Risk-off environment with SPY and QQQ down sharply; fear gauge VIXY up 9.4%. Two existing shorts (LKQ, LULU) are both above their first targets and losing money\u2014must be covered to stop the bleeding and redeploy capital. CVNA offers a clean opening-range breakout long with volume confirmation (RV 1.57, above VWAP, +1.9% m60 momentum). SBUX shows a breakdown below its opening range with above-average volume (RV 1.61) and negative intraday momentum. AMZN gapped down on weak earnings with extremely high volume (RV 4.18) and negative news catalyst, fitting a breakdown short. LOW is a tentative VWAP bounce long but RSI overbought in risk-off.",
+    "experiment": "momentum filter for shorts: only short if m15/m60 momentum is negative and relative volume >1.5x; otherwise skip. Testing whether SBUX (m60 +0.4% positive) should be excluded despite RV > 1.5.",
+    "decisions": [
+      {
+        "symbol": "LKQ",
+        "action": "COVER",
+        "conviction": 1,
+        "reason": "Short is above first target ($17.64); current price $18.39 is a loss. Stop $18.74 not hit but position unprofitable. Exit to stop bleeding and redeploy capital.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "LULU",
+        "action": "COVER",
+        "conviction": 1,
+        "reason": "Short is above first target ($103.95); current price $107.62 is a loss. Stop $108.77 not hit but position unprofitable. Exit to stop bleeding and redeploy capital.",
+        "stop_loss_pct": 0.0,
+        "take_profit_pct": 0.0
+      },
+      {
+        "symbol": "CVNA",
+        "action": "BUY",
+        "conviction": 4,
+        "reason": "Clear opening-range breakout above OR high ($68.73) with volume confirmation (RV 1.57 > 1.5), price above VWAP, strong m60 momentum (+1.9%), uptrend (5d +15.5%, RSI 63.7). Barclays raises target to $82. Conviction high in risk-off for a confirmed breakout.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "SBUX",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "Breakdown below opening range ($103.94-106.12) with RV 1.61 > 1.5, price below VWAP, negative m15 momentum (-0.4%). BTIG reiterates Buy but technical breakdown dominates. Risk-off favors high-volume breakdowns.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "AMZN",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "Gapped down -7.9% on missed Q3 earnings and debt concerns (sentiment -0.7, importance 5). Extremely high volume (RV 4.18). Negative intraday momentum (m15 -0.1%, m60 -0.3%). Likely breakdown below VWAP. News-catalyst short with extreme volume confirmation.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "COVER LKQ",
+      "COVER LULU",
+      "BUY CVNA blocked: conviction 4 is below the minimum 6 (risk-off market)",
+      "SHORT SBUX blocked: conviction 3 is below the minimum 5",
+      "SHORT AMZN blocked: conviction 3 is below the minimum 5",
+      "BUY LOW blocked: conviction 2 is below the minimum 3 (risk-off market)",
+      "BUY HD blocked: conviction 1 is below the minimum 3 (risk-off market)",
+      "BUY EBAY blocked: conviction 1 is below the minimum 3 (risk-off market)",
+      "BUY CCL blocked: conviction 1 is below the minimum 3 (risk-off market)",
+      "BUY NCLH blocked: conviction 1 is below the minimum 3 (risk-off market)"
+    ]
   }
 ]
