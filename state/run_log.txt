@@ -1,66 +1,3 @@
-[2026-10-30 09:36:20 ET] LLM: groq openai/gpt-oss-20b hit its per-minute limit: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m5eapq7ve5qb5jvp26y82dpf` service tier `on_demand` on tokens per m
-[2026-10-30 09:36:21 ET] LLM: space manager answered (groq openai/gpt-oss-120b)
-[2026-10-30 09:36:21 ET] LLM: tech manager answered (groq qwen/qwen3.8-27b)
-[2026-10-30 09:36:21 ET] LLM: financials news researcher answered (groq openai/gpt-oss-20b)
-[2026-10-30 09:36:21 ET] financials: manager takes a look (price moves in ['GS', 'MS', 'C', 'ICE', 'HOOD', 'COIN', 'EVR'])
-[2026-10-30 09:37:28 ET] LLM: financials manager answered (openrouter nvidia/nemotron-3.5-super-vl:free)
-[2026-10-30 09:37:28 ET] consumer: SHORT AMZN x5 stop 237.87 first target 223.88 (75% rule)
-[2026-10-30 09:37:28 ET] consumer: SHORT NCLH x74 stop 18.23 first target 16.9 (75% rule)
-[2026-10-30 09:37:28 ET] consumer: BUY BKNG x4 stop 149.44 first target 156.27 (75% rule)
-[2026-10-30 09:37:29 ET] consumer: ['SHORT AMZN x5 (~$1166.03) [deploy]', 'SHORT NCLH x74 (~$1316.46) [deploy]', 'BUY BKNG x4 (~$606.88) [deploy]']
-[2026-10-30 09:37:29 ET] healthcare: BUY LLY x0.469206 stop 1399.35 first target 1470.38 (75% rule)
-[2026-10-30 09:37:29 ET] healthcare: BUY ABBV x2 stop 288.96 first target 302.17 (75% rule)
-[2026-10-30 09:37:29 ET] healthcare: BUY REGN x0.72939 stop 895.61 first target 955.02 (75% rule)
-[2026-10-30 09:37:29 ET] healthcare: ['BUY LLY x0.469206 (~$666.58) [deploy]', 'BUY ABBV x2 (~$586.73) [deploy]', 'BUY REGN x0.72939 (~$666.58) [deploy]']
-[2026-10-30 09:37:30 ET] defense: SELL HII - HII has fallen -0.4% below VWAP and -0.6% off the open in a risk-off environment
-[2026-10-30 09:37:30 ET] defense: SHORT PLTR x24 stop 191.23 first target 179.98 (75% rule)
-[2026-10-30 09:37:30 ET] defense: ['SELL HII', 'BUY LMT blocked: conviction 5 is below the minimum 6 (risk-off market)', 'SHORT PLTR x24 (~$4499.52) [deploy]']
-[2026-10-30 09:37:30 ET] space: no trades
-[2026-10-30 09:37:30 ET] entertainment: no trades
-[2026-10-30 09:37:30 ET] tech: skipped this check: 'str' object has no attribute 'get'
-[2026-10-30 09:37:30 ET] financials: no trades
-[2026-10-30 09:40:03 ET] journal: updated 10 trade(s)
-[2026-10-30 09:40:09 ET] space: manager takes a look (price moves in ['SATS', 'LPTH'])
-[2026-10-30 09:40:09 ET] defense: manager takes a look (price moves in ['LDOS', 'CACI'])
-[2026-10-30 09:40:09 ET] tech: manager takes a look (price moves in ['ANET'])
-[2026-10-30 09:40:09 ET] LLM: gemini gemini-3.8-flash hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-30 09:40:09 ET] LLM: gemini gemini-3.7-flash hit its daily limit: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error,
-[2026-10-30 09:40:22 ET] LLM: tech manager answered (groq openai/gpt-oss-120b)
-[2026-10-30 09:40:23 ET] LLM: consumer news researcher answered (groq openai/gpt-oss-20b)
-[2026-10-30 09:40:23 ET] healthcare: manager takes a look (price moves in ['LLY', 'ABBV', 'BMY', 'VRTX', 'REGN', 'ALNY'])
-[2026-10-30 09:42:03 ET] LLM: healthcare manager answered (openrouter nvidia/nemotron-3.5-super-vl:free)
-[2026-10-30 09:42:28 ET] LLM: space manager answered (openrouter nvidia/nemotron-3.5-super-vl:free)
-[2026-10-30 09:43:31 ET] LLM: defense manager answered (gemini gemini-3.5-flash)
-[2026-10-30 09:43:32 ET] defense: COVER PLTR - Covering losing short as PLTR pushed above VWAP (+0.7%) on RVol of 6.15, violati
-[2026-10-30 09:43:32 ET] defense: BUY RTX x11 stop 200.7 first target 209.87 (75% rule)
-[2026-10-30 09:43:32 ET] defense: ['COVER PLTR', 'BUY LMT blocked: conviction 5 is below the minimum 6 (risk-off market)', 'BUY RTX x11 (~$2241.36) [deploy]']
-[2026-10-30 09:43:32 ET] space: SELL TDG - Early momentum long in a risk-off market with near-zero volume (rvol 0.16), pric
-[2026-10-30 09:43:32 ET] space: COVER SPCX - Short is underwater near the opening-range high with mixed news and risk of a br
-[2026-10-30 09:43:32 ET] space: ['SELL TDG', 'COVER SPCX']
-[2026-10-30 09:43:32 ET] tech: BUY NVDA x8 stop 203.48 first target 212.78 (75% rule)
-[2026-10-30 09:43:33 ET] tech: ['BUY NVDA x8 (~$1652.64) [deploy]']
-[2026-10-30 09:43:33 ET] healthcare: no trades
-[2026-10-30 09:43:35 ET] Saved progress to GitHub (dashboard updated).
-[2026-10-30 09:45:05 ET] journal: updated 7 trade(s)
-[2026-10-30 09:45:12 ET] space: manager takes a look (price moves in ['VSAT'])
-[2026-10-30 09:45:12 ET] financials: manager takes a look (price moves in ['HOOD'])
-[2026-10-30 09:45:13 ET] LLM: consumer news researcher answered (groq openai/gpt-oss-120b)
-[2026-10-30 09:45:13 ET] consumer: manager takes a look (big news on ['AMZN'])
-[2026-10-30 09:45:18 ET] LLM: financials manager answered (groq openai/gpt-oss-20b)
-[2026-10-30 09:45:25 ET] LLM: space manager answered (gemini gemini-3.6-flash)
-[2026-10-30 09:45:30 ET] LLM: consumer manager answered (gemini gemini-3.5-flash)
-[2026-10-30 09:45:30 ET] space: BUY SPCX x2 stop 136.02 first target 142.24 (75% rule)
-[2026-10-30 09:45:30 ET] space: BUY RKLB x5 stop 56.03 first target 58.61 (75% rule)
-[2026-10-30 09:45:30 ET] space: SHORT VSAT x9 stop 74.8 first target 71.25 (75% rule)
-[2026-10-30 09:45:30 ET] space: ['BUY SPCX x2 (~$276.19) [deploy]', 'BUY RKLB x5 (~$284.52) [deploy]', 'SHORT VSAT x9 (~$661.05) [deploy]']
-[2026-10-30 09:45:37 ET] consumer: SHORT SBUX x12 stop 106.46 first target 101.74 (75% rule)
-[2026-10-30 09:45:37 ET] consumer: ['SELL BKNG failed: DELETE /v2/positions/BKNG -> 403: {"available":"0","code":40310000,"existing_qty":"4","held_for_orders":"4","message":"insufficient qty available for order (requested: 4, available: 0)","symbol":"BKNG"}', 'BUY EBAY blocked: conviction 5 is below the minimum 6 (risk-off market)', 'SHORT SBUX x12 (~$1258.68) [deploy]']
 [2026-10-30 09:45:37 ET] financials: no trades
 [2026-10-30 09:50:04 ET] journal: updated 4 trade(s)
 [2026-10-30 09:50:04 ET] space: VSAT trailing stop on (up 1.9%)
@@ -510,3 +447,60 @@
 [2026-10-30 12:39:00 ET] consumer: ['COVER LKQ', 'COVER LULU', 'BUY CVNA blocked: conviction 4 is below the minimum 6 (risk-off market)', 'SHORT SBUX blocked: conviction 3 is below the minimum 5', 'SHORT AMZN blocked: conviction 3 is below the minimum 5', 'BUY LOW blocked: conviction 2 is below the minimum 3 (risk-off market)', 'BUY HD blocked: conviction 1 is below the minimum 3 (risk-off market)', 'BUY EBAY blocked: conviction 1 is below the minimum 3 (risk-off market)', 'BUY CCL blocked: conviction 1 is below the minimum 3 (risk-off market)', 'BUY NCLH blocked: conviction 1 is below the minimum 3 (risk-off market)']
 [2026-10-30 12:39:00 ET] tech: skipped this check: tech news researcher: no AI provider could answer (gemini: gemini failed)
 [2026-10-30 12:39:00 ET] financials: skipped this check: financials manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-30 12:39:03 ET] Saved progress to GitHub (dashboard updated).
+[2026-10-30 12:39:23 ET] LLM: all providers busy, healthcare manager waits 22s
+[2026-10-30 12:39:45 ET] LLM: all providers busy, healthcare manager waits 13s
+[2026-10-30 12:40:03 ET] journal: updated 2 trade(s)
+[2026-10-30 12:40:11 ET] defense: manager takes a look (must invest $18,861 more (75% rule))
+[2026-10-30 12:40:11 ET] LLM: all providers busy, defense manager waits 12s
+[2026-10-30 12:40:23 ET] LLM: all providers busy, defense manager waits 52s
+[2026-10-30 12:41:15 ET] LLM: all providers busy, defense manager waits 8s
+[2026-10-30 12:44:00 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-30 12:44:00 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-30 12:45:13 ET] defense: manager takes a look (must invest $18,863 more (75% rule))
+[2026-10-30 12:45:15 ET] LLM: all providers busy, defense manager waits 60s
+[2026-10-30 12:46:15 ET] LLM: all providers busy, defense manager waits 28s
+[2026-10-30 12:46:44 ET] LLM: all providers busy, defense manager waits 5s
+[2026-10-30 12:46:49 ET] LLM: tech news researcher answered (groq allam-2-7b)
+[2026-10-30 12:46:49 ET] LLM: consumer news researcher answered (groq allam-2-7b)
+[2026-10-30 12:46:50 ET] LLM: healthcare news researcher answered (groq allam-2-7b)
+[2026-10-30 12:46:50 ET] healthcare: manager takes a look (scheduled look)
+[2026-10-30 12:46:50 ET] LLM: all providers busy, healthcare manager waits 25s
+[2026-10-30 12:46:54 ET] space: HWM trailing stop on (up 1.0%)
+[2026-10-30 12:47:16 ET] LLM: all providers busy, healthcare manager waits 57s
+[2026-10-30 12:48:14 ET] LLM: all providers busy, healthcare manager waits 5s
+[2026-10-30 12:49:00 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-30 12:49:00 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-30 12:50:03 ET] tech: AVGO trailing stop on (up 1.0%)
+[2026-10-30 12:50:10 ET] defense: manager takes a look (must invest $18,875 more (75% rule))
+[2026-10-30 12:50:12 ET] LLM: all providers busy, defense manager waits 60s
+[2026-10-30 12:51:13 ET] LLM: all providers busy, defense manager waits 27s
+[2026-10-30 12:51:40 ET] LLM: all providers busy, defense manager waits 5s
+[2026-10-30 12:51:46 ET] LLM: tech news researcher answered (groq allam-2-7b)
+[2026-10-30 12:51:46 ET] tech: manager takes a look (scheduled look)
+[2026-10-30 12:51:46 ET] LLM: all providers busy, tech manager waits 27s
+[2026-10-30 12:52:14 ET] LLM: all providers busy, tech manager waits 56s
+[2026-10-30 12:53:10 ET] LLM: all providers busy, tech manager waits 5s
+[2026-10-30 12:53:15 ET] consumer: manager takes a look (must invest $6,666 more (75% rule))
+[2026-10-30 12:53:18 ET] LLM: all providers busy, consumer manager waits 5s
+[2026-10-30 12:53:23 ET] LLM: all providers busy, consumer manager waits 55s
+[2026-10-30 12:54:00 ET] defense: skipped this check: defense manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-30 12:54:00 ET] tech: skipped this check: tech manager: no AI provider could answer (gemini: gemini failed)
+[2026-10-30 12:54:19 ET] LLM: all providers busy, consumer manager waits 22s
+[2026-10-30 12:54:40 ET] financials: manager takes a look (scheduled look)
+[2026-10-30 12:54:41 ET] LLM: all providers busy, financials manager waits 12s
+[2026-10-30 12:54:53 ET] LLM: all providers busy, financials manager waits 26s
+[2026-10-30 12:55:19 ET] LLM: all providers busy, financials manager waits 51s
+[2026-10-30 12:56:11 ET] LLM: all providers busy, healthcare news researcher waits 8s
+[2026-10-30 12:56:20 ET] LLM: all providers busy, healthcare news researcher waits 5s
+[2026-10-30 12:56:25 ET] LLM: healthcare news researcher answered (groq allam-2-7b)
+[2026-10-30 12:56:25 ET] healthcare: manager takes a look (scheduled look)
+[2026-10-30 12:56:25 ET] LLM: all providers busy, healthcare manager waits 55s
+[2026-10-30 12:57:21 ET] LLM: all providers busy, healthcare manager waits 20s
+[2026-10-30 12:57:41 ET] LLM: all providers busy, healthcare manager waits 15s
+[2026-10-30 12:57:55 ET] defense: manager takes a look (must invest $18,879 more (75% rule))
+[2026-10-30 12:57:55 ET] LLM: all providers busy, defense manager waits 25s
+[2026-10-30 12:58:21 ET] LLM: all providers busy, defense manager waits 49s
+[2026-10-30 12:59:00 ET] consumer: skipped this check: consumer manager: no AI provider could answer (openrouter: every model is at its per-minute limit)
+[2026-10-30 12:59:00 ET] financials: skipped this check: financials manager: no AI provider could answer (openrouter: every model is at its per-minute limit)
+[2026-10-30 12:59:00 ET] healthcare: skipped this check: healthcare manager: no AI provider could answer (gemini: gemini failed)
