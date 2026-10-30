@@ -2203,5 +2203,43 @@
       "BUY MSFT x3 (~$1566.15) [deploy]",
       "BUY INTU x4 (~$1357.64) [deploy]"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "11:53",
+    "trigger": "scheduled look",
+    "market_view": "The IT sector is under significant pressure in a risk-off environment with QQQ down -3.2% and VIXY up 8.8%. Most watchlist stocks trade below VWAP with opening range breakdowns, reflecting broad selling pressure. Only AAPL remains notably above VWAP with acceptable relative volume (1.74), while INTC and other severely declining names present short opportunities as risk-off favors shorting weak stocks below VWAP per the QQQ regime filter. President's orders enforce no long positions below VWAP in down market and focus on high-liquidity names NVDA and AAPL.",
+    "experiment": "",
+    "decisions": [
+      {
+        "symbol": "AAPL",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "Above VWAP (+0.1%) with rvol 1.74 > 1.5, president's focus stock per executive orders. OR 344.14-348.75 with price at 347.12 (83% up range). Breakout above 348.75 would confirm opening range breakout. Risk-off environment permits only longs above VWAP per QQQ regime filter.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "INTC",
+        "action": "SHORT",
+        "conviction": 4,
+        "reason": "-28.6% day drop with -25.4% premarket gap, rvol 9.07 (highest in watchlist). Below VWAP (-0.1%) in risk-off environment. Pre-market guidance cut to $90, CDS at record high, Evercore target cut to $131. Clear downtrend favors shorting weak stocks per team strategy. Largest rvol provides volume confirmation of downside move.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.04
+      },
+      {
+        "symbol": "NVDA",
+        "action": "SHORT",
+        "conviction": 3,
+        "reason": "President's focus stock for liquidity. Below VWAP (-0.6%) with OR breakdown confirmed. Risk-off market favors shorting weak stocks. rvol 1.65 > 1.5 provides volume support. NVIDIA's -3.8% decline aligns with sector risk-off. Avoid long below VWAP per regime filter; shorting weak stocks permitted in risk-off.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SHORT INTC blocked: team already has the maximum number of positions",
+      "BUY AAPL blocked: team already has the maximum number of positions",
+      "SHORT NVDA blocked: team already has the maximum number of positions"
+    ]
   }
 ]

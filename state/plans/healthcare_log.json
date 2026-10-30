@@ -1902,5 +1902,43 @@
       "BUY LLY blocked: already holding this stock",
       "BUY ABBV blocked: conviction 3 is below the minimum 6 (risk-off market)"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "time": "11:53",
+    "trigger": "must invest $6,006 more (75% rule)",
+    "market_view": "Healthcare sector trading in pronounced risk-off environment with SPY down 1.6%, QQQ down 3.0%, VIXY up 8.7%. Only REGN shows extreme relative volume (7.27x) with +5.1% gap up on earnings, while 13 of 15 team stocks trade below VWAP with opening range breakdowns. Market mood favors shorting weak stocks below VWAP on breakdowns, but 75% invested rule requires deploying capital. LLY already long from earlier session down -1.0%.",
+    "experiment": "Testing executive strategy: prioritize high-conviction news catalysts above VWAP with dynamic ATR-based stops. Evaluating whether REGN entry violates risk-off earnings lesson or if extreme rvol (7.27x) overrides m15 momentum filter.",
+    "decisions": [
+      {
+        "symbol": "ALNY",
+        "action": "SHORT",
+        "conviction": 5,
+        "reason": "rvol 5.19 with OR breakdown 170.86-180.01, price 3.5% below VWAP (-3.5%), day -3.8% trending down. RBC cuts price target to $280 provides fundamental support. Perfect risk-off short: high rvol, breakdown, well below VWAP, negative sentiment aligns with favored shorting strategy in risk-off regime.",
+        "stop_loss_pct": 0.02,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "REGN",
+        "action": "BUY",
+        "conviction": 3,
+        "reason": "rvol 7.27 (extreme) meets executive criteria of >1.5x with price above VWAP (-0.1%). +11.7% day, +5.1% gap up on Q3 results with Sanofi partnership expansion and FDA approval for Pasatru. Size reduced given risk-off and earnings lesson (m15 -0.1% not >0.5%), but undeniable volume and catalyst demand entry despite broader market weakness.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      },
+      {
+        "symbol": "MRK",
+        "action": "SHORT",
+        "conviction": 2,
+        "reason": "OR BREAKDOWN 149.82-151.28, price below VWAP (-0.5%), rvol 1.6 just above 1.5 threshold. Day +1.5% but flat trend with breakdown. Goldman Sachs lowered price target from $63 to $61 provides mild fundamental support for short. Secondary risk-off short with modest conviction given rvol barely clears 1.5x.",
+        "stop_loss_pct": 0.015,
+        "take_profit_pct": 0.03
+      }
+    ],
+    "results": [
+      "SHORT ALNY x7 (~$1171.45)",
+      "BUY REGN blocked: conviction 3 is below the minimum 6 (risk-off market)",
+      "SHORT MRK blocked: conviction 2 is below the minimum 5"
+    ]
   }
 ]

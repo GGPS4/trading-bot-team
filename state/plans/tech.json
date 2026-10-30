@@ -1,94 +1,67 @@
 {
   "date": "2026-10-30",
-  "time": "11:20",
-  "trigger": "must invest $13,508 more (75% rule)",
-  "market_view": "The market is in a strong risk-off regime with QQQ down 2.9%, VIXY up 7.9%, SPY down 1.4%. All 15 team stocks are in the red, with the semiconductor sector leading declines. AAPL and MSFT are the only names trading above VWAP with rvol > 1.5, while most others have opening-range breakdowns below VWAP. Capital preservation is the top priority per executive order, with the 75% invested rule suspended but position sizes halved until two consecutive days of positive P&L. Defense is favored in this risk-off environment.",
+  "time": "11:53",
+  "trigger": "scheduled look",
+  "market_view": "The IT sector is under significant pressure in a risk-off environment with QQQ down -3.2% and VIXY up 8.8%. Most watchlist stocks trade below VWAP with opening range breakdowns, reflecting broad selling pressure. Only AAPL remains notably above VWAP with acceptable relative volume (1.74), while INTC and other severely declining names present short opportunities as risk-off favors shorting weak stocks below VWAP per the QQQ regime filter. President's orders enforce no long positions below VWAP in down market and focus on high-liquidity names NVDA and AAPL.",
   "decisions": [
-    {
-      "symbol": "AMAT",
-      "action": "SELL",
-      "conviction": 5,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.0,
-      "setup": "other",
-      "reason": "Cutting loss in risk-off market; AMAT down -7.2% day, OR breakdown below VWAP (-1.7%), rvol 1.11 < 1.5. Following lesson 2026-10-27: 'Do not go long when price is below VWAP without a clear reversal signal.' Stock already held; exiting per risk management rules for below-VWAP longs in down market."
-    },
-    {
-      "symbol": "NOW",
-      "action": "SELL",
-      "conviction": 5,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.0,
-      "setup": "other",
-      "reason": "Cutting loss in risk-off market; NOW down -3.3% day, OR breakdown below VWAP (-1.4%), rvol 2.88. Stock already held; exiting per 2026-10-27 lesson and risk management rules for below-VWAP longs in down market."
-    },
     {
       "symbol": "AAPL",
       "action": "BUY",
-      "conviction": 5,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
-      "setup": "VWAP bounce",
-      "reason": "Meets executive QQQ regime filter: rvol 1.92 > 1.5, price above VWAP (+0.4%). AAPL is the executive's favored name for high-liquidity focus ('Focus on high-liquidity names like NVDA and AAPL only'). Trading near top of OR 344.14-348.75 but above VWAP. Tight 1% stop needed given risk-off trend down. Partial profit at 3% with trailing stop on rest per strategy: 'set the first target about 2-4% away (half is sold there, the rest trails).'"
-    },
-    {
-      "symbol": "AVGO",
-      "action": "SHORT",
-      "conviction": 5,
+      "conviction": 3,
       "stop_loss_pct": 0.015,
       "take_profit_pct": 0.03,
-      "setup": "momentum",
-      "reason": "Risk-off market favors shorts of weak stocks. AVGO OR BREAKDOWN below VWAP (-0.7%), trend down, rvol 1.95 > 1.5. Chip sector weakness confirmed. Shorting weak stocks (below VWAP, breaking down) is favored per market mood. RSI 38.3 not extremely oversold (<25), avoiding high bounce risk per lesson 2026-10-23. Tight 1.5% stop, 3% target with partial sell and trailing stop rest."
+      "setup": "opening range breakout",
+      "reason": "Above VWAP (+0.1%) with rvol 1.74 > 1.5, president's focus stock per executive orders. OR 344.14-348.75 with price at 347.12 (83% up range). Breakout above 348.75 would confirm opening range breakout. Risk-off environment permits only longs above VWAP per QQQ regime filter."
+    },
+    {
+      "symbol": "INTC",
+      "action": "SHORT",
+      "conviction": 4,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakdown",
+      "reason": "-28.6% day drop with -25.4% premarket gap, rvol 9.07 (highest in watchlist). Below VWAP (-0.1%) in risk-off environment. Pre-market guidance cut to $90, CDS at record high, Evercore target cut to $131. Clear downtrend favors shorting weak stocks per team strategy. Largest rvol provides volume confirmation of downside move."
+    },
+    {
+      "symbol": "NVDA",
+      "action": "SHORT",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "opening range breakdown / VWAP breakdown",
+      "reason": "President's focus stock for liquidity. Below VWAP (-0.6%) with OR breakdown confirmed. Risk-off market favors shorting weak stocks. rvol 1.65 > 1.5 provides volume support. NVIDIA's -3.8% decline aligns with sector risk-off. Avoid long below VWAP per regime filter; shorting weak stocks permitted in risk-off."
     }
   ],
   "ranked_ideas": [
     {
-      "symbol": "MSFT",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "rvol 2.1 > 1.5, vwap flat at 0.0%, OR 514.59-526, trend flat. Meets executive criteria for high-liquidity name. Borderline VWAP but flat trend acceptable in risk-off. +1.2% day move with moderate momentum. Position size reduced 50% per executive order until two consecutive days positive P&L."
-    },
-    {
-      "symbol": "INTU",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "rvol 1.63 > 1.5, vwap +0.3%, OR 333.31-343.75, +3.0% day move, trend flat. Strong intraday performance despite market down. RSI 66.9 approaching overbought but momentum intact. Tight stop recommended. Position size reduced 50% per executive order."
-    },
-    {
       "symbol": "GOOGL",
       "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.01,
-      "take_profit_pct": 0.03,
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "opening range breakout",
-      "reason": "rvol 2.99 > 1.5, vwap +0.5%, OR breakout 279.01-281.94, trend flat. However, RSI 14.1 extremely oversold - catching falling knife in risk-off. Small position only with tight stop. If bounce occurs, could be profitable. Position size reduced 50% per executive order."
+      "reason": "Above VWAP (+0.3%) with rvol 2.72 > 1.5, trend flat. OR 279.01-281.94 with price at 281.8 near top. Breakout above 281.94 would confirm. Selective long allowed above VWAP in risk-off per regime filter. Aligns with president's high-liquidity focus."
     },
     {
-      "symbol": "TXN",
+      "symbol": "AMD",
       "direction": "short",
       "conviction": 3,
       "stop_loss_pct": 0.02,
       "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "OR BREAKDOWN below VWAP (-0.8%), trend down, rvol 1.37 slightly below 1.5 but strong down move. RSI 64.5 overbought - selling into strength that's failing. Shorting weak stocks favored in risk-off environment. Position size reduced 50% per executive order."
+      "setup": "opening range breakdown",
+      "reason": "Down -9.8% with rvol 3.29 (second highest after INTC). Below VWAP (-0.5%) in risk-off favors shorts. Significant decline provides momentum. RSI 36.7 not extreme oversold so bounce risk limited per lesson 2026-10-23 (no shorting <25 RSI). Technicals support continuation short."
     },
     {
-      "symbol": "PANW",
+      "symbol": "SNDK",
       "direction": "short",
       "conviction": 2,
       "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.03,
-      "setup": "other",
-      "reason": "OR BREAKDOWN below VWAP (-1.4%), rvol 1.27 < 1.5 but clear down trend. RSI 41.2 neutral. Shorting weak stock in risk-off. Smaller position due to lower rvol. Position size reduced 50% per executive order."
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakdown",
+      "reason": "Down -11.8% with rvol 2.67 > 1.5, OR breakdown confirmed. Below VWAP (-2.5%) in risk-off favors shorts. Data-center business drove 88.3% of revenue increase reflecting AI infrastructure demand (news sentiment 0.7), but stock technicals weak near-term. AI storage demand theme intact but taking partial profits on breakdown."
     }
   ],
-  "experiment": "Test VWAP-reclaim filter: only enter long positions when price reclaims and holds above VWAP after initial pullback, confirming trend shift in risk-off market. Following executive's 'No-Trade' protocol requiring price above VWAP for long entries.",
+  "experiment": "",
   "watchlist_changes": {
     "add": [],
     "remove": []

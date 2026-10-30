@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T11:49-04:00",
+  "updated": "2026-10-30T11:59-04:00",
   "date": "2026-10-30",
   "mode": "paper",
   "health": {
@@ -14,21 +14,21 @@
     "strategy": "day_trading"
   },
   "account": {
-    "equity": 98557.75,
-    "cash": 93738.89,
-    "day_change": -195.11,
-    "day_change_pct": -0.002
+    "equity": 98574.69,
+    "cash": 94951.7,
+    "day_change": -178.17,
+    "day_change_pct": -0.0018
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 757.53
+    "price": 757.97
   },
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 11,
-    "return_since_start": -0.0144,
-    "benchmark_since_start": -0.017,
-    "max_drawdown": 0.0144
+    "return_since_start": -0.0143,
+    "benchmark_since_start": -0.0164,
+    "max_drawdown": 0.0143
   },
   "go_live": {
     "items": [
@@ -40,7 +40,7 @@
       {
         "rule": "Beating SPY since the start",
         "ok": true,
-        "value": "-1.4% vs -1.7%"
+        "value": "-1.4% vs -1.6%"
       },
       {
         "rule": "Worst drop under 15%",
@@ -72,8 +72,8 @@
         "ONDS"
       ],
       "budget": 31107.15,
-      "invested": 6457.74,
-      "unrealized_pnl": 14.16,
+      "invested": 6469.68,
+      "unrealized_pnl": 26.09,
       "realized_today": -177.67,
       "trades_today": 11,
       "blocked_today": 12,
@@ -106,8 +106,8 @@
         "LPTH"
       ],
       "budget": 4443.88,
-      "invested": -908.9,
-      "unrealized_pnl": 4.47,
+      "invested": -601.32,
+      "unrealized_pnl": 3.61,
       "realized_today": -27.07,
       "trades_today": 14,
       "blocked_today": 20,
@@ -144,7 +144,7 @@
       "unrealized_pnl": 0,
       "realized_today": -14.02,
       "trades_today": 2,
-      "blocked_today": 8,
+      "blocked_today": 11,
       "all_time": {
         "closed_trades": 66,
         "wins": 17,
@@ -174,11 +174,11 @@
         "SNDK"
       ],
       "budget": 22219.39,
-      "invested": -330.68,
-      "unrealized_pnl": 9.69,
+      "invested": -318.49,
+      "unrealized_pnl": 21.88,
       "realized_today": -24.56,
       "trades_today": 14,
-      "blocked_today": 17,
+      "blocked_today": 20,
       "all_time": {
         "closed_trades": 97,
         "wins": 41,
@@ -208,8 +208,8 @@
         "HLT"
       ],
       "budget": 8887.76,
-      "invested": -1954.25,
-      "unrealized_pnl": 9.65,
+      "invested": -1956.77,
+      "unrealized_pnl": 7.12,
       "realized_today": -8.77,
       "trades_today": 8,
       "blocked_today": 11,
@@ -242,10 +242,10 @@
         "EVR"
       ],
       "budget": 8887.76,
-      "invested": 893.58,
-      "unrealized_pnl": -3.29,
+      "invested": 892.72,
+      "unrealized_pnl": -2.9,
       "realized_today": -7.09,
-      "trades_today": 7,
+      "trades_today": 10,
       "blocked_today": 8,
       "all_time": {
         "closed_trades": 71,
@@ -276,11 +276,11 @@
         "ALNY"
       ],
       "budget": 8887.76,
-      "invested": 661.32,
-      "unrealized_pnl": -5.25,
+      "invested": -524.41,
+      "unrealized_pnl": -8.33,
       "realized_today": -6.83,
-      "trades_today": 5,
-      "blocked_today": 9,
+      "trades_today": 6,
+      "blocked_today": 11,
       "all_time": {
         "closed_trades": 76,
         "wins": 24,
@@ -292,14 +292,32 @@
   },
   "positions": [
     {
+      "symbol": "ALNY",
+      "team": "healthcare",
+      "qty": -7.0,
+      "entry": 168.95,
+      "price": 169.29,
+      "value": -1185.07,
+      "pnl": -2.42,
+      "pnl_pct": -0.002,
+      "stop": 170.8,
+      "target": 162.33,
+      "reason": "rvol 5.19 with OR breakdown 170.86-180.01, price 3.5% below VWAP (-3.5%), day -3.8% trending down. RBC cuts price target to $280 provides fundamental support. Perfect risk-off short: high rvol, breakdown, well below VWAP, negative sentiment aligns with favored shorting strategy in risk-off regime.",
+      "side": "short",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 170.8,
+      "setup": "other"
+    },
+    {
       "symbol": "AVGO",
       "team": "tech",
       "qty": -10.0,
       "entry": 326.61,
-      "price": 326.17,
-      "value": -3261.65,
-      "pnl": 4.45,
-      "pnl_pct": 0.0014,
+      "price": 326.13,
+      "value": -3261.3,
+      "pnl": 4.8,
+      "pnl_pct": 0.0015,
       "stop": 331.55,
       "target": 316.85,
       "reason": "Risk-off market favors shorts of weak stocks. AVGO OR BREAKDOWN below VWAP (-0.7%), trend down, rvol 1.95 > 1.5. Chip sector weakness confirmed. Shorting weak stocks (below VWAP, breaking down) is favored per market mood. RSI 38.3 not extremely oversold (<25), avoiding high bounce risk per lesson 2026-10-23. Tight 1.5% stop, 3% target with partial sell and trailing stop rest.",
@@ -314,10 +332,10 @@
       "team": "defense",
       "qty": 26.0,
       "entry": 88.52,
-      "price": 89.16,
-      "value": 2318.16,
-      "pnl": 16.64,
-      "pnl_pct": 0.0072,
+      "price": 89.22,
+      "value": 2319.72,
+      "pnl": 18.2,
+      "pnl_pct": 0.0079,
       "stop": 88.86,
       "target": 90.96,
       "reason": "[75% invested rule] Strong breakout above OR with price above VWAP and raised EPS guidance, though RVol is slightly below 1.5x.",
@@ -332,10 +350,10 @@
       "team": "consumer",
       "qty": 5.0,
       "entry": 121.36,
-      "price": 121.86,
-      "value": 609.3,
-      "pnl": 2.5,
-      "pnl_pct": 0.0041,
+      "price": 122.06,
+      "value": 610.33,
+      "pnl": 3.52,
+      "pnl_pct": 0.0058,
       "stop": 120.3,
       "target": 125.79,
       "reason": "[75% invested rule] rvol 1.76 > 1.5, price above VWAP +0.1%, OR intact 120.09-123.03; neutral news, decent mean reversion bounce candidate in risk-off.",
@@ -350,10 +368,10 @@
       "team": "space",
       "qty": -1.0,
       "entry": 304.67,
-      "price": 304.55,
-      "value": -304.55,
-      "pnl": 0.12,
-      "pnl_pct": 0.0004,
+      "price": 304.91,
+      "value": -304.91,
+      "pnl": -0.24,
+      "pnl_pct": -0.0008,
       "stop": 314.0,
       "target": 292.66,
       "reason": "[75% invested rule] breakdown below OR (306.0-312.6) and VWAP (-0.8%); rvol 1.28 moderate; defense-friendly name in risk-off; analyst scrutiny and multiple downgrades cap upward momentum",
@@ -368,10 +386,10 @@
       "team": "space",
       "qty": -3.0,
       "entry": 202.9,
-      "price": 201.45,
-      "value": -604.35,
-      "pnl": 4.35,
-      "pnl_pct": 0.0072,
+      "price": 201.51,
+      "value": -604.53,
+      "pnl": 4.17,
+      "pnl_pct": 0.0069,
       "stop": 207.26,
       "target": 195.07,
       "reason": "[75% invested rule] vwap -0.5% with OR 201.83-205.69 breakdown; overnight BNP Paribas cut to $250 from $310 (sentiment -0.7, importance 4); multiple analyst downgrades; risk-off favors shorts of weak names with bad news; rvol 0.81 low but breakdown on strong fundamental deterioration is valid short in current regime",
@@ -382,50 +400,50 @@
       "setup": "other"
     },
     {
+      "symbol": "ICE",
+      "team": "financials",
+      "qty": 2.0,
+      "entry": 169.35,
+      "price": 169.34,
+      "value": 338.68,
+      "pnl": -0.02,
+      "pnl_pct": -0.0001,
+      "stop": 166.9,
+      "target": 174.53,
+      "reason": "[75% invested rule] ICE is the strongest relative performer on the watchlist (+4.0% day), trading above VWAP (+0.6%), and has broken out of the opening range. It has positive news catalysts (Barclays/KBW upgrades) and is in a defensive sector (exchange infrastructure) that often holds up in risk-off environments. High conviction due to momentum and news alignment.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 166.9,
+      "setup": "opening range breakout"
+    },
+    {
       "symbol": "INTU",
       "team": "tech",
       "qty": 4.0,
       "entry": 339.64,
-      "price": 341.34,
-      "value": 1365.36,
-      "pnl": 6.8,
-      "pnl_pct": 0.005,
-      "stop": 334.32,
+      "price": 343.38,
+      "value": 1373.52,
+      "pnl": 14.96,
+      "pnl_pct": 0.011,
+      "stop": 340.66,
       "target": 352.99,
       "reason": "[75% invested rule] rvol 1.63 > 1.5, vwap +0.3%, OR 333.31-343.75, +3.0% day move, trend flat. Strong intraday performance despite market down. RSI 66.9 approaching overbought but momentum intact. Tight stop recommended. Position size reduced 50% per executive order.",
       "side": "long",
-      "trailing": false,
+      "trailing": true,
       "scaled": false,
       "first_stop": 334.32,
       "setup": "momentum"
-    },
-    {
-      "symbol": "JPM",
-      "team": "financials",
-      "qty": 1.0,
-      "entry": 339.95,
-      "price": 338.52,
-      "value": 338.52,
-      "pnl": -1.43,
-      "pnl_pct": -0.0042,
-      "stop": 333.88,
-      "target": 349.13,
-      "reason": "[75% invested rule] JPM is up 0.8% today with positive sentiment from Grayscale on crypto growth, trading above VWAP with strong opening momentum (m15 +0.2%) and moderate volume (rvol 1.36). This is a high-conviction long setup aligned with defensive financial focus.",
-      "side": "long",
-      "trailing": false,
-      "scaled": false,
-      "first_stop": 333.88,
-      "setup": "opening range breakout"
     },
     {
       "symbol": "LHX",
       "team": "defense",
       "qty": 8.0,
       "entry": 277.44,
-      "price": 277.36,
-      "value": 2218.88,
-      "pnl": -0.64,
-      "pnl_pct": -0.0003,
+      "price": 278.1,
+      "value": 2224.8,
+      "pnl": 5.28,
+      "pnl_pct": 0.0024,
       "stop": 273.54,
       "target": 286.04,
       "reason": "[75% invested rule] BNP Paribas and RBC raise price targets. Trend is up, currently below VWAP \u2014 likely to recover and confirm above VWAP with volume.",
@@ -440,10 +458,10 @@
       "team": "healthcare",
       "qty": 0.46495844,
       "entry": 1433.61,
-      "price": 1422.33,
-      "value": 661.32,
-      "pnl": -5.25,
-      "pnl_pct": -0.0079,
+      "price": 1420.9,
+      "value": 660.66,
+      "pnl": -5.91,
+      "pnl_pct": -0.0089,
       "stop": 1399.35,
       "target": 1470.38,
       "reason": "[75% invested rule] Top defensive pharma showing relative stability at the open with strong analyst target increases up to $1,650; watching for intraday breakout confirmation above VWAP.",
@@ -458,10 +476,10 @@
       "team": "defense",
       "qty": 3.0,
       "entry": 640.85,
-      "price": 640.24,
-      "value": 1920.7,
-      "pnl": -1.84,
-      "pnl_pct": -0.001,
+      "price": 641.72,
+      "value": 1925.16,
+      "pnl": 2.61,
+      "pnl_pct": 0.0014,
       "stop": 630.88,
       "target": 659.7,
       "reason": "[75% invested rule] $1.08B Future Interceptor contract from U.S. Army. 25Forward initiative partnerships signal strategic growth. Currently below RVol threshold but catalyst is strongest in team.",
@@ -476,10 +494,10 @@
       "team": "consumer",
       "qty": -6.0,
       "entry": 208.7,
-      "price": 208.69,
-      "value": -1252.17,
-      "pnl": 0.03,
-      "pnl_pct": 0.0,
+      "price": 208.97,
+      "value": -1253.85,
+      "pnl": -1.65,
+      "pnl_pct": -0.0013,
       "stop": 212.89,
       "target": 200.37,
       "reason": "[75% invested rule] LOW is below VWAP with an opening range breakdown, negative momentum, and very high relative volume (3.66x).",
@@ -494,10 +512,10 @@
       "team": "financials",
       "qty": 3.0,
       "entry": 185.64,
-      "price": 185.02,
-      "value": 555.06,
-      "pnl": -1.86,
-      "pnl_pct": -0.0033,
+      "price": 184.68,
+      "value": 554.04,
+      "pnl": -2.88,
+      "pnl_pct": -0.0052,
       "stop": 182.77,
       "target": 191.12,
       "reason": "[75% invested rule] MS is up 1.6% 5-day with positive momentum (m15 +0.5%, m60 +0.7%) and above VWAP. As a defensive financial with strong trend, it fits the team's focus on capital preservation and stable long-term exposure.",
@@ -512,10 +530,10 @@
       "team": "tech",
       "qty": 3.0,
       "entry": 522.39,
-      "price": 521.87,
-      "value": 1565.61,
-      "pnl": -1.56,
-      "pnl_pct": -0.001,
+      "price": 523.1,
+      "value": 1569.29,
+      "pnl": 2.12,
+      "pnl_pct": 0.0014,
       "stop": 514.22,
       "target": 542.93,
       "reason": "[75% invested rule] rvol 2.1 > 1.5, vwap flat at 0.0%, OR 514.59-526, trend flat. Meets executive criteria for high-liquidity name. Borderline VWAP but flat trend acceptable in risk-off. +1.2% day move with moderate momentum. Position size reduced 50% per executive order until two consecutive days positive P&L.",
@@ -530,10 +548,10 @@
       "team": "consumer",
       "qty": -75.0,
       "entry": 17.58,
-      "price": 17.48,
-      "value": -1311.38,
-      "pnl": 7.12,
-      "pnl_pct": 0.0054,
+      "price": 17.51,
+      "value": -1313.25,
+      "pnl": 5.25,
+      "pnl_pct": 0.004,
       "stop": 17.96,
       "target": 16.9,
       "reason": "[75% invested rule] NCLH is below VWAP with high relative volume (2.87x) and a down trend, though m15 momentum is slightly positive.",
@@ -542,6 +560,24 @@
       "scaled": false,
       "first_stop": 17.96,
       "setup": "momentum"
+    },
+    {
+      "symbol": "VSAT",
+      "team": "space",
+      "qty": 4.0,
+      "entry": 77.11,
+      "price": 77.03,
+      "value": 308.12,
+      "pnl": -0.32,
+      "pnl_pct": -0.001,
+      "stop": 75.64,
+      "target": 79.37,
+      "reason": "[75% invested rule] Strongest relative strength in a risk-off tape. Trading above VWAP (+1.5%) with a clear opening range breakout. 5-day momentum is +32%. Fits the 'high-conviction' criteria (RVol 1.62, above VWAP) despite the President's strict guidelines, as it is the only name showing genuine intraday strength.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 75.64,
+      "setup": "opening range breakout"
     }
   ],
   "trades_today": [
@@ -1328,7 +1364,7 @@
       "entry_price": 339.95,
       "side": "long",
       "exit_price": null,
-      "exit_reason": null,
+      "exit_reason": "manager_sell",
       "pnl": null,
       "pnl_pct": null,
       "status": "open",
@@ -1346,7 +1382,7 @@
       "entry_price": 185.64,
       "side": "long",
       "exit_price": null,
-      "exit_reason": null,
+      "exit_reason": "manager_sell",
       "pnl": null,
       "pnl_pct": null,
       "status": "open",
@@ -1568,7 +1604,7 @@
       "status": "open",
       "conviction": 3,
       "reason": "[75% invested rule] rvol 1.63 > 1.5, vwap +0.3%, OR 333.31-343.75, +3.0% day move, trend flat. Strong intraday performance despite market down. RSI 66.9 approaching overbought but momentum intact. Tight stop recommended. Position size reduced 50% per executive order.",
-      "stop_price": 334.32,
+      "stop_price": 340.66,
       "take_profit_price": 352.99
     },
     {
@@ -1629,8 +1665,44 @@
       "time": "11:49",
       "team": "space",
       "symbol": "VSAT",
-      "qty": 4,
+      "qty": 4.0,
       "est_price": 77.06,
+      "entry_price": 77.11,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 6,
+      "reason": "[75% invested rule] Strongest relative strength in a risk-off tape. Trading above VWAP (+1.5%) with a clear opening range breakout. 5-day momentum is +32%. Fits the 'high-conviction' criteria (RVol 1.62, above VWAP) despite the President's strict guidelines, as it is the only name showing genuine intraday strength.",
+      "stop_price": 75.64,
+      "take_profit_price": 79.37
+    },
+    {
+      "time": "11:53",
+      "team": "healthcare",
+      "symbol": "ALNY",
+      "qty": 7.0,
+      "est_price": 167.35,
+      "entry_price": 168.95,
+      "side": "short",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 5,
+      "reason": "rvol 5.19 with OR breakdown 170.86-180.01, price 3.5% below VWAP (-3.5%), day -3.8% trending down. RBC cuts price target to $280 provides fundamental support. Perfect risk-off short: high rvol, breakdown, well below VWAP, negative sentiment aligns with favored shorting strategy in risk-off regime.",
+      "stop_price": 170.8,
+      "take_profit_price": 162.33
+    },
+    {
+      "time": "11:59",
+      "team": "financials",
+      "symbol": "ICE",
+      "qty": 3,
+      "est_price": 169.445,
       "entry_price": null,
       "side": "long",
       "exit_price": null,
@@ -1639,9 +1711,45 @@
       "pnl_pct": null,
       "status": "submitted",
       "conviction": 6,
-      "reason": "[75% invested rule] Strongest relative strength in a risk-off tape. Trading above VWAP (+1.5%) with a clear opening range breakout. 5-day momentum is +32%. Fits the 'high-conviction' criteria (RVol 1.62, above VWAP) despite the President's strict guidelines, as it is the only name showing genuine intraday strength.",
-      "stop_price": 75.64,
-      "take_profit_price": 79.37
+      "reason": "[75% invested rule] ICE is the strongest relative performer on the watchlist (+4.0% day), trading above VWAP (+0.6%), and has broken out of the opening range. It has positive news catalysts (Barclays/KBW upgrades) and is in a defensive sector (exchange infrastructure) that often holds up in risk-off environments. High conviction due to momentum and news alignment.",
+      "stop_price": 166.9,
+      "take_profit_price": 174.53
+    },
+    {
+      "time": "11:59",
+      "team": "financials",
+      "symbol": "SPGI",
+      "qty": 1,
+      "est_price": 468.44,
+      "entry_price": null,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "submitted",
+      "conviction": 5,
+      "reason": "[75% invested rule] SPGI is up +1.7% on the day and above VWAP (+0.2%). While RSI is overbought (86.9), it is in a strong 20-day uptrend (+18.6%). In a risk-off market, high-quality financial data providers can act as defensive plays. Looking for a hold of VWAP or a slight pullback to enter. Lower conviction due to overbought RSI and overnight warning of potential pullback.",
+      "stop_price": 461.41,
+      "take_profit_price": 480.15
+    },
+    {
+      "time": "11:59",
+      "team": "financials",
+      "symbol": "MA",
+      "qty": 1,
+      "est_price": 635.535,
+      "entry_price": null,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "submitted",
+      "conviction": 5,
+      "reason": "[75% invested rule] MA has strong news catalysts (Barclays PT $700, Argus PT $694, Evercore PT $640). It is trading near VWAP (-0.3%) and has broken down from the opening range, which is a risk. However, the positive news flow is significant. If it stabilizes and reclaims VWAP, it could be a good entry. Currently slightly below VWAP, so waiting for confirmation.",
+      "stop_price": 626.0,
+      "take_profit_price": 651.42
     }
   ],
   "blocked_today": [
@@ -2324,6 +2432,70 @@
       "symbol": "COIN",
       "action": "SHORT",
       "reason": "conviction 4 is below the minimum 5"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "tech",
+      "symbol": "INTC",
+      "action": "SHORT",
+      "reason": "team already has the maximum number of positions"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "tech",
+      "symbol": "AAPL",
+      "action": "BUY",
+      "reason": "team already has the maximum number of positions"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "tech",
+      "symbol": "NVDA",
+      "action": "SHORT",
+      "reason": "team already has the maximum number of positions"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "entertainment",
+      "symbol": "MGM",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 6 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "entertainment",
+      "symbol": "SPOT",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 6 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "entertainment",
+      "symbol": "CMCSA",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 6 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "healthcare",
+      "symbol": "REGN",
+      "action": "BUY",
+      "reason": "conviction 3 is below the minimum 6 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "healthcare",
+      "symbol": "MRK",
+      "action": "SHORT",
+      "reason": "conviction 2 is below the minimum 5"
     }
   ],
   "recent_trades": [
@@ -4814,13 +4986,13 @@
     }
   },
   "mood": {
-    "time": "2026-10-30T11:45-04:00",
+    "time": "2026-10-30T11:55-04:00",
     "regime": "risk_off",
-    "spy": -0.0159,
-    "qqq": -0.0316,
-    "fear_vixy": 0.0882,
+    "spy": -0.0155,
+    "qqq": -0.0307,
+    "fear_vixy": 0.0894,
     "breadth": 0.31,
-    "why": "index down -3.2%, fear gauge (VIXY) up 8.8%",
+    "why": "index down -3.1%, fear gauge (VIXY) up 8.9%",
     "note": "Market is falling hard or fear is spiking. Longs are half size and need conviction +1. Shorting weak stocks (below VWAP, breaking down) is favored."
   },
   "preflight": {
@@ -13735,7 +13907,7 @@
           "time": "11:49",
           "symbol": "VSAT",
           "kind": "shares",
-          "qty": 4,
+          "qty": 4.0,
           "dollars": 308.24,
           "est_price": 77.06,
           "setup": "opening range breakout",
@@ -13743,14 +13915,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 75.64,
-          "entry_price": null,
+          "entry_price": 77.11,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 6,
           "reason": "[75% invested rule] Strongest relative strength in a risk-off tape. Trading above VWAP (+1.5%) with a clear opening range breakout. 5-day momentum is +32%. Fits the 'high-conviction' criteria (RVol 1.62, above VWAP) despite the President's strict guidelines, as it is the only name showing genuine intraday strength.",
           "stop_price": 75.64,
@@ -19279,6 +19451,30 @@
           "symbol": "CMCSA",
           "action": "BUY",
           "reason": "conviction None is below the minimum 6 (risk-off market)"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "11:53",
+          "team": "entertainment",
+          "symbol": "MGM",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 6 (risk-off market)"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "11:53",
+          "team": "entertainment",
+          "symbol": "SPOT",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 6 (risk-off market)"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "11:53",
+          "team": "entertainment",
+          "symbol": "CMCSA",
+          "action": "BUY",
+          "reason": "conviction None is below the minimum 6 (risk-off market)"
         }
       ],
       "plans": [
@@ -24186,7 +24382,7 @@
           "setup": "momentum",
           "side": "long",
           "partials": null,
-          "trail_active": null,
+          "trail_active": true,
           "first_stop": 334.32,
           "entry_price": 339.64,
           "exit_price": null,
@@ -24198,35 +24394,11 @@
           "status": "open",
           "conviction": 3,
           "reason": "[75% invested rule] rvol 1.63 > 1.5, vwap +0.3%, OR 333.31-343.75, +3.0% day move, trend flat. Strong intraday performance despite market down. RSI 66.9 approaching overbought but momentum intact. Tight stop recommended. Position size reduced 50% per executive order.",
-          "stop_price": 334.32,
+          "stop_price": 340.66,
           "take_profit_price": 352.99
         }
       ],
       "blocked": [
-        {
-          "date": "2026-10-27",
-          "time": "13:19",
-          "team": "tech",
-          "symbol": "MSFT",
-          "action": "BUY",
-          "reason": "team used all of today's trades"
-        },
-        {
-          "date": "2026-10-27",
-          "time": "13:19",
-          "team": "tech",
-          "symbol": "ANET",
-          "action": "BUY",
-          "reason": "team used all of today's trades"
-        },
-        {
-          "date": "2026-10-27",
-          "time": "13:19",
-          "team": "tech",
-          "symbol": "MU",
-          "action": "BUY",
-          "reason": "team used all of today's trades"
-        },
         {
           "date": "2026-10-28",
           "time": "15:42",
@@ -24682,6 +24854,30 @@
           "symbol": "AAPL",
           "action": "BUY",
           "reason": "conviction 5 is below the minimum 6 (risk-off market)"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "11:53",
+          "team": "tech",
+          "symbol": "INTC",
+          "action": "SHORT",
+          "reason": "team already has the maximum number of positions"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "11:53",
+          "team": "tech",
+          "symbol": "AAPL",
+          "action": "BUY",
+          "reason": "team already has the maximum number of positions"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "11:53",
+          "team": "tech",
+          "symbol": "NVDA",
+          "action": "SHORT",
+          "reason": "team already has the maximum number of positions"
         }
       ],
       "plans": [
@@ -26889,6 +27085,44 @@
             "BUY MSFT x3 (~$1566.15) [deploy]",
             "BUY INTU x4 (~$1357.64) [deploy]"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "11:53",
+          "trigger": "scheduled look",
+          "market_view": "The IT sector is under significant pressure in a risk-off environment with QQQ down -3.2% and VIXY up 8.8%. Most watchlist stocks trade below VWAP with opening range breakdowns, reflecting broad selling pressure. Only AAPL remains notably above VWAP with acceptable relative volume (1.74), while INTC and other severely declining names present short opportunities as risk-off favors shorting weak stocks below VWAP per the QQQ regime filter. President's orders enforce no long positions below VWAP in down market and focus on high-liquidity names NVDA and AAPL.",
+          "experiment": "",
+          "decisions": [
+            {
+              "symbol": "AAPL",
+              "action": "BUY",
+              "conviction": 3,
+              "reason": "Above VWAP (+0.1%) with rvol 1.74 > 1.5, president's focus stock per executive orders. OR 344.14-348.75 with price at 347.12 (83% up range). Breakout above 348.75 would confirm opening range breakout. Risk-off environment permits only longs above VWAP per QQQ regime filter.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.03
+            },
+            {
+              "symbol": "INTC",
+              "action": "SHORT",
+              "conviction": 4,
+              "reason": "-28.6% day drop with -25.4% premarket gap, rvol 9.07 (highest in watchlist). Below VWAP (-0.1%) in risk-off environment. Pre-market guidance cut to $90, CDS at record high, Evercore target cut to $131. Clear downtrend favors shorting weak stocks per team strategy. Largest rvol provides volume confirmation of downside move.",
+              "stop_loss_pct": 0.02,
+              "take_profit_pct": 0.04
+            },
+            {
+              "symbol": "NVDA",
+              "action": "SHORT",
+              "conviction": 3,
+              "reason": "President's focus stock for liquidity. Below VWAP (-0.6%) with OR breakdown confirmed. Risk-off market favors shorting weak stocks. rvol 1.65 > 1.5 provides volume support. NVIDIA's -3.8% decline aligns with sector risk-off. Avoid long below VWAP per regime filter; shorting weak stocks permitted in risk-off.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.03
+            }
+          ],
+          "results": [
+            "SHORT INTC blocked: team already has the maximum number of positions",
+            "BUY AAPL blocked: team already has the maximum number of positions",
+            "SHORT NVDA blocked: team already has the maximum number of positions"
+          ]
         }
       ],
       "lessons": [
@@ -27576,12 +27810,21 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T11:20-04:00"
+        "updated": "2026-10-30T11:53-04:00"
       },
       "research": {
         "time": "2026-10-30T08:48-04:00",
         "news": {
           "findings": [
+            {
+              "symbol": "INTC",
+              "sentiment": -1.0,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Intel shares sank despite strong Q3 results as Q4 guidance disappoints. Analysts cut rating, price targets on weak PC demand.",
+              "source": "benzinga",
+              "time": "11:55"
+            },
             {
               "symbol": "SNDK",
               "sentiment": 0.0,
@@ -27841,19 +28084,13 @@
               "unconfirmed_rumor": false,
               "summary": "Intel shares collapsed 23-26% in pre-market trading following disappointing Q4 guidance driven by supply shortages and acute PC market weakness, prompting a wave of Wall Street downgrades.",
               "source": "benzinga"
-            },
-            {
-              "symbol": "AMD",
-              "sentiment": -0.6,
-              "importance": 4,
-              "unconfirmed_rumor": false,
-              "summary": "AMD shares fell roughly 8% in pre-market sympathy with Intel's disastrous outlook, overshadowing an expanded AI infrastructure partnership with Oracle Cloud.",
-              "source": "benzinga"
             }
           ],
-          "urgent": [],
-          "overall": "The Information Technology sector experienced mixed sentiments among the team's stocks. CoreWeave (CRWV) saw a decline in stock value due to tech market weakness, hyperscaler capex disappointment, and debt concerns. Meanwhile, Microsoft (MSFT) and Alphabet (GOOG) showed positive sentiment, contributing to a relatively stable mood among the team's stocks.",
-          "items_read": 78
+          "urgent": [
+            "INTC"
+          ],
+          "overall": "The Information Technology sector has been negatively impacted by Intel's disappointing Q4 guidance and weak PC demand outlook, which led to a decline in Intel shares.",
+          "items_read": 79
         },
         "social": {
           "findings": [],
@@ -33013,8 +33250,8 @@
             }
           ],
           "urgent": [],
-          "overall": "No recent significant news or SEC filings were found for the Consumer Discretionary team's stocks within the last 2 hours.",
-          "items_read": 65
+          "overall": "After reviewing the recent news and SEC filings, we find no significant findings affecting the Consumer Discretionary stocks in our team's list. The market remains stable for now.",
+          "items_read": 66
         },
         "social": {
           "findings": [],
@@ -35372,8 +35609,8 @@
           "entry_price": 339.95,
           "exit_price": null,
           "exit_time": null,
-          "exit_reason": null,
-          "exit_note": null,
+          "exit_reason": "manager_sell",
+          "exit_note": "Executive order mandates focus on defensive financials only and reducing trade frequency. JPM is below VWAP, below 50-day average, and showing weak momentum (m60 -0.2%). In a risk-off environment with no clear catalyst, capital preservation is the priority. Closing this position to reset and await a high-conviction setup.",
           "pnl": null,
           "pnl_pct": null,
           "status": "open",
@@ -35399,8 +35636,8 @@
           "entry_price": 185.64,
           "exit_price": null,
           "exit_time": null,
-          "exit_reason": null,
-          "exit_note": null,
+          "exit_reason": "manager_sell",
+          "exit_note": "Executive order mandates focus on defensive financials only and reducing trade frequency. MS is below VWAP, below 50-day average, and showing weak momentum (m60 -0.5%). In a risk-off environment with no clear catalyst, capital preservation is the priority. Closing this position to reset and await a high-conviction setup.",
           "pnl": null,
           "pnl_pct": null,
           "status": "open",
@@ -35435,6 +35672,87 @@
           "reason": "[75% invested rule] Opening range breakout above 168.24 with positive news catalyst (Barclays/KBW upgrades) and price above VWAP. Strongest long setup on the list despite risk-off market.",
           "stop_price": 166.04,
           "take_profit_price": 173.63
+        },
+        {
+          "id": "financials-ICE-202610301159-c59d",
+          "date": "2026-10-30",
+          "time": "11:59",
+          "symbol": "ICE",
+          "kind": "shares",
+          "qty": 3,
+          "dollars": 508.33,
+          "est_price": 169.445,
+          "setup": "opening range breakout",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 166.9,
+          "entry_price": null,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "submitted",
+          "conviction": 6,
+          "reason": "[75% invested rule] ICE is the strongest relative performer on the watchlist (+4.0% day), trading above VWAP (+0.6%), and has broken out of the opening range. It has positive news catalysts (Barclays/KBW upgrades) and is in a defensive sector (exchange infrastructure) that often holds up in risk-off environments. High conviction due to momentum and news alignment.",
+          "stop_price": 166.9,
+          "take_profit_price": 174.53
+        },
+        {
+          "id": "financials-SPGI-202610301159-2910",
+          "date": "2026-10-30",
+          "time": "11:59",
+          "symbol": "SPGI",
+          "kind": "shares",
+          "qty": 1,
+          "dollars": 468.44,
+          "est_price": 468.44,
+          "setup": "pullback in uptrend",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 461.41,
+          "entry_price": null,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "submitted",
+          "conviction": 5,
+          "reason": "[75% invested rule] SPGI is up +1.7% on the day and above VWAP (+0.2%). While RSI is overbought (86.9), it is in a strong 20-day uptrend (+18.6%). In a risk-off market, high-quality financial data providers can act as defensive plays. Looking for a hold of VWAP or a slight pullback to enter. Lower conviction due to overbought RSI and overnight warning of potential pullback.",
+          "stop_price": 461.41,
+          "take_profit_price": 480.15
+        },
+        {
+          "id": "financials-MA-202610301159-1b47",
+          "date": "2026-10-30",
+          "time": "11:59",
+          "symbol": "MA",
+          "kind": "shares",
+          "qty": 1,
+          "dollars": 635.53,
+          "est_price": 635.535,
+          "setup": "news catalyst",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 626.0,
+          "entry_price": null,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "submitted",
+          "conviction": 5,
+          "reason": "[75% invested rule] MA has strong news catalysts (Barclays PT $700, Argus PT $694, Evercore PT $640). It is trading near VWAP (-0.3%) and has broken down from the opening range, which is a risk. However, the positive news flow is significant. If it stabilizes and reclaims VWAP, it could be a good entry. Currently slightly below VWAP, so waiting for confirmation.",
+          "stop_price": 626.0,
+          "take_profit_price": 651.42
         }
       ],
       "blocked": [
@@ -37476,6 +37794,38 @@
             "SHORT HOOD blocked: conviction 4 is below the minimum 5",
             "SHORT COIN blocked: conviction 4 is below the minimum 5"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "11:59",
+          "trigger": "must invest $5,773 more (75% rule)",
+          "market_view": "",
+          "experiment": "",
+          "decisions": [
+            {
+              "symbol": "JPM",
+              "action": "SELL",
+              "conviction": null,
+              "reason": "Executive order mandates focus on defensive financials only and reducing trade frequency. JPM is below VWAP, below 50-day average, and showing weak momentum (m60 -0.2%). In a risk-off environment with no clear catalyst, capital preservation is the priority. Closing this position to reset and await a high-conviction setup.",
+              "stop_loss_pct": null,
+              "take_profit_pct": null
+            },
+            {
+              "symbol": "MS",
+              "action": "SELL",
+              "conviction": null,
+              "reason": "Executive order mandates focus on defensive financials only and reducing trade frequency. MS is below VWAP, below 50-day average, and showing weak momentum (m60 -0.5%). In a risk-off environment with no clear catalyst, capital preservation is the priority. Closing this position to reset and await a high-conviction setup.",
+              "stop_loss_pct": null,
+              "take_profit_pct": null
+            }
+          ],
+          "results": [
+            "SELL JPM",
+            "SELL MS",
+            "BUY ICE x3 (~$508.33) [deploy]",
+            "BUY SPGI x1 (~$468.44) [deploy]",
+            "BUY MA x1 (~$635.53) [deploy]"
+          ]
         }
       ],
       "lessons": [
@@ -38205,8 +38555,8 @@
             }
           ],
           "urgent": [],
-          "overall": "No recent news or SEC filings impacting the selected Financial Services stocks. Please check again later for updates.",
-          "items_read": 64
+          "overall": "The Financial Services sector appears stable with no urgent news or highly impactful events concerning the team's stocks. SEC filings have no new information.",
+          "items_read": 65
         },
         "social": {
           "findings": [],
@@ -40745,25 +41095,36 @@
           "reason": "[75% invested rule] Down -2.8% below VWAP, OR breakdown, m15 -1.1%, m60 -3.5%, rvol 6.49 extremely high. RSI 22.0 oversold but in risk-off oversold can mean further downside. Strong downtrend (-23.5% 5d, -24.8% 20d) makes it a candidate for risk-off shorting.",
           "stop_price": 169.4,
           "take_profit_price": 162.88
+        },
+        {
+          "id": "healthcare-ALNY-202610301153-0c67",
+          "date": "2026-10-30",
+          "time": "11:53",
+          "symbol": "ALNY",
+          "kind": "shares",
+          "qty": 7.0,
+          "dollars": 1171.45,
+          "est_price": 167.35,
+          "setup": "other",
+          "side": "short",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 170.8,
+          "entry_price": 168.95,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 5,
+          "reason": "rvol 5.19 with OR breakdown 170.86-180.01, price 3.5% below VWAP (-3.5%), day -3.8% trending down. RBC cuts price target to $280 provides fundamental support. Perfect risk-off short: high rvol, breakdown, well below VWAP, negative sentiment aligns with favored shorting strategy in risk-off regime.",
+          "stop_price": 170.8,
+          "take_profit_price": 162.33
         }
       ],
       "blocked": [
-        {
-          "date": "2026-10-26",
-          "time": "11:05",
-          "team": "healthcare",
-          "symbol": "BMY",
-          "action": "BUY",
-          "reason": "team already has the maximum number of positions"
-        },
-        {
-          "date": "2026-10-26",
-          "time": "11:35",
-          "team": "healthcare",
-          "symbol": "BMY",
-          "action": "BUY",
-          "reason": "team already has the maximum number of positions"
-        },
         {
           "date": "2026-10-26",
           "time": "11:40",
@@ -41227,6 +41588,22 @@
           "symbol": "ABBV",
           "action": "BUY",
           "reason": "conviction 3 is below the minimum 6 (risk-off market)"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "11:53",
+          "team": "healthcare",
+          "symbol": "REGN",
+          "action": "BUY",
+          "reason": "conviction 3 is below the minimum 6 (risk-off market)"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "11:53",
+          "team": "healthcare",
+          "symbol": "MRK",
+          "action": "SHORT",
+          "reason": "conviction 2 is below the minimum 5"
         }
       ],
       "plans": [
@@ -43133,6 +43510,44 @@
             "BUY LLY blocked: already holding this stock",
             "BUY ABBV blocked: conviction 3 is below the minimum 6 (risk-off market)"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "11:53",
+          "trigger": "must invest $6,006 more (75% rule)",
+          "market_view": "Healthcare sector trading in pronounced risk-off environment with SPY down 1.6%, QQQ down 3.0%, VIXY up 8.7%. Only REGN shows extreme relative volume (7.27x) with +5.1% gap up on earnings, while 13 of 15 team stocks trade below VWAP with opening range breakdowns. Market mood favors shorting weak stocks below VWAP on breakdowns, but 75% invested rule requires deploying capital. LLY already long from earlier session down -1.0%.",
+          "experiment": "Testing executive strategy: prioritize high-conviction news catalysts above VWAP with dynamic ATR-based stops. Evaluating whether REGN entry violates risk-off earnings lesson or if extreme rvol (7.27x) overrides m15 momentum filter.",
+          "decisions": [
+            {
+              "symbol": "ALNY",
+              "action": "SHORT",
+              "conviction": 5,
+              "reason": "rvol 5.19 with OR breakdown 170.86-180.01, price 3.5% below VWAP (-3.5%), day -3.8% trending down. RBC cuts price target to $280 provides fundamental support. Perfect risk-off short: high rvol, breakdown, well below VWAP, negative sentiment aligns with favored shorting strategy in risk-off regime.",
+              "stop_loss_pct": 0.02,
+              "take_profit_pct": 0.03
+            },
+            {
+              "symbol": "REGN",
+              "action": "BUY",
+              "conviction": 3,
+              "reason": "rvol 7.27 (extreme) meets executive criteria of >1.5x with price above VWAP (-0.1%). +11.7% day, +5.1% gap up on Q3 results with Sanofi partnership expansion and FDA approval for Pasatru. Size reduced given risk-off and earnings lesson (m15 -0.1% not >0.5%), but undeniable volume and catalyst demand entry despite broader market weakness.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.03
+            },
+            {
+              "symbol": "MRK",
+              "action": "SHORT",
+              "conviction": 2,
+              "reason": "OR BREAKDOWN 149.82-151.28, price below VWAP (-0.5%), rvol 1.6 just above 1.5 threshold. Day +1.5% but flat trend with breakdown. Goldman Sachs lowered price target from $63 to $61 provides mild fundamental support for short. Secondary risk-off short with modest conviction given rvol barely clears 1.5x.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.03
+            }
+          ],
+          "results": [
+            "SHORT ALNY x7 (~$1171.45)",
+            "BUY REGN blocked: conviction 3 is below the minimum 6 (risk-off market)",
+            "SHORT MRK blocked: conviction 2 is below the minimum 5"
+          ]
         }
       ],
       "lessons": [
@@ -43685,7 +44100,7 @@
             "reason": "still holding it; sell first"
           }
         ],
-        "updated": "2026-10-30T11:39-04:00"
+        "updated": "2026-10-30T11:53-04:00"
       },
       "research": {
         "time": "2026-10-30T08:51-04:00",
@@ -43856,8 +44271,8 @@
             }
           ],
           "urgent": [],
-          "overall": "The healthcare sector remains largely unchanged with a single moderate rating adjustment for Alnylam. No significant catalysts are expected to move the broader group today.",
-          "items_read": 45
+          "overall": "No significant news or SEC filings found for the provided list of Healthcare stocks within the last 2 hours. Please check again later for updates.",
+          "items_read": 47
         },
         "social": {
           "findings": [],
@@ -44461,70 +44876,6 @@
     }
   ],
   "blocked_recent": [
-    {
-      "date": "2026-10-29",
-      "time": "11:27",
-      "team": "tech",
-      "symbol": "NVDA",
-      "action": "BUY",
-      "reason": "team already has the maximum number of positions"
-    },
-    {
-      "date": "2026-10-29",
-      "time": "11:33",
-      "team": "defense",
-      "symbol": "CACI",
-      "action": "BUY",
-      "reason": "team already has the maximum number of positions"
-    },
-    {
-      "date": "2026-10-29",
-      "time": "11:33",
-      "team": "defense",
-      "symbol": "TXT",
-      "action": "BUY",
-      "reason": "team already has the maximum number of positions"
-    },
-    {
-      "date": "2026-10-29",
-      "time": "11:33",
-      "team": "entertainment",
-      "symbol": "TKO",
-      "action": "BUY",
-      "reason": "conviction 4 is below the minimum 5 (risk-off market)"
-    },
-    {
-      "date": "2026-10-29",
-      "time": "11:33",
-      "team": "financials",
-      "symbol": "COIN",
-      "action": "BUY",
-      "reason": "conviction 4 is below the minimum 5 (risk-off market)"
-    },
-    {
-      "date": "2026-10-29",
-      "time": "12:04",
-      "team": "defense",
-      "symbol": "TXT",
-      "action": "BUY",
-      "reason": "team already has the maximum number of positions"
-    },
-    {
-      "date": "2026-10-29",
-      "time": "12:04",
-      "team": "consumer",
-      "symbol": "CMG",
-      "action": "BUY",
-      "reason": "conviction None is below the minimum 4"
-    },
-    {
-      "date": "2026-10-29",
-      "time": "12:04",
-      "team": "consumer",
-      "symbol": "CVNA",
-      "action": "BUY",
-      "reason": "conviction None is below the minimum 4"
-    },
     {
       "date": "2026-10-29",
       "time": "12:07",
@@ -45660,6 +46011,70 @@
       "symbol": "COIN",
       "action": "SHORT",
       "reason": "conviction 4 is below the minimum 5"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "tech",
+      "symbol": "INTC",
+      "action": "SHORT",
+      "reason": "team already has the maximum number of positions"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "tech",
+      "symbol": "AAPL",
+      "action": "BUY",
+      "reason": "team already has the maximum number of positions"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "tech",
+      "symbol": "NVDA",
+      "action": "SHORT",
+      "reason": "team already has the maximum number of positions"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "entertainment",
+      "symbol": "MGM",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 6 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "entertainment",
+      "symbol": "SPOT",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 6 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "entertainment",
+      "symbol": "CMCSA",
+      "action": "BUY",
+      "reason": "conviction None is below the minimum 6 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "healthcare",
+      "symbol": "REGN",
+      "action": "BUY",
+      "reason": "conviction 3 is below the minimum 6 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "11:53",
+      "team": "healthcare",
+      "symbol": "MRK",
+      "action": "SHORT",
+      "reason": "conviction 2 is below the minimum 5"
     }
   ]
 }
