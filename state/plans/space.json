@@ -1,57 +1,57 @@
 {
-  "date": "2026-10-29",
-  "time": "14:21",
+  "date": "2026-10-30",
+  "time": "09:34",
   "trigger": "first look this run",
-  "market_view": "The broader market remains in a risk-off posture with SPY and QQQ down significantly, though aerospace names like HWM and GE display localized intraday relative strength following positive earnings and catalysts. Following explicit executive guidance, new entries are paused for Team 2 while we monitor active holdings and allow market conditions to stabilize.",
+  "market_view": "The broader market opens under heavy risk-off pressure with QQQ down 2.5% and SPY down 1.1%. In accordance with executive orders suspending the 75% investment mandate, we are staying 100% in cash at the open. Furthermore, following our mandatory 15-minute opening wait rule, we will observe price discovery and relative volume before committing capital.",
   "decisions": [],
   "ranked_ideas": [
-    {
-      "symbol": "GE",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.035,
-      "setup": "opening range breakout",
-      "reason": "Trading +3.3% on the day above VWAP with an opening range breakout and positive intraday trend."
-    },
-    {
-      "symbol": "ASTS",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Strong intraday move (+4.8% from open) holding above VWAP with an active uptrend."
-    },
-    {
-      "symbol": "RDW",
-      "direction": "long",
-      "conviction": 4,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "opening range breakout",
-      "reason": "Solid opening range breakout with strong relative performance (+5.2% open)."
-    },
-    {
-      "symbol": "FLY",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "momentum",
-      "reason": "Positive m15 momentum (+0.5%) and opening range breakout with overall upward daily trend."
-    },
     {
       "symbol": "VSAT",
       "direction": "long",
       "conviction": 3,
-      "stop_loss_pct": 0.018,
-      "take_profit_pct": 0.035,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
       "setup": "momentum",
-      "reason": "High relative volume (rvol 1.86) and strong multi-day momentum (+33.6% 5-day)."
+      "reason": "Strongest multi-day momentum in the aerospace group (5d +32.1%), holding above 50-day moving average."
+    },
+    {
+      "symbol": "TDG",
+      "direction": "long",
+      "conviction": 3,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "momentum",
+      "reason": "Resilient aerospace supplier trading above 50-day average, showing relative strength against broad market sell-off."
+    },
+    {
+      "symbol": "SPCX",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.02,
+      "take_profit_pct": 0.04,
+      "setup": "opening range breakout",
+      "reason": "Gapping down 4.4% on tech weakness and Amazon Leo competition news; prime candidate for breakdown continuation if below VWAP."
+    },
+    {
+      "symbol": "ASTS",
+      "direction": "short",
+      "conviction": 3,
+      "stop_loss_pct": 0.025,
+      "take_profit_pct": 0.05,
+      "setup": "opening range breakout",
+      "reason": "Down 5.0% pre-market amidst negative analyst sentiment and high beta risk in a severe risk-off tape."
+    },
+    {
+      "symbol": "GE",
+      "direction": "long",
+      "conviction": 2,
+      "stop_loss_pct": 0.015,
+      "take_profit_pct": 0.03,
+      "setup": "mean reversion",
+      "reason": "Large-cap aerospace leader holding flat at open; will monitor for VWAP bounce if market stabilizes."
     }
   ],
-  "experiment": "Implement an earnings-gap reaction plan for HWM's pre-open earnings tomorrow, enforcing a 15-minute wait post-bell before trading continuation.",
+  "experiment": "Add a volume-spike filter (rvol >2) before taking news-catalyst entries to improve entry quality",
   "watchlist_changes": {
     "add": [],
     "remove": []
