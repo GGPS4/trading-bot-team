@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-30T09:34-04:00",
+  "updated": "2026-10-30T09:43-04:00",
   "date": "2026-10-30",
   "mode": "paper",
   "health": {
     "issues": [
-      "5 problem(s) in the last hour, latest: LLM: gemini gemini-3.1-pro-preview-customtools hit its daily limit: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please chec"
+      "11 problem(s) in the last hour, latest: LLM: gemini gemini-3.7-flash hit its daily limit: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and bi"
     ]
   },
   "paused": false,
@@ -14,21 +14,21 @@
     "strategy": "day_trading"
   },
   "account": {
-    "equity": 98753.2,
-    "cash": 98419.58,
-    "day_change": 0.34,
-    "day_change_pct": 0.0
+    "equity": 98644.3,
+    "cash": 91129.6,
+    "day_change": -108.56,
+    "day_change_pct": -0.0011
   },
   "benchmark": {
     "symbol": "SPY",
-    "price": 760.295
+    "price": 760.325
   },
   "performance": {
     "start_date": "2026-10-20",
     "trading_days": 11,
-    "return_since_start": -0.0125,
+    "return_since_start": -0.0136,
     "benchmark_since_start": -0.0134,
-    "max_drawdown": 0.0125
+    "max_drawdown": 0.0136
   },
   "go_live": {
     "items": [
@@ -39,13 +39,13 @@
       },
       {
         "rule": "Beating SPY since the start",
-        "ok": true,
-        "value": "-1.2% vs -1.3%"
+        "ok": false,
+        "value": "-1.4% vs -1.3%"
       },
       {
         "rule": "Worst drop under 15%",
         "ok": true,
-        "value": "1.2%"
+        "value": "1.4%"
       }
     ],
     "all_ok": false
@@ -72,17 +72,17 @@
         "GD"
       ],
       "budget": 31107.15,
-      "invested": 0,
-      "unrealized_pnl": 0,
-      "realized_today": 0,
-      "trades_today": 3,
-      "blocked_today": 0,
+      "invested": 6409.36,
+      "unrealized_pnl": -18.52,
+      "realized_today": -6.31,
+      "trades_today": 5,
+      "blocked_today": 2,
       "all_time": {
-        "closed_trades": 73,
+        "closed_trades": 74,
         "wins": 33,
-        "losses": 40,
-        "win_rate": 0.452,
-        "realized_pnl": -50.76
+        "losses": 41,
+        "win_rate": 0.446,
+        "realized_pnl": -57.07
       }
     },
     "space": {
@@ -106,17 +106,17 @@
         "LPTH"
       ],
       "budget": 4443.88,
-      "invested": 333.62,
-      "unrealized_pnl": 0.34,
-      "realized_today": 0,
+      "invested": -551.94,
+      "unrealized_pnl": -1.66,
+      "realized_today": -3.18,
       "trades_today": 3,
       "blocked_today": 0,
       "all_time": {
-        "closed_trades": 72,
+        "closed_trades": 73,
         "wins": 28,
-        "losses": 44,
-        "win_rate": 0.389,
-        "realized_pnl": -629.37
+        "losses": 45,
+        "win_rate": 0.384,
+        "realized_pnl": -632.55
       }
     },
     "entertainment": {
@@ -140,8 +140,8 @@
         "MGM"
       ],
       "budget": 4443.88,
-      "invested": 0,
-      "unrealized_pnl": 0,
+      "invested": -1283.33,
+      "unrealized_pnl": -4.24,
       "realized_today": 0,
       "trades_today": 2,
       "blocked_today": 3,
@@ -174,17 +174,17 @@
         "EQIX"
       ],
       "budget": 22219.39,
-      "invested": 0,
-      "unrealized_pnl": 0,
-      "realized_today": 0,
-      "trades_today": 2,
-      "blocked_today": 3,
+      "invested": 1717.09,
+      "unrealized_pnl": -4.75,
+      "realized_today": -13.86,
+      "trades_today": 3,
+      "blocked_today": 5,
       "all_time": {
-        "closed_trades": 86,
+        "closed_trades": 87,
         "wins": 38,
-        "losses": 48,
-        "win_rate": 0.442,
-        "realized_pnl": -109.24
+        "losses": 49,
+        "win_rate": 0.437,
+        "realized_pnl": -123.1
       }
     },
     "consumer": {
@@ -208,10 +208,10 @@
         "NCLH"
       ],
       "budget": 8887.76,
-      "invested": 0,
-      "unrealized_pnl": 0,
+      "invested": -705.96,
+      "unrealized_pnl": 3.36,
       "realized_today": 0,
-      "trades_today": 0,
+      "trades_today": 3,
       "blocked_today": 0,
       "all_time": {
         "closed_trades": 59,
@@ -276,10 +276,10 @@
         "ALNY"
       ],
       "budget": 8887.76,
-      "invested": 0,
-      "unrealized_pnl": 0,
+      "invested": 1929.4,
+      "unrealized_pnl": 4.32,
       "realized_today": 0,
-      "trades_today": 0,
+      "trades_today": 3,
       "blocked_today": 0,
       "all_time": {
         "closed_trades": 72,
@@ -292,22 +292,256 @@
   },
   "positions": [
     {
-      "symbol": "TDG",
-      "team": "space",
-      "qty": 0.283015823,
-      "entry": 1177.6,
-      "price": 1178.81,
-      "value": 333.62,
-      "pnl": 0.34,
-      "pnl_pct": 0.001,
-      "stop": 1158.49,
-      "target": 1211.42,
-      "reason": "[75% invested rule] Resilient aerospace supplier trading above 50-day average, showing relative strength against broad market sell-off.",
+      "symbol": "AAPL",
+      "team": "tech",
+      "qty": 4.0,
+      "entry": 345.74,
+      "price": 344.67,
+      "value": 1378.68,
+      "pnl": -4.26,
+      "pnl_pct": -0.0031,
+      "stop": 340.12,
+      "target": 355.66,
+      "reason": "[75% invested rule] High-liquidity mega-cap insulated from chip slump news, potential bounce if market stabilizes.",
       "side": "long",
       "trailing": false,
       "scaled": false,
-      "first_stop": 1158.49,
+      "first_stop": 340.12,
+      "setup": "pullback in uptrend"
+    },
+    {
+      "symbol": "ABBV",
+      "team": "healthcare",
+      "qty": 2.0,
+      "entry": 295.97,
+      "price": 296.3,
+      "value": 592.59,
+      "pnl": 0.65,
+      "pnl_pct": 0.0011,
+      "stop": 288.96,
+      "target": 302.17,
+      "reason": "[75% invested rule] Solid Q3 beat, FY guidance hike, and 5.2% dividend increase; waiting for initial post-earnings selling to absorb and reclaim VWAP.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 288.96,
+      "setup": "earnings gap"
+    },
+    {
+      "symbol": "BKNG",
+      "team": "consumer",
+      "qty": 4.0,
+      "entry": 150.49,
+      "price": 150.41,
+      "value": 601.62,
+      "pnl": -0.34,
+      "pnl_pct": -0.0006,
+      "stop": 149.44,
+      "target": 156.27,
+      "reason": "[75% invested rule] Showing early relative strength (+1.1%) from an oversold RSI of 37.5; requires VWAP confirmation and rvol > 1.5x before entry.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 149.44,
+      "setup": "mean reversion"
+    },
+    {
+      "symbol": "GD",
+      "team": "defense",
+      "qty": 6.0,
+      "entry": 384.48,
+      "price": 382.76,
+      "value": 2296.57,
+      "pnl": -10.3,
+      "pnl_pct": -0.0045,
+      "stop": 379.31,
+      "target": 398.57,
+      "reason": "[75% invested rule] Record Q3 revenue ($14.57B) and EPS ($4.49) beat with strong FY26 guidance; awaiting RVol > 1.5x and opening range confirmation above VWAP.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 379.31,
+      "setup": "earnings gap"
+    },
+    {
+      "symbol": "INTU",
+      "team": "tech",
+      "qty": 1.0,
+      "entry": 338.9,
+      "price": 338.41,
+      "value": 338.41,
+      "pnl": -0.49,
+      "pnl_pct": -0.0014,
+      "stop": null,
+      "target": null,
+      "reason": "",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": null,
+      "setup": null
+    },
+    {
+      "symbol": "LHX",
+      "team": "defense",
+      "qty": 8.0,
+      "entry": 283.02,
+      "price": 282.7,
+      "value": 2261.6,
+      "pnl": -2.6,
+      "pnl_pct": -0.0011,
+      "stop": 276.66,
+      "target": 289.3,
+      "reason": "[75% invested rule] Executive prioritized momentum play; watching for clean OR breakout above VWAP with volume surge.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 276.66,
+      "setup": "opening range breakout"
+    },
+    {
+      "symbol": "LLY",
+      "team": "healthcare",
+      "qty": 0.46495844,
+      "entry": 1433.61,
+      "price": 1432.53,
+      "value": 666.07,
+      "pnl": -0.5,
+      "pnl_pct": -0.0008,
+      "stop": 1399.35,
+      "target": 1470.38,
+      "reason": "[75% invested rule] Top defensive pharma showing relative stability at the open with strong analyst target increases up to $1,650; watching for intraday breakout confirmation above VWAP.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 1399.35,
       "setup": "momentum"
+    },
+    {
+      "symbol": "MGM",
+      "team": "entertainment",
+      "qty": -23.0,
+      "entry": 28.55,
+      "price": 28.76,
+      "value": -661.48,
+      "pnl": -4.89,
+      "pnl_pct": -0.0075,
+      "stop": 29.43,
+      "target": 27.7,
+      "reason": "[75% invested rule] Multiple analyst price target cuts due to Osaka capex; prime short candidate if price drops below opening range.",
+      "side": "short",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 29.43,
+      "setup": "news catalyst"
+    },
+    {
+      "symbol": "NCLH",
+      "team": "consumer",
+      "qty": -74.0,
+      "entry": 17.72,
+      "price": 17.67,
+      "value": -1307.58,
+      "pnl": 3.7,
+      "pnl_pct": 0.0028,
+      "stop": 18.23,
+      "target": 16.9,
+      "reason": "[75% invested rule] Down 1.6% at the open following an extended 20-day run (RSI 72.3); susceptible to risk-off profit-taking if broader market stays weak.",
+      "side": "short",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 18.23,
+      "setup": "momentum"
+    },
+    {
+      "symbol": "NFLX",
+      "team": "entertainment",
+      "qty": -10.0,
+      "entry": 62.25,
+      "price": 62.19,
+      "value": -621.85,
+      "pnl": 0.65,
+      "pnl_pct": 0.001,
+      "stop": 63.81,
+      "target": 60.98,
+      "reason": "[75% invested rule] Weak 5-day/20-day trend with discoverability concerns; potential short setup if it fails VWAP.",
+      "side": "short",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 63.81,
+      "setup": "momentum"
+    },
+    {
+      "symbol": "PLTR",
+      "team": "defense",
+      "qty": -2.0,
+      "entry": 187.27,
+      "price": 189.2,
+      "value": -378.4,
+      "pnl": -3.86,
+      "pnl_pct": -0.0103,
+      "stop": 191.23,
+      "target": 179.98,
+      "reason": "[75% invested rule] PLTR is down -4.5% on the day, trading -1.2% below VWAP with high RVol of 5.16x in a heavily risk-off tape.",
+      "side": "short",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 191.23,
+      "setup": "mean reversion"
+    },
+    {
+      "symbol": "REGN",
+      "team": "healthcare",
+      "qty": 0.720262703,
+      "entry": 925.45,
+      "price": 931.24,
+      "value": 670.74,
+      "pnl": 4.17,
+      "pnl_pct": 0.0063,
+      "stop": 895.61,
+      "target": 955.02,
+      "reason": "[75% invested rule] Massive Q3 earnings beat ($20.07 vs $16.19 expected) and Sanofi expansion, gapping up +7.7%; requires volume confirmation after the opening range.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 895.61,
+      "setup": "earnings gap"
+    },
+    {
+      "symbol": "RTX",
+      "team": "defense",
+      "qty": 11.0,
+      "entry": 202.85,
+      "price": 202.69,
+      "value": 2229.59,
+      "pnl": -1.76,
+      "pnl_pct": -0.0008,
+      "stop": 200.7,
+      "target": 209.87,
+      "reason": "[75% invested rule] Trades above VWAP (+0.2%) with RVol 1.54 following strong earnings beat and raised guidance.",
+      "side": "long",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 200.7,
+      "setup": "news catalyst"
+    },
+    {
+      "symbol": "SPCX",
+      "team": "space",
+      "qty": -4.0,
+      "entry": 137.57,
+      "price": 137.99,
+      "value": -551.94,
+      "pnl": -1.66,
+      "pnl_pct": -0.003,
+      "stop": 140.27,
+      "target": 132.02,
+      "reason": "[75% invested rule] Gapping down 4.4% on tech weakness and Amazon Leo competition news; prime candidate for breakdown continuation if below VWAP.",
+      "side": "short",
+      "trailing": false,
+      "scaled": false,
+      "first_stop": 140.27,
+      "setup": "opening range breakout"
     }
   ],
   "trades_today": [
@@ -315,15 +549,15 @@
       "time": "09:34",
       "team": "defense",
       "symbol": "GD",
-      "qty": 6,
+      "qty": 6.0,
       "est_price": 385.09,
-      "entry_price": null,
+      "entry_price": 384.48,
       "side": "long",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 5,
       "reason": "[75% invested rule] Record Q3 revenue ($14.57B) and EPS ($4.49) beat with strong FY26 guidance; awaiting RVol > 1.5x and opening range confirmation above VWAP.",
       "stop_price": 379.31,
@@ -333,15 +567,15 @@
       "time": "09:34",
       "team": "defense",
       "symbol": "LHX",
-      "qty": 8,
+      "qty": 4.0,
       "est_price": 280.87,
-      "entry_price": null,
+      "entry_price": 283.07,
       "side": "long",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 5,
       "reason": "[75% invested rule] Executive prioritized momentum play; watching for clean OR breakout above VWAP with volume surge.",
       "stop_price": 276.66,
@@ -351,15 +585,15 @@
       "time": "09:34",
       "team": "defense",
       "symbol": "HII",
-      "qty": 7,
+      "qty": 6.0,
       "est_price": 316.72,
-      "entry_price": null,
+      "entry_price": 321.99,
       "side": "long",
-      "exit_price": null,
-      "exit_reason": null,
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "submitted",
+      "exit_price": 321.26,
+      "exit_reason": "manager_sell",
+      "pnl": -6.31,
+      "pnl_pct": -0.0033,
+      "status": "closed",
       "conviction": 5,
       "reason": "[75% invested rule] Executive targeted momentum runner following strong 5d performance (+13.5%); pending volume validation > 1.5x.",
       "stop_price": 310.39,
@@ -369,15 +603,15 @@
       "time": "09:34",
       "team": "space",
       "symbol": "VSAT",
-      "qty": 4,
+      "qty": 4.0,
       "est_price": 77.95,
-      "entry_price": null,
+      "entry_price": 74.36,
       "side": "long",
-      "exit_price": null,
-      "exit_reason": null,
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "submitted",
+      "exit_price": 73.64,
+      "exit_reason": "stop_loss",
+      "pnl": -3.18,
+      "pnl_pct": -0.0107,
+      "status": "closed",
       "conviction": 3,
       "reason": "[75% invested rule] Strongest multi-day momentum in the aerospace group (5d +32.1%), holding above 50-day moving average.",
       "stop_price": 76.39,
@@ -387,15 +621,15 @@
       "time": "09:34",
       "team": "space",
       "symbol": "TDG",
-      "qty": 0.283378,
+      "qty": 0.283015823,
       "est_price": 1176.135,
-      "entry_price": null,
+      "entry_price": 1177.602,
       "side": "long",
       "exit_price": null,
-      "exit_reason": null,
+      "exit_reason": "manager_sell",
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 3,
       "reason": "[75% invested rule] Resilient aerospace supplier trading above 50-day average, showing relative strength against broad market sell-off.",
       "stop_price": 1158.49,
@@ -405,15 +639,15 @@
       "time": "09:34",
       "team": "space",
       "symbol": "SPCX",
-      "qty": 4,
+      "qty": 4.0,
       "est_price": 137.52,
-      "entry_price": null,
+      "entry_price": 137.57,
       "side": "short",
       "exit_price": null,
-      "exit_reason": null,
+      "exit_reason": "manager_sell",
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 3,
       "reason": "[75% invested rule] Gapping down 4.4% on tech weakness and Amazon Leo competition news; prime candidate for breakdown continuation if below VWAP.",
       "stop_price": 140.27,
@@ -423,15 +657,15 @@
       "time": "09:34",
       "team": "entertainment",
       "symbol": "NFLX",
-      "qty": 10,
+      "qty": 10.0,
       "est_price": 62.87,
-      "entry_price": null,
+      "entry_price": 62.25,
       "side": "short",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 2,
       "reason": "[75% invested rule] Weak 5-day/20-day trend with discoverability concerns; potential short setup if it fails VWAP.",
       "stop_price": 63.81,
@@ -441,15 +675,15 @@
       "time": "09:34",
       "team": "entertainment",
       "symbol": "MGM",
-      "qty": 23,
+      "qty": 17.0,
       "est_price": 28.85,
-      "entry_price": null,
+      "entry_price": 28.55,
       "side": "short",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 2,
       "reason": "[75% invested rule] Multiple analyst price target cuts due to Osaka capex; prime short candidate if price drops below opening range.",
       "stop_price": 29.43,
@@ -459,15 +693,15 @@
       "time": "09:34",
       "team": "tech",
       "symbol": "INTU",
-      "qty": 4,
+      "qty": 3.0,
       "est_price": 339.79,
-      "entry_price": null,
+      "entry_price": 338.87,
       "side": "long",
-      "exit_price": null,
-      "exit_reason": null,
-      "pnl": null,
-      "pnl_pct": null,
-      "status": "submitted",
+      "exit_price": 334.586667,
+      "exit_reason": "stop_loss",
+      "pnl": -13.86,
+      "pnl_pct": -0.0136,
+      "status": "closed",
       "conviction": 3,
       "reason": "[75% invested rule] Showing strong relative strength against a down market, trading up +2.6% on the day.",
       "stop_price": 334.69,
@@ -477,15 +711,15 @@
       "time": "09:34",
       "team": "tech",
       "symbol": "AAPL",
-      "qty": 4,
+      "qty": 3.0,
       "est_price": 345.3,
-      "entry_price": null,
+      "entry_price": 345.65,
       "side": "long",
       "exit_price": null,
       "exit_reason": null,
       "pnl": null,
       "pnl_pct": null,
-      "status": "submitted",
+      "status": "open",
       "conviction": 3,
       "reason": "[75% invested rule] High-liquidity mega-cap insulated from chip slump news, potential bounce if market stabilizes.",
       "stop_price": 340.12,
@@ -495,8 +729,152 @@
       "time": "09:34",
       "team": "financials",
       "symbol": "JPM",
-      "qty": 1,
+      "qty": 1.0,
       "est_price": 343.59,
+      "entry_price": 341.52,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 3,
+      "reason": "[75% invested rule] Top defensive financial with steady daily momentum (+0.8%), awaiting clear opening range establishment and RVOL confirmation.",
+      "stop_price": 338.44,
+      "take_profit_price": 353.9
+    },
+    {
+      "time": "09:37",
+      "team": "consumer",
+      "symbol": "AMZN",
+      "qty": 5.0,
+      "est_price": 233.205,
+      "entry_price": 234.24,
+      "side": "short",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 4,
+      "reason": "[75% invested rule] Q3 earnings miss, sharp debt increase, and multiple price-target cuts; prime short candidate if opening range breaks down on high volume.",
+      "stop_price": 237.87,
+      "take_profit_price": 223.88
+    },
+    {
+      "time": "09:37",
+      "team": "consumer",
+      "symbol": "NCLH",
+      "qty": 74.0,
+      "est_price": 17.79,
+      "entry_price": 17.72,
+      "side": "short",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 3,
+      "reason": "[75% invested rule] Down 1.6% at the open following an extended 20-day run (RSI 72.3); susceptible to risk-off profit-taking if broader market stays weak.",
+      "stop_price": 18.23,
+      "take_profit_price": 16.9
+    },
+    {
+      "time": "09:37",
+      "team": "consumer",
+      "symbol": "BKNG",
+      "qty": 4.0,
+      "est_price": 151.72,
+      "entry_price": 150.49,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 3,
+      "reason": "[75% invested rule] Showing early relative strength (+1.1%) from an oversold RSI of 37.5; requires VWAP confirmation and rvol > 1.5x before entry.",
+      "stop_price": 149.44,
+      "take_profit_price": 156.27
+    },
+    {
+      "time": "09:37",
+      "team": "healthcare",
+      "symbol": "LLY",
+      "qty": 0.46495844,
+      "est_price": 1420.66,
+      "entry_price": 1433.612,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 4,
+      "reason": "[75% invested rule] Top defensive pharma showing relative stability at the open with strong analyst target increases up to $1,650; watching for intraday breakout confirmation above VWAP.",
+      "stop_price": 1399.35,
+      "take_profit_price": 1470.38
+    },
+    {
+      "time": "09:37",
+      "team": "healthcare",
+      "symbol": "ABBV",
+      "qty": 2.0,
+      "est_price": 293.365,
+      "entry_price": 295.97,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 3,
+      "reason": "[75% invested rule] Solid Q3 beat, FY guidance hike, and 5.2% dividend increase; waiting for initial post-earnings selling to absorb and reclaim VWAP.",
+      "stop_price": 288.96,
+      "take_profit_price": 302.17
+    },
+    {
+      "time": "09:37",
+      "team": "healthcare",
+      "symbol": "REGN",
+      "qty": 0.720262703,
+      "est_price": 913.89,
+      "entry_price": 925.454,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 3,
+      "reason": "[75% invested rule] Massive Q3 earnings beat ($20.07 vs $16.19 expected) and Sanofi expansion, gapping up +7.7%; requires volume confirmation after the opening range.",
+      "stop_price": 895.61,
+      "take_profit_price": 955.02
+    },
+    {
+      "time": "09:37",
+      "team": "defense",
+      "symbol": "PLTR",
+      "qty": 24.0,
+      "est_price": 187.48,
+      "entry_price": 187.27,
+      "side": "short",
+      "exit_price": null,
+      "exit_reason": "manager_sell",
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "open",
+      "conviction": 4,
+      "reason": "[75% invested rule] PLTR is down -4.5% on the day, trading -1.2% below VWAP with high RVol of 5.16x in a heavily risk-off tape.",
+      "stop_price": 191.23,
+      "take_profit_price": 179.98
+    },
+    {
+      "time": "09:43",
+      "team": "defense",
+      "symbol": "RTX",
+      "qty": 11,
+      "est_price": 203.76,
       "entry_price": null,
       "side": "long",
       "exit_price": null,
@@ -504,10 +882,28 @@
       "pnl": null,
       "pnl_pct": null,
       "status": "submitted",
-      "conviction": 3,
-      "reason": "[75% invested rule] Top defensive financial with steady daily momentum (+0.8%), awaiting clear opening range establishment and RVOL confirmation.",
-      "stop_price": 338.44,
-      "take_profit_price": 353.9
+      "conviction": 4,
+      "reason": "[75% invested rule] Trades above VWAP (+0.2%) with RVol 1.54 following strong earnings beat and raised guidance.",
+      "stop_price": 200.7,
+      "take_profit_price": 209.87
+    },
+    {
+      "time": "09:43",
+      "team": "tech",
+      "symbol": "NVDA",
+      "qty": 8,
+      "est_price": 206.58,
+      "entry_price": null,
+      "side": "long",
+      "exit_price": null,
+      "exit_reason": null,
+      "pnl": null,
+      "pnl_pct": null,
+      "status": "submitted",
+      "conviction": 4,
+      "reason": "[75% invested rule] ",
+      "stop_price": 203.48,
+      "take_profit_price": 212.78
     }
   ],
   "blocked_today": [
@@ -590,9 +986,74 @@
       "symbol": "V",
       "action": "BUY",
       "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "09:37",
+      "team": "defense",
+      "symbol": "LMT",
+      "action": "BUY",
+      "reason": "conviction 5 is below the minimum 6 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "09:37",
+      "team": "tech",
+      "symbol": "INTC",
+      "action": "SHORT",
+      "reason": "conviction None is below the minimum 5"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "09:37",
+      "team": "tech",
+      "symbol": "AMD",
+      "action": "SHORT",
+      "reason": "conviction None is below the minimum 5"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "09:43",
+      "team": "defense",
+      "symbol": "LMT",
+      "action": "BUY",
+      "reason": "conviction 5 is below the minimum 6 (risk-off market)"
     }
   ],
   "recent_trades": [
+    {
+      "date": "2026-10-30",
+      "team": "defense",
+      "symbol": "HII",
+      "entry_price": 321.99,
+      "exit_price": 321.26,
+      "exit_reason": "manager_sell",
+      "pnl": -6.31,
+      "pnl_pct": -0.0033,
+      "reason": "[75% invested rule] Executive targeted momentum runner following strong 5d performance (+13.5%); pending volume validation > 1.5x."
+    },
+    {
+      "date": "2026-10-30",
+      "team": "tech",
+      "symbol": "INTU",
+      "entry_price": 338.87,
+      "exit_price": 334.586667,
+      "exit_reason": "stop_loss",
+      "pnl": -13.86,
+      "pnl_pct": -0.0136,
+      "reason": "[75% invested rule] Showing strong relative strength against a down market, trading up +2.6% on the day."
+    },
+    {
+      "date": "2026-10-30",
+      "team": "space",
+      "symbol": "VSAT",
+      "entry_price": 74.36,
+      "exit_price": 73.64,
+      "exit_reason": "stop_loss",
+      "pnl": -3.18,
+      "pnl_pct": -0.0107,
+      "reason": "[75% invested rule] Strongest multi-day momentum in the aerospace group (5d +32.1%), holding above 50-day moving average."
+    },
     {
       "date": "2026-10-29",
       "team": "entertainment",
@@ -834,39 +1295,6 @@
       "pnl": 5.15,
       "pnl_pct": 0.0078,
       "reason": "[75% invested rule] Analysts maintain overweight and raise price targets, but stock is weak intraday and lacks momentum."
-    },
-    {
-      "date": "2026-10-29",
-      "team": "space",
-      "symbol": "VSAT",
-      "entry_price": 80.34,
-      "exit_price": 79.0,
-      "exit_reason": "stop_loss",
-      "pnl": -4.26,
-      "pnl_pct": -0.0177,
-      "reason": "[75% invested rule] Strongest momentum on the watchlist: +3.2% day, +2.0% above VWAP, rvol 2.07 (heavy volume), and 15m/60m momentum positive. RSI 62 is not yet overbought. Fits the 'momentum' setup which has the best win rate (64%) and PF (1.21) on the scorecard."
-    },
-    {
-      "date": "2026-10-29",
-      "team": "space",
-      "symbol": "LUNR",
-      "entry_price": 12.05,
-      "exit_price": 11.82,
-      "exit_reason": "stop_loss",
-      "pnl": -6.29,
-      "pnl_pct": -0.0201,
-      "reason": "[75% invested rule] NASA selection for lunar fission power system is a strong fundamental catalyst. Trading +1.9% above VWAP with positive 15m/60m momentum. RSI 33.3 suggests room to run from oversold territory. News catalysts are weak in the scorecard, but this specific catalyst is high-importance (4/5) and confirmed."
-    },
-    {
-      "date": "2026-10-29",
-      "team": "consumer",
-      "symbol": "LOW",
-      "entry_price": 202.77,
-      "exit_price": 203.63,
-      "exit_reason": "manager_sell",
-      "pnl": 2.63,
-      "pnl_pct": 0.0032,
-      "reason": "[75% invested rule] Strong sector peer follow-through, up +2.5% on the day and +0.5% above VWAP."
     }
   ],
   "report": {
@@ -3080,12 +3508,12 @@
     }
   },
   "mood": {
-    "time": "2026-10-30T09:30-04:00",
+    "time": "2026-10-30T09:40-04:00",
     "regime": "risk_off",
-    "spy": -0.0108,
+    "spy": -0.0115,
     "qqq": -0.0255,
-    "fear_vixy": 0.0552,
-    "breadth": 0.14,
+    "fear_vixy": 0.057,
+    "breadth": 0.42,
     "why": "index down -2.5%",
     "note": "Market is falling hard or fear is spiking. Longs are half size and need conviction +1. Shorting weak stocks (below VWAP, breaking down) is favored."
   },
@@ -5864,7 +6292,7 @@
           "time": "09:34",
           "symbol": "GD",
           "kind": "shares",
-          "qty": 6,
+          "qty": 6.0,
           "dollars": 2310.54,
           "est_price": 385.09,
           "setup": "earnings gap",
@@ -5872,14 +6300,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 379.31,
-          "entry_price": null,
+          "entry_price": 384.48,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 5,
           "reason": "[75% invested rule] Record Q3 revenue ($14.57B) and EPS ($4.49) beat with strong FY26 guidance; awaiting RVol > 1.5x and opening range confirmation above VWAP.",
           "stop_price": 379.31,
@@ -5891,7 +6319,7 @@
           "time": "09:34",
           "symbol": "LHX",
           "kind": "shares",
-          "qty": 8,
+          "qty": 4.0,
           "dollars": 2246.96,
           "est_price": 280.87,
           "setup": "opening range breakout",
@@ -5899,14 +6327,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 276.66,
-          "entry_price": null,
+          "entry_price": 283.07,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 5,
           "reason": "[75% invested rule] Executive prioritized momentum play; watching for clean OR breakout above VWAP with volume surge.",
           "stop_price": 276.66,
@@ -5918,7 +6346,7 @@
           "time": "09:34",
           "symbol": "HII",
           "kind": "shares",
-          "qty": 7,
+          "qty": 6.0,
           "dollars": 2217.04,
           "est_price": 316.72,
           "setup": "opening range breakout",
@@ -5926,6 +6354,60 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 310.39,
+          "entry_price": 321.99,
+          "exit_price": 321.26,
+          "exit_time": "2026-10-30T13:37:31.164726945Z",
+          "exit_reason": "manager_sell",
+          "exit_note": "HII has fallen -0.4% below VWAP and -0.6% off the open in a risk-off environment, invalidating the intraday breakout thesis. Selling to cut losses early and comply with VWAP rules.",
+          "pnl": -6.31,
+          "pnl_pct": -0.0033,
+          "status": "closed",
+          "conviction": 5,
+          "reason": "[75% invested rule] Executive targeted momentum runner following strong 5d performance (+13.5%); pending volume validation > 1.5x.",
+          "stop_price": 310.39,
+          "take_profit_price": 329.39
+        },
+        {
+          "id": "defense-PLTR-202610300937-2c6e",
+          "date": "2026-10-30",
+          "time": "09:37",
+          "symbol": "PLTR",
+          "kind": "shares",
+          "qty": 24.0,
+          "dollars": 4499.52,
+          "est_price": 187.48,
+          "setup": "mean reversion",
+          "side": "short",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 191.23,
+          "entry_price": 187.27,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": "manager_sell",
+          "exit_note": "Covering losing short as PLTR pushed above VWAP (+0.7%) on RVol of 6.15, violating short breakdown criteria.",
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 4,
+          "reason": "[75% invested rule] PLTR is down -4.5% on the day, trading -1.2% below VWAP with high RVol of 5.16x in a heavily risk-off tape.",
+          "stop_price": 191.23,
+          "take_profit_price": 179.98
+        },
+        {
+          "id": "defense-RTX-202610300943-9b40",
+          "date": "2026-10-30",
+          "time": "09:43",
+          "symbol": "RTX",
+          "kind": "shares",
+          "qty": 11,
+          "dollars": 2241.36,
+          "est_price": 203.76,
+          "setup": "news catalyst",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 200.7,
           "entry_price": null,
           "exit_price": null,
           "exit_time": null,
@@ -5934,29 +6416,13 @@
           "pnl": null,
           "pnl_pct": null,
           "status": "submitted",
-          "conviction": 5,
-          "reason": "[75% invested rule] Executive targeted momentum runner following strong 5d performance (+13.5%); pending volume validation > 1.5x.",
-          "stop_price": 310.39,
-          "take_profit_price": 329.39
+          "conviction": 4,
+          "reason": "[75% invested rule] Trades above VWAP (+0.2%) with RVol 1.54 following strong earnings beat and raised guidance.",
+          "stop_price": 200.7,
+          "take_profit_price": 209.87
         }
       ],
       "blocked": [
-        {
-          "date": "2026-10-22",
-          "time": "13:51",
-          "team": "defense",
-          "symbol": "LMT",
-          "action": "BUY",
-          "reason": "conviction None is below the minimum 4 (risk-off market)"
-        },
-        {
-          "date": "2026-10-22",
-          "time": "13:51",
-          "team": "defense",
-          "symbol": "BAH",
-          "action": "BUY",
-          "reason": "conviction None is below the minimum 4 (risk-off market)"
-        },
         {
           "date": "2026-10-22",
           "time": "13:51",
@@ -6420,6 +6886,22 @@
           "symbol": "LHX",
           "action": "BUY",
           "reason": "team already has the maximum number of positions"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:37",
+          "team": "defense",
+          "symbol": "LMT",
+          "action": "BUY",
+          "reason": "conviction 5 is below the minimum 6 (risk-off market)"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:43",
+          "team": "defense",
+          "symbol": "LMT",
+          "action": "BUY",
+          "reason": "conviction 5 is below the minimum 6 (risk-off market)"
         }
       ],
       "plans": [
@@ -8127,6 +8609,66 @@
             "BUY LHX x8 (~$2246.96) [deploy]",
             "BUY HII x7 (~$2217.04) [deploy]"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:37",
+          "trigger": "big news on ['GD']",
+          "market_view": "The broader market is in a sharp risk-off pullback with SPY down 1.2% and QQQ down 2.9%, driving elevated volatility across indices. Defense stocks are showing relative strength led by earnings beats and significant contract wins. Capital preservation remains priority, so we exit weak setups below VWAP and focus strictly on high-conviction catalysts with relative volume above 1.5x.",
+          "experiment": "Implement an automated entry check requiring both relative volume > 1.5x and price strictly above VWAP for all news and ORB setups.",
+          "decisions": [
+            {
+              "symbol": "HII",
+              "action": "SELL",
+              "conviction": 4,
+              "reason": "HII has fallen -0.4% below VWAP and -0.6% off the open in a risk-off environment, invalidating the intraday breakout thesis. Selling to cut losses early and comply with VWAP rules.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.03
+            },
+            {
+              "symbol": "LMT",
+              "action": "BUY",
+              "conviction": 5,
+              "reason": "LMT trades above VWAP (+0.2%) with strong relative volume of 3.01x, backed by a massive $1.08B U.S. Army Future Interceptor program contract award. Meets all executive requirements.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.03
+            }
+          ],
+          "results": [
+            "SELL HII",
+            "BUY LMT blocked: conviction 5 is below the minimum 6 (risk-off market)",
+            "SHORT PLTR x24 (~$4499.52) [deploy]"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:43",
+          "trigger": "price moves in ['LDOS', 'CACI']",
+          "market_view": "The broader market is in severe risk-off mode with SPY down -1.1% and QQQ down -2.5%, but defense names are displaying relative strength behind solid earnings and major defense contract wins. Per executive instructions, we strictly enforce entries requiring RVol > 1.5x and price above VWAP while suspending forced capital deployment.",
+          "experiment": "Require both relative volume > 1.5x and price strictly above VWAP for all news and ORB setups.",
+          "decisions": [
+            {
+              "symbol": "PLTR",
+              "action": "COVER",
+              "conviction": 5,
+              "reason": "Covering losing short as PLTR pushed above VWAP (+0.7%) on RVol of 6.15, violating short breakdown criteria.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.03
+            },
+            {
+              "symbol": "LMT",
+              "action": "BUY",
+              "conviction": 5,
+              "reason": "LMT secured a massive $1.08B U.S. Army contract, trades above VWAP (+0.6%), and carries RVol of 2.34x, satisfying all executive trade criteria.",
+              "stop_loss_pct": 0.015,
+              "take_profit_pct": 0.03
+            }
+          ],
+          "results": [
+            "COVER PLTR",
+            "BUY LMT blocked: conviction 5 is below the minimum 6 (risk-off market)",
+            "BUY RTX x11 (~$2241.36) [deploy]"
+          ]
         }
       ],
       "lessons": [
@@ -8482,6 +9024,11 @@
           "date": "2026-10-29",
           "realized": 31.38,
           "cum": -50.76
+        },
+        {
+          "date": "2026-10-30",
+          "realized": -6.31,
+          "cum": -57.07
         }
       ],
       "watchlist": {
@@ -8747,12 +9294,48 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T09:34-04:00"
+        "updated": "2026-10-30T09:43-04:00"
       },
       "research": {
         "time": "2026-10-30T08:48-04:00",
         "news": {
           "findings": [
+            {
+              "symbol": "LHX",
+              "sentiment": 0.7,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "BNP Paribas and RBC raise price targets for L3Harris, indicating a bullish outlook.",
+              "source": "fiscal.ai",
+              "time": "09:35"
+            },
+            {
+              "symbol": "KTOS",
+              "sentiment": -0.6,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "B. Riley cuts Kratos Defense price target to $91, signaling concerns despite a Buy rating.",
+              "source": "fiscal.ai",
+              "time": "09:35"
+            },
+            {
+              "symbol": "LDOS",
+              "sentiment": 0.0,
+              "importance": 1,
+              "unconfirmed_rumor": false,
+              "summary": "Leidos UK announces a sustainability partnership with Carma, which has limited impact on core defense operations.",
+              "source": "fiscal.ai",
+              "time": "09:35"
+            },
+            {
+              "symbol": "GD",
+              "sentiment": 0.8,
+              "importance": 4,
+              "unconfirmed_rumor": false,
+              "summary": "General Dynamics raises FY2026 EPS and sales guidance, pointing to a stronger earnings outlook.",
+              "source": "benzinga",
+              "time": "09:35"
+            },
             {
               "symbol": "GD",
               "sentiment": 0.7,
@@ -8813,8 +9396,8 @@
             }
           ],
           "urgent": [],
-          "overall": "The defense slate is upbeat, with GD delivering solid FY26 guidance and LMT expanding its strategic initiatives. Both signals suggest continued momentum for the sector.",
-          "items_read": 13
+          "overall": "The defense sector shows a generally positive tone thanks to General Dynamics' upgraded guidance and L3Harris analyst upgrades, though Kratos' price\u2011target cut adds some downside pressure.",
+          "items_read": 19
         },
         "social": {
           "findings": [],
@@ -11130,7 +11713,7 @@
           "time": "09:34",
           "symbol": "VSAT",
           "kind": "shares",
-          "qty": 4,
+          "qty": 4.0,
           "dollars": 311.8,
           "est_price": 77.95,
           "setup": "momentum",
@@ -11138,14 +11721,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 76.39,
-          "entry_price": null,
-          "exit_price": null,
-          "exit_time": null,
-          "exit_reason": null,
-          "exit_note": null,
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "submitted",
+          "entry_price": 74.36,
+          "exit_price": 73.64,
+          "exit_time": "2026-10-30T13:35:30.757728922Z",
+          "exit_reason": "stop_loss",
+          "exit_note": "price 74.125 hit the stop 76.39",
+          "pnl": -3.18,
+          "pnl_pct": -0.0107,
+          "status": "closed",
           "conviction": 3,
           "reason": "[75% invested rule] Strongest multi-day momentum in the aerospace group (5d +32.1%), holding above 50-day moving average.",
           "stop_price": 76.39,
@@ -11157,7 +11740,7 @@
           "time": "09:34",
           "symbol": "TDG",
           "kind": "fractional",
-          "qty": 0.283378,
+          "qty": 0.283015823,
           "dollars": 333.29,
           "est_price": 1176.135,
           "setup": "momentum",
@@ -11165,14 +11748,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 1158.49,
-          "entry_price": null,
+          "entry_price": 1177.602,
           "exit_price": null,
           "exit_time": null,
-          "exit_reason": null,
-          "exit_note": null,
+          "exit_reason": "manager_sell",
+          "exit_note": "Early momentum long in a risk-off market with near-zero volume (rvol 0.16), price below VWAP, and no follow-through; cutting the small loss per capital-preservation rules.",
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 3,
           "reason": "[75% invested rule] Resilient aerospace supplier trading above 50-day average, showing relative strength against broad market sell-off.",
           "stop_price": 1158.49,
@@ -11184,7 +11767,7 @@
           "time": "09:34",
           "symbol": "SPCX",
           "kind": "shares",
-          "qty": 4,
+          "qty": 4.0,
           "dollars": 550.08,
           "est_price": 137.52,
           "setup": "opening range breakout",
@@ -11192,14 +11775,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 140.27,
-          "entry_price": null,
+          "entry_price": 137.57,
           "exit_price": null,
           "exit_time": null,
-          "exit_reason": null,
-          "exit_note": null,
+          "exit_reason": "manager_sell",
+          "exit_note": "Short is underwater near the opening-range high with mixed news and risk of a breakout above 139 that would hit the stop; better to cover the small loss and reset.",
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 3,
           "reason": "[75% invested rule] Gapping down 4.4% on tech weakness and Amazon Leo competition news; prime candidate for breakdown continuation if below VWAP.",
           "stop_price": 140.27,
@@ -13244,6 +13827,44 @@
             "BUY TDG x0.283378 (~$333.29) [deploy]",
             "SHORT SPCX x4 (~$550.08) [deploy]"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:37",
+          "trigger": "price moves in ['PL', 'IRDM', 'VSAT', 'FLY', 'LPTH']",
+          "market_view": "",
+          "experiment": "",
+          "decisions": [],
+          "results": []
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:43",
+          "trigger": "price moves in ['SATS', 'LPTH']",
+          "market_view": "The market is in a clear risk-off regime with SPY down and VIX spiking; most space/aerospace names are weak or choppy with low volume. Only SPCX and SATS show relative volume above 2.0, but no new setup meets the President's high-conviction bar for fresh entries. Existing open trades are small losers from the open with no follow-through, so capital preservation dictates cutting them and standing aside.",
+          "experiment": "Add a volume-spike filter (rvol > 2) before taking news-catalyst entries to improve entry quality",
+          "decisions": [
+            {
+              "symbol": "TDG",
+              "action": "SELL",
+              "conviction": 3,
+              "reason": "Early momentum long in a risk-off market with near-zero volume (rvol 0.16), price below VWAP, and no follow-through; cutting the small loss per capital-preservation rules.",
+              "stop_loss_pct": 0,
+              "take_profit_pct": 0
+            },
+            {
+              "symbol": "SPCX",
+              "action": "COVER",
+              "conviction": 3,
+              "reason": "Short is underwater near the opening-range high with mixed news and risk of a breakout above 139 that would hit the stop; better to cover the small loss and reset.",
+              "stop_loss_pct": 0,
+              "take_profit_pct": 0
+            }
+          ],
+          "results": [
+            "SELL TDG",
+            "COVER SPCX"
+          ]
         }
       ],
       "lessons": [
@@ -13697,6 +14318,11 @@
           "date": "2026-10-29",
           "realized": 5.93,
           "cum": -629.37
+        },
+        {
+          "date": "2026-10-30",
+          "realized": -3.18,
+          "cum": -632.55
         }
       ],
       "watchlist": {
@@ -13932,12 +14558,21 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T09:34-04:00"
+        "updated": "2026-10-30T09:43-04:00"
       },
       "research": {
         "time": "2026-10-30T08:48-04:00",
         "news": {
           "findings": [
+            {
+              "symbol": "HWM",
+              "sentiment": -0.4,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Deutsche Bank and Susquehanna lowered Howmet Aerospace price targets, signaling modest downside despite unchanged positive ratings.",
+              "source": "fiscal.ai",
+              "time": "09:35"
+            },
             {
               "symbol": "HWM",
               "sentiment": -0.2,
@@ -14061,8 +14696,8 @@
             }
           ],
           "urgent": [],
-          "overall": "The sector sees limited new catalyst, with Howmet Aerospace receiving a slight downgrade that may temper enthusiasm. Overall sentiment remains cautiously neutral for the group.",
-          "items_read": 26
+          "overall": "Analyst sentiment on Howmet Aerospace softened with lower price targets, though ratings stay positive. No launch or contract news moves the broader space and aerospace outlook today.",
+          "items_read": 28
         },
         "social": {
           "findings": [],
@@ -16184,7 +16819,7 @@
           "time": "09:34",
           "symbol": "NFLX",
           "kind": "shares",
-          "qty": 10,
+          "qty": 10.0,
           "dollars": 628.7,
           "est_price": 62.87,
           "setup": "momentum",
@@ -16192,14 +16827,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 63.81,
-          "entry_price": null,
+          "entry_price": 62.25,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 2,
           "reason": "[75% invested rule] Weak 5-day/20-day trend with discoverability concerns; potential short setup if it fails VWAP.",
           "stop_price": 63.81,
@@ -16211,7 +16846,7 @@
           "time": "09:34",
           "symbol": "MGM",
           "kind": "shares",
-          "qty": 23,
+          "qty": 17.0,
           "dollars": 663.55,
           "est_price": 28.85,
           "setup": "news catalyst",
@@ -16219,14 +16854,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 29.43,
-          "entry_price": null,
+          "entry_price": 28.55,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 2,
           "reason": "[75% invested rule] Multiple analyst price target cuts due to Osaka capex; prime short candidate if price drops below opening range.",
           "stop_price": 29.43,
@@ -17724,6 +18359,15 @@
             "BUY WMG blocked: conviction 2 is below the minimum 3 (risk-off market)",
             "BUY SPOT blocked: conviction 1 is below the minimum 3 (risk-off market)"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:37",
+          "trigger": "price moves in ['SPOT', 'TTWO']",
+          "market_view": "",
+          "experiment": "",
+          "decisions": [],
+          "results": []
         }
       ],
       "lessons": [
@@ -21048,7 +21692,7 @@
           "time": "09:34",
           "symbol": "INTU",
           "kind": "shares",
-          "qty": 4,
+          "qty": 3.0,
           "dollars": 1359.16,
           "est_price": 339.79,
           "setup": "news catalyst",
@@ -21056,14 +21700,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 334.69,
-          "entry_price": null,
-          "exit_price": null,
-          "exit_time": null,
-          "exit_reason": null,
+          "entry_price": 338.87,
+          "exit_price": 334.586667,
+          "exit_time": "2026-10-30T13:36:37.71294531Z",
+          "exit_reason": "stop_loss",
           "exit_note": null,
-          "pnl": null,
-          "pnl_pct": null,
-          "status": "submitted",
+          "pnl": -13.86,
+          "pnl_pct": -0.0136,
+          "status": "closed",
           "conviction": 3,
           "reason": "[75% invested rule] Showing strong relative strength against a down market, trading up +2.6% on the day.",
           "stop_price": 334.69,
@@ -21075,7 +21719,7 @@
           "time": "09:34",
           "symbol": "AAPL",
           "kind": "shares",
-          "qty": 4,
+          "qty": 3.0,
           "dollars": 1381.2,
           "est_price": 345.3,
           "setup": "pullback in uptrend",
@@ -21083,6 +21727,33 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 340.12,
+          "entry_price": 345.65,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 3,
+          "reason": "[75% invested rule] High-liquidity mega-cap insulated from chip slump news, potential bounce if market stabilizes.",
+          "stop_price": 340.12,
+          "take_profit_price": 355.66
+        },
+        {
+          "id": "tech-NVDA-202610300943-f33a",
+          "date": "2026-10-30",
+          "time": "09:43",
+          "symbol": "NVDA",
+          "kind": "shares",
+          "qty": 8,
+          "dollars": 1652.64,
+          "est_price": 206.58,
+          "setup": "opening range breakout",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 203.48,
           "entry_price": null,
           "exit_price": null,
           "exit_time": null,
@@ -21091,29 +21762,13 @@
           "pnl": null,
           "pnl_pct": null,
           "status": "submitted",
-          "conviction": 3,
-          "reason": "[75% invested rule] High-liquidity mega-cap insulated from chip slump news, potential bounce if market stabilizes.",
-          "stop_price": 340.12,
-          "take_profit_price": 355.66
+          "conviction": 4,
+          "reason": "[75% invested rule] ",
+          "stop_price": 203.48,
+          "take_profit_price": 212.78
         }
       ],
       "blocked": [
-        {
-          "date": "2026-10-26",
-          "time": "12:10",
-          "team": "tech",
-          "symbol": "MU",
-          "action": "BUY",
-          "reason": "conviction None is below the minimum 2"
-        },
-        {
-          "date": "2026-10-26",
-          "time": "12:10",
-          "team": "tech",
-          "symbol": "PANW",
-          "action": "BUY",
-          "reason": "conviction None is below the minimum 2"
-        },
         {
           "date": "2026-10-26",
           "time": "12:43",
@@ -21577,6 +22232,22 @@
           "symbol": "EQIX",
           "action": "BUY",
           "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:37",
+          "team": "tech",
+          "symbol": "INTC",
+          "action": "SHORT",
+          "reason": "conviction None is below the minimum 5"
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:37",
+          "team": "tech",
+          "symbol": "AMD",
+          "action": "SHORT",
+          "reason": "conviction None is below the minimum 5"
         }
       ],
       "plans": [
@@ -23469,6 +24140,17 @@
             "BUY NVDA blocked: conviction 2 is below the minimum 3 (risk-off market)",
             "BUY EQIX blocked: conviction 2 is below the minimum 3 (risk-off market)"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:43",
+          "trigger": "price moves in ['ANET']",
+          "market_view": "",
+          "experiment": "",
+          "decisions": [],
+          "results": [
+            "BUY NVDA x8 (~$1652.64) [deploy]"
+          ]
         }
       ],
       "lessons": [
@@ -23788,6 +24470,11 @@
           "date": "2026-10-29",
           "realized": -102.91,
           "cum": -109.24
+        },
+        {
+          "date": "2026-10-30",
+          "realized": -13.86,
+          "cum": -123.1
         }
       ],
       "watchlist": {
@@ -24105,12 +24792,48 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T09:34-04:00"
+        "updated": "2026-10-30T09:43-04:00"
       },
       "research": {
         "time": "2026-10-30T08:48-04:00",
         "news": {
           "findings": [
+            {
+              "symbol": "EQIX",
+              "sentiment": -0.4,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Deutsche Bank lowers Equinix price target to $1,218 while maintaining a Buy rating.",
+              "source": "fiscal.ai",
+              "time": "09:36"
+            },
+            {
+              "symbol": "EQIX",
+              "sentiment": 0.4,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Equinix invests $215M in new CH5 data center in Illinois.",
+              "source": "fiscal.ai",
+              "time": "09:36"
+            },
+            {
+              "symbol": "NOW",
+              "sentiment": 0.3,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "BDO Canada partners with ServiceNow to integrate consulting and governance expertise with ServiceNow's AI platform.",
+              "source": "fiscal.ai",
+              "time": "09:36"
+            },
+            {
+              "symbol": "PANW",
+              "sentiment": 0.0,
+              "importance": 2,
+              "unconfirmed_rumor": false,
+              "summary": "Palo Alto Networks advises stockholders to reject an unsolicited mini-tender offer from Tutanota LLC.",
+              "source": "fiscal.ai",
+              "time": "09:36"
+            },
             {
               "symbol": "INTC",
               "sentiment": -0.7,
@@ -24203,8 +24926,8 @@
             }
           ],
           "urgent": [],
-          "overall": "Intel's negative outlook and lowered price target are weighing on semiconductor sentiment within the IT sector. Other technology stocks remain largely unchanged, keeping overall market mood neutral.",
-          "items_read": 52
+          "overall": "The IT sector news is mixed: Equinix faces a modest price target downgrade but also a significant data center investment, while ServiceNow\u2019s partnership and Palo Alto Networks\u2019 stance are neutral to slightly positive.",
+          "items_read": 56
         },
         "social": {
           "findings": [],
@@ -26274,6 +26997,87 @@
           "reason": "[75% invested rule] OR breakout above VWAP with rvol 1.69; however, mixed PT/news limits conviction.",
           "stop_price": 31.26,
           "take_profit_price": 32.42
+        },
+        {
+          "id": "consumer-AMZN-202610300937-219c",
+          "date": "2026-10-30",
+          "time": "09:37",
+          "symbol": "AMZN",
+          "kind": "shares",
+          "qty": 5.0,
+          "dollars": 1166.03,
+          "est_price": 233.205,
+          "setup": "earnings gap",
+          "side": "short",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 237.87,
+          "entry_price": 234.24,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 4,
+          "reason": "[75% invested rule] Q3 earnings miss, sharp debt increase, and multiple price-target cuts; prime short candidate if opening range breaks down on high volume.",
+          "stop_price": 237.87,
+          "take_profit_price": 223.88
+        },
+        {
+          "id": "consumer-NCLH-202610300937-53f4",
+          "date": "2026-10-30",
+          "time": "09:37",
+          "symbol": "NCLH",
+          "kind": "shares",
+          "qty": 74.0,
+          "dollars": 1316.46,
+          "est_price": 17.79,
+          "setup": "momentum",
+          "side": "short",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 18.23,
+          "entry_price": 17.72,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 3,
+          "reason": "[75% invested rule] Down 1.6% at the open following an extended 20-day run (RSI 72.3); susceptible to risk-off profit-taking if broader market stays weak.",
+          "stop_price": 18.23,
+          "take_profit_price": 16.9
+        },
+        {
+          "id": "consumer-BKNG-202610300937-0762",
+          "date": "2026-10-30",
+          "time": "09:37",
+          "symbol": "BKNG",
+          "kind": "shares",
+          "qty": 4.0,
+          "dollars": 606.88,
+          "est_price": 151.72,
+          "setup": "mean reversion",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 149.44,
+          "entry_price": 150.49,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 3,
+          "reason": "[75% invested rule] Showing early relative strength (+1.1%) from an oversold RSI of 37.5; requires VWAP confirmation and rvol > 1.5x before entry.",
+          "stop_price": 149.44,
+          "take_profit_price": 156.27
         }
       ],
       "blocked": [
@@ -28157,6 +28961,19 @@
             "BUY CMG x30 (~$935.1) [deploy]",
             "WATCHLIST remove rejected HD"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:37",
+          "trigger": "first look this run",
+          "market_view": "The broader market is sharply risk-off with QQQ down 2.5% and VIXY surging 5.5%. At just 9:31 AM, intraday volume, VWAP, and opening ranges have not yet established across our sector watchlist. In strict compliance with the President's capital-preservation and No-Trade protocol, we are standing down until clear relative volume (>1.5x) and opening-range structures materialize.",
+          "experiment": "Testing strict volume confirmation (rvol > 1.5x) and 1R profit locking in risk-off regime",
+          "decisions": [],
+          "results": [
+            "SHORT AMZN x5 (~$1166.03) [deploy]",
+            "SHORT NCLH x74 (~$1316.46) [deploy]",
+            "BUY BKNG x4 (~$606.88) [deploy]"
+          ]
         }
       ],
       "lessons": [
@@ -28800,12 +29617,21 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-29T16:20-04:00"
+        "updated": "2026-10-30T09:37-04:00"
       },
       "research": {
         "time": "2026-10-30T08:51-04:00",
         "news": {
           "findings": [
+            {
+              "symbol": "NCLH",
+              "sentiment": 0.5,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Deutsche Bank raised its price target for Norwegian Cruise Line from $15 to $17 while keeping a Hold rating.",
+              "source": "fiscal.ai",
+              "time": "09:40"
+            },
             {
               "symbol": "AMZN",
               "sentiment": -0.2,
@@ -28901,8 +29727,8 @@
             }
           ],
           "urgent": [],
-          "overall": "Analyst sentiment is mixed: Amazon faces a few price\u2011target cuts despite buy ratings, while eBay and Carvana receive modest target upgrades. The sector\u2019s mood is cautiously neutral with slight downside pressure on Amazon.",
-          "items_read": 55
+          "overall": "The Consumer Discretionary sector shows a mixed outlook with a modest positive adjustment for NCLH. Overall sentiment remains largely neutral across the group.",
+          "items_read": 56
         },
         "social": {
           "findings": [],
@@ -31141,7 +31967,7 @@
           "time": "09:34",
           "symbol": "JPM",
           "kind": "shares",
-          "qty": 1,
+          "qty": 1.0,
           "dollars": 343.59,
           "est_price": 343.59,
           "setup": "VWAP bounce",
@@ -31149,14 +31975,14 @@
           "partials": null,
           "trail_active": null,
           "first_stop": 338.44,
-          "entry_price": null,
+          "entry_price": 341.52,
           "exit_price": null,
           "exit_time": null,
           "exit_reason": null,
           "exit_note": null,
           "pnl": null,
           "pnl_pct": null,
-          "status": "submitted",
+          "status": "open",
           "conviction": 3,
           "reason": "[75% invested rule] Top defensive financial with steady daily momentum (+0.8%), awaiting clear opening range establishment and RVOL confirmation.",
           "stop_price": 338.44,
@@ -33037,6 +33863,15 @@
             "BUY ICE blocked: conviction 2 is below the minimum 3 (risk-off market)",
             "BUY V blocked: conviction 2 is below the minimum 3 (risk-off market)"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:37",
+          "trigger": "price moves in ['GS', 'MS', 'C', 'ICE', 'HOOD', 'COIN', 'EVR']",
+          "market_view": "The market is deep in risk-off territory with SPY down 1.2%, QQQ down 2.9%, and VIXY up 6.4%, making new long entries dangerous. Our only position, JPM, is flat to slightly negative and trading below VWAP with a flat trend, so the VWAP bounce setup has not yet triggered. With the President enforcing a no-trade protocol unless RVOL exceeds 1.5 and price is above VWAP, and capital preservation as the top priority, no new positions will be opened today.",
+          "experiment": "Use VWAP or volume confirmation before entering breakout trades",
+          "decisions": [],
+          "results": []
         }
       ],
       "lessons": [
@@ -33537,12 +34372,48 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-30T09:34-04:00"
+        "updated": "2026-10-30T09:37-04:00"
       },
       "research": {
         "time": "2026-10-30T08:51-04:00",
         "news": {
           "findings": [
+            {
+              "symbol": "ICE",
+              "sentiment": 0.0,
+              "importance": 3,
+              "unconfirmed_rumor": false,
+              "summary": "Analysts adjust price targets for ICE, no direction disclosed.",
+              "source": "fiscal.ai",
+              "time": "09:36"
+            },
+            {
+              "symbol": "HOOD",
+              "sentiment": 0.2,
+              "importance": 2,
+              "unconfirmed_rumor": false,
+              "summary": "HOOD partners with Arbitrum and CertiK to support Web3 startups.",
+              "source": "fiscal.ai",
+              "time": "09:36"
+            },
+            {
+              "symbol": "MS",
+              "sentiment": 0.0,
+              "importance": 1,
+              "unconfirmed_rumor": false,
+              "summary": "MS changes voting rights interest in Rotork PLC.",
+              "source": "fiscal.ai",
+              "time": "09:36"
+            },
+            {
+              "symbol": "AXP",
+              "sentiment": 0.0,
+              "importance": 1,
+              "unconfirmed_rumor": false,
+              "summary": "AXP honors Charley Shin with Community Champion Award.",
+              "source": "fiscal.ai",
+              "time": "09:36"
+            },
             {
               "symbol": "MA",
               "sentiment": 0.3,
@@ -33653,8 +34524,8 @@
             }
           ],
           "urgent": [],
-          "overall": "Mastercard is enjoying a strong positive wave, driven by an earnings beat and several analyst upgrades that lifted price targets. The sentiment is upbeat, though the news is moderate in immediacy and unlikely to cause a sudden price swing today.",
-          "items_read": 52
+          "overall": "The news mix is largely neutral with a modest positive note from HOOD's partnership, while ICE's analyst price target revisions suggest moderate market interest. No urgent catalysts are present for the group at this time.",
+          "items_read": 56
         },
         "social": {
           "findings": [],
@@ -36058,6 +36929,87 @@
           "reason": "[75% invested rule] Breakdown below OR/VWAP, 52-week low, weak sales; risk-off favors short, but executive prefers high conviction longs.",
           "stop_price": 8.62,
           "take_profit_price": 8.16
+        },
+        {
+          "id": "healthcare-LLY-202610300937-6aae",
+          "date": "2026-10-30",
+          "time": "09:37",
+          "symbol": "LLY",
+          "kind": "fractional",
+          "qty": 0.46495844,
+          "dollars": 666.58,
+          "est_price": 1420.66,
+          "setup": "momentum",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 1399.35,
+          "entry_price": 1433.612,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 4,
+          "reason": "[75% invested rule] Top defensive pharma showing relative stability at the open with strong analyst target increases up to $1,650; watching for intraday breakout confirmation above VWAP.",
+          "stop_price": 1399.35,
+          "take_profit_price": 1470.38
+        },
+        {
+          "id": "healthcare-ABBV-202610300937-888f",
+          "date": "2026-10-30",
+          "time": "09:37",
+          "symbol": "ABBV",
+          "kind": "shares",
+          "qty": 2.0,
+          "dollars": 586.73,
+          "est_price": 293.365,
+          "setup": "earnings gap",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 288.96,
+          "entry_price": 295.97,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 3,
+          "reason": "[75% invested rule] Solid Q3 beat, FY guidance hike, and 5.2% dividend increase; waiting for initial post-earnings selling to absorb and reclaim VWAP.",
+          "stop_price": 288.96,
+          "take_profit_price": 302.17
+        },
+        {
+          "id": "healthcare-REGN-202610300937-08e9",
+          "date": "2026-10-30",
+          "time": "09:37",
+          "symbol": "REGN",
+          "kind": "fractional",
+          "qty": 0.720262703,
+          "dollars": 666.58,
+          "est_price": 913.89,
+          "setup": "earnings gap",
+          "side": "long",
+          "partials": null,
+          "trail_active": null,
+          "first_stop": 895.61,
+          "entry_price": 925.454,
+          "exit_price": null,
+          "exit_time": null,
+          "exit_reason": null,
+          "exit_note": null,
+          "pnl": null,
+          "pnl_pct": null,
+          "status": "open",
+          "conviction": 3,
+          "reason": "[75% invested rule] Massive Q3 earnings beat ($20.07 vs $16.19 expected) and Sanofi expansion, gapping up +7.7%; requires volume confirmation after the opening range.",
+          "stop_price": 895.61,
+          "take_profit_price": 955.02
         }
       ],
       "blocked": [
@@ -38266,6 +39218,28 @@
             "WATCHLIST removed JNJ",
             "WATCHLIST added ALNY"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:37",
+          "trigger": "first look this run",
+          "market_view": "Markets are heavily risk-off at the open with SPY falling 1.1%, QQQ down 2.5%, and VIXY surging 5.5%. Intraday opening ranges and volume profiles have not yet established 2 minutes into the session. Following executive mandate and the suspension of the 75% investment requirement, we are strictly preserving capital and standing aside until high-volume confirmations appear.",
+          "experiment": "Enforcing executive No-Trade protocol during market open risk-off regime; requiring rvol > 1.5x and confirmed VWAP support before initiating any defensive long entries.",
+          "decisions": [],
+          "results": [
+            "BUY LLY x0.469206 (~$666.58) [deploy]",
+            "BUY ABBV x2 (~$586.73) [deploy]",
+            "BUY REGN x0.72939 (~$666.58) [deploy]"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "time": "09:43",
+          "trigger": "price moves in ['LLY', 'ABBV', 'BMY', 'VRTX', 'REGN', 'ALNY']",
+          "market_view": "The market is in a clear risk-off regime with SPY down -1.1%, QQQ down -2.5%, and VIXY up +5.7%. Our three earnings-gap longs (ABBV, LLY, REGN) are all slightly negative but remain well inside their stops. Per the executive order, we are on a No-Trade protocol focused only on defensive healthcare (LLY, ABBV); with all three position slots filled and no new defensive setup meeting RVOL > 1.5 above VWAP, the disciplined move is to hold and preserve capital.",
+          "experiment": "Strict capital preservation / no-new-positions protocol per executive order; holding existing earnings gaps and waiting for a clear LLY/ABBV setup above VWAP with RVOL > 1.5 before adding.",
+          "decisions": [],
+          "results": []
         }
       ],
       "lessons": [
@@ -38807,7 +39781,7 @@
             "reason": "list would drop below 15 stocks"
           }
         ],
-        "updated": "2026-10-29T13:18-04:00"
+        "updated": "2026-10-30T09:43-04:00"
       },
       "research": {
         "time": "2026-10-30T08:51-04:00",
@@ -39502,38 +40476,6 @@
     }
   ],
   "blocked_recent": [
-    {
-      "date": "2026-10-27",
-      "time": "13:19",
-      "team": "tech",
-      "symbol": "MSFT",
-      "action": "BUY",
-      "reason": "team used all of today's trades"
-    },
-    {
-      "date": "2026-10-27",
-      "time": "13:19",
-      "team": "tech",
-      "symbol": "ANET",
-      "action": "BUY",
-      "reason": "team used all of today's trades"
-    },
-    {
-      "date": "2026-10-27",
-      "time": "13:19",
-      "team": "tech",
-      "symbol": "MU",
-      "action": "BUY",
-      "reason": "team used all of today's trades"
-    },
-    {
-      "date": "2026-10-27",
-      "time": "14:18",
-      "team": "consumer",
-      "symbol": "WHR",
-      "action": "BUY",
-      "reason": "conviction None is below the minimum 4"
-    },
     {
       "date": "2026-10-27",
       "time": "14:18",
@@ -40701,6 +41643,38 @@
       "symbol": "V",
       "action": "BUY",
       "reason": "conviction 2 is below the minimum 3 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "09:37",
+      "team": "defense",
+      "symbol": "LMT",
+      "action": "BUY",
+      "reason": "conviction 5 is below the minimum 6 (risk-off market)"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "09:37",
+      "team": "tech",
+      "symbol": "INTC",
+      "action": "SHORT",
+      "reason": "conviction None is below the minimum 5"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "09:37",
+      "team": "tech",
+      "symbol": "AMD",
+      "action": "SHORT",
+      "reason": "conviction None is below the minimum 5"
+    },
+    {
+      "date": "2026-10-30",
+      "time": "09:43",
+      "team": "defense",
+      "symbol": "LMT",
+      "action": "BUY",
+      "reason": "conviction 5 is below the minimum 6 (risk-off market)"
     }
   ]
 }

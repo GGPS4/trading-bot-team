@@ -1,57 +1,59 @@
 {
   "date": "2026-10-30",
-  "time": "09:34",
-  "trigger": "first look this run",
-  "market_view": "The market is opening in a strong risk-off regime with QQQ down 2.5% driven by a massive semiconductor selloff following Intel's severe Q4 guidance warning. In accordance with the President's strict No-Trade protocol and suspension of the 75% invested rule, we are sitting tight at the open to protect capital rather than forcing entries without confirmed high relative volume above VWAP.",
-  "decisions": [],
-  "ranked_ideas": [
+  "time": "09:43",
+  "trigger": "price moves in ['ANET']",
+  "orders": [
+    {
+      "symbol": "AAPL",
+      "side": "long",
+      "action": "sell",
+      "qty": 2,
+      "reason": "reduce position size by 50% per president directive"
+    },
     {
       "symbol": "INTU",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
+      "side": "long",
+      "action": "sell",
+      "qty": 1,
+      "reason": "reduce position size by 50% (full close)"
+    },
+    {
+      "symbol": "INTC",
+      "side": "short",
+      "action": "sell",
+      "qty": 50,
+      "stop_loss_pct": 0.02,
       "take_profit_pct": 0.03,
-      "setup": "news catalyst",
-      "reason": "Showing strong relative strength against a down market, trading up +2.6% on the day."
+      "reason": "high conviction short setup: price below VWAP, rvol 27.68, negative news importance 5"
+    }
+  ],
+  "ranked_ideas": [
+    {
+      "symbol": "NVDA",
+      "setup": "opening range breakout",
+      "conviction": 4
     },
     {
       "symbol": "AAPL",
-      "direction": "long",
-      "conviction": 3,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "pullback in uptrend",
-      "reason": "High-liquidity mega-cap insulated from chip slump news, potential bounce if market stabilizes."
+      "setup": "opening range breakout",
+      "conviction": 3
     },
     {
-      "symbol": "PANW",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
+      "symbol": "MSFT",
       "setup": "momentum",
-      "reason": "Holding green (+0.2%) despite tech sector drag."
+      "conviction": 4
     },
     {
-      "symbol": "NVDA",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.02,
-      "take_profit_pct": 0.04,
-      "setup": "VWAP bounce",
-      "reason": "High-liquidity focus ticker per executive instructions; waiting for intraday VWAP reclaim."
+      "symbol": "GOOGL",
+      "setup": "momentum",
+      "conviction": 2
     },
     {
-      "symbol": "EQIX",
-      "direction": "long",
-      "conviction": 2,
-      "stop_loss_pct": 0.015,
-      "take_profit_pct": 0.03,
-      "setup": "sector rotation",
-      "reason": "Defensive REIT name showing positive relative strength (+0.1%)."
+      "symbol": "AMAT",
+      "setup": "momentum",
+      "conviction": 3
     }
   ],
-  "experiment": "Add a VWAP-reclaim filter to the entry criteria",
   "watchlist_changes": {
     "add": [],
     "remove": []
