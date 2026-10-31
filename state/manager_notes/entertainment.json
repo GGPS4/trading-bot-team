@@ -1,7 +1,6 @@
 {
   "date": "2026-10-30",
   "strategy_ideas": [
-    "Implement a short filter that requires price < VWAP, rvol>1.2, and 15\u2011min momentum <0 before entry.",
-    "Add a trailing ATR stop for short positions to lock in gains and reduce loss exposure."
+    "Build a pre-trade entry guard that strictly blocks short orders if current price is above intraday VWAP or 15-minute momentum is positive."
   ]
 }

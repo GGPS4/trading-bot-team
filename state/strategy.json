@@ -1,32 +1,64 @@
 {
-  "updated": "2026-10-29T16:26-04:00",
-  "strategy_notes": "The account is at max drawdown and significantly underperforming SPY, so capital preservation is the top priority. We are enforcing a strict 'No-Trade' protocol for any team that cannot identify a setup with Relative Volume > 1.5x and price above VWAP; the 75% invested rule is suspended for tomorrow to prevent forced low-quality entries in a risk-off environment. Defense is the only team showing consistent profitability and will receive increased capital to capitalize on momentum. All other teams must reduce trade frequency and focus exclusively on high-conviction setups to stop the bleeding.",
+  "updated": "2026-10-30T21:50-04:00",
+  "strategy_notes": "Focus on high\u2011conviction short setups in sectors showing weakness (tech semis, defense contracts, consumer discretionary) while avoiding low\u2011conviction entries and any long positions that break below VWAP in a risk\u2011off market. Keep at least 75% of each team\u2019s allocated capital deployed during open hours and use tighter conviction and position limits to protect the portfolio. Leverage the tech team\u2019s edge on semiconductor shorts and the defense team\u2019s contract\u2011driven opportunities, but scale back space, entertainment and healthcare exposure until win rates improve.",
   "team_focus": {
-    "defense": "Maintain current strategy. Focus on earnings breakouts and momentum plays in LHX and HII. Ensure all entries have RVol > 1.5x. You are the primary growth engine; keep risk tight but allow for larger position sizes.",
-    "space": "Strategy review mandatory. Do not take any new positions until you demonstrate a clear improvement in entry criteria. Focus on trailing stops for existing momentum plays. If no high-conviction setup (RVol > 2.0) exists, stay in cash.",
-    "entertainment": "Pause trading. Your win rate is critically low (26.6%). Focus on identifying why your momentum trades are failing. Only re-enter if you can identify a setup with RVol > 1.5x and strong volume confirmation.",
-    "tech": "Implement the QQQ regime filter immediately. Do not take long positions below VWAP in a down market. Reduce position size by 50% until you show two consecutive days of positive P&L. Focus on high-liquidity names like NVDA and AAPL only.",
-    "consumer": "Tighten entry criteria. Avoid news-catalyst shorts unless volume is extremely high. Focus on locking in profits at 1R. Do not chase momentum without volume confirmation.",
-    "financials": "Submit retroactive analysis of today's losses by tomorrow morning. No new positions until you provide a clear plan for improving win rate. Focus on defensive financials (JPM, MS) only.",
-    "healthcare": "Submit retroactive analysis of today's losses by tomorrow morning. No new positions until you provide a clear plan for improving win rate. Focus on defensive healthcare (LLY, ABBV) only."
+    "defense": [
+      "short GD (high\u2011volume breakdown)",
+      "short LHX (stop\u2011loss protection)",
+      "long BAH only if post\u2011earnings contract award confirmed"
+    ],
+    "space": [
+      "short HWM (downgrade catalyst)",
+      "short GE (breakdown)",
+      "avoid VSAT entry",
+      "long BA only on confirmed contract award"
+    ],
+    "entertainment": [
+      "short SBUX (high RVol)",
+      "short NFLX only if price below VWAP and momentum negative",
+      "avoid any short with conviction <4"
+    ],
+    "tech": [
+      "short NVDA",
+      "short AVGO",
+      "short INTC (semiconductor weakness)",
+      "do not go long any ticker below VWAP",
+      "short AAPL only with clear technical breakdown"
+    ],
+    "consumer": [
+      "short SBUX (continue short)",
+      "short AMZN if price < VWAP and momentum negative",
+      "avoid low\u2011conviction shorts"
+    ],
+    "financials": [
+      "short JPM if price < VWAP",
+      "short COIN (risk\u2011off)",
+      "avoid long positions in volatile names"
+    ],
+    "healthcare": [
+      "short ALNY if price < VWAP",
+      "short MRNA on earnings miss signal",
+      "avoid defensive longs that sit below VWAP"
+    ]
   },
   "allocations": {
-    "defense": 0.35,
+    "defense": 0.25,
     "space": 0.05,
     "entertainment": 0.05,
-    "tech": 0.25,
-    "consumer": 0.1,
+    "tech": 0.35,
+    "consumer": 0.15,
     "financials": 0.1,
-    "healthcare": 0.1
+    "healthcare": 0.05
   },
   "risk_overrides": {
     "max_position_pct": 0.15,
-    "max_open_positions_per_team": 3,
-    "min_conviction_to_buy": 5
+    "max_daily_loss_pct": 0.02,
+    "min_conviction_to_buy": 4,
+    "cash_reserve_pct": 0.15
   },
   "go_live_assessment": {
     "ready": false,
-    "reason": "Only 10 trading days completed (need 60) and portfolio is underperforming SPY by 1.1% since start. Max drawdown is at 1.25%."
+    "reason": "Only 11 paper\u2011trading days completed (minimum 60) and the system still underperforms the benchmark on a longer horizon; risk parameters need further validation."
   },
-  "decision_log": "Increased allocation to Defense (35%) due to consistent outperformance. Reduced allocations to Space, Entertainment, and Healthcare to 5-10% due to low win rates and strategy issues. Tightened risk rules (min conviction 5, max positions 3) to force higher quality trades and prevent capital erosion."
+  "decision_log": "Re\u2011balanced allocations to favor tech (35%) and defense (25%) after their relative outperformance and tightened risk limits (position size 15%, daily loss 2%, conviction 4, cash reserve 15%) to curb capital erosion."
 }

@@ -1,7 +1,7 @@
 {
   "date": "2026-10-30",
   "strategy_ideas": [
-    "Implement an automated RVol>2 filter for all entry signals and require price to be above VWAP for long entries;",
-    "Add a two\u2011tier exit: take partial profit at the first target then trail the remainder with a dynamic stop."
+    "Add programmatic pre-flight checks ensuring long stops are strictly below entry and short stops strictly above entry to eliminate operational execution errors.",
+    "Restrict secondary entries on the same symbol to setups showing fresh relative volume expansion (>2x 5-minute volume) rather than simple price continuation."
   ]
 }
